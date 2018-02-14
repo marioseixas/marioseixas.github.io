@@ -90,7 +90,7 @@ rss:
 #since: 2015
 
 # icon between year and author @Footer
-authoricon: cross
+authoricon: gripfire
 
 # Footer `powered-by` and `theme-info` copyright
 copyright: false
