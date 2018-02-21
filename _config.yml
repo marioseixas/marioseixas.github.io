@@ -237,7 +237,7 @@ social_icons:
 
 # Sidebar Avatar
 # in directory: /assets/images/avatar.gif
-avatar: http://sntcopacabana.com.br/site/wp-content/uploads/2016/10/fav-1.2-300x300.png
+avatar: /favicon.ico
 
 
 # Table Of Contents in the Sidebar
@@ -285,13 +285,13 @@ sidebar:
 
 
 # Blog rolls
-links_title: 友情链接
+links_title: blogroll
 links_layout: block
 links_layout: inline
 links:
-  近寐遥喧: http://maybe2020.github.io/
-  为埃斯米而作: http://ievanz.net/
-  哲尔夫: http://www.zeove.com/
+  soul surfer: http://pensamentosfinanceiros.blogspot.com.br/
+  bibo talk: http://bibotalk.com/
+  cheia de luz: http://cheiodeluz.blogspot.com.br/
 
 
 # ---------------------------------------------------------------
@@ -411,7 +411,7 @@ changyan:
 
 # Support for LiveRe comments system.
 # You can get your uid from https://livere.com/insight/myCode (General web site)
-livere_uid: MTAyMC8zMzAwNi85NTY4
+livere_uid: MTAyMC8zNDI3Mi8xMDgwOQ
 
 # Baidu Share
 # Available value:
@@ -433,7 +433,7 @@ livere_uid: MTAyMC8zMzAwNi85NTY4
 #google_site_verification:
 
 # Google Analytics
-#google_analytics:
+google_analytics: UA-114582017-1
 
 # Yandex Webmaster tools verification setting
 # See: https://webmaster.yandex.ru/
