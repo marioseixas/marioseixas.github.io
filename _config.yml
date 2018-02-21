@@ -76,7 +76,7 @@ plugins:
 # ---------------------------------------------------------------
 
 # Put your favicon.ico into `assets/` directory.
-favicon: /assets/favicon.ico
+favicon: /favicon.ico
 
 # Set default keywords (Use a comma to separate)
 keywords: "Blog"
@@ -214,10 +214,10 @@ font:
 # Key is the link label showing to end users.
 # Value is the target link (E.g. GitHub: https://github.com/iissnan)
 social:
-  饭否: http://fanfou.com/shinemoon
-  GitHub: https://github.com/shinemoon
-  豆瓣: https://www.douban.com/people/claud.xiao/
-  Mail: mailto://shinemoon@gmail.com
+  饭否: http://saranossaterra.com.br/
+  # GitHub: https://github.com/shinemoon
+  豆瓣: https://www.bible.com/pt/
+  Mail: mailto://marioseixassales@icloud.com
 
 # Social Links Icons
 # Icon Mapping:
@@ -229,10 +229,10 @@ social_icons:
   # Icon Mappings.
   # KeyMapsToSocialItemKey: NameOfTheIconFromFontAwesome
   GitHub: github
-  饭否: user-circle-o
+  饭否: fire
   Weibo: weibo
   豆瓣: book
-  Mail: google-plus-square
+  Mail: at
 
 
 # Sidebar Avatar
