@@ -7,7 +7,7 @@
 title: Inner Burn
 subtitle: “O fogo nunca se apagará no altar; deverá ficar sempre aceso.” ‭‭Lv 6:13‬
 description: The internal desire to achieve, succeed, do your best; an intrinsic motivation or drive to push oneself beyond the mediocre.
-author: Mário Seixas
+author: M. SEIXAS
 # Support language: de, en, fr-FR, id, ja, ko, pt-BR, pt, ru, zh-Hans, zh-hk, zh-tw
 language: pt-BR
 date_format: '%d-%m-%Y'
@@ -217,7 +217,7 @@ social:
   Sara: http://saranossaterra.com.br/
   # GitHub: https://github.com/shinemoon
   Bible: https://www.bible.com/pt/
-  Mail: mailto:marioseixassales@icloud.com
+  Mail: mailto:m.seixas@outlook.com
 
 # Social Links Icons
 # Icon Mapping:
@@ -237,7 +237,7 @@ social_icons:
 
 # Sidebar Avatar
 # in directory: /assets/images/avatar.gif
-avatar: /brasaop.png
+# avatar: /brasaop.png
 
 
 # Table Of Contents in the Sidebar
@@ -248,7 +248,7 @@ toc:
   number: true
 
   # If true, all words will placed on next lines if header width longer then sidebar width.
-  wrap: false
+  wrap: true
 
 
 # Creative Commons 4.0 International License.
