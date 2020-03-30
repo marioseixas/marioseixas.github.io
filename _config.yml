@@ -233,11 +233,9 @@ social_icons:
   Bible: book
   Mail: at
 
-
 # Sidebar Avatar
 # in directory: /assets/images/avatar.gif
-# avatar: /brasaop.png
-
+avatar: /assets/images/Avatar2.png
 
 # Table Of Contents in the Sidebar
 toc:
