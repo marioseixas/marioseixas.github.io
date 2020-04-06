@@ -386,7 +386,7 @@ han: false
 disqus:
   enable: false
   shortname:
-  count: true
+  count: false
   # hide comments (visitors need to click to load the comments)
   # count need to be false when hide is true
   hide: false
@@ -409,7 +409,7 @@ changyan:
 
 # Support for LiveRe comments system.
 # You can get your uid from https://livere.com/insight/myCode (General web site)
-livere_uid: MTAyMC8zNDI3Mi8xMDgwOQ
+# livere_uid: MTAyMC8zNDI3Mi8xMDgwOQ
 
 # Baidu Share
 # Available value:
@@ -448,7 +448,7 @@ google_analytics: UA-114582017-1
 # user_id must NOT be null when admin_enable is true!
 # you can visit http://dev.duoshuo.com get duoshuo user id.
 duoshuo_info:
-  ua_enable: true
+  ua_enable: false
   admin_enable: false
   user_id: 0
   #admin_nickname: Author
@@ -457,17 +457,17 @@ duoshuo_info:
 # Facebook SDK Support.
 # https://github.com/iissnan/hexo-theme-next/pull/410
 facebook_sdk:
-  enable: false
+  enable: true
   app_id:       #<app_id>
   fb_admin:     #<user_id>
-  like_button:  #true
-  webmaster:    #true
+  like_button:  true
+  webmaster:    true
 
 # Facebook comments plugin
 # This plugin depends on Facebook SDK.
 # If facebook_sdk.enable is false, Facebook comments plugin is unavailable.
 facebook_comments_plugin:
-  enable: false
+  enable: true
   num_of_posts: 10  # min posts num is 1
   width: 100%       # default width is 550px
   scheme: light     # default scheme is light (light or dark)
@@ -477,8 +477,8 @@ facebook_comments_plugin:
 vkontakte_api:
   enable: false
   app_id:       #<app_id>
-  like:         true
-  comments:     true
+  like:         false
+  comments:     false
   num_of_posts: 10
 
 # Star rating support to each article.
@@ -502,15 +502,15 @@ busuanzi_count:
   # count values only if the other configs are false
   enable: false
   # custom uv span for the whole site
-  site_uv: true
+  site_uv: false
   site_uv_header: <i class="fa fa-user"></i>
   site_uv_footer:
   # custom pv span for the whole site
-  site_pv: true
+  site_pv: false
   site_pv_header: <i class="fa fa-eye"></i>
   site_pv_footer:
   # custom pv span for one page only
-  page_pv: true
+  page_pv: false
   page_pv_header: <i class="fa fa-file-o"></i>
   page_pv_footer:
 
@@ -539,7 +539,7 @@ calendar:
   offsetMin: 4
   timeZone:
   showDeleted: false
-  singleEvents: true
+  singleEvents: false
   maxResults: 250
 
 # Algolia Search
