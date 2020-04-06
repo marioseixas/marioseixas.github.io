@@ -458,7 +458,7 @@ duoshuo_info:
 # https://github.com/iissnan/hexo-theme-next/pull/410
 facebook_sdk:
   enable: true
-  app_id:       100005462654250
+  app_id:       
   fb_admin:     100005462654250
   like_button:  true
   webmaster:    true
