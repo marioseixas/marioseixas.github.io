@@ -9,19 +9,23 @@ date: '2020-12-31'
 type: post
 layout: post
 published: true
-sha: a88b33db280f4986a9ab1570e1ca72506aca3a18
+sha: 2189a0727afdb444dcd347192e30d92d798a09bf
 slug: streaming
 title: Streaming
 
 ---
 # NETFLIX
 9,2 AVATAR: anime
+
 8,3 THE SPEED CUBERS
+
 8,0 UMBRELLA ACADEMY
+
 8,0 ALTERED CARBON
 
 # HBO GO
 9,0 TRUE DETECTIVE
+
 8,8 LORD OF THE RINGS: trilogia
 
 # DISNEY +
