@@ -9,13 +9,11 @@ date: '2020-12-31'
 type: post
 layout: post
 published: true
-sha: 
+sha: b90204964732b9bfef517bcca4d38bc509dd8373
 slug: chess-books
 title: 'chess books'
 
 ---
-# XADREZ #
-
 5,0 My Magic Years with Topalov
 
 5,0 Fundamentos do xadrez - finais
