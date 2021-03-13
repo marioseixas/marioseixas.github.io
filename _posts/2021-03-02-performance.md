@@ -9,7 +9,7 @@ date: '2021-03-02'
 type: post
 layout: post
 published: true
-sha: 6cfb4facb2c3b451850d3e8634cccd37a47bd701
+sha: 1bb9807559aacd5ae0fc2ca0989a8b417bda6cbb
 slug: performance
 title: 'Performance média'
 
@@ -22,7 +22,9 @@ title: 'Performance média'
 
 # Blitz
 1669 (4 torneios)
+
 ***
+
 Se Standard ou Rapid > 1800
 
 Então USCF Online-Regular
