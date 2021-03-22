@@ -32,6 +32,8 @@ title: Streaming
 
 # DISNEY +
 
+7,4 Queen of Katwe
+
 # AMAZON PRIME
 8,5 COMMUNITY
 
@@ -41,3 +43,30 @@ title: Streaming
 
 8,8 STEINS;GATE: filme
 
+8,1 The Polgar Variant
+
+7,6 Fresh - Inocência Perdida
+
+7,4 Bobby Fischer Against the World
+
+7,3 Lang leve de koningin
+
+7,1 Magnus
+
+7,0 Pawn Sacrifice
+
+6,9 Life of a King
+
+6,8 Game Over: Kasparov and the Machine
+
+6,8 Knights of the South Bronx
+
+6,8 Fahim
+
+6,8 Dangerous Moves
+
+6,8 The Luzhin Defence
+
+6,2 Filho de Caim
+
+4,4 Bobby Fischer Live
