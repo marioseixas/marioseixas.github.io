@@ -32,6 +32,8 @@ title: 'chess books'
 
 4,64 The English Opening Volume Three
 
+4,6 On the Origin of Good Moves: A Skeptic's Guide at Getting Better at Chess
+
 4,6 Dynamic Chess Strategy
 
 4,6 1.d4 Volume Two
@@ -59,6 +61,8 @@ title: 'chess books'
 4,3 The Art of Chess Analysis
 
 4,21 Test Your Chess IQ: First Challenge
+
+4,2 Move First, Think Later: Sense and Nonsense in Improving Your Chess
 
 4,2 Easy Guide to the Reti Opening
 
