@@ -25,6 +25,6 @@ title: 'Performance média'
 
 ***
 
-Se Standard ou Rapid > 1800
+Se Standard ou Rapid > 2000
 
-Então USCF Online-Regular
+Então USCF Online-Regular Overall
