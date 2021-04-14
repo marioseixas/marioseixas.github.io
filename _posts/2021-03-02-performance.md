@@ -25,9 +25,5 @@ title: 'Performance média'
 
 ***
 
-# Se
-## Standard ou Rapid > 1900
-
-# Então
-## USCF Online-Regular Overall
-## iccf.com
+**Se** Standard ou Rapid > 1900
+**Então** USCF Online-Regular Overall
