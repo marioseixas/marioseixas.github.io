@@ -17,8 +17,6 @@ title: Streaming
 # NETFLIX
 9,2 AVATAR: anime
 
-8,3 THE SPEED CUBERS
-
 8,0 UMBRELLA ACADEMY
 
 8,0 ALTERED CARBON
@@ -32,10 +30,9 @@ title: Streaming
 
 # DISNEY +
 
-7,4 Queen of Katwe
-
 # AMAZON PRIME
-8,5 COMMUNITY
+8,9 Invincible
+
 
 # ~
 
