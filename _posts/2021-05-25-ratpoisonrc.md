@@ -9,12 +9,15 @@ date: '2021-05-25'
 type: post
 layout: post
 published: true
-sha: f0bb67137c01ab23f366aaec5a7ea982daa2f58f
+sha: 9cf6a86094683e1c4872ee71b65755e8cb71bdc1
 slug: ratpoisonrc
 title: /root/.ratpoisonrc
 
 ---
+
 ```
+#brightnessctl feh unclutter firefox geary viewnior rxvt-unicode rnano thunar gsimplecal catfish xfce4-screenshooter neofetch htop wifish amixer dmenu
+
 set fgcolor black
 
 set bgcolor silver
@@ -51,7 +54,7 @@ escape Super_L
 
 exec brightnessctl s 7
 
-exec feh --bg-fill /home/mario/images/marriage.png
+exec feh --bg-center /root/Imagens/wp.png
 
 exec unclutter
 
@@ -61,7 +64,7 @@ bind w exec ratpoison -c "select `ratpoison -c "windows" | dmenu | awk '{print $
 
 bind f exec firefox
 
-bind m exec geary
+bind F2 exec geary
 
 bind v exec viewnior
 
@@ -81,7 +84,17 @@ bind Escape abort
 
 bind apostrophe help
 
-bind F2 exec pm-suspend
+bind End exec pm-suspend
+
+bind KP_Separator exec /usr/bin/chromium-browser --profile-directory=Default --app-id=khknmpnbcfnenmadanigadgaabebblip
+
+bind KP_0 exec /usr/bin/chromium-browser --profile-directory=Default --app-id=kjnpgmkbjlilfafkkdpehnefjpocheed
+
+bind KP_1 exec /usr/bin/chromium-browser --profile-directory=Default --app-id=glpafmialolpdohgeinpjffpbnjjfhhc
+
+bind KP_2 exec /usr/bin/chromium-browser --profile-directory=Default --app-id=cjmkdloaeckmnapbbnofepkincodpoeh
+
+bind KP_3 exec /usr/bin/chromium-browser --profile-directory=Default --app-id=ogjlbiopdidgogioefmnmeelgkidmfoo
 
 bind 1 only
 
@@ -95,13 +108,11 @@ bind r remove
 
 bind space exec dmenu_run
 
-bind XF86AudioLowerVolume exec amixer set Master 25%-
+bind F10 exec amixer set Master 25%-
 
-bind XF86AudioRaiseVolume exec amixer set Master 25%+
+bind F11 exec amixer set Master 25%+
 
-bind XF86AudioMute exec amixer set Master 0
-
-bind XF86WebCam exec reboot
+bind F9 exec amixer set Master 0
 
 bind s-Return prev
 
@@ -134,4 +145,6 @@ bind b exec rxvt-unicode -fg silver -sl 1000 -vb +sb -b 0 -tr -sh 25 -fade 30 -f
 bind s-b exec rxvt-unicode -fg silver -sl 1000 -vb +sb -b 0 -tr -sh 25 -fade 30 -font 10x20 -ls -hold -e htop
 
 bind i exec rxvt-unicode -fg silver -sl 1000 -vb +sb -b 0 -tr -sh 25 -fade 30 -font 10x20 -ls -hold -e wifish
+
+bind F5 exec rxvt-unicode -fg silver -sl 1000 -vb +sb -b 0 -tr -sh 25 -fade 30 -font 12x24 -ls -hold -e bash /root/Documentos/timer.sh
 ```
