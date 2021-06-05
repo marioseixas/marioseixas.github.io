@@ -32,7 +32,7 @@ title: Streaming
 
 # AMAZON PRIME
 8,9 Invincible
-
+8,2 Auto de Resistência
 
 # ~
 
