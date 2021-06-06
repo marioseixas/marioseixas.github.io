@@ -15,7 +15,7 @@ title: 'Performance média'
 
 ---
 # Standard
-1517 (1 torneio)
+1562 (2 torneios)
 
 # Rapid
 1708 (9 torneios)
