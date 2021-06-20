@@ -29,6 +29,7 @@ title: Streaming
 8,8 LORD OF THE RINGS: trilogia
 
 # DISNEY +
+7,9 Geri's Game
 
 # AMAZON PRIME
 8,9 Invincible
@@ -41,6 +42,8 @@ title: Streaming
 
 8,8 STEINS;GATE: filme
 
+8,2 Odysseu's Gambit
+
 8,1 The Polgar Variant
 
 7,6 Fresh - Inocência Perdida
@@ -48,6 +51,8 @@ title: Streaming
 7,4 Bobby Fischer Against the World
 
 7,3 Lang leve de koningin
+
+7,2 Brooklyn Castle
 
 7,1 Magnus
 
