@@ -8,4 +8,9 @@
     </div>
     {% endfor %}
   </div>
+  <p>
+    <a title='GitHub' target="_blank" rel="noreferrer" href="https://github.com/marioseixas/marioseixas.github.io">
+      GitHub
+    </a>
+  </p>
 </div>
