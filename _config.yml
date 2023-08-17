@@ -1,11 +1,11 @@
-name:                Maxime Vaillancourt
-title:               Maxime Vaillancourt
-url:                 https://maximevaillancourt.com
-enforce_ssl:         maximevaillancourt.com
+name:                Intentionally Blank
+title:               Intentionally Blank
+url:                 https://ib.bsb.br/
+enforce_ssl:         ib.bsb.br
 baseurl:             ""
 include:             ['_pages']
 exclude:             ['_includes/notes_graph.json']
-author:              Maxime Vaillancourt
+author:              sonny
 
 permalink:           /blog/:slug
 relative_permalinks: false
