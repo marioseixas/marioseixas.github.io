@@ -9,13 +9,6 @@ layout: default
         {{ page.date | date: "%B %-d, %Y" }}
         {% endif %}
       </time>
-      {% if page.keywords %}
-      <meta name="keywords" content="{{ page.keywords }}" />
-      {% elsif page.tags and page.tags | size != 0 %}
-      <meta name="keywords" content="{% for tag in page.tags %}{{ tag }},{% endfor %}" />
-      {% elsif site.keywords %}
-      <meta name="keywords" content="{{ site.keywords }}" />
-      {% endif %}
     </div>
     {{ content }}
   </article>
