@@ -1,7 +1,0 @@
-[[redirects]]
-  from = "/stream"
-  to = "https://www.twitch.tv/maximevaillancourt"
-
-[[redirects]]
-  from = "/garden-template"
-  to = "https://digital-garden-jekyll-template.netlify.app/"
