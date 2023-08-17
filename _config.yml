@@ -3,9 +3,6 @@ title:               Intentionally Blank
 url:                 https://ib.bsb.br/
 enforce_ssl:         ib.bsb.br
 baseurl:             ""
-include:             ['_pages']
-exclude:             
-author:              sonny
 
 permalink:           /:slug
 relative_permalinks: false
