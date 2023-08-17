@@ -14,4 +14,4 @@ slug: cleaning-flow
 title: 'Cleaning flowchart'
 
 ---
-[![Clean House](https://raw.githubusercontent.com/marioseixas/marioseixas.github.io/master/clean-house.jpg "Clean House")](https://raw.githubusercontent.com/marioseixas/marioseixas.github.io/master/clean-house.jpg "Clean House")
+[![Clean House](https://raw.githubusercontent.com/marioseixas/marioseixas.github.io/main/assets/clean-house.jpg "Clean House")](https://raw.githubusercontent.com/marioseixas/marioseixas.github.io/main/assets/clean-house.jpg "Clean House")
