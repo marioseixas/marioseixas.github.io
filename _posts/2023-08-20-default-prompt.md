@@ -44,6 +44,3 @@ Conclusion
 
 Problem or question:
 ```
-
-```
-```
