@@ -11,8 +11,9 @@ layout: post
 published: true
 sha: 
 slug: default-prompt
-title: default #prompt
+title: default [prompt]
 ---
+```
 Write a response to the following problem or question using dialectical and hermeneutic approaches. A dialectical approach involves examining different perspectives and arguments on an issue, while a hermeneutic approach involves interpreting the meaning and significance of the issue. Follow these steps to write your response:
 
 1. State the problem or question clearly in one sentence.
@@ -44,4 +45,5 @@ Conclusion
 Problem or question:
 ```
 
+```
 ```
