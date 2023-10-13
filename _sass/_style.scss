@@ -1,130 +1,40 @@
 body {
-  background: white;
-  color: #222;
-  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
+  font-family: Arial, sans-serif;
+  background: #000000;
+  color: #ffffff;
   line-height: 1.6;
   padding: 1em 2em;
   max-width: 100%;
   margin: 1em auto;
   font-size: 15px;
-  @media (min-width: 100%) {
-    padding: 1.5em 4em;
-    font-size: 16px;
-  }
 }
 
 a {
-  &:after {
-    position: relative;
-    top: -0.5em;
-    content: "↗";
-    color: #aaaaaa;
-    display: inline-block;
-    text-decoration: none;
-  }
-  &.internal-link:after {
-    content: "";
-  }
+  color: #ff8000;
+  border: 1px solid #ff8000;
+  transition: transform 1s ease;
 }
 
-figure {
-  margin: 0;
-}
-
-.list-entry {
-  margin: 0 0 0.8em;
-}
-
-.faded {
-  color: #595959;
-}
-
-footer {
-  margin: 4em 0 0.5em 0;
-  font-size: 0.8em;
-}
-
-img {
-  max-width: 100%;
-  display: block;
-  margin: 0 auto;
-  max-height: 75vh;
-  border-radius: 5px;
-}
-
-.post-heading {
-  margin: 2em 0;
-}
-
-.caption {
-  margin-top: 0.5em;
-  text-align: center;
-  color: #666;
-  font-size: 0.9em;
+a:hover {
+  transform: rotate(1deg);
 }
 
 blockquote {
   font-size: 0.9em;
 }
 
-hr {
-  width: 100%;
-  border: 0;
-  height: 1px;
-  margin: 1.5em 0;
-  background: #dddddd;
+figure, .post-heading, .list-entry, footer {
+  margin: 5vh auto;
+  padding:5vh;
+  background: #343434; 
+  border-radius: 1em;
+  transform: rotate(-1deg);
+  transition: transform 1s ease;
 }
 
-
-h1, h2, h3, h4, h5, h6 {
-  font-weight: normal;
-  line-height: 1.3;
-  margin-top: 2em;
-  margin-bottom: 0.25em;
-  padding-bottom: 0;
+figure:hover, .post-heading:hover, .list-entry:hover, footer:hover {
+  transform: rotate(1deg);
 }
 
-h1 { font-size: 1.6em; }
-h2 { font-size: 1.4em; }
-h3 { font-size: 1.2em; }
-h4 { font-size: 1.1em; }
-h5 { font-size: 1.1em; }
-h6 { font-size: 1.0em; }
-
-.font-monospace, code, kbd, samp {
-  font-family: SFMono-Regular,Consolas,DejaVu Sans Mono,Liberation Mono,Menlo,monospace;
-}
-
-input, textarea {
-  margin:0;
-  border:1px solid #ccc;
-  border-radius: 4px;
-  padding:0.5em;
-  width: calc(100% - 1em - 2px);
-  display:inline-block;
-  vertical-align:middle;
-  background: white;
-}
-
-.guestbook-entry {
-  padding: 1em;
-  margin: 0 -1em;
-  margin-bottom: 1em;
-  background: #f0f8ff;
-  border-radius: 4px;
-}
-
-.guestbook-entry-author {
-  margin: 0 0 0.5em;
-}
-
-.guestbook-entry-body {
-  white-space: pre-line;
-}
-
-.guestbook-signature-wrapper {
-  padding: 0.5em 1em;
-  margin: 1.5em -1em;
-  background: #fff4eb;
-  border-radius: 4px;
-}
+/* Other class selectors */
+/* Ensure to add their styling or to remove if not used */
