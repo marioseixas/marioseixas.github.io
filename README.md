@@ -5,7 +5,7 @@
     } 
 </style>
 <main>
-    <section><p class="quote">can't steer unless already moving</p></section>
+    <section><p class="quote"><a class="internal-link" href="https://github.com/search?q=repo%3Amarioseixas%2Fmarioseixas.github.io">can't steer unless already moving</a></p></section>
     <section> 
         {% for post in site.posts %} 
         <article>
