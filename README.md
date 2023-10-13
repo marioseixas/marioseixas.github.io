@@ -13,9 +13,14 @@ body {
     margin: 0;
     padding: 0;
     background: #f2f2f2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
 }
 main {
-    margin-top: 50px;
+    width: 90vw;
     animation: fadeIn 2s ease;
 }
 @keyframes fadeIn {
@@ -24,8 +29,8 @@ main {
 }
 section {
     text-align: center;
-    margin: 20px 0;
-    padding: 20px;
+    margin: 2em 0;
+    padding: 1em;
     background: #e2e2e2;
     border-radius: 10px;
     transform: rotate(-1deg);
@@ -37,8 +42,8 @@ section:hover {
 .quote { 
     text-align: center; 
     border: 1px solid black;
-    padding: 20px;
-    margin: 20px auto;
+    padding: 1em;
+    margin: 1em auto;
     animation: slideIn 1s ease;
 }
 @keyframes slideIn {
