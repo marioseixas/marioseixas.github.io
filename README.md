@@ -52,6 +52,14 @@ section:hover {
     <section id="about">
         <p class="quote">Can't steer unless already moving</p>
     </section>
+    <section> 
+        {% for post in site.posts %} 
+        <article>
+            <time datetime="{{ post.date | date: "%Y-%m-%d" }}"> {{ post.date | date: "%Y-%m-%d" }} </time>
+            <a href="{{ post.url }}"> {{ post.title }} </a>
+        </article> 
+        {% endfor %}
+    </section>
     <section id="contact">
         <p class="quote">Progress is wrecked or preserved by a single event</p>
     </section>
