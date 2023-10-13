@@ -28,12 +28,6 @@ section {
 section:hover {
     transform: rotate(1deg);
 }
-.quote { 
-    text-align: center; 
-    padding: 5vh;
-    margin: 5vh auto;
-    animation: slideIn 1s ease;
-}
 @keyframes slideIn {
     from {transform: translateY(-100%);}
     to {transform: translateY(0);}
@@ -42,9 +36,7 @@ section:hover {
 </head>
 <body>
 <main>
-    <section id="about">
-        <p class="quote"><a class="internal-link" href="https://github.com/search?q=repo%3Amarioseixas%2Fmarioseixas.github.io">can't steer unless already moving</a></p>
-    </section>
+    <a class="internal-link" href="https://github.com/search?q=repo%3Amarioseixas%2Fmarioseixas.github.io">can't steer unless already moving</a>
     <section> 
         {% for post in site.posts %} 
         <article>
