@@ -1,12 +1,9 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Mario's blog where he shares his thoughts and archives.">
-<title>Mario's Blog</title>
+<title>Intentionally Blank</title>
 
-<!-- Inline styles for complex transformations and animations -->
 <style>
 body {
     font-family: Arial, sans-serif;
@@ -21,7 +18,6 @@ main {
     to {opacity: 1;}
 }
 section {
-    text-align: center;
     margin: 5vh auto;
     padding:5vh;
     background: #e2e2e2;
@@ -34,7 +30,6 @@ section:hover {
 }
 .quote { 
     text-align: center; 
-    border: 1px solid black;
     padding: 5vh;
     margin: 5vh auto;
     animation: slideIn 1s ease;
@@ -48,7 +43,7 @@ section:hover {
 <body>
 <main>
     <section id="about">
-        <p class="quote">Can't steer unless already moving</p>
+        <p class="quote"><a class="internal-link" href="https://github.com/search?q=repo%3Amarioseixas%2Fmarioseixas.github.io">can't steer unless already moving</a></p>
     </section>
     <section> 
         {% for post in site.posts %} 
@@ -57,9 +52,6 @@ section:hover {
             <a href="{{ post.url }}"> {{ post.title }} </a>
         </article> 
         {% endfor %}
-    </section>
-    <section id="contact">
-        <p class="quote">Progress is wrecked or preserved by a single event</p>
     </section>
 </main>
 </body>
