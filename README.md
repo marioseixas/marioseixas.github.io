@@ -23,7 +23,7 @@
   section {
     margin: 5vh auto;
     padding:5vh;
-    background: #000000; 
+    background: #343434; 
     border-radius: 1em;
     transform: rotate(-1deg);
     transition: transform 1s ease;
