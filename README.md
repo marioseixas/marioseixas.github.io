@@ -36,8 +36,8 @@ section:hover {
 </head>
 <body>
 <main>
+    <section>        
     <a class="internal-link" href="https://github.com/search?q=repo%3Amarioseixas%2Fmarioseixas.github.io">can't steer unless already moving</a>
-    <section> 
         {% for post in site.posts %} 
         <article>
             <time datetime="{{ post.date | date: "%Y-%m-%d" }}"> {{ post.date | date: "%Y-%m-%d" }} </time>
