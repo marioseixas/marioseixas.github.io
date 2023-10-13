@@ -10,17 +10,10 @@
 <style>
 body {
     font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
     background: #f2f2f2;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
 }
 main {
-    width: 90vw;
+    margin-top: 10vh;
     animation: fadeIn 2s ease;
 }
 @keyframes fadeIn {
@@ -29,10 +22,10 @@ main {
 }
 section {
     text-align: center;
-    margin: 2em 0;
-    padding: 1em;
+    margin: 5vh auto;
+    padding:5vh;
     background: #e2e2e2;
-    border-radius: 10px;
+    border-radius: 1em;
     transform: rotate(-1deg);
     transition: transform 1s ease;
 }
@@ -42,8 +35,8 @@ section:hover {
 .quote { 
     text-align: center; 
     border: 1px solid black;
-    padding: 1em;
-    margin: 1em auto;
+    padding: 5vh;
+    margin: 5vh auto;
     animation: slideIn 1s ease;
 }
 @keyframes slideIn {
