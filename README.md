@@ -1,95 +1,11 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Mario's blog where he shares his thoughts and archives.">
-    <title>Mario's Blog</title>
+    <title>{{ site.title }}</title>
     <style>
-        /* CSS codes for styling each element */
-        body {
-            font-family: Arial, sans-serif;
-        }
-        ul {
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-            overflow: hidden;
-            background-color: #333;
-        }
-        li {
-            float: left;
-        }
-        li a, .dropbtn {
-            display: inline-block;
-            color: white;
-            text-align: center;
-            padding: 14px 16px;
-            text-decoration: none;
-        }
-        li a:hover, .dropdown:hover .dropbtn {
-            background-color: red;
-        }
-        li.dropdown {
-            display: inline-block;
-        }
-        .dropdown-content {
-            display: none;
-            position: absolute;
-            background-color: #f9f9f9;
-            min-width: 160px;
-            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-        }
-        .dropdown-content a {
-            color: black;
-            padding: 12px 16px;
-            text-decoration: none;
-            display: block;
-            text-align: left;
-        }
-        .dropdown-content a:hover {background-color: #f1f1f1;}
-        .dropdown:hover .dropdown-content {
-            display: block;
-        }
-        article { 
-            display: flex;
-            align-items: center;
-            margin-bottom: 20px;
-        }
-        .quote { 
-            text-align: center; 
-            border: 1px solid black;
-            padding: 20px;
-            margin: 20px auto;
-            animation: glow 2s ease-in-out infinite;
-        }
-        @keyframes glow {
-            0% { box-shadow: 0 0 5px #ffcccc, 0 0 10px #ffcccc, 0 0 15px #ffcccc, 0 0 20px #ffcccc; }
-            100% { box-shadow: 0 0 10px #ffcccc, 0 0 15px #ffcccc; }
-        }
-        /* Styles for Contact form */
-        #contact-form {
-            text-align: center;
-            padding: 20px;
-        }
-        #contact-form input[type=text], #contact-form input[type=email] {
-            width: 100%;
-            padding: 12px;
-            margin: 8px 0;
-            box-sizing: border-box;
-        }
-        #contact-form input[type=submit] {
-            background-color: #4CAF50; // You can custom this
-            color: white;
-            padding: 14px 20px;
-            margin: 8px 0;
-            border: none;
-            cursor: pointer;
-            width: 100%;
-        }
-        #contact-form input[type=submit]:hover {
-            opacity: 0.8;
-        }
+        /* ... include all your CSS here ... */
     </style>
 </head>
 <body>
@@ -113,7 +29,7 @@
             {% for post in site.posts %}
             <article>
                 <time datetime="{{ post.date | date: '%Y-%m-%d' }}"> {{ post.date | date: "%Y-%m-%d" }}</time>
-                <a href="{{ post.url }}"> {{ post.title }} </a>
+                <a href="{{ post.url | relative_url }}"> {{ post.title }} </a>
             </article>
             {% endfor %}
         </section>
