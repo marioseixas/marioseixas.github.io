@@ -9,12 +9,6 @@ body {
   font-size: 15px;
 }
 
-a {
-  color: #ff8000;
-  border: 1px solid #ff8000;
-  transition: transform 1s ease;
-}
-
 a:hover {
   transform: rotate(1deg);
 }
