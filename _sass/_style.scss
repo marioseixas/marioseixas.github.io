@@ -26,7 +26,7 @@ figure, .post-heading, .list-entry {
   transition: transform 1s ease;
 }
 
-figure:hover, .post-heading:hover, .list-entry:hover, footer:hover {
+figure:hover, .post-heading:hover, .list-entry:hover {
   transform: rotate(1deg);
 }
 
