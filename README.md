@@ -5,7 +5,6 @@
 <title>Intentionally Blank</title>
 <style>
   body {
-    font-family: Arial, sans-serif;
     background: #000000; /* Changes background to black */
     color: #ffffff; /* Fonts color changed to white */
   }
