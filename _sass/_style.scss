@@ -9,12 +9,31 @@ body {
   font-size: 15px;
 }
 
+a {
+  color: #ff8000;
+  border: 1px solid #ff8000;
+  transition: transform 1s ease;
+}
+
 a:hover {
   transform: rotate(1deg);
 }
 
 blockquote {
   font-size: 0.9em;
+}
+
+figure, .post-heading, .list-entry, footer {
+  margin: 5vh auto;
+  padding:5vh;
+  background: #343434; 
+  border-radius: 1em;
+  transform: rotate(-1deg);
+  transition: transform 1s ease;
+}
+
+figure:hover, .post-heading:hover, .list-entry:hover, footer:hover {
+  transform: rotate(1deg);
 }
 
 /* Other class selectors */
