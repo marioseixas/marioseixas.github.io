@@ -13,6 +13,10 @@ a:hover {
   transform: rotate(1deg);
 }
 
+pre, code {
+  word-wrap: break-word;
+}
+
 blockquote {
   font-size: 0.9em;
 }
