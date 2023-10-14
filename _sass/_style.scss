@@ -23,13 +23,5 @@ blockquote {
   font-size: 0.9em;
 }
 
-figure, .post-heading, .list-entry, footer {
-  margin: 5vh auto;
-  padding:5vh;
-  background: #343434; 
-  border-radius: 1em;
-  transform: rotate(-1deg);
-  transition: transform 1s ease;
-}
 /* Other class selectors */
 /* Ensure to add their styling or to remove if not used */
