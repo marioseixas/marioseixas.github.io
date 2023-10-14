@@ -13,6 +13,10 @@ a:hover {
   transform: rotate(1deg);
 }
 
+pre, code {
+  word-wrap: break-word;
+}
+
 pre.highlight, div.highlight, section {
   margin: 5vh auto;
   padding:5vh;
