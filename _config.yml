@@ -4,7 +4,7 @@ url:                 https://ib.bsb.br/
 enforce_ssl:         ib.bsb.br
 baseurl:             ""
 
-permalink:           /:slug
+permalink:           :slug
 relative_permalinks: false
 
 plugins:
