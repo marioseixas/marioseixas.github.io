@@ -2,7 +2,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Intentionally Blank</title>
+<title>Intent &#8660; Break</title>
 <style>
   body {
     background: #000000; /* Changes background to black */
