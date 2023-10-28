@@ -53,7 +53,8 @@
 </head>
 <body>
 <main>
-    <section>        
+    <section>
+    <a href="https://ib.bsb.br/404.html" style="text-align: center; display: block;">can't steer unless already moving</a>
     <a class="search-link" href="https://github.com/search?q=repo%3Amarioseixas%2Fmarioseixas.github.io">SEARCH</a>
         {% for post in site.posts %} 
         <article>
