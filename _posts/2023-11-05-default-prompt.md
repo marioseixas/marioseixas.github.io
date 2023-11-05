@@ -14,26 +14,26 @@ slug: default-prompt
 title: default [prompt]
 ---
 
-To effectively address the problem or question, detailed guidance involving dialectical and hermeneutic approaches is provided below in a narrative yet systematic format.
+For you to construct a comprehensive solution or answer to a given problem or question, I've outlined below a systematic process featuring dialectical and hermeneutic approaches:
 
-1. Begin with stating the problem or question clearly in one sentence. This initial articulation sets the foundation for subsequent steps.
+1. Initiate by articulating the problem or question precisely. This gives a clear blueprint for the subsequent stages. 
 
-2. Commence your research by gathering relevant information from reliable sources. It is crucial that these sources are correctly cited to maintain the credibility of your response.
+2. Start the research process by accruing related information.
 
-3. Analyze the collated data using dialectical and hermeneutic methods. This process involves identifying main points, assumptions, implications, and contradictions within different perspectives or arguments, understanding their correlation with the problem or question as well as with each other.
+3. Proceed to analyze the assembled data utilizing dialectical and hermeneutic approaches. This consists of identifying critical points, assumptions, implications, and inconsistencies across differing perspectives or arguments, while comprehending their association with the initial problem or question and to one another.
 
-4. Following the comprehensive analysis, evaluate the strengths and weaknesses of each identified perspective or argument. This involves considering the evidence, logic, values, and underlying biases. This evaluation step aids in deciphering the merit and flaws of each argument, which consequently helps in forming a conclusion.
+4. After conducting a detailed analysis, assess the strengths and limitations of each highlighted perspective or argument. This involves inspecting the evidence, logic, morals, and inherent biases. Through this evaluation phase, you can discern the credibility and loopholes of every argument, facilitating a more informed conclusion.
 
-5. Draw a thoughtful conclusion based on the preceding analysis and evaluation. This conclusion must clearly explain why it stands as the best answer or solution to the problem or question at hand. Make sure your conclusion is coherent and logically follows from the evidence and arguments you have presented.
+5. Draw a considerate conclusion based on the preceding scrutiny and valuation. Ensure your conclusion explicitly portrays why it's the most acceptable answer or solution to the problem or question on the docket. Ensure your conclusion is clear, and logically stems from the evidence and debates you've displayed.
 
-6. Construct your response in a clear and coherent manner. Use the following structure to organize your ideas:
+6. Frame your response in a clear and organized manner. Adhere to the following structure to order your thoughts:
 
-  - Introduction: Define the problem or question, provide some background, and preview your main points and conclusion.
+  - Introduction: Detail the problem or question, provide some background, and preview your key points and conclusion.
    
-  - Body: Develop separate paragraphs for each perspective or argument. Include evidence and analysis within each section for greater depth and clarity. Compare and contrast these arguments employing dialectical and hermeneutic methods. Highlight their strengths and weaknesses.
+  - Main Body: Develop isolated paragraphs for each argument or perspective. Incorporate evidence and processing within each section for more depth and clarity. Compare and contrast these arguments using dialectical and hermeneutic techniques. Emphasize their strengths and weaknesses.
    
-  - Conclusion: Round off your findings by compiling your main points and findings. Restate the conclusion, explain why it is the best answer or solution, and suggest implications or recommendations for further action or research.
+  - Conclusion: Round up your discoveries by compiling your main points and conclusions. Reiterate the conclusion, elucidating why it is the most accurate answer or solution, and propose implications or suggestions for future proceedings or research.
 
-7. Finally, review and revise your response, checking for accuracy, clarity, completeness, relevance, and consistency. Be certain to avoid logical fallacies and factual errors, ensuring your response effectively communicates the problem, the analysis, the evaluation, and the conclusion.
+7. Lastly, revise your response carefully, checking for accuracy, clarity, fulfillment, relevance, and consistency. Make sure to sidestep logical inconsistencies and factual inaccuracies, ensuring your response efficiently conveys the described problem, the conducted analysis, the evaluation, and the conclusion.
 
-Problem or question:
+Problem or Question:
