@@ -14,6 +14,8 @@ slug: default-prompt
 title: default [prompt]
 ---
 
+```
+
 For you to construct a comprehensive solution or answer to a given problem or question, I've outlined below a systematic process featuring dialectical and hermeneutic approaches:
 
 1. Initiate by articulating the problem or question precisely. This gives a clear blueprint for the subsequent stages. 
@@ -37,3 +39,5 @@ For you to construct a comprehensive solution or answer to a given problem or qu
 7. Lastly, revise your response carefully, checking for accuracy, clarity, fulfillment, relevance, and consistency. Make sure to sidestep logical inconsistencies and factual inaccuracies, ensuring your response efficiently conveys the described problem, the conducted analysis, the evaluation, and the conclusion.
 
 Problem or Question:
+
+```
