@@ -4,8 +4,8 @@ categories:
 tags:
   - linux
 comment: 
-info: fechado.
-date: '2023-09-25'
+info: aberto.
+date: '2023-11-10'
 type: post
 layout: post
 published: true
@@ -17,7 +17,7 @@ title: 'Installation of ratpoison in debian/ubuntu'
 
 How to make Ratpoison your only window manager:
 
-a) Go through the Ubuntu installation process as you typically would. Once you reach the desktop, open up a Terminal.
+a) Go through the distro installation process as you typically would. Once you reach the desktop, open up a Terminal.
 
 b) Update your system:
 
@@ -28,11 +28,10 @@ sudo apt-get update && sudo apt-get upgrade
 c) Install Ratpoison, misc softwares and create the `.ratpoisonrc` file:
 
 ```bash
-sudo aptitude install ratpoison alsamixergui bpytop brightnessctl catfish chromium chromium-common dialog gir1.2-xfconf-0 gmrun gsimplecal libfltk1.1 libjs-jquery libjs-sphinxdoc libjs-underscore libxnvctrl0 neofetch python3-dbus python3-dialog python3-pexpect python3-psutil python3-ptyprocess rxvt rxvt-unicode unclutter viewnior brightness-udev chafa chromium-sandbox fonts-dejavu fonts-ipaexfont-gothic fonts-ipafont-gothic fonts-ipafont-nonfree-jisx0208 fonts-liberation fonts-mona fonts-takao-gothic fonts-umeplus-cl fonts-vlgothic javascript-common libu2f-udev locate mlocate plocate system-config-printer unclutter-startup
+sudo aptitude install ratpoison alsamixergui bpytop brightnessctl catfish dialog gir1.2-xfconf-0 gmrun gsimplecal libfltk1.1 libjs-jquery libjs-sphinxdoc libjs-underscore libxnvctrl0 neofetch python3-dbus python3-dialog python3-pexpect python3-psutil python3-ptyprocess rxvt rxvt-unicode unclutter viewnior brightness-udev chafa fonts-dejavu fonts-ipaexfont-gothic fonts-ipafont-gothic fonts-ipafont-nonfree-jisx0208 fonts-liberation fonts-mona fonts-takao-gothic fonts-umeplus-cl fonts-vlgothic javascript-common libu2f-udev locate mlocate plocate system-config-printer unclutter-startup 9menu cups-pk-helper fonts-ipafont-mincho ghostscript gir1.2-secret-1 gsfonts menu packagekit python3-smbc system-config-printer-udev dmenu fonts-droid-fallback libpaper-utils packagekit-tools fonts-noto-mono gdebi lintian bcc build-essential clang-11 clang-13 clang-9 fakeroot gcc gcc-10 gcc-9 libalgorithm-merge-perl libfile-fcntllock-perl libpackage-stash-xs-perl libref-util-perl libtype-tiny-xs-perl libxml-sax-expat-perl pseudo tcc elks-libc libalgorithm-diff-xs-perl libomp-11-dev libreadonly-perl libref-util-xs-perl llvm-11-dev llvm-13-dev llvm-9-dev
 ```
 
-`touch ~/.ratpoisonrc`: https://ib.bsb.br/ratpoisonrc
-
+[touch ~/.ratpoisonrc](https://ib.bsb.br/ratpoisonrc)
 
 d) Now, you want Ratpoison to be your default session. You can configure this in the `.xinitrc` file in your home directory:
 
