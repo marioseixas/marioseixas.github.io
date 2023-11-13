@@ -52,6 +52,8 @@ exec sudo /sbin/quectel-CM
 exec sudo brightnessctl s 7
 exec unclutter
 exec rpws init 9 -k
+exec pcmanfm-qt --desktop
+exec sudo urxvt -fg silver -sl 1000 -vb +sb -b 0 -tr -sh 25 -fade 30 -font 10x20 -ls -hold -e systemctl restart networking
 
 definekey top M-Tab next
 definekey top M-ISO_Left_Tab prev
@@ -70,7 +72,7 @@ bind c exec gsimplecal
 bind i exec sudo urxvt -fg silver -sl 1000 -vb +sb -b 0 -tr -sh 25 -fade 30 -font 10x20 -ls -hold -e wifish
 bind p exec xfce4-screenshooter
 bind r remove
-bind t exec pcmanfm-qt
+bind t exec pcmanfm-qt --daemon-mode
 bind s-t exec sudo pcmanfm-qt
 bind v exec viewnior
 bind w exec ratpoison -c "select `ratpoison -c "windows" | dmenu | awk '{print $1}'`"
@@ -103,22 +105,5 @@ bind KP_6 exec rpws 6
 bind KP_7 exec rpws 7
 bind KP_8 exec rpws 8
 bind KP_9 exec rpws 9
-
-```
-
-backticks.sh:
-
-```
-
-#!/bin/bash
-
-# Copy backticks to clipboard
-echo -n '```' | xclip -selection clipboard
-
-# Small delay to make sure copying is done before pasting
-sleep 0.1
-
-# Simulate a paste command
-xdotool key --clearmodifiers ctrl+v
 
 ```
