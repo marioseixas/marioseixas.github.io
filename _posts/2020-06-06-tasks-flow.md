@@ -15,4 +15,4 @@ title: 'Tasks Flow'
 
 ---
 
-[![MyLifeOrganized](https://raw.githubusercontent.com/marioseixas/marioseixas.github.io/master/MLO%20-%20gtd.png "MyLifeOrganized")](https://raw.githubusercontent.com/marioseixas/marioseixas.github.io/master/MLO%20-%20gtd.png "MyLifeOrganized")
+[![MyLifeOrganized](https://raw.githubusercontent.com/marioseixas/marioseixas.github.io/main/assets/MLO%20-%20gtd.png "MyLifeOrganized")](https://raw.githubusercontent.com/marioseixas/marioseixas.github.io/main/assets/MLO%20-%20gtd.png "MyLifeOrganized")
