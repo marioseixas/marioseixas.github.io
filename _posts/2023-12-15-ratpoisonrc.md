@@ -5,7 +5,7 @@ tags:
   - linux
 comment: 
 info: aberto.
-date: '2023-11-12'
+date: '2023-12-15'
 type: post
 layout: post
 published: true
@@ -48,16 +48,14 @@ addhook deletewindow exec rpbarsend
 addhook titlechanged exec rpbarsend
 addhook newwindow exec rpbarsend
 
-exec sudo /sbin/quectel-CM
-exec sudo brightnessctl s 7
+exec /sbin/quectel-CM
+exec brightnessctl s 7
 exec unclutter
 exec rpws init 9 -k
 exec pcmanfm-qt --desktop
-exec sudo urxvt -fg silver -sl 1000 -vb +sb -b 0 -tr -sh 25 -fade 30 -font 10x20 -ls -hold -e systemctl restart networking
 
 definekey top M-Tab next
 definekey top M-ISO_Left_Tab prev
-definekey top M-i exec sudo urxvt -fg silver -sl 1000 -vb +sb -b 0 -tr -sh 25 -fade 30 -font 10x20 -ls -hold -e wpa_supplicant -B -c /etc/wpa_supplicant/wpa_supplicant.conf -i wlan0
 
 bind F1 only
 bind F2 hsplit
@@ -65,19 +63,17 @@ bind F3 vsplit
 bind F4 resize
 bind b exec urxvt -fg silver -sl 1000 -vb +sb -b 0 -tr -sh 25 -fade 30 -font 10x20 -ls -hold -e neofetch
 bind apostrophe exec urxvt -fg silver -sl 1000 -vb +sb -b 0 -tr -sh 25 -fade 30 -font 10x20 -ls
-bind s-apostrophe exec sudo urxvt -fg silver -sl 1000 -vb +sb -b 0 -tr -sh 25 -fade 30 -font 12x24 -ls
-bind e exec mousepad
-bind f exec thorium-browser
+bind s-apostrophe exec urxvt -fg silver -sl 1000 -vb +sb -b 0 -tr -sh 25 -fade 30 -font 12x24 -ls
+bind e exec xnedit
+bind f exec /usr/bin/thorium-browser --flag-switches-begin --enable-features=ChromeRefresh2023,ScrollableTabStrip --flag-switches-end --disable-nacl --use-gl=angle --use-angle=gl-egl --enable-unsafe-webgpu
 bind c exec gsimplecal
-bind i exec sudo urxvt -fg silver -sl 1000 -vb +sb -b 0 -tr -sh 25 -fade 30 -font 10x20 -ls -hold -e wifish
+bind i exec urxvt -fg silver -sl 1000 -vb +sb -b 0 -tr -sh 25 -fade 30 -font 10x20 -ls -hold -e wifish
 bind p exec xfce4-screenshooter
 bind r remove
 bind t exec pcmanfm-qt --daemon-mode
-bind s-t exec sudo pcmanfm-qt
 bind v exec viewnior
 bind w exec ratpoison -c "select `ratpoison -c "windows" | dmenu | awk '{print $1}'`"
 bind s-b exec urxvt -fg silver -sl 1000 -vb +sb -b 0 -tr -sh 25 -fade 30 -font 10x20 -ls -hold -e htop
-bind s-e exec sudo mousepad
 bind s-i exec urxvt -fg silver -sl 1000 -vb +sb -b 0 -tr -sh 25 -fade 30 -font 10x20 -ls -hold -e nmtui
 bind s-k kill
 bind s-x fselect
@@ -95,7 +91,7 @@ bind space exec dmenu_run
 bind F9 exec amixer set Master 0
 bind F10 exec amixer set Master 25%-
 bind F11 exec amixer set Master 25%+
-bind KP_0 exec sh /userdata/Documents/SCRIPTS/backticks.sh
+bind KP_0 exec xdotool key apostrophe key apostrophe key apostrophe
 bind KP_1 exec rpws 1
 bind KP_2 exec rpws 2
 bind KP_3 exec rpws 3
@@ -105,5 +101,6 @@ bind KP_6 exec rpws 6
 bind KP_7 exec rpws 7
 bind KP_8 exec rpws 8
 bind KP_9 exec rpws 9
+
 
 ```
