@@ -27,3 +27,6 @@ title: 'Concursos DELTA iminentes'
 | 2017 | [AP](https://cj.estrategia.com/portal/concurso-delegado-ap/) |
 | 2018 | [PI](https://cj.estrategia.com/portal/concurso-delegado-pi/) |
 | 2018 | [SE](https://cj.estrategia.com/portal/concurso-delegado-se/) |
+| 2021 | [MG](https://cj.estrategia.com/portal/concurso-delegado-mg/) |
+
+
