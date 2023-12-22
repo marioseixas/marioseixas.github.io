@@ -5,7 +5,7 @@ tags:
   - edital
 comment: 
 info: aberto.
-date: '2023-10-17'
+date: '2023-12-22'
 type: post
 layout: post
 published: true
@@ -27,6 +27,5 @@ title: 'Concursos DELTA iminentes'
 | 2017 | [AP](https://cj.estrategia.com/portal/concurso-delegado-ap/) |
 | 2018 | [PI](https://cj.estrategia.com/portal/concurso-delegado-pi/) |
 | 2018 | [SE](https://cj.estrategia.com/portal/concurso-delegado-se/) |
+| 2018 | [RS](https://cj.estrategia.com/portal/concurso-delegado-rs/) |
 | 2021 | [MG](https://cj.estrategia.com/portal/concurso-delegado-mg/) |
-
-
