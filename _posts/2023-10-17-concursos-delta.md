@@ -20,7 +20,7 @@ title: 'Concursos DELTA iminentes'
 | 2014 | [CE](https://cj.estrategia.com/portal/concurso-delegado-ce/) |
 | 2014 | [DF](https://cj.estrategia.com/portal/concurso-delegado-df/) |
 | 2014 | [TO](https://cj.estrategia.com/portal/concurso-delegado-to/) |
-| 2016 | [PE](https://cj.estrategia.com/portal/concurso-delegado-pe/) |
+| ~~2016~~ | [~~PE~~](https://cj.estrategia.com/portal/concurso-delegado-pe/) |
 | 2017 | [AC](https://cj.estrategia.com/portal/concurso-delegado-ac/) |
 | 2017 | [MT](https://cj.estrategia.com/portal/concurso-delegado-mt/) |
 | 2017 | [MA](https://cj.estrategia.com/portal/concurso-delegado-ma/) |
