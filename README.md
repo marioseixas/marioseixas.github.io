@@ -2,7 +2,14 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Intent &#8660; Break</title>
+
+<div class="header-container">
+  <title>Intent &#8660; Break</title>
+  <div id="google-search-box" class="search-box">
+    <div class="gcse-search"></div>
+  </div>
+</div>
+
 <style>
   body {
     background: #000000; /* Changes background to black */
@@ -19,6 +26,17 @@
       to {opacity: 1;}
   }
 
+  @media (max-width: 600px) {
+    .header-container {
+      flex-direction: column;
+    }
+    .search-box {
+      width: 100%;
+      max-width: none; /* Allows it to take the full width on smaller screens */
+      margin-top: 10px; /* Optional: adds some space between the title and search box */
+    }
+  }
+  
   pre, code {
     word-wrap: break-word;
   }
@@ -47,22 +65,13 @@
     padding: 0.5em; /* Gives some padding inside the box */
     color: #ff8000; /* Thermatic color of the text LINK */
     border: 1px solid #ff8000; /* Border color same as the link */
-    float: right; /* Floats the box to right */
-    
-  .search-box {
-    float: right;
-    max-width: 300px;
-    margin-top: 10px;
-  }
-  
+    float: right; /* Floats the box to right */  
   }
 </style>
+
 <script async src="https://cse.google.com/cse.js?cx=000547254117280036387:qwl-zdl2sn0"></script>
 </head>
 <body>
-  <div id="google-search-box" class="search-box">
-    <div class="gcse-search"></div>
-  </div>
 <main>
     <section>
     <a href="https://ib.bsb.br/404.html" style="text-align: center; display: block;">can't steer unless already moving</a>
