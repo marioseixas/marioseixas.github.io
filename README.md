@@ -49,8 +49,7 @@
   
   .search-box {
     margin-left: auto;
-    flex-grow: 1; /* Allows the box to grow as needed within the container*/
-    max-width: 300px; /* Optional: Max width can still be set if desired */
+    flex-grow: 1;
   }
   
   .search-link {
@@ -64,7 +63,7 @@
 </style>
 
 <div class="header-container">
-  <h1>Intent &#8660; Break</h1>
+  <h1><title>Intent &#8660; Break</title></h1>
   <div id="google-search-box" class="search-box">
     <div class="gcse-search"></div>
   </div>
