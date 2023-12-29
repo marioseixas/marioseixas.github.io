@@ -1,13 +1,13 @@
 <div style="font-weight: bold;" class="header-container">
-  <div id="google-search-box" class="search-box">
-    {% if page.id == "home" %}
-    <h1>Intent &#8660; Break</h1>
-    {% else %}
+  {% if page.id == "home" %}
+    <h1>Intent &#8660; Break</h1>  
+  <div id="google-search-box" class="search-box"><div class="gcse-search">    
+  </div></div>
+  {% else %}
     <a class="internal-link" href="/">
       <h1>Intent &#8660; Break</h1>
-    </a>
-    {% endif %}
-    <div class="gcse-search">      
-    </div>
-  </div>
+    </a>  
+  <div id="google-search-box" class="search-box"><div class="gcse-search">    
+  </div></div>
+  {% endif %}
 </div>
