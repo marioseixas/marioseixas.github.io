@@ -63,7 +63,9 @@
   }
 </style>
 
-<script async src="https://cse.google.com/cse.js?cx=000547254117280036387:qwl-zdl2sn0"></script>
+<script async src="https://cse.google.com/cse.js?cx=000547254117280036387:qwl-zdl2sn0">
+</script>
+<div class="gcse-search"></div>
 <script async src="https://us.umami.is/script.js" data-website-id="fc672b13-fa2f-4319-971b-e69be287523c"></script>
 </head>
 <body>
