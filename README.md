@@ -48,10 +48,21 @@
     color: #ff8000; /* Thermatic color of the text LINK */
     border: 1px solid #ff8000; /* Border color same as the link */
     float: right; /* Floats the box to right */
+    
+  .search-box {
+    float: right;
+    max-width: 300px;
+    margin-top: 10px;
+  }
+  
   }
 </style>
+<script async src="https://cse.google.com/cse.js?cx=000547254117280036387:qwl-zdl2sn0"></script>
 </head>
 <body>
+  <div id="google-search-box" class="search-box">
+    <div class="gcse-search"></div>
+  </div>
 <main>
     <section>
     <a href="https://ib.bsb.br/404.html" style="text-align: center; display: block;">can't steer unless already moving</a>
