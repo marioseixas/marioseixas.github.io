@@ -26,17 +26,6 @@
       to {opacity: 1;}
   }
 
-  @media (max-width: 600px) {
-    .header-container {
-      flex-direction: column;
-    }
-    .search-box {
-      width: 100%;
-      max-width: none; /* Allows it to take the full width on smaller screens */
-      margin-top: 10px; /* Optional: adds some space between the title and search box */
-    }
-  }
-  
   pre, code {
     word-wrap: break-word;
   }
@@ -59,6 +48,18 @@
     to {transform: translateY(0);}
   }
 
+  .header-container {
+    display: flex;
+    justify-content: space-between; /* Aligns items to each end */
+    align-items: center; /* Center items vertically */
+  }
+  
+  .search-box {
+    margin-left: auto;
+    flex-grow: 1; /* Allows the box to grow as needed within the container*/
+    max-width: 300px; /* Optional: Max width can still be set if desired */
+  }
+  
   .search-link {
     display: inline-block; /* Makes the link behave like a block */
     margin-bottom: 1em; /* Gives some space below the link */
