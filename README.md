@@ -63,7 +63,7 @@
 </style>
 
 <div class="header-container">
-  <h1><title>Intent &#8660; Break</title></h1>
+  <title><h1>Intent &#8660; Break</h1></title>
   <div id="google-search-box" class="search-box">
     <div class="gcse-search"></div>
   </div>
