@@ -1,58 +1,45 @@
 {% comment %} tagcloud(min_font, max_font, amount, color, start_color, end_color) {% endcomment %}
-{% capture tagcloud %}
-  {% assign tags = site.tags %}
-  {% assign max = max_font %}
-  {% assign min = min_font %}
-  {% assign sizes = '' | split: '' %}
-  {% assign unit = 'px' %}
-  {% assign start_color = start_color | split: ',' %}
-  {% assign end_color = end_color | split: ',' %}
-
-  {% for tag in tags %}
-    {% if forloop.index > amount %}
-      {% break %}
+<ul class="tagcloud-list">
+  {% assign tags_list = site.tags | sort %}
+  {% if amount > 0 %}
+    {% assign tags_list = tags_list | slice: 0, amount %}
+  {% endif %}
+  {% assign max_count = tags_list.last[1].size %}
+  {% assign min_count = tags_list.first[1].size %}
+  
+  {% for tag in tags_list %}
+    {% assign tag_name = tag[0] %}
+    {% assign tag_size = tag[1].size %}
+    {% assign font_step = max_font | minus: min_font %}
+    
+    {% if max_count != min_count %}
+      {% assign weight = tag_size | minus: min_count | times: 100.0 | divided_by: max_count | minus: min_count %}
+    {% else %}
+      {% assign weight = 0 %}
     {% endif %}
-    {% assign sizes = sizes | push: tag[1].size %}
-  {% endfor %}
+    {% assign font_size = min_font | plus: weight | times: font_step | divided_by: 100 | round: 2 %}
 
-  {% assign sizes = sizes | uniq | sort %}
-  {% assign length = sizes.size | minus: 1 %}
-
-  {% for tag in tags %}
-    {% if forloop.index > amount %}
-      {% break %}
-    {% endif %}
-
-    {% assign ratio = 0 %}
-
-    {% if length > 0 %}
-      {% for size in sizes %}
-        {% if size == tag[1].size %}
-          {% assign ratio = forloop.index0 | times: 1.0 | divided_by: length %}
-          {% break %}
+    {% assign style = 'font-size:' | append: font_size | append: 'px;' %}
+    
+    {% if color %}
+      {% assign color_diff = '' %}
+      {% for i in (0..2) %}
+        {% assign start = start_color[i] | plus: 0 %}
+        {% assign end = end_color[i] | plus: 0 %}
+        {% assign diff = end | minus: start | times: weight | divided_by: 100.0 %}
+        {% capture colorval %}{{ diff | plus: start | round }}{% endcapture %}
+        {% assign color_diff = color_diff | append: colorval %}
+        {% if forloop.last == false %}
+          {% assign color_diff = color_diff | append: ',' %}
         {% endif %}
       {% endfor %}
+      {% assign style = style | append: 'color: rgb(' | append: color_diff | append: ');' %}
     {% endif %}
-
-    {% assign tmp = max | minus: min | times: ratio %}
-    {% assign size = tmp | plus: min %}
-    {% assign tmp = size | round: 2 %}
-
-    {% assign style = 'font-size: ' | append: tmp | append: unit | append: ';' %}
-
-    {% if color %}
-      {% assign mid_color = '' | split: '' %}
-      {% for i in (0..2) %}
-        {% assign tmp = end_color[i] | minus: start_color[i] | times: ratio %}
-        {% assign tmp = start_color[i] | plus: tmp | round %}
-        {% assign mid_color = mid_color | push: tmp %}
-      {% endfor %}
-      {% assign mid_color = 'rgb(' | append: mid_color[0] | append: ',' | append: mid_color[1] | append: ',' | append: mid_color[2] | append: ')' %}
-      {% assign style = style | append: 'color: ' | append: mid_color %}
-    {% endif %}
-    {% assign tag_url_encode = tag[0] | url_encode | replace: '+', '%20' %}
-    {{ tag[0] }}
+    
+    {% assign tag_url = tag_name | slugify %}
+    <li class="tagcloud-item" style="{{ style }}">
+      <a class="tagcloud-link">{{ tag_name }}</a>
+      <span class="tagcloud-count">{{ tag_size }}</span>
+    </li>
   {% endfor %}
-
-{% endcapture %}
-{% assign tagcloud = tagcloud | normalize_whitespace %}
+</ul>
