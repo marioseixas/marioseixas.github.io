@@ -1,52 +1,16 @@
-{% comment %} tagcloud(min_font, max_font, amount, color, start_color, end_color) {% endcomment %}
-<ul class="tagcloud-list">
+{% comment %} tagcloud {% endcomment %}
+<ul class="tagcloud-list" style="list-style: none;">
   {% assign tags_list = site.tags | sort %}
-  {% if amount > 0 %}
-    {% assign tags_list = tags_list | slice: 0, amount %}
-  {% endif %}
-  {% assign max_count = tags_list.last[1].size %}
-  {% assign min_count = tags_list.first[1].size %}
-  {% assign base_vw_size = 1.0 %}
-  {% assign min_vw_font_size = 0.8 %}
-  {% assign max_vw_font_size = 2.5 %}
-  
   {% for tag in tags_list %}
     {% assign tag_name = tag[0] %}
-    {% assign tag_size = tag[1].size %}
-    {% assign font_step = max_font | minus: min_font %}
-    
-    {% if max_count != min_count %}
-      {% assign weight = tag_size | minus: min_count | times: 100.0 | divided_by: max_count | minus: min_count %}
-    {% else %}
-      {% assign weight = 0 %}
-    {% endif %}
-  {% assign vw_size = min_vw_font_size | plus: weight | times: base_vw_size %}
-  {% assign clamp_min_font_size = 'clamp(' | append: min_vw_font_size | append: 'vw, ' %}
-  {% assign clamp_vw_font_size = vw_size | append: 'vw, ' %}
-  {% assign clamp_max_font_size = max_vw_font_size | append: 'vw)' %}
-  {% assign font_size_clamp = clamp_min_font_size | append: clamp_vw_font_size | append: clamp_max_font_size %}
-
-  {% assign style = 'font-size: ' | append: font_size_clamp | append: ';' %}
-    
-    {% if color %}
-      {% assign color_diff = '' %}
-      {% for i in (0..2) %}
-        {% assign start = start_color[i] | plus: 0 %}
-        {% assign end = end_color[i] | plus: 0 %}
-        {% assign diff = end | minus: start | times: weight | divided_by: 100.0 %}
-        {% capture colorval %}{{ diff | plus: start | round }}{% endcapture %}
-        {% assign color_diff = color_diff | append: colorval %}
-        {% if forloop.last == false %}
-          {% assign color_diff = color_diff | append: ',' %}
-        {% endif %}
-      {% endfor %}
-      {% assign style = style | append: 'color: rgb(' | append: color_diff | append: ');' %}
-    {% endif %}
-    
+    {% assign tag_count = tag[1].size %}
     {% assign tag_url = tag_name | slugify %}
-    <li class="tagcloud-item" style="{{ style }}">
-      <a class="tagcloud-link">{{ tag_name }}</a>
-      <span class="tagcloud-count">{{ tag_size }}</span>
+    
+    <li class="tagcloud-item" style="display: inline-block; margin: 5px;">
+      <a class="tagcloud-link" style="font-size: 16px; color: #33ccff; text-decoration: none;">
+        {{ tag_name }}
+      </a>
+      <span class="tagcloud-count" style="font-size: 16px; color: #33ccff;">({{ tag_count }})</span>
     </li>
   {% endfor %}
 </ul>
