@@ -5,20 +5,19 @@ layout: default
   <article class="post">
     <div class="post-heading">
       <h1 class="post-title">{{ page.title }}</h1>
-      <time datetime="{{ page.date | date_to_xmlschema }}" >{% if page.type != 'pages' %}
-        {{ page.date | date: "%B %-d, %Y" }}
-        {% endif %}
-      </time>
+	    {% if page.info %}
+	    <div>
+		    {{ page.date|date_to_string }} , <span>{{ page.info }} </span>。</div>
+	    {% else %}
+	    <div>
+		    {{ page.date|date_to_string }} , 。</div>
+	    {% endif %}
     </div>
-    {{ content }}
+	  {{ content }}
   </article>
-{% if page.comment %}
-	<div style="margin-top:20px;margin-bottom:10px;font-size: 12px;line-height:20px; background: #505050;border: 1px dotted #ddd;padding-left: 20px;padding-top: 5px;padding-bottom: 5px;padding-right:20px;border-radius: 3px;color: #ffffff;">{{ page.comment }} </div>
-{% endif %}
-
-{% if page.info %}
-	<div style="margin-top:10px;margin-bottom:10px;font-size:12px;text-align:right;color:#555;">{{ page.date|date_to_string }} , 写于 <span style="color:#333;">{{ page.info }} </span>。</div>
-{% else %}
-	<div style="margin-top:10px;margin-bottom:10px;font-size:12px;text-align:right;color:#555;">{{ page.date|date_to_string }} , 写毕。</div>
-{% endif %}
+	{% if page.comment %}
+	<div style="margin-top:20px;margin-bottom:10px;font-size: 12px;line-height:20px; background: #505050;border: 1px dotted #ddd;padding-left: 20px;padding-top: 5px;padding-bottom: 5px;padding-right:20px;border-radius: 3px;color: #ffffff;">
+		{{ page.comment }}
+	</div>
+	{% endif %}
 </div>
