@@ -7,21 +7,17 @@ layout: default
 	    <h1 class="post-title">{{ page.title }}</h1>
 	    {% if page.info %}
 	    <div>
-		    {{ page.date|date_to_string }} , <span>{{ page.info }} </span>
+		    <a style="color:#FFCC00;">{{ page.date|date_to_string }}</a> , <span>{{ page.info }}</span>
 	    </div>
 	    {% else %}
 	    <div>
-		    {{ page.date|date_to_string }} , </div>
+		    <a style="color:#FFCC00;">{{ page.date|date_to_string }}</a> , </div>
 	    {% endif %}
 	    {% if page.tags %}
 	    <div class="post-tags">
-		    <ul>
-			    {% for tag in page.tags %}
-			    <li>
-				    {{ tag }}
-			    </li>
-			    {% endfor %}
-		    </ul>
+		    {% for tag in page.tags %}
+		    <a style="color:#33ccff;">{{ tag }}</a>
+		    {% endfor %}
 	    </div>
 	    {% endif %}
     </div>
