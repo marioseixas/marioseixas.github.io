@@ -30,6 +30,7 @@ id: "not-found"
 
 <hr> <!-- This adds a horizontal line -->
 
+<div class="tag-cloud">
 {% comment %}
   Helper to generate a tag cloud.
 {% endcomment %}
@@ -58,4 +59,5 @@ id: "not-found"
     
     <a href="{{ site.baseurl }}/tag/{{ tag }}" style="font-size:{{ font_size }}px; {% if color %} color:rgb({{ tag_color }}); {% endif %}" class="tag-cloud-tag">{{ tag }}</a>
   {% endfor %}
+</div>
 </div>
