@@ -9,18 +9,18 @@ layout: default
 		    <a style="color:#FFCC00;">
 			    {{ page.date | date_to_string }}
 		    </a>
-		    {% if page.categories %}, Categories: {% for category in page.categories %}
+		    {% if page.categories %}Categories: {% for category in page.categories %}
 		    <a style="color:#33ccff;">
 			    {{ category }}
 		    </a>
-		    {% unless forloop.last %}, {% endunless %}
+		    {% unless forloop.last %} {% endunless %}
 		    {% endfor %}
 		    {% endif %}
-		    {% if page.tags %}, Tags: {% for tag in page.tags %}
+		    {% if page.tags %} Tags: {% for tag in page.tags %}
 		    <a style="color:#33ccff;">
 			    {{ tag }}
 		    </a>
-		    {% unless forloop.last %}, {% endunless %}
+		    {% unless forloop.last %} {% endunless %}
 		    {% endfor %}
 		    {% endif %}
 		    {% if page.info %}
