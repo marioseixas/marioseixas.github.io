@@ -22,3 +22,7 @@ defaults:
       path: "**/*"
     values:
       layout: "default"
+
+menu:
+  home: /
+  tags: /tags/
