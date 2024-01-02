@@ -4,13 +4,25 @@ layout: default
 <div class="post-wrapper">
   <article class="post">
     <div class="post-heading">
+    <h1>{{ page.title }}</h1>
+    {% if page.tags %}
+    <div class="post-tags">
+      Tags:
+      <ul>
+        {% for tag in page.tags %}
+        <li><a href="{{ site.baseurl }}/tag/{{ tag }}">{{ tag }}</a></li>
+        {% endfor %}
+      </ul>
+    </div>
+    {% endif %}
       <h1 class="post-title">{{ page.title }}</h1>
 	    {% if page.info %}
 	    <div>
-		    {{ page.date|date_to_string }} , <span>{{ page.info }} </span>。</div>
+		    {{ page.date|date_to_string }} , <span>{{ page.info }} </span>
+	    </div>
 	    {% else %}
 	    <div>
-		    {{ page.date|date_to_string }} , 。</div>
+		    {{ page.date|date_to_string }} , </div>
 	    {% endif %}
     </div>
 	  {{ content }}
