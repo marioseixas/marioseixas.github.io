@@ -6,6 +6,9 @@
   {% endif %}
   {% assign max_count = tags_list.last[1].size %}
   {% assign min_count = tags_list.first[1].size %}
+  {% assign base_vw_size = 1.0 %}
+  {% assign min_vw_font_size = 0.8 %}
+  {% assign max_vw_font_size = 2.5 %}
   
   {% for tag in tags_list %}
     {% assign tag_name = tag[0] %}
@@ -17,9 +20,13 @@
     {% else %}
       {% assign weight = 0 %}
     {% endif %}
-    {% assign font_size = min_font | plus: weight | times: font_step | divided_by: 100 | round: 2 %}
+  {% assign vw_size = min_vw_font_size | plus: weight | times: base_vw_size %}
+  {% assign clamp_min_font_size = 'clamp(' | append: min_vw_font_size | append: 'vw, ' %}
+  {% assign clamp_vw_font_size = vw_size | append: 'vw, ' %}
+  {% assign clamp_max_font_size = max_vw_font_size | append: 'vw)' %}
+  {% assign font_size_clamp = clamp_min_font_size | append: clamp_vw_font_size | append: clamp_max_font_size %}
 
-    {% assign style = 'font-size:' | append: font_size | append: 'px;' %}
+  {% assign style = 'font-size: ' | append: font_size_clamp | append: ';' %}
     
     {% if color %}
       {% assign color_diff = '' %}
