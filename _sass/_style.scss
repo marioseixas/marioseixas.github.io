@@ -33,3 +33,11 @@ figure, .post-heading, .list-entry {
 figure:hover, .post-heading:hover, .list-entry:hover {
   transform: rotate(1deg);
 }
+
+.tag-cloud {
+  text-align: center;
+  a {
+    display: inline-block;
+    margin: 10px;
+  }
+}
