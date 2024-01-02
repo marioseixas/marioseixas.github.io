@@ -27,3 +27,35 @@ id: "not-found"
         <li>Expansion – each sheath extends each cycle of practice in both quality (length & intensity) and quantity (subtle refinement). Expansion eventually leads to energetic practices with an opposite quality of compression.</li>
     </ul>
 </div>
+
+<hr> <!-- This adds a horizontal line -->
+
+{% comment %}
+  Helper to generate a tag cloud.
+{% endcomment %}
+
+{% assign count_tags = site.tags | sort: 'size' | reverse %}
+{% assign max_count = count_tags.first | last %}
+{% assign min_count = count_tags.last | last %}
+
+<div class="tags">
+  {% for tags in count_tags %}
+    {% assign tag = tags | first %}
+    {% assign count = tags | last %}
+   
+    {% comment %} Calculate tag font size for weighted cloud if desired {% endcomment %}
+    {% assign font_size = count | times: max_font | divided_by:max_count %}
+    {% if font_size < min_font %}{% assign font_size = min_font %}{% endif %}
+    
+    {% if color %}
+      {% comment %} Assign tag color based on count if desired {% endcomment %}
+      {% assign ratio = count | divided_by: max_count %}
+      {% assign r = start_color | split: ',' | first | to_number | times: ratio | plus: end_color | split: ',' | first | to_number | times: 1 | minus: ratio %}
+      {% assign g = start_color | split: ',' | last | to_number | times: ratio | plus: end_color | split: ',' | last | to_number | times: 1 | minus: ratio %}
+      {% assign b = start_color | split: ',' | last | to_number | times: ratio | plus: end_color | split: ',' | last | to_number | times: 1 | minus: ratio %}
+      {% assign tag_color = r | append: ',' | append: g | append: ',' | append: b %}
+    {% endif %}
+    
+    <a href="{{ site.baseurl }}/tag/{{ tag }}" style="font-size:{{ font_size }}px; {% if color %} color:rgb({{ tag_color }}); {% endif %}" class="tag-cloud-tag">{{ tag }}</a>
+  {% endfor %}
+</div>
