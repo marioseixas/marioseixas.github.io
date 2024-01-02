@@ -71,8 +71,12 @@
 <body>
 <main>
     <section>
-    <a href="https://ib.bsb.br/categories/" style="text-align: center; display: block;">can't steer</a><a href="https://ib.bsb.br/404.html" style="text-align: center; display: block;">unless</a><a href="https://ib.bsb.br/tags/" style="text-align: center; display: block;">already moving</a>
-    <a class="search-link" href="https://github.com/search?q=repo%3Amarioseixas%2Fmarioseixas.github.io">SEARCH</a>
+      <div style="text-align: center;">
+        <a href="https://ib.bsb.br/categories/">can't steer</a>
+        <a href="https://ib.bsb.br/404.html">unless</a>
+        <a href="https://ib.bsb.br/tags/">already moving</a>
+      </div>
+      <a class="search-link" href="https://github.com/search?q=repo%3Amarioseixas%2Fmarioseixas.github.io">SEARCH</a>
         {% for post in site.posts %} 
         <article>
             <time datetime="{{ post.date | date: "%Y-%m-%d" }}"> {{ post.date | date: "%Y-%m-%d" }} </time>
