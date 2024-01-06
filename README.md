@@ -29,12 +29,7 @@
     padding:5vh;
     background: #343434; 
     border-radius: 1em;
-    transform: rotate(-1deg);
     transition: transform 1s ease;
-  }
-
-  section:hover {
-    transform: rotate(1deg);
   }
 
   @keyframes slideIn {
