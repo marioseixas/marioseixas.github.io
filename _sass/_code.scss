@@ -26,7 +26,8 @@ pre.highlight, div.highlight, section {
   transition: transform 1s ease;
 }
 
-.highlight {
+section:hover{
+  transform: rotate(1deg);
 }
 
 .faded {
