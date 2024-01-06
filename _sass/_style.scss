@@ -1,18 +1,81 @@
+main {
+  margin - top: 10 vh;
+  animation: fadeIn 2 s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+section {
+  margin: 5 vh auto;
+  padding: 5 vh;
+  background: #343434;
+  border-radius: 1em;
+  transition: transform 1s ease;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-100%);
+  }
+
+  to {
+    transform: translateY(0);
+  }
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  /* Aligns items to each end */
+  align-items: center;
+  /* Center items vertically */
+}
+
+.search-box {
+  margin-left: auto;
+  flex-grow: 1;
+}
+
+.search-link {
+  display: inline-block;
+  /* Makes the link behave like a block */
+  margin-bottom: 1em;
+  /* Gives some space below the link */
+  padding: 0.5em;
+  /* Gives some padding inside the box */
+  color: # ff8000;
+  /* Thermatic color of the text LINK */
+  border: 1 px solid #ff8000;
+  /* Border color same as the link */
+  float: right;
+  /* Floats the box to right */
+}
+
 body {
   background: #000000;
-  color: #ffffff;
-  max-width: 100%;
+  color: # ffffff;
+  max - width: 100 %;
 }
 
 a {
   color: #ff8000;
-  transition: transform 1s ease;
+  transition: transform 1 s ease;
 }
 
-figure, .post-heading, .list-entry {
-  margin: 5vh auto;
-  padding:5vh;
-  background: #343434; 
+figure,
+.post - heading,
+.list - entry {
+  margin: 5 vh auto;
+  padding: 5 vh;
+  background: #343434;
   border-radius: 1em;
   transition: transform 1s ease;
 }
@@ -23,6 +86,7 @@ blockquote {
 
 .tag-cloud {
   text-align: center;
+
   a {
     display: inline-block;
     margin: 10px;
