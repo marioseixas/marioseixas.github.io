@@ -9,25 +9,16 @@ a {
   transition: transform 1s ease;
 }
 
-a:hover {
-  transform: rotate(1deg);
-}
-
 pre, code {
   overflow-x: auto;
 }
 
-pre.highlight, div.highlight, section {
+pre.highlight, section {
   margin: 5vh auto;
   padding:5vh;
   background: #343434; 
   border-radius: 1em;
-  transform: rotate(-1deg);
   transition: transform 1s ease;
-}
-
-section:hover{
-  transform: rotate(1deg);
 }
 
 .faded {
