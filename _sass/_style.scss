@@ -1,6 +1,12 @@
+body {
+  background: #000000;
+  color: #ffffff;
+  max-width: 100%;
+}
+
 main {
-  margin - top: 10 vh;
-  animation: fadeIn 2 s ease;
+  margin-top: 10vh;
+  animation: fadeIn 2s ease;
 }
 
 @keyframes fadeIn {
@@ -12,9 +18,9 @@ main {
   }
 }
 
-section {
-  margin: 5 vh auto;
-  padding: 5 vh;
+section, figure, .post-heading, .list-entry {
+  margin: 5vh auto;
+  padding: 5vh;
   background: #343434;
   border-radius: 1em;
   transition: transform 1s ease;
@@ -32,9 +38,7 @@ section {
 .header-container {
   display: flex;
   justify-content: space-between;
-  /* Aligns items to each end */
   align-items: center;
-  /* Center items vertically */
 }
 
 .search-box {
@@ -42,39 +46,13 @@ section {
   flex-grow: 1;
 }
 
-.search-link {
+.search-link, a {
   display: inline-block;
-  /* Makes the link behave like a block */
   margin-bottom: 1em;
-  /* Gives some space below the link */
   padding: 0.5em;
-  /* Gives some padding inside the box */
-  color: # ff8000;
-  /* Thermatic color of the text LINK */
-  border: 1 px solid #ff8000;
-  /* Border color same as the link */
-  float: right;
-  /* Floats the box to right */
-}
-
-body {
-  background: #000000;
-  color: # ffffff;
-  max - width: 100 %;
-}
-
-a {
   color: #ff8000;
-  transition: transform 1 s ease;
-}
-
-figure,
-.post - heading,
-.list - entry {
-  margin: 5 vh auto;
-  padding: 5 vh;
-  background: #343434;
-  border-radius: 1em;
+  border: 1px solid #ff8000;
+  float: right;
   transition: transform 1s ease;
 }
 
