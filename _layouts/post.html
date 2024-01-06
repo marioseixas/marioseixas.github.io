@@ -28,8 +28,8 @@ layout: default
 		    {% endif %}
 	    </div>
     </div>
-	  {{ content }}
-  </article>
+	  {{ content | replace: "<pre><code>", "<div class='code-container'><pre><code>" | replace: "</code></pre>", "</code></pre><button class='copy-button' title='Copy to clipboard'>Copy</button></div>" }}
+</article>
 	{% if page.comment %}
 	<div style="margin-top:20px;margin-bottom:10px;font-size: 12px;line-height:20px; background: #505050;border: 1px dotted #ddd;padding-left: 20px;padding-top: 5px;padding-bottom: 5px;padding-right:20px;border-radius: 3px;color: #ffffff;">
 		{{ page.comment }}
