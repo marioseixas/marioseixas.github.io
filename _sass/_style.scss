@@ -9,10 +9,6 @@ a {
   transition: transform 1s ease;
 }
 
-a:hover {
-  transform: rotate(1deg);
-}
-
 pre, code {
   overflow-x: auto;
 }
@@ -26,12 +22,7 @@ figure, .post-heading, .list-entry {
   padding:5vh;
   background: #343434; 
   border-radius: 1em;
-  transform: rotate(-1deg);
   transition: transform 1s ease;
-}
-
-figure:hover, .post-heading:hover, .list-entry:hover {
-  transform: rotate(1deg);
 }
 
 .tag-cloud {
