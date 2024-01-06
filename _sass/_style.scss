@@ -9,16 +9,16 @@ a {
   transition: transform 1s ease;
 }
 
-blockquote {
-  font-size: 0.9em;
-}
-
 figure, .post-heading, .list-entry {
   margin: 5vh auto;
   padding:5vh;
   background: #343434; 
   border-radius: 1em;
   transition: transform 1s ease;
+}
+
+blockquote {
+  font-size: 0.9em;
 }
 
 .tag-cloud {
