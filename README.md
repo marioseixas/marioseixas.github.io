@@ -20,10 +20,6 @@
       to {opacity: 1;}
   }
 
-  pre, code {
-    word-wrap: break-word;
-  }
-
   section {
     margin: 5vh auto;
     padding:5vh;
