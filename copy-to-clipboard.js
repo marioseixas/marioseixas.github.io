@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
-  var highlightBlocks = document.querySelectorAll('pre.highlight');
+  var highlightBlocks = document.querySelectorAll('div.highlight:hover');
 
   highlightBlocks.forEach(function(block) {
     var button = document.createElement('button');
