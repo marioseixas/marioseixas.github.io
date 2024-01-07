@@ -2,36 +2,80 @@ body {
   background: #000000;
   color: #ffffff;
   max-width: 100%;
+  font-family: 'BitPotionExt';
+  font-size: 48px;
 }
 
 a {
   color: #ff8000;
+  transition: transform 1 s ease;
+  font-family: 'BitPotionExt';
+  font-size: 48px;
+}
+
+main {
+  margin-top: 10vh;
+  animation: fadeIn 2s ease;
+  font-family: 'BitPotionExt';
+  font-size: 48px;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+section, figure, .post-heading, .list-entry {
+  margin: 5vh auto;
+  padding: 5vh;
+  background: #343434;
+  border-radius: 1em;
   transition: transform 1s ease;
+  font-family: 'BitPotionExt';
+  font-size: 48px;
 }
 
-a:hover {
-  transform: rotate(1deg);
+@keyframes slideIn {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
 }
 
-pre, code {
-  overflow-x: auto;
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: 'BitPotionExt';
+  font-size: 48px;
+}
+
+.search-box {
+  margin-left: auto;
+  flex-grow: 1;
+}
+
+.search-link {
+  display: inline-block;
+  margin-bottom: 1em;
+  padding: 0.5em;
+  color: #ff8000;
+  border: 1px solid #ff8000;
+  float: right;
+  transition: transform 1s ease;
+  font-family: 'BitPotionExt';
+  font-size: 48px;
 }
 
 blockquote {
-  font-size: 0.9em;
-}
-
-figure, .post-heading, .list-entry {
-  margin: 5vh auto;
-  padding:5vh;
-  background: #343434; 
-  border-radius: 1em;
-  transform: rotate(-1deg);
-  transition: transform 1s ease;
-}
-
-figure:hover, .post-heading:hover, .list-entry:hover {
-  transform: rotate(1deg);
+  font-family: 'BitPotionExt';
+  font-size: 48px;
 }
 
 .tag-cloud {

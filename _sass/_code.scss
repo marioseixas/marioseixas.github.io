@@ -1,36 +1,20 @@
-body {
-  background: #000000;
-  color: #ffffff;
-  max-width: 100%;
-}
-
-a {
-  color: #ff8000;
-  transition: transform 1s ease;
-}
-
-a:hover {
-  transform: rotate(1deg);
-}
-
 pre, code {
   overflow-x: auto;
+  font-family: 'BitPotionExt';
+  font-size: 48px;
+  white-space: pre-wrap;
+  word-break: break-word;
+  overflow-wrap: break-word;
 }
 
-pre.highlight, div.highlight, section {
+pre.highlight{
   margin: 5vh auto;
   padding:5vh;
   background: #343434; 
   border-radius: 1em;
-  transform: rotate(-1deg);
   transition: transform 1s ease;
-}
-
-pre.highlight:hover, div.highlight:hover, section:hover{
-  transform: rotate(1deg);
-}
-
-.highlight {
+  font-family: 'BitPotionExt';
+  font-size: 48px;
 }
 
 .faded {
