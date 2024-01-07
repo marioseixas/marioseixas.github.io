@@ -2,6 +2,9 @@ pre, code {
   overflow-x: auto;
   font-family: 'BitPotionExt';
   font-size: 48px;
+  white-space: pre-wrap;
+  word-break: break-word;
+  overflow-wrap: break-word;
 }
 
 pre.highlight{
