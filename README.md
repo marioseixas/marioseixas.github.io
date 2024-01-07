@@ -2,12 +2,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Intent &#8660; Break</title>
-  
-<script async src="https://cse.google.com/cse.js?cx=000547254117280036387:qwl-zdl2sn0">
-</script>
-<script async src="https://us.umami.is/script.js" data-website-id="fc672b13-fa2f-4319-971b-e69be287523c">  
-</script>
+<title>infoBAG</title>
 </head>
 <body>
 <main>
