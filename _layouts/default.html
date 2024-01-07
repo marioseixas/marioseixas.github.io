@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 {% include head.html %}
-<body>
+  <div id="google-search-box" class="search-box">
+    <div class="gcse-search">      
+    </div>
+  </div>
+  <body>
   <nav>{% include bio.html %}</nav>
   <div class="wrapper">
     <main>{{ content }}</main>
     {% include footer.html %}
   </div>
   {% include feet.html %}
-  <script src="{{ '/copy-to-clipboard.js' | relative_url }}" defer>   
-  </script>
-</body>
+  </body>
 </html>
