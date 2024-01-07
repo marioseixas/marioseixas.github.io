@@ -1,15 +1,15 @@
 {% comment %} list_categories(paginator, prev_text, next_text) {% endcomment %}
 {% capture list_categories %}
-<ul class="category-list" style="list-style: none;">
+<ul class="category-list" style="list-style: none; font-family: 'BitPotionExt'; font-size: 48px;">
   {% for cat_posts in site.categories %}
-  <li class="category-list-item" style="display: inline-block; margin: 5px;">
+  <li class="category-list-item" style="display: inline-block; margin: 5px; font-family: 'BitPotionExt'; font-size: 48px;">
     {% assign cat = cat_posts[0] %}
     {% assign posts = cat_posts[1] %}
     {% assign cat_url_encode = cat | url_encode | replace: '+', '%20' %}
-    <a class="category-list-link" style="font-size: 16px; color: #33ccff; text-decoration: none;">
+    <a class="category-list-link" style="font-family: 'BitPotionExt'; font-size: 48px; color: #33ccff; text-decoration: none;">
       {{ cat }}
     </a>
-    <span class="category-list-count" style="font-size: 16px; color: #33ccff;">({{ posts.size }})</span>
+    <span class="category-list-count" style="font-family: 'BitPotionExt'; font-size: 48px; color: #33ccff;">({{ posts.size }})</span>
   </li>
   {% endfor %}
 </ul>
