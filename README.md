@@ -16,7 +16,10 @@
         {% for post in site.posts %} 
         <article>
             <time datetime="{{ post.date | date: "%Y-%m-%d" }}"> {{ post.date | date: "%Y-%m-%d" }} </time>
-            <a style="color:#33ccff;" href="{{ post.url }}"> {{ post.title }} </a> <!-- Changes post title color for readability -->
+            <a style="color:#33ccff;" href="{{ post.url }}">
+                <img src="https://raw.githubusercontent.com/marioseixas/marioseixas.github.io/main/assets/gold.ico" alt="favicon" style="margin-left: 5px; vertical-align: middle;">
+                {{ post.title }}
+            </a>
         </article> 
         {% endfor %}
     </section>
