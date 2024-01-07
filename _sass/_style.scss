@@ -2,17 +2,22 @@ body {
   background: #000000;
   color: #ffffff;
   max-width: 100%;
+  font-family: 'BitPotionExt';
+  font-size: 48px;
 }
 
 a {
   color: #ff8000;
   transition: transform 1 s ease;
-  display: flex;
+  font-family: 'BitPotionExt';
+  font-size: 48px;
 }
 
 main {
   margin-top: 10vh;
   animation: fadeIn 2s ease;
+  font-family: 'BitPotionExt';
+  font-size: 48px;
 }
 
 @keyframes fadeIn {
@@ -30,6 +35,8 @@ section, figure, .post-heading, .list-entry {
   background: #343434;
   border-radius: 1em;
   transition: transform 1s ease;
+  font-family: 'BitPotionExt';
+  font-size: 48px;
 }
 
 @keyframes slideIn {
@@ -45,6 +52,8 @@ section, figure, .post-heading, .list-entry {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  font-family: 'BitPotionExt';
+  font-size: 48px;
 }
 
 .search-box {
@@ -60,9 +69,12 @@ section, figure, .post-heading, .list-entry {
   border: 1px solid #ff8000;
   float: right;
   transition: transform 1s ease;
+  font-family: 'BitPotionExt';
+  font-size: 48px;
 }
 
 blockquote {
+  font-family: 'BitPotionExt';
   font-size: 48px;
 }
 
@@ -71,5 +83,7 @@ blockquote {
   a {
     display: inline-block;
     margin: 10px;
+    font-family: 'BitPotionExt';
+    font-size: 48px;
   }
 }
