@@ -5,12 +5,11 @@
     {% assign tag_name = tag[0] %}
     {% assign tag_count = tag[1].size %}
     {% assign tag_url = tag_name | slugify %}
-    
-    <li class="tagcloud-item" style="font-family: 'BitPotionExt'; font-size: 48px; display: inline-block; margin: 5px;">
-      <a class="tagcloud-link" style="font-family: 'BitPotionExt'; font-size: 48px; color: #33ccff; text-decoration: none;">
-        {{ tag_name }}
-      </a>
-      <span class="tagcloud-count" style="font-family: 'BitPotionExt'; font-size: 48px; color: #33ccff;">({{ tag_count }})</span>
-    </li>
+  <li class="tagcloud-item" style="font-family: 'BitPotionExt'; font-size: 48px; display: inline-block; margin: 5px;">
+    <a class="tagcloud-link" style="font-family: 'BitPotionExt'; font-size: 48px; color: #33ccff; text-decoration: none;">
+      {{ tag_name }}
+    </a>
+    <span class="tagcloud-count" style="font-family: 'BitPotionExt'; font-size: 48px; color: #33ccff;">({{ tag_count }})</span>
+  </li>
   {% endfor %}
 </ul>
