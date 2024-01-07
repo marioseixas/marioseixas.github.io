@@ -5,8 +5,11 @@ body {
 }
 
 a {
-    color: #ff8000;
-    transition: transform 1 s ease;
+  color: #ff8000;
+  transition: transform 1 s ease;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 main {
