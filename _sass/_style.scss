@@ -1,9 +1,23 @@
 body {
   background: #000000;
-  color: #ffffff;
   max-width: 100%;
   font-family: 'BitPotionExt';
   font-size: 48px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 8px;
+  text-align: center;
+  border-bottom: 1px solid #ffffff;
+}
+
+th {
+  background-color: #f8f8f8;
 }
 
 a {
