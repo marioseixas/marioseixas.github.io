@@ -14,10 +14,15 @@ th, td {
   padding: 8px;
   text-align: center;
   border-bottom: 1px solid #ffffff;
+  border-right: 1px solid #ffffff;
 }
 
 th {
-  background-color: #f8f8f8;
+  background-color: #343434;
+}
+
+th:last-child, td:last-child {
+  border-right: none;
 }
 
 a {
