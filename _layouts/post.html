@@ -9,14 +9,18 @@ layout: default
 		    <a style="color:#FFCC00;">
 			    {{ page.date | date_to_string }}
 		    </a>
-		    {% if page.categories %}Categories: {% for category in page.categories %}
+		    {% if page.categories %}
+		    <a style="color:#ffffff;">Categories: </a>
+		    {% for category in page.categories %}
 		    <a style="color:#33ccff;">
 			    {{ category }}
 		    </a>
 		    {% unless forloop.last %} {% endunless %}
 		    {% endfor %}
 		    {% endif %}
-		    {% if page.tags %} Tags: {% for tag in page.tags %}
+		    {% if page.tags %}
+		    <a style="color:#ffffff;">Tags: </a>
+		    {% for tag in page.tags %}
 		    <a style="color:#33ccff;">
 			    {{ tag }}
 		    </a>
@@ -35,7 +39,7 @@ layout: default
 	  {{ content | replace: "<code>", "<div class='code-container'><code>" | replace: "</code>", "</code></div>" }}
 </article>
 	{% if page.comment %}
-	<div style="font-family: 'BitPotionExt'; font-size: 32px; margin-top: 20px; margin-bottom: 10px; line-height: 20px; background: #505050; border: 1px dotted #ddd; padding-left: 20px; padding-top: 5px; padding-bottom: 5px; padding-right: 20px; border-radius: 3px; color: #ef0000;">
+	<div style="font-family: 'BitPotionExt'; font-size: 32px; margin-top: 20px; margin-bottom: 10px; line-height: 20px; background: #505050; border: 1px dotted #ddd; padding-left: 20px; padding-top: 5px; padding-bottom: 5px; padding-right: 20px; border-radius: 3px; color: #ffffff;">
 		{{ page.comment }}
 	</div>
 	{% endif %}
