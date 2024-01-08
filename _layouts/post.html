@@ -4,7 +4,7 @@ layout: default
 <div class="post-wrapper">
   <article class="post">
     <div class="post-heading">
-	    <h1 class="post-title">{{ page.title }}</h1>
+	    <h1 class="post-title" style="color: #efef00;">{{ page.title }}</h1>
 	    <div>
 		    <a style="color:#FFCC00;">
 			    {{ page.date | date_to_string }}
@@ -24,7 +24,9 @@ layout: default
 		    {% endfor %}
 		    {% endif %}
 		    {% if page.info %}
-		    {{ page.info }}
+		    <a style="color:#ef0000;">
+			    {{ page.info }}
+		    </a>
 		    {% endif %}
 	    </div>
     </div>
@@ -33,7 +35,7 @@ layout: default
 	  {{ content | replace: "<code>", "<div class='code-container'><code>" | replace: "</code>", "</code></div>" }}
 </article>
 	{% if page.comment %}
-	<div style="font-family: 'BitPotionExt'; font-size: 32px; margin-top: 20px; margin-bottom: 10px; line-height: 20px; background: #505050; border: 1px dotted #ddd; padding-left: 20px; padding-top: 5px; padding-bottom: 5px; padding-right: 20px; border-radius: 3px; color: #ffffff;">
+	<div style="font-family: 'BitPotionExt'; font-size: 32px; margin-top: 20px; margin-bottom: 10px; line-height: 20px; background: #505050; border: 1px dotted #ddd; padding-left: 20px; padding-top: 5px; padding-bottom: 5px; padding-right: 20px; border-radius: 3px; color: #ef0000;">
 		{{ page.comment }}
 	</div>
 	{% endif %}
