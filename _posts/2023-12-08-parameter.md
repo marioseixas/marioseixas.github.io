@@ -11,7 +11,7 @@ layout: post
 published: true
 sha: 
 slug: parameter
-title: '\rockdev\image\parameter.txt'
+title: 'parameter.txt'
 
 ---
 
