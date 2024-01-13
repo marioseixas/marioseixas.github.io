@@ -11,7 +11,7 @@ layout: post
 published: true
 sha: 
 slug: ratpoisonrc
-title: /root/.ratpoisonrc
+title: .ratpoisonrc
 
 ---
 
