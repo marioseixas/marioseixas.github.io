@@ -16,27 +16,28 @@ title: 'DP-Q803P thermal printer manual'
 
 # Safety instructions
 
-4) The printer should be kept away from water sources and away from direct sunlight, strong light and heat sources.
+4.  The printer should be kept away from water sources and away from direct sunlight, strong light and heat sources.
 
 Xiamen Dapu Electronic Technology Co., Ltd.
 
-1) The printer should be installed on a flat and stable place.
+1.  The printer should be installed on a flat and stable place.
 
 1\. Introduction and overview
 
-3) Leave enough space around the printer for maintenance and operation.
+3.  Leave enough space around the printer for maintenance and operation.
 
 To turn on printing
 
-10) Do not allow humid air to condense on the surface of the printer. If it has formed, do not allow it to condense until the dew is removed.
+10.  Do not allow humid air to condense on the surface of the printer. If it has formed, do not allow it to condense until the dew is removed.
 
 ÿ warning
 
 The print head is a heating component. Do not touch the print head and surrounding components during the printing process and immediately after printing.
 
-6) If the printer will not be used for a long time, please disconnect the printer power.
-
-5) Do not use or store the printer in places with high temperature, high humidity, or serious pollution.
+6.  If the printer will not be used for a long time, please disconnect the printer power.
+    
+7.  Do not use or store the printer in places with high temperature, high humidity, or serious pollution.
+    
 
 Please read the following precautions carefully before operating the printer.
 
@@ -44,27 +45,26 @@ Please read the following precautions carefully before operating the printer.
 
 bg4.png
 
-9) When meeting the usage requirements, it is recommended to set the printing density as low as possible to avoid affecting the printing quality.
-
-7) The printer must not print without paper, otherwise the print head will be seriously damaged.
+9.  When meeting the usage requirements, it is recommended to set the printing density as low as possible to avoid affecting the printing quality.
+    
+10.  The printer must not print without paper, otherwise the print head will be seriously damaged.
+    
 
 Do not touch the print head and connection plug-in to avoid damage to the print head due to static electricity.
 
-8) In order to ensure printing quality and product life, it is recommended to use recommended or equivalent quality paper.
+8.  In order to ensure printing quality and product life, it is recommended to use recommended or equivalent quality paper.
 
 1
 
-2) Avoid placing the printer in places subject to vibration and shock.
+2.  Avoid placing the printer in places subject to vibration and shock.
 
 life.
 
 Use of print head
 
-
-
 bgf.png
 
-11) Avoid water or conductive substances (such as metal) from entering the printer. If this occurs, shut down immediately.
+11.  Avoid water or conductive substances (such as metal) from entering the printer. If this occurs, shut down immediately.
 
 • With label verification function, send calibration instruction data to printing
 
@@ -72,13 +72,13 @@ damage.
 
 The label paper needs to be recalibrated to find gaps in the label.
 
-12) When plugging or disconnecting each interface, the power must be turned off, otherwise the printer control circuit may be damaged.
+12.  When plugging or disconnecting each interface, the power must be turned off, otherwise the printer control circuit may be damaged.
 
 Calibrate now. Paper of the same specification only needs to be calibrated once. Change to other specifications
 
 • The paper shortage status will be automatically restored, and the paper shortage honey detector will beep three times.
 
-14) Keep this manual properly for reference.
+14.  Keep this manual properly for reference.
 
 DP-Q803 can support thermal label paper and thermal continuous paper, and the maximum printing paper width is 79mm. This product is mainly used for
 
@@ -88,7 +88,7 @@ electronically printed labels or
 
 • Label and ticket mode.
 
-13) Users are not allowed to disassemble the printer for maintenance without authorization.
+13.  Users are not allowed to disassemble the printer for maintenance without authorization.
 
 1.1 Main features
 
@@ -109,8 +109,6 @@ Turn off the power.
 79mm
 
 • Paper roll outer diameter ÿ
-
-
 
 bg10.png
 
@@ -162,8 +160,6 @@ Normal working current
 
 Working current
 
-
-
 bg11.png
 
 Black and white output
@@ -211,8 +207,6 @@ Xiamen Dapu Electronic Technology Co., Ltd.
 Print color
 
 label
-
-
 
 bg12.png
 
@@ -262,8 +256,6 @@ Service life
 
 Print content
 
-
-
 bg13.png
 
 2.2.1 Paper roll parameters
@@ -305,8 +297,6 @@ meaning
 • Thermosensitive layer
 
 minimum value (
-
-
 
 bg14.png
 
@@ -354,8 +344,6 @@ Xiamen Dapu Electronic Technology Co., Ltd.
 
 Rotate the printing roller, and at the same time use an alcohol cotton ball (which should be wrung out) to wipe away dust and stains on the surface of the printing roller;
 
-
-
 bg15.png
 
 79
@@ -400,8 +388,6 @@ b
 
 Print normally
 
-
-
 bg16.png
 
 4\. Load paper into the printer
@@ -424,7 +410,7 @@ will be printed.
 
 Xiamen Dapu Electronic Technology Co., Ltd.
 
-TX \------------------------------ RX
+TX ------------------------------ RX
 
 DTR
 
@@ -436,19 +422,17 @@ Empty (no answer)
 
 6
 
-GND \------------------------------ GND
+GND ------------------------------ GND
 
 bga.png
 
 5\. Printing equipment solves paper jam problems
 
-RX \------------------------------ TX
+RX ------------------------------ TX
 
 bg9.png
 
-6.2 There are two types of printer serial ports: TTL and 232\. The default baud rate is 115200\. The following is the serial port wiring method.
-
-
+6.2 There are two types of printer serial ports: TTL and 232. The default baud rate is 115200. The following is the serial port wiring method.
 
 bg17.png
 
@@ -495,8 +479,6 @@ Command name
 the button and it will go out for a while
 
 8 Detailed explanation of label instructions
-
-
 
 bg18.png
 
@@ -547,8 +529,6 @@ Function description
 Label paper of the same size needs to be calibrated.
 
 Command name
-
-
 
 bg19.png
 
@@ -602,8 +582,6 @@ axis offset.
 
 \[1,576 /384\]
 
-
-
 bg1a.png
 
 Rotate
@@ -653,8 +631,6 @@ x\_L x\_H ,
 0
 
 bgc.png
-
-
 
 bg1b.png
 
@@ -706,8 +682,6 @@ For example: the width is
 
 \= 0.125mm
 
-
-
 bg1c.png
 
 Function description
@@ -755,8 +729,6 @@ Function description
 1A 4F 00
 
 Input parameters:
-
-
 
 bg1d.png
 
@@ -807,8 +779,6 @@ Second-rate.
 Return value: None
 
 PrintNum
-
-
 
 bg1e.png
 
@@ -862,8 +832,6 @@ Print two blank pages
 
 b:
 
-
-
 bg1f.png
 
 ;
@@ -912,8 +880,6 @@ return value:
 
 Define text starting position
 
-
-
 bg20.png
 
 Define text starting position
@@ -959,8 +925,6 @@ Terminated text string data stream.
 Coordinates, value range:
 
 FontType\_L
-
-
 
 bg21.png
 
@@ -1014,8 +978,6 @@ A:
 
 00 00
 
-
-
 bg22.png
 
 1A 5B 01 00 00 00 00 80 01 fa 00 00
@@ -1065,8 +1027,6 @@ EndX\_L EndX\_H
 recognize
 
 Font size range (11, 22, 33, 44, 55, 66)
-
-
 
 bg23.png
 
@@ -1118,8 +1078,6 @@ EndY\_L EndY\_H
 
 StartX
 
-
-
 bg24.png
 
 EndX
@@ -1170,8 +1128,6 @@ x
 
 .
 
-
-
 bg25.png
 
 y
@@ -1219,8 +1175,6 @@ Coordinate value, value range:
 \[0,
 
 EndY
-
-
 
 bg26.png
 
@@ -1271,8 +1225,6 @@ Output parameters:
 Color
 
 for
-
-
 
 bg27.png
 
@@ -1328,8 +1280,6 @@ Bottom
 
 Width\_L Width\_H
 
-
-
 bg28.png
 
 return value:
@@ -1382,8 +1332,6 @@ b.
 
 y
 
-
-
 bg29.png
 
 Width
@@ -1429,8 +1377,6 @@ Parameter range
 .
 
 0
-
-
 
 bg2a.png
 
@@ -1484,8 +1430,6 @@ hexadecimal:
 
 exist
 
-
-
 bg2b.png
 
 \[0, Page\_Height-1\]
@@ -1535,8 +1479,6 @@ value
 BarcodeType
 
 0UPC-A
-
-
 
 bg2c.png
 
@@ -1588,8 +1530,6 @@ CODABA
 
 1-even number
 
-
-
 bg2d.png
 
 2-255
@@ -1600,7 +1540,7 @@ EAN128
 
 CODE11
 
-\-> !096 \- !105
+\-> !096 - !105
 
 Number-\[(sum of odd-digit numbers <from
 
@@ -1639,8 +1579,6 @@ and)\*3\]
 9
 
 12
-
-
 
 bg2e.png
 
@@ -1694,11 +1632,9 @@ The remainder then finds the corresponding code word
 
 ,
 
-
-
 bg2f.png
 
-(\_0\*10+\_1) Mod 4-\>
+(\_0\*10+\_1) Mod 4->
 
 EAN13+5
 
@@ -1724,7 +1660,7 @@ Same as EAN13+5
 
 ,
 
-mod 10 \->"bbaaa", "babaa",
+mod 10 ->"bbaaa", "babaa",
 
 "baaba", "baaab", "abbaa", "aabba",
 
@@ -1753,8 +1689,6 @@ EAN
 17
 
 EAN8+2
-
-
 
 bg30.png
 
@@ -1805,8 +1739,6 @@ Xiamen Dapu Electronic Technology Co., Ltd.
 Recalculate the check code as data
 
 23UPCE+2
-
-
 
 bg31.png
 
@@ -1860,8 +1792,6 @@ bar width
 
 Binary barcode narrow lines
 
-
-
 bg32.png
 
 0.50
@@ -1911,8 +1841,6 @@ Rotate:
 4
 
 Barcodes are drawn without rotation.
-
-
 
 bg33.png
 
@@ -1964,8 +1892,6 @@ Precautions
 
 40 00
 
-
-
 bg34.png
 
 Barcode instructions
@@ -2016,8 +1942,6 @@ Hexadecimal: 1A 31 00
 
 Input parameters:
 
-
-
 bg35.png
 
 3Q
@@ -2067,8 +1991,6 @@ Parameter range
 , medium error correction
 
 QRCode code block, value range: \[1, 8\]. Definition of each value and command input parameter UniWidth
-
-
 
 bg36.png
 
@@ -2122,8 +2044,6 @@ Height\_L Height\_L
 
 hexadecimal:
 
-
-
 bg37.png
 
 Data
@@ -2134,7 +2054,7 @@ a:
 
 \=26 00
 
-Bitmap pixel width \= picture pixel width divided by 8.
+Bitmap pixel width = picture pixel width divided by 8.
 
 b:
 
@@ -2174,9 +2094,7 @@ x
 
 Draws a bitmap at the location specified by the label.
 
-For example: the pixel width of the picture is 300, 300/8=37.5, if there are decimals, an integer \+ 1 is required, the width of the picture is 38
-
-
+For example: the pixel width of the picture is 300, 300/8=37.5, if there are decimals, an integer + 1 is required, the width of the picture is 38
 
 bg38.png
 
@@ -2194,7 +2112,7 @@ The picture is printed in reverse white
 
 0820800E38E00C30C80C34FC0DFF980E31102D32242DFDFE2CB58C6CB58C6CB
 
-Bitmap pixel width \= picture pixel width divided by 8.
+Bitmap pixel width = picture pixel width divided by 8.
 
 C0C31060C3204082400
 
@@ -2231,8 +2149,6 @@ Parameter range
 bg16.png
 
 Data
-
-
 
 bg39.png
 
@@ -2281,8 +2197,6 @@ Supported models
 Command name
 
 1B 40
-
-
 
 bg3a.png
 
@@ -2334,8 +2248,6 @@ none
 
 Decimal:
 
-
-
 bg3b.png
 
 Precautions
@@ -2383,8 +2295,6 @@ parameter
 All models
 
 ASCII
-
-
 
 bg3c.png
 
@@ -2435,8 +2345,6 @@ default value
 0 1
 
 Double height cancel setting
-
-
 
 bg3d.png
 
@@ -2490,8 +2398,6 @@ bg18.png
 
 This command is valid for both Chinese fonts and foreign fonts
 
-
-
 bg3e.png
 
 twenty one
@@ -2544,8 +2450,6 @@ Precautions
 
 n
 
-
-
 bg3f.png
 
 1b 40 1d 21 01
@@ -2595,8 +2499,6 @@ Function description
 27 97 n
 
 9.5
-
-
 
 bg40.png
 
@@ -2649,8 +2551,6 @@ Print line segments in horizontal positions (curve print command)
 Parameter range
 
 , the setting of this command becomes invalid after the printer is reset or powered off.
-
-
 
 bg41.png
 
@@ -2706,8 +2606,6 @@ Instruction code
 
 29 39 n x1sL x1eH x1eL x1eH ...xnsL xnsH xneL xneH
 
-
-
 bg42.png
 
 The high-order horizontal coordinate of the line end point;
@@ -2759,8 +2657,6 @@ Xiamen Dapu Electronic Technology Co., Ltd.
 Float i;
 
 0,0
-
-
 
 bg43.png
 
@@ -2814,8 +2710,6 @@ SendStr\[1\]=0x27;
 
 y2=cos(i/180\*3.1416)\*(380-30)/2+180; //Calculate cos function coordinates
 
-
-
 bg44.png
 
 }
@@ -2867,8 +2761,6 @@ xkeH=xksH ,
 PreSendData(&y2,2); //cos function at the end point of the line
 
 }
-
-
 
 bg45.png
 
@@ -2926,8 +2818,6 @@ bg1b.png
 
 1d 27 01 aa 00 af 00 1d 27 01 b0 00 b4 00
 
-
-
 bg46.png
 
 1d 27 01 07 01 07 01 1d 27 01 06 01 06 01
@@ -2983,8 +2873,6 @@ bg46.png
 1d 27 01 b0 00 b4 00 1d 27 01 aa 00 af 00
 
 1d 27 01 ba 00 bf 00 1d 27 01 b5 00 b9 00
-
-
 
 bg47.png
 
@@ -3042,8 +2930,6 @@ bg1c.png
 
 1d 27 01 b5 00 b9 00 1d 27 01 ba 00 bf 00
 
-
-
 bg48.png
 
 1d 27 01 00 01 00 01 1d 27 01 01 01 01 01
@@ -3100,8 +2986,6 @@ Xiamen Dapu Electronic Technology Co., Ltd.
 
 1d 27 01 ed 00 ef 00 1d 27 01 ea 00 ec 00
 
-
-
 bg49.png
 
 1d 27 01 98 00 9d 00 1d 27 01 92 00 97 00
@@ -3156,8 +3040,6 @@ horizontal tabulation
 
 ASCII
 
-
-
 bg4a.png
 
 Move the printing position to the next tabulation position
@@ -3206,8 +3088,6 @@ ASCII: ESC D\[d\]k NUL
 
 Instruction code
 
-
-
 bg4b.png
 
 Set the horizontal tab position. The meaning of the parameters is as follows:
@@ -3228,7 +3108,7 @@ For illustration purposes only, no need to transmit
 
 default value
 
-\[d\]k \= 0
+\[d\]k = 0
 
 27
 
@@ -3255,8 +3135,6 @@ Precautions
 k
 
 Using this command will cancel the previous tab position settings.
-
-
 
 bg4c.png
 
@@ -3286,7 +3164,7 @@ ESC @
 
 dk
 
-1B 44 0B 12 19 00 \==0B
+1B 44 0B 12 19 00 ==0B
 
 The tabulation position can be determined by
 
@@ -3308,8 +3186,6 @@ switch
 
 09 32 09 32 2E 30 30 0D 0A C1 F1 C1 AB B5 B0 CC A2 0D 0A 09 31 30 32 2E 30
 
-
-
 bg4d.png
 
 12
@@ -3324,7 +3200,7 @@ is the width of the third column,
 
 third column
 
-09 \==09
+09 ==09
 
 Is a space, the first column of text content "product name"
 
@@ -3354,11 +3230,9 @@ Second column width,
 
 12
 
-20 20 20 C6 B7 20 C3 FB \==02
+20 20 20 C6 B7 20 C3 FB ==02
 
 newline
-
-
 
 bg4e.png
 
@@ -3412,8 +3286,6 @@ Column symbol
 
 09
 
-
-
 bg4f.png
 
 32
@@ -3465,8 +3337,6 @@ third column
 Second example
 
 31 30 32 2E 30
-
-
 
 bg50.png
 
@@ -3520,8 +3390,6 @@ newline
 
 Column symbol
 
-
-
 bg51.png
 
 HRI
@@ -3569,8 +3437,6 @@ Set the barcode readable character (HRI) printing position. The meaning of the n
 1, above the 49 barcode
 
 0, 48 do not print
-
-
 
 bg52.png
 
@@ -3622,8 +3488,6 @@ Decimal: 29 104 n
 
 ASCII:GShn
 
-
-
 bg53.png
 
 \= 64
@@ -3673,8 +3537,6 @@ Instruction code
 Hexadecimal: 1D 77 n
 
 Decimal: 29 119 n
-
-
 
 bg54.png
 
@@ -3726,8 +3588,6 @@ Usage example
 
 (A) ASCII
 
-
-
 bg55.png
 
 1D 6B m\[d\]k NUL
@@ -3776,8 +3636,6 @@ m is the encoding method
 
 The difference between instructions is that
 
-
-
 bg56.png
 
 for barcode data
@@ -3824,8 +3682,6 @@ m coding system
 
 Data(d)
 
-
-
 bg57.png
 
 UPC-E
@@ -3834,11 +3690,11 @@ UPC-E
 
 0~9
 
-\[when k \=
+\[when k =
 
 1
 
-d1 \= 48 \]
+d1 = 48 \]
 
 d
 
@@ -3866,7 +3722,7 @@ fixed
 
 0~9
 
-k \= 12
+k = 12
 
 48ÿdÿ57
 
@@ -3875,8 +3731,6 @@ k \= 12
 48
 
 130~9
-
-
 
 bg58.png
 
@@ -3928,8 +3782,6 @@ k
 
 ÿ
 
-
-
 bg59.png
 
 ,
@@ -3965,8 +3817,6 @@ $,
 \-, .,
 
 d
-
-
 
 bg5a.png
 
@@ -4008,8 +3858,6 @@ ITF
 
 ,
 
-
-
 bg5b.png
 
 variable
@@ -4020,7 +3868,7 @@ variable
 
 $,+,-,.,/,:
 
-0~9, A~D, a~d
+09, AD, a~d
 
 97ÿd1ÿ100,
 
@@ -4044,7 +3892,7 @@ SP
 
 system
 
-d \= 36, 43, 45,
+d = 36, 43, 45,
 
 barcode data (
 
@@ -4055,8 +3903,6 @@ barcode data (
 data
 
 represents a space)
-
-
 
 bg5c.png
 
@@ -4108,8 +3954,6 @@ data(
 
 57
 
-
-
 bg5d.png
 
 ÿ
@@ -4140,13 +3984,13 @@ n
 
 12
 
-n \= 12, 13
+n = 12, 13
 
 d
 
 n
 
-d1 \= 48 \]
+d1 = 48 \]
 
 7,8,11,12
 
@@ -4162,13 +4006,11 @@ JAN13
 
 67
 
-
-
 bg5e.png
 
 fixed
 
-0~9ÿA~Z
+09ÿAZ
 
 68
 
@@ -4200,7 +4042,7 @@ SP,$,%,+,-,.,
 
 48ÿdÿ57
 
-d \= 32, 36, 37,
+d = 32, 36, 37,
 
 48ÿdÿ57,
 
@@ -4215,8 +4057,6 @@ variable
 47
 
 42, 43, 45, 46,
-
-
 
 bg5f.png
 
@@ -4270,8 +4110,6 @@ n
 
 ÿ
 
-
-
 bg60.png
 
 ,
@@ -4303,8 +4141,6 @@ A~D
 a~d
 
 ÿ
-
-
 
 bg61.png
 
@@ -4347,8 +4183,6 @@ d=36
 d
 
 ÿ
-
-
 
 bg62.png
 
@@ -4400,8 +4234,6 @@ dk
 
 ÿ
 
-
-
 bg63.png
 
 ÿ
@@ -4422,7 +4254,7 @@ C1H~C4H(FNC)
 
 0ÿdÿ127
 
-d \= 193,
+d = 193,
 
 0ÿdÿ127
 
@@ -4447,8 +4279,6 @@ Parameter range
 mÿ
 
 ÿ
-
-
 
 bg64.png
 
@@ -4498,9 +4328,7 @@ Spacing settings
 
 Regardless of whether the input data length is 11 or 12, check digits are automatically inserted or corrected.
 
-When printing UPCA (m \= 0 or 65), please note:
-
-
+When printing UPCA (m = 0 or 65), please note:
 
 bg65.png
 
@@ -4524,7 +4352,7 @@ Automatically insert
 
 0
 
-m \= 1
+m = 1
 
 When the data length is
 
@@ -4547,8 +4375,6 @@ when, system characters (
 12
 
 and
-
-
 
 bg66.png
 
@@ -4585,8 +4411,6 @@ No matter the input data length is
 7,
 
 8,
-
-
 
 bg67.png
 
@@ -4634,8 +4458,6 @@ for
 
 d11
 
-
-
 bg68.png
 
 still
@@ -4670,7 +4492,7 @@ Start and end characters are automatically inserted
 
 68
 
-m \= 3
+m = 3
 
 No matter the input data length is
 
@@ -4683,8 +4505,6 @@ EAN13
 No matter the input data length is
 
 ), you need to pay attention to:
-
-
 
 bg69.png
 
@@ -4712,7 +4532,7 @@ end character "
 
 /
 
-m \= 4
+m = 4
 
 when
 
@@ -4733,8 +4553,6 @@ or
 When encountering "
 
 "
-
-
 
 bg6a.png
 
@@ -4772,7 +4590,7 @@ data processing;
 
 71
 
-m \= 6
+m = 6
 
 ), you need to pay attention to:
 
@@ -4785,8 +4603,6 @@ Print
 The start character and end character will not be automatically inserted and need to be added manually by the user. The range is "
 
 ), you need to pay attention to:
-
-
 
 bg6b.png
 
@@ -4836,11 +4652,9 @@ HRI
 
 finished
 
-
-
 bg6c.png
 
-When CODE128 (m \= 73) is selected:
+When CODE128 (m = 73) is selected:
 
 When setting barcode readable characters (
 
@@ -4885,8 +4699,6 @@ one of).
 hexadecimal code
 
 ASCII code
-
-
 
 bg6d.png
 
@@ -4942,8 +4754,6 @@ CODEC
 
 FNC2
 
-
-
 bg6e.png
 
 FNC4
@@ -4994,8 +4804,6 @@ This command is
 
 •If "{" and the character immediately following it are not the combination specified above, the printer stops
 
-
-
 bg6f.png
 
 •When the printer prints HRI characters, it does not print shift characters and character set selection data.
@@ -5004,7 +4812,7 @@ bg6f.png
 
 3432
 
-<Others> Be sure to ensure the left and right gaps of the barcode. The gaps vary depending on the barcode type.
+Be sure to ensure the left and right gaps of the barcode. The gaps vary depending on the barcode type.
 
 •HRI characters of control characters (<00>H to <1F>H and <7F>H) are not printed either;
 
@@ -5049,8 +4857,6 @@ bg25.png
 35 0D 0A
 
 1D 6B 04 30 31 32 41 42 20 24 25 2B 2D 2E 2F 00
-
-
 
 bg70.png
 
@@ -5106,8 +4912,6 @@ Command name
 
 1b 40 1d 48 02 1d 68 64 1d 77 03
 
-
-
 bg71.png
 
 ASCII:GS(k pL pH cn fn n
@@ -5157,8 +4961,6 @@ set up
 n
 
 ÿ
-
-
 
 bg72.png
 
@@ -5210,8 +5012,6 @@ code error correction level error
 
 QR
 
-
-
 bg73.png
 
 Precautions
@@ -5262,8 +5062,6 @@ error correction level error
 
 49
 
-
-
 bg74.png
 
 q
@@ -5311,8 +5109,6 @@ QR
 1D 28 6b pL pH cn fn m
 
 hexadecimal:
-
-
 
 bg75.png
 
@@ -5364,8 +5160,6 @@ Supported models
 
 1d 28 6b 06 00 31 50 30 41 42 43
 
-
-
 bg76.png
 
 v=0
@@ -5412,8 +5206,6 @@ Indicates automatic selection of QR code specifications
 
 0
 
-
-
 bg77.png
 
 17
@@ -5432,7 +5224,7 @@ Set line spacing to
 
 Command name
 
-k \= nL \+ 256 \* nH
+k = nL + 256 \* nH
 
 default value
 
@@ -5461,8 +5253,6 @@ Precautions
 9.10.1 Set the line spacing to n points
 
 Print setup instructions
-
-
 
 bg78.png
 
@@ -5516,8 +5306,6 @@ Set the line spacing to n points
 
 ÿ
 
-
-
 bg79.png
 
 Precautions
@@ -5568,8 +5356,6 @@ Set print position
 
 Command name
 
-
-
 bg7a.png
 
 Function description
@@ -5614,11 +5400,9 @@ nH
 
 All models
 
-nL \+ nH
+nL + nH
 
 ,
-
-
 
 bg7b.png
 
@@ -5670,8 +5454,6 @@ Usage example
 
 0d 0a
 
-
-
 bg7c.png
 
 m mode
@@ -5716,8 +5498,6 @@ m is the dot plot format:
 
 Order density ×
 
-
-
 bg7d.png
 
 Used to indicate the number of bytes of dot map data and does not participate in transmission.
@@ -5746,11 +5526,11 @@ Hh
 
 k
 
-Hl \+ Hh
+Hl + Hh
 
 ×hh
 
-m \= 0
+m = 0
 
 \[d\]k
 
@@ -5758,11 +5538,7 @@ m \= 0
 
 ,
 
-+
-
 XX58
-
-
 
 bg7e.png
 
@@ -5774,13 +5550,13 @@ bg7e.png
 
 (when
 
-m \= 0
+m = 0
 
 ,
 
 384
 
-k \= Hl \+ Hh
+k = Hl + Hh
 
 ×256 )
 
@@ -5790,7 +5566,7 @@ k \= Hl \+ Hh
 
 ×256
 
-m \= 32
+m = 32
 
 d
 
@@ -5800,13 +5576,11 @@ d
 
 ÿ
 
-k \= (Hl \+ Hh
+k = (Hl + Hh
 
 ,
 
 0
-
-
 
 bg7f.png
 
@@ -5824,11 +5598,9 @@ d
 
 ×256
 
-k \= Hl \+ Hh
+k = Hl + Hh
 
 ×
-
-33)
 
 ÿ
 
@@ -5840,17 +5612,15 @@ k \= Hl \+ Hh
 
 ÿ
 
-Hl \+ Hh
+Hl + Hh
 
 ÿ
 
 255
 
-m \= 0
+m = 0
 
 ÿ
-
-
 
 bg80.png
 
@@ -5862,11 +5632,9 @@ none
 
 1
 
-33)
-
 The relationship between dot plot data and printing effect is as follows:
 
-m \= 0
+m = 0
 
 ×3 (when
 
@@ -5876,7 +5644,7 @@ Precautions
 
 256
 
-m \= 32
+m = 32
 
 The portion of the image that exceeds the printing area horizontally will be ignored.
 
@@ -5886,15 +5654,13 @@ Supported models
 
 ×256 )
 
-k \= (Hl \+ Hh
+k = (Hl + Hh
 
 All models
 
 ,
 
 default value
-
-
 
 bg81.png
 
@@ -5916,11 +5682,11 @@ After filling the dot plot, generally use
 
 (
 
-m \= 0
+m = 0
 
 ,
 
-33) Dot images are printed separately
+33.  Dot images are printed separately
 
 bg2a.png
 
@@ -5936,15 +5702,13 @@ If the height of the image that needs to be printed is large, it can be split in
 
 8
 
-m \= 32
+m = 32
 
 ESCJ
 
 This command only fills the print buffer. The printing of the image will not start until the print command is received. Figure
 
 or
-
-
 
 bg82.png
 
@@ -5996,8 +5760,6 @@ LF
 
 1B 40
 
-
-
 bg83.png
 
 Print the horizontal mold image data. The meaning of the parameters is as follows:
@@ -6008,7 +5770,7 @@ hexadecimal:
 
 3,51 times width x height × 2 × 2
 
-xL, xH are the number of bytes in the horizontal direction (xL \+ xH × 256)
+xL, xH are the number of bytes in the horizontal direction (xL + xH × 256)
 
 0 ÿ yL ÿ255, 0 ÿ yH ÿ255
 
@@ -6028,7 +5790,7 @@ XX58:
 
 2,50 times higher × 1 × 2
 
-1 ÿ xL \+ xH×256 ÿ 48
+1 ÿ xL + xH×256 ÿ 48
 
 m is bitmap mode:
 
@@ -6040,21 +5802,19 @@ m mode horizontal ratio vertical ratio
 
 Parameter range
 
-k \= (Hl \+ Hh×256)×(yL \+ yH×256)
+k = (Hl + Hh×256)×(yL + yH×256)
 
 Function description
 
-yL, yH are the number of points in the vertical direction (yL \+ yH × 256)
-
-
+yL, yH are the number of points in the vertical direction (yL + yH × 256)
 
 bg84.png
 
-k \= (Hl \+ Hh×256)×(yL \+ yH×256)
+k = (Hl + Hh×256)×(yL + yH×256)
 
 It means that the point is printed, and the corresponding bit is
 
-1ÿ xL \+ xH×256 ÿ 72
+1ÿ xL + xH×256 ÿ 72
 
 \[d\]k
 
@@ -6095,8 +5855,6 @@ bg2b.png
 1
 
 0 ÿ d ÿ 255
-
-
 
 bg85.png
 
@@ -6146,8 +5904,6 @@ This command has a printing function. It prints while transmitting data. There i
 
 Instruction code
 
-
-
 bg86.png
 
 10.2
@@ -6195,8 +5951,6 @@ Send printer data. The printer completes printing after 500ms (milliseconds). If
 default value
 
 EF 23 1A (printer out of paper)
-
-
 
 bg87.png
 
@@ -6247,8 +6001,6 @@ Baud rate corresponding value
 Command name
 
 1F 2D 55 01 m
-
-
 
 bg88.png
 
@@ -6304,8 +6056,6 @@ bg88.png
 
 7200
 
-
-
 bg89.png
 
 10
@@ -6353,8 +6103,6 @@ Set serial port communication on and off
 11
 
 M=5 default baud rate 9600
-
-
 
 bg8a.png
 
@@ -6404,8 +6152,6 @@ default value
 
 Function description
 
-
-
 bg8b.png
 
 Set the serial port status (this command will not be saved when the power is turned off)
@@ -6454,8 +6200,6 @@ M=0, open the serial port, M= 1, close the serial port
 
 Instruction code
 
-
-
 bg8c.png
 
 CF C3 C3 C5 B4 EF C6 D5 B5 E7 D7 D3 BF C6 BC BC D3 D0 CF DE B9 AB CB
@@ -6480,7 +6224,7 @@ Close the serial port again
 
 :
 
-US \- 5 nmk tL tH
+US - 5 nmk tL tH
 
 Open the serial port first
 
@@ -6508,8 +6252,6 @@ Command name
 
 1b 33 30
 
-
-
 bg8d.png
 
 43k :
@@ -6518,7 +6260,7 @@ Mainly used in small ticket mode
 
 m: 0, paper feeding, 1, no paper feeding
 
-m=0,k=2,tL+tH\*256 \= 200=C8 00
+m=0,k=2,tL+tH\*256 = 200=C8 00
 
 Supported models
 
@@ -6536,7 +6278,7 @@ Return data:
 
 1F 2D 35 04 00 05 C8 00 (The return data format is the same as the delivery)
 
-10<=tL \+ tH \*256 <=1000;n=0,1;1<=k<=256;
+10<=tL + tH \*256 <=1000;n=0,1;1<=k<=256;
 
 default value
 
@@ -6557,8 +6299,6 @@ Instruction code
 Xiamen Dapu Electronic Technology Co., Ltd.
 
 Precautions
-
-
 
 bg8e.png
 
@@ -6605,8 +6345,6 @@ Cut the whole paper
 Parameter range
 
 1B 69
-
-
 
 bg8f.png
 
@@ -6656,13 +6394,11 @@ none
 
 Set whether to automatically cut the knife
 
-
-
 bg90.png
 
 Issue command: 1F 2D 61 02 01 00 (threshold is 0x0150)
 
-M \= 1 (turn on automatic cutter)
+M = 1 (turn on automatic cutter)
 
 10.10
 
@@ -6690,23 +6426,21 @@ Precautions
 
 ASCII
 
-N \= 0 (half cut)
+N = 0 (half cut)
 
 Set printing mode
 
 default value
 
-N \= 1 (all cut)
+N = 1 (all cut)
 
 Command name
 
 Decimal:
 
-M \= 0 (turn off automatic cutter)
+M = 0 (turn off automatic cutter)
 
 Usage example
-
-
 
 bg91.png
 
@@ -6758,8 +6492,6 @@ Set printing mode
 
 Precautions
 
-
-
 bg92.png
 
 1D 48 00 //
@@ -6807,8 +6539,6 @@ Data is displayed below the barcode
 Barcode on the left
 
 bg30.png
-
-
 
 bg93.png
 
@@ -6859,8 +6589,6 @@ Xiamen Dapu Electronic Technology Co., Ltd.
 1B 40 1B 33 50
 
 BB B6 D3 AD B9 E2 C1 D9 Text print content "Welcome"
-
-
 
 bg94.png
 
@@ -6913,8 +6641,6 @@ C9 A8 D2 BB C9 A8 B9 D8 D7 A2//Text content "Scan to follow"
 Text content printing
 
 1d 28 6b 03 00 31 45 30
-
-
 
 bg95.png
 
@@ -6974,8 +6700,6 @@ CC 00 F1 FC
 
 00 00 00 00
 
-
-
 bg96.png
 
 A 5B 01 00 00 00 00 80 01 ff 00 00 //1A 5B 01 00 00 00 00 Label start, 80 01 ff 00 Set label printing range width and height 80 01
@@ -7024,8 +6748,6 @@ Command example:
 
 Xiamen Dapu Electronic Technology Co., Ltd.
 
-
-
 bg97.png
 
 05 Set the QR code version value range \[0-20\]. The larger the value, the denser the QR code.
@@ -7071,8 +6793,6 @@ is 0, "80 01 EA
 1A 31 00 Print QR code label
 
 1A 54 01 Text printing label starts
-
-
 
 bg98.png
 
@@ -7131,8 +6851,6 @@ FF F8 00 00
 1A 5B 01 00 00 00 00 80 01 E6 00 00 Set the label paper size.
 
 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-
-
 
 bg99.png
 
@@ -7201,8 +6919,6 @@ FF F0 7F FE 00 01
 01 FF FF FF FF
 
 00 00 03 FF F8 00 00 3F FE 00 01 FF F8 00 00 00 00 3F FF 00 3F FF 00 7F FC 00 00 03 FF F8 00 00 3F FE 00 01 FF
-
-
 
 bg9a.png
 
@@ -7274,8 +6990,6 @@ FF 80 3F FF 00 3F FF 00 7F FC 00 00 3F FF FF FF FF FF FF FF FF FF E0 00 3F FF 80
 
 3F FF 00 3F
 
-
-
 bg9b.png
 
 00 00 00 00
@@ -7346,8 +7060,6 @@ FF FF FF FF FF FF FF
 
 00 00 00 00 3F
 
-
-
 bg9c.png
 
 00 00 00 00
@@ -7415,8 +7127,6 @@ FF FF FF FF FF
 00 00 00 00
 
 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 03 C0 00 00 00 00 00 00 00 00 00 00 00 00
-
-
 
 bg9d.png
 
@@ -7488,8 +7198,6 @@ FF FF FF FF FF FF FF FF FF E0 00 7F FF F0 00 FF FF F0 03 FF FF FF 80 07 FF FF FF
 
 07 FF E0 00 00
 
-
-
 bg9e.png
 
 C4 9F FF F0 03 FF F0 00 00 00 00 7F FF 80 00 00 00 07 FF FF FF FF FF FF FF FF FF FF F0 03 FF F0 00 03 FF FF FF FF
@@ -7558,8 +7266,6 @@ FF FF FF FF FF FF FF FF FF F0 00 00 07 FF E0 00 00 00 7F FF 80 00 00 00 00 00 00
 
 00 00 00 00 00 00
 
-
-
 bg9f.png
 
 FF 80 00 00 00 3F FF F0 7F FE 00 03 FF F8 3F FF 80 00 07 FF F0 00 00 00 7F FF 80 00 00 00 3F FF F0 7F FE 00 03 FF
@@ -7623,8 +7329,6 @@ FF FF 83 FF F8 00 00 3E 00 00 00 00 7F FF 80 00 00 00 00 00 00 01 FF FF FF FF FF
 7F FE 00 07 FF F0 7F FF 00 00 01 FF E0 00 00 00 7F FF 80 00 00 00 1F FF E0 7F FE 00 03 FF F8 3F FF 00 00 03 FF
 
 FE 0F FF E0 00
-
-
 
 bga0.png
 
