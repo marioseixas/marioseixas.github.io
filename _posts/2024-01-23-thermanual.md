@@ -576,7 +576,7 @@ Label page height,
 
 Label surface rotation angle,
 
-{0,1,2,3}
+\{0,1,2,3}
 
 axis offset.
 
@@ -1208,7 +1208,7 @@ Parameter range
 
 Usage example
 
-{0, 1}
+\{0, 1}
 
 , the line segment is white.
 
@@ -1350,7 +1350,7 @@ Color=
 
 \[0, Page\_Height-1\]
 
-{0,
+\{0,
 
 1}. when
 
@@ -2662,11 +2662,11 @@ bg43.png
 
 //Print curve
 
-{
+\{
 
 SendStr\[2\]=3; //Three lines:X-axis, sin and cos function curve three lines:
 
-If(i==1){y1s=y1;y2s=y2;}
+If(i==1)\{y1s=y1;y2s=y2;}
 
 y1=sin(i/180\*3.1416)\*(380-30)/2+180; //Calculate sin function coordinates
 
@@ -2680,7 +2680,7 @@ PreSendData(&y1,2); //sin function at the starting point of the line
 
 SendStr\[5\]=180; SendStr\[6\]=0;
 
-{
+\{
 
 PreSendData(&y1s,2); //sin function is at the starting point of the line
 
@@ -2702,7 +2702,7 @@ function
 
 If(y1s<y1)
 
-{
+\{
 
 }
 
@@ -2714,7 +2714,7 @@ bg44.png
 
 }
 
-{
+\{
 
 y1s=y1; // When printing enters the next line, the abscissa of the starting point of the sin function curve
 
@@ -2750,7 +2750,7 @@ Else
 
 PreSendData(&y2,2); //cos function at the starting point of the line
 
-{
+\{
 
 default value
 
@@ -4664,7 +4664,7 @@ code character
 
 ) when printing, control characters will be replaced by spaces
 
-ÿ Selecting the character set is completed by sending the character "{" combined with another character; ASCII
+ÿ Selecting the character set is completed by sending the character "\{" combined with another character; ASCII
 
 SHIFT
 
@@ -4676,7 +4676,7 @@ bg24.png
 
 Send data with special characters
 
-"{" is done by sending the character "{" twice in succession.
+"\{" is done by sending the character "\{" twice in succession.
 
 •Refer to Appendix A, CODE 128 for relevant information and character sets.
 
@@ -4704,7 +4704,7 @@ bg6d.png
 
 123,66
 
-{A
+\{A
 
 7B,43
 
@@ -4712,13 +4712,13 @@ bg6d.png
 
 CODEA
 
-{C
+\{C
 
 123,50
 
 7B,32
 
-{3
+\{3
 
 123,65
 
@@ -4734,13 +4734,13 @@ FNC3
 
 7B,42
 
-{S
+\{S
 
 123,49
 
-{1
+\{1
 
-{B
+\{B
 
 7B,31
 
@@ -4750,7 +4750,7 @@ FNC3
 
 CODEC
 
-{2
+\{2
 
 FNC2
 
@@ -4772,7 +4772,7 @@ GS k 73 10 123 66 78 111 46 123 67 12 34 56
 
 processing, and treat the remaining data as ordinary data.
 
-{{
+\{\{
 
 7B,7B
 
@@ -4780,7 +4780,7 @@ processing, and treat the remaining data as ordinary data.
 
 1b 40 1d 48 02 1d 68 64 1d 77 03
 
-"{"
+"\{"
 
 rationalize and leave the remainder
 
@@ -4796,13 +4796,13 @@ The data below are treated as ordinary data.
 
 rationalize and leave the remainder
 
-{4
+\{4
 
 Print the remaining digits:
 
 This command is
 
-•If "{" and the character immediately following it are not the combination specified above, the printer stops
+•If "\{" and the character immediately following it are not the combination specified above, the printer stops
 
 bg6f.png
 
