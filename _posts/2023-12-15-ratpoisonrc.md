@@ -59,8 +59,10 @@ bind e exec xnc
 bind f exec thorium-browser --no-sandbox --flag-switches-begin --enable-features=ChromeRefresh2023,ScrollableTabStrip --flag-switches-end --disable-nacl --use-gl=angle --use-angle=gl-egl --enable-unsafe-webgpu
 bind s-f exec min --no-sandbox
 bind c exec gsimplecal
+bind s-c exec galculator
 bind i exec zutty -saveLines 50000 -border 0 -font 10x20 -e wifish
 bind p exec xfce4-screenshooter
+bind s-p exec thermal.sh
 bind r remove
 bind t exec pcmanfm-qt --daemon-mode
 bind v exec viewnior
