@@ -16,28 +16,34 @@ title: default [prompt]
 
 ```
 
-For you to construct a comprehensive solution or answer to a given problem or question, I've outlined below a systematic process featuring dialectical and hermeneutic approaches:
+As you, the AI assistant, embark on crafting a detailed and well-substantiated response to the issue or inquiry that I, the USER, will provide below, it is imperative to employ a methodical process geared towards achieving an in-depth and pertinent conclusion. Please adhere strictly to each of the following steps for a profound examination and meaningful analysis:
 
-1. Initiate by articulating the problem or question precisely. This gives a clear blueprint for the subsequent stages. 
+1. Clarify the Issue:
+   Initiate by precisely defining the issue or inquiry you aim to explore. This sets the parameters of your investigation, providing a cornerstone for the entirety of your analytical procedure.
 
-2. Start the research process by accruing related information.
+2. Contextual Overview:
+   Provide a comprehensive outline of the critical background and contextual details that bear significance on the issue. This could encompass historical insights, contemporary circumstances, or sociological and economic dynamics essential to framing the complexity of the subject.
 
-3. Proceed to analyze the assembled data utilizing dialectical and hermeneutic approaches. This consists of identifying critical points, assumptions, implications, and inconsistencies across differing perspectives or arguments, while comprehending their association with the initial problem or question and to one another.
+3. Research and Compile Evidence:
+   Methodically research and aggregate a spectrum of credible and relevant information, with an emphasis on sources that bring a variety of interpretations and proofs into play. This collection should facilitate a well-rounded perspective on the topic, showcasing its intricate aspects.
 
-4. After conducting a detailed analysis, assess the strengths and limitations of each highlighted perspective or argument. This involves inspecting the evidence, logic, morals, and inherent biases. Through this evaluation phase, you can discern the credibility and loopholes of every argument, facilitating a more informed conclusion.
+4. Deep Analytics:
+   Delve into the amassed evidence with a focus on in-depth analysis employing both dialectical techniques and hermeneutic strategies. This stage is about unpacking central themes, surfacing hidden assumptions, gauging ramifications, and exposing any discord among the differing narratives.
 
-5. Draw a considerate conclusion based on the preceding scrutiny and valuation. Ensure your conclusion explicitly portrays why it's the most acceptable answer or solution to the problem or question on the docket. Ensure your conclusion is clear, and logically stems from the evidence and debates you've displayed.
+5. Synthesize a Thesis:
+   From your extensive examination, identify the most compelling arguments and distill them to form a nuanced thesis that suggests a convincing resolution or answer to the central issue. Your thesis should be an enlightened and logical reflection derived from the preceding dissection.
 
-6. Frame your response in a clear and organized manner. Adhere to the following structure to order your thoughts:
+6. Validate the Thesis:
+   Conduct a rigorous interrogation of your thesis by evaluating the congruence of your supporting evidence and the robustness of the logic applied. Test it against counterarguments and scrutinize its resilience in the face of analytical review.
 
-  - Introduction: Detail the problem or question, provide some background, and preview your key points and conclusion.
-   
-  - Main Body: Develop isolated paragraphs for each argument or perspective. Incorporate evidence and processing within each section for more depth and clarity. Compare and contrast these arguments using dialectical and hermeneutic techniques. Emphasize their strengths and weaknesses.
-   
-  - Conclusion: Round up your discoveries by compiling your main points and conclusions. Reiterate the conclusion, elucidating why it is the most accurate answer or solution, and propose implications or suggestions for future proceedings or research.
+7. Formulate Conclusions:
+   Craft a conclusion that integrates your thorough investigations and deliberations. Present a cogent argument that demonstrates a direct connection to the examined evidence and the validity of your thesis, bolstering the reliability and persuasive power of your final insights.
 
-7. Lastly, revise your response carefully, checking for accuracy, clarity, fulfillment, relevance, and consistency. Make sure to sidestep logical inconsistencies and factual inaccuracies, ensuring your response efficiently conveys the described problem, the conducted analysis, the evaluation, and the conclusion.
+8. Insightful Reflection:
+   Undertake a critical reflection on the soundness and cohesion of your conclusion. Think critically about any unresolved aspects or ambiguities and examine the wider implications of your findings. Offer prospects for future analysis or supplemental research that may illuminate additional aspects or lead to a deeper comprehension of the subject.
 
-Problem or Question:
+Right below is the specific issue or inquiry for you, the AI assistant, to initiate the structured approach outlined above. Your response should be extensive and structured, encapsulating the entirety of the problem or question within several well-crafted paragraphs. It should strive for a level of examination that captures the nuances of the issue, conforming to the procedural steps set forth for achieving a comprehensive and convincing conclusion.
+
+Issue or Inquiry:
 
 ```
