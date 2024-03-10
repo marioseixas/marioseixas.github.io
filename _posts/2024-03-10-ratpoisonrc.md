@@ -5,17 +5,17 @@ tags:
   - linux
 comment: 
 info: aberto.
-date: '2023-12-15'
+date: '2024-03-10'
 type: post
 layout: post
 published: true
 sha: 
 slug: ratpoisonrc
 title: .ratpoisonrc
-
 ---
 
 ```
+
 set fgcolor black
 set bgcolor silver
 set framesels 123456789
@@ -42,8 +42,8 @@ unmanage rpbar
 exec brightnessctl s 7
 exec unclutter
 exec rpws init 9 -k
-exec pcmanfm-qt --desktop
 exec systemctl start performance_governors.service
+exec ferdium --no-sandbox
 
 definekey top M-Tab next
 definekey top M-ISO_Left_Tab prev
@@ -56,16 +56,19 @@ bind y exec freetube --no-sandbox
 bind apostrophe exec zutty -saveLines 50000 -border 0 -font 10x20
 bind s-apostrophe exec zutty -saveLines 50000 -border 0 -font 12x24
 bind e exec xnc
-bind f exec thorium-browser --no-sandbox --flag-switches-begin --enable-features=ChromeRefresh2023,ScrollableTabStrip --flag-switches-end --disable-nacl --use-gl=angle --use-angle=gl-egl --enable-unsafe-webgpu
-bind s-f exec min --no-sandbox
-bind c exec gsimplecal
+bind f exec thorium-browser
+bind s-f exec ferdium --no-sandbox
+bind g exec gsimplecal
+bind c exec write_clipboard_to_file.sh
 bind s-c exec galculator
 bind i exec zutty -saveLines 50000 -border 0 -font 10x20 -e wifish
 bind p exec xfce4-screenshooter
-bind s-p exec thermal.sh
+bind s-Home exec thermal.sh
+bind Home exec reverse-thermal.sh
 bind r remove
 bind t exec pcmanfm-qt --daemon-mode
-bind v exec viewnior
+bind v exec paste_clipboard_from_file.sh
+bind s-v exec viewnior
 bind w exec ratpoison -c "select `ratpoison -c "windows" | dmenu | awk '{print $1}'`"
 bind b exec zutty -saveLines 50000 -border 0 -font 10x20 -e bpytop
 bind z nextscreen
@@ -96,4 +99,5 @@ bind KP_6 exec rpws 6
 bind KP_7 exec rpws 7
 bind KP_8 exec rpws 8
 bind KP_9 exec rpws 9
+
 ```
