@@ -5,17 +5,16 @@ tags:
   - linux
 comment: 
 info: aberto.
-date: '2024-03-10'
+date: '2024-04-14'
 type: post
 layout: post
 published: true
 sha: 
 slug: ratpoisonrc
-title: .ratpoisonrc
+title: /.ratpoisonrc
 ---
 
 ```
-
 set fgcolor black
 set bgcolor silver
 set framesels 123456789
@@ -63,8 +62,8 @@ bind c exec write_clipboard_to_file.sh
 bind s-c exec galculator
 bind i exec zutty -saveLines 50000 -border 0 -font 10x20 -e wifish
 bind p exec xfce4-screenshooter
-bind s-Home exec thermal.sh
-bind Home exec reverse-thermal.sh
+bind Prior exec thermal.sh
+bind Next exec reverse-thermal.sh
 bind r remove
 bind t exec pcmanfm-qt --daemon-mode
 bind v exec paste_clipboard_from_file.sh
@@ -90,6 +89,9 @@ bind F9 exec amixer set Master 0
 bind F10 exec amixer set Master 25%-
 bind F11 exec amixer set Master 25%+
 bind KP_0 exec xdotool key apostrophe key apostrophe key apostrophe
+bind KP_Separator exec xdotool key quotedbl key quotedbl key quotedbl
+bind Home exec xdotool key shift+1 key m key u key l key t key i
+bind End exec xdotool key shift+1 key e key n key d
 bind KP_1 exec rpws 1
 bind KP_2 exec rpws 2
 bind KP_3 exec rpws 3
@@ -99,5 +101,9 @@ bind KP_6 exec rpws 6
 bind KP_7 exec rpws 7
 bind KP_8 exec rpws 8
 bind KP_9 exec rpws 9
-
+bind s-0 exec flatpak run com.github.tenderowl.frog
+bind s-1 exec flatpak run com.rtosta.zapzap
+bind s-2 exec flatpak run com.strlen.TreeSheets
+bind s-3 exec flatpak run io.github.zaps166.QMPlay2
+bind s-4 exec flatpak run com.github.ryonakano.reco
 ```
