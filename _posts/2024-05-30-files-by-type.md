@@ -36,12 +36,12 @@ fi
 cd "$FOLDER" || exit
 
 # Get a list of unique file extensions
-file_extensions=$(find . -maxdepth 1 -type f | sed -n 's/.*\.\([a-zA-Z0-9]*\)$/\1/p' | sort | uniq)
+file_extensions=$(find . -type f | sed -n 's/.*\.\([a-zA-Z0-9]*\)$/\1/p' | sort | uniq)
 
 # Create directories for each file extension and move files
 for ext in $file_extensions; do
   mkdir -p "$ext"
-  find . -maxdepth 1 -type f -name "*.$ext" -exec mv {} "$ext" \;
+  find . -type f -name "*.$ext" -exec mv {} "$ext" \;
 done
 
 echo "Files have been organized by file type."
