@@ -10,7 +10,7 @@ date: '2024-06-01'
 type: post
 layout: post
 published: true
-slug: copy-spotter
+slug: copy-dedup
 title: '"Copy Spotter" and Deduplication'
 
 ---
