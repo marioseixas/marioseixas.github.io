@@ -11,7 +11,7 @@ type: post
 layout: post
 published: true
 slug: llm-renamer
-title: 'Rename files using AI (https://llm.datasette.io/en/stable/python-api.html)'
+title: 'Rename files using llm.datasette.io'
 
 ---
 
