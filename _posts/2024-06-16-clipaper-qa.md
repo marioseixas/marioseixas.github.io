@@ -267,13 +267,13 @@ def main():
     parser.add_argument(
         "--chunk_chars",
         type=int,
-        default=3200,
+        default=2400,
         help="Number of characters per chunk when splitting documents",
     )
     parser.add_argument(
         "--overlap",
         type=int,
-        default=1600,
+        default=1200,
         help="Number of overlapping characters between chunks",
     )
     parser.add_argument(
@@ -423,7 +423,7 @@ def main():
     if args.save_embeddings_txt:
         with open(args.save_embeddings_txt, "w", encoding="utf-8") as f:
             for doc in docs.docs.values():
-                f.write(f"{doc.dockey}\t{doc.embedding.tolist()}\n")
+                f.write(f"{doc.dockey}\t{doc.embedding}\n")
 
 if __name__ == "__main__":
     main()
@@ -475,4 +475,226 @@ Using the response of a request/query as context for subsequent prompts:
          print(f"Prompt: {prompt}")
          print(f"Answer: {answer.formatted_answer}\n")
      ```
+***
+
+~~~
+ Implement adversarial prompting. #131
+This adds a method adversarial_query. Adversarial queries first generate an answer, then asks the LLM to find problems with the answer, then finally generates the final response so that it addresses th
+ 1 commit
+ 2 files changed
+ 1 contributor
+Commits on Jun 2, 2023
+Add method for adversarial prompting. Also work around a problem with… 
+
+davidbrodrick committed on Jun 2, 2023
+ Showing  with 114 additions and 4 deletions.
+  87 changes: 83 additions & 4 deletions87  
+paperqa/docs.py
+Original file line number	Diff line number	Diff line change
+@@ -2,6 +2,7 @@
+import os
+import re
+import sys
+import copy
+from datetime import datetime
+from functools import reduce
+from pathlib import Path
+@@ -18,12 +19,15 @@
+from langchain.embeddings.openai import OpenAIEmbeddings
+from langchain.llms.base import LLM
+from langchain.vectorstores import FAISS
+from langchain.prompts import PromptTemplate
+
+from .paths import CACHE_PATH
+from .qaprompts import (
+    citation_prompt,
+    make_chain,
+    qa_prompt,
+    adversarial_prompt,
+    revision_prompt,
+    search_prompt,
+    select_paper_prompt,
+    summary_prompt,
+@@ -257,7 +261,10 @@ async def adoc_match(
+        papers = [f"{d.metadata['key']}: {d.page_content}" for d in docs]
+        result = await chain.arun(
+            question=query, papers="\n".join(papers), callbacks=callbacks
+        )
+        )        
+        if result=="None.":
+            #Something in that call stack returns "None." as a string!
+            result=[]
+        return result
+
+    def doc_match(
+@@ -378,9 +385,10 @@ async def aget_evidence(
+            docs = self._faiss_index.similarity_search(
+                answer.question, k=_k, fetch_k=5 * _k
+            )
+
+        # ok now filter
+        if key_filter is not None:
+            docs = [doc for doc in docs if doc.metadata["dockey"] in key_filter][:k]
+        if (key_filter is not None):
+            docs = [doc for doc in docs if doc.metadata["key"] in key_filter][:k]
+
+        async def process(doc):
+            if doc.metadata["dockey"] in self._deleted_keys:
+@@ -468,6 +476,74 @@ def generate_search_query(self, query: str) -> List[str]:
+        queries = [re.sub(r"^\d+\.\s*", "", q) for q in queries]
+        return queries
+
+    def adversarial_query(
+        self,
+        query: str,
+        k: int = 10,
+        max_sources: int = 5,
+        length_prompt: str = "about 100 words",
+        marginal_relevance: bool = True,
+        answer: Optional[Answer] = None,
+        key_filter: Optional[bool] = None,
+        get_callbacks: Callable[[str], AsyncCallbackHandler] = lambda x: [],
+        recontextualise: bool = False
+    ) -> List[Answer]:
+        #Get an answer to the question
+        orig_answer=self.query(
+                query,
+                k=k,
+                max_sources=max_sources,
+                length_prompt=length_prompt,
+                marginal_relevance=marginal_relevance,
+                answer=answer,
+                key_filter=key_filter,
+                get_callbacks=get_callbacks,
+                prompt_template=qa_prompt)
+        if "I cannot answer this question due to insufficient information." in orig_answer.answer:
+            #We can't do an adversarial challenge if there was no answer
+            return [orig_answer]
+
+        #Ask the LLM to critique the original answer
+        adversarial_query="Original Question: %s\n\nAnswer to be reviewed: %s"%(query,orig_answer.answer)
+        if recontextualise:
+            #We will search for new context strings based on the original answer
+            critique=None
+        else:            
+            #Use the original context strings
+            critique=copy.copy(orig_answer)
+            critique.question=query
+        critique=self.query(
+                adversarial_query,
+                k=k,
+                max_sources=max_sources,
+                length_prompt="less than 500 words",
+                marginal_relevance=marginal_relevance,
+                answer=critique,
+                key_filter=key_filter,
+                get_callbacks=get_callbacks,
+                prompt_template=adversarial_prompt)
+
+        #Generate a new answer which addresses the criticism
+        revision_query="Original Question: %s\n\nYour original answer: %s\n\nFeedback from the reviewer: %s"%(query,orig_answer.answer,critique.answer)
+        if recontextualise:
+            final_answer=None
+        else:
+            final_answer=copy.copy(critique)
+            critique.question=query
+        final_answer=self.query(
+                revision_query,
+                k=k,
+                max_sources=max_sources,
+                length_prompt=length_prompt,
+                marginal_relevance=marginal_relevance,
+                answer=final_answer,
+                key_filter=key_filter,
+                get_callbacks=get_callbacks,
+                prompt_template=revision_prompt)
+        #Return all three parts of the process
+        return [orig_answer, critique, final_answer]
+
+
+    def query(
+        self,
+        query: str,
+@@ -478,6 +554,7 @@ def query(
+        answer: Optional[Answer] = None,
+        key_filter: Optional[bool] = None,
+        get_callbacks: Callable[[str], AsyncCallbackHandler] = lambda x: [],
+        prompt_template: PromptTemplate = qa_prompt
+    ) -> Answer:
+        # special case for jupyter notebooks
+        if "get_ipython" in globals() or "google.colab" in sys.modules:
+@@ -499,6 +576,7 @@ def query(
+                answer=answer,
+                key_filter=key_filter,
+                get_callbacks=get_callbacks,
+                prompt_template=prompt_template
+            )
+        )
+
+@@ -512,6 +590,7 @@ async def aquery(
+        answer: Optional[Answer] = None,
+        key_filter: Optional[bool] = None,
+        get_callbacks: Callable[[str], AsyncCallbackHandler] = lambda x: [],
+        prompt_template: PromptTemplate = qa_prompt
+    ) -> Answer:
+        if k < max_sources:
+            raise ValueError("k should be greater than max_sources")
+@@ -542,7 +621,7 @@ async def aquery(
+        else:
+            cb = OpenAICallbackHandler()
+            callbacks = [cb] + get_callbacks("answer")
+            qa_chain = make_chain(qa_prompt, self.llm)
+            qa_chain = make_chain(prompt_template, self.llm)
+            answer_text = await qa_chain.arun(
+                question=query,
+                context_str=context_str,
+  31 changes: 31 additions & 0 deletions31  
+paperqa/qaprompts.py
+Original file line number	Diff line number	Diff line change
+@@ -25,6 +25,7 @@
+    "Relevant Information Summary:",
+)
+
+
+qa_prompt = prompts.PromptTemplate(
+    input_variables=["question", "context_str", "length"],
+    template="Write an answer ({length}) "
+@@ -42,6 +43,36 @@
+)
+
+
+adversarial_prompt = prompts.PromptTemplate(
+    input_variables=["question", "context_str"],
+    template="You are an adversarial and critical scientific reviewer. "
+    "Your task is to find deficiencies and shortcomings in the following answer to the original question. "
+    "Please be specific about the shortcomings of the answer and offer suggestions which would make the answer more complete and accurate."
+    "For each sentence in your critique, indicate which sources most support it "
+    "via valid citation markers at the end of sentences, like (Example2012).\n"
+    "{context_str}\n"
+    "{question}\n"
+    "Your Critique: ",
+)
+
+
+revision_prompt = prompts.PromptTemplate(
+    input_variables=["question", "context_str"],
+    template="For each sentence in your answer, indicate which sources most support it "
+    "via valid citation markers at the end of sentences, like (Example2012).\n"
+    "You are a scientist and use a scholarly tone. "
+    "You want to rewrite and improve your original answer to the original question to "
+    "to include better grammatical structure and logical reasoning. "
+    "You have also received critical feedback provided by a reviewer. Please address the "
+    "feedback from the reviewer so that your new answer is more comprehensive. "
+    "You can use dot points and paragraphs in your response where appropriate. "
+    #"You may conclude with one or two opinionated sentences to summarise your answer. "
+    "{context_str}\n"
+    "{question}\n"
+    "Your Improved Answer: ",
+)
+
+
+search_prompt = prompts.PromptTemplate(
+    input_variables=["question"],
+    template="We want to answer the following question: {question} \n"
+~~~
 ***
