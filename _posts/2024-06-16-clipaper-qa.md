@@ -92,6 +92,29 @@ The script accepts several command-line arguments to customize its behavior. Bel
 - `--jit_texts_index`: Enable just-in-time text indexing
 - `--answer_length`: Specify the desired length of the answer
 
+### Favorites
+
+--question
+"Question to ask (use quotes for multi-word questions)"
+
+--questions_file
+"Path to a text file containing a list of questions, one per line"
+
+--load_embeddings
+"Path to load a pre-saved Docs object with embeddings"
+
+--save_embeddings_txt
+"Path to save embeddings in a text file (for debugging/analysis)"
+
+--detailed_citations
+"Include full citations in the context"
+
+--custom_prompt_file
+"Path to a JSON file containing custom prompts"
+
+--answer_length
+"Specify the desired length of the answer (e.g., 'about 200 words')"
+
 ### Examples
 
 1. Ask a single question:
@@ -104,6 +127,16 @@ python script.py --pdf_dir /path/to/pdfs --question "What is the impact of clima
 
 ```bash
 python script.py --pdf_dir /path/to/pdfs --questions_file questions.txt
+```
+
+### List of questions template:
+
+```
+questions = [
+    "Q1?",
+    "Q2?",
+    # ... add your 28 other questions here
+]
 ```
 
 3. Load existing embeddings and ask a question:
@@ -395,3 +428,51 @@ def main():
 if __name__ == "__main__":
     main()
 ```
+
+# 2add
+
+***
+Automating a list of prompts to be queried:
+   - You can create a list of prompts and iterate over them, similar to the example in point 1.
+   - Here's an example:
+     ```python
+     prompts = [
+         "Prompt 1",
+         "Prompt 2",
+         # ...
+         "Prompt N"
+     ]
+
+     for prompt in prompts:
+         answer = loaded_docs.query(prompt, k=50)
+         print(f"Prompt: {prompt}")
+         print(f"Answer: {answer.formatted_answer}\n")
+     ```
+***
+Piping from command line stdout into the Python script:
+   - You can use the `sys` module to read input from the command line.
+   - Here's an example:
+     ```python
+     import sys
+
+     question = sys.stdin.read().strip()
+     answer = loaded_docs.query(question, k=50)
+     print(answer.formatted_answer)
+     ```
+   - You can then pipe the question from the command line:
+     ```
+     echo "What is the meaning of life?" | python3 researcher.py
+     ```
+***
+Using the response of a request/query as context for subsequent prompts:
+   - You can use the `answer.context` attribute to access the context used for generating the answer.
+   - Here's an example:
+     ```python
+     previous_context = ""
+     for prompt in prompts:
+         answer = loaded_docs.query(prompt, k=50, context=previous_context)
+         previous_context = answer.context
+         print(f"Prompt: {prompt}")
+         print(f"Answer: {answer.formatted_answer}\n")
+     ```
+***
