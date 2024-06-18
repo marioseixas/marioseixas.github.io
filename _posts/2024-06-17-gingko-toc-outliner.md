@@ -4,7 +4,7 @@ categories:
 tags:
   - scripts
   - gingko
-comment: '[https://github.com/mvdiogo/stf-web-scraper](https://gingkowriter.com/)'
+comment: 'gingkowriter.com'
 info: fechado.
 date: '2024-06-17'
 type: post
