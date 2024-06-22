@@ -27,44 +27,39 @@ layout: default
     margin-top: 20px;
     margin-bottom: 10px;
     line-height: 20px;
-    background: #505050;
-    border: 1px dotted #ddd;
-    padding: 5px 20px;
-    border-radius: 3px;
-    color: #ffffff;
   }
 </style>
-<div class="post-wrapper">
+<section class="post-wrapper">
   <article class="post">
-    <div class="post-heading">
+    <header class="post-heading">
       <h1 class="post-title">{{ page.title }}</h1>
       <div>
-        <a>{{ page.date | date_to_string }}</a>
+        <time datetime="{{ page.date | date: '%Y-%m-%d' }}" style="color:#FFCC00;">
+          {{ page.date | date_to_string }}
+        </time>
         {% if page.categories %}
-        <a class="categories">Categories: </a>
+        <span class="categories" style="color:#ffffff;">Categories: </span>
         {% for category in page.categories %}
-        <a class="category">{{ category }}</a>
-        {% unless forloop.last %} {% endunless %}
+        <a class="category" style="color:#33ccff;">
+          {{ category }}
+        </a>
         {% endfor %}
         {% endif %}
         {% if page.tags %}
-        <a class="tags">Tags: </a>
+        <span class="tags" style="color:#ffffff;">Tags: </span>
         {% for tag in page.tags %}
-        <a class="tag">{{ tag }}</a>
-        {% unless forloop.last %} {% endunless %}
+        <a class="tag" style="color:#33ccff;">
+          {{ tag }}
+        </a>
         {% endfor %}
         {% endif %}
-        {% if page.info %}
-        <a class="info">{{ page.info }}</a>
-        {% endif %}
       </div>
+    </header>
+    <div class="post-content">
+      {{ content }}
     </div>
-    <script src="{{ '/copy-to-clipboard.js' | relative_url }}" defer></script>
-    {{ content | replace: "<code>", "<div class='code-container'><code>" | replace: "</code>", "</code></div>" }}
+    <div class="comment-box">
+      <!-- Comment box content here -->
+    </div>
   </article>
-  {% if page.comment %}
-  <div class="comment-box">
-    {{ page.comment }}
-  </div>
-  {% endif %}
-</div>
+</section>
