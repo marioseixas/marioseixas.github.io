@@ -19,8 +19,7 @@ by @punk6529
 
 ***
 
-1. On How Many Tokens You Have Left
-You can notice changes in your visual environment in about 12 to 20 milliseconds (1/1,000th of a second).
+1. You can notice changes in your visual environment in about 12 to 20 milliseconds (1/1,000th of a second).
 It is why monitors that refresh 60x/second are pretty smooth and by 90-120x/second, they are in good shape
 2. Vision feels like a continuous process but there is no such thing. It is discrete, just like everything else.
 The rods and cones in your eyes do not respond to changes in light instantly. They respond to changes in light very quickly.
