@@ -94,25 +94,25 @@ The script accepts several command-line arguments to customize its behavior. Bel
 
 ### Favorites
 
---question
+`--question`
 "Question to ask (use quotes for multi-word questions)"
 
---questions_file
+`--questions_file`
 "Path to a text file containing a list of questions, one per line"
 
---load_embeddings
+`--load_embeddings`
 "Path to load a pre-saved Docs object with embeddings"
 
---save_embeddings_txt
+`--save_embeddings_txt`
 "Path to save embeddings in a text file (for debugging/analysis)"
 
---detailed_citations
+`--detailed_citations`
 "Include full citations in the context"
 
---custom_prompt_file
+`--custom_prompt_file`
 "Path to a JSON file containing custom prompts"
 
---answer_length
+`--answer_length`
 "Specify the desired length of the answer (e.g., 'about 200 words')"
 
 ### Examples
