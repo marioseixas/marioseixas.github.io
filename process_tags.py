@@ -1,6 +1,6 @@
 import os
-import glob
 import yaml
+import glob
 from collections import defaultdict
 
 def get_posts():
