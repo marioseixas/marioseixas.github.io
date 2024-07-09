@@ -1,11 +1,13 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>infoBAG</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>infoBAG</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<main>
+  <main>
     <section>
       <div style="text-align: center;">
         <a href="https://ib.bsb.br/life-tokens">can't steer unless already moving</a>
@@ -22,6 +24,6 @@
         </article> 
         {% endfor %}
     </section>
-</main>
+  </main>
 </body>
 </html>
