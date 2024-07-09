@@ -45,7 +45,7 @@ def execute_command(command):
 def process_output_file(output_filename, input_filename):
     """Appends citation to the beginning and end of the output file."""
     filepath = os.path.join(OUTPUT_DIRECTORY, output_filename)
-    citation = f"\\cite{{{input_filename}}}"
+    citation = f"\\cite{{ input_filename }}"
     try:
         with open(filepath, 'r+') as file:
             content = file.read()
