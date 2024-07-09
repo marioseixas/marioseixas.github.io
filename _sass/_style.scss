@@ -82,13 +82,17 @@ a:visited {
 .search-link {
   display: inline-block;
   margin-bottom: 1em;
-  padding: 0.5em;
+  padding: 0.5em 1em;
   color: #ff8000;
   border: 1px solid #ff8000;
-  float: right;
-  transition: transform 1s ease;
-  font-family: 'BitPotionExt';
-  font-size: clamp(16px, calc(13px + 0.5vw), 24px);
+  border-radius: 4px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.search-link:hover, .search-link:focus {
+  background-color: #ff8000;
+  color: #121212;
+  text-decoration: none;
 }
 
 /* ------------------------------------------------------------------------------------------------------------------ */
@@ -273,8 +277,8 @@ blockquote {
   }
 
   .search-box {
-    margin-left: auto;
-    flex-grow: 1;
+    width: 100%;
+    margin-top: 1em;
   }
 }
 
@@ -304,6 +308,11 @@ blockquote {
   body {
     background: #000;
     color: #fff;
+  }
+
+  a, .search-link {
+    color: #fff;
+    text-decoration: underline;
   }
 
   input, textarea, select, button {
