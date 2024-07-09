@@ -74,14 +74,14 @@ def preExit(countdownTime=5) -> None:
         return
     print()
     while cntTime > 0:
-        print("\rProgram ended, exiting in {{0:>{0}}} second(s). ".format(length).format(cntTime), end="")
+        print("\rProgram ended, exiting in {% raw %}{{0:>{0}}}{% endraw %}} second(s). ".format(length).format(cntTime), end="")
         try:
             sleep(1)
         except:
-            print("\rProgram ended, exiting in {{0:>{0}}} second(s). ".format(length).format(0))
+            print("\rProgram ended, exiting in {% raw %}{{0:>{0}}}{% endraw %}} second(s). ".format(length).format(0))
             return
         cntTime -= 1
-    print("\rProgram ended, exiting in {{0:>{0}}} second(s). ".format(length).format(cntTime))
+    print("\rProgram ended, exiting in {% raw %}{{0:>{0}}}{% endraw %}} second(s). ".format(length).format(cntTime))
 
 def loadFolder(latex_folder) -> dict:
     dicts = {}
