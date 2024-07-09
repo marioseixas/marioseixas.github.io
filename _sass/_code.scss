@@ -1,22 +1,18 @@
+/* ------------------------------------------------------------------------------------------------------------------ */
+/* Code and Pre-formatted Text                                                                                        */
+/* ------------------------------------------------------------------------------------------------------------------ */
+
 pre, code {
+  font-family: 'BitPotionExt', monospace;
+  font-size: 0.9em;
+  background: #2c2c2c;
+  color: #e0e0e0;
+  padding: 0.2em 0.4em;
+  border-radius: 4px;
   overflow-x: auto;
-  font-family: 'BitPotionExt';
-  font-size: 48px;
-  white-space: pre-wrap;
-  word-break: break-word;
-  overflow-wrap: break-word;
 }
 
-pre.highlight{
-  margin: 5vh auto;
-  padding:5vh;
-  background: #343434; 
-  border-radius: 1em;
-  transition: transform 1s ease;
-  font-family: 'BitPotionExt';
-  font-size: 48px;
-}
-
-.faded {
-  color: #666362;
+pre {
+  padding: 1em;
+  margin: 1em 0;
 }
