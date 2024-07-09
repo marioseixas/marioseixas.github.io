@@ -85,21 +85,21 @@ export default function IndexPage() {
           <img
             className={styles.serverTitleIcon}
             src="https://raw.githubusercontent.com/OvidijusParsiunas/deep-chat/HEAD/website/static/img/openAILogo.png"
-            style={{width: 26, marginBottom: '-1px'}}
+            style={{"width": 26, "marginBottom": "-1px"}}
             alt={'Title icon'}
           />
         </a>
         <h3>Make sure to set the OPENAI_API_KEY environment variable in your server</h3>
         <div className={styles.components}>
-          <div className={styles.diagonalLine} style={{background: '#f2f2f2'}}></div>
+          <div className={styles.diagonalLine} style={{"background": "#f2f2f2"}}></div>
           {/* by setting maxMessages requestBodyLimits to 0 or lower - each request will send full chat history:
             https://deepchat.dev/docs/connect/#requestBodyLimits */}
           <DeepChat
-            style={{borderRadius: '10px'}}
-            introMessage={{text: 'Send a chat message through an example server to OpenAI.'}}
-            request={{url: '/api/openai/chat'}}
-            requestBodyLimits={{maxMessages: 1}}
-            errorMessages={{displayServiceErrorMessages: true}}
+            style={{"borderRadius": "10px"}}
+            introMessage={{"text": "Send a chat message through an example server to OpenAI."}}
+            request={{"url": "/api/openai/chat"}}
+            requestBodyLimits={{"maxMessages": 1}}
+            errorMessages={{"displayServiceErrorMessages": true}}
             requestInterceptor={(details: RequestDetails) => {
                if (details.body instanceof FormData) {
                   if (threadId.current) details.body.append('thread_id', JSON.stringify(threadId.current));
@@ -268,7 +268,7 @@ The [chat-stream.ts](https://github.com/OvidijusParsiunas/deep-chat/blob/main/ex
 
 However, instead you can simply keep the same code as you have in the [chat.ts](https://github.com/OvidijusParsiunas/deep-chat/blob/main/example-servers/nextjs/pages/api/openai/chat.ts) file and simply use the [`stream`](https://deepchat.dev/docs/connect#stream) property to _simulate_ the stream.  
 All you will need to do is add the following property to Deep Chat in [index.ts](https://github.com/OvidijusParsiunas/deep-chat/blob/main/example-servers/nextjs/pages/index.tsx):  
-`stream={{simulation: true}}`.
+`stream={{"simulation": true}}`.
 
 [![Image 9: @7h360df47h3r](https://avatars.githubusercontent.com/u/93761786?s=80&u=69a6f6a3ffd946631a513185b49f37ecf0d8b38f&v=4)](https://github.com/7h360df47h3r)
 
