@@ -4,7 +4,6 @@ pre, :not(pre) code, kbd, samp, tt {
   padding: 0.1em 0.3em; /* Adds padding for better readability */
   margin: 0 0.1em; /* Adds a small margin for spacing */
   font-size: clamp(0.8rem, calc(0.8rem + 0.2vw), 1rem); /* Responsive font size */
-  background: #eee; /* Light grey background for inline code elements */
 }
 /* Additional styling specifically for pre and code elements */
 pre, code {
