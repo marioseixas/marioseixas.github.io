@@ -82,10 +82,10 @@ th, td {
   padding-left: 8px; /* Default padding */
   padding-right: 16px; /* Default padding */
   text-align: start;
-  border: 1px dotted #ddd;
+  border: 1px dotted #dddddd;
 }
 th, thead, tfoot {
-  background: #eee;
+  background: #eeeeee;
   font-weight: bold;
   font-size: 16px; /* Default font size */
 }
@@ -149,8 +149,7 @@ figcaption {
   font-family: 'BitPotionExt';
   font-size: clamp(2rem, calc(24px + 1vw), 3rem); // Adjusted for responsiveness
   // Incorporating styles from .comment-box
-  background: #505050;
-  border: 1px dotted #ddd;
+  border: 1px dotted #dddddd;
   border-radius: 0.1875rem; // 3px
   color: #ffffff;
   @media (max-width: 768px) {
