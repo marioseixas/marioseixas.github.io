@@ -14,6 +14,7 @@ jobs:
       uses: ruby/setup-ruby@v1
       with:
         ruby-version: '3.0.0'
+        # Not needed with a .ruby-version file
     - name: Install Ruby dependencies
       run: |
         gem install bundler
@@ -38,4 +39,3 @@ jobs:
         git diff --quiet && git diff --staged --quiet || (git commit -m 'Automated tag pages update' && git push)
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        
