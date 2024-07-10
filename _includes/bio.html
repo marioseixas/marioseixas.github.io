@@ -1,9 +1,62 @@
-<div class="header-container">
-  <a class="internal-link" href="/">
-    <h1 style="display: inline;">infoBAG</h1>
-  </a>
-  <img src="https://raw.githubusercontent.com/marioseixas/marioseixas.github.io/main/favicon.ico" alt="favicon">
-  <a class="search-link" href="https://ib.bsb.br/life-tokens">
-    <h2 style="display: inline;">can't steer unless already moving</h2>
-  </a>
-</div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>infoBAG</title>
+  <style>
+    /* Box-model fix */
+    html { box-sizing: border-box; }
+    *, *:before, *:after { box-sizing: inherit; }
+
+    /* Improved typography and prose readability */
+    html { font-size: clamp(1rem, calc(13px + 0.5vw), 1.2rem); }
+    body { 
+      line-height: 1.5; 
+      margin: 0 auto; 
+      max-width: 40em; 
+      padding: 1em; 
+      color: #333; 
+      font-family: 'BitPotionExt'; 
+    }
+
+    /* Header specific styles */
+    .header-container {
+      display: flex;
+      justify-content: center; /* Center the content horizontally */
+      align-items: center; /* Center the content vertically */
+      padding: 10px;
+    }
+
+    .header-content {
+      display: flex;
+      align-items: center;
+    }
+
+    .header-content h1,
+    .header-content h2 {
+      margin: 0 10px;
+    }
+
+    .header-content img {
+      height: 32px; /* Adjust as needed */
+      width: 32px; /* Adjust as needed */
+      margin: 0 10px;
+    }
+
+    .header-content a {
+      text-decoration: none;
+      color: inherit;
+    }
+  </style>
+</head>
+<body>
+  <div class="header-container">
+    <div class="header-content">
+      <h1 class="internal-link"><a href="/">infoBAG</a></h1>
+      <img src="https://raw.githubusercontent.com/marioseixas/marioseixas.github.io/main/favicon.ico" alt="favicon" class="favicon">
+      <h2 class="search-link"><a href="https://ib.bsb.br/life-tokens">can't steer unless already moving</a></h2>
+    </div>
+  </div>
+</body>
+</html>
