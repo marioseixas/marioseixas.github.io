@@ -72,21 +72,23 @@ h6 {
 }
 /* Use nicer serif fonts, if available */
 body {
-  font-family: 'Libertinus Serif', 'Common Serif', 'Linux Libertine', 'Crimson Text', FreeSerif, serif;
+  font-family: 'BitPotionExt';
 }
 /* Simple table style                                                                                                 */
+/* Simple table style */
 table {
   border-collapse: collapse;
 }
 th, td {
-  padding-left: 0.5em;
-  padding-right: 1em;
+  padding-left: clamp(0.3em, 0.5em + 0.2vw, 0.8em); /* Responsive padding */
+  padding-right: clamp(0.5em, 1em + 0.2vw, 1.5em); /* Responsive padding */
   text-align: start;
   border: 1px solid #ddd;
 }
 th, thead, tfoot {
   background: #eee;
   font-weight: bold;
+  font-size: clamp(1rem, 1vw + 0.5rem, 1.2rem); /* Responsive font size */
 }
 /* Forms and form inputs (work in progress, see https://github.com/waldyrious/downstyler/issues/5)                    */
 textarea {
@@ -130,13 +132,6 @@ a[href] {
 a[href]:visited {
   color: BlueViolet;
 }
-/* Styles for code-related elements */
-pre, :not(pre) code, kbd, samp, tt {
-  padding: 0.1em 0.3em;
-  margin: 0 0.1em;
-  font-size: 80%;
-  background: #eee;
-}
 /* Styles for blockquote elements */
 blockquote {
   padding-left: 1em;
@@ -150,7 +145,7 @@ blockquote {
 }
 /* Font and color adjustments inspired by the 2007 version of Tibia */
 body {
-  font-family: 'BitPotionExt', sans-serif;
+  font-family: 'BitPotionExt';
   background-color: #0C0C0C; /* Dark background similar to Tibia's UI */
   color: #FFFFFF; /* White text for readability */
 }
@@ -165,11 +160,4 @@ a:visited {
 }
 a:hover {
   color: #32CD32; /* Lime green for hovered links */
-}
-pre, code {
-  background-color: #2E2E2E; /* Dark grey background for code blocks */
-  color: #FFFFFF; /* White text for code */
-  border: 1px solid #FFD700; /* Gold border for code blocks */
-  padding: 10px;
-  border-radius: 5px;
 }
