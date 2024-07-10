@@ -13,15 +13,15 @@
       </div>
       {% for post in site.posts %} 
         <article>
-          <time datetime="{{ post.date | date: "%Y-%m-%d" }}" style="color: #efef00;"> {{ post.date | date: "%Y-%m-%d" }} </time>
+          <time datetime="{{post.date | date: "%Y-%m-%d"}}" style="color: #efef00;"> {{post.date | date: "%Y-%m-%d"}} </time>
           <a style="color:#33ccff;" href="{{ post.url }}">
             <img src="https://raw.githubusercontent.com/marioseixas/marioseixas.github.io/main/assets/gold.ico" alt="favicon">
             {{ post.title }}
           </a>
           {% assign created_date = post.date | date: "%Y-%m-%d" %}
           {% assign modified_date = post.last_modified_at | date: "%Y-%m-%d" %}
-          {% if post.last_modified_at and created_date != modified_date %}*<time datetime="{{ post.last_modified_at }}">
-              {{ post.last_modified_at | date: date_format }}
+          {% if post.last_modified_at and created_date != modified_date %}*<time datetime="{{post.last_modified_at}}" style="color: #ffffff;">
+            {{post.last_modified_at | date: "%Y-%m-%d"}}
             </time>
           {% endif %}
         </article>
