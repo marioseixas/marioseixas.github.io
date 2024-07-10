@@ -20,8 +20,7 @@
           </a>
           {% assign created_date = post.date | date: "%Y-%m-%d" %}
           {% assign modified_date = post.last_modified_at | date: "%Y-%m-%d" %}
-          {% if post.last_modified_at and created_date != modified_date %}
-            modified <time datetime="{{ post.last_modified_at | date_to_xmlschema }}">
+          {% if post.last_modified_at and created_date != modified_date %}*<time datetime="{{ post.last_modified_at }}">
               {{ post.last_modified_at | date: date_format }}
             </time>
           {% endif %}
