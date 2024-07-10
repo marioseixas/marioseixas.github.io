@@ -125,6 +125,25 @@ figcaption {
   max-width: 100px;
 }
 /* Additional adjustments                                                                                             */
+.search-link {
+  display: inline-block;
+  float: center;
+  font-family: 'BitPotionExt';
+  font-size: clamp(2rem, calc(24px + 1vw), 3rem); // Adjusted for responsiveness
+  // Incorporating styles from .comment-box
+  background: #505050;
+  border: 1px dotted #ddd;
+  border-radius: 0.1875rem; // 3px
+  color: #ffffff;
+  @media (max-width: 768px) {
+    font-size: clamp(1.8rem, calc(22px + 1vw), 2.5rem);
+    padding: 0.4em;
+  }
+  @media (max-width: 480px) {
+    font-size: clamp(1.5rem, calc(20px + 1vw), 2rem);
+    padding: 0.3em;
+  }
+}
 /* Softer link colors than the browser defaults */
 a[href] {
   color: RoyalBlue;
