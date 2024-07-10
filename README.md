@@ -18,8 +18,13 @@
                 <img src="https://raw.githubusercontent.com/marioseixas/marioseixas.github.io/main/assets/gold.ico" alt="favicon">
                 {{ post.title }}
             </a>
-        </article> 
-        {% endfor %}
+          {% assign created_date = post.date | date: "%Y-%m-%d" %}
+          {% assign modified_date = post.last_modified_at | date: "%Y-%m-%d" %}
+          {% if post.last_modified_at and created_date != modified_date %} modified <time datetime="{{ post.last_modified_at | date_to_xmlschema }}">
+            {{ post.last_modified_at | date: date_format }}
+          </time>
+        </article>
+      {% endfor %}
     </section>
   </main>
 </body>
