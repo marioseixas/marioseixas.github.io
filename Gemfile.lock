@@ -9,6 +9,8 @@ GEM
       zeitwerk (~> 2.2, >= 2.2.2)
     addressable (2.8.0)
       public_suffix (>= 2.0.2, < 5.0)
+    base64 (0.1.1)
+    bigdecimal (3.1.8)
     coffee-script (2.4.1)
       coffee-script-source
       execjs
@@ -259,7 +261,11 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  base64 (~> 0.1.0)
+  bigdecimal (~> 3.1.0)
   github-pages
+  jekyll (~> 3.0)
+  kramdown-parser-gfm
 
 BUNDLED WITH
    2.1.4
