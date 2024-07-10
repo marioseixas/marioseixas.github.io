@@ -1,21 +1,14 @@
-/* ------------------------------------------------------------------------------------------------------------------ */
-/* Code and Pre-formatted Text                                                                                        */
-/* ------------------------------------------------------------------------------------------------------------------ */
-
-pre, code {
-  font-family: 'BitPotionExt';
-  font-size: 0.9em;
-  background: #2c2c2c;
-  color: #e0e0e0;
-  padding: 0.2em 0.4em;
-  border-radius: 4px;
-  overflow-x: auto;
-  white-space: pre-wrap;
-  word-break: break-word;
-  overflow-wrap: break-word;
+/* _code.scss */
+/* Styling for preformatted text and inline code elements */
+pre, :not(pre) code, kbd, samp, tt {
+  padding: 0.1em 0.3em; /* Adds padding for better readability */
+  margin: 0 0.1em; /* Adds a small margin for spacing */
+  font-size: clamp(0.8rem, calc(0.8rem + 0.2vw), 1rem); /* Responsive font size */
+  background: #eee; /* Light grey background for inline code elements */
 }
-
-pre {
-  padding: 1em;
-  margin: 1em 0;
+/* Additional styling specifically for pre and code elements */
+pre, code {
+  background-color: #2E2E2E; /* Dark grey background for code blocks */
+  color: #FFFFFF; /* White text for code */
+  font-size: clamp(1rem, calc(13px + 0.5vw), 1.2rem); /* Responsive font size */
 }
