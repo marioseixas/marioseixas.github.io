@@ -47,7 +47,7 @@ layout: default
         <a>{{ page.date | date_to_string }}
           {% assign created_date = page.date | date: "%Y-%m-%d" %}
       {% assign modified_date = page.last_modified_at | date: "%Y-%m-%d" %}
-      {% if page.last_modified_at and created_date != modified_date %} *<time datetime="{{ page.last_modified_at | date_to_xmlschema }}" itemprop="dateModified">
+      {% if page.last_modified_at and created_date != modified_date %} *<time datetime="{{ page.last_modified_at }}" itemprop="dateModified">
         {{ page.last_modified_at | date: date_format }}
         </time>
       {% endif %}
