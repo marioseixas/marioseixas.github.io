@@ -24,7 +24,7 @@
             {{ post.last_modified_at | date: date_format }}
           </time>
         </article>
-      {% endfor %}
+      {% endif %}
     </section>
   </main>
 </body>
