@@ -79,15 +79,34 @@ table {
   border-collapse: collapse;
 }
 th, td {
-  padding-left: clamp(4.8px, 8px + 0.2vw, 12.8px); /* Responsive padding */
-  padding-right: clamp(8px, 16px + 0.2vw, 24px); /* Responsive padding */
+  padding-left: 8px; /* Default padding */
+  padding-right: 16px; /* Default padding */
   text-align: start;
-  border: 1px solid #ddd;
+  border: 1px dotted #ddd;
 }
 th, thead, tfoot {
   background: #eee;
   font-weight: bold;
-  font-size: clamp(16px, 1vw + 8px, 19.2px); /* Responsive font size */
+  font-size: 16px; /* Default font size */
+}
+/* Media queries for responsive design */
+@media (min-width: 600px) {
+  th, td {
+    padding-left: 10px; /* Adjust padding for larger screens */
+    padding-right: 18px; /* Adjust padding for larger screens */
+  }
+  th, thead, tfoot {
+    font-size: 18px; /* Adjust font size for larger screens */
+  }
+}
+@media (min-width: 900px) {
+  th, td {
+    padding-left: 12px; /* Adjust padding for even larger screens */
+    padding-right: 20px; /* Adjust padding for even larger screens */
+  }
+  th, thead, tfoot {
+    font-size: 20px; /* Adjust font size for even larger screens */
+  }
 }
 /* Forms and form inputs (work in progress, see https://github.com/waldyrious/downstyler/issues/5)                    */
 textarea {
