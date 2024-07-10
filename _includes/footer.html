@@ -1,8 +1,32 @@
 <footer class="faded">
   <hr>
+  .comment-box {
+  font-family: 'BitPotionExt';
+  font-size: clamp(1rem, calc(13px + 0.5vw), 1.2rem);
+  margin-top: 1.25rem; // 20px
+  margin-bottom: 0.625rem; // 10px
+  line-height: 1.25rem; // 20px
+  border: 1px dotted #ddd;
+  padding: 0.3125rem 1.25rem; // 5px 20px
+  border-radius: 0.1875rem; // 3px
+  color: #ffffff;
+  @media (max-width: 768px) {
+    font-size: clamp(0.9rem, calc(12px + 0.5vw), 1.1rem);
+    padding: 0.25rem 1rem; // 4px 16px
+  }
+  @media (max-width: 480px) {
+    font-size: clamp(0.8rem, calc(11px + 0.5vw), 1rem);
+    padding: 0.2rem 0.8rem; // 3px 12.8px
+  }
+  }
   {% if page.back_to_top != false %}
     <p>
-      <a href="#" id="back-to-top">&uarr;</a>
-    </p>
+      {% if page.comment %}
+  <div class="comment-box">
+    <a href="#" id="back-to-top">&uarr;</a>
+    {{ page.comment }}
+  </div>
+  {% endif %}
+</p>
   {% endif %}
 </footer>
