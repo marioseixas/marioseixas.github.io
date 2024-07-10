@@ -1,1 +1,8 @@
-<footer class="faded"></footer>
+<footer class="faded">
+  <hr>
+  {% if page.back_to_top != false %}
+    <p>
+      <a href="#" id="back-to-top">&uarr;</a>
+    </p>
+  {% endif %}
+</footer>
