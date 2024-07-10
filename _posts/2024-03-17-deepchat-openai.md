@@ -1,8 +1,8 @@
 ---
 tags:
   - AI
-comment: https://github.com/OvidijusParsiunas/deep-chat/issues/53
-info: aberto.
+comment: "https://github.com/OvidijusParsiunas/deep-chat/issues/53"
+info: "aberto."
 date: '2024-03-17'
 type: post
 layout: post
@@ -60,7 +60,7 @@ If you want to do this manually in your own backend, you can use the code that I
 
 Code for the [`index.tsx`](https://github.com/OvidijusParsiunas/deep-chat/blob/main/example-servers/nextjs/pages/index.tsx) file:
 
-```
+```typescript
 import {RequestDetails} from 'deep-chat/dist/types/interceptors';
 import {Response} from 'deep-chat/dist/types/response';
 import styles from '../styles/Index.module.css';
@@ -124,7 +124,7 @@ export default function IndexPage() {
 
 Code for the [chat.ts](https://github.com/OvidijusParsiunas/deep-chat/blob/main/example-servers/nextjs/pages/api/openai/chat.ts) file. Make sure to set your `API_KEY` and `ASSISTANT_ID` variables:
 
-```
+```typescript
 import {DeepChatOpenAITextRequestBody} from '../../../types/deepChatTextRequestBody';
 import {MessageContent} from 'deep-chat/dist/types/messages';
 import errorHandler from '../../../utils/errorHandler';
@@ -281,13 +281,13 @@ GitHub recently disabled direct sponsorships via PayPal in favour of Stripe, but
 
 When it comes to integrating functions/tools for Assistants API, majority of the setup really needs to be done when setting up your assistant. I recommend using the [Assistant Playground](https://platform.openai.com/playground) to first add your function:
 
-[![Image 11: Screenshot 2023-11-28 at 18 00 22](https://private-user-images.githubusercontent.com/18709577/286360101-1ad370d9-75ee-4618-ab8f-f5bb0215c3cd.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MTkyNjYwMzcsIm5iZiI6MTcxOTI2NTczNywicGF0aCI6Ii8xODcwOTU3Ny8yODYzNjAxMDEtMWFkMzcwZDktNzVlZS00NjE4LWFiOGYtZjViYjAyMTVjM2NkLnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNDA2MjQlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjQwNjI0VDIxNDg1N1omWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPWRmNGRkMjM5NDlmOTBhN2E4ODI3Yjk1YmU2NjQ3OThjMGExYzc0ZmY5NTc1MGNkMTUzZTEwN2IyY2Y4NDg1YzImWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0JmFjdG9yX2lkPTAma2V5X2lkPTAmcmVwb19pZD0wIn0.Rfaa9tmyZ8rlnyDsLvUa3gJ-Ba5v9PQaeBzD3Ok3qqA)](https://private-user-images.githubusercontent.com/18709577/286360101-1ad370d9-75ee-4618-ab8f-f5bb0215c3cd.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MTkyNjYwMzcsIm5iZiI6MTcxOTI2NTczNywicGF0aCI6Ii8xODcwOTU3Ny8yODYzNjAxMDEtMWFkMzcwZDktNzVlZS00NjE4LWFiOGYtZjViYjAyMTVjM2NkLnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNDA2MjQlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjQwNjI0VDIxNDg1N1omWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPWRmNGRkMjM5NDlmOTBhN2E4ODI3Yjk1YmU2NjQ3OThjMGExYzc0ZmY5NTc1MGNkMTUzZTEwN2IyY2Y4NDg1YzImWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0JmFjdG9yX2lkPTAma2V5X2lkPTAmcmVwb19pZD0wIn0.Rfaa9tmyZ8rlnyDsLvUa3gJ-Ba5v9PQaeBzD3Ok3qqA)(This Asisstant is now removed as I used it for a demo)
+[![Image 11: Screenshot 2023-11-28 at 18 00 22](https://private-user-images.githubusercontent.com/18709577/286360101-1ad370d9-75ee-4618-ab8f-f5bb0215c3cd.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MTkyNjYwMzcsIm5iZiI6MTcxOTI2NTczNywicGF0aCI6Ii8xODcwOTU3Ny8yODYzNjAxMDEtMWFkMzcwZDktNzVlZS00NjE4LWFiOGYtZjViYjAyMTVjM2NkLnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNDA2MjQlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjQwNjI0VDIxNDg1N1omWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPWRmNGRkMjM5NDlmOTBhN2E4ODI3Yjk1YmU2NjQ3OThjMGExYzc0ZmY5NTc1MGNkMTUzZTEwN2IyY2Y4NDg1YzImWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0JmFjdG9yX2lkPTAma2V5X2idPTAmcmVwb19pZD0wIn0.Rfaa9tmyZ8rlnyDsLvUa3gJ-Ba5v9PQaeBzD3Ok3qqA)](https://private-user-images.githubusercontent.com/18709577/286360101-1ad370d9-75ee-4618-ab8f-f5bb0215c3cd.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MTkyNjYwMzcsIm5iZiI6MTcxOTI2NTczNywicGF0aCI6Ii8xODcwOTU3Ny8yODYzNjAxMDEtMWFkMzcwZDktNzVlZS00NjE4LWFiOGYtZjViYjAyMTVjM2NkLnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNDA2MjQlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjQwNjI0VDIxNDg1N1omWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPWRmNGRkMjM5NDlmOTBhN2E4ODI3Yjk1YmU2NjQ3OThjMGExYzc0ZmY5NTc1MGNkMTUzZTEwN2IyY2Y4NDg1YzImWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0JmFjdG9yX2lkPTAma2V5X2lkPTAmcmVwb19pZD0wIn0.Rfaa9tmyZ8rlnyDsLvUa3gJ-Ba5v9PQaeBzD3Ok3qqA)(This Assistant is now removed as I used it for a demo)
 
-After clicking the **Add** button, you will see a template for an example function setup code. This is where things get a little complicated as they require the understanding on what functions/tools are and how they are used. If you are new to them I recommend reading this [document](https://platform.openai.com/docs/assistants/tools/reading-the-functions-called-by-the-assistant) or watching this [video](https://www.youtube.com/watch?v=aqdWSYWC_LI&ab_channel=DaveEbbelaar) which really helped me (to note that vide is using the old API, but it helps understanding the concept of OpenAI functions).
+After clicking the **Add** button, you will see a template for an example function setup code. This is where things get a little complicated as they require the understanding on what functions/tools are and how they are used. If you are new to them I recommend reading this [document](https://platform.openai.com/docs/assistants/tools/reading-the-functions-called-by-the-assistant) or watching this [video](https://www.youtube.com/watch?v=aqdWSYWC_LI&ab_channel=DaveEbbelaar) which really helped me (to note that video is using the old API, but it helps understanding the concept of OpenAI functions).
 
 When adding your function, you can just use the template, and for my case I have used a _get\_weather_ function which contains the following template:
 
-```
+```json
 {
   "name": "get_weather",
   "description": "Determine weather in my location",
@@ -315,7 +315,7 @@ When adding your function, you can just use the template, and for my case I have
 
 Given the function above, you can change the `pollForResult` function and add a new functions to the [chat.ts](https://github.com/OvidijusParsiunas/deep-chat/blob/main/example-servers/nextjs/pages/api/openai/chat.ts) example from above:
 
-```
+```typescript
 async function pollForResult(thread_id: string, run_id: string) {
   // Get the run status
   // https://platform.openai.com/docs/api-reference/runs/listRuns
@@ -404,7 +404,7 @@ When you send files from Deep Chat, you must remember that the request format is
 
 Here is the new [chat.ts](https://github.com/OvidijusParsiunas/deep-chat/blob/main/example-servers/nextjs/pages/api/openai/chat.ts) code:
 
-```
+```typescript
 import {DeepChatOpenAITextRequestBody} from '../../../types/deepChatTextRequestBody';
 import errorHandler from '../../../utils/errorHandler';
 import {NextRequest, NextResponse} from 'next/server';
@@ -605,12 +605,12 @@ textRequestBody.messages.push(JSON.parse(data) as MessageContent);
 }  
 });
 
-the first condition is not fulfiled, despite of uploading file
+the first condition is not fulfilled, despite of uploading file
 
 [![Image 22: @OvidijusParsiunas](https://avatars.githubusercontent.com/u/18709577?s=80&u=245fd9851eb14ce9a588180ba9234a50544cb07c&v=4)](https://github.com/OvidijusParsiunas)
 
 That is very strange, for some reason the `data` is not recognised as a file.  
-Is your `index.tsx` file different than the one in [this comment](https://github.com/OvidijusParsiunas/deep-chat/issues/53#issuecomment-1828383196). Ofcourse with the addition of [mixedFiles](https://deepchat.dev/docs/files#mixedFiles).
+Is your `index.tsx` file different than the one in [this comment](https://github.com/OvidijusParsiunas/deep-chat/issues/53#issuecomment-1828383196). Of course with the addition of [mixedFiles](https://deepchat.dev/docs/files#mixedFiles).
 
 [![Image 23: @AhmeedBen](https://avatars.githubusercontent.com/u/130488191?s=80&v=4)](https://github.com/AhmeedBen)
 
@@ -619,26 +619,20 @@ I don't know this will affect the other types of uploads.
 
 [![Image 24: @OvidijusParsiunas](https://avatars.githubusercontent.com/u/18709577?s=80&u=245fd9851eb14ce9a588180ba9234a50544cb07c&v=4)](https://github.com/OvidijusParsiunas)
 
-Happy to hear it works for you, I have also updated my example to reflect this. Thankyou!
+Happy to hear it works for you, I have also updated my example to reflect this. Thank you!
 
 [![Image 25: @AhmeedBen](https://avatars.githubusercontent.com/u/130488191?s=80&v=4)](https://github.com/AhmeedBen)
 
 Thank you very much,  
-Another thing, a new thread is created everytime we add a new file.  
+Another thing, a new thread is created every time we add a new file.  
 I tried to use  
 const textRequestBody = (await req.json()) as {messages: \[\]; thread\_id?: string};  
 but it doesn't work.
 
 [![Image 26: @OvidijusParsiunas](https://avatars.githubusercontent.com/u/18709577?s=80&u=245fd9851eb14ce9a588180ba9234a50544cb07c&v=4)](https://github.com/OvidijusParsiunas)
 
-I have updated the `chat.ts` and `index.tsx` examples to help handle the same thread\_id (session) form FormData.
+I have updated the `chat.ts` and `index.tsx` examples to help handle the same thread\_id (session) from FormData.
 
 [![Image 27: @AhmeedBen](https://avatars.githubusercontent.com/u/130488191?s=80&v=4)](https://github.com/AhmeedBen)
 
 Thank you very much, everything works fine now.
-
-Labels
-
-[advice](https://github.com/OvidijusParsiunas/deep-chat/labels/advice)
-
-Information how to use/implement the component
