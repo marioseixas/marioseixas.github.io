@@ -72,7 +72,7 @@ h6 {
 }
 /* Use nicer serif fonts, if available */
 body {
-  font-family: ‘Libertinus Serif’, ‘Common Serif’, ‘Linux Libertine’, ‘Crimson Text’, FreeSerif, serif;
+  font-family: 'Libertinus Serif', 'Common Serif', 'Linux Libertine', 'Crimson Text', FreeSerif, serif;
 }
 /* Simple table style                                                                                                 */
 table {
@@ -98,15 +98,15 @@ input, textarea, select, button {
   font-size: 100%;
   margin: 0.2em 0;
 }
-select[size]:not([size=“1”]) {
+select[size]:not([size="1"]) {
   vertical-align: top;
 }
 /* Images and figures                                                                                                 */
 /* Add margins to left- and right-aligned images (https://github.com/waldyrious/downstyler/issues/13) */
-img[align=“right”] {
+img[align="right"] {
   margin-left: 1em;
 }
-img[align=“left”] {
+img[align="left"] {
   margin-right: 1em;
 }
 /* Figure captions */
@@ -116,10 +116,10 @@ figcaption {
   font-size: 75% !important;
 }
 /* Prevent blowing up SVG images that are meant to be small */
-*[class*=“social”] svg, *[class*=“icon”] svg, svg[class*=“icon”], img[class*=“emoji”][src$=“.svg”] {
+*[class*="social"] svg, *[class*="icon"] svg, svg[class*="icon"], img[class*="emoji"][src$=".svg"] {
   max-height: 30px;
 }
-*[class*=“logo” i] svg, *[id*=“logo” i] svg {
+*[class*="logo" i] svg, *[id*="logo" i] svg {
   max-width: 100px;
 }
 /* Additional adjustments                                                                                             */
@@ -150,12 +150,12 @@ blockquote {
 }
 /* Font and color adjustments inspired by the 2007 version of Tibia */
 body {
-  font-family: ‘BitPotionExt’, sans-serif;
-  background-color: #0C0C0C; /* Dark background similar to Tibia’s UI */
+  font-family: 'BitPotionExt', sans-serif;
+  background-color: #0C0C0C; /* Dark background similar to Tibia's UI */
   color: #FFFFFF; /* White text for readability */
 }
 h1, h2, h3, h4, h5, h6 {
-  color: #FFD700; /* Gold color for headings, inspired by Tibia’s chat colors */
+  color: #FFD700; /* Gold color for headings, inspired by Tibia's chat colors */
 }
 a {
   color: #00FF00; /* Green color for links, similar to player names in Tibia */
