@@ -2,31 +2,23 @@
 require 'yaml'
 require 'find'
 require 'time'
-# Loop through all markdown files in the _posts directory
-Find.find('./_posts') do |path|
-  next unless File.file?(path) && File.extname(path) == '.md'
-  # Get the last modified date from Git
-  git_cmd = "git log -1 --format=%cd --date=iso -- #{path}"
-  git_date = `#{git_cmd}`.strip
-  
-  # If Git date is not available, use file's mtime
-  if git_date.empty?
-    last_modified = File.mtime(path).iso8601
-  else
-    last_modified = Time.parse(git_date).iso8601
-  end
-  # Read the current content of the file
+def ensure_time(value)
+  return Time.parse(value).strftime('%Y-%m-%d %H:%M:%S %z') if value.is_a?(String)
+  return value.strftime('%Y-%m-%d %H:%M:%S %z') if value.is_a?(Time)
+  Time.now.strftime('%Y-%m-%d %H:%M:%S %z')
+end
+Find.find('.') do |path|
+  next unless File.file?(path) && ['.md', '.html'].include?(File.extname(path))
   content = File.read(path)
-  # Parse the front matter
-  if content =~ /\A(---\s*\n.*?\n?)^((---|\.\.\.)\s*$\n?)/m
-    front_matter = YAML.load($1)
+  if content =~ /\A(---\s*\n.*?\n?)^(---\s*$\n?)/m
+    front_matter = YAML.safe_load($1)
     content_body = $'
   else
-    front_matter = {}
-    content_body = content
+    next
   end
-  # Update the last_modified_at in the front matter
-  front_matter['last_modified_at'] = last_modified
-  # Write the updated content back to the file
+  git_date = `git log -1 --format=%cd --date=iso -- #{path}`.strip
+  last_modified = git_date.empty? ? File.mtime(path) : Time.parse(git_date)
+  
+  front_matter['last_modified_at'] = ensure_time(last_modified)
   File.write(path, "---\n#{front_matter.to_yaml}---\n#{content_body}")
 end
