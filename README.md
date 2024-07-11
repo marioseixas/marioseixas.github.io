@@ -11,7 +11,7 @@
         <a class="search-link" href="https://github.com/search?q=repo%3Amarioseixas%2Fmarioseixas.github.io">SEARCH</a>
         <a class="search-link" href="https://ib.bsb.br/tags">TAGS</a>
       </div>
-      {% assign sorted_posts = site.posts | sort: 'last_modified_at_str' | reverse %}
+      {% assign sorted_posts = site.posts | sort: 'last_modified_at' | reverse %}
       {% for post in sorted_posts %}
         <article>
           <time datetime="{{ post.date | date: '%Y-%m-%d' }}" style="color: #efef00;">{{ post.date | date: '%Y-%m-%d' }}</time>
@@ -22,7 +22,7 @@
           {% assign created_date = post.date | date: '%Y-%m-%d' %}
           {% assign modified_date = post.last_modified_at | date: '%Y-%m-%d' %}
           {% if post.last_modified_at and created_date != modified_date %}
-          <time datetime="{{ post.last_modified_at | date_to_xmlschema }}" style="color: #ffffff;">ed @{{ modified_date }}</time>
+          <time datetime="{{ post.last_modified_at }}" style="color: #ffffff;">ed @{{ modified_date }}</time>
           {% endif %}
         </article>
       {% endfor %}
