@@ -19,9 +19,11 @@
             <img src="https://raw.githubusercontent.com/marioseixas/marioseixas.github.io/main/assets/gold.ico" alt="favicon">
             {{ post.title }}
           </a>
-          {% if post.last_modified_at and post.last_modified_at != post.date %}
-            <time datetime="{{ post.last_modified_at | date_to_xmlschema }}" style="color: #ffffff;">
-              ed @{{ post.last_modified_at | date: '%Y-%m-%d' }}
+          {% assign modified_date = post.last_modified_at | date: '%Y-%m-%d' %}
+          {% assign created_date = post.date | date: '%Y-%m-%d' %}
+          {% if modified_date != created_date %}
+            <time datetime="{{ post.last_modified_at | date: '%Y-%m-%d' }}" style="color: #ffffff;">
+              ed @{{ modified_date }}
             </time>
           {% endif %}
         </article>
