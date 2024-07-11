@@ -4,7 +4,9 @@ title:               infoBAG
 url:                 https://ib.bsb.br
 enforce_ssl:         ib.bsb.br
 baseurl:             ""
-
+sleek:
+  date_format: "%b %-d, %Y"
+  
 permalink:           :slug
 relative_permalinks: false
 
