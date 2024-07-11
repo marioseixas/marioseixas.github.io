@@ -17,7 +17,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
         with:
-          fetch-depth: 0
+          fetch-depth: 0  # This ensures all Git history is fetched
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
         with:
