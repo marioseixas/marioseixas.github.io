@@ -1,7 +1,11 @@
----
-layout: default
----
-<main>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>infoBAG</title>
+</head>
+<body>
+  <main>
   <section>
     <div style="text-align: center;">
       <a class="search-link" href="https://github.com/search?q=repo%3Amarioseixas%2Fmarioseixas.github.io">SEARCH</a>
@@ -24,3 +28,5 @@ layout: default
     {% endfor %}
   </section>
 </main>
+</body>
+</html>
