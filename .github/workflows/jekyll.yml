@@ -4,7 +4,7 @@ on:
     branches: ["main"]
   workflow_dispatch:
 permissions:
-  contents: write
+  contents: read
   pages: write
   id-token: write
 concurrency:
@@ -17,7 +17,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
         with:
-          fetch-depth: 0  # This ensures all Git history is fetched
+          fetch-depth: 0
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
         with:
@@ -29,11 +29,9 @@ jobs:
       - name: Update last modified dates
         run: |
           chmod +x .github/workflows/update_last_modified.rb
-          .github/workflows/update_last_modified.rb
+          ruby .github/workflows/update_last_modified.rb
       - name: Build with Jekyll
-        run: |
-          bundle install
-          bundle exec jekyll build --destination _site
+        run: bundle exec jekyll build --destination _site
         env:
           JEKYLL_ENV: production
       - name: Upload artifact
@@ -48,5 +46,3 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
