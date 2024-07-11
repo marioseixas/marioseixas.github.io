@@ -27,3 +27,5 @@ defaults:
 menu:
   home: /
   tags: /tags/
+
+git_log: false
