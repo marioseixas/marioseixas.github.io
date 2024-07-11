@@ -1,15 +1,19 @@
 #!/usr/bin/env ruby
 require 'yaml'
 require 'find'
+require 'time'
 # Loop through all markdown files in the _posts directory
 Find.find('./_posts') do |path|
   next unless File.file?(path) && File.extname(path) == '.md'
   # Get the last modified date from Git
-  last_modified = `git log -1 --format=%cd --date=iso -- #{path}`.strip
+  git_cmd = "git log -1 --format=%cd --date=iso -- #{path}"
+  git_date = `#{git_cmd}`.strip
   
   # If Git date is not available, use file's mtime
-  if last_modified.empty?
+  if git_date.empty?
     last_modified = File.mtime(path).iso8601
+  else
+    last_modified = Time.parse(git_date).iso8601
   end
   # Read the current content of the file
   content = File.read(path)
