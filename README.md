@@ -11,18 +11,18 @@
         <a class="search-link" href="https://github.com/search?q=repo%3Amarioseixas%2Fmarioseixas.github.io">SEARCH</a>
         <a class="search-link" href="https://ib.bsb.br/tags">TAGS</a>
       </div>
-      {% for post in site.posts %} 
+      {% assign sorted_posts = site.posts | sort: 'last_modified_at_str' | reverse %}
+      {% for post in sorted_posts %}
         <article>
-          <time datetime="{{post.date | date: "%Y-%m-%d"}}" style="color: #efef00;"> {{post.date | date: "%Y-%m-%d"}} </time>
+          <time datetime="{{ post.date | date: '%Y-%m-%d' }}" style="color: #efef00;">{{ post.date | date: '%Y-%m-%d' }}</time>
           <a style="color:#33ccff;" href="{{ post.url }}">
             <img src="https://raw.githubusercontent.com/marioseixas/marioseixas.github.io/main/assets/gold.ico" alt="favicon">
             {{ post.title }}
           </a>
-          {% assign created_date = post.date | date: "%Y-%m-%d" %}
-          {% assign modified_date = post.last_modified_at | date: "%Y-%m-%d" %}
+          {% assign created_date = post.date | date: '%Y-%m-%d' %}
+          {% assign modified_date = post.last_modified_at | date: '%Y-%m-%d' %}
           {% if post.last_modified_at and created_date != modified_date %}
-          <time datetime="{{post.last_modified_at}}" style="color: #ffffff;">ed @{{post.last_modified_at | date: "%Y-%m-%d"}}
-            </time>
+          <time datetime="{{ post.last_modified_at }}" style="color: #ffffff;">ed @{{ post.last_modified_at | date: '%Y-%m-%d' }}</time>
           {% endif %}
         </article>
       {% endfor %}
