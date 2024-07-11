@@ -8,7 +8,7 @@ layout: default
       <a class="search-link" href="https://ib.bsb.br/tags">TAGS</a>
     </div>
     {% assign date_format = site.sleek.date_format | default: "%b %-d, %Y" %}
-    {% assign sorted_posts = site.posts | sort: 'last_modified_at' | reverse %}
+    {% assign sorted_posts = site.posts | sort: 'last_modified_at_str' | reverse %}
     {% for post in sorted_posts %}
       <article>
         <span >
