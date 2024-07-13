@@ -30,7 +30,8 @@ def generate_tag_pages(posts):
                 # Generate URL based on filename and permalink structure
                 filename = os.path.basename(post['filename'])
                 post_url = f'/{filename.replace(".md", "")}/'
-                file.write(f'- [{post["title"]}]({post_url})\n')
+                title = post.get("title", "Untitled Post")
+                file.write(f'- [{title}]({post_url})\n')
 
 def main():
     posts = get_posts()
