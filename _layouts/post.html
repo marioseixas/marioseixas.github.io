@@ -43,9 +43,7 @@ layout: default
         <a class="info">{{ page.info }}</a>
         {% endif %}
       </div>
-      <small>
-        <i class="fa fa-pencil" aria-hidden="true"></i> <a href="https://github.com/marioseixas/marioseixas.github.io/edit/main/{{ page.path }}" target="_blank">Improve this</a> &nbsp; <i class="fa fa-history" aria-hidden="true"></i> <a href="https://github.com/marioseixas/marioseixas.github.io/edit/main/{{ page.path }}" target="_blank">Revision history</a>
-      </small>
+      <a href="https://github.com/marioseixas/marioseixas.github.io/edit/main/{{ page.path }}" target="_blank">Improve this</a> &nbsp; <a href="https://github.com/marioseixas/marioseixas.github.io/commits/main/{{ page.path }}" target="_blank">Revision history</a>
     </div>
     <script src="{{ '/copy-to-clipboard.js' | relative_url }}" defer></script>
     {{ content | replace: "<code>", "<div class='code-container'><code>" | replace: "</code>", "</code></div>" }}
