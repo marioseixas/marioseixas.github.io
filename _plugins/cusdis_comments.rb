@@ -22,7 +22,8 @@ module Jekyll
       response = Net::HTTP.get_response(uri)
 
       if response.is_a?(Net::HTTPSuccess)
-        comments = JSON.parse(response.body)['data']
+        data = JSON.parse(response.body)
+        comments = data['data'] || [] # Safely access 'data' key and default to empty array
         render_comments(comments, app_id, page_id, page_url, page_title)
       else
         "<!-- Failed to load comments: #{response.message} -->"
@@ -52,14 +53,18 @@ module Jekyll
     def render_comment_list(comments, depth = 0)
       html = ""
       comments.each do |comment|
-        puts "DEBUG: Comment object: #{comment.inspect}" # Debug statement
-        html += <<-HTML
-          <div class="comment" style="margin-left: #{depth * 20}px;">
-            <p><strong>#{comment['by']}</strong> - #{comment['created_at']}</p>
-            <p>#{comment['content']}</p>
-            #{render_comment_list(comment['replies'], depth + 1)}
-          </div>
-        HTML
+        if comment.is_a?(Hash)
+          puts "DEBUG: Comment object: #{comment.inspect}" # Debug statement
+          html += <<-HTML
+            <div class="comment" style="margin-left: #{depth * 20}px;">
+              <p><strong>#{comment['by']}</strong> - #{comment['created_at']}</p>
+              <p>#{comment['content']}</p>
+              #{render_comment_list(comment['replies'], depth + 1) if comment['replies']}
+            </div>
+          HTML
+        else
+          puts "DEBUG: Unexpected comment structure: #{comment.inspect}"
+        end
       end
       html
     end
