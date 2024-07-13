@@ -1,14 +1,14 @@
 ---
-date: 2024-07-13T00:00:00.000Z
-categories: null
+date: 2024-07-13
 tags:
   - github
   - jekyll
-comment: null
+comment: 
 info: fechado.
 type: post
 layout: post
 ---
+
 Github Actions workflow to ensure the new gems are installed and locked in Gemfile.lock:
 
 ```.github/workflows/update_gemfile_lock.yml
