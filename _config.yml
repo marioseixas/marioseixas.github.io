@@ -1,11 +1,6 @@
 ---
 title: infoBAG
 timezone: America/Sao_Paulo
-repository: marioseixas/marioseixas.github.io
-name:                infoBAG
-url:                 https://ib.bsb.br
-enforce_ssl:         ib.bsb.br
-baseurl:             ""
 collections:
   posts:
     title: Posts
@@ -13,21 +8,26 @@ collections:
   uploads:
     title: Uploads
     output: true
+defaults:
+- scope:
+    path: "**/*"
+  values:
+    layout: default
+repository: marioseixas/marioseixas.github.io
+name: infoBAG
+url: https://ib.bsb.br
+enforce_ssl: ib.bsb.br
+baseurl: ''
 relative_permalinks: true
 plugins:
-  - jekyll-redirect-from
-  - jekyll-last-modified-at
-  - jekyll-sitemap
-  - jekyll-feed
+- jekyll-redirect-from
+- jekyll-last-modified-at
+- jekyll-sitemap
+- jekyll-feed
 sass:
-  sass_dir:          _sass
-  style:            :compressed
-defaults:
-  - scope:
-      path: "**/*"
-    values:
-      layout: "default"
+  sass_dir: _sass
+  style: :compressed
 menu:
-  home: /
-  tags: /tags/
+  home: "/"
+  tags: "/tags/"
 git_log: false
