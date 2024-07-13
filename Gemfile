@@ -1,7 +1,17 @@
 source "https://rubygems.org"
-   gem "github-pages", group: :jekyll_plugins
-   group :jekyll_plugins do
-     gem "jekyll-feed", "~> 0.6"
-     gem 'jekyll-last-modified-at'
-   end
-   gem "ffi", "< 1.17.0"
+
+# ruby file: ".ruby-version"
+ruby File.read(".ruby-version").strip
+
+# Jekyll and plugins
+gem "jekyll"
+
+group :jekyll_plugins do
+  gem "jekyll-last-modified-at"
+  gem "jekyll-feed"
+  gem "jekyll-sitemap"
+  gem "jekyll-seo-tag"
+end
+
+# Additional gems
+gem "ffi", "< 1.17.0"
