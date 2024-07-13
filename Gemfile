@@ -11,6 +11,7 @@ group :jekyll_plugins do
   gem "jekyll-feed"
   gem "jekyll-sitemap"
   gem "jekyll-seo-tag"
+  gem "kramdown-parser-gfm" # Added gem
 end
 
 # Additional gems
