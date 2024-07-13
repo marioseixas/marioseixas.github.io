@@ -1,17 +1,15 @@
 ---
+title: STF Scraper [script]
+date: 2024-05-01 00:00:00 -03:00
 categories:
-  - Code
+- Code
 tags:
-  - scripts
-  - estudos
-comment: 'https://github.com/mvdiogo/stf-web-scraper'
+- scripts
+- estudos
+comment: https://github.com/mvdiogo/stf-web-scraper
 info: aberto.
-date: '2024-05-01'
 type: post
 layout: post
-published: true
-slug: stf-scraper
-title: 'STF Scraper [script]'
 mermaid: true
 ---
 

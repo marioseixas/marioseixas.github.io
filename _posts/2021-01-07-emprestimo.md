@@ -1,19 +1,17 @@
 ---
+title: Como calcular prestação por meio de taxa de juros e período
+date: 2021-01-07 01:00:00 -02:00
 categories:
-  - Tutorial
+- Tutorial
 tags:
-  - despesas
+- despesas
 comment: 
 info: fechado.
-date: '2021-01-07'
 type: post
 layout: post
-published: true
 sha: 11fb16889e4b5881657f80154c69a191e5225a15
-slug: emprestimo
-title: 'Como calcular prestação por meio de taxa de juros e período'
-
 ---
+
 # CF = i/(1 - (1 + i)^(-n))
 
 Multiplicando o valor do financiamento pelo coeficiente de financiamento (CF), teremos o valor da prestação.

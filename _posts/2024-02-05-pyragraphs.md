@@ -1,17 +1,14 @@
 ---
+title: PYragraphs
+date: 2024-02-05 01:00:00 -02:00
 categories:
-  - Code
+- Code
 tags:
-  - scripts
-comment: 'https://www.textfixer.com/tools/convert-line-breaks.php'
+- scripts
+comment: https://www.textfixer.com/tools/convert-line-breaks.php
 info: fechado.
-date: '2024-02-05'
 type: post
 layout: post
-published: true
-slug: pyragraphs
-title: 'PYragraphs'
-
 ---
 
 ```

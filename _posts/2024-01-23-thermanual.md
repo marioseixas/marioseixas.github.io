@@ -1,17 +1,14 @@
 ---
+title: DP-Q803P thermal printer manual
+date: 2024-01-23 01:00:00 -02:00
 categories:
-  - Tutorial
+- Tutorial
 tags:
-  - linux
+- linux
 comment: http://dp-dapper.com/
 info: fechado.
-date: '2024-01-23'
 type: post
 layout: post
-published: true
-slug: thermanual
-title: 'DP-Q803P thermal printer manual'
-
 ---
 
 # Safety instructions

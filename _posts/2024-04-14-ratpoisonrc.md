@@ -1,17 +1,15 @@
 ---
+title: "/.ratpoisonrc"
+date: 2024-04-14 00:00:00 -03:00
 categories:
-  - Dotfiles
+- Dotfiles
 tags:
-  - linux
+- linux
 comment: 
 info: aberto.
-date: '2024-04-14'
 type: post
 layout: post
-published: true
 sha: 
-slug: ratpoisonrc
-title: /.ratpoisonrc
 ---
 
 ```

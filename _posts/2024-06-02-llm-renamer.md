@@ -1,18 +1,15 @@
 ---
+title: Rename files using llm.datasette.io
+date: 2024-06-02 00:00:00 -03:00
 categories:
-  - Code
+- Code
 tags:
-  - linux
-  - scripts
-comment: 'https://github.com/heversonbr/scientific-paper-pdf-rename'
+- linux
+- scripts
+comment: https://github.com/heversonbr/scientific-paper-pdf-rename
 info: aberto.
-date: '2024-06-02'
 type: post
 layout: post
-published: true
-slug: llm-renamer
-title: 'Rename files using llm.datasette.io'
-
 ---
 
 Fork of https://github.com/heversonbr/scientific-paper-pdf-rename

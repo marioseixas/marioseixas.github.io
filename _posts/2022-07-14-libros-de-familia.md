@@ -1,18 +1,15 @@
 ---
+title: libros familiares
+date: 2022-07-14 00:00:00 -03:00
 categories:
-  - Familia
+- Familia
 tags:
-  - ler
+- ler
 comment: 
 info: aberto.
-date: '2022-07-14'
 type: post
 layout: post
-published: true
 sha: 
-slug: libros-de-familia
-title: 'libros familiares'
-
 ---
 
 Gary Ezzo books

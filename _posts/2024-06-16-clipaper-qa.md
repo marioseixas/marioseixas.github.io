@@ -1,18 +1,15 @@
 ---
+title: cliPaperQA
+date: 2024-06-16 00:00:00 -03:00
 categories:
-  - Code
+- Code
 tags:
-  - linux
-  - scripts
-comment: 'https://github.com/whitead/paper-qa'
+- linux
+- scripts
+comment: https://github.com/whitead/paper-qa
 info: aberto.
-date: '2024-06-16'
 type: post
 layout: post
-published: true
-slug: clipaper-qa
-title: 'cliPaperQA'
-
 ---
 
 # PaperQA CLI Script Documentation

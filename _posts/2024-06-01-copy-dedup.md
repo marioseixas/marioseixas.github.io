@@ -1,18 +1,15 @@
 ---
+title: '"Copy Spotter" and Deduplication'
+date: 2024-06-01 00:00:00 -03:00
 categories:
-  - Code
+- Code
 tags:
-  - linux
-  - scripts
-comment: 'https://github.com/Wazzabeee/copy-spotter'
+- linux
+- scripts
+comment: https://github.com/Wazzabeee/copy-spotter
 info: aberto.
-date: '2024-06-01'
 type: post
 layout: post
-published: true
-slug: copy-dedup
-title: '"Copy Spotter" and Deduplication'
-
 ---
 
 # Duplicate-File-Remover

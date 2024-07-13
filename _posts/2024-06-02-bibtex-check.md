@@ -1,18 +1,15 @@
 ---
+title: Python script to check LaTeX citations
+date: 2024-06-02 00:00:00 -03:00
 categories:
-  - Code
+- Code
 tags:
-  - linux
-  - scripts
-comment: 'https://github.com/BatchClayderman/checkCite'
+- linux
+- scripts
+comment: https://github.com/BatchClayderman/checkCite
 info: aberto.
-date: '2024-06-02'
 type: post
 layout: post
-published: true
-slug: bibtex-check
-title: 'Python script to check LaTeX citations'
-
 ---
 
 ```

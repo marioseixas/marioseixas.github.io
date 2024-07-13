@@ -1,18 +1,15 @@
 ---
+title: Packages list script
+date: 2023-12-24 01:00:00 -02:00
 categories:
-  - Dotfiles
+- Dotfiles
 tags:
-  - linux
-  - scripts
+- linux
+- scripts
 comment: 
 info: fechado.
-date: '2023-12-24'
 type: post
 layout: post
-published: true
-slug: dpkg-script
-title: 'Packages list script'
-
 ---
 
 ```

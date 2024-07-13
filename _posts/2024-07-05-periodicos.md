@@ -1,19 +1,16 @@
 ---
-categories: []
+title: Periódicos para publicar artigos
+date: 2024-07-05 00:00:00 -03:00
 tags:
-  - estudos
-  - trabalho
-comment: 'https://direito.jatai.ufg.br/'
+- estudos
+- trabalho
+comment: https://direito.jatai.ufg.br/
 info: closed.
-date: '2024-07-05'
 type: post
 layout: post
-published: true
 sha: 
-slug: periodicos
-title: 'Periódicos para publicar artigos'
-
 ---
+
 anpad.org.br
 
 blucher.com.br

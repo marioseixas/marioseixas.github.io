@@ -1,17 +1,14 @@
 ---
+title: tampermonkey dify hit-testing [script]
+date: 2024-02-18 00:00:00 -03:00
 categories:
-  - Code
+- Code
 tags:
-  - scripts
-comment: 'https://cloud.dify.ai/'
+- scripts
+comment: https://cloud.dify.ai/
 info: fechado.
-date: '2024-02-18'
 type: post
 layout: post
-published: true
-slug: tampermonkey-dify
-title: 'tampermonkey dify hit-testing [script]'
-
 ---
 
 ```

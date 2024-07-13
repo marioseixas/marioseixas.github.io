@@ -1,18 +1,15 @@
 ---
+title: Installation of ratpoison in debian/ubuntu
+date: 2023-11-10 01:00:00 -02:00
 categories:
-  - Tutorial
+- Tutorial
 tags:
-  - linux
+- linux
 comment: 
 info: aberto.
-date: '2023-11-10'
 type: post
 layout: post
-published: true
 sha: 
-slug: ratpoison
-title: 'Installation of ratpoison in debian/ubuntu'
-
 ---
 
 How to make Ratpoison your only window manager:

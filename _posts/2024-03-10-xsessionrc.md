@@ -1,18 +1,15 @@
 ---
+title: "/root/.xsessionrc"
+date: 2024-03-10 00:00:00 -03:00
 categories:
-  - Dotfiles
+- Dotfiles
 tags:
-  - linux
+- linux
 comment: 
 info: aberto.
-date: '2024-03-10'
 type: post
 layout: post
-published: true
 sha: 
-slug: xsessionrc
-title: /root/.xsessionrc
-
 ---
 
 ```

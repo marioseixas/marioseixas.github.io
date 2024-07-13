@@ -1,19 +1,17 @@
 ---
+title: Estados que exigem atividade policial para DELTA
+date: 2022-06-07 00:00:00 -03:00
 categories:
-  - Δ24
+- Δ24
 tags:
-  - edital
+- edital
 comment: blog.supremotv.com.br/quais-estados-exigem-pratica-para-o-cargo-de-delegado/
 info: aberto.
-date: '2022-06-07'
 type: post
 layout: post
-published: true
 sha: 894336db669ff55f32b1cf5fe7a0e5eca5f1a728
-slug: atividade-policial
-title: 'Estados que exigem atividade policial para DELTA'
-
 ---
+
 - **Amazonas**
   - Lei 2.875/2004
 - **Acre**

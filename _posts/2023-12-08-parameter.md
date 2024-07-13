@@ -1,18 +1,15 @@
 ---
+title: parameter.txt
+date: 2023-12-08 01:00:00 -02:00
 categories:
-  - Dotfiles
+- Dotfiles
 tags:
-  - linux
+- linux
 comment: 
 info: fechado.
-date: '2023-12-08'
 type: post
 layout: post
-published: true
 sha: 
-slug: parameter
-title: 'parameter.txt'
-
 ---
 
 ```

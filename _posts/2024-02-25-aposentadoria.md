@@ -1,17 +1,14 @@
 ---
+title: QRU Aposentadoria
+date: 2024-02-25 00:00:00 -03:00
 categories:
-  - Stuff
+- Stuff
 tags:
-  - trabalho
-comment: 'https://www.youtube.com/watch?v=5lKG2NpTta8'
+- trabalho
+comment: https://www.youtube.com/watch?v=5lKG2NpTta8
 info: aberto.
-date: '2024-02-25'
 type: post
 layout: post
-published: true
-slug: aposentadoria
-title: 'QRU Aposentadoria'
-
 ---
 
 E assim ficou pronto o nosso vídeo de hoje, espero que tenham gostado. Se inscrevam no nosso canal e ativem o sininho para receber as notificações de todos os novos vídeos. O vídeo de hoje, R-19, trata sobre a paridade e a integralidade pelo STF, um julgamento de uma ação que questionava uma modificação legislativa no estado de São Paulo, mas que teve repercussão e garantiu a integralidade e a paridade a todos os policiais civis do país, incluindo também os policiais civis da União, Polícia Federal, PRF e Polícia Penal Federal, reconhecendo esse direito a partir de novembro de 2019. Marcelo, que esteve nas gestões anteriores na federação, compartilha um pouco do histórico dessa batalha, destacando a luta pela recepção da lei complementar 51, que garantia o direito à aposentadoria policial com integralidade e paridade, enfrentada tanto na esfera judicial quanto no TCU. Através de um trabalho conjunto com o Congresso Nacional e membros do governo da época, foi possível resgatar o direito à integralidade e paridade perdido a partir de fevereiro de 2013, garantindo hoje, aos policiais rodoviários federais, policiais federais e policiais penais federais, a aposentadoria com integralidade e qualidade, firmada pelo parecer número 4 de 2020.

@@ -1,19 +1,17 @@
 ---
+title: streaming
+date: 2022-03-16 00:00:00 -03:00
 categories:
-  - Stuff
+- Stuff
 tags:
-  - assistir
+- assistir
 comment: justwatch.com/br
 info: aberto.
-date: '2022-03-16'
 type: post
 layout: post
-published: true
-sha:
-slug: streaming
-title: streaming
-
+sha: 
 ---
+
 # NETFLIX
 9,2 AVATAR: anime
 

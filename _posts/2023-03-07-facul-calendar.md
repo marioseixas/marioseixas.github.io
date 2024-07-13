@@ -1,19 +1,17 @@
 ---
+title: Calendário Acadêmico
+date: 2023-03-07 00:00:00 -03:00
 categories:
-  - Δ24
+- Δ24
 tags:
-  - estudos
+- estudos
 comment: 
 info: aberto.
-date: '2023-03-07'
 type: post
 layout: post
-published: true
 sha: 
-slug: facul-calendar
-title: 'Calendário Acadêmico'
-
 ---
+
 **2022.2** (09/01/23 - 13/05/23)
 - Direito Civil V
 - Direito Administrativo II

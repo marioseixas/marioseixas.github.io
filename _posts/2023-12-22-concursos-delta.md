@@ -1,18 +1,15 @@
 ---
+title: Concursos DELTA iminentes
+date: 2023-12-22 01:00:00 -02:00
 categories:
-  - Δ24
+- Δ24
 tags:
-  - edital
+- edital
 comment: 
 info: aberto.
-date: '2023-12-22'
 type: post
 layout: post
-published: true
 sha: 
-slug: concursos-delta
-title: 'Concursos DELTA iminentes'
-
 ---
 
 | **Último Edital** | **UF** |

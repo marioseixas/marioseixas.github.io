@@ -1,16 +1,14 @@
 ---
+title: Eisenhower Matrix
+date: 2024-04-12 00:00:00 -03:00
 categories:
-  - Tutorial
+- Tutorial
 tags:
-  - tasks
-comment: 'https://eisenhower-todo-list.fly.dev/'
+- tasks
+comment: https://eisenhower-todo-list.fly.dev/
 info: fechado.
-date: '2024-04-12'
 type: post
 layout: post
-published: true
-slug: eisenhower
-title: 'Eisenhower Matrix'
 mermaid: true
 ---
 

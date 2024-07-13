@@ -1,17 +1,15 @@
 ---
+title: default [prompt]
+date: 2023-11-05 01:00:00 -02:00
 categories:
-  - GPT
+- GPT
 tags:
-  - prompt
+- prompt
 comment: 
 info: aberto.
-date: '2023-11-05'
 type: post
 layout: post
-published: true
 sha: 
-slug: default-prompt
-title: default [prompt]
 ---
 
 ```

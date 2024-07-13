@@ -1,6 +1,7 @@
 ---
-layout: null
+layout: 
 ---
+
 {% assign posts = site.posts %}
 {
     "version": "https://jsonfeed.org/version/1",

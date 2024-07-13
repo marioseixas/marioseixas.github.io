@@ -1,17 +1,14 @@
 ---
+title: Alternative option to upload a file to GitHub without cloning the entire repository
+date: 2023-12-24 01:00:00 -02:00
 categories:
-  - Tutorial
+- Tutorial
 tags:
-  - linux
+- linux
 comment: 
 info: aberto.
-date: '2023-12-24'
 type: post
 layout: post
-published: true
-slug: git-sparse-checkout
-title: 'Alternative option to upload a file to GitHub without cloning the entire repository'
-
 ---
 
 1. **Initialize an empty Git repository**:

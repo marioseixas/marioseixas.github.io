@@ -1,16 +1,14 @@
 ---
+title: Tasks [mermaid]
+date: 2024-05-21 00:00:00 -03:00
 categories:
-  - Stuff
+- Stuff
 tags:
-  - tasks
+- tasks
 comment: 
 info: aberto.
-date: '2024-05-21'
 type: post
 layout: post
-published: true
-slug: tasks-mermaid
-title: 'Tasks [mermaid]'
 mermaid: true
 ---
 

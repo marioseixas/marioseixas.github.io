@@ -1,14 +1,12 @@
 ---
+title: Deep Chat OpenAI
+date: 2024-03-17 00:00:00 -03:00
 tags:
-  - AI
-comment: "https://github.com/OvidijusParsiunas/deep-chat/issues/53"
-info: "aberto."
-date: '2024-03-17'
+- AI
+comment: https://github.com/OvidijusParsiunas/deep-chat/issues/53
+info: aberto.
 type: post
 layout: post
-published: true
-slug: deepchat-openai
-title: 'Deep Chat OpenAI'
 mermaid: true
 ---
 

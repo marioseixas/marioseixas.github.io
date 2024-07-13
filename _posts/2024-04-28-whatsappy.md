@@ -1,17 +1,14 @@
 ---
+title: WhatsapPY data
+date: 2024-04-28 00:00:00 -03:00
 categories:
-  - Code
+- Code
 tags:
-  - scripts
-comment: 'https://github.com/chris18369/Whatsappdata'
+- scripts
+comment: https://github.com/chris18369/Whatsappdata
 info: aberto.
-date: '2024-04-28'
 type: post
 layout: post
-published: true
-slug: whatsappy
-title: 'WhatsapPY data'
-
 ---
 
 ```

@@ -1,18 +1,15 @@
 ---
+title: Your Life in Tokens
+date: 2024-06-22 00:00:00 -03:00
 categories:
-  - Stuff
+- Stuff
 tags:
-  - admoestação
+- admoestação
 comment: https://threadreaderapp.com/thread/1803522711236256254.html
 info: fechado.
-date: '2024-06-22'
 type: post
 layout: post
-published: true
 sha: 
-slug: life-tokens
-title: 'Your Life in Tokens'
-
 ---
 
 by @punk6529

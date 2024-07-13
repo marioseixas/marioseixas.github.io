@@ -1,19 +1,17 @@
 ---
+title: OpenAI Token Limits
+date: 2023-03-10 00:00:00 -03:00
 categories:
-  - Tutorial
+- Tutorial
 tags:
-  - AI
+- AI
 comment: github.com/Ighina/DeepTiling
 info: aberto.
-date: '2023-03-10'
 type: post
 layout: post
-published: true
 sha: 
-slug: openai-token-limits
-title: 'OpenAI Token Limits'
-
 ---
+
 How to Get Around OpenAI GPT-3 Token Limits
 Python Developer’s Guide to OpenAI GPT-3 API
 UPDATED: The article includes the ChatGPT API option (model=”gpt-3.5-turbo”).

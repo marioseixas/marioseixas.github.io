@@ -1,16 +1,14 @@
 ---
+title: Ordenamento Jurídico Brasileiro [redução eidética]
+date: 2024-04-17 00:00:00 -03:00
 categories:
-  - Δ24
+- Δ24
 tags:
-  - estudos
+- estudos
 comment: 
 info: aberto.
-date: '2024-04-17'
 type: post
 layout: post
-published: true
-slug: ordenamento
-title: 'Ordenamento Jurídico Brasileiro [redução eidética]'
 mermaid: true
 ---
 
