@@ -13,6 +13,7 @@ plugins:
   - jekyll-sitemap
   - jekyll-feed
   - jekyll-seo-tag
+  - cusdis-comments
 
 sass:
   sass_dir: _sass
