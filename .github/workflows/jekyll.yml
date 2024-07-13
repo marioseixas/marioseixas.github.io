@@ -28,10 +28,9 @@ jobs:
         uses: actions/configure-pages@v5
       - name: Build with Jekyll
         env:
-          PAGES_REPO_NWO: marioseixas/marioseixas.github.io      
+          PAGES_REPO_NWO: marioseixas/marioseixas.github.io
+          JEKYLL_ENV: production      
         run: bundle exec jekyll build --destination _site
-        env:
-          JEKYLL_ENV: production
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
   deploy:
