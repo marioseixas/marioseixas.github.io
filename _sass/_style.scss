@@ -191,11 +191,11 @@ blockquote {
   padding-left: 1em;
   margin-left: 0;
   border-left: 5px solid #ddd;
-  color: #666;
+  color: #ffffff;
 }
 /* Softer selection color that works over text and links without the color inversion effect */
 ::selection {
-  background-color: #def;
+  background-color: #666;
 }
 /* Font and color adjustments inspired by the 2007 version of Tibia */
 body {
