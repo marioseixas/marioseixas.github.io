@@ -27,7 +27,10 @@ def generate_tag_pages(posts):
         with open(f'tags/{tag}.html', 'w') as file:
             file.write(f'---\nlayout: tag\ntag: {tag}\n---\n')
             for post in posts:
-                file.write(f'- [{post["title"]}]({post["slug"]})\n')
+                # Generate URL based on filename and permalink structure
+                filename = os.path.basename(post['filename'])
+                post_url = f'/{filename.replace(".md", "")}/'
+                file.write(f'- [{post["title"]}]({post_url})\n')
 
 def main():
     posts = get_posts()
