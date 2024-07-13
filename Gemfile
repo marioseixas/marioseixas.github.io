@@ -4,3 +4,4 @@ source "https://rubygems.org"
      gem "jekyll-feed", "~> 0.6"
      gem 'jekyll-last-modified-at'
    end
+   gem "ffi", "< 1.17.0"
