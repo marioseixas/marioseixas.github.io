@@ -50,4 +50,4 @@ jobs:
           git add .
           git diff --quiet && git diff --staged --quiet || (git commit -m 'Automated tag pages update' && git push)
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.GITHUB_TOKEN }}
