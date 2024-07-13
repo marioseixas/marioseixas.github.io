@@ -57,7 +57,7 @@ module Jekyll
           puts "DEBUG: Comment object: #{comment.inspect}" # Debug statement
           html += <<-HTML
             <div class="comment" style="margin-left: #{depth * 20}px;">
-              <p><strong>#{comment['by']}</strong> - #{comment['created_at']}</p>
+              <p><strong>#{comment['by_nickname']}</strong> - #{comment['page_title']}</p>
               <p>#{comment['content']}</p>
               #{render_comment_list(comment['replies'], depth + 1) if comment['replies']}
             </div>
