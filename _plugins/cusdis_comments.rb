@@ -52,6 +52,7 @@ module Jekyll
     def render_comment_list(comments, depth = 0)
       html = ""
       comments.each do |comment|
+        puts "DEBUG: Comment object: #{comment.inspect}" # Debug statement
         html += <<-HTML
           <div class="comment" style="margin-left: #{depth * 20}px;">
             <p><strong>#{comment['by']}</strong> - #{comment['created_at']}</p>
