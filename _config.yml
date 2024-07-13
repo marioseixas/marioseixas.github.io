@@ -13,8 +13,7 @@ collections:
   uploads:
     title: Uploads
     output: true
-permalink:           :slug
-relative_permalinks: false
+relative_permalinks: true
 plugins:
   - jekyll-redirect-from
   - jekyll-last-modified-at
