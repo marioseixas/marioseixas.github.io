@@ -32,20 +32,28 @@ layout: default
             {{ page.date | date_to_string }} &nbsp;~&gt; {{ page.last_modified_at | date_to_string }} &nbsp;&middot;
             {% assign created_date = page.date | date: "%Y-%m-%d" %}
             {% assign modified_date = page.last_modified_at | date: "%Y-%m-%d" %}
-          </time>
-        </span>
+          </time>        
       {% if page.tags %}
-      <a class="tags">Tags: </a>
-      {% for tag in page.tags %}
-      <a class="tag">{{ tag }}</a>
-      {% unless forloop.last %} {% endunless %}
-      {% endfor %}
-      {% endif %} &nbsp;&middot; {% if page.info %}
-        <a class="info">
-          {{ page.info }}
-        </a>
-        {% endif %}
-        <a href="https://github.com/marioseixas/marioseixas.github.io/edit/main/{{ page.path }}" target="_blank">Improve this</a> &nbsp; <a href="https://github.com/marioseixas/marioseixas.github.io/commits/main/{{ page.path }}" target="_blank">Revision history</a>
+      <a class="tags">
+        {% for tag in page.tags %}
+        Tags: {{ tag }} &nbsp;&middot;
+      </a>
+          {% unless forloop.last %}
+          {% endunless %}
+          {% endfor %}
+          {% endif %}
+          {% if page.info %}
+          <a class="info">
+            Edit: {{ page.info }} &nbsp;&middot;
+          </a>
+          {% endif %}
+          <a href="https://github.com/marioseixas/marioseixas.github.io/edit/main/{{ page.path }}" target="_blank">
+            Improve this
+          </a> &nbsp;&middot;
+          <a href="https://github.com/marioseixas/marioseixas.github.io/commits/main/{{ page.path }}" target="_blank">
+            Revision history
+          </a>
+        </span>
       </div>
     </div>
     <script src="{{ '/copy-to-clipboard.js' | relative_url }}" defer></script>
