@@ -14,7 +14,7 @@ layout: default
     color: #E74C3C;
   }
   .post-heading .tag {
-    color: #2c2c2c;
+    color: #E74C3C;
   }
   .post-heading .info {
     color: #000000;
@@ -40,12 +40,11 @@ layout: default
       <a class="tag">{{ tag }}</a>
       {% unless forloop.last %} {% endunless %}
       {% endfor %}
-      {% endif %}
-      {% if page.info %}
-      <a class="info">
-        {{ page.info }}
-      </a>
-      {% endif %}
+      {% endif %} &nbsp;&middot; {% if page.info %}
+        <a class="info">
+          {{ page.info }}
+        </a>
+        {% endif %}
         <a href="https://github.com/marioseixas/marioseixas.github.io/edit/main/{{ page.path }}" target="_blank">Improve this</a> &nbsp; <a href="https://github.com/marioseixas/marioseixas.github.io/commits/main/{{ page.path }}" target="_blank">Revision history</a>
       </div>
     </div>
