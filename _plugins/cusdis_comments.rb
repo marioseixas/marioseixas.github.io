@@ -50,7 +50,7 @@ module Jekyll
 
     def render_comment_list(comments, depth = 0)
       comments.map do |comment|
-        if comment.is_a?(Hash) && comment.key?('by_nickname') && comment.key?('content')
+        if valid_comment_structure?(comment)
           <<-HTML
             <div class="comment" style="margin-left: #{depth * 20}px;">
               <p><strong>#{comment['by_nickname']}</strong></p>
@@ -63,6 +63,10 @@ module Jekyll
           ""
         end
       end.join
+    end
+
+    def valid_comment_structure?(comment)
+      comment.is_a?(Hash) && comment.key?('by_nickname') && comment.key?('content')
     end
   end
 end
