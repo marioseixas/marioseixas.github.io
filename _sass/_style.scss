@@ -129,89 +129,148 @@ img[align="right"] {
 img[align="left"] {
   margin-right: 1em;
 }
-/* Figure captions */
+/* _style.scss - Comprehensive Color Harmonization Update */
+
+/* Color Palette (from Color Set 5)
+ * Background: #2C2C2C (Dark Charcoal)
+ * Text: #FFFFFF (White)
+ * Headings: #F39C12 (Orange)
+ * Links: #2ECC71 (Emerald)
+ * Accents: #3498DB (DodgerBlue), #9B59B6 (Amethyst), #1ABC9C (Turquoise)
+ * Highlights: #E74C3C (Crimson), #D35400 (Pumpkin)
+ */
+
+/* Base Styles */
+body {
+  font-family: 'BitPotionExt', sans-serif;
+  background-color: #2C2C2C;
+  color: #FFFFFF;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  color: #F39C12;
+}
+
+a {
+  color: #2ECC71;
+  transition: color 0.3s ease;
+  
+  &:visited {
+    color: #1ABC9C;
+  }
+  
+  &:hover, &:focus {
+    color: #3498DB;
+  }
+}
+
+/* Figure Captions */
 figcaption {
   font: caption;
-  color: #777;
-  font-size: 75% !important;
+  color: #9B59B6;
+  font-size: 75%;
 }
-/* Prevent blowing up SVG images that are meant to be small */
-*[class*="social"] svg, *[class*="icon"] svg, svg[class*="icon"], img[class*="emoji"][src$=".svg"] {
+
+/* SVG and Image Constraints */
+*[class*="social"] svg, 
+*[class*="icon"] svg, 
+svg[class*="icon"], 
+img[class*="emoji"][src$=".svg"] {
   max-height: 30px;
 }
-*[class*="logo" i] svg, *[id*="logo" i] svg {
+
+*[class*="logo" i] svg, 
+*[id*="logo" i] svg {
   max-width: 100px;
 }
-/* Additional adjustments                                                                                             */
+
+/* Comment Box */
 .comment-box {
-  font-family: 'BitPotionExt';
+  font-family: 'BitPotionExt', sans-serif;
   font-size: clamp(1rem, calc(13px + 0.5vw), 1.2rem);
-  margin-top: 1.25rem; // 20px
-  margin-bottom: 0.625rem; // 10px
-  line-height: 1.25rem; // 20px
-  border: 1px dotted #ddd;
-  padding: 0.3125rem 1.25rem; // 5px 20px
-  border-radius: 0.1875rem; // 3px
-  color: #ffffff;
+  margin: 1.25rem 0 0.625rem;
+  line-height: 1.25;
+  border: 1px dotted #3498DB;
+  padding: 0.3125rem 1.25rem;
+  border-radius: 0.1875rem;
+  color: #FFFFFF;
+  background-color: rgba(52, 152, 219, 0.1); // Slight blue tint for depth
+  
   @media (max-width: 768px) {
     font-size: clamp(0.9rem, calc(12px + 0.5vw), 1.1rem);
-    padding: 0.25rem 1rem; // 4px 16px
+    padding: 0.25rem 1rem;
   }
+  
   @media (max-width: 480px) {
     font-size: clamp(0.8rem, calc(11px + 0.5vw), 1rem);
-    padding: 0.2rem 0.8rem; // 3px 12.8px
+    padding: 0.2rem 0.8rem;
   }
 }
+
+/* Search Link */
 .search-link {
   display: inline-block;
-  float: center;
-  font-family: 'BitPotionExt';
-  font-size: clamp(2rem, calc(24px + 1vw), 3rem); // Adjusted for responsiveness
-  // Incorporating styles from .comment-box
-  border: 1px dotted #dddddd;
-  border-radius: 0.1875rem; // 3px
-  color: #ffffff;
+  font-family: 'BitPotionExt', sans-serif;
+  font-size: clamp(2rem, calc(24px + 1vw), 3rem);
+  border: 1px dotted #3498DB;
+  border-radius: 0.1875rem;
+  color: #FFFFFF;
+  background-color: rgba(52, 152, 219, 0.1); // Slight blue tint for depth
+  padding: 0.5em;
+  transition: all 0.3s ease;
+  
+  &:hover, &:focus {
+    background-color: rgba(52, 152, 219, 0.2);
+    transform: scale(1.05);
+  }
+
   @media (max-width: 768px) {
     font-size: clamp(1.8rem, calc(22px + 1vw), 2.5rem);
     padding: 0.4em;
   }
+  
   @media (max-width: 480px) {
     font-size: clamp(1.5rem, calc(20px + 1vw), 2rem);
     padding: 0.3em;
   }
 }
-/* Softer link colors than the browser defaults */
-a[href] {
-  color: RoyalBlue;
-}
-a[href]:visited {
-  color: BlueViolet;
-}
+
+/* Blockquotes */
 blockquote {
   padding-left: 1em;
   margin-left: 0;
-  border-left: 5px solid #ddd;
-  color: #ffffff;
+  border-left: 5px solid #3498DB;
+  color: #FFFFFF;
+  background-color: rgba(52, 152, 219, 0.1); // Slight blue tint for depth
 }
-/* Softer selection color that works over text and links without the color inversion effect */
+
+/* Text Selection */
 ::selection {
-  background-color: #666;
+  background-color: #34495E;
+  color: #FFFFFF;
 }
-/* Font and color adjustments inspired by the 2007 version of Tibia */
-body {
-  font-family: 'BitPotionExt';
-  background-color: #EEEEEE; /* Dark background similar to Tibia's UI */
-  color: #2c2c2c; /* White text for readability */
+
+/* Accessibility Enhancements */
+.visually-hidden {
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
+  white-space: nowrap;
 }
-h1, h2, h3, h4, h5, h6 {
-  color: #FFD700; /* Gold color for headings, inspired by Tibia's chat colors */
-}
-a {
-  color: #00FF00; /* Green color for links, similar to player names in Tibia */
-}
-a:visited {
-  color: #ADFF2F; /* Light green for visited links */
-}
-a:hover {
-  color: #32CD32; /* Lime green for hovered links */
+
+/* Print Styles */
+@media print {
+  body {
+    background-color: #FFFFFF;
+    color: #000000;
+  }
+  
+  a {
+    color: #2ECC71 !important;
+    text-decoration: underline;
+  }
 }
