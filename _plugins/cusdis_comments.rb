@@ -23,8 +23,7 @@ module Jekyll
 
       if response.is_a?(Net::HTTPSuccess)
         data = JSON.parse(response.body)
-        comments = data['data'] || []
-        render_comments(comments, app_id, page_id, page_url, page_title)
+        render_comments(data, app_id, page_id, page_url, page_title)
       else
         "<!-- Failed to load comments: #{response.message} -->"
       end
@@ -32,7 +31,8 @@ module Jekyll
 
     private
 
-    def render_comments(comments, app_id, page_id, page_url, page_title)
+    def render_comments(data, app_id, page_id, page_url, page_title)
+      comments = data['data'] || []
       <<-HTML
         <div id="cusdis_thread"
           data-host="https://cusdis.com"
@@ -41,32 +41,24 @@ module Jekyll
           data-page-url="#{page_url}"
           data-page-title="#{page_title}"
         >
-          <h3>Comments</h3>
+          <h3>Comments (#{comments.length})</h3>
           #{render_comment_list(comments)}
         </div>
         <script async defer src="https://cusdis.com/js/cusdis.es.js"></script>
       HTML
     end
 
-    def render_comment_list(comments, depth = 0)
+    def render_comment_list(comments)
       comments.map do |comment|
-        if valid_comment_structure?(comment)
-          <<-HTML
-            <div class="comment" style="margin-left: #{depth * 20}px;">
-              <p><strong>#{comment['by_nickname']}</strong></p>
-              <p>#{comment['content']}</p>
-              #{render_comment_list(comment['replies'] || [], depth + 1)}
-            </div>
-          HTML
-        else
-          puts "DEBUG: Unexpected comment structure: #{comment.inspect}"
-          ""
-        end
+        <<-HTML
+          <div class="comment">
+            <p><strong>#{comment['by_nickname']}</strong></p>
+            <p>#{comment['content']}</p>
+            <p>Page: #{comment['page_title'] || 'Untitled'}</p>
+            <p>Project: #{comment['project_title']}</p>
+          </div>
+        HTML
       end.join
-    end
-
-    def valid_comment_structure?(comment)
-      comment.is_a?(Hash) && comment.key?('by_nickname') && comment.key?('content')
     end
   end
 end
