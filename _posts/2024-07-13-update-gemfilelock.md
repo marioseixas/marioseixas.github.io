@@ -9,9 +9,10 @@ type: post
 layout: post
 ---
 
-Github Actions workflow to ensure the new gems are installed and locked in Gemfile.lock:
+Github Actions workflow to ensure the new gems are installed and locked in Gemfile.lock
 
-```.github/workflows/update_gemfile_lock.yml
+`.github/workflows/update_gemfile_lock.yml`:
+```
 name: Update Gemfile.lock
 
 on:
@@ -49,5 +50,5 @@ jobs:
           git commit -m 'Update Gemfile.lock'
           git push
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.GITHUB_TOKEN }}
 ```
