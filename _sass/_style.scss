@@ -1,6 +1,38 @@
-/* ------------------------------------------------------------------------------------------------------------------ */
-/* Layout engine improvements                                                                                         */
-/* ------------------------------------------------------------------------------------------------------------------ */
+/* Color Palette (from Color Set 5)
+ * Background: #2C2C2C (Dark Charcoal)
+ * Text: #FFFFFF (White)
+ * Headings: #F39C12 (Orange)
+ * Links: #2ECC71 (Emerald)
+ * Accents: #3498DB (DodgerBlue), #9B59B6 (Amethyst), #1ABC9C (Turquoise)
+ * Highlights: #E74C3C (Crimson), #D35400 (Pumpkin)
+ */
+
+/* Base Styles */
+body {
+  font-family: 'BitPotionExt';
+  background-color: #2C2C2C;
+  color: #FFFFFF;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  color: #F39C12;
+}
+
+a {
+  color: #2ECC71;
+  transition: color 0.3s ease;
+  
+  &:visited {
+    color: #1ABC9C;
+  }
+  
+  &:hover, &:focus {
+    color: #3498DB;
+  }
+}
+
+/* Layout engine improvements */
 /* Make HTML more responsive (adapted from https://github.com/mrmrs/fluidity) */
 img, canvas, iframe, video, svg, select, textarea {
   max-width: 100%;
@@ -16,7 +48,7 @@ html {
 *, *::before, *::after {
   box-sizing: inherit;
 }
-/* Improved typography and prose readability                                                                          */
+/* Improved typography and prose readability */
 /* Size text according to screen width (adapted from https://css-tricks.com/molten-leading-css/) */
 /* Min size: 1rem (16px), max size: 1.2rem (19.2px); dynamic size applies between 600px and 1240px. */
 html {
@@ -40,34 +72,34 @@ h1, h2, h3, h4, h5, h6 {
 }
 /* Improved contrast (adapted from https://jgthms.com/web-design-in-4-minutes/#color-contrast) */
 body {
-  color: #333;
+  color: #FFFFFF;
 }
 :not(a[href]) b, :not(a[href]) strong, th {
-  color: #222;
+  color: #E74C3C;
 }
 /* Logarithmic size scale for headings (see https://github.com/waldyrious/downstyler/issues/30) */
 h1 {
-  color: #111;
+  color: #F39C12;
   font-size: 200%; /* 2^(6/6) */
 }
 h2 {
-  color: #222;
+  color: #F39C12;
   font-size: 178.18%; /* 2^(5/6) */
 }
 h3 {
-  color: #333;
+  color: #F39C12;
   font-size: 158.74%; /* 2^(4/6) */
 }
 h4 {
-  color: #444;
+  color: #F39C12;
   font-size: 141.42%; /* 2^(3/6) */
 }
 h5 {
-  color: #555;
+  color: #F39C12;
   font-size: 125.99%; /* 2^(2/6) */
 }
 h6 {
-  color: #666;
+  color: #F39C12;
   font-size: 112.25%; /* 2^(1/6) */
 }
 /* Use nicer serif fonts, if available */
@@ -108,7 +140,7 @@ th, thead, tfoot {
     font-size: 20px; /* Adjust font size for even larger screens */
   }
 }
-/* Forms and form inputs (work in progress, see https://github.com/waldyrious/downstyler/issues/5)                    */
+/* Forms and form inputs (work in progress, see https://github.com/waldyrious/downstyler/issues/5) */
 textarea {
   display: block;
   width: 100%;
@@ -121,48 +153,13 @@ input, textarea, select, button {
 select[size]:not([size="1"]) {
   vertical-align: top;
 }
-/* Images and figures                                                                                                 */
+/* Images and figures */
 /* Add margins to left- and right-aligned images (https://github.com/waldyrious/downstyler/issues/13) */
 img[align="right"] {
   margin-left: 1em;
 }
 img[align="left"] {
   margin-right: 1em;
-}
-/* _style.scss - Comprehensive Color Harmonization Update */
-
-/* Color Palette (from Color Set 5)
- * Background: #2C2C2C (Dark Charcoal)
- * Text: #FFFFFF (White)
- * Headings: #F39C12 (Orange)
- * Links: #2ECC71 (Emerald)
- * Accents: #3498DB (DodgerBlue), #9B59B6 (Amethyst), #1ABC9C (Turquoise)
- * Highlights: #E74C3C (Crimson), #D35400 (Pumpkin)
- */
-
-/* Base Styles */
-body {
-  font-family: 'BitPotionExt', sans-serif;
-  background-color: #2C2C2C;
-  color: #FFFFFF;
-}
-
-/* Typography */
-h1, h2, h3, h4, h5, h6 {
-  color: #F39C12;
-}
-
-a {
-  color: #2ECC71;
-  transition: color 0.3s ease;
-  
-  &:visited {
-    color: #1ABC9C;
-  }
-  
-  &:hover, &:focus {
-    color: #3498DB;
-  }
 }
 
 /* Figure Captions */
