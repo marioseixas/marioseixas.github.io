@@ -1,11 +1,11 @@
 {% comment %} tagcloud {% endcomment %}
-<ul class="tagcloud-list" style="display: flex; flex-wrap: wrap; list-style: none; padding: 0; font-family: 'BitPotionExt';">
+<ul class="tagcloud-list" style="list-style: none; padding: 0; font-family: 'BitPotionExt';">
   {% assign tags_list = site.tags | sort %}
   {% for tag in tags_list %}
     {% assign tag_name = tag[0] %}
     {% assign tag_count = tag[1].size %}
     {% assign tag_url = tag_name | slugify %}
-    <li class="tagcloud-item" style="margin: 0 10px 10px 0;">
+    <li class="tagcloud-item" style="margin-bottom: 10px;">
       <a href="/tags/{{ tag_url }}" class="tagcloud-link" style="color: #FFFFFF; text-decoration: none;">
         {{ tag_name }}
       </a>
