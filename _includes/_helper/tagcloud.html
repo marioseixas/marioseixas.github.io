@@ -1,15 +1,15 @@
 {% comment %} tagcloud {% endcomment %}
-<ul class="tagcloud-list" style="list-style: none; font-family: 'BitPotionExt'; font-size: 48px;">
+<ul class="tagcloud-list" style="display: flex; flex-direction: column; font-family: 'BitPotionExt';">
   {% assign tags_list = site.tags | sort %}
   {% for tag in tags_list %}
     {% assign tag_name = tag[0] %}
     {% assign tag_count = tag[1].size %}
     {% assign tag_url = tag_name | slugify %}
-  <li class="tagcloud-item" style="font-family: 'BitPotionExt'; font-size: 48px; display: inline-block; margin: 5px;">
-    <a class="tagcloud-link" style="font-family: 'BitPotionExt'; font-size: 48px; color: #33ccff; text-decoration: none;">
+  <li class="tagcloud-item" style="display: flex; flex-direction: column; font-family: 'BitPotionExt';">
+    <a class="tagcloud-link" style="display: flex; flex-direction: column; font-family: 'BitPotionExt'; color: #FFFFFF; text-decoration: none;">
       {{ tag_name }}
     </a>
-    <span class="tagcloud-count" style="font-family: 'BitPotionExt'; font-size: 48px; color: #33ccff;">({{ tag_count }})</span>
+    <span class="tagcloud-count" style="display: flex; flex-direction: column; font-family: 'BitPotionExt'; color: #000000;">({{ tag_count }})</span>
   </li>
   {% endfor %}
 </ul>
