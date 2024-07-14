@@ -33,7 +33,7 @@ module Jekyll
     private
 
     def render_comments(comments, app_id, page_id, page_url, page_title)
-      html = <<-HTML
+      <<-HTML
         <div id="cusdis_thread"
           data-host="https://cusdis.com"
           data-app-id="#{app_id}"
@@ -46,27 +46,23 @@ module Jekyll
         </div>
         <script async defer src="https://cusdis.com/js/cusdis.es.js"></script>
       HTML
-
-      html
     end
 
     def render_comment_list(comments, depth = 0)
-      html = ""
-      comments.each do |comment|
-        if comment.is_a?(Hash)
-          puts "DEBUG: Comment object: #{comment.inspect}" # Debug statement
-          html += <<-HTML
+      comments.map do |comment|
+        if comment.is_a?(Hash) && comment.key?('by_nickname') && comment.key?('content')
+          <<-HTML
             <div class="comment" style="margin-left: #{depth * 20}px;">
-              <p><strong>#{comment['by_nickname']}</strong> - #{comment['page_title']}</p>
+              <p><strong>#{comment['by_nickname']}</strong></p>
               <p>#{comment['content']}</p>
               #{render_comment_list(comment['replies'], depth + 1) if comment['replies']}
             </div>
           HTML
         else
           puts "DEBUG: Unexpected comment structure: #{comment.inspect}"
+          ""
         end
-      end
-      html
+      end.join
     end
   end
 end
