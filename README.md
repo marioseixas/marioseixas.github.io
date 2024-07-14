@@ -7,10 +7,6 @@
 <body>
   <main>
   <section>
-    <div style="text-align: center;">
-      <a class="search-link" href="https://github.com/search?q=repo%3Amarioseixas%2Fmarioseixas.github.io">SEARCH</a>
-      <a class="search-link" href="https://ib.bsb.br/tags">TAGS</a>
-    </div>
     {% for post in site.posts %}
         <article>
             <time datetime="{{ post.date | date: "%Y-%m-%d" }}" style="color: #16A085;">
