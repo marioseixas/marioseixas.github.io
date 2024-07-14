@@ -3,17 +3,17 @@ layout: default
 ---
 
 {% comment %} tagcloud {% endcomment %}
-<ul class="tagcloud-list" style="list-style: none; padding: 0; font-family: 'BitPotionExt';">
+<ul class="tagcloud-list" style="list-style: none; padding: 0; font-family: 'BitPotionExt'; display: flex; flex-direction: column;">
   {% assign tags_list = site.tags | sort %}
   {% for tag in tags_list %}
-  <li class="tagcloud-item" style="margin-bottom: 10px;">
     {% assign tag_name = tag[0] %}
     {% assign tag_count = tag[1].size %}
     {% assign tag_url = tag_name | slugify %}
-    <a href="/tags/{{ tag_url }}" class="tagcloud-link" style="color: #FFFFFF; text-decoration: none;">
-      {{ tag_name }}
-    </a>
-    <span class="tagcloud-count" style="color: #000000;"> ({{ tag_count }})</span>
+    <li class="tagcloud-item" style="margin-bottom: 10px;">
+      <a href="/tags/{{ tag_url }}" class="tagcloud-link" style="color: #FFFFFF; text-decoration: none;">
+        {{ tag_name }}
+      </a>
+      <span class="tagcloud-count" style="color: #000000;"> ({{ tag_count }})</span>
     </li>
   {% endfor %}
 </ul>
