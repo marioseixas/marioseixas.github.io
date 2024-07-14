@@ -23,7 +23,7 @@ module Jekyll
 
       if response.is_a?(Net::HTTPSuccess)
         data = JSON.parse(response.body)
-        comments = data['data'] || [] # Safely access 'data' key and default to empty array
+        comments = data.is_a?(Hash) && data.key?('data') ? data['data'] : [] # Safely access 'data' key
         render_comments(comments, app_id, page_id, page_url, page_title)
       else
         "<!-- Failed to load comments: #{response.message} -->"
@@ -55,7 +55,7 @@ module Jekyll
             <div class="comment" style="margin-left: #{depth * 20}px;">
               <p><strong>#{comment['by_nickname']}</strong></p>
               <p>#{comment['content']}</p>
-              #{render_comment_list(comment['replies'], depth + 1) if comment['replies']}
+              #{render_comment_list(comment['replies'], depth + 1) if comment.key?('replies')}
             </div>
           HTML
         else
