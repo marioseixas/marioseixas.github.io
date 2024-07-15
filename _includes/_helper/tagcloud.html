@@ -4,8 +4,9 @@ layout: default
 
 {% comment %} tagcloud {% endcomment %}
 <ul class="tagcloud-list" style="list-style: none; padding: 0; font-family: 'BitPotionExt'; display: flex; flex-direction: column;">
-  {% assign tags_list = site.tags | sort %}
-  {% for tag in tags_list %}
+  {% assign tags_list = site.tags %}
+  {% assign sorted_tags = tags_list | sort: "size" %}
+  {% for tag in sorted_tags %}
     {% assign tag_name = tag[0] %}
     {% assign tag_count = tag[1].size %}
     {% assign tag_url = tag_name | slugify %}
