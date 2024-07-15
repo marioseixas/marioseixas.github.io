@@ -25,14 +25,18 @@ module Jekyll
         data = JSON.parse(response.body)
         render_comments(data, app_id, page_id, page_url, page_title)
       else
+        Jekyll.logger.error "CusdisComments:", "Failed to load comments: #{response.message}"
         "<!-- Failed to load comments: #{response.message} -->"
       end
+    rescue => e
+      Jekyll.logger.error "CusdisComments:", "Error: #{e.message}"
+      "<!-- Error loading comments: #{e.message} -->"
     end
 
     private
 
     def render_comments(data, app_id, page_id, page_url, page_title)
-      comments = data['data'] || []
+      comments = extract_comments(data)
       <<-HTML
         <div id="cusdis_thread"
           data-host="https://cusdis.com"
@@ -48,17 +52,41 @@ module Jekyll
       HTML
     end
 
+    def extract_comments(data)
+      case data
+      when Hash
+        data['data'] || data['comments'] || []
+      when Array
+        data
+      else
+        Jekyll.logger.warn "CusdisComments:", "Unexpected data structure: #{data.class}"
+        []
+      end
+    end
+
     def render_comment_list(comments)
       comments.map do |comment|
+        render_single_comment(comment)
+      end.join
+    end
+
+    def render_single_comment(comment)
+      case comment
+      when Hash
         <<-HTML
           <div class="comment">
-            <p><strong>#{comment['by_nickname']}</strong></p>
-            <p>#{comment['content']}</p>
-            <p>Page: #{comment['page_title'] || 'Untitled'}</p>
-            <p>Project: #{comment['project_title']}</p>
+            <p><strong>#{comment['by_nickname'] || comment['author'] || 'Anonymous'}</strong></p>
+            <p>#{comment['content'] || comment['body'] || 'No content'}</p>
+            #{comment['page_title'] ? "<p>Page: #{comment['page_title']}</p>" : ''}
+            #{comment['project_title'] ? "<p>Project: #{comment['project_title']}</p>" : ''}
           </div>
         HTML
-      end.join
+      when String
+        "<p>#{comment}</p>"
+      else
+        Jekyll.logger.warn "CusdisComments:", "Invalid comment data: #{comment.class}"
+        "<p>Invalid comment data</p>"
+      end
     end
   end
 end
