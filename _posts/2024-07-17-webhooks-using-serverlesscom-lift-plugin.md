@@ -60,28 +60,45 @@ handler.mjs
 import { Octokit } from "@octokit/rest";
 import { Base64 } from "js-base64";
 
-// Utility function to slugify a string
-const slugify = (str) => {
-  return str
+/**
+ * Converts a string to a URL-friendly slug.
+ * @param {string} text - The text to be slugified.
+ * @return {string} The slugified text.
+ */
+const slugify = (text) => {
+  return text
     .toString()
     .toLowerCase()
-    .replace(/\s+/g, '-') // Replace spaces with -
-    .replace(/[^\w\-]+/g, '') // Remove all non-word chars
-    .replace(/\-\-+/g, '-') // Replace multiple - with single -
-    .replace(/^-+/, '') // Trim - from start of text
-    .replace(/-+$/, ''); // Trim - from end of text
+    .trim()
+    .replace(/\s+/g, '-')           // Replace spaces with -
+    .replace(/[^\w\-]+/g, '')       // Remove all non-word chars
+    .replace(/\-\-+/g, '-')         // Replace multiple - with single -
+    .replace(/^-+/, '')             // Trim - from start of text
+    .replace(/-+$/, '');            // Trim - from end of text
 };
 
-// Utility function to format date to YYYY-MM-DD
-const formatDate = (dateString) => {
-  const date = new Date(dateString);
-  const year = date.getFullYear();
-  const month = String(date.getMonth() + 1).padStart(2, '0');
-  const day = String(date.getDate()).padStart(2, '0');
-  return `${year}-${month}-${day}`;
+/**
+ * Formats a date string to YYYY-MM-DD.
+ * @param {string} date - The date string to format.
+ * @return {string} The formatted date string.
+ */
+const formatDate = (date) => {
+  const d = new Date(date);
+  if (isNaN(d.getTime())) {
+    throw new Error('Invalid date provided');
+  }
+  return d.toISOString().split('T')[0];
 };
 
-// Function to create markdown content with the provided template
+/**
+ * Creates the content for a blog post.
+ * @param {Object} data - The data for the blog post.
+ * @param {string} data.by_nickname - The author's nickname.
+ * @param {string} data.by_email - The author's email.
+ * @param {string} data.content - The content of the post.
+ * @param {string} data.time - The timestamp of the post.
+ * @return {string} The formatted blog post content.
+ */
 const createPostContent = (data) => {
   const { by_nickname, by_email, content, time } = data;
   const slugName = slugify(by_nickname);
@@ -102,29 +119,39 @@ title: '${by_nickname}'
 ${content}`;
 };
 
-// Handler function for the webhook
+/**
+ * Handles the webhook event for creating a new blog post.
+ * @param {Object} event - The webhook event object.
+ * @return {Object} The response object.
+ */
 export const handleWebhook = async (event) => {
-  const detail = event.detail;
-  const { by_nickname, by_email, content, time } = detail.data;
-
-  // Validate required fields
-  if (!by_email) {
-    return {
-      statusCode: 400,
-      body: JSON.stringify({ message: "Email is required" }),
-    };
-  }
-
-  const octokit = new Octokit({ auth: process.env.GITHUB_TOKEN });
-
-  const owner = "${REPO_OWNER}";
-  const repo = "${REPO_NAME}";
-  const path = `_posts/${formatDate(time)}-${slugify(by_nickname)}.md`;
-  const message = `New post by ${by_nickname}`;
-  const postContent = createPostContent({ by_nickname, by_email, content, time });
-  const contentEncoded = Base64.encode(postContent);
-
   try {
+    if (!event || !event.detail || !event.detail.data) {
+      throw new Error('Invalid event structure');
+    }
+
+    const { by_nickname, by_email, content } = event.detail.data;
+    const time = event.time || new Date().toISOString();
+
+    if (!by_email || !by_nickname || !content) {
+      throw new Error('Missing required fields: email, nickname, or content');
+    }
+
+    const octokit = new Octokit({ auth: process.env.GITHUB_TOKEN });
+
+    if (!process.env.GITHUB_TOKEN) {
+      throw new Error('GitHub token is not set');
+    }
+
+    const owner = "${REPO_OWNER}";
+    const repo = "${REPO_NAME}";
+    const date = formatDate(time);
+    const slugName = slugify(by_nickname);
+    const path = `_posts/${date}-${slugName}.md`;
+    const message = `New post by ${by_nickname}`;
+    const postContent = createPostContent({ by_nickname, by_email, content, time });
+    const contentEncoded = Base64.encode(postContent);
+
     await octokit.repos.createOrUpdateFileContents({
       owner,
       repo,
@@ -135,15 +162,15 @@ export const handleWebhook = async (event) => {
 
     return {
       statusCode: 200,
-      body: JSON.stringify({ message: "File created/updated successfully" }),
+      body: JSON.stringify({ message: "File created/updated successfully", path }),
     };
   } catch (error) {
+    console.error('Error in handleWebhook:', error);
     return {
-      statusCode: 500,
-      body: JSON.stringify({ message: error.message }),
+      statusCode: error.status || 500,
+      body: JSON.stringify({ message: error.message || "An unexpected error occurred" }),
     };
   }
 };
-
 ~~~
 ---
