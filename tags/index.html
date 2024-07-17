@@ -1,12 +1,15 @@
 ---
-title: tags
 layout: default
+title: Tags
 type: tags
 ---
 
-<div id="posts" class="posts-expand">
+{% comment %} Improved integrated tags page {% endcomment %}
+<div class="tags-page">
+  <h1 class="page-title">Tags</h1>
+  
   <div class="tag-cloud">
-    <div class="tag-cloud-title">
+    <p class="tag-count">
       {% if site.tags.size == 0 %}
         No tags found.
       {% elsif site.tags.size == 1 %}
@@ -14,13 +17,149 @@ type: tags
       {% else %}
         {{ site.tags.size }} tags found.
       {% endif %}
-    </div>
-    <div class="tag-cloud-tags">
-      {% for tag in site.tags %}
-      <li>
-        <a href="{{ site.baseurl }}/tags/{{ tag[0] }}">{{ tag[0] }} ({{ tag[1].size }})</a>
-      </li>
+    </p>
+    
+    <ul class="tag-list">
+      {% assign sorted_tags = site.tags | sort %}
+      {% for tag in sorted_tags %}
+        {% assign tag_name = tag[0] %}
+        {% assign tag_count = tag[1].size %}
+        {% assign tag_url = tag_name | slugify %}
+        <li class="tag-item" style="font-size: calc(14px + {{ tag_count }}px);">
+          <a href="#{{ tag_url }}" class="tag-link">
+            {{ tag_name }} <span class="tag-count">({{ tag_count }})</span>
+          </a>
+        </li>
       {% endfor %}
-    </div>
+    </ul>
+  </div>
+
+  <div class="tag-details">
+    {% for tag in sorted_tags %}
+      {% assign tag_name = tag[0] %}
+      {% assign tag_url = tag_name | slugify %}
+      <section id="{{ tag_url }}" class="tag-section">
+        <h2 class="tag-name">{{ tag_name }}</h2>
+        <ul class="post-list">
+          {% assign sorted_posts = tag[1] | sort: 'date' | reverse %}
+          {% for post in sorted_posts %}
+            <li class="post-item">
+              <a href="{{ site.baseurl }}{{ post.url }}" class="post-link">
+                {{ post.title }}
+              </a>
+              <span class="post-date">{{ post.date | date: "%B %d, %Y" }}</span>
+            </li>
+          {% endfor %}
+        </ul>
+      </section>
+    {% endfor %}
   </div>
 </div>
+
+<style>
+  .tags-page {
+    font-family: BitPotionExt;
+    max-width: device-width;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  .page-title {
+    text-align: center;
+    color: #333;
+  }
+  .tag-count {
+    text-align: center;
+    color: #666;
+  }
+  .tag-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .tag-item {
+    margin: 5px;
+  }
+  .tag-link {
+    color: #0066cc;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  .tag-link:hover {
+    color: #004080;
+  }
+  .tag-count {
+    color: #666;
+  }
+  .tag-section {
+    margin-top: 40px;
+  }
+  .tag-name {
+    border-bottom: 2px solid #0066cc;
+    padding-bottom: 5px;
+  }
+  .post-list {
+    list-style: none;
+    padding: 0;
+  }
+  .post-item {
+    margin-bottom: 10px;
+  }
+  .post-link {
+    color: #333;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  .post-link:hover {
+    color: #0066cc;
+  }
+  .post-date {
+    font-size: 0.9em;
+    color: #666;
+    margin-left: 10px;
+  }
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', (event) => {
+  // Smooth scrolling for tag links
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      e.preventDefault();
+      document.querySelector(this.getAttribute('href')).scrollIntoView({
+        behavior: 'smooth'
+      });
+    });
+  });
+
+  // Highlight current tag in cloud when scrolled to its section
+  const tagSections = document.querySelectorAll('.tag-section');
+  const tagLinks = document.querySelectorAll('.tag-link');
+
+  const observerOptions = {
+    root: null,
+    rootMargin: '0px',
+    threshold: 0.5
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const currentTag = entry.target.id;
+        tagLinks.forEach(link => {
+          if (link.getAttribute('href') === `#${currentTag}`) {
+            link.classList.add('active');
+          } else {
+            link.classList.remove('active');
+          }
+        });
+      }
+    });
+  }, observerOptions);
+
+  tagSections.forEach(section => {
+    observer.observe(section);
+  });
+});
+</script>
