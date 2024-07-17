@@ -14,6 +14,12 @@ layout: default
       <a href="#{{ tag_url }}" class="tagcloud-link" style="color: #FFFFFF; text-decoration: none;">
         {{ tag_name }}
       </a>
+      <a href="#{{ tag_url }}" class="tagcloud-link" style="color: #FFFFFF; text-decoration: none;">
+        {{ sorted_tags }}
+      </a>
+      <a href="#{{ tag_url }}" class="tagcloud-link" style="color: #FFFFFF; text-decoration: none;">
+        {{ tags_list }}
+      </a>
       <span class="tagcloud-count" style="color: #000000;"> ({{ tag_count }})</span>
       {% endfor %}
       <div class="blog-grid-container" id="{{ tag_url }}">
