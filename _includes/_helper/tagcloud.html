@@ -15,6 +15,7 @@ layout: default
         {{ tag_name }}
       </a>
       <span class="tagcloud-count" style="color: #000000;"> ({{ tag_count }})</span>
+      {% endfor %}
       <div class="blog-grid-container" id="{{ tag_url }}">
         {% assign pages_list = tag[1] %}
         {% for post in pages_list %}
@@ -26,5 +27,4 @@ layout: default
         {% endfor %}
       </div>
     </li>
-  {% endfor %}
 </ul>
