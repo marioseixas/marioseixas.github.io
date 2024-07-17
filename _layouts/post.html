@@ -29,14 +29,14 @@ layout: default
       <div class="search-link">
         <span>
           <time>
-            {{ page.date | date_to_string }} &nbsp;~&gt; {{ page.last_modified_at | date_to_string }} &nbsp;&middot;
+          &middot; {{ page.date | date_to_string }} ~&gt; {{ page.last_modified_at | date_to_string }} <br>
             {% assign created_date = page.date | date: "%Y-%m-%d" %}
             {% assign modified_date = page.last_modified_at | date: "%Y-%m-%d" %}
           </time>        
       {% if page.tags %}
       <a class="tags">
         {% for tag in page.tags %}
-        Tags: {{ tag }} &nbsp;&middot;
+        &middot; Tags: {{ tag }} <br>
       </a>
           {% unless forloop.last %}
           {% endunless %}
@@ -44,14 +44,14 @@ layout: default
           {% endif %}
           {% if page.info %}
           <a class="info">
-            Edit: {{ page.info }} &nbsp;&middot;
+            &middot; Edit: {{ page.info }} <br>
           </a>
           {% endif %}
           <a href="https://github.com/marioseixas/marioseixas.github.io/edit/main/{{ page.path }}" target="_blank">
-            Improve this
-          </a> &nbsp;&middot;
+            &middot; Improve this
+          </a> <br>
           <a href="https://github.com/marioseixas/marioseixas.github.io/commits/main/{{ page.path }}" target="_blank">
-            Revision history
+            &middot; Revision history
           </a>
         </span>
       </div>
