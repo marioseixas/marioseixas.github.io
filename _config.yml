@@ -35,10 +35,6 @@ defaults:
     values:
       layout: tag
 
-collections:
-  tags:
-    output: true
-
 menu:
   home: "/"
   tags: "/tags/"
