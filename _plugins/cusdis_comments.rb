@@ -23,6 +23,7 @@ module Jekyll
 
       if response.is_a?(Net::HTTPSuccess)
         data = JSON.parse(response.body)
+        Jekyll.logger.info "CusdisComments:", "Fetched comments data: #{data.inspect}"
         render_comments(data, app_id, page_id, page_url, page_title)
       else
         Jekyll.logger.error "CusdisComments:", "Failed to load comments: #{response.message}"
@@ -55,7 +56,14 @@ module Jekyll
     def extract_comments(data)
       case data
       when Hash
-        data['data'] || data['comments'] || []
+        if data['data'].is_a?(Array)
+          data['data']
+        elsif data['comments'].is_a?(Array)
+          data['comments']
+        else
+          Jekyll.logger.warn "CusdisComments:", "No valid comments array found in data: #{data.inspect}"
+          []
+        end
       when Array
         data
       else
@@ -66,27 +74,24 @@ module Jekyll
 
     def render_comment_list(comments)
       comments.map do |comment|
-        render_single_comment(comment)
+        if comment.is_a?(Hash)
+          render_single_comment(comment)
+        else
+          Jekyll.logger.warn "CusdisComments:", "Invalid comment data: #{comment.class}"
+          "<p>Invalid comment data</p>"
+        end
       end.join
     end
 
     def render_single_comment(comment)
-      case comment
-      when Hash
-        <<-HTML
-          <div class="comment">
-            <p><strong>#{comment['by_nickname'] || comment['author'] || 'Anonymous'}</strong></p>
-            <p>#{comment['content'] || comment['body'] || 'No content'}</p>
-            #{comment['page_title'] ? "<p>Page: #{comment['page_title']}</p>" : ''}
-            #{comment['project_title'] ? "<p>Project: #{comment['project_title']}</p>" : ''}
-          </div>
-        HTML
-      when String
-        "<p>#{comment}</p>"
-      else
-        Jekyll.logger.warn "CusdisComments:", "Invalid comment data: #{comment.class}"
-        "<p>Invalid comment data</p>"
-      end
+      <<-HTML
+        <div class="comment">
+          <p><strong>#{comment['by_nickname'] || comment['author'] || 'Anonymous'}</strong></p>
+          <p>#{comment['content'] || comment['body'] || 'No content'}</p>
+          #{comment['page_title'] ? "<p>Page: #{comment['page_title']}</p>" : ''}
+          #{comment['project_title'] ? "<p>Project: #{comment['project_title']}</p>" : ''}
+        </div>
+      HTML
     end
   end
 end
