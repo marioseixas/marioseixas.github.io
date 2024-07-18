@@ -1,0 +1,30 @@
+---
+layout: default
+---
+
+{% comment %} tagcloud {% endcomment %}
+<ul class="tagcloud-list" style="list-style: none; padding: 0; font-family: 'BitPotionExt'; display: flex; flex-direction: column;">
+  {% assign tags_list = site.tags %}
+  {% assign sorted_tags = tags_list | sort: "size" %}
+  {% for tag in sorted_tags %}
+    {% assign tag_name = tag[0] %}
+    {% assign tag_count = tag[1].size %}
+    {% assign tag_url = tag_name | slugify %}
+    <li class="tagcloud-item" style="margin-bottom: 10px;">
+      <a href="#{{ tag_url }}" class="tagcloud-link" style="color: #FFFFFF; text-decoration: none;">
+        {{ tag_name }}
+      </a>
+      <span class="tagcloud-count" style="color: #000000;"> ({{ tag_count }})</span>
+      <div class="blog-grid-container" id="{{ tag_url }}">
+        {% assign pages_list = tag[1] %}
+        {% for post in pages_list %}
+          {% if post.title %}
+            <a href="{{ post.url }}" style="color: #FFFFFF; text-decoration: none;">
+              {{ post.title }}
+            </a><br>
+          {% endif %}
+        {% endfor %}
+      </div>
+    </li>
+  {% endfor %}
+</ul>
