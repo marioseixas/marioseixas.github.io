@@ -54,8 +54,8 @@ module Jekyll
     end
 
     def extract_comments(data)
-      if data['data'].is_a?(Array)
-        data['data']
+      if data['data'] && data['data']['data'].is_a?(Array)
+        data['data']['data']
       else
         Jekyll.logger.warn "CusdisComments:", "No valid comments array found in data: #{data.inspect}"
         []
