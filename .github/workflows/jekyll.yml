@@ -35,6 +35,7 @@ jobs:
 
       - name: Build with Jekyll
         env:
+          PAGES_REPO_NWO: marioseixas/marioseixas.github.io
           JEKYLL_ENV: production
         run: |
           bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
@@ -53,3 +54,5 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
