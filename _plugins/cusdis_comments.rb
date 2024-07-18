@@ -54,20 +54,10 @@ module Jekyll
     end
 
     def extract_comments(data)
-      case data
-      when Hash
-        if data['data'].is_a?(Array)
-          data['data']
-        elsif data['comments'].is_a?(Array)
-          data['comments']
-        else
-          Jekyll.logger.warn "CusdisComments:", "No valid comments array found in data: #{data.inspect}"
-          []
-        end
-      when Array
-        data
+      if data['data'].is_a?(Array)
+        data['data']
       else
-        Jekyll.logger.warn "CusdisComments:", "Unexpected data structure: #{data.class}"
+        Jekyll.logger.warn "CusdisComments:", "No valid comments array found in data: #{data.inspect}"
         []
       end
     end
@@ -86,8 +76,8 @@ module Jekyll
     def render_single_comment(comment)
       <<-HTML
         <div class="comment">
-          <p><strong>#{comment['by_nickname'] || comment['author'] || 'Anonymous'}</strong></p>
-          <p>#{comment['content'] || comment['body'] || 'No content'}</p>
+          <p><strong>#{comment['by_nickname'] || 'Anonymous'}</strong></p>
+          <p>#{comment['content'] || 'No content'}</p>
           #{comment['page_title'] ? "<p>Page: #{comment['page_title']}</p>" : ''}
           #{comment['project_title'] ? "<p>Project: #{comment['project_title']}</p>" : ''}
         </div>
