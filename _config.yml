@@ -25,6 +25,20 @@ defaults:
     values:
       layout: default
 
+  - scope:
+      path: "tags"
+    values:
+      layout: tag
+
+  - scope:
+      path: "tag"
+    values:
+      layout: tag
+
+collections:
+  tags:
+    output: true
+
 menu:
   home: "/"
   tags: "/tags/"
