@@ -28,7 +28,7 @@ defaults:
   - scope:
       path: "tags"
     values:
-      layout: tags
+      layout: tag
 
   - scope:
       path: "tag"
