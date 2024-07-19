@@ -7,15 +7,15 @@
 <body>
   <main>
     <section>
-      {% assign posts_with_modified = site.posts | where: 'last_modified_at' %}
-      {% assign posts_without_modified = site.posts | where_exp: "post", "post.last_modified_at == nil" %}
+      {% assign posts_with_last_modified = site.posts | where_exp: "post", "post.last_modified_at" %}
+      {% assign posts_without_last_modified = site.posts | where_exp: "post", "post.last_modified_at == nil" %}
       
-      {% assign sorted_with_modified = posts_with_modified | sort: 'last_modified_at' | reverse %}
-      {% assign sorted_without_modified = posts_without_modified | sort: 'date' | reverse %}
+      {% assign sorted_posts_with_last_modified = posts_with_last_modified | sort: 'last_modified_at' | reverse %}
+      {% assign sorted_posts_without_last_modified = posts_without_last_modified | sort: 'date' | reverse %}
       
-      {% assign sorted_posts = sorted_with_modified | concat: sorted_without_modified %}
+      {% assign all_sorted_posts = sorted_posts_with_last_modified | concat: sorted_posts_without_last_modified %}
       
-      {% for post in sorted_posts %}
+      {% for post in all_sorted_posts %}
         <article>
           <time datetime="{{ post.date | date: "%Y-%m-%d" }}" style="color: #16A085;">
             {{ post.date | date: "%Y-%m-%d" }}
