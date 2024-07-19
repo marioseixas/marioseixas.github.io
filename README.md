@@ -9,7 +9,9 @@
     <section>
       {% assign posts_with_sort_date = site.posts | map: "last_modified_at" %}
       {% for post in site.posts %}
-        {% if post.last_modified_at %}
+        {% assign post_date = post.date | date: "%Y-%m-%d" %}
+        {% assign last_modified_date = post.last_modified_at | date: "%Y-%m-%d" %}
+        {% if last_modified_date and last_modified_date != post_date %}
           {% assign sort_date = post.last_modified_at %}
         {% else %}
           {% assign sort_date = post.date %}
