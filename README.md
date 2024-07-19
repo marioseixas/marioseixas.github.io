@@ -63,7 +63,7 @@
       <!-- Loop through all sorted posts and display them -->
       {% for post in all_sorted_posts %}
         <article class="post-item">
-          <time datetime="{{ post.date | date: '%Y-%m-%d' }}" class="post-date" style="color: #16A085;">
+          <time datetime="{{ post.date | date: '%Y-%m-%d' }}" class="post-date">
             {{ post.date | date: '%Y-%m-%d' }}
             <a class="post-link" href="{{ post.url }}">
               <img src="https://raw.githubusercontent.com/marioseixas/marioseixas.github.io/main/assets/gold.ico" alt="favicon">
