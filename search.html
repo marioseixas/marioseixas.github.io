@@ -3,16 +3,107 @@ layout: default
 title: Search
 ---
 
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Search</title>
-</head>
-<body>
-    <h1>Search</h1>
-    <iframe src="https://app.khoj.dev/search?t=github" style="width: 100%; height: 600px; border: none;"></iframe>
-  {% cusdis_comments %}
-</body>
-</html>
+<div class="tags-page">
+    <ul class="tag-list">
+        {% assign sorted_tags = site.tags | sort %}
+        {% for tag in sorted_tags %}
+        {% assign tag_name = tag[0] %}
+        {% assign tag_count = tag[1].size %}
+        {% assign tag_url = tag_name | slugify %}
+        <li class="tag-item" style="font-size: calc(14px + {{ tag_count }}px);">
+          <a href="#{{ tag_url }}" class="tag-link">
+            {{ tag_name }} <span class="tag-count">({{ tag_count }})</span>
+          </a>
+        </li>
+      {% endfor %}
+    </ul>
+    {% cusdis_comments %}
+</div>
+
+<style>
+  .tags-page {
+    font-family: BitPotionExt;
+    max-width: device-width;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  .page-title {
+    text-align: center;
+    color: #FFFFFF;
+  }
+  .tag-count {
+    text-align: center;
+    color: #666;
+  }
+  .tag-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .tag-item {
+    margin: 5px;
+  }
+  .tag-link {
+    color: #0066cc;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  .tag-link:hover {
+    color: #004080;
+  }
+  .tag-count {
+    color: #666;
+  }
+  .tag-section {
+    margin-top: 40px;
+  }
+  .tag-name {
+    border-bottom: 2px solid #0066cc;
+    padding-bottom: 5px;
+  }
+  .post-list {
+    list-style: none;
+    padding: 0;
+  }
+  .post-item {
+    margin-bottom: 10px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 15px;
+  }
+  .post-item:last-child {
+    border-bottom: none;
+  }
+  .post-link {
+    color: #FFFFFF;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    font-size: 1.2em;
+    display: block;
+    margin-bottom: 5px;
+  }
+  .post-link:hover {
+    color: #0066cc;
+  }
+  .post-date {
+    font-size: 0.9em;
+    color: #888;
+    display: block;
+  }
+  .back-link {
+    margin-top: 40px;
+    text-align: center;
+  }
+  @media (max-width: 600px) {
+    .tags-page {
+      padding: 10px;
+    }
+    .page-title {
+      font-size: 1.5em;
+    }
+    .post-link {
+      font-size: 1em;
+    }
+  }
+</style>
