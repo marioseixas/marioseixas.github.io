@@ -64,15 +64,15 @@
       {% for post in all_sorted_posts %}
         <article class="post-item">
           <time datetime="{{ post.date | date: '%Y-%m-%d' }}" class="post-date">
-            {{ post.date | date: '%Y-%m-%d' }}
+            &middot; {{ post.date | date: '%Y-%m-%d' }}
+              {% if post.last_modified_at != post.date %}
+                ~&gt; {{ post.last_modified_at | date_to_string }}
+              {% else %}
+                ~&gt; {{ post.date | date_to_string }}
+              {% endif %}            
             <a class="post-link" href="{{ post.url }}">
               <img src="https://raw.githubusercontent.com/marioseixas/marioseixas.github.io/main/assets/gold.ico" alt="favicon">
-              {{ post.title }} &nbsp;&middot; 
-              {% if post.last_modified_at != post.date %}
-                {{ post.last_modified_at | date_to_string }}
-              {% else %}
-                {{ post.date | date_to_string }}
-              {% endif %}
+              {{ post.title }}
             </a>
           </time>
         </article>
