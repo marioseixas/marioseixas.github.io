@@ -33,7 +33,7 @@ type: tags
       {% endfor %}
     </ul>
   </div>
-
+  {% cusdis_comments %}
   <div class="tag-details">
     {% for tag in sorted_tags %}
       {% assign tag_name = tag[0] %}
@@ -56,7 +56,7 @@ type: tags
   </div>
 
   <div class="back-link">
-    <a href="{{ site.baseurl }}/tags/" class="tag-link">Back to all tags</a>
+    <a href="{{ site.baseurl }}/tags/" class="tag-link">Back to tag cloud</a>
   </div>
 </div>
 
