@@ -1,6 +1,6 @@
 ---
 tags:
-  - PaaS
+  - serverless
 info: aberto.
 date: 2024-07-17
 type: post
