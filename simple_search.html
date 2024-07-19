@@ -21,35 +21,45 @@ title: Simple Search
 
     <script>
         async function performSearch() {
-            const query = document.getElementById('query').value.trim();
-            if (!query) {
-                alert('Please enter a search query.');
-                return;
-            }
+    const query = document.getElementById('query').value.trim();
+    if (!query) {
+        alert('Please enter a search query.');
+        return;
+    }
 
-            const url = `https://app.khoj.dev/api/search?q=${encodeURIComponent(query)}&n=5&client=web&t=github&r=false`;
+    const url = `https://app.khoj.dev/api/search?q=${encodeURIComponent(query)}&n=5&client=web&t=github&r=false`;
 
-            try {
-                const response = await fetch(url, {
-                    method: 'GET',
-                    headers: {
-                        'Content-Type': 'application/json',
-                        'Cookie': document.cookie
-                    },
-                    credentials: 'include'
-                });
+    try {
+        const response = await fetch(url, {
+            method: 'GET',
+            headers: {
+                'Content-Type': 'application/json',
+                'Cookie': document.cookie
+            },
+            credentials: 'include'
+        });
 
-                if (!response.ok) {
-                    throw new Error('Network response was not ok');
-                }
-
-                const data = await response.json();
-                displayResults(data);
-            } catch (error) {
-                console.error('Error:', error);
-                alert('An error occurred while fetching the search results.');
-            }
+        if (!response.ok) {
+            throw new Error('Network response was not ok');
         }
+
+        const data = await response.json();
+        displayResults(data);
+
+        // Create a downloadable link for the response data
+        const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' });
+        const downloadUrl = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = downloadUrl;
+        a.download = 'search_results.json';
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+    } catch (error) {
+        console.error('Error:', error);
+        alert('An error occurred while fetching the search results.');
+    }
+}
 
         function displayResults(data) {
             const resultsContainer = document.getElementById('results');
