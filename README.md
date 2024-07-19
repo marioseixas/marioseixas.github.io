@@ -7,7 +7,17 @@
 <body>
   <main>
     <section>
-      {% assign sorted_posts = site.posts | sort: 'last_modified_at' | reverse %}
+      {% assign posts_with_sort_date = site.posts | map: "last_modified_at" %}
+      {% for post in site.posts %}
+        {% if post.last_modified_at %}
+          {% assign sort_date = post.last_modified_at %}
+        {% else %}
+          {% assign sort_date = post.date %}
+        {% endif %}
+        {% assign post = post | merge: { 'sort_date': sort_date } %}
+        {% assign posts_with_sort_date = posts_with_sort_date | push: post %}
+      {% endfor %}
+      {% assign sorted_posts = posts_with_sort_date | sort: 'sort_date' | reverse %}
       {% for post in sorted_posts %}
         <article>
           {% assign display_date = post.last_modified_at | default: post.date %}
@@ -15,7 +25,7 @@
             {{ display_date | date: "%Y-%m-%d" }}
             <a style="color:#D35400;" href="{{ post.url }}">
               <img src="https://raw.githubusercontent.com/marioseixas/marioseixas.github.io/main/assets/gold.ico" alt="favicon">
-              {{ post.title }} &nbsp;&middot; {{ post.last_modified_at | date_to_string }}
+              {{ post.title }} &nbsp;&middot; {{ display_date | date_to_string }}
             </a>
           </time>
         </article>
