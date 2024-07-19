@@ -7,18 +7,18 @@
 <body>
   <main>
     <section>
-      <!-- Separate posts where last_modified_at is different from date -->
-      {% assign modified_posts = site.posts | where_exp: "post", "post.last_modified_at != post.date" %}
-      {% assign unmodified_posts = site.posts | where_exp: "post", "post.last_modified_at == post.date" %}
+      <!-- Separate posts with and without last_modified_at -->
+      {% assign posts_with_last_modified = site.posts | where_exp: "post", "post.last_modified_at" %}
+      {% assign posts_without_last_modified = site.posts | where_exp: "post", "post.last_modified_at == nil" %}
       
-      <!-- Sort modified posts by last_modified_at in descending order -->
-      {% assign sorted_modified_posts = modified_posts | sort: 'last_modified_at' | reverse %}
+      <!-- Sort posts with last_modified_at by last_modified_at in descending order -->
+      {% assign sorted_posts_with_last_modified = posts_with_last_modified | sort: 'last_modified_at' | reverse %}
       
-      <!-- Sort unmodified posts by date in descending order -->
-      {% assign sorted_unmodified_posts = unmodified_posts | sort: 'date' | reverse %}
+      <!-- Sort posts without last_modified_at by date in descending order -->
+      {% assign sorted_posts_without_last_modified = posts_without_last_modified | sort: 'date' | reverse %}
       
       <!-- Concatenate the two sorted lists -->
-      {% assign all_sorted_posts = sorted_modified_posts | concat: sorted_unmodified_posts %}
+      {% assign all_sorted_posts = sorted_posts_with_last_modified | concat: sorted_posts_without_last_modified %}
       
       <!-- Loop through all sorted posts and display them -->
       {% for post in all_sorted_posts %}
