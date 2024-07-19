@@ -7,14 +7,20 @@
 <body>
   <main>
     <section>
-      {% assign posts_with_last_modified = site.posts | where: 'last_modified_at', true %}
-      {% assign posts_without_last_modified = site.posts | where: 'last_modified_at', false %}
-
-      {% assign sorted_posts_with_last_modified = posts_with_last_modified | sort: 'last_modified_at' | reverse %}
-      {% assign sorted_posts_without_last_modified = posts_without_last_modified | sort: 'date' | reverse %}
-
-      {% assign all_sorted_posts = sorted_posts_with_last_modified | concat: sorted_posts_without_last_modified %}
-
+      <!-- Separate posts where last_modified_at is different from date -->
+      {% assign modified_posts = site.posts | where_exp: "post", "post.last_modified_at != post.date" %}
+      {% assign unmodified_posts = site.posts | where_exp: "post", "post.last_modified_at == post.date" %}
+      
+      <!-- Sort modified posts by last_modified_at in descending order -->
+      {% assign sorted_modified_posts = modified_posts | sort: 'last_modified_at' | reverse %}
+      
+      <!-- Sort unmodified posts by date in descending order -->
+      {% assign sorted_unmodified_posts = unmodified_posts | sort: 'date' | reverse %}
+      
+      <!-- Concatenate the two sorted lists -->
+      {% assign all_sorted_posts = sorted_modified_posts | concat: sorted_unmodified_posts %}
+      
+      <!-- Loop through all sorted posts and display them -->
       {% for post in all_sorted_posts %}
         <article>
           <time datetime="{{ post.date | date: "%Y-%m-%d" }}" style="color: #16A085;">
