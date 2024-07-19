@@ -28,12 +28,7 @@ defaults:
   - scope:
       path: "tags"
     values:
-      layout: tag
-
-  - scope:
-      path: "tag"
-    values:
-      layout: tag
+      layout: default
 
 menu:
   home: "/"
