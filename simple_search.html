@@ -20,66 +20,56 @@ title: Simple Search
     </div>
 
     <script>
-        async function performSearch() {
-    const query = document.getElementById('query').value.trim();
-    if (!query) {
-        alert('Please enter a search query.');
-        return;
-    }
-
-    const url = `https://app.khoj.dev/api/search?q=${encodeURIComponent(query)}&n=5&client=web&t=github&r=false`;
-
-    try {
-        const response = await fetch(url, {
-            method: 'GET',
-            headers: {
-                'Content-Type': 'application/json',
-                'Cookie': document.cookie
-            },
-            credentials: 'include'
-        });
-
-        if (!response.ok) {
-            throw new Error('Network response was not ok');
+    async function performSearch() {
+        const query = document.getElementById('query').value.trim();
+        if (!query) {
+            alert('Please enter a search query.');
+            return;
         }
 
-        const data = await response.json();
-        displayResults(data);
+        const url = `https://app.khoj.dev/api/search?q=${encodeURIComponent(query)}&n=5&client=web&t=github&r=false`;
 
-        // Create a downloadable link for the response data
-        const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' });
-        const downloadUrl = URL.createObjectURL(blob);
-        const a = document.createElement('a');
-        a.href = downloadUrl;
-        a.download = 'search_results.json';
-        document.body.appendChild(a);
-        a.click();
-        document.body.removeChild(a);
-    } catch (error) {
-        console.error('Error:', error);
-        alert('An error occurred while fetching the search results.');
-    }
-}
-
-        function displayResults(data) {
-            const resultsContainer = document.getElementById('results');
-            resultsContainer.innerHTML = '';
-
-            if (data.length === 0) {
-                resultsContainer.innerHTML = '<p>No results found.</p>';
-                return;
-            }
-
-            const resultsList = document.createElement('ul');
-            data.forEach(item => {
-                const listItem = document.createElement('li');
-                listItem.textContent = item.entry;
-                resultsList.appendChild(listItem);
+        try {
+            const response = await fetch(url, {
+                method: 'GET',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Cookie': document.cookie // Retrieve cookies dynamically
+                },
+                credentials: 'include' // Include credentials for cross-origin requests
             });
 
-            resultsContainer.appendChild(resultsList);
+            if (!response.ok) {
+                throw new Error('Network response was not ok: ' + response.statusText);
+            }
+
+            const data = await response.json();
+            displayResults(data);
+        } catch (error) {
+            console.error('Error:', error);
+            alert('An error occurred while fetching the search results: ' + error.message);
         }
-    </script>
+    }
+
+    function displayResults(data) {
+        const resultsContainer = document.getElementById('results');
+        resultsContainer.innerHTML = '';
+
+        if (data.length === 0) {
+            resultsContainer.innerHTML = '<p>No results found.</p>';
+            return;
+        }
+
+        const resultsList = document.createElement('ul');
+        data.forEach(item => {
+            const listItem = document.createElement('li');
+            listItem.textContent = item.entry;
+            resultsList.appendChild(listItem);
+        });
+
+        resultsContainer.appendChild(resultsList);
+    }
+</script>
 
     <style>
         .search-container {
