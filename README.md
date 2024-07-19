@@ -7,16 +7,22 @@
 <body>
   <main>
     <section>
-      {% assign posts_with_sort_keys = "" %}
+      {% assign posts_with_keys = site.posts | map: 'last_modified_at' %}
+      {% assign posts_with_keys = "" %}
       {% for post in site.posts %}
-        {% assign sort_date = post.last_modified_at | default: post.date %}
-        {% assign post_with_key = post | merge: {'sort_key': sort_date | date: '%s'} %}
-        {% capture posts_with_sort_keys %}{{ posts_with_sort_keys }}{% unless forloop.first %},{% endunless %}{{ post_with_key }}{% endcapture %}
+        {% assign last_modified = post.last_modified_at | default: post.date %}
+        {% assign sort_key = last_modified | date: '%Y%m%d%H%M%S' %}
+        {% assign post_with_key = post | push: sort_key %}
+        {% capture tmp %}{% assign posts_with_keys = posts_with_keys | append: sort_key | append: ':' | append: post.url | append: '|' %}{% endcapture %}
       {% endfor %}
-      {% assign posts_array = posts_with_sort_keys | split: ',' %}
-      {% assign sorted_posts = posts_array | sort: 'sort_key' | reverse %}
+      {% assign sorted_keys = posts_with_keys | split: '|' | sort | reverse %}
+      {% assign sorted_posts = "" %}
+      {% for item in sorted_keys %}
+        {% assign url = item | split: ':' | last %}
+        {% assign post = site.posts | where: "url", url | first %}
+        {% assign sorted_posts = sorted_posts | push: post %}
+      {% endfor %}
       {% for post in sorted_posts %}
-        {% assign post = site.posts | where: "url", post.url | first %}
         <article>
           <time datetime="{{ post.date | date: '%Y-%m-%d' }}" style="color: #16A085;">
             {{ post.date | date: '%Y-%m-%d' }}
