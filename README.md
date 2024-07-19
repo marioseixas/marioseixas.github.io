@@ -15,7 +15,7 @@
             {{ display_date | date: "%Y-%m-%d" }}
             <a style="color:#D35400;" href="{{ post.url }}">
               <img src="https://raw.githubusercontent.com/marioseixas/marioseixas.github.io/main/assets/gold.ico" alt="favicon">
-              {{ post.title }} &nbsp;&middot; {{ display_date | date_to_string }}
+              {{ post.title }} &nbsp;&middot; {{ post.last_modified_at | date_to_string }}
             </a>
           </time>
         </article>
