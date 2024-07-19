@@ -7,14 +7,13 @@
 <body>
   <main>
     <section>
-      {% assign posts_with_sort_keys = site.posts | map: 'last_modified_at' %}
+      {% assign posts_with_dates = site.posts | map: 'last_modified_at' %}
       {% for post in site.posts %}
         {% assign last_modified = post.last_modified_at | default: post.date %}
-        {% assign sort_key = last_modified | date: '%Y%m%d%H%M%S' %}
-        {% assign post_with_key = post | merge: {'sort_key': sort_key} %}
-        {% capture tmp %}{% assign posts_with_sort_keys = posts_with_sort_keys | push: post_with_key %}{% endcapture %}
+        {% assign post_with_date = post | merge: {'sort_key': last_modified | date: '%s'} %}
+        {% capture tmp %}{% assign posts_with_dates = posts_with_dates | push: post_with_date %}{% endcapture %}
       {% endfor %}
-      {% assign sorted_posts = posts_with_sort_keys | sort: 'sort_key' | reverse %}
+      {% assign sorted_posts = posts_with_dates | sort: 'sort_key' | reverse %}
       {% for post in sorted_posts %}
         <article>
           <time datetime="{{ post.date | date: '%Y-%m-%d' }}" style="color: #16A085;">
