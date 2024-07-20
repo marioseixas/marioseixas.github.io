@@ -12,12 +12,57 @@ title: 'iPhone: files2zip & zip2clipboard'
 
 iPhone:
 1) Make a zip file with the desired contents;
+
 2) Run the shortcut and select that zip file;
+
 3) The desired contents now are in the clipboard.
 
-script:
-``` 
+***
 
+
+### Script 1: `ftz.py`
+
+This script is designed to handle and process files in a specific directory. Here's a step-by-step explanation:
+
+1. **Logging Setup**: The script sets up logging to record events and errors in a log file located at `/private/var/mobile/Containers/Data/Application/5A3A90C0-A077-4A2C-80A6-0DF006769AC6/Documents/script.log`.
+
+2. **Extracting Archives**: The `extract_archive` function can extract files from different types of compressed archives like `.zip`, `.tar`, `.gz`, and `.bz2`. If the archive format is not supported, it logs a warning.
+
+3. **Processing Files**: The `process_files` function goes through all files in a given directory:
+   - If it finds a `.rar` file, it moves it to a special folder called `CAT-RAR`.
+   - For other files, it tries to extract them if they are in a supported archive format.
+
+4. **Moving Files to CAT Folder**: The `move_to_cat_folder` function moves all files and folders (except `CAT` and `CAT-RAR`) into a new folder called `CAT`.
+
+5. **Main Execution**: When you run the script, it expects a directory path as an argument. It processes the files in that directory and organizes them into the `CAT` and `CAT-RAR` folders.
+
+### Script 2: `ftp.py`
+
+This script is a simple command-line tool that uses the `click` library to handle command-line arguments. Here's what it does:
+
+1. **Command-Line Interface**: The script defines a command-line interface using `click`. It expects a single argument, `file_path`.
+
+2. **Subprocess Call**: When you run the script with a file path, it uses the `subprocess` module to call an external command `files-to-prompt` with the provided file path. It captures the output and prints it.
+
+3. **Error Handling**: If the external command fails, it catches the error and prints an error message.
+
+### How to Use These Scripts
+
+1. **Running `ftz.py`**:
+   - Open a terminal.
+   - Run the script with a directory path: `python ftz.py /path/to/directory`.
+   - The script will process the files in the directory, extract archives, move `.rar` files to `CAT-RAR`, and move everything else to `CAT`.
+
+2. **Running `ftp.py`**:
+   - Open a terminal.
+   - Run the script with a file path: `python ftp.py /path/to/file`.
+   - The script will call the `files-to-prompt` command with the provided file path and print the result.
+  
+***
+
+/private/var/mobile/Containers/Data/Application/5A3A90C0-A077-4A2C-80A6-0DF006769AC6/Documents/backup/CAT/ftz.py
+---
+``` 
 import os
 import shutil
 import zipfile
@@ -110,3 +155,23 @@ if __name__ == "__main__":
         print(f"The path {target_path} does not exist.")
         logging.error(f'The path {target_path} does not exist.')
 ``` 
+---
+/private/var/mobile/Containers/Data/Application/5A3A90C0-A077-4A2C-80A6-0DF006769AC6/Documents/backup/CAT/ftp.py
+---
+``` 
+import subprocess
+import click
+@click.command()
+@click.argument('file_path')
+def main(file_path):
+    # Use subprocess to call the files-to-prompt command
+    try:
+        result = subprocess.run(['files-to-prompt', file_path], capture_output=True, text=True, check=True)
+        print(result.stdout)
+    except subprocess.CalledProcessError as e:
+        print(f"An error occurred: {e.stderr}")
+if __name__ == '__main__':
+    main()
+``` 
+---
+
