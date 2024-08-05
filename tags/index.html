@@ -34,27 +34,82 @@ type: tags
     </ul>
   </div>
   {% cusdis_comments %}
+  
   <div class="tag-details">
-    {% for tag in sorted_tags %}
-      {% assign tag_name = tag[0] %}
-      {% assign tag_url = tag_name | slugify %}
+    {% assign all_tags = "" %}
+    
+    <!-- Aggregate tags from posts, pages, and portfolio -->
+    {% for post in site.posts %}
+      {% if post.tags.size > 0 %}
+        {% assign post_tags = post.tags | join:'|' | append:'|' %}
+        {% assign all_tags = all_tags | append:post_tags %}
+      {% endif %}
+    {% endfor %}
+    
+    {% assign portfolio = site.portfolio | map: 'tags' | join: ',' | split: ',' | uniq %}
+    {% for tag in portfolio %}
+      {% assign portfolio_tags = tag | join: '|' | append: '|' %}
+      {% assign all_tags = all_tags | append:portfolio_tags %}
+    {% endfor %}
+    
+    {% for page in site.pages %}
+      {% if page.tags.size > 0 %}
+        {% assign page_tags = page.tags | join:'|' | append:'|' %}
+        {% assign all_tags = all_tags | append:page_tags %}
+      {% endif %}
+    {% endfor %}
+    
+    <!-- Unique tags list -->
+    {% assign all_tags = all_tags | split:'|' | uniq | sort %}
+    
+    <!-- Display each tag and associated items -->
+    {% for tag in all_tags %}
+      {% assign tag_url = tag | slugify %}
       <section id="{{ tag_url }}" class="tag-section">
-        <h2 class="tag-name">{{ tag_name }}</h2>
+        <h2 class="tag-name">{{ tag }}</h2>
         <ul class="post-list">
-          {% assign sorted_posts = tag[1] | sort: 'date' | reverse %}
-          {% for post in sorted_posts %}
-            <li class="post-item">
-              <a href="{{ site.baseurl }}{{ post.url }}" class="post-link">
-                {{ post.title }}
-              </a>
-              <span class="post-date">{{ post.date | date: "%B %d, %Y" }}</span>
-            </li>
+          
+          <!-- Pages with the tag -->
+          {% for page in site.pages %}
+            {% if page.tags contains tag %}
+              <li class="post-item">
+                <a href="{{ page.url | relative_url }}" class="post-link">
+                  {{ page.title }}
+                </a>
+                <span class="post-date">{{ page.date | date: "%B %d, %Y" }}</span>
+              </li>
+            {% endif %}
           {% endfor %}
+          
+          <!-- Posts with the tag -->
+          {% for post in site.posts %}
+            {% if post.tags contains tag %}
+              <li class="post-item">
+                <a href="{{ post.url | relative_url }}" class="post-link">
+                  {{ post.title }}
+                </a>
+                <span class="post-date">{{ post.date | date: "%B %d, %Y" }}</span>
+              </li>
+            {% endif %}
+          {% endfor %}
+          
+          <!-- Portfolio items with the tag -->
+          {% for note in site.portfolio %}
+            {% if note.tags contains tag %}
+              <li class="post-item">
+                <a href="{{ note.url | relative_url }}" class="post-link">
+                  {{ note.title }}
+                </a>
+                <span class="post-date">{{ note.date | date: "%B %d, %Y" }}</span>
+              </li>
+            {% endif %}
+          {% endfor %}
+          
         </ul>
       </section>
     {% endfor %}
   </div>
-
+  
   <div class="back-link">
     <a href="{{ site.baseurl }}/tags/" class="tag-link">Back to tag cloud</a>
   </div>
