@@ -14,7 +14,7 @@ icon: "far fa-calendar"
     <meta charset='utf-8' />
     <script src='/assets/js/vendor/fullcalendar/index.global.min.js'></script>
     <script src='/assets/js/vendor/fullcalendar/de.global.min.js'></script>
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/ical.js/1.4.0/ical.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/ical.js/1.5.0/ical.min.js'></script>
     <script>
       document.addEventListener('DOMContentLoaded', function() {
         var calendarEl = document.getElementById('calendar');
