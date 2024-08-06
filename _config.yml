@@ -25,14 +25,8 @@ defaults:
     values:
       layout: default
 
-  - scope:
-      path: "tags"
-    values:
-      layout: default
-
 menu:
   home: "/"
-  tags: "/tags/"
 
 git_log: false
 
