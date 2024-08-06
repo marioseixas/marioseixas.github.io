@@ -32,32 +32,40 @@ title: Tags
 <div class="tag-page">
   <h1>Tags</h1>
   <ul class="tag-list">
-    {% assign sorted_tags = site.tags | sort: 'last' | reverse %}
-    {% for tag in sorted_tags %}
-    <li>
-      <a href="#{{ tag[0] | slugify }}">
-        {{ tag[0] }} ({{ tag[1].size }})
-      </a>
-    </li>
+    {% assign tag_counts = site.tags | map: "first" | sort %}
+    {% assign tag_counts = tag_counts | map: "size" %}
+    {% assign tag_names = site.tags | map: "first" %}
+    {% assign tags_with_counts = tag_names | zip: tag_counts %}
+    {% assign sorted_tags_with_counts = tags_with_counts | sort: "last" | reverse %}
+    
+    {% for tag_pair in sorted_tags_with_counts %}
+      {% assign tag = tag_pair[0] %}
+      {% assign count = tag_pair[1] %}
+      <li>
+        <a href="#{{ tag | slugify }}">
+          {{ tag }} ({{ count }})
+        </a>
+      </li>
     {% endfor %}
   </ul>
 
   <div class="tagged-posts">
-    {% for tag in sorted_tags %}
-    <h2 id="{{ tag[0] | slugify }}">{{ tag[0] }}</h2>
-    <ul>
-      {% assign posts = tag[1] | sort: 'date' | reverse %}
-      {% for post in posts %}
-      <li>
-        <a href="{{ post.url | relative_url }}">
-          {{ post.title }}
-        </a>
-        <time datetime="{{ post.date | date: '%Y-%m-%d' }}">
-          - {{ post.date | date: '%B %d, %Y' }}
-        </time>
-      </li>
-      {% endfor %}
-    </ul>
+    {% for tag_pair in sorted_tags_with_counts %}
+      {% assign tag = tag_pair[0] %}
+      <h2 id="{{ tag | slugify }}">{{ tag }}</h2>
+      <ul>
+        {% assign posts = site.tags[tag] | sort: 'date' | reverse %}
+        {% for post in posts %}
+        <li>
+          <a href="{{ post.url | relative_url }}">
+            {{ post.title }}
+          </a>
+          <time datetime="{{ post.date | date: '%Y-%m-%d' }}">
+            - {{ post.date | date: '%B %d, %Y' }}
+          </time>
+        </li>
+        {% endfor %}
+      </ul>
     {% endfor %}
   </div>
 </div>
