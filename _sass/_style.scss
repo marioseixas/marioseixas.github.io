@@ -9,7 +9,7 @@
 
 /* Base Styles */
 body {
-  font-family: 'BitPotionExt';
+  font-family: 'BitPotionExt', sans-serif;
   background-color: #2C2C2C;
   color: #FFFFFF;
 }
@@ -22,11 +22,11 @@ h1, h2, h3, h4, h5, h6 {
 a {
   color: #2ECC71;
   transition: color 0.3s ease;
-  
+
   &:visited {
     color: #1ABC9C;
   }
-  
+
   &:hover, &:focus {
     color: #3498DB;
   }
@@ -104,7 +104,7 @@ h6 {
 }
 /* Use nicer serif fonts, if available */
 body {
-  font-family: 'BitPotionExt';
+  font-family: 'BitPotionExt', sans-serif;
 }
 /* Simple table style */
 table {
@@ -178,13 +178,17 @@ img[class*="emoji"][src$=".svg"] {
 }
 
 *[class*="logo" i] svg, 
-*[id*="logo" i] svg {
-  max-width: 100px;
+img[src*="logo" i] {
+  max-height: 70px;
+}
+
+svg, img {
+  vertical-align: middle;
 }
 
 /* Comment Box */
 .comment-box {
-  font-family: 'BitPotionExt', sans-serif;
+  font-family: 'BitPotionExt';
   font-size: clamp(1rem, calc(13px + 0.5vw), 1.2rem);
   margin: 1.25rem 0 0.625rem;
   line-height: 1.25;
@@ -208,7 +212,7 @@ img[class*="emoji"][src$=".svg"] {
 /* Search Link */
 .search-link {
   display: inline-block;
-  font-family: 'BitPotionExt', sans-serif;
+  font-family: 'BitPotionExt';
   font-size: clamp(2rem, calc(24px + 1vw), 3rem);
   border: 1px dotted #3498DB;
   border-radius: 0.1875rem;
