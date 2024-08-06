@@ -32,8 +32,8 @@ title: Tags
 <div class="tag-page">
   <h1>Tags</h1>
   <ul class="tag-list">
-    {% assign tags = site.tags | sort: 'size' | reverse %}
-    {% for tag in tags %}
+    {% assign sorted_tags = site.tags | sort: 'last' | reverse %}
+    {% for tag in sorted_tags %}
     <li>
       <a href="#{{ tag[0] | slugify }}">
         {{ tag[0] }} ({{ tag[1].size }})
@@ -43,7 +43,7 @@ title: Tags
   </ul>
 
   <div class="tagged-posts">
-    {% for tag in tags %}
+    {% for tag in sorted_tags %}
     <h2 id="{{ tag[0] | slugify }}">{{ tag[0] }}</h2>
     <ul>
       {% assign posts = tag[1] | sort: 'date' | reverse %}
