@@ -1,8 +1,10 @@
+require 'bundler/setup'
 require 'net/http'
 require 'uri'
 require 'icalendar'
 require 'json'
 require 'yaml'
+require 'digest'
 
 config = YAML.load_file('_config.yml')
 calendar_url = config['calendar']['url']
