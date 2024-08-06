@@ -6,30 +6,34 @@ require 'json'
 require 'yaml'
 require 'digest'
 
-config = YAML.load_file('_config.yml')
-calendar_url = config['calendar']['url']
-username = config['calendar']['username']
-password = config['calendar']['password']
+uri = URI('https://dav.heydola.com/dav.php/calendars/py28wj81/default/?export')
 
-uri = URI(calendar_url)
-req = Net::HTTP::Get.new(uri)
-req.basic_auth(username, password)
+# Create HTTP object and request
+http = Net::HTTP.new(uri.host, uri.port)
+http.use_ssl = true
+request = Net::HTTP::Get.new(uri.request_uri)
+request.basic_auth('py28wj81', '20287290')
 
-res = Net::HTTP.start(uri.hostname, uri.port, use_ssl: uri.scheme == 'https') do |http|
-  http.request(req)
-end
+# Fetch the calendar data
+response = http.request(request)
 
-if res.is_a?(Net::HTTPSuccess)
-  calendar = Icalendar::Calendar.parse(res.body).first
-  events = calendar.events.map do |event|
+if response.code == '200'
+  cals = Icalendar::Calendar.parse(response.body)
+  events = cals.flat_map(&:events).map do |event|
     {
+      id: Digest::MD5.hexdigest(event.uid),
       title: event.summary,
       start: event.dtstart.to_s,
-      end: event.dtend.to_s
+      end: event.dtend.to_s,
+      location: event.location,
+      description: event.description
     }
   end
 
-  File.write('_site/assets/data/events.json', JSON.pretty_generate(events))
+  # Save events to JSON file
+  File.open('_site/assets/data/events.json', 'w') do |file|
+    file.write(JSON.pretty_generate(events))
+  end
 else
-  puts "Failed to fetch the calendar: #{res.message}"
+  puts "Failed to fetch the calendar: #{response.message}"
 end
