@@ -33,3 +33,9 @@ git_log: false
 markdown: kramdown
 kramdown:
   input: GFM
+
+# Custom settings for fetching and converting .ics file
+calendar:
+  url: "https://dav.heydola.com/dav.php/calendars/py28wj81/default/?export"
+  username: "py28wj81"
+  password: "20287290"
