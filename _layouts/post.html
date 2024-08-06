@@ -10,60 +10,106 @@ layout: default
   .post-title {
     color: #2ECC71;
   }
-  .post-heading .tags {
-    color: #3498DB; /* Changed to Dodger Blue for better accessibility */
-  }
+  .post-heading .tags,
   .post-heading .tag {
-    color: #3498DB; /* Changed to Dodger Blue for better accessibility */
+    color: #3498DB; /* Dodger Blue for better accessibility */
   }
   .post-heading .info {
     color: #000000;
+  }
+  .post-heading a {
+    color: #3498DB;
+    text-decoration: none;
+  }
+  .post-heading a:hover {
+    text-decoration: underline;
+  }
+  .code-container {
+    position: relative;
+  }
+  .copy-button {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    padding: 5px 10px;
+    background-color: #f1f1f1;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
   }
 </style>
 
 <div class="post-wrapper">
   <article class="post">
-    <div class="post-heading">
-  <h1 class="post-title">
-    {{ page.title }}
-  </h1>
-  <div style="font-size: clamp(0.8rem, calc(0.8rem + 0.2vw), 1rem); text-align: center;" class="search-link">
-    <span>
-      <time>
-      &middot; {{ page.date | date_to_string }} ~&gt; {{ page.last_modified_at | date_to_string }}&nbsp;
-        {% assign created_date = page.date | date: "%Y-%m-%d" %}
-        {% assign modified_date = page.last_modified_at | date: "%Y-%m-%d" %}
-      </time>        
-      {% if page.tags %}
-      <span class="tags">
-        &middot; Tags:
-        {% for tag in page.tags %}
-        <a href="{{ site.baseurl }}/tags/#{{ tag | slugify }}" class="tag">{{ tag }}</a>
-          {% unless forloop.last %}
-          ,
-          {% endunless %}
-        {% endfor %}
-      </span>
-      {% endif %}
-      {% if page.info %}
-      <span class="info">
-        &middot; Edit: {{ page.info }}&nbsp;
-      </span>
-      {% endif %}
-      <a href="https://github.com/marioseixas/marioseixas.github.io/edit/main/{{ page.path }}" target="_blank">
-        &middot; Improve this
-      </a>&nbsp;
-      <a href="https://github.com/marioseixas/marioseixas.github.io/commits/main/{{ page.path }}" target="_blank">
-        &middot; Revision history
-      </a>
-    </span>
-  </div>
-</div>
-    {% assign date = page.date | default: "today" | date: site.data.language.str_date_format | default: '%B %-d, %Y' %}
-    <script src="{{ '/copy-to-clipboard.js' | relative_url }}" defer></script>
+    <header class="post-heading">
+      <h1 class="post-title">{{ page.title }}</h1>
+      <div style="font-size: clamp(0.8rem, calc(0.8rem + 0.2vw), 1rem); text-align: center;">
+        <span>
+          <time datetime="{{ page.date | date_to_xmlschema }}">
+            · {{ page.date | date_to_string }}
+          </time>
+          {% if page.last_modified_at %}
+            ~ <time datetime="{{ page.last_modified_at | date_to_xmlschema }}">
+              {{ page.last_modified_at | date_to_string }}
+            </time>
+          {% endif %}
+          
+          {% if page.tags %}
+            <span class="tags">
+              · Tags:
+              {% for tag in page.tags %}
+                <a href="{{ site.baseurl }}/tags/#{{ tag | slugify }}" class="tag">{{ tag }}</a>{% unless forloop.last %},{% endunless %}
+              {% endfor %}
+            </span>
+          {% endif %}
+          
+          {% if page.info %}
+            <span class="info">
+              · Edit: {{ page.info }}
+            </span>
+          {% endif %}
+          
+          <a href="https://github.com/marioseixas/marioseixas.github.io/edit/main/{{ page.path }}" target="_blank" rel="noopener noreferrer">
+            · Improve this
+          </a>
+          
+          <a href="https://github.com/marioseixas/marioseixas.github.io/commits/main/{{ page.path }}" target="_blank" rel="noopener noreferrer">
+            · Revision history
+          </a>
+        </span>
+      </div>
+    </header>
+
+    {% assign date = page.date | default: "today" | date: site.data.language.str_date_format | default: '%B %-d, %Y' %}  
+      </div>
+    {% endif %}
+
     <div class="post-content-body">
-      {{ content | replace: "<code>", "<div class='code-container'><code>" | replace: "</code>", "</code></div>" }}
+      {{ content | replace: "<pre><code>", "<div class='code-container'><pre><code>" | replace: "</code></pre>", "</code></pre><button class='copy-button'>Copy</button></div>" }}
     </div>
   </article>
-  {% cusdis_comments %}
+
+  {% if site.cusdis_app_id %}
+    {% cusdis_comments %}
+  {% endif %}
 </div>
+
+<script src="{{ '/copy-to-clipboard.js' | relative_url }}" defer></script> <script>
+  document.addEventListener('DOMContentLoaded', (event) => {
+    const codeContainers = document.querySelectorAll('.code-container');
+    
+    codeContainers.forEach(container => {
+      const copyButton = container.querySelector('.copy-button');
+      const codeBlock = container.querySelector('pre code');
+      
+      copyButton.addEventListener('click', () => {
+        navigator.clipboard.writeText(codeBlock.textContent).then(() => {
+          copyButton.textContent = 'Copied!';
+          setTimeout(() => {
+            copyButton.textContent = 'Copy';
+          }, 2000);
+        });
+      });
+    });
+  });
+</script>
