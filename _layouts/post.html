@@ -24,39 +24,41 @@ layout: default
 <div class="post-wrapper">
   <article class="post">
     <div class="post-heading">
-      <h1 class="post-title">
-        {{ page.title }}
-      </h1>
-      <div style="font-size: clamp(0.8rem, calc(0.8rem + 0.2vw), 1rem); text-align: center;" class="search-link">
-        <span>
-          <time>
-          · {{ page.date | date_to_string }} ~> {{ page.last_modified_at | date_to_string }} 
-            {% assign created_date = page.date | date: "%Y-%m-%d" %}
-            {% assign modified_date = page.last_modified_at | date: "%Y-%m-%d" %}
-          </time>        
+  <h1 class="post-title">
+    {{ page.title }}
+  </h1>
+  <div style="font-size: clamp(0.8rem, calc(0.8rem + 0.2vw), 1rem); text-align: center;" class="search-link">
+    <span>
+      <time>
+      &middot; {{ page.date | date_to_string }} ~&gt; {{ page.last_modified_at | date_to_string }}&nbsp;
+        {% assign created_date = page.date | date: "%Y-%m-%d" %}
+        {% assign modified_date = page.last_modified_at | date: "%Y-%m-%d" %}
+      </time>        
       {% if page.tags %}
-      <a class="tags">
+      <span class="tags">
+        &middot; Tags:
         {% for tag in page.tags %}
-        · Tags: {{ tag }} 
-      </a>
+        <a href="{{ site.baseurl }}/tags/#{{ tag | slugify }}" class="tag">{{ tag }}</a>
           {% unless forloop.last %}
+          ,
           {% endunless %}
-          {% endfor %}
-          {% endif %}
-          {% if page.info %}
-          <a class="info">
-            · Edit: {{ page.info }} 
-          </a>
-          {% endif %}
-          <a href="https://github.com/marioseixas/marioseixas.github.io/edit/main/{{ page.path }}" target="_blank">
-            · Improve this
-          </a> 
-          <a href="https://github.com/marioseixas/marioseixas.github.io/commits/main/{{ page.path }}" target="_blank">
-            · Revision history
-          </a>
-        </span>
-      </div>
-    </div>
+        {% endfor %}
+      </span>
+      {% endif %}
+      {% if page.info %}
+      <span class="info">
+        &middot; Edit: {{ page.info }}&nbsp;
+      </span>
+      {% endif %}
+      <a href="https://github.com/marioseixas/marioseixas.github.io/edit/main/{{ page.path }}" target="_blank">
+        &middot; Improve this
+      </a>&nbsp;
+      <a href="https://github.com/marioseixas/marioseixas.github.io/commits/main/{{ page.path }}" target="_blank">
+        &middot; Revision history
+      </a>
+    </span>
+  </div>
+</div>
     {% assign date = page.date | default: "today" | date: site.data.language.str_date_format | default: '%B %-d, %Y' %}
     <script src="{{ '/copy-to-clipboard.js' | relative_url }}" defer></script>
     <div class="post-content-body">
