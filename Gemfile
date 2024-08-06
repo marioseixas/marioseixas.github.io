@@ -13,6 +13,7 @@ group :jekyll_plugins do
   gem "jekyll-seo-tag"
   gem "kramdown-parser-gfm"
   gem "jekyll-readme-index"
+  gem "icalendar"
 end
 
 # Additional gems
