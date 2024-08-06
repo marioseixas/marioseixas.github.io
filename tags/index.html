@@ -18,11 +18,13 @@ type: tags
       {% endif %}
     {% endfor %}
     
-    {% assign portfolio = site.portfolio | map: 'tags' | join: ',' | split: ',' | uniq %}
-    {% for tag in portfolio %}
-      {% assign portfolio_tags = tag | join: '|' | append: '|' %}
-      {% assign rawtags = rawtags | append: portfolio_tags %}
-    {% endfor %}
+    {% if site.portfolio %}
+      {% assign portfolio = site.portfolio | map: 'tags' | join: ',' | split: ',' | uniq %}
+      {% for tag in portfolio %}
+        {% assign portfolio_tags = tag | join: '|' | append: '|' %}
+        {% assign rawtags = rawtags | append: portfolio_tags %}
+      {% endfor %}
+    {% endif %}
     
     {% for page in site.pages %}
       {% if page.tags.size > 0 %}
@@ -96,31 +98,33 @@ type: tags
         {% endfor %}
         
         {% comment %} Portfolio {% endcomment %}
-        {% for note in site.portfolio %}
-          {% if note.tags contains tag %}
-            <h5 class="tag-title">
-              <a href="{{ site.baseurl }}{{ note.url }}">
-                <i class="far fa-file" aria-hidden="true"></i>
-                {{ note.title }}
-              </a>
-              {% include blog/post_info.liquid date=note.date %}
-            </h5>
-          {% endif %}
-        {% endfor %}
+        {% if site.portfolio %}
+          {% for note in site.portfolio %}
+            {% if note.tags contains tag %}
+              <h5 class="tag-title">
+                <a href="{{ site.baseurl }}{{ note.url }}">
+                  <i class="far fa-file" aria-hidden="true"></i>
+                  {{ note.title }}
+                </a>
+                {% include blog/post_info.liquid date=note.date %}
+              </h5>
+            {% endif %}
+          {% endfor %}
+        {% endif %}
       </div>
     {% endfor %}
   </div>
 
   <div class="back-link">
-    <a href="{{ site.baseurl }}/tags/" class="tag-link">Back to tag cloud</a>
+    <a href="#" class="tag-link">Back to top</a>
   </div>
 </div>
 
 <style>
-  /* Existing styles */
+  /* Base styles */
   .tags-page {
-    font-family: BitPotionExt;
-    max-width: device-width;
+    font-family: BitPotionExt, sans-serif;
+    max-width: 100%;
     margin: 0 auto;
     padding: 20px;
   }
@@ -128,39 +132,8 @@ type: tags
     text-align: center;
     color: #FFFFFF;
   }
-  .post-link {
-    color: #FFFFFF;
-    text-decoration: none;
-    transition: color 0.3s ease;
-    font-size: 1.2em;
-    display: block;
-    margin-bottom: 5px;
-  }
-  .post-link:hover {
-    color: #0066cc;
-  }
-  .post-date {
-    font-size: 0.9em;
-    color: #888;
-    display: block;
-  }
-  .back-link {
-    margin-top: 40px;
-    text-align: center;
-  }
-  @media (max-width: 600px) {
-    .tags-page {
-      padding: 10px;
-    }
-    .page-title {
-      font-size: 1.5em;
-    }
-    .post-link {
-      font-size: 1em;
-    }
-  }
 
-  /* New integrated styles */
+  /* Tag list styles */
   .tag-list {
     width: 100%;
     padding-bottom: 10px;
@@ -169,21 +142,32 @@ type: tags
     margin: 0.1em;
     padding: 0.2em 0.4em;
     font-size: 0.9em;
+    color: #0066cc;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  .tag-list a.button:hover {
+    color: #004080;
   }
   .tag-list p {
     margin: 0;
     padding: 0 0.2em 0 0;
+    color: #666;
+    text-align: center;
   }
   .tag-list ul {
     text-align: center;
     list-style: none;
+    padding: 0;
   }
   .tag-list ul li, .tag-list ul div {
-    display: inline;
+    display: inline-block;
   }
   .tag-list ul div.meta {
     margin-right: 0.5em;
   }
+
+  /* Tag anchor styles */
   .tag-anchor {
     margin-top: 10px;
   }
@@ -193,6 +177,8 @@ type: tags
   .tag-anchor a:hover {
     text-decoration: none;
   }
+
+  /* Tag posts styles */
   .tag-posts {
     display: inline-block;
     width: 100%;
@@ -200,9 +186,21 @@ type: tags
   .tag-posts .tag-title {
     margin-top: 0;
     margin-bottom: 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 15px;
+  }
+  .tag-posts .tag-title:last-child {
+    border-bottom: none;
   }
   .tag-posts .tag-title a {
     margin-left: 10px;
+    color: #FFFFFF;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    font-size: 1.2em;
+  }
+  .tag-posts .tag-title a:hover {
+    color: #0066cc;
   }
   .tag-posts .tag-title .post-info {
     float: right;
@@ -212,8 +210,34 @@ type: tags
     float: right;
     font-size: 0.8em;
     line-height: normal;
+    color: #888;
   }
-  @media screen and (max-width: 576px) {
+
+  /* Back link styles */
+  .back-link {
+    margin-top: 40px;
+    text-align: center;
+  }
+  .back-link a {
+    color: #0066cc;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  .back-link a:hover {
+    color: #004080;
+  }
+
+  /* Responsive styles */
+  @media screen and (max-width: 600px) {
+    .tags-page {
+      padding: 10px;
+    }
+    .page-title {
+      font-size: 1.5em;
+    }
+    .tag-posts .tag-title a {
+      font-size: 1em;
+    }
     .tag-posts .meta {
       display: none;
     }
