@@ -32,6 +32,9 @@ jobs:
       - name: Install dependencies
         run: bundle install
 
+      - name: Fetch and Convert .ics to JSON
+        run: ruby fetch_ics_and_convert.rb
+
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v4
