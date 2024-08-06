@@ -1,9 +1,16 @@
 ---
 layout: default
 title: Tags
+permalink: /tags/
+description: "Browse all tags"
 ---
 
 <style>
+  .tag-page {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 1em;
+  }
   .tag-list {
     display: flex;
     flex-wrap: wrap;
@@ -27,25 +34,41 @@ title: Tags
     background-color: #2ECC71;
     color: #2C2C2C;
   }
+  .tagged-posts ul {
+    list-style-type: none;
+    padding-left: 0;
+  }
+  .tagged-posts li {
+    margin-bottom: 0.5em;
+  }
+  .tagged-posts time {
+    font-size: 0.9em;
+    color: #666;
+  }
+  @media (prefers-color-scheme: dark) {
+    body {
+      background-color: #1a1a1a;
+      color: #f0f0f0;
+    }
+    .tag-list a {
+      background-color: #333;
+    }
+    .tagged-posts time {
+      color: #999;
+    }
+  }
 </style>
 
 <div class="tag-page">
-  <h1>Tags</h1>
+  <h1>{{ page.title }}</h1>
 
-  {% capture site_tags %}{% for tag in site.tags %}{{ tag | first }}{% unless forloop.last %},{% endunless %}{% endfor %}{% endcapture %}
-  {% assign tag_words = site_tags | split:',' | sort %}
+  {% assign tag_words = site.tags | sort %}
 
-  <ul class="tag-list">
+  <ul class="tag-list" aria-label="List of all tags">
     {% for tag in tag_words %}
       <li>
-        <a href="#{{ tag | slugify }}">
-          {{ tag }} (
-          {% if site.tags[tag] is_array %}
-            {{ site.tags[tag] | size }}
-          {% else %}
-            1
-          {% endif %}
-          )
+        <a href="#{{ tag[0] | slugify }}" aria-label="Tag {{ tag[0] }} with {{ tag[1].size }} posts">
+          {{ tag[0] }} ({{ tag[1].size }})
         </a>
       </li>
     {% endfor %}
@@ -53,19 +76,38 @@ title: Tags
 
   <div class="tagged-posts">
     {% for tag in tag_words %}
-      <h2 id="{{ tag | slugify }}">{{ tag }}</h2>
-      <ul>
-        {% for post in site.tags[tag] %}
-        <li>
-          <a href="{{ post.url | relative_url }}">
-            {{ post.title }}
-          </a>
-          <time datetime="{{ post.date | date: '%Y-%m-%d' }}">
-            - {{ post.date | date: '%B %d, %Y' }}
-          </time>
-        </li>
-        {% endfor %}
-      </ul>
+      <section aria-labelledby="{{ tag[0] | slugify }}-heading">
+        <h2 id="{{ tag[0] | slugify }}-heading">{{ tag[0] }}</h2>
+        <ul>
+          {% for post in tag[1] %}
+          <li>
+            <a href="{{ post.url | relative_url }}">
+              {{ post.title }}
+            </a>
+            <time datetime="{{ post.date | date_to_xmlschema }}">
+              - {{ post.date | date: "%B %d, %Y" }}
+            </time>
+          </li>
+          {% endfor %}
+        </ul>
+      </section>
     {% endfor %}
   </div>
 </div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const tagLinks = document.querySelectorAll('.tag-list a');
+    tagLinks.forEach(link => {
+      link.addEventListener('click', function(e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('href');
+        const targetElement = document.querySelector(targetId);
+        if (targetElement) {
+          targetElement.scrollIntoView({ behavior: 'smooth' });
+          history.pushState(null, '', targetId);
+        }
+      });
+    });
+  });
+</script>
