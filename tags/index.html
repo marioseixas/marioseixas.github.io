@@ -2,13 +2,14 @@
 layout: default
 title: Tags
 permalink: /tags/
-description: "Browse all tags"
 ---
 
 {% capture site_tags %}
   {% for post in site.posts %}
     {% if post.tags %}
       {% if post.tags.first.size > 1 %}
+        {{ post.tags | join: ',' }}
+      {% elsif post.tags.first %}
         {{ post.tags | join: ',' }}
       {% else %}
         {{ post.tags }}
@@ -62,7 +63,7 @@ description: "Browse all tags"
   }
   @media (prefers-color-scheme: dark) {
     body {
-      background-color: #1a1a1a;
+      background-color: #2C2C2C;
       color: #f0f0f0;
     }
     .tag-list a {
@@ -79,9 +80,10 @@ description: "Browse all tags"
 
   <ul class="tag-list" aria-label="List of all tags">
     {% for tag in unique_tags %}
+      {% assign tag_posts = site.tags[tag] | default: site.posts | where: "tags", tag %}
       <li>
-        <a href="#{{ tag | slugify }}" aria-label="Tag {{ tag }} with {{ site.tags[tag].size }} posts">
-          {{ tag }} ({{ site.tags[tag].size }})
+        <a href="#{{ tag | slugify }}" aria-label="Tag {{ tag }} with {{ tag_posts.size }} posts">
+          {{ tag }} ({{ tag_posts.size }})
         </a>
       </li>
     {% endfor %}
@@ -93,7 +95,7 @@ description: "Browse all tags"
         <h2 id="{{ tag | slugify }}-heading">{{ tag }}</h2>
         <ul>
           {% for post in site.posts %}
-            {% if post.tags contains tag or post.tags == tag %}
+            {% if post.tags contains tag or post.tags == tag or post.tags.first == tag %}
               <li>
                 <a href="{{ post.url | relative_url }}">
                   {{ post.title }}
@@ -111,6 +113,7 @@ description: "Browse all tags"
             {% endif %}
           {% endfor %}
         </ul>
+	<a href="#{{ page.title }}" style="float: right">&uarr;</a>
       </section>
     {% endfor %}
   </div>
