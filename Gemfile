@@ -14,6 +14,7 @@ group :jekyll_plugins do
   gem "kramdown-parser-gfm"
   gem "jekyll-readme-index"
   gem "icalendar"
+  gem "jekyll-data"
 end
 
 # Additional gems
