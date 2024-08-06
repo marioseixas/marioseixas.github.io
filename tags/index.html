@@ -4,26 +4,17 @@ title: Tags
 permalink: /tags/
 ---
 
-{% capture site_tags %}
-  {% for post in site.posts %}
-    {% if post.tags %}
-      {% if post.tags.first | size > 0 %}
-        {% if post.tags.first.size > 0 %}  
-          {% assign tags = post.tags | split: ' ' %}
-          {% for tag in tags %}
-            {{ tag }},{% unless forloop.last %}{% endunless %}
-          {% endfor %}
-        {% else %}
-          {% for tag in post.tags %}
-            {{ tag }},{% unless forloop.last %}{% endunless %}
-          {% endfor %}
-        {% endif %}
-      {% endif %}
-    {% endif %}
+{% assign all_tags = "" | split: "" %}
+{% for post in site.posts %}
+  {% assign post_tags = post.tags | default: post.tags[0] %}
+  {% for tag in post_tags %}
+    {% assign tag_downcase = tag | downcase %}
+    {% unless all_tags contains tag_downcase %}
+      {% assign all_tags = all_tags | push: tag_downcase %}
+    {% endunless %}
   {% endfor %}
-{% endcapture %}
-
-{% assign unique_tags = site_tags | split: ',' | uniq | sort %}
+{% endfor %}
+{% assign sorted_tags = all_tags | sort %}
 
 <style>
   .tag-page {
@@ -67,7 +58,7 @@ permalink: /tags/
   }
   @media (prefers-color-scheme: dark) {
     body {
-      background-color: #2C2C2C;
+      background-color: #1a1a1a;
       color: #f0f0f0;
     }
     .tag-list a {
@@ -83,35 +74,39 @@ permalink: /tags/
   <h1>{{ page.title }}</h1>
 
   <ul class="tag-list" aria-label="List of all tags">
-    {% for tag in unique_tags %}
-      {% assign tag_posts = site.posts | where_exp: "post", "post.tags contains tag" %}
+    {% for tag in sorted_tags %}
+      {% assign tag_posts = site.posts | where_exp: "post", "post.tags contains tag or post.tags == tag or post.tags[0] == tag" %}
       <li>
         <a href="#{{ tag | slugify }}" aria-label="Tag {{ tag }} with {{ tag_posts.size }} posts">
-          {{ tag }} ({{ tag_posts.size }})
+          {{ tag | capitalize }} ({{ tag_posts.size }})
         </a>
       </li>
     {% endfor %}
   </ul>
 
   <div class="tagged-posts">
-    {% for tag in unique_tags %}
+    {% for tag in sorted_tags %}
       <section aria-labelledby="{{ tag | slugify }}-heading">
-        <h2 id="{{ tag | slugify }}-heading">{{ tag }}</h2>
+        <h2 id="{{ tag | slugify }}-heading">{{ tag | capitalize }}</h2>
         <ul>
-          {% for post in site.posts %}
-            {% if post.tags and (post.tags contains tag) %}
-              <li>
-                <a href="{{ post.url | relative_url }}">
-                  {{ post.title }}
-                </a>
-                <time datetime="{{ post.date | date_to_xmlschema }}">
-                  - {{ post.date | date: "%B %d, %Y" }}
-                </time>                
-              </li>
-            {% endif %}
+          {% assign tag_posts = site.posts | where_exp: "post", "post.tags contains tag or post.tags == tag or post.tags[0] == tag" %}
+          {% for post in tag_posts %}
+            <li>
+              <a href="{{ post.url | relative_url }}">
+                {{ post.title }}
+              </a>
+              <time datetime="{{ post.date | date_to_xmlschema }}">
+                - {{ post.date | date: "%B %d, %Y" }}
+              </time>
+              {% if post.comment %}
+                <span class="post-comment"> | {{ post.comment }}</span>
+              {% endif %}
+              {% if post.info %}
+                <span class="post-info"> | {{ post.info }}</span>
+              {% endif %}
+            </li>
           {% endfor %}
         </ul>
-	<a href="#" style="float: right">↑</a>
       </section>
     {% endfor %}
   </div>
