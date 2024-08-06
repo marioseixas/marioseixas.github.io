@@ -106,13 +106,7 @@ permalink: /tags/
                 </a>
                 <time datetime="{{ post.date | date_to_xmlschema }}">
                   - {{ post.date | date: "%B %d, %Y" }}
-                </time>
-                {% if post.comment %}
-                  <span class="post-comment"> | {{ post.comment }}</span>
-                {% endif %}
-                {% if post.info %}
-                  <span class="post-info"> | {{ post.info }}</span>
-                {% endif %}
+                </time>                
               </li>
             {% endif %}
           {% endfor %}
