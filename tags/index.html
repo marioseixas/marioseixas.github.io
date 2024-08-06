@@ -97,7 +97,7 @@ permalink: /tags/
         <h2 id="{{ tag | slugify }}-heading">{{ tag }}</h2>
         <ul>
           {% for post in site.posts %}
-            {% if post.tags contains tag or post.tags contains tag | split: ' ' %}
+            {% if post.tags and (post.tags contains tag or (post.tags.first.is_a? String and post.tags contains tag)) %}
               <li>
                 <a href="{{ post.url | relative_url }}">
                   {{ post.title }}
