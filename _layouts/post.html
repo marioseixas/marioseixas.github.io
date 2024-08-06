@@ -82,9 +82,7 @@ layout: default
 
     {% assign date = page.date | default: "today" | date: site.data.language.str_date_format | default: '%B %-d, %Y' %}  
       </div>
-    {% endif %}
-
-    <div class="post-content-body">
+<div class="post-content-body">
       {{ content | replace: "<pre><code>", "<div class='code-container'><pre><code>" | replace: "</code></pre>", "</code></pre><button class='copy-button'>Copy</button></div>" }}
     </div>
   </article>
