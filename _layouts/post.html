@@ -11,15 +11,16 @@ layout: default
     color: #2ECC71;
   }
   .post-heading .tags {
-    color: #E74C3C;
+    color: #3498DB; /* Changed to Dodger Blue for better accessibility */
   }
   .post-heading .tag {
-    color: #E74C3C;
+    color: #3498DB; /* Changed to Dodger Blue for better accessibility */
   }
   .post-heading .info {
     color: #000000;
   }
 </style>
+
 <div class="post-wrapper">
   <article class="post">
     <div class="post-heading">
@@ -29,14 +30,14 @@ layout: default
       <div style="font-size: clamp(0.8rem, calc(0.8rem + 0.2vw), 1rem); text-align: center;" class="search-link">
         <span>
           <time>
-          &middot; {{ page.date | date_to_string }} ~&gt; {{ page.last_modified_at | date_to_string }}&nbsp;
+          · {{ page.date | date_to_string }} ~> {{ page.last_modified_at | date_to_string }} 
             {% assign created_date = page.date | date: "%Y-%m-%d" %}
             {% assign modified_date = page.last_modified_at | date: "%Y-%m-%d" %}
           </time>        
       {% if page.tags %}
       <a class="tags">
         {% for tag in page.tags %}
-        &middot; Tags: {{ tag }}&nbsp;
+        · Tags: {{ tag }} 
       </a>
           {% unless forloop.last %}
           {% endunless %}
@@ -44,20 +45,23 @@ layout: default
           {% endif %}
           {% if page.info %}
           <a class="info">
-            &middot; Edit: {{ page.info }}&nbsp;
+            · Edit: {{ page.info }} 
           </a>
           {% endif %}
           <a href="https://github.com/marioseixas/marioseixas.github.io/edit/main/{{ page.path }}" target="_blank">
-            &middot; Improve this
-          </a>&nbsp;
+            · Improve this
+          </a> 
           <a href="https://github.com/marioseixas/marioseixas.github.io/commits/main/{{ page.path }}" target="_blank">
-            &middot; Revision history
+            · Revision history
           </a>
         </span>
       </div>
     </div>
+    {% assign date = page.date | default: "today" | date: site.data.language.str_date_format | default: '%B %-d, %Y' %}
     <script src="{{ '/copy-to-clipboard.js' | relative_url }}" defer></script>
-    {{ content | replace: "<code>", "<div class='code-container'><code>" | replace: "</code>", "</code></div>" }}
+    <div class="post-content-body">
+      {{ content | replace: "<code>", "<div class='code-container'><code>" | replace: "</code>", "</code></div>" }}
+    </div>
   </article>
   {% cusdis_comments %}
 </div>
