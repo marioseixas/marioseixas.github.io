@@ -1,5 +1,63 @@
 ---
 layout: default
 title: Tags
-type: tags
 ---
+
+<style>
+  .tag-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    list-style-type: none;
+    padding: 0;
+  }
+  .tag-list li {
+    margin: 0.5em;
+  }
+  .tag-list a {
+    color: #2ECC71;
+    background-color: #2C2C2C;
+    border: 1px solid #2ECC71;
+    border-radius: 0.25em;
+    padding: 0.5em 1em;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  .tag-list a:hover, .tag-list a:focus {
+    background-color: #2ECC71;
+    color: #2C2C2C;
+  }
+</style>
+
+<div class="tag-page">
+  <h1>Tags</h1>
+  <ul class="tag-list">
+    {% assign tags = site.tags | sort %}
+    {% for tag in tags %}
+    <li>
+      <a href="#{{ tag[0] | slugify }}">
+        {{ tag[0] }} ({{ tag[1].size }})
+      </a>
+    </li>
+    {% endfor %}
+  </ul>
+
+  <div class="tagged-posts">
+    {% for tag in tags %}
+    <h2 id="{{ tag[0] | slugify }}">{{ tag[0] }}</h2>
+    <ul>
+      {% assign posts = tag[1] | sort: 'date' | reverse %}
+      {% for post in posts %}
+      <li>
+        <a href="{{ post.url | relative_url }}">
+          {{ post.title }}
+        </a>
+        <time datetime="{{ post.date | date: '%Y-%m-%d' }}">
+          - {{ post.date | date: '%B %d, %Y' }}
+        </time>
+      </li>
+      {% endfor %}
+    </ul>
+    {% endfor %}
+  </div>
+</div>
