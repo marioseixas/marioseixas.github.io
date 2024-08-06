@@ -2,13 +2,14 @@ require 'net/http'
 require 'uri'
 require 'icalendar'
 require 'json'
-require 'open-uri'
+require 'yaml'
 
-url = 'https://dav.heydola.com/dav.php/calendars/py28wj81/default/?export'
-username = 'py28wj81'
-password = '20287290'
+config = YAML.load_file('_config.yml')
+calendar_url = config['calendar']['url']
+username = config['calendar']['username']
+password = config['calendar']['password']
 
-uri = URI(url)
+uri = URI(calendar_url)
 req = Net::HTTP::Get.new(uri)
 req.basic_auth(username, password)
 
