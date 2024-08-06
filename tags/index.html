@@ -32,7 +32,7 @@ title: Tags
 <div class="tag-page">
   <h1>Tags</h1>
   <ul class="tag-list">
-    {% assign tags = site.tags | sort %}
+    {% assign tags = site.tags | sort: 'size' | reverse %}
     {% for tag in tags %}
     <li>
       <a href="#{{ tag[0] | slugify }}">
