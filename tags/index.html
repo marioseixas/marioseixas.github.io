@@ -39,7 +39,13 @@ title: Tags
     {% for tag in tag_words %}
       <li>
         <a href="#{{ tag | slugify }}">
-          {{ tag }} ({{ site.tags[tag] | size }})
+          {{ tag }} (
+          {% if site.tags[tag] is_array %}
+            {{ site.tags[tag] | size }}
+          {% else %}
+            1
+          {% endif %}
+          )
         </a>
       </li>
     {% endfor %}
