@@ -267,3 +267,75 @@ blockquote {
     text-decoration: underline;
   }
 }
+
+/* Tag Page Styles */
+.tag-page {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 1em;
+}
+
+.tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  list-style-type: none;
+  padding: 0;
+}
+
+.tag-list li {
+  margin: 0.5em;
+}
+
+.tag-list a {
+  color: $color-links;
+  background-color: $color-background;
+  border: 1px solid $color-links;
+  border-radius: 0.25em;
+  padding: 0.5em 1em;
+  text-decoration: none;
+  transition: background-color 0.3s ease, color 0.3s ease;
+
+  &:hover, &:focus {
+    background-color: $color-links;
+    color: $color-background;
+  }
+}
+
+.tagged-posts ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.tagged-posts li {
+  margin-bottom: 0.5em;
+}
+
+.tagged-posts time {
+  font-size: 0.9em;
+  color: #666;
+}
+
+.back-to-top {
+  float: right;
+  color: $color-links;
+  text-decoration: none;
+  transition: color 0.3s ease;
+
+  &:hover, &:focus {
+    color: darken($color-links, 10%);
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #1a1a1a;
+    color: #f0f0f0;
+  }
+  .tag-list a {
+    background-color: #333;
+  }
+  .tagged-posts time {
+    color: #999;
+  }
+}
