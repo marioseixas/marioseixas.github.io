@@ -33,7 +33,8 @@ permalink: /tags/
   <div class="tagged-posts">
     {% for tag in sorted_tags %}
       <section aria-labelledby="{{ tag | slugify }}-heading">
-        <h2 id="{{ tag | slugify }}-heading">{{ tag | capitalize }}</h2>
+        <h2 id="{{ tag | slugify }}-heading">{{ tag }}</h2>
+        <a href="#" id="back-to-top">&uarr;</a>
         <ul>
           {% assign tag_posts = site.posts | where_exp: "post", "post.tags contains tag or post.tags == tag or post.tags[0] == tag" %}
           {% for post in tag_posts %}
@@ -46,8 +47,7 @@ permalink: /tags/
               </time>
             </li>
           {% endfor %}
-        </ul>
-        <a href="#" class="back-to-top">↑ Back to top</a>
+        </ul>        
       </section>
     {% endfor %}
   </div>
