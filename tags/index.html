@@ -6,10 +6,11 @@ permalink: /tags/
 
 {% assign all_tags = "" | split: "" %}
 {% for post in site.posts %}
-  {% assign post_tags = post.tags | default: empty %}
+  {% assign post_tags = post.tags | default: post.tags[0] %}
   {% for tag in post_tags %}
-    {% unless all_tags contains tag %}
-      {% assign all_tags = all_tags | push: tag %}
+    {% assign tag_downcase = tag | downcase %}
+    {% unless all_tags contains tag_downcase %}
+      {% assign all_tags = all_tags | push: tag_downcase %}
     {% endunless %}
   {% endfor %}
 {% endfor %}
@@ -20,7 +21,7 @@ permalink: /tags/
 
   <ul class="tag-list" aria-label="List of all tags">
     {% for tag in sorted_tags %}
-      {% assign tag_posts = site.posts | where_exp: "post", "post.tags contains tag" %}
+      {% assign tag_posts = site.posts | where_exp: "post", "post.tags contains tag or post.tags == tag or post.tags[0] == tag" %}
       <li>
         <a href="#{{ tag | slugify }}" aria-label="Tag {{ tag }} with {{ tag_posts.size }} posts">
           {{ tag | capitalize }} ({{ tag_posts.size }})
@@ -34,7 +35,7 @@ permalink: /tags/
       <section aria-labelledby="{{ tag | slugify }}-heading">
         <h2 id="{{ tag | slugify }}-heading">{{ tag | capitalize }}</h2>
         <ul>
-          {% assign tag_posts = site.posts | where_exp: "post", "post.tags contains tag" %}
+          {% assign tag_posts = site.posts | where_exp: "post", "post.tags contains tag or post.tags == tag or post.tags[0] == tag" %}
           {% for post in tag_posts %}
             <li>
               <a href="{{ post.url | relative_url }}">
@@ -46,6 +47,7 @@ permalink: /tags/
             </li>
           {% endfor %}
         </ul>
+        <a href="#" class="back-to-top">↑ Back to top</a>
       </section>
     {% endfor %}
   </div>
@@ -53,17 +55,15 @@ permalink: /tags/
 
 <script>
   document.addEventListener('DOMContentLoaded', function() {
-    const tagLinks = document.querySelectorAll('.tag-list a, .back-to-top');
+    const tagLinks = document.querySelectorAll('.tag-list a');
     tagLinks.forEach(link => {
       link.addEventListener('click', function(e) {
         e.preventDefault();
         const targetId = this.getAttribute('href');
-        const targetElement = targetId === '#' ? document.body : document.querySelector(targetId);
+        const targetElement = document.querySelector(targetId);
         if (targetElement) {
           targetElement.scrollIntoView({ behavior: 'smooth' });
-          if (targetId !== '#') {
-            history.pushState(null, '', targetId);
-          }
+          history.pushState(null, '', targetId);
         }
       });
     });
