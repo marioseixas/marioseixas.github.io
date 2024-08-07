@@ -6,82 +6,21 @@ permalink: /tags/
 
 {% assign all_tags = "" | split: "" %}
 {% for post in site.posts %}
-  {% assign post_tags = post.tags | default: post.tags[0] %}
+  {% assign post_tags = post.tags | default: empty %}
   {% for tag in post_tags %}
-    {% assign all_tags = tag %}
+    {% unless all_tags contains tag %}
+      {% assign all_tags = all_tags | push: tag %}
+    {% endunless %}
   {% endfor %}
 {% endfor %}
-{% assign sorted_tags = all_tags %}
-
-<style>
-  .tag-page {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 1em;
-  }
-  .tag-list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    list-style-type: none;
-    padding: 0;
-  }
-  .tag-list li {
-    margin: 0.5em;
-  }
-  .tag-list a {
-    color: #2ECC71;
-    background-color: #2C2C2C;
-    border: 1px solid #2ECC71;
-    border-radius: 0.25em;
-    padding: 0.5em 1em;
-    text-decoration: none;
-    transition: background-color 0.3s ease, color 0.3s ease;
-  }
-  .tag-list a:hover, .tag-list a:focus {
-    background-color: #2ECC71;
-    color: #2C2C2C;
-  }
-  .tagged-posts ul {
-    list-style-type: none;
-    padding-left: 0;
-  }
-  .tagged-posts li {
-    margin-bottom: 0.5em;
-  }
-  .tagged-posts time {
-    font-size: 0.9em;
-    color: #666;
-  }
-  .back-to-top {
-    float: right;
-    color: #2ECC71;
-    text-decoration: none;
-    transition: color 0.3s ease;
-  }
-  .back-to-top:hover, .back-to-top:focus {
-    color: #27AE60;
-  }
-  @media (prefers-color-scheme: dark) {
-    body {
-      background-color: #1a1a1a;
-      color: #f0f0f0;
-    }
-    .tag-list a {
-      background-color: #333;
-    }
-    .tagged-posts time {
-      color: #999;
-    }
-  }
-</style>
+{% assign sorted_tags = all_tags | sort %}
 
 <div class="tag-page">
   <h1>{{ page.title }}</h1>
 
   <ul class="tag-list" aria-label="List of all tags">
     {% for tag in sorted_tags %}
-      {% assign tag_posts = site.posts | where_exp: "post", "post.tags contains tag or post.tags == tag or post.tags[0] == tag" %}
+      {% assign tag_posts = site.posts | where_exp: "post", "post.tags contains tag" %}
       <li>
         <a href="#{{ tag | slugify }}" aria-label="Tag {{ tag }} with {{ tag_posts.size }} posts">
           {{ tag | capitalize }} ({{ tag_posts.size }})
@@ -95,7 +34,7 @@ permalink: /tags/
       <section aria-labelledby="{{ tag | slugify }}-heading">
         <h2 id="{{ tag | slugify }}-heading">{{ tag | capitalize }}</h2>
         <ul>
-          {% assign tag_posts = site.posts | where_exp: "post", "post.tags contains tag or post.tags == tag or post.tags[0] == tag" %}
+          {% assign tag_posts = site.posts | where_exp: "post", "post.tags contains tag" %}
           {% for post in tag_posts %}
             <li>
               <a href="{{ post.url | relative_url }}">
