@@ -8,10 +8,7 @@ permalink: /tags/
 {% for post in site.posts %}
   {% assign post_tags = post.tags | default: post.tags[0] %}
   {% for tag in post_tags %}
-    {% assign tag_downcase = tag | downcase %}
-    {% unless all_tags contains tag_downcase %}
-      {% assign all_tags = all_tags | push: tag_downcase %}
-    {% endunless %}
+    {% assign all_tags = tag %}
   {% endfor %}
 {% endfor %}
 {% assign sorted_tags = all_tags | sort %}
@@ -107,16 +104,9 @@ permalink: /tags/
               <time datetime="{{ post.date | date_to_xmlschema }}">
                 - {{ post.date | date: "%B %d, %Y" }}
               </time>
-              {% if post.comment %}
-                <span class="post-comment"> | {{ post.comment }}</span>
-              {% endif %}
-              {% if post.info %}
-                <span class="post-info"> | {{ post.info }}</span>
-              {% endif %}
             </li>
           {% endfor %}
         </ul>
-        <a href="#" class="back-to-top">↑ Back to top</a>
       </section>
     {% endfor %}
   </div>
