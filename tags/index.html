@@ -4,18 +4,17 @@ title: Tags
 permalink: /tags/
 ---
 
-{% capture site_tags %}
-  {% for post in site.posts %}
-    {% if post.tags %}
-      {% assign post_tags = post.tags | default: post.tags[0] %}
-      {% for tag in post_tags %}
-        {{ tag | strip | downcase }},
-      {% endfor %}
-    {% endif %}
+{% assign all_tags = "" | split: "" %}
+{% for post in site.posts %}
+  {% assign post_tags = post.tags | default: post.tags[0] %}
+  {% for tag in post_tags %}
+    {% assign tag_downcase = tag | downcase %}
+    {% unless all_tags contains tag_downcase %}
+      {% assign all_tags = all_tags | push: tag_downcase %}
+    {% endunless %}
   {% endfor %}
-{% endcapture %}
-
-{% assign sorted_tags = site_tags | split: ',' | uniq | sort %}
+{% endfor %}
+{% assign sorted_tags = all_tags | sort %}
 
 <style>
   .tag-page {
