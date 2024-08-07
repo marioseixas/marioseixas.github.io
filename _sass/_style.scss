@@ -279,7 +279,7 @@ blockquote {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  list-style-type: none;
+  list-style: none; /* Use list-style instead of list-style-type for broader compatibility */
   padding: 0;
 }
 
@@ -303,7 +303,7 @@ blockquote {
 }
 
 .tagged-posts ul {
-  list-style-type: none;
+  list-style: none; /* Use list-style instead of list-style-type for broader compatibility */
   padding-left: 0;
 }
 
@@ -314,28 +314,4 @@ blockquote {
 .tagged-posts time {
   font-size: 0.9em;
   color: #666;
-}
-
-.back-to-top {
-  float: right;
-  color: $color-links;
-  text-decoration: none;
-  transition: color 0.3s ease;
-
-  &:hover, &:focus {
-    color: darken($color-links, 10%);
-  }
-}
-
-@media (prefers-color-scheme: dark) {
-  body {
-    background-color: #1a1a1a;
-    color: #f0f0f0;
-  }
-  .tag-list a {
-    background-color: #333;
-  }
-  .tagged-posts time {
-    color: #999;
-  }
 }
