@@ -9,11 +9,11 @@ layout: default
       <div class="search-link">
         <span>
           <time datetime="{{ page.date | date_to_xmlschema }}">
-            · {{ page.date | date_to_string }}
+            · {{ page.date | date: "%B %-d, %Y" }}
           </time>
           {% if page.last_modified_at %}
             ~ <time datetime="{{ page.last_modified_at | date_to_xmlschema }}">
-              {{ page.last_modified_at | date_to_string }}
+              {{ page.last_modified_at | date: "%B %-d, %Y" }}
             </time>
           {% endif %}
           
@@ -43,14 +43,15 @@ layout: default
       </div>
     </header>
 
-    {% assign date = page.date | default: "today" | date: site.data.language.str_date_format | default: '%B %-d, %Y' %}  
-  </div>
-  <div class="post-content-body">
-  </div>
-  <script src="{{ '/copy-to-clipboard.js' | relative_url }}" defer></script>
-  {{ content | replace: "<code>", "<div class='code-container'><code>" | replace: "</code>", "</code></div>" }}
+    <div class="post-content-body">
+      {{ content | replace: "<code>", "<div class='code-container'><code>" | replace: "</code>", "</code></div>" }}
+    </div>
+    
+    {% if site.cusdis_app_id %}
+      {% cusdis_comments %}
+    {% endif %}
+    
   </article>
-  {% if site.cusdis_app_id %}
-    {% cusdis_comments %}
-  {% endif %}
 </div>
+
+<script src="{{ '/copy-to-clipboard.js' | relative_url }}" defer></script>
