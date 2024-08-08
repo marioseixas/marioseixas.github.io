@@ -82,32 +82,12 @@ layout: default
 
     {% assign date = page.date | default: "today" | date: site.data.language.str_date_format | default: '%B %-d, %Y' %}  
       </div>
-<div class="post-content-body">
-      {{ content | replace: "<pre><code>", "<div class='code-container'><pre><code>" | replace: "</code></pre>", "</code></pre><button class='copy-button'>Copy</button></div>" }}
-    </div>
-  </article>
-
+<div class="post-content-body">  
+</div>
+<script src="{{ '/copy-to-clipboard.js' | relative_url }}" defer></script>
+{{ content | replace: "<code>", "<div class='code-container'><code>" | replace: "</code>", "</code></div>" }}
+</article>
   {% if site.cusdis_app_id %}
     {% cusdis_comments %}
   {% endif %}
 </div>
-
-<script src="{{ '/copy-to-clipboard.js' | relative_url }}" defer></script> <script>
-  document.addEventListener('DOMContentLoaded', (event) => {
-    const codeContainers = document.querySelectorAll('.code-container');
-    
-    codeContainers.forEach(container => {
-      const copyButton = container.querySelector('.copy-button');
-      const codeBlock = container.querySelector('pre code');
-      
-      copyButton.addEventListener('click', () => {
-        navigator.clipboard.writeText(codeBlock.textContent).then(() => {
-          copyButton.textContent = 'Copied!';
-          setTimeout(() => {
-            copyButton.textContent = 'Copy';
-          }, 2000);
-        });
-      });
-    });
-  });
-</script>
