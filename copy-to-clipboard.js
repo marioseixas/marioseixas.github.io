@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   copyButtons.forEach(button => {
     button.addEventListener('click', () => {
-      const codeBlock = button.closest('pre > code');
+      const codeBlock = button.closest('.code-container').querySelector('pre code'); // Updated selector
       if (!codeBlock) return;
 
       const codeText = codeBlock.textContent.trim();
