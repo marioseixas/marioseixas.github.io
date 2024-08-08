@@ -24,8 +24,8 @@ $colors: (
 );
 
 // Typography
-$font-family-main: 'BitPotionExt', sans-serif;
-$font-family-code: 'BitPotionExt', monospace;
+$font-family-main: 'BitPotionExt';
+$font-family-code: 'BitPotionExt';
 $line-height-base: 1.5;
 $font-size-base: 16px;
 
@@ -319,7 +319,13 @@ blockquote {
   cursor: pointer;
   color: color(text);
   transition: background-color 0.3s ease;
+
   &:hover {
     background-color: rgba(color(text), 0.2);
+  }
+
+  &.copied {
+    background-color: rgba(color(headings), 0.4);
+    color: color(background);
   }
 }
