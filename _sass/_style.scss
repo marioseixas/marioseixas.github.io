@@ -16,15 +16,20 @@ $colors: (
   highlights: (
     crimson: #E74C3C,
     pumpkin: #D35400
+  ),
+  code: (
+    background: #34495E,
+    text: #1ABC9C
   )
 );
 
 // Typography
-$font-family-main: 'BitPotionExt';
+$font-family-main: 'BitPotionExt', sans-serif;
+$font-family-code: 'BitPotionExt', monospace;
 $line-height-base: 1.5;
 $font-size-base: 16px;
 
-// Mixins
+// Mixins and Functions
 @function color($key, $subkey: null) {
   @if $subkey {
     @return map-get(map-get($colors, $key), $subkey);
@@ -32,18 +37,23 @@ $font-size-base: 16px;
   @return map-get($colors, $key);
 }
 
-@mixin responsive-font($min-size, $max-size, $min-vw: 320px, $max-vw: 1200px) {
-  font-size: clamp(#{$min-size}, calc(#{$min-size} + #{strip-unit($max-size - $min-size)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)})), #{$max-size});
-}
-
 @function strip-unit($value) {
   @return $value / ($value * 0 + 1);
+}
+
+@mixin responsive-font($min-size, $max-size, $min-vw: 320px, $max-vw: 1200px) {
+  $min-size-rem: strip-unit($min-size) / 16 * 1rem;
+  $max-size-rem: strip-unit($max-size) / 16 * 1rem;
+  $min-vw-rem: strip-unit($min-vw) / 16 * 1rem;
+  $max-vw-rem: strip-unit($max-vw) / 16 * 1rem;
+  
+  font-size: clamp(#{$min-size-rem}, calc(#{$min-size-rem} + #{strip-unit($max-size-rem - $min-size-rem)} * (100vw - #{$min-vw-rem}) / #{strip-unit($max-vw-rem - $min-vw-rem)}), #{$max-size-rem});
 }
 
 // Base Styles
 html {
   box-sizing: border-box;
-  @include responsive-font($font-size-base, $font-size-base * 1.25);
+  font-size: $font-size-base;
 }
 
 *, *::before, *::after {
@@ -58,6 +68,7 @@ body {
   margin: 0 auto;
   max-width: 40em;
   padding: 1em;
+  @include responsive-font(16px, 20px);
 }
 
 // Typography
@@ -66,7 +77,7 @@ body {
     color: color(headings);
     margin: 1em 0 0.5em;
     line-height: 1.2;
-    font-size: #{200% * pow(2, (6 - $i) / 6)};
+    font-size: #{2.5rem / $i};
   }
 }
 
@@ -83,13 +94,34 @@ p {
   hyphens: auto;
 }
 
+// Code styles
+%code-base {
+  font-family: $font-family-code;
+  background: color(code, background);
+  color: color(code, text);
+  padding: 0.2em 0.4em;
+  border-radius: 4px;
+  overflow-x: auto;
+  white-space: pre-wrap;
+  word-break: break-all;
+  word-wrap: break-word;
+}
+
+pre, code {
+  @extend %code-base;
+  @include responsive-font(14px, 18px);
+}
+
+:not(pre) > code, kbd, samp, tt {
+  @extend %code-base;
+  @include responsive-font(12px, 16px);
+}
+
 // Responsive elements
 img, canvas, iframe, video, svg, select, textarea {
   max-width: 100%;
   height: auto;
 }
-
-pre { overflow-x: auto; }
 
 // Tables
 table {
@@ -99,14 +131,14 @@ table {
 
 th, td {
   padding: 0.5em 1em;
-  text-align: start;
+  text-align: left;
   border: 1px dotted color(accents, amethyst);
 }
 
 th, thead, tfoot {
   background: color(headings);
   font-weight: bold;
-  @include responsive-font($font-size-base, $font-size-base * 1.25);
+  color: color(background);
 }
 
 // Forms
@@ -154,7 +186,7 @@ img[src*="logo" i] {
 
 // Custom components
 .comment-box {
-  @include responsive-font($font-size-base * 0.8, $font-size-base * 1.2);
+  @include responsive-font(13px, 16px);
   margin: 1.25rem 0 0.625rem;
   line-height: 1.25;
   border: 1px dotted color(accents, dodgerblue);
@@ -165,7 +197,7 @@ img[src*="logo" i] {
 
 .search-link {
   display: inline-block;
-  @include responsive-font($font-size-base * 1.5, $font-size-base * 3);
+  @include responsive-font(24px, 48px);
   border: 1px dotted color(accents, dodgerblue);
   border-radius: 0.1875rem;
   background-color: rgba(color(accents, dodgerblue), 0.1);
@@ -196,8 +228,8 @@ blockquote {
 }
 
 ::selection {
-  background-color: #34495E;
-  color: color(text);
+  background-color: color(code, background);
+  color: color(code, text);
 }
 
 // Print styles
@@ -255,7 +287,7 @@ blockquote {
 
   time {
     font-size: 0.9em;
-    color: #666;
+    color: rgba(color(text), 0.7);
   }
 }
 
@@ -268,7 +300,7 @@ blockquote {
 
 .post-heading {
   .tags, .tag { color: color(accents, dodgerblue); }
-  .info { color: #000000; }
+  .info { color: rgba(color(text), 0.8); }
 
   a {
     color: color(accents, dodgerblue);
@@ -284,8 +316,14 @@ blockquote {
   top: 5px;
   right: 5px;
   padding: 5px 10px;
-  background-color: #f1f1f1;
+  background-color: rgba(color(text), 0.1);
   border: none;
   border-radius: 3px;
   cursor: pointer;
+  color: color(text);
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: rgba(color(text), 0.2);
+  }
 }
