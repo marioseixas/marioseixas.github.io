@@ -44,7 +44,16 @@ layout: default
     </header>
 
     <div class="post-content-body">
-      {{ content | replace: "<pre><code>", "<pre><code><button class='copy-button'>Copy</button>" | replace: "</code></pre>", "</code></pre>" }}
+      {% for block in content.blocks %}
+        {% if block.type == 'code' %}
+          {% highlight block.language %}
+          <button class="copy-button">Copy</button>
+          {{ block.content }}
+          {% endhighlight %}
+        {% else %}
+          {{ block }}
+        {% endif %}
+      {% endfor %}
     </div>
   </article>
   {% if site.cusdis_app_id %}
@@ -52,4 +61,4 @@ layout: default
   {% endif %}
 </div>
 
-<script src="{{ '/copy-to-clipboard.js' | relative_url }}" defer></script>
+<script src="{{ '/assets/js/copy-to-clipboard.js' | relative_url }}" defer></script>
