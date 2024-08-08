@@ -44,11 +44,12 @@ layout: default
     </header>
 
     <div class="post-content-body">
-      {{ content | replace: "<code>", "<div class='copy-button'><code>" | replace: "</code>", "</code><button class='copy-button'>&copy;</button></div>" }}
+      {{ content }}
     </div>
-  </article>{% if site.cusdis_app_id %}
-{% cusdis_comments %}
-{% endif %}
+  </article>
+  {% if site.cusdis_app_id %}
+    {% cusdis_comments %}
+  {% endif %}
 </div>
 
 <script src="{{ '/copy-to-clipboard.js' | relative_url }}" defer></script>
