@@ -2,48 +2,11 @@
 layout: default
 ---
 
-<style>
-  .post-wrapper {
-    word-wrap: break-word;
-    overflow-wrap: break-word;
-  }
-  .post-title {
-    color: #2ECC71;
-  }
-  .post-heading .tags,
-  .post-heading .tag {
-    color: #3498DB; /* Dodger Blue for better accessibility */
-  }
-  .post-heading .info {
-    color: #000000;
-  }
-  .post-heading a {
-    color: #3498DB;
-    text-decoration: none;
-  }
-  .post-heading a:hover {
-    text-decoration: underline;
-  }
-  .code-container {
-    position: relative;
-  }
-  .copy-button {
-    position: absolute;
-    top: 5px;
-    right: 5px;
-    padding: 5px 10px;
-    background-color: #f1f1f1;
-    border: none;
-    border-radius: 3px;
-    cursor: pointer;
-  }
-</style>
-
 <div class="post-wrapper">
   <article class="post">
     <header class="post-heading">
       <h1 class="post-title">{{ page.title }}</h1>
-      <div style="font-size: clamp(0.8rem, calc(0.8rem + 0.2vw), 1rem); text-align: center;" class="search-link">
+      <div class="search-link">
         <span>
           <time datetime="{{ page.date | date_to_xmlschema }}">
             · {{ page.date | date_to_string }}
@@ -81,12 +44,12 @@ layout: default
     </header>
 
     {% assign date = page.date | default: "today" | date: site.data.language.str_date_format | default: '%B %-d, %Y' %}  
-      </div>
-<div class="post-content-body">  
-</div>
-<script src="{{ '/copy-to-clipboard.js' | relative_url }}" defer></script>
-{{ content | replace: "<code>", "<div class='code-container'><code>" | replace: "</code>", "</code></div>" }}
-</article>
+  </div>
+  <div class="post-content-body">
+  </div>
+  <script src="{{ '/copy-to-clipboard.js' | relative_url }}" defer></script>
+  {{ content | replace: "<code>", "<div class='code-container'><code>" | replace: "</code>", "</code></div>" }}
+  </article>
   {% if site.cusdis_app_id %}
     {% cusdis_comments %}
   {% endif %}
