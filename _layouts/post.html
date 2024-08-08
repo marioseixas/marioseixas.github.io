@@ -44,7 +44,7 @@ layout: default
     </header>
 
     <div class="post-content-body">
-      {{ content | replace: "<code>", "<div class='code-container'><code>" | replace: "</code>", "</code><button class='copy-button'>PLACEHOLDER</button></div>" }}
+      {{ content | replace: "<code>", "<div class='copy-button'><code>" | replace: "</code>", "</code><button class='copy-button'>&copy;</button></div>" }}
     </div>
   </article>{% if site.cusdis_app_id %}
 {% cusdis_comments %}
