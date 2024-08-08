@@ -46,12 +46,12 @@ layout: default
     <div class="post-content-body">
       {% assign blocks = content | split: '```' %}
       {% for block in blocks %}
-        {% if forloop.index | modulo: 2 == 1 %} 
-          {{ block }}
+        {% if forloop.index | modulo: 2 == 1 %}
+          {{ block | markdownify }}
         {% else %}
           <div class="code-container">
-            {{ block | markdownify | remove: '<p>' | remove: '</p>' }}
-            <button class="copy-button" style="display: block; position: absolute; top: 5px; right: 5px;">Copy</button>
+            <pre><code>{{ block | escape }}</code></pre>
+            <button class="copy-button">Copy</button>
           </div>
         {% endif %}
       {% endfor %}
@@ -62,4 +62,4 @@ layout: default
   {% endif %}
 </div>
 
-<script src="{{ '/assets/js/copy-to-clipboard.js' | relative_url }}" defer></script> 
+<script src="{{ '/assets/js/copy-to-clipboard.js' | relative_url }}" defer></script>
