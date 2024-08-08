@@ -5,9 +5,9 @@ document.addEventListener('DOMContentLoaded', function () {
     button.addEventListener('click', function () {
       var code = button.previousElementSibling.innerText;
       navigator.clipboard.writeText(code).then(function () {
-        button.textContent = 'Copied!';
+        button.textContent = '!';
         setTimeout(function() {
-          button.textContent = 'Copy';
+          button.textContent = '&copy;';
         }, 2000);
       }).catch(function() {
         button.textContent = 'Error';
