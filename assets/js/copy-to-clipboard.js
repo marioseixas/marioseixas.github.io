@@ -2,52 +2,68 @@ document.addEventListener('DOMContentLoaded', () => {
   const copyButtons = document.querySelectorAll('.copy-button');
 
   copyButtons.forEach(button => {
-    button.addEventListener('click', () => {
-      const codeBlock = button.closest('.code-container').querySelector('pre code'); // Updated selector
-      if (!codeBlock) return;
+    button.addEventListener('click', async () => {
+      const codeBlock = button.closest('.code-container')?.querySelector('pre code');
+      if (!codeBlock) {
+        console.error('Code block not found.');
+        return;
+      }
 
       const codeText = codeBlock.textContent.trim();
-      copyToClipboard(codeText)
-        .then(() => {
-          button.classList.add('copied');
-          button.textContent = 'Copied!';
-
-          setTimeout(() => {
-            button.classList.remove('copied');
-            button.textContent = 'Copy';
-          }, 2000);
-        })
-        .catch(err => console.error('Failed to copy text: ', err));
+      try {
+        await copyToClipboard(codeText);
+        showCopySuccess(button);
+      } catch (err) {
+        console.error('Failed to copy text: ', err);
+      }
     });
   });
 });
 
 async function copyToClipboard(text) {
-  try {
-    await navigator.clipboard.writeText(text);
-  } catch (err) {
-    console.error('Async: Could not copy text: ', err);
-    // Fallback for older browsers
+  if (navigator.clipboard) {
+    try {
+      await navigator.clipboard.writeText(text);
+    } catch (err) {
+      console.error('Async: Could not copy text: ', err);
+      await fallbackCopyToClipboard(text);
+    }
+  } else {
     await fallbackCopyToClipboard(text);
   }
 }
 
 function fallbackCopyToClipboard(text) {
-  const textArea = document.createElement('textarea');
-  textArea.value = text;
-  textArea.style.position = 'fixed';  // Prevent scrolling to bottom
-  document.body.appendChild(textArea);
-  textArea.focus();
-  textArea.select();
-
   return new Promise((resolve, reject) => {
+    const textArea = document.createElement('textarea');
+    textArea.value = text;
+    textArea.style.position = 'fixed';  // Prevent scrolling to bottom
+    document.body.appendChild(textArea);
+    textArea.focus();
+    textArea.select();
+
     try {
       const successful = document.execCommand('copy');
-      resolve();
+      if (successful) {
+        resolve();
+      } else {
+        reject(new Error('Fallback: Copy command was unsuccessful'));
+      }
     } catch (err) {
       console.error('Fallback: Oops, unable to copy', err);
       reject(err);
+    } finally {
+      document.body.removeChild(textArea);
     }
-    document.body.removeChild(textArea);
   });
+}
+
+function showCopySuccess(button) {
+  button.classList.add('copied');
+  button.textContent = 'Copied!';
+
+  setTimeout(() => {
+    button.classList.remove('copied');
+    button.textContent = 'Copy';
+  }, 2000);
 }
