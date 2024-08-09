@@ -46,7 +46,8 @@ layout: default
     <div class="post-content-body">
       {% assign blocks = content | split: '```' %}
       {% for block in blocks %}
-        {% if forloop.index0 | modulo: 2 == 0 %}
+        {% assign is_code_block = forloop.index0 | modulo: 2 %}
+        {% if is_code_block == 0 %}
           {{ block | markdownify }}
         {% else %}
           <div class="code-container">
