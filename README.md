@@ -3,7 +3,7 @@
   <main class="tags-page">
     <section>
       <!-- Sort posts by last_modified_at, falling back to date -->
-      {% assign sorted_posts = site.posts | sort: 'last_modified_at', 'date' | reverse %}
+      {% assign sorted_posts = site.posts | sort: 'last_modified_at', 'date', nils: 'last' | reverse %}
 
       <!-- Loop through all sorted posts and display them -->
       {% for post in sorted_posts %}
