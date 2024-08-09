@@ -1,7 +1,3 @@
----
-layout: default
----
-
 <body>
   <main class="tags-page">
     <section>
