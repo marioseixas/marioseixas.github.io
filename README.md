@@ -1,9 +1,7 @@
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>infoBAG</title>
-</head>
+---
+layout: default
+---
+
 <body>
   <main class="tags-page">
     <section>
@@ -40,4 +38,3 @@
     </section>
   </main>
 </body>
-</html>
