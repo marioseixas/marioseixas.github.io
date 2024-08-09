@@ -17,15 +17,9 @@ back_to_top: true
     {% endif %}
   </title>
 
-  <link rel="canonical" href="{{ page.canonical_url | default: site.url | append: page.url }}">
-  
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-  <link rel="manifest" href="/site.webmanifest">
-  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
-  
+  <link rel="canonical" href="{{ page.canonical_url | default: site.url | append: page.url }}">  
   <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ site.baseurl }}/rss.xml">
+  <link rel="stylesheet" href="https://raw.githubusercontent.com/marioseixas/marioseixas.github.io/main/_sass/style.css">
 
   <meta property="og:site_name" content="{{ site.title }}">
   <meta property="og:title" content="{{ page.title | default: site.title }}">
@@ -59,7 +53,6 @@ back_to_top: true
       });
     </script>
   {% endif %}
-  <link rel="stylesheet" href="https://matcha.mizu.sh/matcha.css">  
 </head>
 <body>
   <header>
