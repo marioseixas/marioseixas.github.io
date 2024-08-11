@@ -18,8 +18,7 @@ layout: default
               {{ page.last_modified_at | date_to_string }}
             </time>
           {% endif %}
-          </span>
-          
+          </span>          
           {% if page.tags %}
             <span>
               · Tags:
@@ -27,19 +26,16 @@ layout: default
                 <a href="{{ site.baseurl }}/tags/#{{ tag | slugify }}" class="tag">{{ tag }}</a>{% unless forloop.last %},{% endunless %}
               {% endfor %}
             </span>
-          {% endif %}
-          
+          {% endif %}          
           {% if page.info %}
             <span class="tags">
               · Edit: {{ page.info }}
             </span>
-          {% endif %}
-          
-          <a href="https://github.com/{{ site.github_username }}/{{ site.github_repository }}/edit/main/{{ page.path }}" target="_blank" rel="noopener noreferrer">
+          {% endif %}          
+          <a href="https://github.com/marioseixas/marioseixas.github.io/edit/main/{{ page.path }}" target="_blank" rel="noopener noreferrer">
             · Improve this
           </a>
-          
-          <a href="https://github.com/{{ site.github_username }}/{{ site.github_repository }}/commits/main/{{ page.path }}" target="_blank" rel="noopener noreferrer">
+          <a href="https://github.com/marioseixas/marioseixas.github.io/commits/main/{{ page.path }}" target="_blank" rel="noopener noreferrer">
             · Revision history
           </a>
         </span>
