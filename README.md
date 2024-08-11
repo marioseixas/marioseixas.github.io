@@ -16,19 +16,19 @@
       
       <!-- Loop through all sorted posts and display them -->
       {% for post in all_sorted_posts %}
-        <article class="post-item">
+        <article class="post-link">
           <time datetime="{{ post.date | date: '%Y-%m-%d' }}" class="post-date">
-            &middot; {{ post.date | date: '%Y-%m-%d' }}
-              {% if post.last_modified_at != post.date %}
+          <img src="https://raw.githubusercontent.com/marioseixas/marioseixas.github.io/main/assets/gold.ico" alt="favicon">
+          {{ post.date | date: '%Y-%m-%d' }}
+          {% if post.last_modified_at != post.date %}
               &rightarrowtail;
               {{ post.last_modified_at | date_to_string }}
               {% else %}
               &rightarrowtail;
               {{ post.date | date_to_string }}
               {% endif %}            
-            <a class="post-link" href="{{ post.url }}">
-              <img src="https://raw.githubusercontent.com/marioseixas/marioseixas.github.io/main/assets/gold.ico" alt="favicon">
-              {{ post.title }}
+            <a href="{{ post.url }}">
+            {{ post.title }}
             </a>
           </time>
         </article>
