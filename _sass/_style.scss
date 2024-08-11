@@ -328,18 +328,6 @@ blockquote {
 }
 
 .post-link {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  list-style: none;
-  padding: 0;
-}
-
-.post-link li { 
-  margin: 0.5em; 
-}
-
-.post-link a {
   color: var(--links-default);
   background-color: var(--bg-default);
   border: 1px solid var(--links-default);
@@ -347,11 +335,6 @@ blockquote {
   padding: 0.5em 1em;
   text-decoration: none;
   transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-.post-link a:hover, .tag-list a:focus {
-  background-color: var(--links-default);
-  color: var(--bg-default);
 }
 
 /* Code Container Styles */
