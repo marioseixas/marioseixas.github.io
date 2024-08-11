@@ -226,14 +226,31 @@ blockquote {
   }
 }
 
-.header-content {
+/* Center-aligns the entire header container */
+.header-container {
   display: flex;
-  align-items: center;
-  gap: 10px;
+  flex-direction: column; /* Aligns child elements vertically */
+  align-items: center; /* Centers items horizontally */
+  justify-content: center; /* Centers items vertically */
+  text-align: center; /* Centers text inside child elements */
+  padding: 1rem; /* Adds padding around the container */
 }
 
-.header-content h1 {
-  margin: 0;
+/* Ensures that items within header-content are displayed in a row and centered */
+.header-content {
+  display: flex;
+  align-items: center; /* Centers items vertically within this row */
+  gap: 10px; /* Adds space between items */
+}
+
+/* Styles for the search-link to ensure it is centered below the header-content */
+.header-container .search-link {
+  margin-top: 10px; /* Adds space above this element */
+}
+
+.header-container .search-link a {
+  text-decoration: none; /* Removes underline from link */
+  color: inherit; /* Uses the color of the parent element */
 }
 
 /* Tag Page Styles */
