@@ -7,13 +7,10 @@ title: Tags
 {% for post in site.posts %}
   {% assign post_tags = post.tags | default: empty %}
   {% if post_tags.first.first %}
-    {% assign post_tags = post_tags.first | split: "," %}
-  {% elsif post_tags.first %}
-    {% unless post_tags.first.size == 0 %}
-      {% assign post_tags = post_tags %}
-    {% else %}
-      {% assign post_tags = post_tags.first | split: "," %}
-    {% endunless %}
+    {% assign post_tags = post_tags.first %}
+  {% endif %}
+  {% if post_tags.size == 1 and post_tags.first.size > 0 %}
+    {% assign post_tags = post_tags | first | split: ',' | map: 'strip' %}
   {% endif %}
   {% for tag in post_tags %}
     {% assign tag_normalized = tag | strip | downcase %}
@@ -41,10 +38,7 @@ title: Tags
   <div class="tagged-posts">
     {% for tag in sorted_tags %}
       <section id="{{ tag | slugify }}" aria-labelledby="{{ tag | slugify }}-heading">
-        <h2 id="{{ tag | slugify }}-heading">
-          {{ tag | capitalize }}
-          <a href="#" class="back-to-top" aria-label="Back to top">&uarr;</a>
-        </h2>
+        <h2 id="{{ tag | slugify }}-heading">{{ tag | capitalize }}<a href="#" class="back-to-top">&uarr;</a></h2>
         <ul>
           {% assign tag_posts = site.posts | where_exp: "post", "post.tags.first.first == tag or post.tags.first == tag or post.tags contains tag or post.tags == tag" %}
           {% for post in tag_posts %}
@@ -64,37 +58,13 @@ title: Tags
     const tagLinks = document.querySelectorAll('.tag-list a');
     const backToTopLinks = document.querySelectorAll('.back-to-top');
     
-    function smoothScroll(target, duration = 300) {
-      const targetPosition = target.getBoundingClientRect().top + window.pageYOffset;
-      const startPosition = window.pageYOffset;
-      const distance = targetPosition - startPosition;
-      let startTime = null;
-
-      function animation(currentTime) {
-        if (startTime === null) startTime = currentTime;
-        const timeElapsed = currentTime - startTime;
-        const run = ease(timeElapsed, startPosition, distance, duration);
-        window.scrollTo(0, run);
-        if (timeElapsed < duration) requestAnimationFrame(animation);
-      }
-
-      function ease(t, b, c, d) {
-        t /= d / 2;
-        if (t < 1) return c / 2 * t * t + b;
-        t--;
-        return -c / 2 * (t * (t - 2) - 1) + b;
-      }
-
-      requestAnimationFrame(animation);
-    }
-
     tagLinks.forEach(link => {
       link.addEventListener('click', function(e) {
         e.preventDefault();
         const targetId = this.getAttribute('href');
         const targetElement = document.querySelector(targetId);
         if (targetElement) {
-          smoothScroll(targetElement);
+          targetElement.scrollIntoView({ behavior: 'smooth' });
           history.pushState(null, '', targetId);
         }
       });
@@ -103,7 +73,7 @@ title: Tags
     backToTopLinks.forEach(link => {
       link.addEventListener('click', function(e) {
         e.preventDefault();
-        smoothScroll(document.body);
+        window.scrollTo({ top: 0, behavior: 'smooth' });
         history.pushState(null, '', '#');
       });
     });
