@@ -226,6 +226,16 @@ blockquote {
   }
 }
 
+.header-content {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.header-content h1 {
+  margin: 0;
+}
+
 /* Tag Page Styles */
 .tag-page {
   max-width: 800px;
