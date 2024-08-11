@@ -1,5 +1,5 @@
 <body>
-  <main class="tags-page">
+  <main>
     <section>
       <!-- Separate posts where last_modified_at is different from date -->
       {% assign modified_posts = site.posts | where_exp: "post", "post.last_modified_at != post.date" %}
@@ -27,7 +27,7 @@
               &rightarrowtail;
               {{ post.date | date_to_string }}
               {% endif %}            
-            <a href="{{ post.url }}">
+            <a class="search-link" href="{{ post.url }}">
             {{ post.title }}
             </a>
           </time>
