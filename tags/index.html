@@ -5,11 +5,20 @@ title: Tags
 
 {% assign all_tags = "" | split: "" %}
 {% for post in site.posts %}
-  {% assign post_tags = post.tags | default: post.tags[0] %}
+  {% assign post_tags = post.tags | default: empty %}
+  {% if post_tags.first.first %}
+    {% assign post_tags = post_tags.first | split: "," %}
+  {% elsif post_tags.first %}
+    {% unless post_tags.first.size == 0 %}
+      {% assign post_tags = post_tags %}
+    {% else %}
+      {% assign post_tags = post_tags.first | split: "," %}
+    {% endunless %}
+  {% endif %}
   {% for tag in post_tags %}
-    {% assign tag_downcase = tag | downcase %}
-    {% unless all_tags contains tag_downcase %}
-      {% assign all_tags = all_tags | push: tag_downcase %}
+    {% assign tag_normalized = tag | strip | downcase %}
+    {% unless all_tags contains tag_normalized %}
+      {% assign all_tags = all_tags | push: tag_normalized %}
     {% endunless %}
   {% endfor %}
 {% endfor %}
@@ -20,7 +29,7 @@ title: Tags
 
   <ul class="tag-list" aria-label="List of all tags">
     {% for tag in sorted_tags %}
-      {% assign tag_posts = site.posts | where_exp: "post", "post.tags contains tag or post.tags == tag or post.tags[0] == tag" %}
+      {% assign tag_posts = site.posts | where_exp: "post", "post.tags.first.first == tag or post.tags.first == tag or post.tags contains tag or post.tags == tag" %}
       <li>
         <a href="#{{ tag | slugify }}" aria-label="Tag {{ tag }} with {{ tag_posts.size }} posts">
           {{ tag | capitalize }} ({{ tag_posts.size }})
@@ -32,17 +41,16 @@ title: Tags
   <div class="tagged-posts">
     {% for tag in sorted_tags %}
       <section id="{{ tag | slugify }}" aria-labelledby="{{ tag | slugify }}-heading">
-        <h2 id="{{ tag | slugify }}-heading">{{ tag }}<a href="#" id="back-to-top">&uarr;</a></h2>
+        <h2 id="{{ tag | slugify }}-heading">
+          {{ tag | capitalize }}
+          <a href="#" class="back-to-top" aria-label="Back to top">&uarr;</a>
+        </h2>
         <ul>
-          {% assign tag_posts = site.posts | where_exp: "post", "post.tags contains tag or post.tags == tag or post.tags[0] == tag" %}
+          {% assign tag_posts = site.posts | where_exp: "post", "post.tags.first.first == tag or post.tags.first == tag or post.tags contains tag or post.tags == tag" %}
           {% for post in tag_posts %}
             <li>
-              <a href="{{ post.url | relative_url }}">
-                {{ post.title }}
-              </a>
-              <time datetime="{{ post.date | date_to_xmlschema }}">
-                {{ post.date | date: "%B %d, %Y" }}
-              </time>
+              <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+              <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %d, %Y" }}</time>
             </li>
           {% endfor %}
         </ul>        
@@ -54,15 +62,49 @@ title: Tags
 <script>
   document.addEventListener('DOMContentLoaded', function() {
     const tagLinks = document.querySelectorAll('.tag-list a');
+    const backToTopLinks = document.querySelectorAll('.back-to-top');
+    
+    function smoothScroll(target, duration = 300) {
+      const targetPosition = target.getBoundingClientRect().top + window.pageYOffset;
+      const startPosition = window.pageYOffset;
+      const distance = targetPosition - startPosition;
+      let startTime = null;
+
+      function animation(currentTime) {
+        if (startTime === null) startTime = currentTime;
+        const timeElapsed = currentTime - startTime;
+        const run = ease(timeElapsed, startPosition, distance, duration);
+        window.scrollTo(0, run);
+        if (timeElapsed < duration) requestAnimationFrame(animation);
+      }
+
+      function ease(t, b, c, d) {
+        t /= d / 2;
+        if (t < 1) return c / 2 * t * t + b;
+        t--;
+        return -c / 2 * (t * (t - 2) - 1) + b;
+      }
+
+      requestAnimationFrame(animation);
+    }
+
     tagLinks.forEach(link => {
       link.addEventListener('click', function(e) {
         e.preventDefault();
         const targetId = this.getAttribute('href');
         const targetElement = document.querySelector(targetId);
         if (targetElement) {
-          targetElement.scrollIntoView({ behavior: 'smooth' });
+          smoothScroll(targetElement);
           history.pushState(null, '', targetId);
         }
+      });
+    });
+
+    backToTopLinks.forEach(link => {
+      link.addEventListener('click', function(e) {
+        e.preventDefault();
+        smoothScroll(document.body);
+        history.pushState(null, '', '#');
       });
     });
   });
