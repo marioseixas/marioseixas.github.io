@@ -327,14 +327,6 @@ blockquote {
   text-decoration: underline; 
 }
 
-.post-link {
-  text-decoration: none;
-  color: var(--links-default);
-  background-color: var(--bg-default);
-  border: 1px dashed var(--links-default);  
-  transition: background-color 0.3s ease, color 0.3s ease;
-}
-
 /* Code Container Styles */
 .code-container {
   position: relative;
