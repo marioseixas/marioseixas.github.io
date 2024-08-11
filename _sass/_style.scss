@@ -12,8 +12,8 @@
   --highlights-pumpkin: #D35400;
   --code-background: #34495E;
   --code-text: #1ABC9C;
-  --ft: 'BitPotionExt';
-  --ft-mono: 'BitPotionExt';
+  --ft: 'BitPotionExt', sans-serif; /* Added sans-serif fallback */
+  --ft-mono: 'BitPotionExt', monospace; /* Added monospace fallback */
   --line-height-base: 1.5;
   --font-size-base: 16px;
 }
@@ -330,4 +330,14 @@ blockquote {
 .code-container .copy-button.copied {
   background-color: rgba(var(--headings), 0.4);
   color: var(--bg-default);
+}
+
+/* Import the font face */
+@font-face {
+  font-family: 'BitPotionExt';
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+  src: url('_sass/subset-BitPotionExt.woff2') format('woff2'),
+       url('_sass/subset-BitPotionExt.woff') format('woff');
 }
