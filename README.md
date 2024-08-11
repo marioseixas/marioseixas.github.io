@@ -20,10 +20,10 @@
           <time datetime="{{ post.date | date: '%Y-%m-%d' }}" class="post-date">
             &middot; {{ post.date | date: '%Y-%m-%d' }}
               {% if post.last_modified_at != post.date %}
-              <img src="https://raw.githubusercontent.com/marioseixas/marioseixas.github.io/main/assets/arrow.png" alt="Favicon" class="favicon">
+              &rightarrowtail;
               {{ post.last_modified_at | date_to_string }}
               {% else %}
-              <img src="https://raw.githubusercontent.com/marioseixas/marioseixas.github.io/main/assets/arrow.png" alt="Favicon" class="favicon">
+              &rightarrowtail;
               {{ post.date | date_to_string }}
               {% endif %}            
             <a class="post-link" href="{{ post.url }}">
