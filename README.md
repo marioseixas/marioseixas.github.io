@@ -20,9 +20,11 @@
           <time datetime="{{ post.date | date: '%Y-%m-%d' }}" class="post-date">
             &middot; {{ post.date | date: '%Y-%m-%d' }}
               {% if post.last_modified_at != post.date %}
-                ~&gt; {{ post.last_modified_at | date_to_string }}
+              <img src="https://raw.githubusercontent.com/marioseixas/marioseixas.github.io/main/assets/arrow.png" alt="Favicon" class="favicon">
+              {{ post.last_modified_at | date_to_string }}
               {% else %}
-                ~&gt; {{ post.date | date_to_string }}
+              <img src="https://raw.githubusercontent.com/marioseixas/marioseixas.github.io/main/assets/arrow.png" alt="Favicon" class="favicon">
+              {{ post.date | date_to_string }}
               {% endif %}            
             <a class="post-link" href="{{ post.url }}">
               <img src="https://raw.githubusercontent.com/marioseixas/marioseixas.github.io/main/assets/gold.ico" alt="favicon">
