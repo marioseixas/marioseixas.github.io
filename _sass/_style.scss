@@ -82,7 +82,7 @@ pre, code {
   white-space: pre-wrap;
   word-break: break-word;
   overflow-wrap: break-word;
-  font-size: clamp(0.8rem, 1.2vw, 1rem); 
+  font-size: clamp(1rem, 1.6vw, 1.25rem);
 }
 
 :not(pre) > code, kbd, samp, tt {
@@ -95,7 +95,7 @@ pre, code {
   white-space: pre-wrap;
   word-break: break-word;
   overflow-wrap: break-word;
-  font-size: clamp(0.7rem, 1vw, 0.9rem); 
+  font-size: clamp(1rem, 1.6vw, 1.25rem); 
 }
 
 /* Responsive Elements */
