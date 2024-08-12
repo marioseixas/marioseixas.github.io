@@ -6,57 +6,80 @@ title: Tags
 {% assign tag_counts = {} %}
 
 {% for post in site.posts %}
-  {% assign post_tags = post.tags %}
-  {% if post_tags %}
-    {% for tag in post_tags %}
-      {% assign tag_stripped = tag | strip %}
-      {% if tag_counts[tag_stripped] %}
-        {% assign tag_counts[tag_stripped] = tag_counts[tag_stripped] | plus: 1 %}
-      {% else %}
-        {% assign tag_counts[tag_stripped] = 1 %}
-      {% endif %}
-    {% endfor %}
+  {% assign post_tags = post.tags | default: empty %}
+  {% if post_tags.first.first %}
+    {% assign post_tags = post_tags.first %}
   {% endif %}
+  {% if post_tags.size == 1 and post_tags.first.size > 0 %}
+    {% if post_tags.first contains ',' %}
+      {% assign post_tags = post_tags | first | split: ',' | map: 'strip' %}
+    {% else %}
+      {% assign post_tags = post_tags %}
+    {% endif %}
+  {% endif %}
+  {% for tag in post_tags %}
+    {% assign tag_stripped = tag | strip %}
+    {% if tag_counts[tag_stripped] %}
+      {% assign tag_counts[tag_stripped] = tag_counts[tag_stripped] | plus: 1 %}
+    {% else %}
+      {% assign tag_counts[tag_stripped] = 1 %}
+    {% endif %}
+  {% endfor %}
 {% endfor %}
 
-{% assign sorted_tags = tag_counts | sort: "last" | reverse %}
+{% if tag_counts.size > 0 %}
+  {% assign sorted_tags = tag_counts | sort: 'value' | reverse %}
 
-<div class="tag-page">
-  <h1>{{ page.title }}</h1>
+  <div class="tag-page">
+    <h1>{{ page.title }}</h1>
 
-  <ul class="tag-list" aria-label="List of all tags">
-    {% for tag in sorted_tags %}
-      {% assign count = tag_counts[tag] %}
-      <li>
-        <a href="#{{ tag | slugify }}" aria-label="Tag {{ tag }} with {{ count }} posts">
-          {{ tag }} ({{ count }})
-        </a>
-      </li>
-    {% endfor %}
-  </ul>
+    <ul class="tag-list" aria-label="List of all tags">
+      {% for tag in sorted_tags %}
+        <li>
+          <a href="#{{ tag.first | slugify }}" aria-label="Tag {{ tag.first }} with {{ tag.last }} posts" data-count="{{ tag.last }}">
+            {{ tag.first }} ({{ tag.last }})
+          </a>
+        </li>
+      {% endfor %}
+    </ul>
 
-  <div class="tagged-posts">
-    {% for tag in sorted_tags %}
-      <section id="{{ tag | slugify }}" aria-labelledby="{{ tag | slugify }}-heading">
-        <h2 id="{{ tag | slugify }}-heading">
-          {{ tag }}
-          <a href="#" class="back-to-top" aria-label="Back to top">&uarr;</a>
-        </h2>
-        <ul>
-          {% assign tag_posts = site.posts | where_exp: "post", "post.tags contains tag" %}
-          {% for post in tag_posts %}
-            <li>
-              <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
-              <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %d, %Y" }}</time>
-            </li>
-          {% endfor %}
-        </ul>        
-      </section>
-    {% endfor %}
+    <div class="tagged-posts">
+      {% for tag in sorted_tags %}
+        <section id="{{ tag.first | slugify }}" aria-labelledby="{{ tag.first | slugify }}-heading">
+          <h2 id="{{ tag.first | slugify }}-heading">
+            {{ tag.first }}
+            <a href="#" class="back-to-top" aria-label="Back to top">↑</a>
+          </h2>
+          <ul>
+            {% assign tag_posts = site.posts | where_exp: "post", "post.tags contains tag.first" %}
+            {% for post in tag_posts %}
+              <li>
+                <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+                <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %d, %Y" }}</time>
+              </li>
+            {% endfor %}
+          </ul>        
+        </section>
+      {% endfor %}
+    </div>
   </div>
-</div>
 
-<script>
+  <style>
+    .tag-list a {
+      font-size: 1rem; /* Default font size */
+    }
+
+    .tag-list a[data-count] {
+      font-size: calc(1rem + (var(--count, 0) * 0.1rem)); /* Scale font size based on data-count attribute */
+    }
+  </style>
+
+  <script>
+    // Initialize the CSS variables for each tag link
+    const tagLinks = document.querySelectorAll('.tag-list a[data-count]');
+    tagLinks.forEach(link => {
+      link.style.setProperty('--count', link.dataset.count);
+    });
   document.addEventListener('DOMContentLoaded', function() {
     const tagLinks = document.querySelectorAll('.tag-list a');
     const backToTopLinks = document.querySelectorAll('.back-to-top');
@@ -106,3 +129,7 @@ title: Tags
     });
   });
 </script>
+
+{% else %}
+  <p>No tags found.</p>
+{% endif %}
