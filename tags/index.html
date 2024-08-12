@@ -3,7 +3,8 @@ layout: default
 title: Tags
 ---
 
-{% assign tag_counts = {} %}
+{% assign all_tags = "" | split: "" %}
+{% assign tag_counts = "" | split: "" %}
 
 {% for post in site.posts %}
   {% assign post_tags = post.tags | default: empty %}
@@ -19,38 +20,55 @@ title: Tags
   {% endif %}
   {% for tag in post_tags %}
     {% assign tag_stripped = tag | strip %}
-    {% if tag_counts[tag_stripped] %}
-      {% assign tag_counts[tag_stripped] = tag_counts[tag_stripped] | plus: 1 %}
-    {% else %}
-      {% assign tag_counts[tag_stripped] = 1 %}
+    {% if tag_stripped != "" %}
+      {% assign tag_index = all_tags | index_of: tag_stripped %}
+      {% if tag_index == -1 %}
+        {% assign all_tags = all_tags | push: tag_stripped %}
+        {% assign tag_counts = tag_counts | push: 1 %}
+      {% else %}
+        {% assign current_count = tag_counts[tag_index] | plus: 1 %}
+        {% assign tag_counts = tag_counts | slice: 0, tag_index | push: current_count | concat: tag_counts | slice: tag_index | plus: 1 %}
+      {% endif %}
     {% endif %}
   {% endfor %}
 {% endfor %}
 
-{% assign sorted_tags = tag_counts | sort: 'value' | reverse %}
+{% assign tag_count_pairs = "" | split: "" %}
+{% for i in (0..all_tags.size) %}
+  {% if all_tags[i] %}
+    {% capture pair %}{{ tag_counts[i] | prepend: '0000' | slice: -4, 4 }}::{{ all_tags[i] }}{% endcapture %}
+    {% assign tag_count_pairs = tag_count_pairs | push: pair %}
+  {% endif %}
+{% endfor %}
+
+{% assign sorted_tag_count_pairs = tag_count_pairs | sort | reverse %}
 
 <div class="tag-page">
   <h1>{{ page.title }}</h1>
 
   <ul class="tag-list" aria-label="List of all tags">
-    {% for tag in sorted_tags %}
+    {% for pair in sorted_tag_count_pairs %}
+      {% assign count = pair | split: "::" | first | plus: 0 %}
+      {% assign tag = pair | split: "::" | last %}
       <li>
-        <a href="#{{ tag[0] | slugify }}" aria-label="Tag {{ tag[0] }} with {{ tag[1] }} posts">
-          {{ tag[0] }} ({{ tag[1] }})
+        <a href="#{{ tag | slugify }}" aria-label="Tag {{ tag }} with {{ count }} posts">
+          {{ tag }} ({{ count }})
         </a>
       </li>
     {% endfor %}
   </ul>
 
   <div class="tagged-posts">
-    {% for tag in sorted_tags %}
-      <section id="{{ tag[0] | slugify }}" aria-labelledby="{{ tag[0] | slugify }}-heading">
-        <h2 id="{{ tag[0] | slugify }}-heading">
-          {{ tag[0] }}
-          <a href="#" class="back-to-top" aria-label="Back to top">↑</a>
+    {% for pair in sorted_tag_count_pairs %}
+      {% assign count = pair | split: "::" | first | plus: 0 %}
+      {% assign tag = pair | split: "::" | last %}
+      <section id="{{ tag | slugify }}" aria-labelledby="{{ tag | slugify }}-heading">
+        <h2 id="{{ tag | slugify }}-heading">
+          {{ tag }}
+          <a href="#" class="back-to-top" aria-label="Back to top">&uarr;</a>
         </h2>
         <ul>
-          {% assign tag_posts = site.posts | where_exp: "post", "post.tags contains tag[0]" %}
+          {% assign tag_posts = site.posts | where_exp: "post", "post.tags contains tag" %}
           {% for post in tag_posts %}
             <li>
               <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
@@ -60,7 +78,7 @@ title: Tags
         </ul>        
       </section>
     {% endfor %}
-  </ul>
+  </div>
 </div>
 <script>
   document.addEventListener('DOMContentLoaded', function() {
