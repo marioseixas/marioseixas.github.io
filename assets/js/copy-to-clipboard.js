@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
   const copyCodeButtons = document.querySelectorAll('.copy-code-button');
-  const codeBlocks = document.querySelectorAll('.code-container pre code');
+  const codeBlocks = document.querySelectorAll('.language-plaintext.highlighter-rouge pre code, .language-bash.highlighter-rouge pre code');
 
   copyCodeButtons.forEach((copyCodeButton, index) => {
     const code = codeBlocks[index].innerText;
