@@ -3,7 +3,7 @@ layout: default
 title: Tags
 ---
 
-{% assign all_tags = "" | split: "" %}
+{% assign tag_counts = "" | split: "" %}
 
 {% for post in site.posts %}
   {% assign post_tags = post.tags | default: empty %}
@@ -19,52 +19,75 @@ title: Tags
   {% endif %}
   {% for tag in post_tags %}
     {% assign tag_stripped = tag | strip %}
-    {% unless all_tags contains tag_stripped %}
-      {% assign all_tags = all_tags | push: tag_stripped %}
+    {% assign existing_tag = false %}
+    {% for tc in tag_counts %}
+      {% if tc contains tag_stripped %}
+        {% assign existing_tag = true %}
+        {% assign count = tc | split: "::" | last | plus: 1 %}
+        {% assign tag_counts = tag_counts | remove: tc | push: tag_stripped | append: "::" | append: count %}
+      {% endif %}
+    {% endfor %}
+    {% unless existing_tag %}
+      {% assign tag_counts = tag_counts | push: tag_stripped | append: "::1" %}
     {% endunless %}
   {% endfor %}
 {% endfor %}
 
-{% assign sorted_tags = all_tags | sort %}
+{% assign sorted_tags = "" | split: "" %}
+{% assign max_count = 0 %}
+{% for tc in tag_counts %}
+  {% assign count = tc | split: "::" | last | plus: 0 %}
+  {% if count > max_count %}
+    {% assign max_count = count %}
+  {% endif %}
+{% endfor %}
+
+{% for i in (max_count..1) reversed %}
+  {% for tc in tag_counts %}
+    {% assign count = tc | split: "::" | last | plus: 0 %}
+    {% if count == i %}
+      {% assign sorted_tags = sorted_tags | push: tc %}
+    {% endif %}
+  {% endfor %}
+{% endfor %}
 
 <div class="tag-page">
   <h1>{{ page.title }}</h1>
 
   <ul class="tag-list" aria-label="List of all tags">
-    {% for tag in sorted_tags %}
-      {% assign tag_posts = site.posts | where_exp: "post", "post.tags contains tag" %}
-      {% if tag_posts.size > 0 %}
-        <li>
-          <a href="#{{ tag | slugify }}" aria-label="Tag {{ tag }} with {{ tag_posts.size }} posts">
-            {{ tag }} ({{ tag_posts.size }})
-          </a>
-        </li>
-      {% endif %}
+    {% for tc in sorted_tags %}
+      {% assign tag_name = tc | split: "::" | first %}
+      {% assign tag_posts = site.posts | where_exp: "post", "post.tags == tag_name or post.tags contains tag_name or post.tags.first == tag_name or post.tags.first contains tag_name" %}
+      <li>
+        <a href="#{{ tag_name | slugify }}" aria-label="Tag {{ tag_name }} with {{ tag_posts.size }} posts">
+          {{ tag_name }} ({{ tag_posts.size }})
+        </a>
+      </li>
     {% endfor %}
   </ul>
 
   <div class="tagged-posts">
-    {% for tag in sorted_tags %}
-      {% assign tag_posts = site.posts | where_exp: "post", "post.tags contains tag" %}
-      {% if tag_posts.size > 0 %}
-        <section id="{{ tag | slugify }}" aria-labelledby="{{ tag | slugify }}-heading">
-          <h2 id="{{ tag | slugify }}-heading">
-            {{ tag }}
-            <a href="#" class="back-to-top" aria-label="Back to top">↑</a>
-          </h2>
-          <ul>
-            {% for post in tag_posts %}
-              <li>
-                <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
-                <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %d, %Y" }}</time>
-              </li>
-            {% endfor %}
-          </ul>        
-        </section>
-      {% endif %}
+    {% for tc in sorted_tags %}
+      {% assign tag_name = tc | split: "::" | first %}
+      <section id="{{ tag_name | slugify }}" aria-labelledby="{{ tag_name | slugify }}-heading">
+        <h2 id="{{ tag_name | slugify }}-heading">
+          {{ tag_name }}
+          <a href="#" class="back-to-top" aria-label="Back to top">&uarr;</a>
+        </h2>
+        <ul>
+          {% assign tag_posts = site.posts | where_exp: "post", "post.tags == tag_name or post.tags contains tag_name or post.tags.first == tag_name or post.tags.first contains tag_name" %}
+          {% for post in tag_posts %}
+            <li>
+              <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+              <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %d, %Y" }}</time>
+            </li>
+          {% endfor %}
+        </ul>        
+      </section>
     {% endfor %}
   </div>
 </div>
+
 <script>
   document.addEventListener('DOMContentLoaded', function() {
     const tagLinks = document.querySelectorAll('.tag-list a');
