@@ -4,6 +4,8 @@ title: Tags
 ---
 
 {% assign all_tags = "" | split: "" %}
+{% assign tag_counts = {} %}
+
 {% for post in site.posts %}
   {% assign post_tags = post.tags | default: empty %}
   {% if post_tags.first.first %}
@@ -21,19 +23,25 @@ title: Tags
     {% unless all_tags contains tag_stripped %}
       {% assign all_tags = all_tags | push: tag_stripped %}
     {% endunless %}
+    {% if tag_counts[tag_stripped] %}
+      {% assign tag_counts[tag_stripped] = tag_counts[tag_stripped] | plus: 1 %}
+    {% else %}
+      {% assign tag_counts[tag_stripped] = 1 %}
+    {% endif %}
   {% endfor %}
 {% endfor %}
-{% assign sorted_tags = all_tags | sort %}
+
+{% assign sorted_tags = all_tags | sort: 'count' | reverse %}
 
 <div class="tag-page">
   <h1>{{ page.title }}</h1>
 
   <ul class="tag-list" aria-label="List of all tags">
     {% for tag in sorted_tags %}
-      {% assign tag_posts = site.posts | where_exp: "post", "post.tags == tag or post.tags contains tag or post.tags.first == tag or post.tags.first contains tag" %}
+      {% assign count = tag_counts[tag] %}
       <li>
-        <a href="#{{ tag | slugify }}" aria-label="Tag {{ tag }} with {{ tag_posts.size }} posts">
-          {{ tag }} ({{ tag_posts.size }})
+        <a href="#{{ tag | slugify }}" aria-label="Tag {{ tag }} with {{ count }} posts">
+          {{ tag }} ({{ count }})
         </a>
       </li>
     {% endfor %}
@@ -44,7 +52,7 @@ title: Tags
       <section id="{{ tag | slugify }}" aria-labelledby="{{ tag | slugify }}-heading">
         <h2 id="{{ tag | slugify }}-heading">
           {{ tag }}
-          <a href="#" class="back-to-top" aria-label="Back to top">&uarr;</a>
+          <a href="#" class="back-to-top" aria-label="Back to top">↑</a>
         </h2>
         <ul>
           {% assign tag_posts = site.posts | where_exp: "post", "post.tags == tag or post.tags contains tag or post.tags.first == tag or post.tags.first contains tag" %}
@@ -59,7 +67,6 @@ title: Tags
     {% endfor %}
   </div>
 </div>
-
 <script>
   document.addEventListener('DOMContentLoaded', function() {
     const tagLinks = document.querySelectorAll('.tag-list a');
