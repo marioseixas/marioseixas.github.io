@@ -27,59 +27,43 @@ title: Tags
   {% endfor %}
 {% endfor %}
 
-{% if tag_counts.size > 0 %}
-  {% assign sorted_tags = tag_counts | sort: 'value' | reverse %}
+{% assign sorted_tags = tag_counts | sort: 'value' | reverse %}
 
-  <div class="tag-page">
-    <h1>{{ page.title }}</h1>
+<div class="tag-page">
+  <h1>{{ page.title }}</h1>
 
-    <ul class="tag-list" aria-label="List of all tags">
-      {% for tag in sorted_tags %}
-        <li>
-          <a href="#{{ tag.first | slugify }}" aria-label="Tag {{ tag.first }} with {{ tag.last }} posts" data-count="{{ tag.last }}">
-            {{ tag.first }} ({{ tag.last }})
-          </a>
-        </li>
-      {% endfor %}
-    </ul>
+  <ul class="tag-list" aria-label="List of all tags">
+    {% for tag in sorted_tags %}
+      <li>
+        <a href="#{{ tag.first | slugify }}" aria-label="Tag {{ tag.first }} with {{ tag.last }} posts">
+          {{ tag.first }} ({{ tag.last }})
+        </a>
+      </li>
+    {% endfor %}
+  </ul>
 
-    <div class="tagged-posts">
-      {% for tag in sorted_tags %}
-        <section id="{{ tag.first | slugify }}" aria-labelledby="{{ tag.first | slugify }}-heading">
-          <h2 id="{{ tag.first | slugify }}-heading">
-            {{ tag.first }}
-            <a href="#" class="back-to-top" aria-label="Back to top">↑</a>
-          </h2>
-          <ul>
-            {% assign tag_posts = site.posts | where_exp: "post", "post.tags contains tag.first" %}
-            {% for post in tag_posts %}
-              <li>
-                <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
-                <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %d, %Y" }}</time>
-              </li>
-            {% endfor %}
-          </ul>        
-        </section>
-      {% endfor %}
-    </div>
+  <div class="tagged-posts">
+    {% for tag in sorted_tags %}
+      <section id="{{ tag.first | slugify }}" aria-labelledby="{{ tag.first | slugify }}-heading">
+        <h2 id="{{ tag.first | slugify }}-heading">
+          {{ tag.first }}
+          <a href="#" class="back-to-top" aria-label="Back to top">↑</a>
+        </h2>
+        <ul>
+          {% assign tag_posts = site.posts | where_exp: "post", "post.tags contains tag.first" %}
+          {% for post in tag_posts %}
+            <li>
+              <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+              <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %d, %Y" }}</time>
+            </li>
+          {% endfor %}
+        </ul>        
+      </section>
+    {% endfor %}
   </div>
+</div>
 
-  <style>
-    .tag-list a {
-      font-size: 1rem; /* Default font size */
-    }
-
-    .tag-list a[data-count] {
-      font-size: calc(1rem + (var(--count, 0) * 0.1rem)); /* Scale font size based on data-count attribute */
-    }
-  </style>
-
-  <script>
-    // Initialize the CSS variables for each tag link
-    const tagLinks = document.querySelectorAll('.tag-list a[data-count]');
-    tagLinks.forEach(link => {
-      link.style.setProperty('--count', link.dataset.count);
-    });
+<script>
   document.addEventListener('DOMContentLoaded', function() {
     const tagLinks = document.querySelectorAll('.tag-list a');
     const backToTopLinks = document.querySelectorAll('.back-to-top');
@@ -129,7 +113,3 @@ title: Tags
     });
   });
 </script>
-
-{% else %}
-  <p>No tags found.</p>
-{% endif %}
