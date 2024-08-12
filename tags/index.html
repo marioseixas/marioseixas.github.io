@@ -33,13 +33,18 @@ title: Tags
   {% endfor %}
 {% endfor %}
 
-{% assign max_count = tag_counts | sort | last %}
+{% assign max_count = 0 %}
+{% for count in tag_counts %}
+  {% if count > max_count %}
+    {% assign max_count = count %}
+  {% endif %}
+{% endfor %}
+
 {% assign tag_count_pairs = "" | split: "" %}
 {% for i in (0..all_tags.size) %}
   {% if all_tags[i] %}
     {% assign count = tag_counts[i] %}
-    {% assign padded_count = count | plus: 1000 %}
-    {% capture pair %}{{ padded_count }}||{{ all_tags[i] }}{% endcapture %}
+    {% capture pair %}{{ count | prepend: '0000' | slice: -4, 4 }}||{{ all_tags[i] }}{% endcapture %}
     {% assign tag_count_pairs = tag_count_pairs | push: pair %}
   {% endif %}
 {% endfor %}
@@ -51,7 +56,7 @@ title: Tags
 
   <ul class="tag-list" aria-label="List of all tags">
     {% for pair in sorted_tag_count_pairs %}
-      {% assign count = pair | split: "||" | first | minus: 1000 %}
+      {% assign count = pair | split: "||" | first | plus: 0 %}
       {% assign tag = pair | split: "||" | last %}
       {% assign size = count | times: 100 | divided_by: max_count | plus: 70 %}
       <li>
@@ -64,7 +69,7 @@ title: Tags
 
   <div class="tagged-posts">
     {% for pair in sorted_tag_count_pairs %}
-      {% assign count = pair | split: "||" | first | minus: 1000 %}
+      {% assign count = pair | split: "||" | first | plus: 0 %}
       {% assign tag = pair | split: "||" | last %}
       <section id="{{ tag | slugify }}" aria-labelledby="{{ tag | slugify }}-heading">
         <h2 id="{{ tag | slugify }}-heading">
@@ -84,6 +89,7 @@ title: Tags
     {% endfor %}
   </div>
 </div>
+
 <script>
   document.addEventListener('DOMContentLoaded', function() {
     const tagLinks = document.querySelectorAll('.tag-list a');
