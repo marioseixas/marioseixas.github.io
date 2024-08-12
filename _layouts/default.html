@@ -41,18 +41,6 @@ back_to_top: true
       <meta property="article:tag" content="{{ tag }}">
     {% endfor %}
   {% endif %}
-
-  {% if page.mermaid %}
-    <script src="https://unpkg.com/mermaid@10.9.0/dist/mermaid.min.js"></script>
-    <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        mermaid.initialize({
-          theme: 'forest',
-          startOnLoad: true
-        });
-      });
-    </script>
-  {% endif %}
 </head>
 <body>
   <header>
