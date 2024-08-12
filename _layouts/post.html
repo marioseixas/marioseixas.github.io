@@ -41,18 +41,26 @@ layout: default
         </span>
       </div>
     </header>
-
     <div class="post-content-body">
       {% assign blocks = content | split: '```' %}
+      {% assign code_block_id = 0 %}
       {% for block in blocks %}
         {% assign is_code_block = forloop.index0 | modulo: 2 %}
         {% if is_code_block == 0 %}
           {{ block | markdownify }}
         {% else %}
-          <div class="code-container">
-            <pre><code>{{ block | escape }}</code></pre>
-            <button class="copy-button">Copy</button>
+          {% capture code_block %}
+          <div class="code-container" id="code-block-{{ code_block_id }}">
+            <pre>
+              <code>
+                {{ block | escape }}
+              </code>
+            </pre>
           </div>
+      {% endcapture %}
+          {% include codeHeader.html code_block_id="code-block-{{ code_block_id }}" %}
+          {{ code_block }}
+          {% assign code_block_id = code_block_id | plus: 1 %}
         {% endif %}
       {% endfor %}
     </div>
