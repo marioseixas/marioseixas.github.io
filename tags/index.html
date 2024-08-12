@@ -19,38 +19,44 @@ title: Tags
     {% for tag in post_tags %}
       {% assign tag_stripped = tag | strip %}
       {% if tag_counts[tag_stripped] %}
-        {% assign tag_counts[tag_stripped] = tag_counts[tag_stripped] | plus: 1 %}
+        {% assign new_count = tag_counts[tag_stripped] | plus: 1 %}
+        {% assign tag_counts = tag_counts | merge: tag_stripped | append: ":" | append: new_count %}
       {% else %}
-        {% assign tag_counts = tag_counts | merge: {{ tag_stripped | jsonify }}: 1 %}
+        {% assign tag_counts = tag_counts | merge: tag_stripped | append: ":1" %}
       {% endif %}
     {% endfor %}
   {% endif %}
 {% endfor %}
 
-{% assign sorted_tags = tag_counts | sort: "last" | reverse %}
+{% assign sorted_tags = tag_counts | sort_natural: "last" | reverse %}
 
 <div class="tag-page">
   <h1>{{ page.title }}</h1>
 
   <ul class="tag-list" aria-label="List of all tags">
-    {% for tag in sorted_tags %}
+    {% for tag_count_pair in sorted_tags %}
+      {% assign parts = tag_count_pair | split: ":" %}
+      {% assign tag = parts[0] %}
+      {% assign count = parts[1] %}
       <li>
-        <a href="#{{ tag[0] | slugify }}" aria-label="Tag {{ tag[0] }} with {{ tag[1] }} posts">
-          {{ tag[0] }} ({{ tag[1] }})
+        <a href="#{{ tag | slugify }}" aria-label="Tag {{ tag }} with {{ count }} posts">
+          {{ tag }} ({{ count }})
         </a>
       </li>
     {% endfor %}
   </ul>
 
   <div class="tagged-posts">
-    {% for tag in sorted_tags %}
-      <section id="{{ tag[0] | slugify }}" aria-labelledby="{{ tag[0] | slugify }}-heading">
-        <h2 id="{{ tag[0] | slugify }}-heading">
-          {{ tag[0] }}
+    {% for tag_count_pair in sorted_tags %}
+      {% assign parts = tag_count_pair | split: ":" %}
+      {% assign tag = parts[0] %}
+      <section id="{{ tag | slugify }}" aria-labelledby="{{ tag | slugify }}-heading">
+        <h2 id="{{ tag | slugify }}-heading">
+          {{ tag }}
           <a href="#" class="back-to-top" aria-label="Back to top">&uarr;</a>
         </h2>
         <ul>
-          {% assign tag_posts = site.posts | where_exp: "post", "post.tags contains tag[0]" %}
+          {% assign tag_posts = site.posts | where_exp: "post", "post.tags contains tag" %}
           {% for post in tag_posts %}
             <li>
               <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
