@@ -1,26 +1,28 @@
 document.addEventListener('DOMContentLoaded', () => {
-  const copyButtons = document.querySelectorAll('.copy-code-button');
+  const copyCodeButtons = document.querySelectorAll('.copy-code-button');
+  const codeBlocks = document.querySelectorAll('.code-container pre code');
 
-  copyButtons.forEach(button => {
-    button.addEventListener('click', async () => {
-      const codeBlockId = button.dataset.codeTarget;
-      const codeBlock = document.getElementById(codeBlockId)?.querySelector('pre code');
-      if (!codeBlock) {
-        console.error('Code block not found.');
-        return;
-      }
+  copyCodeButtons.forEach((copyCodeButton, index) => {
+    const code = codeBlocks[index].innerText;
 
-      const codeText = codeBlock.textContent.trim();
-      try {
-        await navigator.clipboard.writeText(codeText);
-        // Optionally provide visual feedback to the user
-        button.textContent = 'Copied!';
+    copyCodeButton.addEventListener('click', () => {
+      // Copy the code to the user's clipboard
+      window.navigator.clipboard.writeText(code).then(() => {
+        // Update the button text visually
+        const { innerText: originalText } = copyCodeButton;
+        copyCodeButton.innerText = 'Copied!';
+
+        // (Optional) Toggle a class for styling the button
+        copyCodeButton.classList.add('copied');
+
+        // After 2 seconds, reset the button to its initial UI
         setTimeout(() => {
-          button.textContent = 'Copy';
+          copyCodeButton.innerText = originalText;
+          copyCodeButton.classList.remove('copied');
         }, 2000);
-      } catch (err) {
-        console.error('Failed to copy text: ', err);
-      }
+      }).catch(err => {
+        console.error('Failed to copy: ', err);
+      });
     });
   });
 });
