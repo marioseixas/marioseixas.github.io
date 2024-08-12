@@ -38,7 +38,7 @@ title: Tags
       </li>
     {% endfor %}
   </ul>
-
+  {% cusdis_comments %}
   <div class="tagged-posts">
     {% for tag in sorted_tags %}
       <section id="{{ tag | slugify }}" aria-labelledby="{{ tag | slugify }}-heading">
