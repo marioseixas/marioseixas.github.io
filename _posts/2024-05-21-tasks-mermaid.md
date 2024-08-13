@@ -40,7 +40,4 @@ flowchart TD
     end
     
     N & O & P & Q & R & S & T & U --> V[End]
-
-    classDef default fill:#f9f,stroke:#333,stroke-width:2px;
-    classDef subgraph fill:#bbf,stroke:#f66,stroke-width:2px,color:#fff,stroke-dasharray: 5 5;
 </div>
