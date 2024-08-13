@@ -1,7 +1,7 @@
 import requests
-from requests.auth import HTTPDigestAuth
+import json
+from icalendar import Calendar
 
-# Replace with your actual URL, username, and password
 url = "https://dav.heydola.com/dav.php/calendars/py28wj81/default/?export"
 username = "py28wj81"
 password = "20287290"
@@ -14,3 +14,18 @@ if response.status_code == 200:
 else:
     print(f"Failed to access. Status code: {response.status_code}")
     print(response.text)
+
+calendar = Calendar.from_ical(response.text)
+events = []
+
+for component in calendar.walk():
+    if component.name == "VEVENT":
+        event = {
+            "title": str(component.get('SUMMARY')),
+            "start": component.get('DTSTART').dt.isoformat(),
+            "end": component.get('DTEND').dt.isoformat(),
+        }
+        events.append(event)
+
+with open("events.json", "w") as f:
+    json.dump(events, f)
