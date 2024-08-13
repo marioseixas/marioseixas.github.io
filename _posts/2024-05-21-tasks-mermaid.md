@@ -1,37 +1,46 @@
 ---
-title: Tasks [mermaid]
+title: Task Prioritization [mermaid]
 date: 2024-05-21
-tags: tasks
-info: aberto.
+tags: [tasks, productivity]
 type: post
 layout: post
 ---
 
 <div class="mermaid">
 flowchart TD
-    A["Does this task have a specific deadline?"] -->|Yes| B["Will delaying this task past its deadline cause immediate harm or significant negative consequences?"]
-    A -->|No| C["Will delaying this task cause immediate harm or significant negative consequences?"]
-
-    B -->|Yes| D["Urgent & Time-Sensitive"]
-    B -->|No| E["Not Urgent & Time-Sensitive"]
+    A[Start] --> B{Specific\ndeadline?}
+    B -->|Yes| C{Delay causes\nharm?}
+    B -->|No| D{Delay causes\nharm?}
     
-    C -->|Yes| F["Urgent & Not Time-Sensitive"]
-    C -->|No| G["Not Urgent & Not Time-Sensitive"]
-
-    D --> H["Does this task require multiple days to complete?"]
-    E --> I["Does this task require multiple days to complete?"]
-    F --> J["Does this task require multiple days to complete?"]
-    G --> K["Does this task require multiple days to complete?"]
-
-    H -->|Yes| L["Urgent, Time-Sensitive, Multi-Day\nSchedule immediately, break into steps."]
-    H -->|No| M["Urgent, Time-Sensitive, Single-Day\nPrioritize and complete today."]
+    subgraph "Urgency & Time-Sensitivity"
+        C -->|Yes| E[Urgent &\nTime-Sensitive]
+        C -->|No| F[Not Urgent &\nTime-Sensitive]
+        D -->|Yes| G[Urgent &\nNot Time-Sensitive]
+        D -->|No| H[Not Urgent &\nNot Time-Sensitive]
+    end
     
-    I -->|Yes| N["Not Urgent, Time-Sensitive, Multi-Day\nSchedule, break into steps."]
-    I -->|No| O["Not Urgent, Time-Sensitive, Single-Day\nPlan to complete on deadline day."]
+    E & F & G & H --> I{Multi-day\ntask?}
+    
+    subgraph "Task Duration & Final Categorization"
+        I -->|Yes| J[Multi-Day]
+        I -->|No| K[Single-Day]
+        
+        J --> L{Type?}
+        K --> M{Type?}
+        
+        L -->|E| N[Schedule immediately,\nbreak into steps]
+        L -->|F| O[Schedule,\nbreak into steps]
+        L -->|G| P[Begin immediately,\nplan work]
+        L -->|H| Q[Allocate time,\nwork gradually]
+        
+        M -->|E| R[Prioritize and\ncomplete today]
+        M -->|F| S[Plan for\ndeadline day]
+        M -->|G| T[Complete\nASAP today]
+        M -->|H| U[Complete when\npossible]
+    end
+    
+    N & O & P & Q & R & S & T & U --> V[End]
 
-    J -->|Yes| P["Urgent, Not Time-Sensitive, Multi-Day\nBegin immediately, plan work."]
-    J -->|No| Q["Urgent, Not Time-Sensitive, Single-Day\nComplete ASAP today."]
-
-    K -->|Yes| R["Not Urgent, Not Time-Sensitive, Multi-Day\nAllocate time, work gradually."]
-    K -->|No| S["Not Urgent, Not Time-Sensitive, Single-Day\nComplete in one day when possible."]
+    classDef default fill:#f9f,stroke:#333,stroke-width:2px;
+    classDef subgraph fill:#bbf,stroke:#f66,stroke-width:2px,color:#fff,stroke-dasharray: 5 5;
 </div>
