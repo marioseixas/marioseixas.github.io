@@ -18,7 +18,7 @@ icon: "far fa-calendar"
       .then(response => response.json())
       .then(data => {
         var calendar = new FullCalendar.Calendar(calendarEl, {
-          initialView: 'dayGridMonth',
+          initialView: 'listMonth',
           events: data
         });
         calendar.render();
