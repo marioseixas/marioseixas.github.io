@@ -62,11 +62,7 @@ layout: default
             nodeSpacing: 40,
             padding: 5
           },
-          securityLevel: 'loose',
-          themeVariables: {
-            fontFamily: getComputedStyle(document.body).getPropertyValue('--ft').trim() || '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif',
-            fontSize: '14px'
-          }
+          securityLevel: 'loose'
         });
 
         document.querySelectorAll('.mermaid').forEach(function(element) {
