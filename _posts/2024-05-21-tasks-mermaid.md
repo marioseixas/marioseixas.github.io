@@ -41,9 +41,3 @@ flowchart TD
     
     N & O & P & Q & R & S & T & U --> V[End]
 </div>
-
-### Key:
-- E: Urgent & Time-Sensitive
-- F: Not Urgent & Time-Sensitive
-- G: Urgent & Not Time-Sensitive
-- H: Not Urgent & Not Time-Sensitive
