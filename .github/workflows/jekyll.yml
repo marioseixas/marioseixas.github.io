@@ -26,7 +26,7 @@ jobs:
       - name: Setup Python
         uses: actions/setup-python@v4
         with:
-          python-version: '3.11'  # Adjust the Python version as needed
+          python-version: '3.11'
 
       - name: Install Python dependencies
         run: |
@@ -35,7 +35,7 @@ jobs:
           pip install icalendar
           
       - name: Run Python script
-        run: python script.py  # Replace with your actual script filename
+        run: python script.py
 
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
@@ -59,7 +59,8 @@ jobs:
           JEKYLL_ENV: production
         run: |
           bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
-          cp events.json /assets/data/events.json
+          mkdir -p _site/assets/data
+          cp events.json _site/assets/data/events.json
           echo "Generated site size: $(du -sh _site | cut -f1)"
 
       - name: Upload artifact
