@@ -33,7 +33,7 @@ jobs:
           python -m pip install --upgrade pip
           pip install requests
           pip install icalendar
-          
+
       - name: Run Python script
         run: python script.py
 
@@ -46,9 +46,6 @@ jobs:
       - name: Install Ruby dependencies
         run: bundle install
 
-      - name: Fetch and Convert .ics to JSON
-        run: bundle exec ruby fetch_ics_and_convert.rb
-
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v4
@@ -59,8 +56,6 @@ jobs:
           JEKYLL_ENV: production
         run: |
           bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
-          mkdir -p _site/assets/data
-          cp events.json _site/assets/data/events.json
           echo "Generated site size: $(du -sh _site | cut -f1)"
 
       - name: Upload artifact
