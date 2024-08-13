@@ -11,22 +11,20 @@ response = requests.get(url, auth=HTTPDigestAuth(username, password))
 
 if response.status_code == 200:
     print("Access successful!")
-    print(response.content.decode('utf-8'))
+    calendar = Calendar.from_ical(response.text)
+    events = []
+
+    for component in calendar.walk():
+        if component.name == "VEVENT":
+            event = {
+                "title": str(component.get('SUMMARY')),
+                "start": component.get('DTSTART').dt.isoformat(),
+                "end": component.get('DTEND').dt.isoformat(),
+            }
+            events.append(event)
+
+    with open("_site/assets/data/events.json", "w") as f:
+        json.dump(events, f)
 else:
     print(f"Failed to access. Status code: {response.status_code}")
     print(response.text)
-
-calendar = Calendar.from_ical(response.text)
-events = []
-
-for component in calendar.walk():
-    if component.name == "VEVENT":
-        event = {
-            "title": str(component.get('SUMMARY')),
-            "start": component.get('DTSTART').dt.isoformat(),
-            "end": component.get('DTEND').dt.isoformat(),
-        }
-        events.append(event)
-
-with open("events.json", "w") as f:
-    json.dump(events, f)
