@@ -9,17 +9,18 @@ icon: "far fa-calendar"
 </center>
 
 <div id="calendar"></div>
+
 <script src='/assets/js/vendor/fullcalendar/index.global.min.js'></script>
-    <script>
+<script>
 document.addEventListener('DOMContentLoaded', function() {
     var calendarEl = document.getElementById('calendar');
 
-    fetch('/events.json')
+    fetch('/assets/data/events.json')
     .then(response => response.json())
     .then(data => {
         var calendar = new FullCalendar.Calendar(calendarEl, {
             initialView: 'dayGridMonth',
-            events: data  // Pass the array directly to FullCalendar
+            events: data
         });
         calendar.render();
     });
