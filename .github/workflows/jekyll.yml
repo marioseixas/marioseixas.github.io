@@ -31,8 +31,9 @@ jobs:
       - name: Install Python dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install requests  # Add other dependencies if needed
-
+          pip install requests
+          pip install icalendar
+          
       - name: Run Python script
         run: python script.py  # Replace with your actual script filename
 
