@@ -2,11 +2,9 @@
 title: Tasks [mermaid]
 date: 2024-05-21
 tags: tasks
-comment: 
 info: aberto.
 type: post
 layout: post
-mermaid: true
 ---
 
 <div class="mermaid">
