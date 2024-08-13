@@ -255,7 +255,7 @@ blockquote {
 
 /* Tag Page Styles */
 .tag-page {
-  max-width: 800px;
+  max-width: 100%;
   margin: 0 auto;
   padding: 1em;
 }
@@ -368,7 +368,6 @@ blockquote {
 }
 
 // Mermaid Graph Styles
-// Mermaid Graph Styles
 .mermaid-wrapper {
   width: 100%;
   overflow-x: auto;
@@ -377,8 +376,8 @@ blockquote {
 }
 
 .mermaid {
-  font-family: var(--ft, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif);
-  font-size: clamp(0.75rem, 2vw, 0.9rem);
+  font-family: var(--ft);
+  font-size: clamp(1rem, 1.6vw, 1.25rem);
   line-height: 1.4;
 
   // Node styles
@@ -391,7 +390,7 @@ blockquote {
 
     text {
       fill: var(--default, #333);
-      font-size: clamp(0.7rem, 1.8vw, 0.85rem);
+      font-size: clamp(1rem, 1.6vw, 1.25rem);
     }
   }
 
@@ -401,9 +400,9 @@ blockquote {
     padding: 0.25em 0.5em;
     border-radius: var(--bd-radius, 4px);
     color: var(--default, #333);
-    font-size: clamp(0.65rem, 1.7vw, 0.8rem);
+    font-size: clamp(1rem, 1.6vw, 1.25rem);
     white-space: pre-wrap; // Allow text wrapping
-    max-width: 200px; // Limit width for better readability
+    max-width: 100%; // Limit width for better readability
   }
 
   .edgePath {
@@ -443,7 +442,7 @@ blockquote {
   .label text {
     text-align: center;
     word-wrap: break-word;
-    max-width: 150px; // Adjust based on your layout
+    max-width: 100%; // Adjust based on your layout
   }
 
   // Dark mode support
