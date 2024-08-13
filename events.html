@@ -10,12 +10,12 @@ icon: "far fa-calendar"
 
 <div id="calendar"></div>
 
-<script src='assets/js/vendor/fullcalendar/index.global.min.js'></script>
+<script src='https://github.com/marioseixas/marioseixas.github.io/blob/main/assets/js/vendor/fullcalendar/index.global.min.js'></script>
 <script>
 document.addEventListener('DOMContentLoaded', function() {
     var calendarEl = document.getElementById('calendar');
 
-    fetch('assets/data/events.json')
+    fetch('https://github.com/marioseixas/marioseixas.github.io/blob/main/assets/data/events.json')
     .then(response => response.json())
     .then(data => {
         var calendar = new FullCalendar.Calendar(calendarEl, {
