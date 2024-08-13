@@ -8,18 +8,18 @@ layout: post
 
 <div class="mermaid">
 flowchart TD
-    A[Start] --> B{Specific\ndeadline?}
-    B -->|Yes| C{Delay causes\nharm?}
-    B -->|No| D{Delay causes\nharm?}
+    A[Start] --> B{Specific<br>deadline?}
+    B -->|Yes| C{Delay causes<br>harm?}
+    B -->|No| D{Delay causes<br>harm?}
     
     subgraph "Urgency & Time-Sensitivity"
-        C -->|Yes| E[Urgent &\nTime-Sensitive]
-        C -->|No| F[Not Urgent &\nTime-Sensitive]
-        D -->|Yes| G[Urgent &\nNot Time-Sensitive]
-        D -->|No| H[Not Urgent &\nNot Time-Sensitive]
+        C -->|Yes| E[Urgent &<br>Time-Sensitive]
+        C -->|No| F[Not Urgent &<br>Time-Sensitive]
+        D -->|Yes| G[Urgent &<br>Not Time-Sensitive]
+        D -->|No| H[Not Urgent &<br>Not Time-Sensitive]
     end
     
-    E & F & G & H --> I{Multi-day\ntask?}
+    E & F & G & H --> I{Multi-day<br>task?}
     
     subgraph "Task Duration & Final Categorization"
         I -->|Yes| J[Multi-Day]
@@ -28,15 +28,15 @@ flowchart TD
         J --> L{Type?}
         K --> M{Type?}
         
-        L -->|E| N[Schedule immediately,\nbreak into steps]
-        L -->|F| O[Schedule,\nbreak into steps]
-        L -->|G| P[Begin immediately,\nplan work]
-        L -->|H| Q[Allocate time,\nwork gradually]
+        L -->|E| N[Schedule immediately,<br>break into steps]
+        L -->|F| O[Schedule,<br>break into steps]
+        L -->|G| P[Begin immediately,<br>plan work]
+        L -->|H| Q[Allocate time,<br>work gradually]
         
-        M -->|E| R[Prioritize and\ncomplete today]
-        M -->|F| S[Plan for\ndeadline day]
-        M -->|G| T[Complete\nASAP today]
-        M -->|H| U[Complete when\npossible]
+        M -->|E| R[Prioritize and<br>complete today]
+        M -->|F| S[Plan for<br>deadline day]
+        M -->|G| T[Complete<br>ASAP today]
+        M -->|H| U[Complete when<br>possible]
     end
     
     N & O & P & Q & R & S & T & U --> V[End]
