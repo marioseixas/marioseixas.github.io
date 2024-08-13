@@ -8,30 +8,20 @@ icon: "far fa-calendar"
 <h2 class="title"> <i class="far fa-calendar"></i> Events </h2>
 </center>
 
-<html lang='en'>
-  <head>
-    <meta charset='utf-8' />
-    <script src='/assets/js/vendor/fullcalendar/index.global.min.js'></script>
+<div id="calendar"></div>
+<script src='/assets/js/vendor/fullcalendar/index.global.min.js'></script>
     <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        var calendarEl = document.getElementById('calendar');
+document.addEventListener('DOMContentLoaded', function() {
+    var calendarEl = document.getElementById('calendar');
+
+    fetch('/events.json')
+    .then(response => response.json())
+    .then(data => {
         var calendar = new FullCalendar.Calendar(calendarEl, {
-          initialView: 'dayGridMonth',
-          height: "auto",
-          locale: 'en',
-          events: '/assets/data/events.json',
-          weekNumbers: true,
-          headerToolbar: {
-            left: 'today',
-            center: 'title',
-            right: 'prev,next'
-          }
+            initialView: 'dayGridMonth',
+            events: data  // Pass the array directly to FullCalendar
         });
         calendar.render();
-      });
-    </script>
-  </head>
-  <body>
-    <div id='calendar' style="width:95%; margin: auto;"></div>
-  </body>
-</html>
+    });
+});
+</script>
