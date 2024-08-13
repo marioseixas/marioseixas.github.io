@@ -23,7 +23,7 @@ if response.status_code == 200:
             }
             events.append(event)
 
-    with open("assets/data/events.json", "w") as f:
+    with open("https://github.com/marioseixas/marioseixas.github.io/blob/main/assets/data/events.json", "w") as f:
         json.dump(events, f)
 else:
     print(f"Failed to access. Status code: {response.status_code}")
