@@ -45,26 +45,60 @@ layout: default
     <div class="post-content-body">
       {{ content | markdownify }}
     </div>
-    <!-- Mermaid.js Initialization -->
+<!-- Mermaid.js Initialization -->
 <script src="https://unpkg.com/mermaid@10.9.0/dist/mermaid.min.js"></script>
 
 <script>
-  // This function initializes Mermaid.js when the DOM is fully loaded
   document.addEventListener('DOMContentLoaded', function() {
-    // Check if the 'mermaid' object is defined (i.e., Mermaid.js has loaded successfully)
     if (typeof mermaid !== 'undefined') {
-      // Initialize Mermaid.js with a dark theme and ensure it starts on load
-      mermaid.initialize({
-        theme: 'dark',
-        startOnLoad: true
+      const init = () => {
+        mermaid.initialize({
+          startOnLoad: true,
+          theme: window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'default',
+          flowchart: { 
+            curve: 'basis',
+            useMaxWidth: false,
+            rankSpacing: 40,
+            nodeSpacing: 40,
+            padding: 5
+          },
+          securityLevel: 'loose',
+          themeVariables: {
+            fontFamily: getComputedStyle(document.body).getPropertyValue('--ft').trim() || '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif',
+            fontSize: '14px'
+          }
+        });
+
+        document.querySelectorAll('.mermaid').forEach(function(element) {
+          const wrapper = document.createElement('div');
+          wrapper.className = 'mermaid-wrapper';
+          element.parentNode.insertBefore(wrapper, element);
+          wrapper.appendChild(element);
+          
+          mermaid.init(undefined, element);
+        });
+      };
+
+      init();
+
+      // Dynamically adjust diagram on window resize
+      let resizeTimer;
+      window.addEventListener('resize', function() {
+        clearTimeout(resizeTimer);
+        resizeTimer = setTimeout(function() {
+          document.querySelectorAll('.mermaid').forEach(function(element) {
+            element.removeAttribute('data-processed');
+          });
+          init();
+        }, 250);
       });
 
-      // Find all elements with the 'mermaid' class and initialize each one
-      document.querySelectorAll('.mermaid').forEach(function(element) {
-        mermaid.init(undefined, element, {
-          theme: 'dark',
-          startOnLoad: true
+      // Handle theme changes
+      window.matchMedia('(prefers-color-scheme: dark)').addListener(function(e) {
+        document.querySelectorAll('.mermaid').forEach(function(element) {
+          element.removeAttribute('data-processed');
         });
+        init();
       });
     }
   });
