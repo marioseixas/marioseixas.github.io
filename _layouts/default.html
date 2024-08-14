@@ -1,6 +1,5 @@
 ---
 layout: null
-back_to_top: true
 ---
 
 <!DOCTYPE html>
@@ -77,12 +76,10 @@ back_to_top: true
 
     <footer class="faded">
       <hr>
-      {% if page.back_to_top != false and page.comment %}
-        <div class="comment-box">
-          <a href="#" id="back-to-top" aria-label="Back to top">↑</a>
-          {{ page.comment }}
-        </div>
-      {% endif %}
+      <div class="comment-box">
+        <a href="#" id="back-to-top" aria-label="Back to top">↑</a>
+        {{ page.comment }}
+      </div>
     </footer>
   </div>
 </body>
