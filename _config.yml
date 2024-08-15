@@ -15,6 +15,7 @@ plugins:
   - jekyll-seo-tag
   - jekyll-readme-index
   - jekyll-data
+  - ./_plugins/pagefind.rb
 
 sass:
   sass_dir: _sass
