@@ -10,38 +10,31 @@ slug: pagefind-with-jekyll
 title: 'PageFind with Jekyll '
 ---
 
-This guide provides a detailed walkthrough of integrating the PageFind search library into your Jekyll-powered website hosted on GitHub Pages. We'll leverage a custom plugin and GitHub Actions to automate the process and ensure a smooth deployment.
+#### **Understanding the Components**
 
-**Understanding the Components**
+- **PageFind:** A powerful search library designed for static websites, offering a fast and efficient search experience without server-side components.
+- **Jekyll Plugin:** A custom Ruby plugin (`_plugins/pagefind.rb`) that automatically triggers PageFind indexing after your Jekyll site is built.
+- **GitHub Actions:** A CI/CD platform that automates the build and deployment process, ensuring your site is updated whenever changes are pushed to your repository.
 
-* **PageFind:** A powerful search library designed for static websites, offering a fast and efficient search experience without the need for server-side components.
-* **Jekyll Plugin:** A custom Ruby plugin (`_plugins/pagefind.rb`) that automatically triggers PageFind indexing after your Jekyll site is built.
-* **GitHub Actions:** A CI/CD platform that automates the build and deployment process, ensuring your site is updated whenever changes are pushed to your repository.
+#### **Step-by-Step Implementation**
 
-**Step-by-Step Implementation**
-
-1. **Install PageFind:** Begin by installing PageFind globally on your system using npm:
-
-   ```bash
-   npm install -g @pagefind/core
-   ```
-
-2. **Create the Search Page:** Add a new Markdown file named `search.md` to your Jekyll site's `pages` directory. This file will contain the search interface:
-
+1. **Create the Search Page:**  
+   Add a new Markdown file named `search.md` to your Jekyll site’s `pages` directory. This file will contain the search interface:
+   
    ```markdown
    ---
    layout: default
    title: Site Search
    permalink: /search/
    ---
-
+   
    <link href="/pagefind/pagefind-ui.css" rel="stylesheet">
    <script src="/pagefind/pagefind-ui.js"></script>
-
+   
    <h1 style="text-align: center">Site Search</h1>
    <div id="search"></div>
    <p style="text-align: center; font-size: 0.7em">Powered by <a target="_blank" href="https://pagefind.app/">PageFind</a></p>
-
+   
    <script>
        window.addEventListener('DOMContentLoaded', (event) => {
            new PagefindUI({ element: "#search", showSubResults: true });
@@ -49,7 +42,8 @@ This guide provides a detailed walkthrough of integrating the PageFind search li
    </script>
    ```
 
-3. **Configure Jekyll:** Update your `_config.yml` file to include the custom PageFind plugin:
+2. **Configure Jekyll:**  
+   Update your `_config.yml` file to include the custom PageFind plugin:
 
    ```yaml
    plugins:
@@ -62,7 +56,8 @@ This guide provides a detailed walkthrough of integrating the PageFind search li
      - ./_plugins/pagefind.rb
    ```
 
-4. **Create the PageFind Plugin:** Create a new directory named `_plugins` at the root of your Jekyll project and add a file named `pagefind.rb` with the following content:
+3. **Create the PageFind Plugin:**  
+   Create a new directory named `_plugins` at the root of your Jekyll project and add a file named `pagefind.rb` with the following content:
 
    ```ruby
    Jekyll::Hooks.register :site, :post_write do |site|
@@ -70,7 +65,8 @@ This guide provides a detailed walkthrough of integrating the PageFind search li
    end
    ```
 
-5. **Configure PageFind:** Create a file named `pagefind.yml` in your root directory to configure PageFind's behavior:
+4. **Configure PageFind:**  
+   Create a file named `pagefind.yml` in your root directory to configure PageFind’s behavior:
 
    ```yaml
    source: _site
@@ -78,7 +74,8 @@ This guide provides a detailed walkthrough of integrating the PageFind search li
    split_pages_on: "h2"
    ```
 
-6. **Set up GitHub Actions:** Create a new file named `.github/workflows/deploy.yml` in your repository with the following content:
+5. **Set up GitHub Actions:**  
+   Create a new file named `.github/workflows/deploy.yml` in your repository with the following content. This setup will install PageFind during the deployment process, eliminating the need for a local installation:
 
    ```yaml
    name: GitHub Pages
@@ -127,14 +124,10 @@ This guide provides a detailed walkthrough of integrating the PageFind search li
            publish_dir: ./_site
    ```
 
-**Explanation and Key Considerations**
+#### **Explanation and Key Considerations**
 
-* **`_plugins/pagefind.rb`:** This plugin ensures that PageFind indexes your site content after each build.
-* **`pagefind.yml`:** This file configures PageFind, specifying the source directory, output directory, and content splitting behavior.
-* **`.github/workflows/deploy.yml`:** This workflow automates the entire process, building your Jekyll site, running PageFind indexing, and deploying the final output to GitHub Pages.
-* **`pagefind-entry.json`:** This file, generated by PageFind during indexing, is crucial for the search functionality. Ensure it's correctly generated and located in the `_pagefind` directory.
-* **CSS Customization:** Include and customize the `pagefind-modular-ui.css` file to style the search interface according to your website's design.
-
-**Conclusion**
-
-By following these steps, you can seamlessly integrate PageFind into your Jekyll-powered website hosted on GitHub Pages. This setup provides a robust and efficient search solution, enhancing the user experience and making your content more discoverable. Remember to consult the official PageFind documentation for the latest information and advanced configuration options.
+- **`_plugins/pagefind.rb`:** This plugin ensures that PageFind indexes your site content after each build.
+- **`pagefind.yml`:** This file configures PageFind, specifying the source directory, output directory, and content splitting behavior.
+- **`.github/workflows/deploy.yml`:** This workflow automates the entire process, building your Jekyll site, running PageFind indexing, and deploying the final output to GitHub Pages.
+- **`pagefind-entry.json`:** This file, generated by PageFind during indexing, is crucial for the search functionality. Ensure it’s correctly generated and located in the `_pagefind` directory.
+- **CSS Customization:** Include and customize the `pagefind-modular-ui.css` file to style the search interface according to your website’s design.
