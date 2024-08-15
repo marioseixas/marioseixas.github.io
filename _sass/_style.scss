@@ -108,13 +108,16 @@ img, canvas, iframe, video, svg, select, textarea {
 table {
   border-collapse: collapse;
   width: 100%;
+  table-layout: fixed;
 }
 
 th, td {
   padding: 0.5em 1em;
   text-align: left;
   border: 1px dotted var(--accents-amethyst);
-}
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  }
 
 th, thead, tfoot {
   background: var(--headings);
