@@ -16,7 +16,6 @@ plugins:
   - jekyll-readme-index
   - jekyll-data
   - jekyll-mermaid
-  - ./_plugins/pagefind.rb
 
 sass:
   sass_dir: _sass
