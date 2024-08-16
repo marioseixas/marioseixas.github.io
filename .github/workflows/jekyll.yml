@@ -53,7 +53,7 @@ jobs:
 
       - name: Setup Pages
         id: pages
-        uses: actions/configure-pages@v4
+        uses: actions/configure-pages@v5
 
       - name: Build with Jekyll
         env:
@@ -67,22 +67,52 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 'latest'
-
-      - name: Install PageFind
-        run: npm install -g pagefind
-
-      - name: Run PageFind indexing
-        run: npx -y pagefind --site _site --output-subdir _site/pagefind
-
+          
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
+        with:
+          name: github-pages-build
+          path: .
+
+  generateIndexes:
+      runs-on: ubuntu-latest
+      needs: build
+      env:
+          PAGES_REPO_NWO: marioseixas/marioseixas.github.io
+          JEKYLL_ENV: production    
+      steps:
+          - name: Install PageFind
+            run: npm install -g pagefind
+            
+          - name: Download artifact
+            uses: actions/download-artifact@v4
+            
+          - name: Generate payload
+            run: |
+                 mkdir ./github-pages-build/artifact
+                 
+          - name: Extract artifact
+            run: |
+                 tar -xvf ./github-pages-build/artifact.tar -C ./github-pages-build/artifact
+                 
+          - name: Generate indexes
+            run: |
+                npx -y pagefind --site ./github-pages-build/artifact
+                
+          - name: Upload artifact
+            uses: actions/upload-pages-artifact@v3
+            with:
+                name: github-pages
+                path: ./github-pages-build/artifact
 
   deploy:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
-    needs: build
+    needs:
+      - build
+      - generateIndexes
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
