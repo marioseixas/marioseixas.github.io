@@ -1,6 +1,6 @@
 {
   startOnLoad: true,
-  theme: "default",
+  theme: "dark",
   flowchart:{
     useMaxWidth: true,
     htmlLabels: true
