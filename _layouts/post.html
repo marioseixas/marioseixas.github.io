@@ -43,6 +43,8 @@ layout: default
     </header>
 
     <div class="post-content-body">
+      {% include toc.html html=content %}
+      {% include anchor_headings.html html=content anchorBody="#" %}
       {{ content | markdownify }}
     </div>
     
