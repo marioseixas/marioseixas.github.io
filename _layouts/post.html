@@ -43,6 +43,7 @@ layout: default
     </header>
 
     <div class="post-content-body">
+      <div id="search"></div>
       {% include toc.html html=content %}
       {% include anchor_headings.html html=content anchorBody="#" %}
       {{ content | markdownify }}
