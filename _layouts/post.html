@@ -13,7 +13,7 @@ layout: default
               · {{ page.date | date_to_string }}
             </time>
             {% if page.last_modified_at %}
-            &rightarrowtail;
+            ↣
             <time datetime="{{ page.last_modified_at | date_to_xmlschema }}">
                 {{ page.last_modified_at | date_to_string }}
               </time>
@@ -45,15 +45,17 @@ layout: default
     <div class="post-content-body">
       {{ content | markdownify }}
     </div>
-<!-- Mermaid.js Initialization -->
+
+<!-- Mermaid.js and svg-pan-zoom Initialization -->
 <script src="https://unpkg.com/mermaid@10.9.0/dist/mermaid.min.js"></script>
+<script src="https://bumbu.me/svg-pan-zoom/dist/svg-pan-zoom.min.js"></script>
 
 <script>
   document.addEventListener('DOMContentLoaded', function() {
     if (typeof mermaid !== 'undefined') {
       const init = () => {
         mermaid.initialize({
-          startOnLoad: false,
+          startOnLoad: true,
           theme: window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'default',
           flowchart: { 
             curve: 'basis',
@@ -72,6 +74,46 @@ layout: default
           wrapper.appendChild(element);
           
           mermaid.init(undefined, element);
+
+          // Initialize svg-pan-zoom after Mermaid renders the diagram
+          var doPan = false;
+          var mousepos;
+          var eventsHandler = {
+            haltEventListeners: ['mousedown', 'mousemove', 'mouseup'],
+            mouseDownHandler: function (ev) {
+              if (ev.target.classList.contains('node') || ev.target.classList.contains('edgeLabel')) {
+                doPan = true;
+                mousepos = { x: ev.clientX, y: ev.clientY };
+              }
+            },
+            mouseMoveHandler: function (ev) {
+              if (doPan) {
+                panZoom.panBy({ x: ev.clientX - mousepos.x, y: ev.clientY - mousepos.y });
+                mousepos = { x: ev.clientX, y: ev.clientY };
+                window.getSelection().removeAllRanges();
+              }
+            },
+            mouseUpHandler: function (ev) {
+              doPan = false;
+            },
+            init: function (options) {
+              options.svgElement.addEventListener('mousedown', this.mouseDownHandler, false);
+              options.svgElement.addEventListener('mousemove', this.mouseMoveHandler, false);
+              options.svgElement.addEventListener('mouseup', this.mouseUpHandler, false);
+            },
+            destroy: function (options) {
+              options.svgElement.removeEventListener('mousedown', this.mouseDownHandler, false);
+              options.svgElement.removeEventListener('mousemove', this.mouseMoveHandler, false);
+              options.svgElement.removeEventListener('mouseup', this.mouseUpHandler, false);
+            }
+          };
+          var panZoom = svgPanZoom(element.querySelector('svg'), {
+            zoomEnabled: true,
+            controlIconsEnabled: true,
+            fit: true,
+            center: true,
+            customEventsHandler: eventsHandler
+          });
         });
       };
 
