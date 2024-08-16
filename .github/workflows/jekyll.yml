@@ -76,10 +76,7 @@ jobs:
 
   generateIndexes:
       runs-on: ubuntu-latest
-      needs: build
-      env:
-          PAGES_REPO_NWO: marioseixas/marioseixas.github.io
-          JEKYLL_ENV: production    
+      needs: build  
       steps:
           - name: Install PageFind
             run: npm install -g pagefind
@@ -97,7 +94,7 @@ jobs:
                  
           - name: Generate indexes
             run: |
-                npx -y pagefind --site ./github-pages-build/artifact
+                npx -y pagefind --site ./github-pages-build/artifact --output-path pagefind
                 
           - name: Upload artifact
             uses: actions/upload-pages-artifact@v3
