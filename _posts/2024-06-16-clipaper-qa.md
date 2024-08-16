@@ -1,6 +1,6 @@
 ---
 title: cliPaperQA
-date: 2024-06-16 00:00:00 -03:00
+date: 2024-06-16
 categories:
 - Code
 tags:
@@ -15,25 +15,6 @@ layout: post
 # PaperQA CLI Script Documentation
 
 This documentation provides a comprehensive guide on how to use the provided PaperQA CLI script. The script is designed to process PDF documents, generate embeddings, and answer questions using OpenAI's language models.
-
-## Table of Contents
-
-1. [Introduction](#introduction)
-2. [Prerequisites](#prerequisites)
-3. [Installation](#installation)
-4. [Usage](#usage)
-    - [Command Line Arguments](#command-line-arguments)
-    - [Examples](#examples)
-5. [Detailed Explanation](#detailed-explanation)
-    - [Loading Custom Prompts](#loading-custom-prompts)
-    - [Creating Docs Object](#creating-docs-object)
-    - [Loading Existing Embeddings](#loading-existing-embeddings)
-    - [Adding PDF Documents](#adding-pdf-documents)
-    - [Getting Questions](#getting-questions)
-    - [Answering Questions](#answering-questions)
-    - [Saving Data](#saving-data)
-6. [Error Handling](#error-handling)
-7. [Conclusion](#conclusion)
 
 ## Introduction
 
