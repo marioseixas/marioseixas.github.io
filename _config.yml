@@ -28,9 +28,6 @@ defaults:
     values:
       layout: default
 
-menu:
-  home: "/"
-
 git_log: false
 
 markdown: kramdown
