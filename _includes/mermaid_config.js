@@ -1,6 +1,6 @@
 {
   startOnLoad: true,
-  theme: window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'default',
+  theme: 'default',
   flowchart: {
     curve: 'basis',
     useMaxWidth: true,
