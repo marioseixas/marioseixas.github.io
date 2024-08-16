@@ -399,16 +399,6 @@ body {
   padding: 1em;
 }
 
-// Mermaid diagram code blocks should be left unstyled.
-code.language-mermaid {
-  padding: 0;
-  background-color: var(--bg-default);
-  border: 0;
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
-  width: 100%;  
-}
-
 figcaption {
   color: var(--accents-amethyst);
   font: caption;
