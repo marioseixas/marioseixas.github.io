@@ -18,7 +18,7 @@ layout: default
                 {{ page.last_modified_at | date_to_string }}
               </time>
             {% endif %}
-          </span>          
+          </span>
           {% if page.tags %}
             <span>
               · Tags:
@@ -26,12 +26,12 @@ layout: default
                 <a href="{{ site.baseurl }}/tags/#{{ tag | slugify }}" class="tag">{{ tag }}</a>{% unless forloop.last %},{% endunless %}
               {% endfor %}
             </span>
-          {% endif %}          
+          {% endif %}
           {% if page.info %}
             <span class="tags">
               · Edit: {{ page.info }}
             </span>
-          {% endif %}          
+          {% endif %}
           <a href="https://github.com/marioseixas/marioseixas.github.io/edit/main/{{ page.path }}" target="_blank" rel="noopener noreferrer">
             · Improve this
           </a>
@@ -45,16 +45,16 @@ layout: default
     <div class="post-content-body">
       {{ content | markdownify }}
     </div>
-    <!-- Mermaid.js Initialization -->
-    <script src="https://unpkg.com/mermaid@10.9.0/dist/mermaid.min.js"></script>
-    <script src="https://bumbu.me/svg-pan-zoom/dist/svg-pan-zoom.min.js"></script>
 
+    <!-- SVG Pan-Zoom and Mermaid.js Initialization -->
+    <script src="https://bumbu.me/svg-pan-zoom/dist/svg-pan-zoom.min.js"></script>
+    <script src="https://unpkg.com/mermaid@10.9.0/dist/mermaid.min.js"></script>
     <script>
       document.addEventListener('DOMContentLoaded', function() {
         if (typeof mermaid !== 'undefined') {
-          const init = () => {
+          const initMermaid = () => {
             mermaid.initialize({
-              startOnLoad: true,
+              startOnLoad: false, // Defer rendering to allow custom SVG manipulation
               theme: window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'default',
               flowchart: { 
                 curve: 'basis',
@@ -66,96 +66,79 @@ layout: default
               securityLevel: 'loose'
             });
 
-            document.querySelectorAll('.mermaid').forEach(function(element) {
+            document.querySelectorAll('.mermaid').forEach(async function(element) {
               const wrapper = document.createElement('div');
               wrapper.className = 'mermaid-wrapper';
+              wrapper.id = 'graphDiv';
               element.parentNode.insertBefore(wrapper, element);
               wrapper.appendChild(element);
-              
-              mermaid.init(undefined, element);
+
+              const graphDefinition = element.innerHTML;
+              const { svg } = await mermaid.render('mySvgId', graphDefinition);
+              wrapper.innerHTML = svg.replace(/( )*max-width:( 0-9\.)*px;/i, '');
+
+              let doPan = false;
+              let mousepos;
+
+              const eventsHandler = {
+                haltEventListeners: ['mousedown', 'mousemove', 'mouseup'],
+
+                mouseDownHandler: function (ev) {
+                  if (ev.target.className.baseVal === "mermaid" || ev.target.tagName === "svg") {
+                    doPan = true;
+                    mousepos = { x: ev.clientX, y: ev.clientY }
+                  }
+                },
+
+                mouseMoveHandler: function (ev) {
+                  if (doPan) {
+                    panZoom.panBy({ x: ev.clientX - mousepos.x, y: ev.clientY - mousepos.y });
+                    mousepos = { x: ev.clientX, y: ev.clientY };
+                    window.getSelection().removeAllRanges();
+                  }
+                },
+
+                mouseUpHandler: function () {
+                  doPan = false;
+                },
+
+                init: function (options) {
+                  options.svgElement.addEventListener('mousedown', this.mouseDownHandler, false);
+                  options.svgElement.addEventListener('mousemove', this.mouseMoveHandler, false);
+                  options.svgElement.addEventListener('mouseup', this.mouseUpHandler, false);
+                },
+
+                destroy: function (options) {
+                  options.svgElement.removeEventListener('mousedown', this.mouseDownHandler, false);
+                  options.svgElement.removeEventListener('mousemove', this.mouseMoveHandler, false);
+                  options.svgElement.removeEventListener('mouseup', this.mouseUpHandler, false);
+                }
+              };
+
+              const panZoom = svgPanZoom('#mySvgId', {
+                zoomEnabled: true,
+                controlIconsEnabled: true,
+                fit: true,
+                center: true,
+                customEventsHandler: eventsHandler
+              });
             });
           };
 
-          const drawDiagram = async function () {
-            const element = document.querySelector('#graphDiv');
-            const graphDefinition = `
-flowchart LR
-a(mermaid) --> b(flowchart) --> c(flowchart) --> d(flowchart) --> e(flowchart) --> f(flowchart)
-            `;
-            const { svg } = await mermaid.render('mySvgId', graphDefinition);
-            element.innerHTML = svg.replace(/( )*max-width:( 0-9\.)*px;/i, '');
+          initMermaid();
 
-            var doPan = false;
-            var eventsHandler;
-            var panZoom;
-            var mousepos;
-
-            eventsHandler = {
-              haltEventListeners: ['mousedown', 'mousemove', 'mouseup']
-
-              , mouseDownHandler: function (ev) {
-                if (event.target.className == "[object SVGAnimatedString]") {
-                  doPan = true;
-                  mousepos = { x: ev.clientX, y: ev.clientY }
-                };
-              }
-
-              , mouseMoveHandler: function (ev) {
-                if (doPan) {
-                  panZoom.panBy({ x: ev.clientX - mousepos.x, y: ev.clientY - mousepos.y });
-                  mousepos = { x: ev.clientX, y: ev.clientY };
-                  window.getSelection().removeAllRanges();
-                }
-              }
-
-              , mouseUpHandler: function (ev) {
-                doPan = false;
-              }
-
-              , init: function (options) {
-                options.svgElement.addEventListener('mousedown', this.mouseDownHandler, false);
-                options.svgElement.addEventListener('mousemove', this.mouseMoveHandler, false);
-                options.svgElement.addEventListener('mouseup', this.mouseUpHandler, false);
-              }
-
-              , destroy: function (options) {
-                options.svgElement.removeEventListener('mousedown', this.mouseDownHandler, false);
-                options.svgElement.removeEventListener('mousemove', this.mouseMoveHandler, false);
-                options.svgElement.removeEventListener('mouseup', this.mouseUpHandler, false);
-              }
-            }
-            panZoom = svgPanZoom('#mySvgId', {
-              zoomEnabled: true
-              , controlIconsEnabled: true
-              , fit: 1
-              , center: 1
-              , customEventsHandler: eventsHandler
-            })
-          };
-
-          init();
-          drawDiagram();
-
-          // Dynamically adjust diagram on window resize
-          let resizeTimer;
           window.addEventListener('resize', function() {
-            clearTimeout(resizeTimer);
-            resizeTimer = setTimeout(function() {
-              document.querySelectorAll('.mermaid').forEach(function(element) {
-                element.removeAttribute('data-processed');
-              });
-              init();
-              drawDiagram();
-            }, 250);
+            document.querySelectorAll('.mermaid').forEach(function(element) {
+              element.removeAttribute('data-processed');
+            });
+            initMermaid();
           });
 
-          // Handle theme changes
           window.matchMedia('(prefers-color-scheme: dark)').addListener(function(e) {
             document.querySelectorAll('.mermaid').forEach(function(element) {
               element.removeAttribute('data-processed');
             });
-            init();
-            drawDiagram();
+            initMermaid();
           });
         }
       });
