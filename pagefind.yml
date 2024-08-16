@@ -1,3 +1,2 @@
 site: _site
 output_subdir: pagefind
-split_pages_on: "h2"
