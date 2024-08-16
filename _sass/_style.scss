@@ -135,6 +135,21 @@ img[class*="emoji"][src$=".svg"] {
     }
   }
 
+// Mermaid Graph Styles
+.mermaid-wrapper {
+  margin-bottom: 1rem;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  width: 100%;
+}
+
+// Mermaid diagram code blocks should be left unstyled.
+code.language-mermaid {
+  padding: 0;
+  background-color: inherit;
+  border: 0;
+}
+
   // Cluster styles
   .cluster {
     rect {
@@ -343,14 +358,6 @@ img[class*="emoji"][src$=".svg"] {
   position: absolute !important;
   white-space: nowrap;
   width: 1px;
-}
-
-// Mermaid Graph Styles
-.mermaid-wrapper {
-  margin-bottom: 1rem;
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
-  width: 100%;
 }
 
 ::selection {
