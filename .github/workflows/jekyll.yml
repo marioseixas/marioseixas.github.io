@@ -72,7 +72,7 @@ jobs:
           echo "Generated site size: $(du -sh _site | cut -f1)"
 
       - name: Run PageFind indexing
-        run: pagefind --source _site
+        run: pagefind --site _site
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
