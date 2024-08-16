@@ -10,12 +10,13 @@ group :jekyll_plugins do
   gem "jekyll-last-modified-at"
   gem "jekyll-feed"
   gem "jekyll-sitemap"
-  gem "jekyll-seo-tag"
-  gem "kramdown-parser-gfm"
-  gem "jekyll-readme-index"
-  gem "icalendar"
+  gem "jekyll-seo-tag"  
+  gem "jekyll-readme-index"  
   gem "jekyll-data"
+  gem "jekyll-mermaid", :github => 'cwboden/jekyll-mermaid', :branch => 'master'
 end
 
 # Additional gems
 gem "ffi", "< 1.17.0"
+gem "kramdown-parser-gfm"
+gem "icalendar"
