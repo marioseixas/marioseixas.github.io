@@ -1,3 +1,2 @@
 site: _site
-output_subdir: pagefind
-bundle_dir: pagefind
+output_subdir: _site/pagefind
