@@ -96,12 +96,12 @@ jobs:
                  
           - name: Generate indexes
             run: |
-                npx -y pagefind --site ./github-pages-build/artifact --output-path pagefind
+                npx -y pagefind --site ./github-pages-build/artifact --output-path ./github-pages-build/artifact/_site/pagefind
                 
           - name: Upload artifact
             uses: actions/upload-pages-artifact@v3
             with:
-              path: .
+              path: ./github-pages-build/artifact/_site
 
   deploy:
     environment:
