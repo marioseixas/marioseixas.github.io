@@ -61,7 +61,7 @@ jobs:
           node-version: '14'
 
       - name: Install PageFind
-        run: npm install -g @pagefind/core
+        run: npm install -g pagefind
         
       - name: Build with Jekyll
         env:
