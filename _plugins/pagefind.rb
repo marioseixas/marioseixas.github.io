@@ -1,3 +1,3 @@
 Jekyll::Hooks.register :site, :post_write do |site|
-  system("npx -y pagefind --source '%{path}'" % {:path => site.dest})
+    `npm exec -- pagefind --site _site --output-path _site/pagefind`
 end
