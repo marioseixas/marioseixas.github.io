@@ -54,15 +54,7 @@ jobs:
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v4
-        
-      - name: Install Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: '14'
 
-      - name: Install PageFind
-        run: npm install -g pagefind
-        
       - name: Build with Jekyll
         env:
           PAGES_REPO_NWO: marioseixas/marioseixas.github.io
@@ -70,9 +62,17 @@ jobs:
         run: |
           bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
           echo "Generated site size: $(du -sh _site | cut -f1)"
+        
+      - name: Install Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 'latest'
+
+      - name: Install PageFind
+        run: npm install -g pagefind
 
       - name: Run PageFind indexing
-        run: pagefind --site _site
+        run: npx -y pagefind --site _site
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
