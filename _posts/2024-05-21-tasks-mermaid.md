@@ -1,5 +1,5 @@
 ---
-title: Task Prioritization [mermaid]
+title: Task Prioritization
 date: 2024-05-21
 tags: [tasks, productivity]
 type: post
