@@ -13,7 +13,7 @@ layout: default
               · {{ page.date | date_to_string }}
             </time>
             {% if page.last_modified_at %}
-            ↣
+            &rightarrowtail;
             <time datetime="{{ page.last_modified_at | date_to_xmlschema }}">
                 {{ page.last_modified_at | date_to_string }}
               </time>
@@ -45,102 +45,121 @@ layout: default
     <div class="post-content-body">
       {{ content | markdownify }}
     </div>
+    <!-- Mermaid.js Initialization -->
+    <script src="https://unpkg.com/mermaid@10.9.0/dist/mermaid.min.js"></script>
+    <script src="https://bumbu.me/svg-pan-zoom/dist/svg-pan-zoom.min.js"></script>
 
-<!-- Mermaid.js and svg-pan-zoom Initialization -->
-<script src="https://unpkg.com/mermaid@10.9.0/dist/mermaid.min.js"></script>
-<script src="https://bumbu.me/svg-pan-zoom/dist/svg-pan-zoom.min.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        if (typeof mermaid !== 'undefined') {
+          const init = () => {
+            mermaid.initialize({
+              startOnLoad: true,
+              theme: window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'default',
+              flowchart: { 
+                curve: 'basis',
+                useMaxWidth: false,
+                rankSpacing: 40,
+                nodeSpacing: 40,
+                padding: 5
+              },
+              securityLevel: 'loose'
+            });
 
-<script>
-  document.addEventListener('DOMContentLoaded', function() {
-    if (typeof mermaid !== 'undefined') {
-      const init = () => {
-        mermaid.initialize({
-          startOnLoad: true,
-          theme: window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'default',
-          flowchart: { 
-            curve: 'basis',
-            useMaxWidth: false,
-            rankSpacing: 40,
-            nodeSpacing: 40,
-            padding: 5
-          },
-          securityLevel: 'loose'
-        });
-
-        document.querySelectorAll('.mermaid').forEach(function(element) {
-          const wrapper = document.createElement('div');
-          wrapper.className = 'mermaid-wrapper';
-          element.parentNode.insertBefore(wrapper, element);
-          wrapper.appendChild(element);
-          
-          mermaid.init(undefined, element);
-
-          // Initialize svg-pan-zoom after Mermaid renders the diagram
-          var doPan = false;
-          var mousepos;
-          var eventsHandler = {
-            haltEventListeners: ['mousedown', 'mousemove', 'mouseup'],
-            mouseDownHandler: function (ev) {
-              if (ev.target.classList.contains('node') || ev.target.classList.contains('edgeLabel')) {
-                doPan = true;
-                mousepos = { x: ev.clientX, y: ev.clientY };
-              }
-            },
-            mouseMoveHandler: function (ev) {
-              if (doPan) {
-                panZoom.panBy({ x: ev.clientX - mousepos.x, y: ev.clientY - mousepos.y });
-                mousepos = { x: ev.clientX, y: ev.clientY };
-                window.getSelection().removeAllRanges();
-              }
-            },
-            mouseUpHandler: function (ev) {
-              doPan = false;
-            },
-            init: function (options) {
-              options.svgElement.addEventListener('mousedown', this.mouseDownHandler, false);
-              options.svgElement.addEventListener('mousemove', this.mouseMoveHandler, false);
-              options.svgElement.addEventListener('mouseup', this.mouseUpHandler, false);
-            },
-            destroy: function (options) {
-              options.svgElement.removeEventListener('mousedown', this.mouseDownHandler, false);
-              options.svgElement.removeEventListener('mousemove', this.mouseMoveHandler, false);
-              options.svgElement.removeEventListener('mouseup', this.mouseUpHandler, false);
-            }
+            document.querySelectorAll('.mermaid').forEach(function(element) {
+              const wrapper = document.createElement('div');
+              wrapper.className = 'mermaid-wrapper';
+              element.parentNode.insertBefore(wrapper, element);
+              wrapper.appendChild(element);
+              
+              mermaid.init(undefined, element);
+            });
           };
-          var panZoom = svgPanZoom(element.querySelector('svg'), {
-            zoomEnabled: true,
-            controlIconsEnabled: true,
-            fit: true,
-            center: true,
-            customEventsHandler: eventsHandler
-          });
-        });
-      };
 
-      init();
+          const drawDiagram = async function () {
+            const element = document.querySelector('#graphDiv');
+            const graphDefinition = `
+flowchart LR
+a(mermaid) --> b(flowchart) --> c(flowchart) --> d(flowchart) --> e(flowchart) --> f(flowchart)
+            `;
+            const { svg } = await mermaid.render('mySvgId', graphDefinition);
+            element.innerHTML = svg.replace(/( )*max-width:( 0-9\.)*px;/i, '');
 
-      // Dynamically adjust diagram on window resize
-      let resizeTimer;
-      window.addEventListener('resize', function() {
-        clearTimeout(resizeTimer);
-        resizeTimer = setTimeout(function() {
-          document.querySelectorAll('.mermaid').forEach(function(element) {
-            element.removeAttribute('data-processed');
-          });
+            var doPan = false;
+            var eventsHandler;
+            var panZoom;
+            var mousepos;
+
+            eventsHandler = {
+              haltEventListeners: ['mousedown', 'mousemove', 'mouseup']
+
+              , mouseDownHandler: function (ev) {
+                if (event.target.className == "[object SVGAnimatedString]") {
+                  doPan = true;
+                  mousepos = { x: ev.clientX, y: ev.clientY }
+                };
+              }
+
+              , mouseMoveHandler: function (ev) {
+                if (doPan) {
+                  panZoom.panBy({ x: ev.clientX - mousepos.x, y: ev.clientY - mousepos.y });
+                  mousepos = { x: ev.clientX, y: ev.clientY };
+                  window.getSelection().removeAllRanges();
+                }
+              }
+
+              , mouseUpHandler: function (ev) {
+                doPan = false;
+              }
+
+              , init: function (options) {
+                options.svgElement.addEventListener('mousedown', this.mouseDownHandler, false);
+                options.svgElement.addEventListener('mousemove', this.mouseMoveHandler, false);
+                options.svgElement.addEventListener('mouseup', this.mouseUpHandler, false);
+              }
+
+              , destroy: function (options) {
+                options.svgElement.removeEventListener('mousedown', this.mouseDownHandler, false);
+                options.svgElement.removeEventListener('mousemove', this.mouseMoveHandler, false);
+                options.svgElement.removeEventListener('mouseup', this.mouseUpHandler, false);
+              }
+            }
+            panZoom = svgPanZoom('#mySvgId', {
+              zoomEnabled: true
+              , controlIconsEnabled: true
+              , fit: 1
+              , center: 1
+              , customEventsHandler: eventsHandler
+            })
+          };
+
           init();
-        }, 250);
-      });
+          drawDiagram();
 
-      // Handle theme changes
-      window.matchMedia('(prefers-color-scheme: dark)').addListener(function(e) {
-        document.querySelectorAll('.mermaid').forEach(function(element) {
-          element.removeAttribute('data-processed');
-        });
-        init();
+          // Dynamically adjust diagram on window resize
+          let resizeTimer;
+          window.addEventListener('resize', function() {
+            clearTimeout(resizeTimer);
+            resizeTimer = setTimeout(function() {
+              document.querySelectorAll('.mermaid').forEach(function(element) {
+                element.removeAttribute('data-processed');
+              });
+              init();
+              drawDiagram();
+            }, 250);
+          });
+
+          // Handle theme changes
+          window.matchMedia('(prefers-color-scheme: dark)').addListener(function(e) {
+            document.querySelectorAll('.mermaid').forEach(function(element) {
+              element.removeAttribute('data-processed');
+            });
+            init();
+            drawDiagram();
+          });
+        }
       });
-    }
-  });
-</script>
+    </script>
     <script src="{{ '/assets/js/copy-to-clipboard.js' | relative_url }}" defer></script>
   </article>
   {% cusdis_comments %}
