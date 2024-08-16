@@ -1,4 +1,5 @@
 <body>
+  <div class="searchcontainer" id="search"></div>
   <main class="tags-page">
     <section>
       <!-- Separate posts where last_modified_at is different from date -->
