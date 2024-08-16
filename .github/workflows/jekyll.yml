@@ -72,7 +72,7 @@ jobs:
         run: npm install -g pagefind
 
       - name: Run PageFind indexing
-        run: npx -y pagefind --source _site --output-subdir pagefind
+        run: npx -y pagefind --site _site --output-subdir _site/pagefind
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
