@@ -6,7 +6,7 @@ type: post
 layout: post
 ---
 
-```mermaid
+{% mermaid %}
 flowchart TD
     A[Start] --> B{Specific\ndeadline?}
     B -->|Yes| C{Delay causes\nharm?}
@@ -40,4 +40,4 @@ flowchart TD
     end
     
     N & O & P & Q & R & S & T & U --> V[End]
-```
+{% endmermaid %}
