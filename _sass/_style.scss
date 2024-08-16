@@ -414,10 +414,10 @@ code.language-mermaid {
 
 // Styling for Mermaid diagrams to ensure responsiveness and proper display.
 .mermaid {
-  margin-bottom: 1rem;                  // Adds space below diagrams to separate them from following content.
-  overflow-x: auto;                     // Ensures diagrams can be scrolled horizontally if they overflow.
-  -webkit-overflow-scrolling: touch;    // Enables smooth scrolling for touch devices.
-  width: 100%;                          // Makes diagrams responsive, adjusting to the width of the container.
+  margin-bottom: 1rem;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  width: 100%;
 }
 
 figcaption {
