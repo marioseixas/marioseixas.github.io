@@ -1,5 +1,7 @@
 <body>
-  <div class="searchcontainer" id="search"></div>
+  <h1 class="search-link">
+    <a href="https://ib.bsb.br/life-tokens">can't steer unless already moving</a>
+  </h1>
   <main class="tags-page">
     <section>
       <!-- Separate posts where last_modified_at is different from date -->
