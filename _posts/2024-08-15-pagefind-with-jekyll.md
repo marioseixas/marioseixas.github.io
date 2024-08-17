@@ -1,6 +1,6 @@
 ---
 tags:
-  - github jekyll
+  - [github jekyll]
 info: aberto.
 date: 2024-08-15
 type: post
