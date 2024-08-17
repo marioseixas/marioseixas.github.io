@@ -1,6 +1,6 @@
 ---
 tags:
-  - software, mobile
+  - [software, mobile]
 info: aberto.
 date: 2024-08-17
 type: post
