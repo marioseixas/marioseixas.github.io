@@ -254,6 +254,60 @@ img[class*="emoji"][src$=".svg"] {
   word-wrap: break-word;
 }
 
+.search-input-block {
+  text-align: center;
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+
+  input {
+    width: 100%;
+    //max-width: 500px;
+    height: 28px;
+    border: 1px solid #ccc;
+    margin: 0;
+    padding-left: 10px;
+    padding-right: 10px;
+
+    &::-webkit-input-placeholder {
+      text-align: center;
+    }
+
+    &::-moz-placeholder {
+      text-align: center;
+    }
+
+    &::-ms-input-placeholder {
+      text-align: center;
+    }
+  }
+
+  .btn {
+    margin-left: 10px;
+  }
+
+  .search-buttons-block {
+    display: inline-block;
+    white-space: nowrap;
+
+    .btn {
+      margin-left: 8px;
+      height: 30px;
+
+      & .btn-hide-keyboard {
+        user-select: none;
+      }
+
+      gt-svg-icon {
+        fill: #333;
+        margin-top: 1px;
+        height: 16px;
+        width: 16px;
+      }
+    }
+  }
+}
+
 .search-link {
   background-color: rgba(var(--accents-dodgerblue), 0.1);
   border: 1px dotted var(--accents-dodgerblue);
