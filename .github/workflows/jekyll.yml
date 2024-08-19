@@ -77,7 +77,7 @@ jobs:
         run: ls -la ${{ github.workspace }}/_site
 
       - name: Upload artifact
-        uses: upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@v3
         with:
           name: github-pages
           path: ${{ github.workspace }}/_site
