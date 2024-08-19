@@ -394,8 +394,14 @@ body {
   font-size: clamp(1rem, 1.6vw, 1.25rem);
   line-height: var(--line-height-base);
   margin: 0 auto;
+  margin-left: 12%;
+  margin-right: 12%; 
   max-width: 40em;
   padding: 1em;
+  --pagefind-ui-background: var(--bg-default);
+  --pagefind-ui-text: var(--text-default);
+  --pagefind-ui-primary: var(--text-default);
+  --pagefind-ui-font: var(--ft);
 }
 
 figcaption {
