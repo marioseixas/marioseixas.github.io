@@ -2,7 +2,8 @@ name: Deploy Jekyll site to Pages
 
 on:
   push:
-    branches: ["main"]
+    branches:
+      - main
   workflow_dispatch:
 
 permissions:
@@ -68,17 +69,9 @@ jobs:
         with:
           node-version: 'latest'
 
-      - name: Install PageFind
-        run: npm install -g pagefind
-
-      - name: Generate indexes
-        run: system("npx -y pagefind --site '%{path}' --output-path '%{path}/pagefind'" % {:path => site.dest})
-
-      - name: Upload artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: github-pages
-          path: _site
+      - name: Generate Pagefind Index
+        run: |
+          npx -y pagefind --site ${{ github.workspace }}/_site --output-path ${{ github.workspace }}/_site/pagefind
 
   deploy:
     environment:
