@@ -1,13 +1,12 @@
 <body>
   <style>
     body {
-      background-color: #D3D3D3;
+      background-color: #808080;
       margin: 0 auto;   
       max-width: 100vh;
       padding: 0;
       height: 100vh;      
-      min-height: 100%;
-      display: flex;
+      min-height: 100%;      
       align-items: center;
       justify-content: center;
     }
