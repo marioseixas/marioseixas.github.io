@@ -1,2 +1,2 @@
-site: ./github-pages-build/artifact
-output_subdir: ./github-pages-build/artifact/pagefind
+site: ./_site
+output_subdir: ./_site/pagefind
