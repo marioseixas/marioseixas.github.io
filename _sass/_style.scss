@@ -228,6 +228,16 @@ img[class*="emoji"][src$=".svg"] {
     }
   }
 
+.post-date {
+  overflow-wrap: break-word;
+  word-wrap: break-word;  
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+}
+
 .post-heading .info {
   color: rgba(var(--text-default), 0.8);
 }
