@@ -78,7 +78,7 @@ img[class*="emoji"][src$=".svg"] {
   background-color: rgba(var(--accents-dodgerblue), 0.1);
   border: 1px dotted var(--accents-dodgerblue);
   border-radius: 0.1875rem;
-  font-size: clamp(0.8125rem, calc(0.8125rem + (1rem - 0.8125rem) * (100% - 20rem) / (75rem - 20rem)), 1rem);
+  font-size: clamp(0.8125rem, calc(0.8125rem + (1rem - 0.8125rem) * (100vh - 20rem) / (75rem - 20rem)), 1rem);
   line-height: 1.25;
   margin: 1.25rem 0 0.625rem;
   padding: 0.3125rem 1.25rem;
@@ -258,7 +258,7 @@ img[class*="emoji"][src$=".svg"] {
   border: 1px dotted var(--accents-dodgerblue);
   border-radius: 0.1875rem;
   display: inline-block;
-  font-size: clamp(1.5rem, calc(1.5rem + (3rem - 1.5rem) * (100% - 20rem) / (75rem - 20rem)), 3rem);
+  font-size: clamp(1.5rem, calc(1.5rem + (3rem - 1.5rem) * (100vh - 20rem) / (75rem - 20rem)), 3rem);
   padding: 0.5em;
   transition: all 0.3s ease;
   width: 100%;
