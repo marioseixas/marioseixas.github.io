@@ -35,3 +35,5 @@ kramdown:
 
 mermaid:
   src: 'https://cdn.jsdelivr.net/npm/mermaid@10.9.1/dist/mermaid.esm.min.mjs'
+
+destination: _site
