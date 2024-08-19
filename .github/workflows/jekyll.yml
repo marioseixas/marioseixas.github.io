@@ -75,9 +75,8 @@ jobs:
         run: npx -y pagefind --site ./_site --output-path ./_site/pagefind
 
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
-          name: github-pages-build
           path: _site
 
   deploy:
