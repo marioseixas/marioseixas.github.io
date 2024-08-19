@@ -2,8 +2,7 @@ name: Deploy Jekyll site to Pages
 
 on:
   push:
-    branches:
-      - main
+    branches: ["main"]
   workflow_dispatch:
 
 permissions:
@@ -77,7 +76,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-artifact@v3
         with:
-          path: _site
+          path: ${{ github.workspace }}/_site
 
   deploy:
     environment:
