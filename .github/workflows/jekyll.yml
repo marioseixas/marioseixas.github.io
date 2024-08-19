@@ -72,36 +72,37 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           name: github-pages-build
-          path: .
+          path: _site
 
   generateIndexes:
-      runs-on: ubuntu-latest
-      needs: build  
-      steps:
-          - name: Install PageFind
-            run: npm install -g pagefind
-            
-          - name: Download artifact
-            uses: actions/download-artifact@v4
-            with:
-              path: .
-            
-          - name: Generate payload
-            run: |
-                 mkdir ./github-pages-build/artifact
-                 
-          - name: Extract artifact
-            run: |
-                 tar -xvf ./github-pages-build/artifact.tar -C ./github-pages-build/artifact
-                 
-          - name: Generate indexes
-            run: |
-                npx -y pagefind --site ./github-pages-build/artifact --output-path ./github-pages-build/artifact/_site/pagefind
-                
-          - name: Upload artifact
-            uses: actions/upload-pages-artifact@v3
-            with:
-              path: ./github-pages-build/artifact/_site
+    runs-on: ubuntu-latest
+    needs: build  
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Install Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 'latest'
+
+      - name: Download artifact
+        uses: actions/download-pages-artifact@v3
+        with:
+          name: github-pages-build
+          path: _site
+
+      - name: Generate indexes
+        run: |
+          npx -y pagefind --site ./_site --output-path ./_site/pagefind
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          name: github-pages-build
+          path: _site
 
   deploy:
     environment:
@@ -112,6 +113,11 @@ jobs:
       - build
       - generateIndexes
     steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
