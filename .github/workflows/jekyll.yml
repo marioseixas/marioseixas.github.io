@@ -30,9 +30,6 @@ jobs:
           ruby-version: '3.3'
           bundler-cache: true
 
-      - name: Install Ruby dependencies
-        run: bundle install
-
       - name: Setup Python
         uses: actions/setup-python@v4
         with:
@@ -56,12 +53,18 @@ jobs:
         id: pages
         uses: actions/configure-pages@v5
 
+      - name: Install Bundler
+        run: gem install bundler:2.5.0
+
+      - name: Bundle install
+        run: bundle install
+
       - name: Build with Jekyll
         env:
           PAGES_REPO_NWO: marioseixas/marioseixas.github.io  # Replace with your repository name
           JEKYLL_ENV: production
         run: |
-          bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
+          bundle exec jekyll build --config _config.yml --baseurl "${{ steps.pages.outputs.base_path }}"
           echo "Generated site size: $(du -sh _site | cut -f1)"
 
       - name: Generate Pagefind Index
