@@ -1,3 +1,3 @@
 Jekyll::Hooks.register :site, :post_write do |site|
-    `npm exec -- pagefind --site ./github-pages-build/artifact --output-path ./github-pages-build/artifact/pagefind`
+    `npx -y pagefind --site ./_site --output-path ./_site/pagefind`
 end
