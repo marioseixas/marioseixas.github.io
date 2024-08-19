@@ -32,33 +32,25 @@ jobs:
 
       - name: Install Ruby dependencies
         run: bundle install
-
-      - name: Setup Python (if needed for data generation)
+        
+      - name: Setup Python
         uses: actions/setup-python@v4
         with:
-          python-version: '3.11' # Replace with the required Python version
-          if: steps.data-generation.outputs.python_required == 'true'
+          python-version: '3.11'
 
-      - name: Install Python dependencies (if needed)
+      - name: Install Python dependencies
         run: pip install -r requirements.txt
-        if: steps.data-generation.outputs.python_required == 'true'
 
-      - name: Run Data Generation Script (if needed)
-        id: data-generation
-        run: |
-          python script.py
-          echo "python_required=true" >> $GITHUB_OUTPUT  # Set output if Python is used
-          echo "changes_made=${{ steps.python-script.outputs.changes_made }}" >> $GITHUB_OUTPUT
-        if: always() # Always run to set the output variables
+      - name: Run Python script
+        run: python script.py
 
-      - name: Commit and push changes (if needed)
-        if: steps.data-generation.outputs.changes_made == 'true'
+      - name: Commit and push changes
         run: |
           git config --local user.email "actions@github.com"
           git config --local user.name "GitHub Actions"
           git add assets/data/events.json
-          git commit -m "Update events.json"
-          git push origin main
+          git commit -m "Update events.json" || echo "No changes to commit"
+          git push origin main || echo "Nothing to push"          
 
       - name: Setup Pages
         id: pages
