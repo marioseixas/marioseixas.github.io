@@ -3,5 +3,6 @@ window.addEventListener("DOMContentLoaded", () => {
     element: "#search",
     showSubResults: true,
     highlightParam: "highlight",
+    autofocus: true
   })
 })
