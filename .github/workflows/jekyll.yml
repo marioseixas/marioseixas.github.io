@@ -32,7 +32,7 @@ jobs:
 
       - name: Install Ruby dependencies
         run: bundle install
-        
+
       - name: Setup Python
         uses: actions/setup-python@v4
         with:
@@ -63,10 +63,19 @@ jobs:
         run: |
           bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
           echo "Generated site size: $(du -sh _site | cut -f1)"
-          
+
       - name: Generate Pagefind Index
         run: |
           npx -y pagefind --site ${{ github.workspace }}/_site --output-path ${{ github.workspace }}/_site/pagefind
+
+      - name: Run find and replace script (Python)
+        run: python modify-pagefind-ui.py
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: github-pages
+          path: _site
 
   deploy:
     environment:
@@ -80,4 +89,3 @@ jobs:
         uses: actions/deploy-pages@v4
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          folder: _site
