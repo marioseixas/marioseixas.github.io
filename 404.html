@@ -26,7 +26,7 @@ id: not-found
         <article>
           <time datetime="{{ post.date | date: '%Y-%m-%d' }}" class="post-date">
           <img src="https://raw.githubusercontent.com/marioseixas/marioseixas.github.io/main/assets/gold.ico" alt="favicon">
-            <h6>
+            <h4>
           {{ post.date | date: '%Y-%m-%d' }}
           {% if post.last_modified_at != post.date %}
               &rightarrowtail;
@@ -35,8 +35,8 @@ id: not-found
               &rightarrowtail;
               {{ post.date | date_to_string }}
               {% endif %}
-          </h6>
-              <h5><a href="{{ post.url }}">{{ post.title }}</a></h5>
+          </h4>
+              <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
               </time>
         </article>
       {% endfor %}
