@@ -1,22 +1,18 @@
 <body>
   <style>
-    /* Apply a specific background color to this page */
     body {
       background-color: #D3D3D3;
-      margin: 0;
+      margin: 0 auto;   
+      max-width: 100vh;
       padding: 0;
-      height: 100vh; /* Ensure the background covers the full viewport height */
-    }
-
-    /* Additional styles to ensure content is positioned correctly */
-    main {
+      height: 100vh;      
       min-height: 100%;
       display: flex;
       align-items: center;
       justify-content: center;
     }
   </style>
-  <main>
-    <section class="search-link">{% cusdis_comments %}</section>
+  <main class="search-link">
+    {% cusdis_comments %}
   </main>
 </body>
