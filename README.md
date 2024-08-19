@@ -16,7 +16,7 @@
       justify-content: center;
     }
   </style>
-  <main class="search-link">
-    <section>{% cusdis_comments %}</section>
+  <main>
+    <section class="search-link">{% cusdis_comments %}</section>
   </main>
 </body>
