@@ -41,6 +41,7 @@ layout: null
     {% endfor %}
   {% endif %}
 
+  <link href="{{ '/style.css' | relative_url }}" rel="stylesheet">
   <link href="{{ '/pagefind/pagefind-ui.css' | relative_url }}" rel="stylesheet">
   <script src="{{ '/pagefind/pagefind-ui.js' | relative_url }}"></script>
   <script type="module">
@@ -48,6 +49,7 @@ layout: null
     new PagefindHighlight({ highlightParam: "highlight" });
   </script>
   <script src="{{ '/assets/js/search.js' | relative_url }}" defer></script>
+  
 </head>
 <body>
   <header>
