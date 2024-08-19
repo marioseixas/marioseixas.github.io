@@ -40,10 +40,11 @@ layout: null
       <meta property="article:tag" content="{{ tag }}">
     {% endfor %}
   {% endif %}
-  <link href="./_site/pagefind/pagefind-ui.css" rel="stylesheet">
-  <script src="./_site/pagefind/pagefind-ui.js"></script>
+
+  <link href="{{ '/pagefind/pagefind-ui.css' | relative_url }}" rel="stylesheet">
+  <script src="{{ '/pagefind/pagefind-ui.js' | relative_url }}"></script>
   <script type="module">
-    await import('./_site/pagefind/pagefind-highlight.js');
+    import PagefindHighlight from '{{ "/pagefind/pagefind-highlight.js" | relative_url }}';
     new PagefindHighlight({ highlightParam: "highlight" });
   </script>
   <script src="{{ '/assets/js/search.js' | relative_url }}" defer></script>
