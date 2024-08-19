@@ -68,11 +68,6 @@ jobs:
         run: |
           npx -y pagefind --site ${{ github.workspace }}/_site --output-path ${{ github.workspace }}/_site/pagefind
 
-      - name: Customize Pagefind UI
-        run: |
-          chmod +x modify-pagefind-ui.sh
-          ./modify-pagefind-ui.sh
-
   deploy:
     environment:
       name: github-pages
