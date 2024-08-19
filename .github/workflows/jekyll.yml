@@ -73,6 +73,11 @@ jobs:
         run: |
           npx -y pagefind --site ${{ github.workspace }}/_site --output-path ${{ github.workspace }}/_site/pagefind
 
+      - name: Customize Pagefind UI
+        run: |
+          chmod +x ${{ github.workspace }}/_site/modify-pagefind-ui.sh
+          ./${{ github.workspace }}/_site/modify-pagefind-ui.sh
+  
   deploy:
     environment:
       name: github-pages
@@ -85,3 +90,4 @@ jobs:
         uses: actions/deploy-pages@v4
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
+          folder: ${{ github.workspace }}/_site
