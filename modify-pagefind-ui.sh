@@ -9,7 +9,7 @@ ORIGINAL_EXPRESSION='placeholder:"Search",clear_search:"Clear"'
 # Replacement expression
 NEW_EXPRESSION='placeholder:"can\'t steer unless already moving",clear_search:"infoBAG"'
 
-# Use sed to perform the replacement
-sed -i "s/$ORIGINAL_EXPRESSION/$NEW_EXPRESSION/g" "$FILE"
+# Use sed to perform the replacement, escaping special characters in the new expression
+sed -i "s/$ORIGINAL_EXPRESSION/$(echo "$NEW_EXPRESSION" | sed 's/[\&/]/\\&/g')/g" "$FILE"
 
 echo "Replacement complete."
