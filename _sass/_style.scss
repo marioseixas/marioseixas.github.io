@@ -78,7 +78,7 @@ img[class*="emoji"][src$=".svg"] {
   background-color: rgba(var(--accents-dodgerblue), 0.1);
   border: 1px dotted var(--accents-dodgerblue);
   border-radius: 0.1875rem;
-  font-size: clamp(0.8125rem, calc(0.8125rem + (1rem - 0.8125rem) * (100vh - 20rem) / (75rem - 20rem)), 1rem);
+  font-size: clamp(0.8125rem, calc(0.8125rem + (1rem - 0.8125rem) * (100vw - 20rem) / (75rem - 20rem)), 1rem);
   line-height: 1.25;
   margin: 1.25rem 0 0.625rem;
   padding: 0.3125rem 1.25rem;
@@ -228,16 +228,6 @@ img[class*="emoji"][src$=".svg"] {
     }
   }
 
-.post-date {
-  overflow-wrap: break-word;
-  word-wrap: break-word;  
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  list-style: none;
-  padding: 0;
-}
-
 .post-heading .info {
   color: rgba(var(--text-default), 0.8);
 }
@@ -268,10 +258,9 @@ img[class*="emoji"][src$=".svg"] {
   border: 1px dotted var(--accents-dodgerblue);
   border-radius: 0.1875rem;
   display: inline-block;
-  font-size: clamp(1.5rem, calc(1.5rem + (3rem - 1.5rem) * (100vh - 20rem) / (75rem - 20rem)), 3rem);
+  font-size: clamp(1.5rem, calc(1.5rem + (3rem - 1.5rem) * (100vw - 20rem) / (75rem - 20rem)), 3rem);
   padding: 0.5em;
   transition: all 0.3s ease;
-  width: 100%;
 }
 
 .search-link:hover,
@@ -404,16 +393,15 @@ body {
   font-family: var(--ft);
   font-size: clamp(1rem, 1.6vw, 1.25rem);
   line-height: var(--line-height-base);
-  margin: 0 auto;   
-  max-width: 100vh;
+  margin: 0 auto;
+  margin-left: 12%;
+  margin-right: 12%; 
+  max-width: 40em;
   padding: 1em;
   --pagefind-ui-background: var(--bg-default);
   --pagefind-ui-text: var(--text-default);
   --pagefind-ui-primary: var(--text-default);
   --pagefind-ui-font: var(--ft);
-  display: flex;
-  align-items: center;
-  justify-content: center;  
 }
 
 figcaption {
