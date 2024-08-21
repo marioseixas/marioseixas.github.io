@@ -63,7 +63,7 @@ jobs:
           PAGES_REPO_NWO: marioseixas/marioseixas.github.io
           JEKYLL_ENV: production
         run: |
-          bundle exec jekyll build --config _config.yml --baseurl "${{ steps.pages.outputs.base_path }}"
+          bundle exec jekyll build --trace --config _config.yml --baseurl "${{ steps.pages.outputs.base_path }}"
           echo "Generated site size: $(du -sh _site | cut -f1)"
 
       - name: Generate Pagefind Index
