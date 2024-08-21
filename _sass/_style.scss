@@ -410,9 +410,9 @@ body {
   margin: 0 auto;
   max-width: 100vw;
   padding: 1em;
-  --pagefind-ui-background: var(--text-default);
-  --pagefind-ui-text: var(--bg-default);
-  --pagefind-ui-primary: var(--bg-default);
+  --pagefind-ui-background: #000000;
+  --pagefind-ui-text: #FFFFFF;
+  --pagefind-ui-primary: #FFFFFF;
   --pagefind-ui-font: var(--ft);
   align-items: center;
   justify-content: center;
