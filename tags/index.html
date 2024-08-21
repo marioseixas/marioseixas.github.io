@@ -130,15 +130,14 @@ title: Tags
       {% endunless %}
     {% endfor %}
   {% endfor %}
-
   {% assign sorted_tags = all_tags | sort %}
   <div class="tag-page">
     <h1>{{ page.title }}</h1>
     <ul class="tag-list" aria-label="List of all tags">
       {% for tag in sorted_tags %}
-        {% if tag !~ '>' %}
-          {% include nested_tags.html tag=tag %}
-        {% endif %}
+        {% if tag != '>' %}
+          {% include nested_tags.html param='tag' param2='tag' %}
+      {% endif %}
       {% endfor %}
     </ul>
   </div>
