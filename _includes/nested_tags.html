@@ -1,14 +1,33 @@
-{% for tag in tags %}
-  {% if tag.size > 0 %}
-    <li>
-      <a href="#{{ tag | slugify }}" aria-label="Tag {{ tag }}">
-        {{ tag }}
-      </a>
-      {% if tags[tag].size > 0 %}
-        <ul>
-          {% include nested_tags.html tags=tags[tag] %}
-        </ul>
-      {% endif %}
-    </li>
-  {% endif %}
+{% assign tag_parts = tag | split: '>' %}
+{% assign current_level = site.posts %}
+
+{% for part in tag_parts %}
+  {% assign current_level = current_level | where_exp: "post", "post.tags contains '{{ part }}'" %}
 {% endfor %}
+
+<li>
+  <a href="#{{ tag | slugify }}" aria-label="Tag {{ tag }} with {{ current_level.size }} posts">
+    {{ tag }} ({{ current_level.size }})
+  </a>
+  {% if tag contains '>' %}
+    {% assign children = '' | split: '' %}
+    {% for post in site.posts %}
+      {% for t in post.tags %}
+        {% if t contains tag and t != tag and t contains '>' %}
+          {% assign child_tag = t | split: tag | last | remove_first: '>' %}
+          {% unless children contains child_tag %}
+            {% assign children = children | push: child_tag %}
+          {% endunless %}
+        {% endif %}
+      {% endfor %}
+    {% endfor %}
+    {% assign children = children | sort %}
+    {% if children.size > 0 %}
+      <ul>
+        {% for child in children %}
+          {% include nested_tags.html tag=tag | append: '>' | append: child %}
+        {% endfor %}
+      </ul>
+    {% endif %}
+  {% endif %}
+</li>
