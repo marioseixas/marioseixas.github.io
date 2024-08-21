@@ -27,7 +27,8 @@
     {% if children.size > 0 %}
       <ul>
         {% for child in children %}
-          {% include nested_tags.html tag=tag | append: '>' | append: child %}
+          {% assign child_tag = tag | append: '>' | append: child %}
+          {% include nested_tags.html tag=child_tag %} 
         {% endfor %}
       </ul>
     {% endif %}
