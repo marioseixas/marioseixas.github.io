@@ -9,28 +9,4 @@
   <a href="#{{ tag | slugify }}" aria-label="Tag {{ tag }} with {{ current_level.size }} posts">
     {{ tag }} ({{ current_level.size }})
   </a>
-
-  {% if tag contains '>' %}
-    {% assign children = '' | split: '' %}
-    {% for post in site.posts %}
-      {% for t in post.tags %}
-        {% if t contains tag and t != tag and t contains '>' %}
-          {% assign child_tag = t | split: tag | last | remove_first: '>' %}
-          {% unless children contains child_tag %}
-            {% assign children = children | push: child_tag %}
-          {% endunless %}
-        {% endif %}
-      {% endfor %}
-    {% endfor %}
-
-    {% assign children = children | sort %}
-    {% if children.size > 0 %}
-      <ul>
-        {% for child in children %}
-          {% assign child_tag = tag | append: '>' | append: child %}
-          {% include nested_tags.html tag=child_tag %} 
-        {% endfor %}
-      </ul>
-    {% endif %}
-  {% endif %}
 </li>
