@@ -130,39 +130,41 @@ title: Tags
       {% endunless %}
     {% endfor %}
   {% endfor %}
+
   {% assign sorted_tags = all_tags | sort %}
-    <div class="tag-page">
-  <h1>{{ page.title }}</h1>
-  <ul class="tag-list" aria-label="List of all tags">
-    {% for tag in sorted_tags %}
-    {% unless tag contains '>' %}
-    {% include nested_tags.html tag_name=tag full_tag=tag %} 
-    {% endunless %}
-    {% endfor %}
-  </ul>
-    </div>
+
+  <div class="tag-page">
+    <h1>{{ page.title }}</h1>
+    <ul class="tag-list" aria-label="List of all tags">
+      {% for tag in sorted_tags %}
+        {% unless tag contains '>' %}
+          {% include nested_tags.html tag=tag %}
+        {% endunless %}
+      {% endfor %}
+    </ul>
+  </div>
     <main class="tagged-posts">
     {% for tag in sorted_tags %}
-    <section class="search-link" id="{{ tag | slugify }}" aria-labelledby="{{ tag | slugify }}-heading">
-      <h2 id="{{ tag | slugify }}-heading">
-        {{ tag }}
-        <a href="#" class="back-to-top" aria-label="Back to top">↑</a>
-      </h2>
-      <ul>
-        {% assign tag_parts = tag | split: '>' %}
-        {% assign tag_posts = site.posts %}
-        {% for part in tag_parts %}
-          {% assign tag_posts = tag_posts | where_exp: "post", "post.tags contains '{{ part }}'" %}
-        {% endfor %}
-        {% for post in tag_posts %}
-          <li>
-            <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
-            <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %d, %Y" }}</time>
-          </li>
-        {% endfor %}
-      </ul>        
-    </section>
-  {% endfor %}
+      <section class="search-link" id="{{ tag | slugify }}" aria-labelledby="{{ tag | slugify }}-heading">
+        <h2 id="{{ tag | slugify }}-heading">
+          {{ tag }}
+          <a href="#" class="back-to-top" aria-label="Back to top">↑</a>
+        </h2>
+        <ul>
+          {% assign tag_parts = tag | split: '>' %}
+          {% assign tag_posts = site.posts %}
+          {% for part in tag_parts %}
+            {% assign tag_posts = tag_posts | where_exp: "post", "post.tags contains '{{ part }}'" %}
+          {% endfor %}
+          {% for post in tag_posts %}
+            <li>
+              <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+              <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %d, %Y" }}</time>
+            </li>
+          {% endfor %}
+        </ul>        
+      </section>
+    {% endfor %}
   </main>
 </div>
 </body>
