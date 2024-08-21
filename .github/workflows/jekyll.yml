@@ -26,8 +26,8 @@ jobs:
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: '3.3'
-          bundler-cache: true
+          ruby-version: .ruby-version
+          bundler-cache: true        
 
       - name: Setup Python
         uses: actions/setup-python@v4
