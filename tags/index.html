@@ -121,11 +121,31 @@ title: Tags
     </nav>
   </header>
   <div class="wrapper">    
-{% assign all_tags = site.posts | map: 'tags' | join: ',' | split: ',' | map: 'strip' | uniq | sort %}
+{% assign all_tags = "" | split: "" %}
+{% for post in site.posts %}
+  {% assign post_tags = post.tags | default: empty %}
+  {% if post_tags.first.first %}
+    {% assign post_tags = post_tags.first %}
+  {% endif %}
+  {% if post_tags.size == 1 and post_tags.first.size > 0 %}
+    {% if post_tags.first contains ',' %}
+      {% assign post_tags = post_tags | first | split: ',' | map: 'strip' %}
+    {% else %}
+      {% assign post_tags = post_tags %}
+    {% endif %}
+  {% endif %}
+  {% for tag in post_tags %}
+    {% assign tag_stripped = tag | strip %}
+    {% unless all_tags contains tag_stripped %}
+      {% assign all_tags = all_tags | push: tag_stripped %}
+    {% endunless %}
+  {% endfor %}
+{% endfor %}
+{% assign sorted_tags = all_tags | sort %}
     <div class="tag-page">
   <h1>{{ page.title }}</h1>
   <ul class="tag-list" aria-label="List of all tags">
-    {% for tag in all_tags %}
+    {% for tag in sorted_tags %}
       {% assign tag_posts = site.posts | where_exp: "post", "post.tags contains tag" %}
       <li>
         <a href="#{{ tag | slugify }}" aria-label="Tag {{ tag }} with {{ tag_posts.size }} posts">
@@ -137,7 +157,7 @@ title: Tags
   {% cusdis_comments %}
     </div>
     <main class="tagged-posts">
-      {% for tag in all_tags %}
+      {% for tag in sorted_tags %}
       <section class="search-link" id="{{ tag | slugify }}" aria-labelledby="{{ tag | slugify }}-heading">
         <h2 id="{{ tag | slugify }}-heading">
           {{ tag }}
