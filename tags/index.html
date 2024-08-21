@@ -4,22 +4,14 @@ title: Tags
 ---
 
 <!DOCTYPE html>
-<html lang="en">    
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ page.title | default: site.title }} — {{ site.title }}</title>
+  <link rel="canonical" href="{{ page.canonical_url | default: site.url | append: page.url }}">
+  <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ site.baseurl | default: site.url }}/rss.xml">
   
-  <title>
-    {% if page.id == "home" %}
-      {{ site.title }}
-    {% else %}
-      {{ page.title }} — {{ site.title }}
-    {% endif %}
-  </title>
-
-  <link rel="canonical" href="{{ page.canonical_url | default: site.url | append: page.url }}">  
-  <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ site.baseurl }}/rss.xml">
-
   <meta property="og:site_name" content="{{ site.title }}">
   <meta property="og:title" content="{{ page.title | default: site.title }}">
   <meta property="og:type" content="{% if page.title %}article{% else %}website{% endif %}">
@@ -31,7 +23,7 @@ title: Tags
 
   {% if page.date %}
     <meta property="article:published_time" content="{{ page.date | date_to_xmlschema }}">
-    <meta property="article:author" content="{{ page.author | default: site.author | default: site.url }}">
+    <meta property="article:author" content="{{ page.author | default: site.author | default: 'Unknown Author' }}">
   {% endif %}
 
   {% if page.tags %}
@@ -41,7 +33,7 @@ title: Tags
     {% endfor %}
   {% endif %}
 
-  <link href="{{ '/style.css' | relative_url }}" rel="stylesheet">
+  <link href="{{ '/style.css' | relative_url }}" rel="stylesheet" onerror="this.href='https://cdn.example.com/fallback-style.css'">
   <link href="{{ '/pagefind/pagefind-ui.css' | relative_url }}" rel="stylesheet">
   <script src="{{ '/pagefind/pagefind-ui.js' | relative_url }}"></script>
   <script type="module">
@@ -54,28 +46,8 @@ title: Tags
     const tagLinks = document.querySelectorAll('.tag-list a');
     const backToTopLinks = document.querySelectorAll('.back-to-top');
     
-    function smoothScroll(target, duration = 300) {
-      const targetPosition = target.getBoundingClientRect().top + window.pageYOffset;
-      const startPosition = window.pageYOffset;
-      const distance = targetPosition - startPosition;
-      let startTime = null;
-
-      function animation(currentTime) {
-        if (startTime === null) startTime = currentTime;
-        const timeElapsed = currentTime - startTime;
-        const run = ease(timeElapsed, startPosition, distance, duration);
-        window.scrollTo(0, run);
-        if (timeElapsed < duration) requestAnimationFrame(animation);
-      }
-
-      function ease(t, b, c, d) {
-        t /= d / 2;
-        if (t < 1) return c / 2 * t * t + b;
-        t--;
-        return -c / 2 * (t * (t - 2) - 1) + b;
-      }
-
-      requestAnimationFrame(animation);
+    function smoothScroll(target) {
+      target.scrollIntoView({ behavior: 'smooth' });
     }
 
     tagLinks.forEach(link => {
@@ -98,48 +70,35 @@ title: Tags
       });
     });
   });
-</script>  
+</script>
 </head>
 <body>
   <a class="search-input-block" id="search"></a>
   <header>
-    <nav aria-label="Main navigation">
+    <nav aria-label="Main navigation" role="navigation">
       <div class="header-container">
-        <a class="internal-link" href="/">
-          <img src="https://raw.githubusercontent.com/marioseixas/marioseixas.github.io/main/assets/Sudden_Death_Rune.gif" class="favicon" alt="Sudden Death Rune">
+        <a class="internal-link" href="{{ '/' | relative_url }}">
+          <img src="https://raw.githubusercontent.com/marioseixas/marioseixas.github.io/main/assets/Sudden_Death_Rune.gif" alt="{{ site.title }}" class="favicon">
         </a>
         <a href="https://ib.bsb.br/archive">
-          <img src="https://raw.githubusercontent.com/marioseixas/marioseixas.github.io/main/favicon.ico" class="favicon" alt="Archive">
+          <img src="https://raw.githubusercontent.com/marioseixas/marioseixas.github.io/main/favicon.ico" alt="Archive" class="favicon">
         </a>
         <a href="https://ib.bsb.br/tags">
-          <img src="https://raw.githubusercontent.com/marioseixas/marioseixas.github.io/main/assets/Label.gif" class="favicon" alt="Tags">
+          <img src="https://raw.githubusercontent.com/marioseixas/marioseixas.github.io/main/assets/Label.gif" alt="Tags" class="favicon">
         </a>
         <a href="https://ib.bsb.br/events">
-          <img src="https://raw.githubusercontent.com/marioseixas/marioseixas.github.io/main/assets/Paralyse_Rune.gif" class="favicon" alt="Events">
+          <img src="https://raw.githubusercontent.com/marioseixas/marioseixas.github.io/main/assets/Paralyse_Rune.gif" alt="Events" class="favicon">
         </a>      
       </div>
     </nav>
   </header>
-  <div class="wrapper">    
-    {% assign all_tags = "" | split: "" %}
-    {% for post in site.posts %}
-      {% assign post_tags = post.tags | default: empty %}
-      {% if post_tags.size == 1 and post_tags.first contains ',' %}
-        {% assign post_tags = post_tags.first | split: ',' | map: 'strip' %}
-      {% endif %}
-      {% for tag in post_tags %}
-        {% assign tag_stripped = tag | strip %}
-        {% unless all_tags contains tag_stripped %}
-          {% assign all_tags = all_tags | push: tag_stripped %}
-        {% endunless %}
-      {% endfor %}
-    {% endfor %}
-    {% assign sorted_tags = all_tags | sort %}
-    <div class="tag-page">
-      <h1>{{ page.title }}</h1>
+  <main id="main-content">
+    <h1 class="text-center">{{ page.title | default: 'Tags' }}</h1>
+    {% assign all_tags = site.posts | map: 'tags' | join: ',' | split: ',' | map: 'strip' | uniq | sort %}
+    {% if all_tags.size > 0 %}
       <ul class="tag-list" aria-label="List of all tags">
-        {% for tag in sorted_tags %}
-          {% assign tag_posts = site.posts | where_exp: "post", "post.tags == tag or post.tags contains tag" %}
+        {% for tag in all_tags %}
+          {% assign tag_posts = site.posts | where_exp: "post", "post.tags contains tag" %}
           <li>
             <a href="#{{ tag | slugify }}" aria-label="Tag {{ tag }} with {{ tag_posts.size }} posts">
               {{ tag }} ({{ tag_posts.size }})
@@ -147,27 +106,35 @@ title: Tags
           </li>
         {% endfor %}
       </ul>
-      {% cusdis_comments %}
-    </div>
-    <main class="tagged-posts">
-      {% for tag in sorted_tags %}
-      <section class="search-link" id="{{ tag | slugify }}" aria-labelledby="{{ tag | slugify }}-heading">
-        <h2 id="{{ tag | slugify }}-heading">
-          {{ tag }}
-          <a href="#" class="back-to-top" aria-label="Back to top">&uarr;</a>
-        </h2>
-        <ul>
-          {% assign tag_posts = site.posts | where_exp: "post", "post.tags == tag or post.tags contains tag" %}
-          {% for post in tag_posts %}
-            <li>
-              <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
-              <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %d, %Y" }}</time>
-            </li>
-          {% endfor %}
-        </ul>        
-      </section>
-      {% endfor %}
-    </main>
-  </div>
+
+      <h2>Tagged Posts</h2>
+      {% for tag in all_tags %}
+        <section class="search-link" id="{{ tag | slugify }}" aria-labelledby="{{ tag | slugify }}-heading">
+          <h3 id="{{ tag | slugify }}-heading">
+            {{ tag }}
+            <a href="#" class="back-to-top" aria-label="Back to top">↑</a>
+          </h3>
+          <ul>
+            {% assign tag_posts = site.posts | where_exp: "post", "post.tags contains tag" %}
+            {% for post in tag_posts %}
+              <li>
+                <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+                <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %d, %Y" }}</time>
+              </li>
+            {% endfor %}
+          </ul>        
+        </section>
+      {% endfor %}      
+    {% else %}
+      <p>No tags available.</p>
+    {% endif %}
+    <footer>
+      <nav aria-label="Footer navigation">
+        <a href="https://ib.bsb.br/archive">Archive</a>
+        <a href="https://ib.bsb.br/tags">Tags</a>
+        <a href="https://ib.bsb.br/about">About</a>
+      </nav>
+    </footer>
+  </main>
 </body>
 </html>
