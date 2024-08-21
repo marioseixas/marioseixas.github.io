@@ -400,6 +400,9 @@ body {
   --pagefind-ui-text: var(--text-default);
   --pagefind-ui-primary: var(--text-default);
   --pagefind-ui-font: var(--ft);
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 
 figcaption {
