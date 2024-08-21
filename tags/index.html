@@ -135,9 +135,9 @@ title: Tags
   <h1>{{ page.title }}</h1>
   <ul class="tag-list" aria-label="List of all tags">
     {% for tag in sorted_tags %}
-    {% if tag contains '>' == false %}
+    {% unless tag contains '>' %}
     {% include nested_tags.html tag_name=tag full_tag=tag %} 
-    {% endif %}
+    {% endunless %}
     {% endfor %}
   </ul>
     </div>
