@@ -98,82 +98,72 @@ title: Tags
       });
     });
   });
-  </script>  
+</script>  
 </head>
 <body>
   <a class="search-input-block" id="search"></a>
   <header>
     <nav aria-label="Main navigation">
-      <div class="header-container">
-        <a class="internal-link" href="{{ '/' | relative_url }}">
-          <img src="https://raw.githubusercontent.com/marioseixas/marioseixas.github.io/main/assets/Sudden_Death_Rune.gif" alt="{{ site.title }}" class="favicon">
-        </a>
-        <a href="https://ib.bsb.br/archive">
-          <img src="https://raw.githubusercontent.com/marioseixas/marioseixas.github.io/main/favicon.ico" alt="Archive" class="favicon">
-        </a>
-        <a href="https://ib.bsb.br/tags">
-          <img src="https://raw.githubusercontent.com/marioseixas/marioseixas.github.io/main/assets/Label.gif" alt="Tags" class="favicon">
-        </a>
-        <a href="https://ib.bsb.br/events">
-          <img src="https://raw.githubusercontent.com/marioseixas/marioseixas.github.io/main/assets/Paralyse_Rune.gif" alt="Events" class="favicon">
-        </a>      
-      </div>
+  <div class="header-container">
+    <a class="internal-link" href="{{ '/' | relative_url }}">
+      <img src="https://raw.githubusercontent.com/marioseixas/marioseixas.github.io/main/assets/Sudden_Death_Rune.gif" alt="{{ site.title }}" class="favicon">
+    </a>
+    <a href="https://ib.bsb.br/archive">
+      <img src="https://raw.githubusercontent.com/marioseixas/marioseixas.github.io/main/favicon.ico" alt="Archive" class="favicon">
+    </a>
+    <a href="https://ib.bsb.br/tags">
+      <img src="https://raw.githubusercontent.com/marioseixas/marioseixas.github.io/main/assets/Label.gif" alt="Tags" class="favicon">
+    </a>
+    <a href="https://ib.bsb.br/events">
+      <img src="https://raw.githubusercontent.com/marioseixas/marioseixas.github.io/main/assets/Paralyse_Rune.gif" alt="Events" class="favicon">
+    </a>      
+  </div>
     </nav>
   </header>
-  <div class="wrapper">
-    {% assign tags_hierarchy = {} %}
-    
-    {% for post in site.posts %}
-      {% assign post_tags = post.tags | split: ',' %}
-      {% for tag in post_tags %}
-        {% assign tag_parts = tag | strip | split: '>' %}
-        {% assign current_level = tags_hierarchy %}
-        
-        {% for part in tag_parts %}
-          {% assign part_stripped = part | strip %}
-          {% if current_level[part_stripped] == nil %}
-            {% assign current_level[part_stripped] = {} %}
-          {% endif %}
-          {% assign current_level = current_level[part_stripped] %}
-        {% endfor %}
-        
-        {% if current_level['posts'] == nil %}
-          {% assign current_level['posts'] = [] %}
-        {% endif %}
-        {% assign current_level['posts'] = current_level['posts'] | push: post %}
-      {% endfor %}
+  <div class="wrapper">    
+{% assign all_tags = "" | split: "" %}
+{% for post in site.posts %}
+  {% assign post_tags = post.tags | default: empty %}
+  {% if post_tags.first.first %}
+    {% assign post_tags = post_tags.first %}
+  {% endif %}
+  {% if post_tags.size == 1 and post_tags.first.size > 0 %}
+    {% if post_tags.first contains ',' %}
+      {% assign post_tags = post_tags | first | split: ',' | map: 'strip' %}
+    {% else %}
+      {% assign post_tags = post_tags %}
+    {% endif %}
+  {% endif %}
+  {% for tag in post_tags %}
+    {% assign tag_stripped = tag | strip %}
+    {% unless all_tags contains tag_stripped %}
+      {% assign all_tags = all_tags | push: tag_stripped %}
+    {% endunless %}
+  {% endfor %}
+{% endfor %}
+{% assign sorted_tags = all_tags | sort %}
+<div class="tag-page">
+  <h1>{{ page.title }}</h1>
+  <ul class="tag-list" aria-label="List of all tags">
+    {% for tag in sorted_tags %}
+      {% assign tag_posts = site.posts | where_exp: "post", "post.tags contains tag" %}
+      <li>
+        <a href="#{{ tag | slugify }}" aria-label="Tag {{ tag }} with {{ tag_posts.size }} posts">
+          {{ tag }} ({{ tag_posts.size }})
+        </a>
+      </li>
     {% endfor %}
-    
-    <div class="tag-page">
-      <h1>{{ page.title }}</h1>
-      <ul class="tag-list">
-        {% for tag, data in tags_hierarchy %}
-          <li>
-            <a href="#{{ tag | slugify }}">{{ tag }} ({{ data['posts'].size }})</a>
-            {% if data.size > 1 %}
-              <ul>
-                {% for subtag, subdata in data %}
-                  {% if subtag != 'posts' %}
-                    <li>
-                      <a href="#{{ subtag | slugify }}">{{ subtag }} ({{ subdata['posts'].size }})</a>
-                    </li>
-                  {% endif %}
-                {% endfor %}
-              </ul>
-            {% endif %}
-          </li>
-        {% endfor %}
-      </ul>
-    </div>
-    <main class="tagged-posts">
-      {% for tag in sorted_tags %}
+  </ul>
+
+  <main class="tagged-posts">
+    {% for tag in sorted_tags %}
       <section class="search-link" id="{{ tag | slugify }}" aria-labelledby="{{ tag | slugify }}-heading">
         <h2 id="{{ tag | slugify }}-heading">
           {{ tag }}
           <a href="#" class="back-to-top" aria-label="Back to top">↑</a>
         </h2>
         <ul>
-          {% assign tag_posts = site.posts | where_exp: "post", "post.tags contains tag or post.tags contains '{{ tag }}>'" %} 
+          {% assign tag_posts = site.posts | where_exp: "post", "post.tags contains tag" %}
           {% for post in tag_posts %}
             <li>
               <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
@@ -182,8 +172,9 @@ title: Tags
           {% endfor %}
         </ul>
       </section>
-      {% endfor %}
-    </main>
-  </div>
+    {% endfor %}
+  </main>
+</div>
+</div>
 </body>
 </html>
