@@ -147,7 +147,12 @@ title: Tags
       <h1>{{ page.title }}</h1>
       <ul class="tag-list" aria-label="List of all tags">
         {% for tag in sorted_tags %}
-          {% assign tag_posts = site.posts | where: "tags", "contains_tag", tag %}
+          {% assign tag_posts = '' | split: '' %}
+          {% for post in site.posts %}
+            {% if post.tags | contains_tag: tag %}
+              {% assign tag_posts = tag_posts | push: post %}
+            {% endif %}
+          {% endfor %}
           <li>
             <a href="#{{ tag | slugify }}" aria-label="Tag {{ tag }} with {{ tag_posts.size }} posts">
               {{ tag }} ({{ tag_posts.size }})
@@ -163,7 +168,12 @@ title: Tags
               {{ tag }}
             </h2>
             <ul>
-              {% assign tag_posts = site.posts | where: "tags", "contains_tag", tag %}
+              {% assign tag_posts = '' | split: '' %}
+              {% for post in site.posts %}
+                {% if post.tags | contains_tag: tag %}
+                  {% assign tag_posts = tag_posts | push: post %}
+                {% endif %}
+              {% endfor %}
               {% for post in tag_posts %}
                 <li>
                   <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
