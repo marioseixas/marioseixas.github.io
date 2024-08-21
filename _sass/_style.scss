@@ -409,6 +409,17 @@ body {
   margin: 0 auto;
   max-width: 100vw;
   padding: 1em;
+  --pagefind-ui-scale: 1;
+  --pagefind-ui-primary: var(--accents-dodgerblue); /* Aligns with site's interactive elements */
+  --pagefind-ui-text: var(--text-default); /* Matches the site's primary text color */
+  --pagefind-ui-background: var(--bg-default); /* Blends seamlessly with the site's background */
+  --pagefind-ui-border: rgba(var(--text-default), 0.1); /* Creates a subtle, unobtrusive border */
+  --pagefind-ui-tag: rgba(var(--accents-amethyst), 0.1); /* Uses a softer amethyst for a cohesive look */
+  --pagefind-ui-border-width: 2px; /* Maintains original border thickness */
+  --pagefind-ui-border-radius: 0.1875rem; /* Consistent with site's rounded corner aesthetic */
+  --pagefind-ui-image-border-radius: 0.1875rem; /* Mirrors the border-radius for visual harmony */
+  --pagefind-ui-image-box-ratio: 3 / 2; /* Retains the default aspect ratio */
+  --pagefind-ui-font: var(--ft); /* Ensures consistent typography across the site */
   align-items: center;
   justify-content: center;
   text-align: center;
