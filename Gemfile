@@ -10,8 +10,7 @@ group :jekyll_plugins do
   gem "jekyll-last-modified-at"
   gem "jekyll-feed"
   gem "jekyll-sitemap"
-  gem "jekyll-seo-tag"  
-  gem "jekyll-readme-index"  
+  gem "jekyll-seo-tag"
   gem "jekyll-data"
   gem "jekyll-mermaid", :github => 'cwboden/jekyll-mermaid', :branch => 'master'
 end
