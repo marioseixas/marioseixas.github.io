@@ -41,7 +41,7 @@ title: Tags
   {% cusdis_comments %}
   <div class="tagged-posts">
     {% for tag in sorted_tags %}
-      <section id="{{ tag | slugify }}" aria-labelledby="{{ tag | slugify }}-heading">
+      <section class="search-link" id="{{ tag | slugify }}" aria-labelledby="{{ tag | slugify }}-heading">
         <h2 id="{{ tag | slugify }}-heading">
           {{ tag }}
           <a href="#" class="back-to-top" aria-label="Back to top">&uarr;</a>
