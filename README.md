@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="en">    
 <head>
   <meta charset="UTF-8">
@@ -15,13 +14,14 @@
   <link rel="canonical" href="{{ page.canonical_url | default: site.url | append: page.url }}">  
   <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ site.baseurl }}/rss.xml">
 
+  <!-- Open Graph Meta Tags -->
   <meta property="og:site_name" content="{{ site.title }}">
   <meta property="og:title" content="{{ page.title | default: site.title }}">
   <meta property="og:type" content="{% if page.title %}article{% else %}website{% endif %}">
   <meta property="og:url" content="{{ site.url }}{{ page.url }}">
   
   {% if page.image %}
-    <meta property="og:image" content="{% if page.image contains 'https://' %}{{ page.image }}{% else %}{{ site.url }}{{ page.image }}{% endif %}">
+    <meta property="og:image" content="{{ page.image | prepend: site.url }}">
   {% endif %}
 
   {% if page.date %}
@@ -30,14 +30,17 @@
   {% endif %}
 
   {% if page.tags %}
-    <meta itemprop="keywords" content="{{ page.tags | join: ',' }}">
+    <meta name="keywords" content="{{ page.tags | join: ',' }}">
     {% for tag in page.tags %}
       <meta property="article:tag" content="{{ tag }}">
     {% endfor %}
   {% endif %}
 
+  <!-- Stylesheets -->
   <link href="{{ '/style.css' | relative_url }}" rel="stylesheet">
   <link href="{{ '/pagefind/pagefind-ui.css' | relative_url }}" rel="stylesheet">
+
+  <!-- Scripts -->
   <script src="{{ '/pagefind/pagefind-ui.js' | relative_url }}"></script>
   <script type="module">
     import PagefindHighlight from '{{ "/pagefind/pagefind-highlight.js" | relative_url }}';
@@ -52,7 +55,7 @@
     <nav aria-label="Main navigation">
       <div class="header-container">
         <a class="internal-link" href="/">
-          <img src="https://raw.githubusercontent.com/marioseixas/marioseixas.github.io/main/assets/Sudden_Death_Rune.gif" class="favicon" alt="Sudden Death Rune">
+          <img src="https://raw.githubusercontent.com/marioseixas/marioseixas.github.io/main/assets/Sudden_Death_Rune.gif" class="favicon" alt="Home">
         </a>
         <a href="https://ib.bsb.br/archive">
           <img src="https://raw.githubusercontent.com/marioseixas/marioseixas.github.io/main/favicon.ico" class="favicon" alt="Archive">
