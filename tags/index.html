@@ -120,88 +120,61 @@ title: Tags
       </div>
     </nav>
   </header>
-  <div class="wrapper">    
+  <div class="wrapper">
     {% assign all_tags = "" | split: "" %}
-{% for post in site.posts %}
-  {% for tag in post.tags %}
-    {% assign tag_stripped = tag | strip %}
-    {% unless all_tags contains tag_stripped %}
-      {% assign all_tags = all_tags | append: tag_stripped | append: ',' %}
-    {% endunless %}
-  {% endfor %}
-{% endfor %}
-{% assign all_tags = all_tags | split: ',' | uniq | sort %}
-    {% assign nested_tags = {} %}
-    {% for tag in sorted_tags %}
-      {% assign tag_parts = tag | split: '>' %}
-      {% assign parent = nested_tags %}
-
-      {% for part in tag_parts %}
-        {% if parent[part] %}
-          {% assign parent = parent[part] %}
-        {% else %}
-          {% assign parent = parent[part] = {} %}
-        {% endif %}
-      {% endfor %}
-    {% endfor %}
-
-    {% assign tag_counts = {} %}
     {% for post in site.posts %}
-      {% for tag in post.tags %}
-        {% assign tag_counts[tag] = tag_counts[tag] | plus: 1 %}
+      {% assign post_tags = post.tags | default: empty %}
+      {% if post_tags.first.first %}
+        {% assign post_tags = post_tags.first %}
+      {% endif %}
+      {% if post_tags.size == 1 and post_tags.first.size > 0 %}
+        {% if post_tags.first contains ',' %}
+          {% assign post_tags = post_tags | first | split: ',' | map: 'strip' %}
+        {% else %}
+          {% assign post_tags = post_tags %}
+        {% endif %}
+      {% endif %}
+      {% for tag in post_tags %}
+        {% assign tag_stripped = tag | strip %}
+        {% unless all_tags contains tag_stripped %}
+          {% assign all_tags = all_tags | push: tag_stripped %}
+        {% endunless %}
       {% endfor %}
     {% endfor %}
-    
+    {% assign sorted_tags = all_tags | sort %}
+
     <div class="tag-page">
       <h1>{{ page.title }}</h1>
-      <ul>
-        {% assign render_tags = "dummy" %}
-        {% capture render_tags %}
-        <ul>
-          {% for tag in nested_tags %}
-            {% assign full_tag = tag %}
-            <li>
-              <a href="#{{ full_tag | slugify }}">{{ full_tag }} ({{ tag_counts[full_tag] | default: 0 }})</a>
-              {% if nested_tags[tag] %}
-                {% assign render_tags_recursive = "dummy" %}
-                {% capture render_tags_recursive %}
-                <ul>
-                  {% for subtag in nested_tags[tag] %}
-                    <li>
-                      <a href="#{{ full_tag | append: '>' | append: subtag | slugify }}">{{ full_tag | append: '>' | append: subtag }} ({{ tag_counts[full_tag | append: '>' | append: subtag] | default: 0 }})</a>
-                    </li>
-                  {% endfor %}
-                </ul>
-                {% endcapture %}
-                {{ render_tags_recursive }}
-              {% endif %}
-            </li>
-          {% endfor %}
-        </ul>
-        {% endcapture %}
-        {{ render_tags }}
+      <ul class="tag-list" aria-label="List of all tags">
+        {% for tag in sorted_tags %}
+          {% assign tag_posts = site.posts | where: "tags", "contains_tag", tag %}
+          <li>
+            <a href="#{{ tag | slugify }}" aria-label="Tag {{ tag }} with {{ tag_posts.size }} posts">
+              {{ tag }} ({{ tag_posts.size }})
+            </a>
+          </li>
+        {% endfor %}
       </ul>
-    </div>
 
-    <main class="tagged-posts">
-      {% for tag in sorted_tags %}
-      <section class="search-link" id="{{ tag | slugify }}" aria-labelledby="{{ tag | slugify }}-heading">
-        <h2 id="{{ tag | slugify }}-heading">
-          {{ tag }}
-          <a href="#" class="back-to-top" aria-label="Back to top">↑</a>
-        </h2>
-        <ul>
-          {% assign tag_posts = site.posts | where_exp: "post", "post.tags contains tag or post.tags contains '{{ tag }}>'" %} 
-          {% for post in tag_posts %}
-            <li>
-              <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
-              <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %d, %Y" }}</time>
-            </li>
-          {% endfor %}
-        </ul>
-      </section>
-      {% endfor %}
-    </main>
+      <main class="tagged-posts">
+        {% for tag in sorted_tags %}
+          <section class="search-link" id="{{ tag | slugify }}" aria-labelledby="{{ tag | slugify }}-heading">
+            <h2 id="{{ tag | slugify }}-heading">
+              {{ tag }}
+            </h2>
+            <ul>
+              {% assign tag_posts = site.posts | where: "tags", "contains_tag", tag %}
+              {% for post in tag_posts %}
+                <li>
+                  <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+                  <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %d, %Y" }}</time>
+                </li>
+              {% endfor %}
+            </ul>
+          </section>
+        {% endfor %}
+      </main>
+    </div>
   </div>
 </body>
 </html>
