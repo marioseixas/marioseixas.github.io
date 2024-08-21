@@ -149,7 +149,8 @@ title: Tags
         {% for tag in sorted_tags %}
           {% assign tag_posts = '' | split: '' %}
           {% for post in site.posts %}
-            {% if post.tags | contains_tag: tag %}
+            {% assign current_tag = tag %} <!--- Assign the tag to a variable -->
+            {% if post.tags | contains_tag: current_tag %} <!--- Use the variable here -->
               {% assign tag_posts = tag_posts | push: post %}
             {% endif %}
           {% endfor %}
