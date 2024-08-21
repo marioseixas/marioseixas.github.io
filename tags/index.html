@@ -167,7 +167,14 @@ title: Tags
             {% assign children = children | sort %}
             {% for child in children %}
               {% assign child_tag = tag | append: '>' | append: child %}
-              {% include nested_tags.html tag=child_tag %}
+              {% assign tag_parts = tag | split: '>' %}
+            {% assign current_level = site.posts %}
+            {% for part in tag_parts %}
+            {% assign current_level = current_level | where_exp: "post", "post.tags contains '{{ part }}'" %}
+            {% endfor %}
+            <li>
+              <a href="#{{ tag | slugify }}" aria-label="Tag {{ tag }} with {{ current_level.size }} posts">{{ tag }} ({{ current_level.size }})</a>
+            </li>
             {% endfor %}
           </ul>
         {% endif %}
