@@ -9,6 +9,7 @@
   <a href="#{{ tag | slugify }}" aria-label="Tag {{ tag }} with {{ current_level.size }} posts">
     {{ tag }} ({{ current_level.size }})
   </a>
+
   {% if tag contains '>' %}
     {% assign children = '' | split: '' %}
     {% for post in site.posts %}
@@ -21,6 +22,7 @@
         {% endif %}
       {% endfor %}
     {% endfor %}
+
     {% assign children = children | sort %}
     {% if children.size > 0 %}
       <ul>
