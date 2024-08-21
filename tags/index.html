@@ -120,42 +120,71 @@ title: Tags
   </div>
     </nav>
   </header>
-  <div class="wrapper">
-  {% assign all_tags = "" | split: "" %}
-  {% for post in site.posts %}
-    {% for tag in post.tags %}
-      {% assign tag_stripped = tag | strip %}
-      {% unless all_tags contains tag_stripped %}
-        {% assign all_tags = all_tags | push: tag_stripped %}
-      {% endunless %}
-    {% endfor %}
+  <div class="wrapper">    
+{% assign all_tags = "" | split: "" %}
+{% for post in site.posts %}
+  {% assign post_tags = post.tags | default: empty %}
+  {% if post_tags.first.first %}
+    {% assign post_tags = post_tags.first %}
+  {% endif %}
+  {% if post_tags.size == 1 and post_tags.first.size > 0 %}
+    {% if post_tags.first contains ',' %}
+      {% assign post_tags = post_tags | first | split: ',' | map: 'strip' %}
+    {% else %}
+      {% assign post_tags = post_tags %}
+    {% endif %}
+  {% endif %}
+  {% for tag in post_tags %}
+    {% assign tag_stripped = tag | strip %}
+    {% unless all_tags contains tag_stripped %}
+      {% assign all_tags = all_tags | push: tag_stripped %}
+    {% endunless %}
   {% endfor %}
-
-  {% assign sorted_tags = all_tags | sort %}
-
-  <div class="tag-page">
-    <h1>{{ page.title }}</h1>
-    <ul class="tag-list" aria-label="List of all tags">
-      {% for tag in sorted_tags %}
-        {% unless tag contains '>' %}
-          {% include nested_tags.html tag=tag %}
-        {% endunless %}
-      {% endfor %}
-    </ul>
-  </div>
-    <main class="tagged-posts">
+{% endfor %}
+{% assign sorted_tags = all_tags | sort %}
+    <div class="tag-page">
+  <h1>{{ page.title }}</h1>
+  <ul class="tag-list" aria-label="List of all tags">
     {% for tag in sorted_tags %}
+      {% assign tag_posts = site.posts | where_exp: "post", "post.tags contains tag" %}
+      <li>
+        <a href="#{{ tag | slugify }}" aria-label="Tag {{ tag }} with {{ tag_posts.size }} posts">
+          {{ tag }} ({{ tag_posts.size }})
+        </a>
+        {% if tag contains '>' %}
+          <ul>
+            {% assign children = '' | split: '' %}
+            {% for post in site.posts %}
+              {% for t in post.tags %}
+                {% if t contains tag and t != tag and t contains '>' %}
+                  {% assign child_tag = t | split: tag | last | remove_first: '>' %}
+                  {% unless children contains child_tag %}
+                    {% assign children = children | push: child_tag %}
+                  {% endunless %}
+                {% endif %}
+              {% endfor %}
+            {% endfor %}
+            {% assign children = children | sort %}
+            {% for child in children %}
+              {% assign child_tag = tag | append: '>' | append: child %}
+              {% include nested_tags.html tag=child_tag %}
+            {% endfor %}
+          </ul>
+        {% endif %}
+      </li>
+    {% endfor %}
+  </ul>
+  {% cusdis_comments %}
+    </div>
+    <main class="tagged-posts">
+      {% for tag in sorted_tags %}
       <section class="search-link" id="{{ tag | slugify }}" aria-labelledby="{{ tag | slugify }}-heading">
         <h2 id="{{ tag | slugify }}-heading">
           {{ tag }}
           <a href="#" class="back-to-top" aria-label="Back to top">↑</a>
         </h2>
         <ul>
-          {% assign tag_parts = tag | split: '>' %}
-          {% assign tag_posts = site.posts %}
-          {% for part in tag_parts %}
-            {% assign tag_posts = tag_posts | where_exp: "post", "post.tags contains '{{ part }}'" %}
-          {% endfor %}
+          {% assign tag_posts = site.posts | where_exp: "post", "post.tags contains tag" %}
           {% for post in tag_posts %}
             <li>
               <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
@@ -165,7 +194,7 @@ title: Tags
         </ul>        
       </section>
     {% endfor %}
-  </main>
-</div>
+    </main>
+  </div>
 </body>
 </html>
