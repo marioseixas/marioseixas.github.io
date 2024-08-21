@@ -1,3 +1,7 @@
+---
+layout: null
+---
+
 <a class="search-input-block" id="search"></a>
 
 <header>
@@ -26,5 +30,5 @@
 </div>
 
 <script src="{{ '/pagefind/pagefind-ui.js' | relative_url }}" defer></script>
-<script type="module" src="{{ "/pagefind/pagefind-highlight.js" | relative_url }}" defer></script> 
+<script src="{{ '/pagefind/pagefind-highlight.js' | relative_url }}" defer></script>
 <script src="{{ '/assets/js/search.js' | relative_url }}" defer></script> 
