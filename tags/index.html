@@ -120,44 +120,46 @@ title: Tags
   </div>
     </nav>
   </header>
-  <div class="wrapper">    
-{% assign all_tags = "" | split: "" %}
-{% for post in site.posts %}
-  {% assign post_tags = post.tags | default: empty %}
-  {% if post_tags.first.first %}
-    {% assign post_tags = post_tags.first %}
-  {% endif %}
-  {% if post_tags.size == 1 and post_tags.first.size > 0 %}
-    {% if post_tags.first contains ',' %}
-      {% assign post_tags = post_tags | first | split: ',' | map: 'strip' %}
-    {% else %}
-      {% assign post_tags = post_tags %}
+  <div class="wrapper">
+  {% assign all_tags = "" | split: "" %}
+  {% for post in site.posts %}
+    {% assign post_tags = post.tags | default: empty %}
+    {% if post_tags.first.first %}
+      {% assign post_tags = post_tags.first %}
     {% endif %}
-  {% endif %}
-  {% for tag in post_tags %}
-    {% assign tag_stripped = tag | strip %}
-    {% unless all_tags contains tag_stripped %}
-      {% assign all_tags = all_tags | push: tag_stripped %}
-    {% endunless %}
-  {% endfor %}
-{% endfor %}
-{% assign sorted_tags = all_tags | sort %}
-    <div class="tag-page">
-  <h1>{{ page.title }}</h1>
-  <ul class="tag-list" aria-label="List of all tags">
-    {% for tag in sorted_tags %}
-      {% assign tag_posts = site.posts | where_exp: "post", "post.tags contains tag" %}
-      <li>
-        <a href="#{{ tag | slugify }}" aria-label="Tag {{ tag }} with {{ tag_posts.size }} posts">
-          {{ tag }} ({{ tag_posts.size }})
-        </a>
-      </li>
+    {% if post_tags.size == 1 and post_tags.first.size > 0 %}
+      {% if post_tags.first contains ',' %}
+        {% assign post_tags = post_tags | first | split: ',' | map: 'strip' %}
+      {% else %}
+        {% assign post_tags = post_tags %}
+      {% endif %}
+    {% endif %}
+    {% for tag in post_tags %}
+      {% assign tag_stripped = tag | strip %}
+      {% assign tag_parts = tag_stripped | split: '>' %}
+      {% assign current_level = all_tags %}
+      
+      {% for part in tag_parts %}
+        {% assign part_stripped = part | strip %}
+        {% unless current_level contains part_stripped %}
+          {% assign current_level = current_level | push: part_stripped %}
+          {% assign current_level = current_level | push: "" | split: "" %}
+        {% else %}
+          {% assign current_level = current_level[part_stripped] %}
+        {% endunless %}
+      {% endfor %}
     {% endfor %}
-  </ul>
-  {% cusdis_comments %}
-    </div>
-    <main class="tagged-posts">
-      {% for tag in sorted_tags %}
+  {% endfor %}
+  {% assign sorted_tags = all_tags | sort %}
+  <div class="tag-page">
+    <h1>{{ page.title }}</h1>
+    <ul class="tag-list" aria-label="List of all tags">
+      {% include nested_tags.html tags=sorted_tags %}
+    </ul>
+    {% cusdis_comments %}
+  </div>
+  <main class="tagged-posts">
+    {% for tag in sorted_tags %}
       <section class="search-link" id="{{ tag | slugify }}" aria-labelledby="{{ tag | slugify }}-heading">
         <h2 id="{{ tag | slugify }}-heading">
           {{ tag }}
@@ -171,10 +173,10 @@ title: Tags
               <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %d, %Y" }}</time>
             </li>
           {% endfor %}
-        </ul>        
+        </ul>
       </section>
     {% endfor %}
-    </main>
-  </div>
+  </main>
+</div>
 </body>
 </html>
