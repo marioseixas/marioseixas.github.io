@@ -1,7 +1,7 @@
 :root {
-  --accents-amethyst: #9B59B6;
-  --accents-dodgerblue: #3498DB;
-  --accents-turquoise: #1ABC9C;
+  --accents-amethyst: #A87BCD;
+  --accents-dodgerblue: #4BA9F3;
+  --accents-turquoise: #34D0B2;
   --bg-default: #485365;
   --code-background: #576273;
   --code-text: #1ABC9C;
@@ -86,8 +86,7 @@ img[class*="emoji"][src$=".svg"] {
 
 .header-container {
   align-items: center;
-  display: flex;
-  flex-direction: line;
+  display: flex-inline;
   justify-content: center;
   padding: 1rem;
   text-align: center;
@@ -405,14 +404,14 @@ body {
   background-color: var(--bg-default);
   color: var(--text-default);
   font-family: var(--ft);
-  font-size: clamp(1rem, 1.6vw, 1.25rem);
+  font-size: clamp(1.5rem, calc(1.5rem + (3rem - 1.5rem) * (100vw - 20rem) / (75rem - 20rem)), 3rem);
   line-height: var(--line-height-base);
   margin: 0 auto;
   max-width: 100vw;
   padding: 1em;
-  --pagefind-ui-background: #000000;
-  --pagefind-ui-text: #FFFFFF;
-  --pagefind-ui-primary: #FFFFFF;
+  --pagefind-ui-background: #D0D0D0;
+  --pagefind-ui-text: #2F2F2F;
+  --pagefind-ui-primary: #2F2F2F;
   --pagefind-ui-font: var(--ft);
   align-items: center;
   justify-content: center;
