@@ -1,9 +1,7 @@
 ---
 title: OpenAI GPT API in Google Sheets
 date: 2023-12-21
-categories:
-- Code
-tags: scripts > GAS
+tags: - scripts > GAS
 comment: script para usar openai gpt api no google sheets
 info: fechado.
 type: post
