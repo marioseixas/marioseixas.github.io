@@ -1,0 +1,14 @@
+{% for tag in tags %}
+  {% if tag.size > 0 %}
+    <li>
+      <a href="#{{ tag | slugify }}" aria-label="Tag {{ tag }}">
+        {{ tag }}
+      </a>
+      {% if tags[tag].size > 0 %}
+        <ul>
+          {% include nested_tags.html tags=tags[tag] %}
+        </ul>
+      {% endif %}
+    </li>
+  {% endif %}
+{% endfor %}
