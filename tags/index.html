@@ -122,8 +122,7 @@ title: Tags
   </header>
   <div class="wrapper">
     {% assign all_tags = "" | split: "" %}
-    {% assign tag_posts_map = "" | split: "" %}
-    {% assign nested_tags_map = "" | split: "" %}
+    {% assign tag_posts_map = {} %}
 
     {% for post in site.posts %}
       {% assign post_tags = post.tags | split: ',' %}
@@ -132,20 +131,12 @@ title: Tags
         {% unless all_tags contains tag %}
           {% assign all_tags = all_tags | push: tag %}
         {% endunless %}
+        
         {% if tag_posts_map[tag] == nil %}
-          {% assign tag_posts_map[tag] = "" | split: "" %}
+          {% assign tag_posts_map = tag_posts_map | merge: { tag: [] } %}
         {% endif %}
+        
         {% assign tag_posts_map[tag] = tag_posts_map[tag] | push: post %}
-
-        {% if tag contains '>' %}
-          {% assign parent_tag = tag | split: '>' | first %}
-          {% if nested_tags_map[parent_tag] == nil %}
-            {% assign nested_tags_map[parent_tag] = "" | split: "" %}
-          {% endif %}
-          {% unless nested_tags_map[parent_tag] contains tag %}
-            {% assign nested_tags_map[parent_tag] = nested_tags_map[parent_tag] | push: tag %}
-          {% endunless %}
-        {% endif %}
       {% endfor %}
     {% endfor %}
     
@@ -156,17 +147,6 @@ title: Tags
           {% assign tag_posts = tag_posts_map[tag] %}
           <li>
             <a href="#{{ tag | slugify }}">{{ tag }} ({{ tag_posts.size }})</a>
-            {% if nested_tags_map[tag] %}
-              <ul>
-                {% assign child_tags = nested_tags_map[tag] %}
-                {% for child_tag in child_tags %}
-                  {% assign child_tag_posts = tag_posts_map[child_tag] %}
-                  <li>
-                    <a href="#{{ child_tag | slugify }}">{{ child_tag }} ({{ child_tag_posts.size }})</a>
-                  </li>
-                {% endfor %}
-              </ul>
-            {% endif %}
           </li>
         {% endfor %}
       </ul>
@@ -188,29 +168,8 @@ title: Tags
           {% endfor %}
         </ul>
       </section>
-      {% if nested_tags_map[tag] %}
-        {% assign child_tags = nested_tags_map[tag] %}
-        {% for child_tag in child_tags %}
-        <section class="search-link" id="{{ child_tag | slugify }}" aria-labelledby="{{ child_tag | slugify }}-heading">
-          <h3 id="{{ child_tag | slugify }}-heading">
-            {{ child_tag }}
-            <a href="#" class="back-to-top" aria-label="Back to top">↑</a>
-          </h3>
-          <ul>
-            {% assign child_tag_posts = tag_posts_map[child_tag] %}
-            {% for post in child_tag_posts %}
-              <li>
-                <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
-                <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %d, %Y" }}</time>
-              </li>
-            {% endfor %}
-          </ul>
-        </section>
-        {% endfor %}
-      {% endif %}
       {% endfor %}
     </main>
   </div>
 </body>
 </html>
-  
