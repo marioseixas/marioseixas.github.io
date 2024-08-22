@@ -209,6 +209,8 @@
     url: /2024-05-01-stf-scraper
   - title: '"Copy Spotter" and Deduplication'
     url: /2024-06-01-copy-dedup
+  - title: OpenAI GPT API in Google Sheets
+    url: /2023-12-21-gpt-sheets
   - title: Script to print from clipboard to a thermal printer
     url: /2024-01-23-thermal
   - title: 'bulkGPT: multithreading for OpenAI''s output limits'
@@ -463,7 +465,7 @@
 - posts:
   - title: OpenAI GPT API in Google Sheets
     url: /2023-12-21-gpt-sheets
-  tag: test
+  tag: scripts>google-apps-script
 - posts:
   - title: 'PageFind with Jekyll '
     url: /2024-08-15-pagefind-with-jekyll
