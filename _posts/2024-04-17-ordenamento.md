@@ -1,15 +1,11 @@
 ---
 title: Ordenamento Jurídico Brasileiro [redução eidética]
-date: 2024-04-17 00:00:00 -03:00
-categories:
-- Δ24
-tags:
-- estudos
+date: 2024-04-17
+tags: edital>direito
 comment: 
 info: aberto.
 type: post
 layout: post
-mermaid: true
 ---
 
 O ordenamento jurídico brasileiro é fundamentado na tradição do direito civil, com influências marcantes dos sistemas jurídicos português, alemão e francês. Essa estrutura é caracterizada por uma hierarquia normativa bem definida, com a Constituição Federal no ápice, seguida por leis complementares, leis ordinárias, leis delegadas, medidas provisórias, decretos e resoluções. Além disso, incorpora as leis dos estados e municípios, estabelecendo uma complexa rede de regulamentações que abrangem diversas áreas do direito, como o penal, civil, trabalhista e administrativo.
