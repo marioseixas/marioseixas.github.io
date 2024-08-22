@@ -1,0 +1,502 @@
+- posts:
+  - title: Xsession
+    url: /2021-05-25-Xsession
+  - title: Shell script to replace JEKYLLER edge extension
+    url: /2023-12-24-jekyller
+  - title: /root/.xsessionrc
+    url: /2024-03-10-xsessionrc
+  - title: /.ratpoisonrc
+    url: /2024-04-14-ratpoisonrc
+  - title: Sectors to bytes
+    url: /2023-12-07-sectors
+  - title: /sources.list
+    url: /2024-04-14-sources
+  - title: Alternative option to upload a file to GitHub without cloning the entire
+      repository
+    url: /2023-12-24-git-sparse-checkout
+  - title: xinitrc
+    url: /2024-03-10-xinitrc
+  - title: 'Rclone: Syncing STORJ Cloud to Local Storage'
+    url: /2024-05-06-storj-sync
+  - title: Installation of nvidia-legacy-340 in debian 11 (Bullseye)
+    url: /2022-01-09-nvidia
+  - title: install_wps.sh
+    url: /2024-01-03-wps
+  - title: neofetch config.conf
+    url: /2021-05-25-neofetch
+  - title: Convert `.pdf` to `UTF-8`
+    url: /2024-06-02-pdf-utf8
+  - title: nedit.rc
+    url: /2023-12-30-neditrc
+  - title: /.bashrc
+    url: /2024-04-14-bashrc
+  - title: Python script to check LaTeX citations
+    url: /2024-06-02-bibtex-check
+  - title: Packages list script
+    url: /2023-12-24-dpkg-script
+  - title: cat files contents [script]
+    url: /2024-02-22-cat-files
+  - title: Installed Debian packages list
+    url: /2023-12-24-dpkg
+  - title: Installation of ratpoison in debian/ubuntu
+    url: /2023-11-10-ratpoison
+  - title: '"Copy Spotter" and Deduplication'
+    url: /2024-06-01-copy-dedup
+  - title: Setup FTP Server on Debian and Connect a Windows machine
+    url: /2024-02-06-ftpd
+  - title: Script to print from clipboard to a thermal printer
+    url: /2024-01-23-thermal
+  - title: 'bulkGPT: multithreading for OpenAI''s output limits'
+    url: /2024-06-13-bulk-gpt
+  - title: Installing a custom version of SQLite
+    url: /2024-02-16-sqlite
+  - title: cliPaperQA
+    url: /2024-06-16-clipaper-qa
+  - title: Gummi .tex .bib
+    url: /2024-01-31-gummi
+  - title: SoC arm64 RK3588
+    url: /2024-01-01-rk3588
+  - title: Organize files by their extensions
+    url: /2024-05-30-files-by-type
+  - title: rk3588 performance optimization
+    url: /2023-12-25-rk3588-enhance
+  - title: DP-Q803P thermal printer manual
+    url: /2024-01-23-thermanual
+  - title: Linux typewriter setup
+    url: /2022-11-22-typewriter
+  - title: Rename files using llm.datasette.io
+    url: /2024-06-02-llm-renamer
+  - title: Linux in a USB drive
+    url: /2024-01-22-linux-usb
+  - title: About Thorium Flags
+    url: /2024-03-02-thorium
+  - title: How to make bootable Windows USB from Linux for old computers
+    url: /2020-10-22-ms-sys
+  - title: How to use the `dd` command to create a bootable USB drive from an ISO
+      file on a Linux-based system
+    url: /2024-08-02-how-to-use-the-dd-command-to-create-a-bootable-usb-drive-from-an-iso-file-on-a-linux-based-system
+  - title: microsoft-edge
+    url: /2022-01-11-edge
+  - title: parameter.txt
+    url: /2023-12-08-parameter
+  - title: xlunch entries.dsv
+    url: /2022-01-11-xlunch
+  tag: linux
+- posts:
+  - title: Julho 2022
+    url: /2022-08-01-julho-22
+  - title: Junho 2021
+    url: /2021-07-01-junho-21
+  - title: Setembro 2022
+    url: /2022-10-01-setembro-22
+  - title: Junho 2020
+    url: /2020-07-02-junho-20
+  - title: Agosto 2020
+    url: /2020-09-01-agosto-20
+  - title: Janeiro 2021
+    url: /2021-01-30-janeiro-21
+  - title: Agosto 2022
+    url: /2022-09-06-agosto-22
+  - title: Julho 2020
+    url: /2020-08-01-julho-20
+  - title: Maio 2022
+    url: /2022-06-01-maio-22
+  - title: Janeiro 2022
+    url: /2022-02-01-janeiro-22
+  - title: Setembro 2021
+    url: /2021-10-01-setembro-21
+  - title: Abril 2021
+    url: /2021-05-01-abril-21
+  - title: Maio 2021
+    url: /2021-05-31-maio-21
+  - title: Novembro 2022
+    url: /2022-12-17-novembro-22
+  - title: Novembro 2020
+    url: /2020-12-01-novembro-20
+  - title: Fevereiro 2022
+    url: /2022-03-02-fevereiro-22
+  - title: Outubro 2021
+    url: /2021-10-30-outubro-21
+  - title: Maio 2020
+    url: /2020-05-30-maio-20
+  - title: Novembro 2021
+    url: /2021-12-04-novembro-21
+  - title: Setembro 2020
+    url: /2020-09-30-setembro-20
+  - title: Junho 2022
+    url: /2022-07-04-junho-22
+  - title: Maio 2023
+    url: /2023-05-29-maio-23
+  - title: Julho 2021
+    url: /2021-08-02-julho-21
+  - title: Outubro 2020
+    url: /2020-11-03-outubro-20
+  - title: Dezembro 2021
+    url: /2022-01-04-dezembro-21
+  - title: "Mar\xE7o 2022"
+    url: /2022-04-02-marco-22
+  - title: Agosto 2021
+    url: /2021-09-01-agosto-21
+  - title: Abril 2020
+    url: /2020-04-30-abril-20
+  - title: "Mar\xE7o 2021"
+    url: /2021-04-01-marco-21
+  - title: Dezembro 2020
+    url: /2021-01-03-dezembro-20
+  - title: Fevereiro 2021
+    url: /2021-03-02-fevereiro-21
+  - title: "Mar\xE7o 2020"
+    url: /2020-03-30-marco-20
+  - title: Abril 2022
+    url: /2022-05-03-abril-22
+  tag: rendimentos
+- posts:
+  - title: "Avalia\xE7\xE3o Funcional I/XV"
+    url: /2022-04-12-taf-01
+  - title: "Peri\xF3dicos para publicar artigos"
+    url: /2024-07-05-periodicos
+  - title: Procedimentos de Escolta Dedicada
+    url: /2024-07-14-escolta
+  - title: "can\xE7\xE3o da interna\xE7\xE3o"
+    url: /2018-02-26-gustavo
+  - title: QRU Aposentadoria
+    url: /2024-02-25-aposentadoria
+  tag: trabalho
+- posts:
+  - title: links4
+    url: /2024-08-18-links4
+  - title: links2
+    url: /2024-08-17-links2
+  - title: links
+    url: /2024-08-15-links
+  - title: links3
+    url: /2024-08-18-links3
+  - title: libros familiares
+    url: /2022-07-14-libros-de-familia
+  - title: chess books
+    url: /2020-12-31-chess-books
+  - title: Livros
+    url: /2020-06-07-livros
+  tag: ler
+- posts:
+  - title: Shell script to replace JEKYLLER edge extension
+    url: /2023-12-24-jekyller
+  - title: Py Oda
+    url: /2024-01-28-py-oda
+  - title: Split `.wav` for Whisper
+    url: /2024-03-04-whisper-splitter
+  - title: 'Rclone: Syncing STORJ Cloud to Local Storage'
+    url: /2024-05-06-storj-sync
+  - title: WhatsapPY data
+    url: /2024-04-28-whatsappy
+  - title: tampermonkey dify hit-testing [script]
+    url: /2024-02-18-tampermonkey-dify
+  - title: install_wps.sh
+    url: /2024-01-03-wps
+  - title: Convert `.pdf` to `UTF-8`
+    url: /2024-06-02-pdf-utf8
+  - title: Python script to check LaTeX citations
+    url: /2024-06-02-bibtex-check
+  - title: Packages list script
+    url: /2023-12-24-dpkg-script
+  - title: github.com/py-pdf
+    url: /2023-03-07-pypdf
+  - title: Gingko ToC outliner [script]
+    url: /2024-06-17-gingko-toc-outliner
+  - title: cat files contents [script]
+    url: /2024-02-22-cat-files
+  - title: STF Scraper [script]
+    url: /2024-05-01-stf-scraper
+  - title: '"Copy Spotter" and Deduplication'
+    url: /2024-06-01-copy-dedup
+  - title: Script to print from clipboard to a thermal printer
+    url: /2024-01-23-thermal
+  - title: 'bulkGPT: multithreading for OpenAI''s output limits'
+    url: /2024-06-13-bulk-gpt
+  - title: cliPaperQA
+    url: /2024-06-16-clipaper-qa
+  - title: dasel references filtering + citation appender [script]
+    url: /2024-02-17-dasel_citation_appender
+  - title: Organize files by their extensions
+    url: /2024-05-30-files-by-type
+  - title: Rename files using llm.datasette.io
+    url: /2024-06-02-llm-renamer
+  - title: PYragraphs
+    url: /2024-02-05-pyragraphs
+  tag: scripts
+- posts:
+  - title: VW/GOL 1.0 G4 2010 - 195.300km
+    url: /2021-10-15-car-10-15
+  - title: VW/GOL 1.0 G4 2010 - 196.351km
+    url: /2021-12-15-car-12-15
+  - title: VW/GOL 1.0 G4 2010 - 184.000km
+    url: /2020-04-17-car-04-17
+  - title: ' VW/GOL 1.0 G4 2010 - 189.111km '
+    url: /2021-02-10-car-02-10
+  tag: carro
+- posts:
+  - title: Estados que exigem atividade policial para DELTA
+    url: /2022-06-07-atividade-policial
+  - title: "N\xFAcleo duro das provas de Delegado de Pol\xEDcia"
+    url: /2023-12-22-hard-core
+  - title: Concursos DELTA iminentes
+    url: /2023-12-22-concursos-delta
+  tag: edital
+- posts:
+  - title: Computed-Score Priority in MLO
+    url: /2024-07-20-computed-score-priority-in-mlo
+  - title: Task Prioritization
+    url: /2024-05-21-tasks-mermaid
+  - title: Cleaning flowchart
+    url: /2022-11-11-cleaning-flow
+  - title: Benjamin Franklin's 13 Virtues
+    url: /2024-07-31-benjamin-franklins-13-virtues
+  - title: Rubik's
+    url: /2021-06-11-rubik
+  - title: github stars
+    url: /2024-01-03-stars
+  - title: Eisenhower Matrix
+    url: /2024-04-12-eisenhower
+  - title: Tasks Flow (MyLifeOrganized - MLO)
+    url: /2022-10-31-tasks-flow
+  - title: chess analysis workflow
+    url: /2021-04-16-chess-flow
+  - title: MLO Workspaces logic
+    url: /2024-07-23-mlo-workspaces-logic
+  - title: Planning System Based on MyLifeOrganized (MLO)
+    url: /2024-05-15-mlo-ru
+  - title: habits
+    url: /2022-01-16-habits
+  tag: tasks
+- posts:
+  - title: RockChip devices
+    url: /2024-08-18-rockchip-devices
+  - title: VPC-3588 Motherboard
+    url: /2024-07-20-vpc-3588-motherboard
+  - title: Laptop alternative
+    url: /2024-08-01-laptop-alternative
+  tag: hardware
+- posts:
+  - title: III Etapa do Circuito Goiano de Xadrez 2020
+    url: /2020-11-11-torneio-001
+  - title: "Performance m\xE9dia"
+    url: /2021-03-02-performance
+  tag: torneios
+- posts:
+  - title: streaming
+    url: /2022-03-16-streaming
+  - title: aye aye
+    url: /2022-03-16-aye
+  tag: assistir
+- posts:
+  - title: Call de Fevereiro de 2022
+    url: /2022-02-02-call-02-2022
+  - title: Call de Abril de 2021
+    url: /2021-04-06-call-04-2021
+  - title: Call de Fevereiro de 2021
+    url: /2021-02-07-call-02-2021
+  - title: "Call de Mar\xE7o de 2022"
+    url: /2022-03-07-call-03-2022
+  - title: Call de Setembro de 2020
+    url: /2020-09-09-call-09-2020
+  - title: Call de Junho de 2021
+    url: /2021-06-08-call-06-2021
+  - title: Call de Outubro de 2020
+    url: /2020-10-05-call-10-2020
+  - title: Call de Janeiro de 2022
+    url: /2022-01-06-call-01-2022
+  - title: Call de Novembro de 2021
+    url: /2021-11-12-call-11-2021
+  - title: Call de Agosto de 2022
+    url: /2022-08-09-call-08-2022
+  - title: Call de Setembro de 2022
+    url: /2022-09-07-call-09-2022
+  - title: Call de Outubro de 2021
+    url: /2021-10-07-call-10-2021
+  - title: Call de Novembro de 2020
+    url: /2020-11-07-call-11-2020
+  - title: ' Call de Janeiro de 2021'
+    url: /2021-01-07-call-01-2021
+  - title: Call de Julho de 2022
+    url: /2022-07-05-call-07-2022
+  - title: Call de Setembro de 2021
+    url: /2021-09-03-call-09-2021
+  - title: Call de Dezembro de 2021
+    url: /2021-12-09-call-12-2021
+  - title: Call de Maio de 2021
+    url: /2021-05-07-call-05-2021
+  - title: Call de Agosto de 2020
+    url: /2020-08-21-call-08-2020
+  - title: Call de Outubro de 2022
+    url: /2022-10-01-call-10-2022
+  - title: Call de Agosto de 2021
+    url: /2021-08-09-call-08-2021
+  - title: Call de Julho de 2020
+    url: /2020-07-20-call-07-2020
+  - title: Call de Dezembro de 2020
+    url: /2020-12-08-call-12-2020
+  - title: Call de Julho de 2021
+    url: /2021-07-06-call-07-2021
+  - title: Call de Junho de 2022
+    url: /2022-06-07-call-06-2022
+  - title: Call de Abril de 2020
+    url: /2020-04-17-call-04-2020
+  - title: 'Call de Junho de 2020 '
+    url: /2020-06-22-call-06-2020
+  - title: "Call de Mar\xE7o de 2021"
+    url: /2021-03-02-call-03-2021
+  - title: Call de Maio de 2022
+    url: /2022-05-10-call-05-2022
+  - title: Call de Maio de 2020
+    url: /2020-05-21-call-05-2020
+  - title: Call de Abril de 2022
+    url: /2022-04-06-call-04-2022
+  tag: calls
+- posts:
+  - title: "Como calcular presta\xE7\xE3o por meio de taxa de juros e per\xEDodo"
+    url: /2021-01-07-emprestimo
+  - title: Contas
+    url: /2023-10-03-contas
+  tag: despesas
+- posts:
+  - title: VENDA SMTO3 04,74% a.m.
+    url: /2021-11-03-sell-smto3
+  - title: VENDA CARD3 04,02% a.m.
+    url: /2021-04-02-sell-card3
+  - title: VENDA TOTS3 04,20% a.m.
+    url: /2021-09-01-sell-tots3
+  - title: VENDA MTSA4 08,14% a.m.
+    url: /2021-06-11-sell-mtsa4
+  tag: sell
+- posts:
+  - title: 2024-07-13-update-gemfilelock
+    url: /2024-07-13-update-gemfilelock
+  tag: github
+- posts:
+  - title: 2024-07-13-update-gemfilelock
+    url: /2024-07-13-update-gemfilelock
+  tag: jekyll
+- posts:
+  - title: Task Prioritization
+    url: /2024-05-21-tasks-mermaid
+  tag: productivity
+- posts:
+  - title: "CESPE: chute t\xE1tico"
+    url: /2023-12-20-cespe
+  - title: "Ordenamento Jur\xEDdico Brasileiro [redu\xE7\xE3o eid\xE9tica]"
+    url: /2024-04-17-ordenamento
+  - title: "Processo de Dep\xF3sito Legal - UFJ"
+    url: /2024-03-25-ufj-tcc
+  - title: STF Scraper [script]
+    url: /2024-05-01-stf-scraper
+  - title: WRITING TO LEARN AND WHY IT MATTERS
+    url: /2022-11-30-writing
+  - title: "Peri\xF3dicos para publicar artigos"
+    url: /2024-07-05-periodicos
+  - title: Se eu fosse um concurseiro - George Marmelstein
+    url: /2024-01-07-marmelstein
+  - title: "Calend\xE1rio Acad\xEAmico"
+    url: /2023-03-07-facul-calendar
+  tag: estudos
+- posts:
+  - title: Vacinas
+    url: /2022-09-27-vacinas
+  tag: baby
+- posts:
+  - title: wallpaper I
+    url: /2018-04-11-wallpaper-1
+  tag: wallpapers
+- posts:
+  - title: Deep Chat Speech
+    url: /2024-03-12-deepchat
+  - title: OpenAI Token Limits
+    url: /2023-03-10-openai-token-limits
+  - title: Natural Language Processing (NLP) tools
+    url: /2023-12-30-nlp
+  tag: AI
+- posts:
+  - title: dasel context guide [prompt]
+    url: /2024-02-17-dasel
+  - title: default [prompt]
+    url: /2023-11-05-default-prompt
+  - title: gmail2mailgrip [prompt]
+    url: /2024-08-02-gmail2mailgrip-prompt
+  - title: reassess [prompt]
+    url: /2024-04-13-reassess
+  - title: JSON-LD [prompt]
+    url: /2024-02-14-json-ld
+  tag: prompt
+- posts:
+  - title: iOS 18 changelog
+    url: /2024-07-30-ios-18-changelog
+  tag: software
+- posts:
+  - title: Lyrics of Deleter by Grouplove
+    url: /2024-07-20-lyrics-of-deleter-by-grouplove
+  tag: music
+- posts:
+  - title: "Bolo P\xE3o (Pound Cake)"
+    url: /2024-07-25-bolo-po-pound-cake
+  - title: IRPF
+    url: /2022-03-19-irpf
+  tag: receitas
+- posts:
+  - title: 'iPhone: files2zip & zip2clipboard'
+    url: /2024-07-20-iphone-files2zip-zip2clipboard
+  tag: iphone
+- posts:
+  - title: Gingko ToC outliner [script]
+    url: /2024-06-17-gingko-toc-outliner
+  tag: gingko
+- posts:
+  - title: 9gag evangelism
+    url: /2022-06-15-holy-9gag
+  - title: "can\xE7\xE3o da interna\xE7\xE3o"
+    url: /2018-02-26-gustavo
+  tag: evangelismo
+- posts:
+  - title: Board games
+    url: /2024-07-30-board-games
+  tag: fatherhood
+- posts:
+  - title: OpenAI GPT API in Google Sheets
+    url: /2023-12-21-gpt-sheets
+  - title: "Procedimento dos Crimes da Compet\xEAncia do Tribunal do J\xFAri"
+    url: /2024-03-08-juri
+  tag: test
+- posts:
+  - title: 'PageFind with Jekyll '
+    url: /2024-08-15-pagefind-with-jekyll
+  tag: '[''github'', ''jekyll'']'
+- posts:
+  - title: Linux mobile OS
+    url: /2024-08-17-linux-mobile-os
+  tag: '[''software'', ''mobile'']'
+- posts:
+  - title: Effects of 10-Day Complete Fasting
+    url: /2022-10-18-jejum
+  - title: Arm Tendinitis
+    url: /2024-08-13-arm-tendinitis
+  tag: "sa\xFAde"
+- posts:
+  - title: AWS PushSafer billing alarm
+    url: /2024-07-25-aws-pushsafer-billing-alarm
+  - title: Webhooks using `Serverless.com` Lift plugin
+    url: /2024-07-17-webhooks-using-serverlesscom-lift-plugin
+  tag: serverless
+- posts:
+  - title: Your Life in Tokens
+    url: /2024-06-22-life-tokens
+  tag: "admoesta\xE7\xE3o"
+- posts:
+  - title: Envolvido ou comprometido?
+    url: /2018-02-15-tal-06-17
+  tag: "spirit admoesta\xE7\xE3o"
+- posts:
+  - title: "Procedimento dos Crimes da Compet\xEAncia do Tribunal do J\xFAri"
+    url: /2024-03-08-juri
+  tag: test>nest
+- posts:
+  - title: Longer inputs on WHISPER API
+    url: /2024-07-21-longer-inputs-on-whisper-api
+  tag: speech2text
