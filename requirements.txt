@@ -1,5 +1,4 @@
 requests
 icalendar
 pyyaml
-yaml
 defaultdict
