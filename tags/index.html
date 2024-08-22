@@ -134,7 +134,7 @@ title: Tags
           {% assign post_tags = post_tags %}
         {% endif %}
       {% endif %}
-      {% for tag in post_tags %}
+    {% for tag in post_tags %}
         {% assign tag_stripped = tag | strip %}
         {% unless all_tags contains tag_stripped %}
           {% assign all_tags = all_tags | push: tag_stripped %}
@@ -150,11 +150,12 @@ title: Tags
           {% assign tag_posts = '' | split: '' %}
           {% for post in site.posts %}
             {% assign current_tag = tag %}
-            {% if post.tags | contains_tag: current_tag %}
+            {% capture contains_tag_result %} {{ post.tags | contains_tag: current_tag }} {% endcapture %} 
+            {% if contains_tag_result == 'true' %}
               {% assign tag_posts = tag_posts | push: post %}
             {% endif %}
           {% endfor %}
-          <li>
+        <li>
             <a href="#{{ tag | slugify }}" aria-label="Tag {{ tag }} with {{ tag_posts.size }} posts">
               {{ tag }} ({{ tag_posts.size }})
             </a>
