@@ -122,73 +122,52 @@ title: Tags
   </header>
   <div class="wrapper">
     {% assign all_tags = "" | split: "" %}
+    {% assign tag_posts_map = "" | split: "" %}
+
     {% for post in site.posts %}
-      {% assign post_tags = post.tags | default: empty %}
-      {% if post_tags.first.first %}
-        {% assign post_tags = post_tags.first %}
-      {% endif %}
-      {% if post_tags.size == 1 and post_tags.first.size > 0 %}
-        {% if post_tags.first contains ',' %}
-          {% assign post_tags = post_tags | first | split: ',' | map: 'strip' %}
-        {% else %}
-          {% assign post_tags = post_tags %}
-        {% endif %}
-      {% endif %}
+      {% assign post_tags = post.tags | split: ',' %}
       {% for tag in post_tags %}
-        {% assign tag_stripped = tag | strip %}
-        {% unless all_tags contains tag_stripped %}
-          {% assign all_tags = all_tags | push: tag_stripped %}
+        {% assign tag = tag | strip %}
+        {% unless all_tags contains tag %}
+          {% assign all_tags = all_tags | push: tag %}
         {% endunless %}
+        {% if tag_posts_map[tag] == nil %}
+          {% assign tag_posts_map[tag] = "" | split: "" %}
+        {% endif %}
+        {% assign tag_posts_map[tag] = tag_posts_map[tag] | push: post %}
       {% endfor %}
     {% endfor %}
-    {% assign sorted_tags = all_tags | sort %}
-
+    
     <div class="tag-page">
       <h1>{{ page.title }}</h1>
-      <ul class="tag-list" aria-label="List of all tags">
-        {% for tag in sorted_tags %}
-          {% assign tag_posts_for_count = '' | split: '' %} <!--- New variable for counting posts -->
-          {% for post in site.posts %}
-            {% assign current_tag = tag %}
-            {% capture contains_tag_result %} {{ post.tags | contains_tag: current_tag }} {% endcapture %}
-            {% if contains_tag_result == 'true' %}
-              {% assign tag_posts_for_count = tag_posts_for_count | push: post %} <!--- Push to the new variable -->
-            {% endif %}
-          {% endfor %}
+      <ul class="tag-list">
+        {% for tag in all_tags %}
+          {% assign tag_posts = tag_posts_map[tag] %}
           <li>
-            <a href="#{{ tag | slugify }}" aria-label="Tag {{ tag }} with {{ tag_posts_for_count.size }} posts"> <!--- Use the new variable for count -->
-              {{ tag }} ({{ tag_posts_for_count.size }}) 
-            </a>
+            <a href="#{{ tag | slugify }}">{{ tag }} ({{ tag_posts.size }})</a>
           </li>
         {% endfor %}
       </ul>
-
-      <main class="tagged-posts">
-        {% for tag in sorted_tags %}
-          <section class="search-link" id="{{ tag | slugify }}" aria-labelledby="{{ tag | slugify }}-heading">
-            <h2 id="{{ tag | slugify }}-heading">
-              {{ tag }}
-            </h2>
-            <ul>
-              {% assign tag_posts = '' | split: '' %} <!--- Keep this variable for post listing -->
-              {% for post in site.posts %}
-                {% assign current_tag = tag %}
-                {% capture contains_tag_result %} {{ post.tags | contains_tag: current_tag }} {% endcapture %}
-                {% if contains_tag_result == 'true' %}
-                  {% assign tag_posts = tag_posts | push: post %} <!--- Push to this variable -->
-                {% endif %}
-              {% endfor %}
-              {% for post in tag_posts %}
-                <li>
-                  <a href="{{ post.url | relative_url }}">{{ post.title }}</a> <!--- Now this should work -->
-                  <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %d, %Y" }}</time>
-                </li>
-              {% endfor %}
-            </ul>
-          </section>
-        {% endfor %}
-      </main>
     </div>
+    <main class="tagged-posts">
+      {% for tag in all_tags %}
+      <section class="search-link" id="{{ tag | slugify }}" aria-labelledby="{{ tag | slugify }}-heading">
+        <h2 id="{{ tag | slugify }}-heading">
+          {{ tag }}
+          <a href="#" class="back-to-top" aria-label="Back to top">↑</a>
+        </h2>
+        <ul>
+          {% assign tag_posts = tag_posts_map[tag] %}
+          {% for post in tag_posts %}
+            <li>
+              <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+              <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %d, %Y" }}</time>
+            </li>
+          {% endfor %}
+        </ul>
+      </section>
+      {% endfor %}
+    </main>
   </div>
 </body>
 </html>
