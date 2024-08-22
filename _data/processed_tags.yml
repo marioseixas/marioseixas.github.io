@@ -241,6 +241,8 @@
     url: /2023-12-22-hard-core
   - title: Concursos DELTA iminentes
     url: /2023-12-22-concursos-delta
+  - title: "Procedimento dos Crimes da Compet\xEAncia do Tribunal do J\xFAri"
+    url: /2024-03-08-juri
   tag: edital
 - posts:
   - title: Computed-Score Priority in MLO
@@ -461,8 +463,6 @@
 - posts:
   - title: OpenAI GPT API in Google Sheets
     url: /2023-12-21-gpt-sheets
-  - title: "Procedimento dos Crimes da Compet\xEAncia do Tribunal do J\xFAri"
-    url: /2024-03-08-juri
   tag: test
 - posts:
   - title: 'PageFind with Jekyll '
@@ -495,7 +495,7 @@
 - posts:
   - title: "Procedimento dos Crimes da Compet\xEAncia do Tribunal do J\xFAri"
     url: /2024-03-08-juri
-  tag: test>nest
+  tag: edital>direito-processual-penal
 - posts:
   - title: Longer inputs on WHISPER API
     url: /2024-07-21-longer-inputs-on-whisper-api
