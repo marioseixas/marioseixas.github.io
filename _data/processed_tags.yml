@@ -405,6 +405,8 @@
 - posts:
   - title: "Ordenamento Jur\xEDdico Brasileiro [redu\xE7\xE3o eid\xE9tica]"
     url: /2024-04-17-ordenamento
+  - title: "Procedimento dos Crimes da Compet\xEAncia do Tribunal do J\xFAri"
+    url: /2024-03-08-juri
   tag: edital>direito
 - posts:
   - title: Vacinas
@@ -501,7 +503,7 @@
 - posts:
   - title: "Procedimento dos Crimes da Compet\xEAncia do Tribunal do J\xFAri"
     url: /2024-03-08-juri
-  tag: edital>direito-processual-penal
+  tag: edital>direito>processual-penal
 - posts:
   - title: Longer inputs on WHISPER API
     url: /2024-07-21-longer-inputs-on-whisper-api
