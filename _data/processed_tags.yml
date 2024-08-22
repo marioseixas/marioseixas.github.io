@@ -1,4 +1,204 @@
 - posts:
+  - title: Deep Chat Speech
+    url: /deepchat
+  - title: Natural Language Processing (NLP) tools
+    url: /nlp
+  - title: OpenAI Token Limits
+    url: /openai-token-limits
+  tag: AI
+- posts:
+  - title: 'PageFind with Jekyll '
+    url: /pagefind-with-jekyll
+  tag: '[''github'', ''jekyll'']'
+- posts:
+  - title: Linux mobile OS
+    url: /linux-mobile-os
+  tag: '[''software'', ''mobile'']'
+- posts:
+  - title: Your Life in Tokens
+    url: /life-tokens
+  - title: Envolvido ou comprometido?
+    url: /tal-06-17
+  tag: admoestação
+- posts:
+  - title: streaming
+    url: /streaming
+  - title: aye aye
+    url: /aye
+  tag: assistir
+- posts:
+  - title: Vacinas
+    url: /vacinas
+  tag: baby
+- posts:
+  - title: Call de Outubro de 2022
+    url: /call-10-2022
+  - title: Call de Setembro de 2022
+    url: /call-09-2022
+  - title: Call de Agosto de 2022
+    url: /call-08-2022
+  - title: Call de Julho de 2022
+    url: /call-07-2022
+  - title: Call de Junho de 2022
+    url: /call-06-2022
+  - title: Call de Maio de 2022
+    url: /call-05-2022
+  - title: Call de Abril de 2022
+    url: /call-04-2022
+  - title: Call de Março de 2022
+    url: /call-03-2022
+  - title: Call de Fevereiro de 2022
+    url: /call-02-2022
+  - title: Call de Janeiro de 2022
+    url: /call-01-2022
+  - title: Call de Dezembro de 2021
+    url: /call-12-2021
+  - title: Call de Novembro de 2021
+    url: /call-11-2021
+  - title: Call de Outubro de 2021
+    url: /call-10-2021
+  - title: Call de Setembro de 2021
+    url: /call-09-2021
+  - title: Call de Agosto de 2021
+    url: /call-08-2021
+  - title: Call de Julho de 2021
+    url: /call-07-2021
+  - title: Call de Junho de 2021
+    url: /call-06-2021
+  - title: Call de Maio de 2021
+    url: /call-05-2021
+  - title: Call de Abril de 2021
+    url: /call-04-2021
+  - title: Call de Março de 2021
+    url: /call-03-2021
+  - title: Call de Fevereiro de 2021
+    url: /call-02-2021
+  - title: ' Call de Janeiro de 2021'
+    url: /call-01-2021
+  - title: Call de Dezembro de 2020
+    url: /call-12-2020
+  - title: Call de Novembro de 2020
+    url: /call-11-2020
+  - title: Call de Outubro de 2020
+    url: /call-10-2020
+  - title: Call de Setembro de 2020
+    url: /call-09-2020
+  - title: Call de Agosto de 2020
+    url: /call-08-2020
+  - title: Call de Julho de 2020
+    url: /call-07-2020
+  - title: 'Call de Junho de 2020 '
+    url: /call-06-2020
+  - title: Call de Maio de 2020
+    url: /call-05-2020
+  - title: Call de Abril de 2020
+    url: /call-04-2020
+  tag: calls
+- posts:
+  - title: VW/GOL 1.0 G4 2010 - 196.351km
+    url: /car-12-15
+  - title: VW/GOL 1.0 G4 2010 - 195.300km
+    url: /car-10-15
+  - title: ' VW/GOL 1.0 G4 2010 - 189.111km '
+    url: /car-02-10
+  - title: VW/GOL 1.0 G4 2010 - 184.000km
+    url: /car-04-17
+  tag: carro
+- posts:
+  - title: Contas
+    url: /contas
+  - title: Como calcular prestação por meio de taxa de juros e período
+    url: /emprestimo
+  tag: despesas
+- posts:
+  - title: Ordenamento Jurídico Brasileiro [redução eidética]
+    url: /ordenamento
+  - title: Procedimento dos Crimes da Competência do Tribunal do Júri
+    url: /juri
+  - title: Núcleo duro das provas de Delegado de Polícia
+    url: /hard-core
+  - title: Concursos DELTA iminentes
+    url: /concursos-delta
+  - title: Estados que exigem atividade policial para DELTA
+    url: /atividade-policial
+  tag: edital
+- posts:
+  - title: Ordenamento Jurídico Brasileiro [redução eidética]
+    url: /ordenamento
+  - title: Procedimento dos Crimes da Competência do Tribunal do Júri
+    url: /juri
+  tag: edital>direito
+- posts:
+  - title: Procedimento dos Crimes da Competência do Tribunal do Júri
+    url: /juri
+  tag: edital>direito>processual-penal
+- posts:
+  - title: Periódicos para publicar artigos
+    url: /periodicos
+  - title: STF Scraper [script]
+    url: /stf-scraper
+  - title: Processo de Depósito Legal - UFJ
+    url: /ufj-tcc
+  - title: Se eu fosse um concurseiro - George Marmelstein
+    url: /marmelstein
+  - title: 'CESPE: chute tático'
+    url: /cespe
+  - title: Calendário Acadêmico
+    url: /facul-calendar
+  - title: WRITING TO LEARN AND WHY IT MATTERS
+    url: /writing
+  tag: estudos
+- posts:
+  - title: 9gag evangelism
+    url: /holy-9gag
+  - title: canção da internação
+    url: /gustavo
+  tag: evangelismo
+- posts:
+  - title: Board games
+    url: /board-games
+  tag: fatherhood
+- posts:
+  - title: Gingko ToC outliner [script]
+    url: /gingko-toc-outliner
+  tag: gingko
+- posts:
+  - title: 2024-07-13-update-gemfilelock
+    url: /update-gemfilelock
+  tag: github
+- posts:
+  - title: RockChip devices
+    url: /rockchip-devices
+  - title: Laptop alternative
+    url: /laptop-alternative
+  - title: VPC-3588 Motherboard
+    url: /vpc-3588-motherboard
+  tag: hardware
+- posts:
+  - title: 'iPhone: files2zip & zip2clipboard'
+    url: /iphone-files2zip-zip2clipboard
+  tag: iphone
+- posts:
+  - title: 2024-07-13-update-gemfilelock
+    url: /update-gemfilelock
+  tag: jekyll
+- posts:
+  - title: links4
+    url: /links4
+  - title: links3
+    url: /links3
+  - title: links2
+    url: /links2
+  - title: links
+    url: /links
+  - title: libros familiares
+    url: /libros-de-familia
+  - title: chess books
+    url: /chess-books
+  - title: Livros
+    url: /livros
+  tag: ler
+- posts:
   - title: How to use the `dd` command to create a bootable USB drive from an ISO
       file on a Linux-based system
     url: /how-to-use-the-dd-command-to-create-a-bootable-usb-drive-from-an-iso-file-on-a-linux-based-system
@@ -83,6 +283,32 @@
     url: /ms-sys
   tag: linux
 - posts:
+  - title: Lyrics of Deleter by Grouplove
+    url: /lyrics-of-deleter-by-grouplove
+  tag: music
+- posts:
+  - title: Task Prioritization
+    url: /tasks-mermaid
+  tag: productivity
+- posts:
+  - title: gmail2mailgrip [prompt]
+    url: /gmail2mailgrip-prompt
+  - title: reassess [prompt]
+    url: /reassess
+  - title: dasel context guide [prompt]
+    url: /dasel
+  - title: JSON-LD [prompt]
+    url: /json-ld
+  - title: default [prompt]
+    url: /default-prompt
+  tag: prompt
+- posts:
+  - title: Bolo Pão (Pound Cake)
+    url: /bolo-po-pound-cake
+  - title: IRPF
+    url: /irpf
+  tag: receitas
+- posts:
   - title: Maio 2023
     url: /maio-23
   - title: Novembro 2022
@@ -151,33 +377,11 @@
     url: /marco-20
   tag: rendimentos
 - posts:
-  - title: Procedimentos de Escolta Dedicada
-    url: /escolta
-  - title: Periódicos para publicar artigos
-    url: /periodicos
-  - title: QRU Aposentadoria
-    url: /aposentadoria
-  - title: Avaliação Funcional I/XV
-    url: /taf-01
-  - title: canção da internação
-    url: /gustavo
-  tag: trabalho
-- posts:
-  - title: links4
-    url: /links4
-  - title: links3
-    url: /links3
-  - title: links2
-    url: /links2
-  - title: links
-    url: /links
-  - title: libros familiares
-    url: /libros-de-familia
-  - title: chess books
-    url: /chess-books
-  - title: Livros
-    url: /livros
-  tag: ler
+  - title: Arm Tendinitis
+    url: /arm-tendinitis
+  - title: Effects of 10-Day Complete Fasting
+    url: /jejum
+  tag: saúde
 - posts:
   - title: Gingko ToC outliner [script]
     url: /gingko-toc-outliner
@@ -227,27 +431,37 @@
     url: /pypdf
   tag: scripts
 - posts:
-  - title: VW/GOL 1.0 G4 2010 - 196.351km
-    url: /car-12-15
-  - title: VW/GOL 1.0 G4 2010 - 195.300km
-    url: /car-10-15
-  - title: ' VW/GOL 1.0 G4 2010 - 189.111km '
-    url: /car-02-10
-  - title: VW/GOL 1.0 G4 2010 - 184.000km
-    url: /car-04-17
-  tag: carro
+  - title: OpenAI GPT API in Google Sheets
+    url: /gpt-sheets
+  tag: scripts>google-apps-script
 - posts:
-  - title: Ordenamento Jurídico Brasileiro [redução eidética]
-    url: /ordenamento
-  - title: Procedimento dos Crimes da Competência do Tribunal do Júri
-    url: /juri
-  - title: Núcleo duro das provas de Delegado de Polícia
-    url: /hard-core
-  - title: Concursos DELTA iminentes
-    url: /concursos-delta
-  - title: Estados que exigem atividade policial para DELTA
-    url: /atividade-policial
-  tag: edital
+  - title: VENDA SMTO3 04,74% a.m.
+    url: /sell-smto3
+  - title: VENDA TOTS3 04,20% a.m.
+    url: /sell-tots3
+  - title: VENDA MTSA4 08,14% a.m.
+    url: /sell-mtsa4
+  - title: VENDA CARD3 04,02% a.m.
+    url: /sell-card3
+  tag: sell
+- posts:
+  - title: AWS PushSafer billing alarm
+    url: /aws-pushsafer-billing-alarm
+  - title: Webhooks using `Serverless.com` Lift plugin
+    url: /webhooks-using-serverlesscom-lift-plugin
+  tag: serverless
+- posts:
+  - title: iOS 18 changelog
+    url: /ios-18-changelog
+  tag: software
+- posts:
+  - title: Longer inputs on WHISPER API
+    url: /longer-inputs-on-whisper-api
+  tag: speech2text
+- posts:
+  - title: Envolvido ou comprometido?
+    url: /tal-06-17
+  tag: spirit
 - posts:
   - title: Benjamin Franklin's 13 Virtues
     url: /benjamin-franklins-13-virtues
@@ -275,238 +489,24 @@
     url: /chess-flow
   tag: tasks
 - posts:
-  - title: RockChip devices
-    url: /rockchip-devices
-  - title: Laptop alternative
-    url: /laptop-alternative
-  - title: VPC-3588 Motherboard
-    url: /vpc-3588-motherboard
-  tag: hardware
-- posts:
   - title: Performance média
     url: /performance
   - title: III Etapa do Circuito Goiano de Xadrez 2020
     url: /torneio-001
   tag: torneios
 - posts:
-  - title: streaming
-    url: /streaming
-  - title: aye aye
-    url: /aye
-  tag: assistir
-- posts:
-  - title: Call de Outubro de 2022
-    url: /call-10-2022
-  - title: Call de Setembro de 2022
-    url: /call-09-2022
-  - title: Call de Agosto de 2022
-    url: /call-08-2022
-  - title: Call de Julho de 2022
-    url: /call-07-2022
-  - title: Call de Junho de 2022
-    url: /call-06-2022
-  - title: Call de Maio de 2022
-    url: /call-05-2022
-  - title: Call de Abril de 2022
-    url: /call-04-2022
-  - title: Call de Março de 2022
-    url: /call-03-2022
-  - title: Call de Fevereiro de 2022
-    url: /call-02-2022
-  - title: Call de Janeiro de 2022
-    url: /call-01-2022
-  - title: Call de Dezembro de 2021
-    url: /call-12-2021
-  - title: Call de Novembro de 2021
-    url: /call-11-2021
-  - title: Call de Outubro de 2021
-    url: /call-10-2021
-  - title: Call de Setembro de 2021
-    url: /call-09-2021
-  - title: Call de Agosto de 2021
-    url: /call-08-2021
-  - title: Call de Julho de 2021
-    url: /call-07-2021
-  - title: Call de Junho de 2021
-    url: /call-06-2021
-  - title: Call de Maio de 2021
-    url: /call-05-2021
-  - title: Call de Abril de 2021
-    url: /call-04-2021
-  - title: Call de Março de 2021
-    url: /call-03-2021
-  - title: Call de Fevereiro de 2021
-    url: /call-02-2021
-  - title: ' Call de Janeiro de 2021'
-    url: /call-01-2021
-  - title: Call de Dezembro de 2020
-    url: /call-12-2020
-  - title: Call de Novembro de 2020
-    url: /call-11-2020
-  - title: Call de Outubro de 2020
-    url: /call-10-2020
-  - title: Call de Setembro de 2020
-    url: /call-09-2020
-  - title: Call de Agosto de 2020
-    url: /call-08-2020
-  - title: Call de Julho de 2020
-    url: /call-07-2020
-  - title: 'Call de Junho de 2020 '
-    url: /call-06-2020
-  - title: Call de Maio de 2020
-    url: /call-05-2020
-  - title: Call de Abril de 2020
-    url: /call-04-2020
-  tag: calls
-- posts:
-  - title: Contas
-    url: /contas
-  - title: Como calcular prestação por meio de taxa de juros e período
-    url: /emprestimo
-  tag: despesas
-- posts:
-  - title: VENDA SMTO3 04,74% a.m.
-    url: /sell-smto3
-  - title: VENDA TOTS3 04,20% a.m.
-    url: /sell-tots3
-  - title: VENDA MTSA4 08,14% a.m.
-    url: /sell-mtsa4
-  - title: VENDA CARD3 04,02% a.m.
-    url: /sell-card3
-  tag: sell
-- posts:
-  - title: 2024-07-13-update-gemfilelock
-    url: /update-gemfilelock
-  tag: github
-- posts:
-  - title: 2024-07-13-update-gemfilelock
-    url: /update-gemfilelock
-  tag: jekyll
-- posts:
-  - title: Task Prioritization
-    url: /tasks-mermaid
-  tag: productivity
-- posts:
+  - title: Procedimentos de Escolta Dedicada
+    url: /escolta
   - title: Periódicos para publicar artigos
     url: /periodicos
-  - title: STF Scraper [script]
-    url: /stf-scraper
-  - title: Processo de Depósito Legal - UFJ
-    url: /ufj-tcc
-  - title: Se eu fosse um concurseiro - George Marmelstein
-    url: /marmelstein
-  - title: 'CESPE: chute tático'
-    url: /cespe
-  - title: Calendário Acadêmico
-    url: /facul-calendar
-  - title: WRITING TO LEARN AND WHY IT MATTERS
-    url: /writing
-  tag: estudos
-- posts:
-  - title: Ordenamento Jurídico Brasileiro [redução eidética]
-    url: /ordenamento
-  - title: Procedimento dos Crimes da Competência do Tribunal do Júri
-    url: /juri
-  tag: edital>direito
-- posts:
-  - title: Vacinas
-    url: /vacinas
-  tag: baby
+  - title: QRU Aposentadoria
+    url: /aposentadoria
+  - title: Avaliação Funcional I/XV
+    url: /taf-01
+  - title: canção da internação
+    url: /gustavo
+  tag: trabalho
 - posts:
   - title: wallpaper I
     url: /wallpaper-1
   tag: wallpapers
-- posts:
-  - title: Deep Chat Speech
-    url: /deepchat
-  - title: Natural Language Processing (NLP) tools
-    url: /nlp
-  - title: OpenAI Token Limits
-    url: /openai-token-limits
-  tag: AI
-- posts:
-  - title: gmail2mailgrip [prompt]
-    url: /gmail2mailgrip-prompt
-  - title: reassess [prompt]
-    url: /reassess
-  - title: dasel context guide [prompt]
-    url: /dasel
-  - title: JSON-LD [prompt]
-    url: /json-ld
-  - title: default [prompt]
-    url: /default-prompt
-  tag: prompt
-- posts:
-  - title: iOS 18 changelog
-    url: /ios-18-changelog
-  tag: software
-- posts:
-  - title: Lyrics of Deleter by Grouplove
-    url: /lyrics-of-deleter-by-grouplove
-  tag: music
-- posts:
-  - title: Bolo Pão (Pound Cake)
-    url: /bolo-po-pound-cake
-  - title: IRPF
-    url: /irpf
-  tag: receitas
-- posts:
-  - title: 'iPhone: files2zip & zip2clipboard'
-    url: /iphone-files2zip-zip2clipboard
-  tag: iphone
-- posts:
-  - title: Gingko ToC outliner [script]
-    url: /gingko-toc-outliner
-  tag: gingko
-- posts:
-  - title: 9gag evangelism
-    url: /holy-9gag
-  - title: canção da internação
-    url: /gustavo
-  tag: evangelismo
-- posts:
-  - title: Board games
-    url: /board-games
-  tag: fatherhood
-- posts:
-  - title: OpenAI GPT API in Google Sheets
-    url: /gpt-sheets
-  tag: scripts>google-apps-script
-- posts:
-  - title: 'PageFind with Jekyll '
-    url: /pagefind-with-jekyll
-  tag: '[''github'', ''jekyll'']'
-- posts:
-  - title: Linux mobile OS
-    url: /linux-mobile-os
-  tag: '[''software'', ''mobile'']'
-- posts:
-  - title: Arm Tendinitis
-    url: /arm-tendinitis
-  - title: Effects of 10-Day Complete Fasting
-    url: /jejum
-  tag: saúde
-- posts:
-  - title: AWS PushSafer billing alarm
-    url: /aws-pushsafer-billing-alarm
-  - title: Webhooks using `Serverless.com` Lift plugin
-    url: /webhooks-using-serverlesscom-lift-plugin
-  tag: serverless
-- posts:
-  - title: Your Life in Tokens
-    url: /life-tokens
-  - title: Envolvido ou comprometido?
-    url: /tal-06-17
-  tag: admoestação
-- posts:
-  - title: Envolvido ou comprometido?
-    url: /tal-06-17
-  tag: spirit
-- posts:
-  - title: Procedimento dos Crimes da Competência do Tribunal do Júri
-    url: /juri
-  tag: edital>direito>processual-penal
-- posts:
-  - title: Longer inputs on WHISPER API
-    url: /longer-inputs-on-whisper-api
-  tag: speech2text
