@@ -2,13 +2,8 @@ import os
 import yaml
 from collections import defaultdict
 from datetime import datetime
-import re
 
 def extract_frontmatter(file_content):
-    """
-    Extracts the YAML frontmatter from the given file content.
-    If the frontmatter is missing, returns an empty string.
-    """
     frontmatter = ""
     content_lines = file_content.split('\n')
     if content_lines[0].strip() == '---':
@@ -19,10 +14,6 @@ def extract_frontmatter(file_content):
     return frontmatter
 
 def process_tags(posts_dir, output_file):
-    """
-    Processes markdown files in the specified posts directory to extract tags and generate a YAML file
-    mapping tags to posts. The posts are sorted by date within each tag.
-    """
     tag_data = defaultdict(list)
     
     for filename in os.listdir(posts_dir):
@@ -33,13 +24,13 @@ def process_tags(posts_dir, output_file):
             
             frontmatter = extract_frontmatter(file_content)
             if not frontmatter:
-                print(f"Warning: No frontmatter found in {filename}. Skipping file.")
+                print(f"Warning: No frontmatter found in {filename}")
                 continue
             
             try:
                 post_data = yaml.safe_load(frontmatter)
             except yaml.YAMLError as e:
-                print(f"Error parsing YAML in {filename}: {e}. Skipping file.")
+                print(f"Error parsing frontmatter in {filename}: {e}")
                 continue
             
             tags = post_data.get('tags', [])
@@ -50,25 +41,21 @@ def process_tags(posts_dir, output_file):
             
             title = post_data.get('title', os.path.splitext(filename)[0])
             
-            # Prioritize slug from front matter
-            slug = post_data.get('permalink') or post_data.get('slug')
-            
-            # Fallback to extracting slug from filename if not in front matter
-            if not slug:
-                slug = re.sub(r'^\d{4}-\d{2}-\d{2}-', '', filename.replace('.md', ''))
-
-            # Construct the URL based on the slug
-            url = f'/{slug}'
+            # Extract the slug (remove date and file extension)
+            url = '/' + '-'.join(filename.split('-')[3:]).replace('.md', '')
             
             # Extract post date for sorting
             try:
                 post_date = datetime.strptime('-'.join(filename.split('-')[:3]), '%Y-%m-%d')
             except ValueError:
-                print(f"Warning: Unable to parse date from filename {filename}. Using default date.")
+                print(f"Warning: Unable to parse date from filename {filename}")
                 post_date = datetime.min
             
             for tag in tags:
-                tag_parts = tag.split('>') if isinstance(tag, str) else [str(tag)]
+                if isinstance(tag, str):
+                    tag_parts = tag.split('>')
+                else:
+                    tag_parts = [str(tag)]
                 
                 for i in range(len(tag_parts)):
                     partial_tag = '>'.join(tag_parts[:i+1])
@@ -85,9 +72,11 @@ def process_tags(posts_dir, output_file):
         for post in tag_data[tag]:
             del post['date']
 
-    # Write the processed tags to a YAML file
+    # Sort tags alphabetically
+    sorted_tag_data = sorted(tag_data.items())
+
     with open(output_file, 'w', encoding='utf-8') as f:
-        yaml.dump([{'tag': tag, 'posts': posts} for tag, posts in tag_data.items()], f, allow_unicode=True)
+        yaml.dump([{'tag': tag, 'posts': posts} for tag, posts in sorted_tag_data], f, allow_unicode=True)
 
 if __name__ == '__main__':
     process_tags('_posts', '_data/processed_tags.yml')
