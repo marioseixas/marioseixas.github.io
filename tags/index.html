@@ -54,16 +54,24 @@ title: Tags
       <h1>{{ page.title }}</h1>
       <ul class="tag-list">
         {% for tag in all_tags %}
-          {% assign tag_posts = tag_posts_map[tag] | split: ';' | size | minus: 1 %}
+          {% assign tag_posts = tag_posts_map[tag] | split: ';' %}
+          {% assign post_count = tag_posts | size %}
+          {% if tag_posts.last == '' %}
+            {% assign post_count = post_count | minus: 1 %}
+          {% endif %}
           <li>
-            <a href="#{{ tag | slugify }}">{{ tag }} ({{ tag_posts }})</a>
+            <a href="#{{ tag | slugify }}">{{ tag }} ({{ post_count }})</a>
             {% if nested_tags_map[tag] %}
               <ul>
                 {% assign child_tags = nested_tags_map[tag] %}
                 {% for child_tag in child_tags %}
-                  {% assign child_tag_posts = tag_posts_map[child_tag] | split: ';' | size | minus: 1 %}
+                  {% assign child_tag_posts = tag_posts_map[child_tag] | split: ';' %}
+                  {% assign child_post_count = child_tag_posts | size %}
+                  {% if child_tag_posts.last == '' %}
+                    {% assign child_post_count = child_post_count | minus: 1 %}
+                  {% endif %}
                   <li>
-                    <a href="#{{ child_tag | slugify }}">{{ child_tag }} ({{ child_tag_posts }})</a>
+                    <a href="#{{ child_tag | slugify }}">{{ child_tag }} ({{ child_post_count }})</a>
                   </li>
                 {% endfor %}
               </ul>
@@ -80,7 +88,6 @@ title: Tags
           <a href="#" class="back-to-top" aria-label="Back to top">↑</a>
         </h2>
         <ul>
-          {% assign tag_posts = tag_posts_map[tag] | split: ';' %}
           {% for post_url in tag_posts %}
             {% if post_url != '' %}
             <li>
