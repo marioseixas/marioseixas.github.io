@@ -2,4 +2,3 @@ requests
 icalendar
 pyyaml
 datetime
-re
