@@ -162,31 +162,31 @@ title: Tags
           </li>
         {% endfor %}
       </ul>
-
       <main class="tagged-posts">
-        {% for tag in sorted_tags %}
-          <section class="search-link" id="{{ tag | slugify }}" aria-labelledby="{{ tag | slugify }}-heading">
-            <h2 id="{{ tag | slugify }}-heading">
-              {{ tag }}
-            </h2>
-            <ul>
-              {% assign tag_posts = '' | split: '' %}
-              {% for post in site.posts %}
-                {% assign current_tag = tag %}
-                {% if post.tags | contains_tag: current_tag %}
-                  {% assign tag_posts = tag_posts | push: post %}
-                {% endif %}
-              {% endfor %}
-              {% for post in tag_posts %}
-                <li>
-                  <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
-                  <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %d, %Y" }}</time>
-                </li>
-              {% endfor %}
-            </ul>
-          </section>
+  {% for tag in sorted_tags %}
+    <section class="search-link" id="{{ tag | slugify }}" aria-labelledby="{{ tag | slugify }}-heading">
+      <h2 id="{{ tag | slugify }}-heading">
+        {{ tag }}
+      </h2>
+      <ul>
+        {% assign tag_posts = '' | split: '' %}
+        {% for post in site.posts %}
+          {% assign current_tag = tag %}
+          {% capture contains_tag_result %} {{ post.tags | contains_tag: current_tag }} {% endcapture %} <!--- Changed line! -->
+          {% if contains_tag_result == 'true' %} <!--- Changed line! -->
+            {% assign tag_posts = tag_posts | push: post %}
+          {% endif %}
         {% endfor %}
-      </main>
+        {% for post in tag_posts %}
+          <li>
+            <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+            <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %d, %Y" }}</time>
+          </li>
+        {% endfor %}
+      </ul>
+    </section>
+  {% endfor %}
+</main>
     </div>
   </div>
 </body>
