@@ -29,7 +29,11 @@ def process_tags(posts_dir, output_file):
                 url = '/' + filename.replace('.md', '')
                 
                 for tag in tags:
-                    tag_parts = tag.split('>')
+                    if isinstance(tag, str):
+                        tag_parts = tag.split('>')
+                    else:
+                        tag_parts = [str(tag)]
+                    
                     for i in range(len(tag_parts)):
                         partial_tag = '>'.join(tag_parts[:i+1])
                         tag_data[partial_tag].append({'title': title, 'url': url})
