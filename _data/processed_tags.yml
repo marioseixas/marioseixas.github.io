@@ -241,6 +241,8 @@
     url: /2022-06-07-atividade-policial
   - title: "N\xFAcleo duro das provas de Delegado de Pol\xEDcia"
     url: /2023-12-22-hard-core
+  - title: "Ordenamento Jur\xEDdico Brasileiro [redu\xE7\xE3o eid\xE9tica]"
+    url: /2024-04-17-ordenamento
   - title: Concursos DELTA iminentes
     url: /2023-12-22-concursos-delta
   - title: "Procedimento dos Crimes da Compet\xEAncia do Tribunal do J\xFAri"
@@ -387,8 +389,6 @@
 - posts:
   - title: "CESPE: chute t\xE1tico"
     url: /2023-12-20-cespe
-  - title: "Ordenamento Jur\xEDdico Brasileiro [redu\xE7\xE3o eid\xE9tica]"
-    url: /2024-04-17-ordenamento
   - title: "Processo de Dep\xF3sito Legal - UFJ"
     url: /2024-03-25-ufj-tcc
   - title: STF Scraper [script]
@@ -402,6 +402,10 @@
   - title: "Calend\xE1rio Acad\xEAmico"
     url: /2023-03-07-facul-calendar
   tag: estudos
+- posts:
+  - title: "Ordenamento Jur\xEDdico Brasileiro [redu\xE7\xE3o eid\xE9tica]"
+    url: /2024-04-17-ordenamento
+  tag: edital>direito
 - posts:
   - title: Vacinas
     url: /2022-09-27-vacinas
