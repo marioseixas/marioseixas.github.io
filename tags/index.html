@@ -142,7 +142,7 @@ title: Tags
   {% endfor %}
 {% endfor %}
 {% assign sorted_tags = all_tags | sort %}
-<div class="tag-page">
+    <div class="tag-page">
   <h1>{{ page.title }}</h1>
   <ul class="tag-list" aria-label="List of all tags">
     {% for tag in sorted_tags %}
@@ -154,9 +154,10 @@ title: Tags
       </li>
     {% endfor %}
   </ul>
-
-  <main class="tagged-posts">
-    {% for tag in sorted_tags %}
+  {% cusdis_comments %}
+    </div>
+    <main class="tagged-posts">
+      {% for tag in sorted_tags %}
       <section class="search-link" id="{{ tag | slugify }}" aria-labelledby="{{ tag | slugify }}-heading">
         <h2 id="{{ tag | slugify }}-heading">
           {{ tag }}
@@ -170,11 +171,10 @@ title: Tags
               <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %d, %Y" }}</time>
             </li>
           {% endfor %}
-        </ul>
+        </ul>        
       </section>
     {% endfor %}
-  </main>
-</div>
-</div>
+    </main>
+  </div>
 </body>
 </html>
