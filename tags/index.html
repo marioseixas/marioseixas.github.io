@@ -10,22 +10,22 @@ title: Tags
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
   <title>
-    {% raw %}{% if page.id == "home" %}
+    {% if page.id == "home" %}
       {{ site.title }}
     {% else %}
       {{ page.title }} — {{ site.title }}
-    {% endif %}{% endraw %}
+    {% endif %}
   </title>
 
-  <link rel="canonical" href="{% raw %}{{ page.canonical_url | default: site.url | append: page.url }}{% endraw %}">  
-  <link rel="alternate" type="application/rss+xml" title="{% raw %}{{ site.title }}{% endraw %}" href="{% raw %}{{ site.baseurl | default: site.url }}/rss.xml{% endraw %}">
+  <link rel="canonical" href="{{ page.canonical_url | default: site.url | append: page.url }}">  
+  <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ site.baseurl | default: site.url }}/rss.xml">
 
-  <meta property="og:site_name" content="{% raw %}{{ site.title }}{% endraw %}">
-  <meta property="og:title" content="{% raw %}{{ page.title | default: site.title }}{% endraw %}">
-  <meta property="og:type" content="{% raw %}{% if page.title %}article{% else %}website{% endif %}{% endraw %}">
-  <meta property="og:url" content="{% raw %}{{ site.url }}{{ page.url }}{% endraw %}">
+  <meta property="og:site_name" content="{{ site.title }}">
+  <meta property="og:title" content="{{ page.title | default: site.title }}">
+  <meta property="og:type" content="{% if page.title %}article{% else %}website{% endif %}">
+  <meta property="og:url" content="{{ site.url }}{{ page.url }}">
   
-  {% raw %}{% if page.image %}
+  {% if page.image %}
     <meta property="og:image" content="{% if page.image contains 'https://' %}{{ page.image }}{% else %}{{ site.url }}{{ page.image }}{% endif %}">
   {% endif %}
 
@@ -39,16 +39,16 @@ title: Tags
     {% for tag in page.tags %}
       <meta property="article:tag" content="{{ tag }}">
     {% endfor %}
-  {% endif %}{% endraw %}
+  {% endif %}
 
-  <link href="{% raw %}{{ '/style.css' | relative_url }}{% endraw %}" rel="stylesheet">
-  <link href="{% raw %}{{ '/pagefind/pagefind-ui.css' | relative_url }}{% endraw %}" rel="stylesheet">
-  <script src="{% raw %}{{ '/pagefind/pagefind-ui.js' | relative_url }}{% endraw %}"></script>
+  <link href="{{ '/style.css' | relative_url }}" rel="stylesheet">
+  <link href="{{ '/pagefind/pagefind-ui.css' | relative_url }}" rel="stylesheet">
+  <script src="{{ '/pagefind/pagefind-ui.js' | relative_url }}"></script>
   <script type="module">
-    import PagefindHighlight from '{% raw %}{{ "/pagefind/pagefind-highlight.js" | relative_url }}{% endraw %}';
+    import PagefindHighlight from '{{ "/pagefind/pagefind-highlight.js" | relative_url }}';
     new PagefindHighlight({ highlightParam: "highlight" });
   </script>
-  <script src="{% raw %}{{ '/assets/js/search.js' | relative_url }}{% endraw %}" defer></script>
+  <script src="{{ '/assets/js/search.js' | relative_url }}" defer></script>
   <script>
   document.addEventListener('DOMContentLoaded', function() {
     const tagLinks = document.querySelectorAll('.tag-list a');
@@ -105,8 +105,8 @@ title: Tags
   <header>
     <nav aria-label="Main navigation">
       <div class="header-container">
-        <a class="internal-link" href="{% raw %}{{ '/' | relative_url }}{% endraw %}">
-          <img src="https://raw.githubusercontent.com/marioseixas/marioseixas.github.io/main/assets/Sudden_Death_Rune.gif" alt="{% raw %}{{ site.title }}{% endraw %}" class="favicon">
+        <a class="internal-link" href="{{ '/' | relative_url }}">
+          <img src="https://raw.githubusercontent.com/marioseixas/marioseixas.github.io/main/assets/Sudden_Death_Rune.gif" alt="{{ site.title }}" class="favicon">
         </a>
         <a href="https://ib.bsb.br/archive">
           <img src="https://raw.githubusercontent.com/marioseixas/marioseixas.github.io/main/favicon.ico" alt="Archive" class="favicon">
@@ -122,19 +122,19 @@ title: Tags
   </header>
   <div class="wrapper">    
     <div class="tag-page">
-      <h1>{% raw %}{{ page.title }}{% endraw %}</h1>
+      <h1>{{ page.title }}</h1>
       <ul class="tag-list" aria-label="List of all tags">
-        {% raw %}{% for tag_data in site.data.processed_tags %}
+        {% for tag_data in site.data.processed_tags %}
           <li>
             <a href="#{{ tag_data.tag | slugify }}" aria-label="Tag {{ tag_data.tag }} with {{ tag_data.posts.size }} posts">
               {{ tag_data.tag }} ({{ tag_data.posts.size }})
             </a>
           </li>
-        {% endfor %}{% endraw %}
+        {% endfor %}
       </ul>
     </div>
     <main class="tagged-posts">
-      {% raw %}{% for tag_data in site.data.processed_tags %}
+      {% for tag_data in site.data.processed_tags %}
         <section class="search-link" id="{{ tag_data.tag | slugify }}" aria-labelledby="{{ tag_data.tag | slugify }}-heading">
           <h2 id="{{ tag_data.tag | slugify }}-heading">
             {{ tag_data.tag }}
@@ -148,7 +148,7 @@ title: Tags
             {% endfor %}
           </ul>
         </section>
-      {% endfor %}{% endraw %}
+      {% endfor %}
     </main>
   </div>
 </body>
