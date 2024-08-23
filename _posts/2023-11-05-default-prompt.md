@@ -1,15 +1,11 @@
 ---
-title: default [prompt]
-date: 2023-11-05 01:00:00 -02:00
-categories:
-- GPT
-tags:
-- prompt
+title: default
+date: 2023-11-05
+tags: AI>prompt
 comment: 
 info: aberto.
 type: post
 layout: post
-sha: 
 ---
 
 ```
