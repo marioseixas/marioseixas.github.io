@@ -113,6 +113,10 @@
     url: /car-04-17
   tag: carro
 - posts:
+  - title: Performance média
+    url: /performance
+  tag: chess
+- posts:
   - title: Contas
     url: /contas
   - title: Como calcular prestação por meio de taxa de juros e período
@@ -503,8 +507,6 @@
     url: /chess-flow
   tag: tasks
 - posts:
-  - title: Performance média
-    url: /performance
   - title: III Etapa do Circuito Goiano de Xadrez 2020
     url: /torneio-001
   tag: torneios
