@@ -1,21 +1,21 @@
 :root {
-  --accents-amethyst: #C5A5FC; /* Enhanced contrast with bg-default */
-  --accents-dodgerblue: #1877F2; /* Brighter, more accessible blue */
-  --accents-turquoise: #30D5C8; /* Enhanced contrast with bg-default */
+  --accents-amethyst: #E066FF; /* Vivid purple for maximum contrast */
+  --accents-dodgerblue: #00FFFF; /* Cyan for extreme contrast and vibrancy */
+  --accents-turquoise: #00FFB0; /* Electric green-blue for high visibility */
   --bg-default: #485365; /* Immutable */
-  --code-background: #2C3E50; /* Enhanced contrast with code-text */
-  --code-text: #ECF0F1; /* Enhanced contrast with code-background */
+  --code-background: #1A1A1A; /* Near-black for extreme contrast with code text */
+  --code-text: #FF6347; /* Tomato red for highly visible main text */
   --font-size-base: 24px;
   --ft: 'BitPotionExt';
   --ft-mono: 'BitPotionExt';
-  --headings: #FFD700; /* Enhanced contrast with bg-default */
-  --highlights-crimson: #FF4500; /* Enhanced contrast with bg-default */
-  --highlights-pumpkin: #FF8C00; /* Enhanced contrast with bg-default */
+  --headings: #FFFF00; /* Pure yellow for extremely prominent headings */
+  --highlights-crimson: #FF0000; /* Pure red for maximum emphasis */
+  --highlights-pumpkin: #FFA500; /* Bright orange for strong, warm highlights */
   --line-height-base: 1.5;
-  --links-default: #00BFFF; /* Vivid, accessible blue */
-  --links-hover: #1877F2; /* Deeper blue on hover */
-  --links-visited: #5F9EA0; /* Distinct from unvisited links */
-  --text-default: #FF6347; /* Vibrant, accessible red */
+  --links-default: #00BFFF; /* Deep sky blue for clear link identification */
+  --links-hover: #FF00FF; /* Magenta for vibrant interactive feedback */
+  --links-visited: #800080; /* Purple for a clear distinction from unvisited links */
+  --text-default: #FFFFE0; /* Light yellow for optimal readability against dark background */
 }
 
 html {
