@@ -1,8 +1,6 @@
 ---
 date: 2024-07-13
-tags:
-  - github
-  - jekyll
+tags: github>jekyll
 comment: 
 info: fechado.
 type: post
