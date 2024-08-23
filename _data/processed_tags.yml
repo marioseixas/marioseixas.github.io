@@ -367,6 +367,8 @@
 - posts:
   - title: 'iPhone: files2zip & zip2clipboard'
     url: /iphone-files2zip-zip2clipboard
+  - title: Webhooks using `Serverless.com` Lift plugin
+    url: /webhooks-using-serverlesscom-lift-plugin
   - title: Gingko JSON ToC outliner
     url: /gingko-toc-outliner
   - title: cliPaperQA
@@ -415,6 +417,10 @@
     url: /pypdf
   tag: scripts
 - posts:
+  - title: Webhooks using `Serverless.com` Lift plugin
+    url: /webhooks-using-serverlesscom-lift-plugin
+  tag: scripts>cloud
+- posts:
   - title: OpenAI GPT API in Google Sheets
     url: /gpt-sheets
   tag: scripts>google-apps-script
@@ -432,10 +438,6 @@
   - title: VENDA CARD3 04,02% a.m.
     url: /sell-card3
   tag: sell
-- posts:
-  - title: Webhooks using `Serverless.com` Lift plugin
-    url: /webhooks-using-serverlesscom-lift-plugin
-  tag: serverless
 - posts:
   - title: Linux mobile OS
     url: /linux-mobile-os
