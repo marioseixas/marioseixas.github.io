@@ -1,15 +1,11 @@
 ---
 title: Performance média
-date: 2021-03-02 00:00:00 -03:00
-categories:
-- Xadrez
-tags:
-- torneios
+date: 2021-03-02
+tags: chess
 comment: 
 info: aberto.
 type: post
 layout: post
-sha: 1bb9807559aacd5ae0fc2ca0989a8b417bda6cbb
 ---
 
 # Standard
