@@ -1,7 +1,7 @@
 :root {
   --accents-amethyst: #C5A5FC; /* Enhanced contrast with bg-default */
-  --accents-dodgerblue: #1E90FF; /* Enhanced contrast with bg-default */
-  --accents-turquoise: #40E0D0; /* Enhanced contrast with bg-default */
+  --accents-dodgerblue: #1877F2; /* Brighter, more accessible blue */
+  --accents-turquoise: #30D5C8; /* Enhanced contrast with bg-default */
   --bg-default: #485365; /* Immutable */
   --code-background: #2C3E50; /* Enhanced contrast with code-text */
   --code-text: #ECF0F1; /* Enhanced contrast with code-background */
@@ -10,12 +10,12 @@
   --ft-mono: 'BitPotionExt';
   --headings: #FFD700; /* Enhanced contrast with bg-default */
   --highlights-crimson: #FF4500; /* Enhanced contrast with bg-default */
-  --highlights-pumpkin: #FF7F50; /* Enhanced contrast with bg-default */
+  --highlights-pumpkin: #FF8C00; /* Enhanced contrast with bg-default */
   --line-height-base: 1.5;
-  --links-default: #00FF7F; /* Enhanced contrast with bg-default */
-  --links-hover: #1E90FF; /* Enhanced contrast with bg-default */
-  --links-visited: #00CED1; /* Enhanced contrast with bg-default */
-  --text-default: #FFFFFF; /* Enhanced contrast with bg-default */
+  --links-default: #00BFFF; /* Vivid, accessible blue */
+  --links-hover: #1877F2; /* Deeper blue on hover */
+  --links-visited: #5F9EA0; /* Distinct from unvisited links */
+  --text-default: #FF6347; /* Vibrant, accessible red */
 }
 
 html {
