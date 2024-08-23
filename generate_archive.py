@@ -28,10 +28,10 @@ for post_file in os.listdir(posts_directory):
                 all_posts.append(post_meta)
             except yaml.YAMLError as e:
                 print(f"Error parsing YAML in {post_file}: {e}")
+                continue  # Skip to the next file if YAML parsing fails
 
 # Sort posts by date (newest first), considering both date and last_modified_at
 all_sorted_posts = sorted(all_posts, key=lambda x: x.get('last_modified_at', x['date']), reverse=True)
-
 
 # Function to generate HTML for the archive
 def generate_archive_html(posts, tags):
@@ -44,13 +44,13 @@ def generate_archive_html(posts, tags):
 
   <title>archive — infoBAG</title>
 
-  <link rel="canonical" href="https://ib.bsb.br/404.html">
+  <link rel="canonical" href="https://ib.bsb.br/archive.html">
   <link rel="alternate" type="application/rss+xml" title="infoBAG" href="/rss.xml">
 
   <meta property="og:site_name" content="infoBAG">
   <meta property="og:title" content="archive">
   <meta property="og:type" content="article">
-  <meta property="og:url" content="https://ib.bsb.br/404.html">
+  <meta property="og:url" content="https://ib.bsb.br/archive.html">
   
   <link href="/style.css" rel="stylesheet">
   <link href="/pagefind/pagefind-ui.css" rel="stylesheet">
@@ -89,7 +89,7 @@ def generate_archive_html(posts, tags):
 
     '''
     for post in posts:
-        post_url = post.get('permalink', post.get('url')) # Use permalink if available, otherwise url
+        post_url = post.get('permalink', post.get('url'))  # Use permalink if available, otherwise url
         post_date = format_date(post.get('date'))
         post_title = post.get('title')
         post_last_modified = post.get('last_modified_at')
@@ -98,7 +98,7 @@ def generate_archive_html(posts, tags):
         post_tags = []
         for entry in tags:
             for p in entry['posts']:
-                if post_url in p['url']:  # Check if post URL is in any of the tag's post URLs
+                if p['url'] == post_url:  # Use exact matching for post URLs
                     post_tags.append(entry['tag'])
 
         # Format the tags
@@ -133,7 +133,6 @@ def generate_archive_html(posts, tags):
   </html>
     '''
     return html_output
-
 
 
 # Generate the HTML for the archive
