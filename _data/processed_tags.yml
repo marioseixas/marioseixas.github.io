@@ -157,17 +157,11 @@
 - posts:
   - title: RockChip devices
     url: /rockchip-devices
-  - title: Linux mobile OS
-    url: /linux-mobile-os
   - title: Laptop alternative
     url: /laptop-alternative
   - title: VPC-3588 Motherboard
     url: /vpc-3588-motherboard
   tag: hardware
-- posts:
-  - title: Linux mobile OS
-    url: /linux-mobile-os
-  tag: hardware>mobile
 - posts:
   - title: 'iPhone: files2zip & zip2clipboard'
     url: /iphone-files2zip-zip2clipboard
@@ -443,9 +437,15 @@
     url: /webhooks-using-serverlesscom-lift-plugin
   tag: serverless
 - posts:
+  - title: Linux mobile OS
+    url: /linux-mobile-os
   - title: iOS 18 changelog
     url: /ios-18-changelog
   tag: software
+- posts:
+  - title: Linux mobile OS
+    url: /linux-mobile-os
+  tag: software>mobile
 - posts:
   - title: Longer inputs on WHISPER API
     url: /longer-inputs-on-whisper-api
