@@ -279,12 +279,14 @@
     url: /ms-sys
   tag: linux
 - posts:
+  - title: Bolo Pão (Pound Cake)
+    url: /pound-cake
+  tag: misc
+- posts:
   - title: Lyrics of Deleter by Grouplove
     url: /lyrics-of-deleter-by-grouplove
   tag: music
 - posts:
-  - title: Bolo Pão (Pound Cake)
-    url: /bolo-po-pound-cake
   - title: IRPF
     url: /irpf
   tag: receitas
