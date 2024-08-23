@@ -1,7 +1,7 @@
 :root {
   --accents-amethyst: #8B008B; /* Dark Magenta - Provides strong contrast against backgrounds */
   --accents-dodgerblue: #1E90FF; /* Dodger Blue - More vibrant and contrasting than cyan */
-  --accents-turquoise: #00FF7F; /* Spring Green - Offers better contrast than original turquoise */
+  --accents-turquoise: #FFFFFF;
   --bg-default: #485365; /* Immutable */
   --code-background: #576273; /* Immutable */
   --code-text: #FFD700; /* Gold - High contrast against code background */
@@ -15,7 +15,7 @@
   --links-default: #0000FF; /* Blue - Classic link color with strong contrast */
   --links-hover: #FFFF00; /* Yellow - High contrast on hover */
   --links-visited: #4B0082; /* Indigo - Distinct from unvisited links */
-  --text-default: #FFFFFF; /* White - Maximum contrast against the background */
+  --text-default: #00FF7F;
 }
 
 html {
