@@ -84,37 +84,22 @@ id: not-found
         {% assign sorted_unmodified_posts = unmodified_posts | sort: 'date' | reverse %}
         
         {% assign all_sorted_posts = sorted_modified_posts | concat: sorted_unmodified_posts %}
-        {% assign processed_tags = site.data.processed_tags %}
+        
         {% for post in all_sorted_posts %}
-  <article>
-    <time datetime="{{ post.date | date: '%Y-%m-%d' }}" class="post-date">
-      <img src="{{ '/assets/gold.ico' | relative_url }}" alt="gold icon">
-
-      {%- assign post_tags = "" -%}
-      {%- for entry in processed_tags -%}
-        {%- if entry.posts contains post.url -%}
-          {%- assign post_tags = post_tags | append: entry.tag -%}
-          {%- unless forloop.last -%}
-            {%- assign post_tags = post_tags | append: ", " -%}
-          {%- endunless -%}
-        {%- endif -%}
-      {%- endfor -%}
-
-      {%- if post_tags != "" -%}
-        [{{ post_tags }}]
-      {%- endif -%}
-
-      <h3>
-        {{ post.date | date: '%Y-%m-%d' }}
-        {% if post.last_modified_at != post.date %}
-          &rightarrowtail; {{ post.last_modified_at | date_to_string }}
-        {% endif %}
-      </h3>
-      <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
-    </time>
-  </article>
-{% endfor %}
-</section>
+          <article>
+            <time datetime="{{ post.date | date: '%Y-%m-%d' }}" class="post-date">
+              <img src="{{ '/assets/gold.ico' | relative_url }}" alt="gold icon">
+              <h3>
+                {{ post.date | date: '%Y-%m-%d' }}
+                {% if post.last_modified_at != post.date %}
+                  &rightarrowtail; {{ post.last_modified_at | date_to_string }}
+                {% endif %}
+              </h3>
+              <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+            </time>
+          </article>
+        {% endfor %}
+      </section>
     </main>
   </div>
 </body>
