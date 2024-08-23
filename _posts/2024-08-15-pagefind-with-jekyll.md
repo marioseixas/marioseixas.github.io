@@ -1,6 +1,5 @@
 ---
-tags:
-  - [github, jekyll]
+tags: github>jekyll
 info: aberto.
 date: 2024-08-15
 type: post
