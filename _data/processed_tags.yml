@@ -1,4 +1,6 @@
 - posts:
+  - title: gmail2mailgrip
+    url: /gmail2mailgrip-prompt
   - title: Deep Chat Speech
     url: /deepchat
   - title: Natural Language Processing (NLP) tools
@@ -6,6 +8,10 @@
   - title: OpenAI Token Limits
     url: /openai-token-limits
   tag: AI
+- posts:
+  - title: gmail2mailgrip
+    url: /gmail2mailgrip-prompt
+  tag: AI>prompt
 - posts:
   - title: Your Life in Tokens
     url: /life-tokens
@@ -265,8 +271,6 @@
     url: /lyrics-of-deleter-by-grouplove
   tag: music
 - posts:
-  - title: gmail2mailgrip [prompt]
-    url: /gmail2mailgrip-prompt
   - title: reassess [prompt]
     url: /reassess
   - title: dasel context guide [prompt]
