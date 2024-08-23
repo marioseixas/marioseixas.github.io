@@ -151,6 +151,8 @@
 - posts:
   - title: 'PageFind with Jekyll '
     url: /pagefind-with-jekyll
+  - title: 2024-07-13-update-gemfilelock
+    url: /update-gemfilelock
   tag: github>jekyll
 - posts:
   - title: RockChip devices
@@ -170,10 +172,6 @@
   - title: 'iPhone: files2zip & zip2clipboard'
     url: /iphone-files2zip-zip2clipboard
   tag: iphone
-- posts:
-  - title: 2024-07-13-update-gemfilelock
-    url: /update-gemfilelock
-  tag: jekyll
 - posts:
   - title: links4
     url: /links4
