@@ -1,6 +1,8 @@
 - posts:
   - title: gmail2mailgrip
     url: /gmail2mailgrip-prompt
+  - title: reassess
+    url: /reassess
   - title: Deep Chat Speech
     url: /deepchat
   - title: Natural Language Processing (NLP) tools
@@ -11,6 +13,8 @@
 - posts:
   - title: gmail2mailgrip
     url: /gmail2mailgrip-prompt
+  - title: reassess
+    url: /reassess
   tag: AI>prompt
 - posts:
   - title: Your Life in Tokens
@@ -271,8 +275,6 @@
     url: /lyrics-of-deleter-by-grouplove
   tag: music
 - posts:
-  - title: reassess [prompt]
-    url: /reassess
   - title: dasel context guide [prompt]
     url: /dasel
   - title: JSON-LD [prompt]
