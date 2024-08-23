@@ -42,8 +42,8 @@ jobs:
             pip install pyyaml
           fi
 
-      - name: Run Python script
-        run: python script.py
+      - name: Generate archive.html with Python
+        run: python generate_archive.py
 
       - name: Run Python tags script
         run: python tags.py
@@ -52,9 +52,9 @@ jobs:
         run: |
           git config --local user.email "actions@github.com"
           git config --local user.name "GitHub Actions"
-          git add assets/data/events.json _data/processed_tags.yml
-          git commit -m "Update events.json and processed_tags.yml" || echo "No changes to commit"
-          git push origin main || echo "Nothing to push"          
+          git add archive.html assets/data/events.json _data/processed_tags.yml
+          git commit -m "Update archive.html, events.json, and processed_tags.yml" || echo "No changes to commit"
+          git push origin main || echo "Nothing to push"
 
       - name: Setup Pages
         id: pages
