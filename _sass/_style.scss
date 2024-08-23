@@ -451,14 +451,6 @@ tfoot {
     transform-origin: top left;
     width: 66.67%; /* 100% / 1.5 */
     overflow-x: hidden; /* Prevent horizontal scrollbar */
-    margin: 0 auto;
-  }
-
-  /* Adjust common container widths */
-  .container,
-  .post-content-body { 
-    max-width: 640px; 
-    margin: 0 auto;
   }
 
   /* Compensate for scaling on fixed-position elements */
@@ -466,16 +458,7 @@ tfoot {
     transform: scale(0.667); /* 1 / 1.5 */
     transform-origin: top left;
   }
-
-  /* Address Potential Issues with Fixed Elements */
-  header,
-  footer,
-  nav { /* Assuming these are common fixed elements */
-    position: static; /* Temporarily remove fixed positioning */
-    width: 100%; /* Ensure they span the full width */
-    margin: 0 auto;
-  }
-
+  
   /* Improve image rendering (optional) */
   img {
     image-rendering: -webkit-optimize-contrast;
