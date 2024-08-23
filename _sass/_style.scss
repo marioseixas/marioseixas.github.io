@@ -1,33 +1,33 @@
 :root {
-  --accents-amethyst: #FFFF00; /* Purple - A rich, deep accent color. */
-  --accents-dodgerblue: #BFBFBF; /* Blue - A vibrant, classic accent. */
-  --accents-turquoise: #008000; /* Green - Provides a natural, contrasting accent. */
-  --bg-default: #485365; /* Immutable - The main background color, a cool dark gray. */
-  --code-background: #576273; /* Immutable - Slightly darker than the main background for code blocks. */
-  --code-text: #FFA500; /* Orange - Offers good contrast against the code background without being overly bright. */
-  --ft: 'BitPotionExt'; /*  Font family for standard text. Ensure this font is available. */
-  --ft-mono: 'BitPotionExt'; /*  Font family for monospace text, like in code blocks.  Ensure this font is available.*/
-  --headings: #000000; /* Red - A bold, attention-grabbing color for headings. */
-  --highlights-crimson: #FF4500; /* Red-Orange - A slightly less intense red for highlighting specific elements. */
-  --highlights-pumpkin: #FFA500; /* Orange - A warm, vibrant color for highlighting key information. */
-  --line-height-base: 1.5; /*  Standard line-height for improved readability. */
-  --links-default: #FFA500; /* Orange - Stands out against the darker backgrounds and provides a clear visual cue. */
-  --links-hover: #FF0000; /* Red - A distinct change on hover, indicating interactivity. */
-  --links-visited: #FFFF00; /* Purple - Differentiates visited links from unvisited ones. */
-  --text-default: #00FFFF; /* Cyan - A cooler color for body text, offering a good contrast against the dark background while reducing eye strain. */
-  --bg-muted: #008000; /* Green -  A softer, less prominent background for less important elements, providing visual distinction from the main background. */
-  --bd-muted: #FFFF00; /* Purple - Used for muted borders and separators, harmonizing with the accent color. */
-  --bg-accent: #008000; /* Green - Provides a visually distinct background for highlighting specific content areas. */
-  --bg-subtle: #800080; /* Cyan -  Used for subtle background changes, aligning with the text-default color for a harmonious look. */
-  --bd-radius: 4px; /* Standard border-radius for elements, creating a slightly rounded appearance. */
-  --border-radius: 3px; /* A slightly sharper border-radius, potentially used for specific elements where a distinct edge is preferred. */
-  --table-header-bg: #008000; /* Green - Distinguishes table headers from the rest of the table content. */
-  --table-header-text: #FFFF00; /* Yellow - High contrast against the green background for clear header text visibility. */
-  --table-border: #FFFF00; /* Purple -  Provides clear visual separation between table cells while maintaining a cohesive color scheme. */
-  --btn-bg: #0000FF; /* Blue - A distinct background color for buttons, making them easily identifiable. */
-  --btn-text: #FFFF00; /* Yellow -  High contrast text against the blue background, ensuring clear button label visibility. */
-  --btn-hover-bg: #FF0000; /* Red -  A clear visual indication that the button is being interacted with. */
-  --btn-hover-text: #FFFF00; /* Yellow - Maintains consistent text color on hover for readability. */
+  --accents-amethyst: #FFFF00;
+  --accents-dodgerblue: #BFBFBF;
+  --accents-turquoise: #008000;
+  --bg-default: #485365;
+  --code-background: #576273;
+  --code-text: #FFA500;
+  --ft: 'BitPotionExt';
+  --ft-mono: 'BitPotionExt';
+  --headings: #000000;
+  --highlights-crimson: #FF4500;
+  --highlights-pumpkin: #FFA500;
+  --line-height-base: 1.5;
+  --links-default: #FFA500;
+  --links-hover: #FF0000;
+  --links-visited: #FFFF00;
+  --text-default: #00FFFF;
+  --bg-muted: #008000;
+  --bd-muted: #FFFF00;
+  --bg-accent: #008000;
+  --bg-subtle: #800080;
+  --bd-radius: 4px;
+  --border-radius: 3px;
+  --table-header-bg: #008000;
+  --table-header-text: #FFFF00;
+  --table-border: #FFFF00;
+  --btn-bg: #0000FF;
+  --btn-text: #FFFF00;
+  --btn-hover-bg: #FF0000;
+  --btn-hover-text: #FFFF00;
 }
 html {
   box-sizing: border-box;
@@ -82,7 +82,7 @@ img[class*="emoji"][src$=".svg"] {
   border: 1px dotted var(--accents-dodgerblue);
   border-radius: 0.1875rem;
   line-height: 1.25;
-  margin: 1.25rem 0 0.625rem;
+  margin: 0 auto;
   padding: 0.3125rem 1.25rem;
 }
 .header-container {
@@ -274,7 +274,7 @@ img[class*="emoji"][src$=".svg"] {
   background-color: var(--bg-accent);
   border-radius: 0.25rem;
   color: var(--links-default);
-  margin: 0.25rem;
+  margin: 0 auto;
   padding: 0.5rem;
   text-decoration: none;
   transition: background-color 0.3s ease, color 0.3s ease;
@@ -284,7 +284,7 @@ img[class*="emoji"][src$=".svg"] {
   color: var(--links-visited);
 }
 .tag-list li {
-  margin: 0.5em;
+  margin: 0 auto;
 }
 .tag-page {
   margin: 0 auto;
@@ -397,7 +397,7 @@ textarea,
 select,
 button {
   font-family: inherit;
-  margin: 0.2em 0;
+  margin: 0 auto;
 }
 p {
   hyphens: auto;
@@ -438,4 +438,47 @@ tfoot {
   background: var(--headings);
   color: var(--bg-default);
   font-weight: bold;
+}
+
+/* Global Conditional Scaling */
+@media screen and (min-width: 768px) {
+  html {
+    font-size: 150%; /* Increase base font size */
+  }
+
+  body {
+    transform: scale(1.5);
+    transform-origin: top left;
+    width: 66.67%; /* 100% / 1.5 */
+    overflow-x: hidden; /* Prevent horizontal scrollbar */
+    margin: 0 auto;
+  }
+
+  /* Adjust common container widths */
+  .container,
+  .post-content-body { 
+    max-width: 640px; 
+    margin: 0 auto;
+  }
+
+  /* Compensate for scaling on fixed-position elements */
+  .header-container { /* Example: Assuming your header is fixed */
+    transform: scale(0.667); /* 1 / 1.5 */
+    transform-origin: top left;
+  }
+
+  /* Address Potential Issues with Fixed Elements */
+  header,
+  footer,
+  nav { /* Assuming these are common fixed elements */
+    position: static; /* Temporarily remove fixed positioning */
+    width: 100%; /* Ensure they span the full width */
+    margin: 0 auto;
+  }
+
+  /* Improve image rendering (optional) */
+  img {
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+  }
 }
