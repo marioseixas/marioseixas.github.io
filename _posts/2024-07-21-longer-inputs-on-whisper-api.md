@@ -1,6 +1,5 @@
 ---
-tags:
-  - speech2text
+tags: AI, scripts>AI
 info: aberto.
 date: 2024-07-21
 type: post
