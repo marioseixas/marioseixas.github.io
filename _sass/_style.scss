@@ -1,33 +1,33 @@
 :root {
-  --accents-amethyst: #8B008B;
-  --accents-dodgerblue: #1E90FF;
-  --accents-turquoise: #FFFFFF;
-  --bg-default: #485365;
-  --code-background: #576273;
-  --code-text: #FFD700;
-  --ft: 'BitPotionExt';
-  --ft-mono: 'BitPotionExt';
-  --headings: #FF4500;
-  --highlights-crimson: #DC143C;
-  --highlights-pumpkin: #FF8C00;
-  --line-height-base: 1.5;
-  --links-default: #0000FF;
-  --links-hover: #FFFF00;
-  --links-visited: #4B0082;
-  --text-default: #00FF7F;
-  --bg-muted: rgba(230, 230, 230, 0.5);
-  --bd-muted: #999;
-  --bg-accent: #f0f0f0;
-  --bg-subtle: rgba(249, 249, 249, 0.8);
-  --bd-radius: 4px;
-  --border-radius: 3px;
-  --table-header-bg: #F8F8F8;
-  --table-header-text: #333;
-  --table-border: #DDD;
-  --btn-bg: rgba(0, 0, 255, 0.1);
-  --btn-text: #0000FF;
-  --btn-hover-bg: rgba(0, 0, 255, 0.2);
-  --btn-hover-text: #0000FF;
+  --accents-amethyst: #800080; /* Purple - A rich, deep accent color. */
+  --accents-dodgerblue: #0000FF; /* Blue - A vibrant, classic accent. */
+  --accents-turquoise: #008000; /* Green - Provides a natural, contrasting accent. */
+  --bg-default: #485365; /* Immutable - The main background color, a cool dark gray. */
+  --code-background: #576273; /* Immutable - Slightly darker than the main background for code blocks. */
+  --code-text: #FFA500; /* Orange - Offers good contrast against the code background without being overly bright. */
+  --ft: 'BitPotionExt'; /*  Font family for standard text. Ensure this font is available. */
+  --ft-mono: 'BitPotionExt'; /*  Font family for monospace text, like in code blocks.  Ensure this font is available.*/
+  --headings: #FF0000; /* Red - A bold, attention-grabbing color for headings. */
+  --highlights-crimson: #FF4500; /* Red-Orange - A slightly less intense red for highlighting specific elements. */
+  --highlights-pumpkin: #FFA500; /* Orange - A warm, vibrant color for highlighting key information. */
+  --line-height-base: 1.5; /*  Standard line-height for improved readability. */
+  --links-default: #FFA500; /* Orange - Stands out against the darker backgrounds and provides a clear visual cue. */
+  --links-hover: #FF0000; /* Red - A distinct change on hover, indicating interactivity. */
+  --links-visited: #800080; /* Purple - Differentiates visited links from unvisited ones. */
+  --text-default: #00FFFF; /* Cyan - A cooler color for body text, offering a good contrast against the dark background while reducing eye strain. */
+  --bg-muted: #008000; /* Green -  A softer, less prominent background for less important elements, providing visual distinction from the main background. */
+  --bd-muted: #800080; /* Purple - Used for muted borders and separators, harmonizing with the accent color. */
+  --bg-accent: #008000; /* Green - Provides a visually distinct background for highlighting specific content areas. */
+  --bg-subtle: #00FFFF; /* Cyan -  Used for subtle background changes, aligning with the text-default color for a harmonious look. */
+  --bd-radius: 4px; /* Standard border-radius for elements, creating a slightly rounded appearance. */
+  --border-radius: 3px; /* A slightly sharper border-radius, potentially used for specific elements where a distinct edge is preferred. */
+  --table-header-bg: #008000; /* Green - Distinguishes table headers from the rest of the table content. */
+  --table-header-text: #FFFF00; /* Yellow - High contrast against the green background for clear header text visibility. */
+  --table-border: #800080; /* Purple -  Provides clear visual separation between table cells while maintaining a cohesive color scheme. */
+  --btn-bg: #0000FF; /* Blue - A distinct background color for buttons, making them easily identifiable. */
+  --btn-text: #FFFF00; /* Yellow -  High contrast text against the blue background, ensuring clear button label visibility. */
+  --btn-hover-bg: #FF0000; /* Red -  A clear visual indication that the button is being interacted with. */
+  --btn-hover-text: #FFFF00; /* Yellow - Maintains consistent text color on hover for readability. */
 }
 html {
   box-sizing: border-box;
@@ -375,28 +375,6 @@ body {
 figcaption {
   color: var(--accents-amethyst);
   font: caption;
-}
-h1 {
-}
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  color: var(--headings);
-  line-height: 1.2;
-  margin: 1em 0 0.5em;
-}
-h2 {
-}
-h3 {
-}
-h4 {
-}
-h5 {
-}
-h6 {
 }
 img,
 canvas,
