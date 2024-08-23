@@ -7,10 +7,6 @@
     url: /openai-token-limits
   tag: AI
 - posts:
-  - title: Linux mobile OS
-    url: /linux-mobile-os
-  tag: '[''software'', ''mobile'']'
-- posts:
   - title: Your Life in Tokens
     url: /life-tokens
   - title: Envolvido ou comprometido?
@@ -171,11 +167,17 @@
 - posts:
   - title: RockChip devices
     url: /rockchip-devices
+  - title: Linux mobile OS
+    url: /linux-mobile-os
   - title: Laptop alternative
     url: /laptop-alternative
   - title: VPC-3588 Motherboard
     url: /vpc-3588-motherboard
   tag: hardware
+- posts:
+  - title: Linux mobile OS
+    url: /linux-mobile-os
+  tag: hardware>mobile
 - posts:
   - title: 'iPhone: files2zip & zip2clipboard'
     url: /iphone-files2zip-zip2clipboard
@@ -201,6 +203,8 @@
     url: /livros
   tag: ler
 - posts:
+  - title: Linux mobile OS
+    url: /linux-mobile-os
   - title: How to use the `dd` command to create a bootable USB drive from an ISO
       file on a Linux-based system
     url: /how-to-use-the-dd-command-to-create-a-bootable-usb-drive-from-an-iso-file-on-a-linux-based-system
