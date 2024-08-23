@@ -1,34 +1,28 @@
 :root {
-  --accents-amethyst: #8B008B;
-  --accents-dodgerblue: #1E90FF;
-  --accents-turquoise: #FFFFFF;
   --bg-default: #485365;
-  --code-background: #576273;
-  --code-text: #FFD700;
-  --font-size-base: 16px;
-  --ft: 'BitPotionExt';
-  --ft-mono: 'BitPotionExt';
-  --headings: #FF4500;
-  --highlights-crimson: #DC143C;
-  --highlights-pumpkin: #FF8C00;
-  --line-height-base: 1.5;
+  --text-default: #00FF7F;
   --links-default: #0000FF;
   --links-hover: #FFFF00;
   --links-visited: #4B0082;
-  --text-default: #00FF7F;
   --bg-muted: rgba(230, 230, 230, 0.5);
   --bd-muted: #999;
   --bg-accent: #f0f0f0;
   --bg-subtle: rgba(249, 249, 249, 0.8);
-  --bd-radius: 4px;
-  --border-radius: 3px;
+  --headings: #FF4500;
+  --code-background: #576273;
+  --code-text: #FFD700;
   --table-header-bg: #F8F8F8;
   --table-header-text: #333;
   --table-border: #DDD;
-  --btn-bg: rgba(0, 0, 255, 0.1);
-  --btn-text: #0000FF;
-  --btn-hover-bg: rgba(0, 0, 255, 0.2);
-  --btn-hover-text: #0000FF;
+  --accents-amethyst: #8B008B;
+  --accents-dodgerblue: #1E90FF;
+  --accents-turquoise: #FFFFFF;
+  --highlights-crimson: #DC143C;
+  --highlights-pumpkin: #FF8C00;
+  --font-size-base: 16px;
+  --line-height-base: 1.5;
+  --ft: 'BitPotionExt';
+  --ft-mono: 'BitPotionExt';
 }
 
 html {
@@ -62,10 +56,10 @@ img[class*="emoji"][src$=".svg"] {
 }
 
 .code-container .copy-button {
-  background-color: var(--btn-bg);
+  background-color: rgba(var(--text-default), 0.1);
   border: none;
-  border-radius: var(--border-radius);
-  color: var(--btn-text);
+  border-radius: 3px;
+  color: var(--text-default);
   cursor: pointer;
   padding: 0.5em 1em;
   position: absolute;
@@ -75,18 +69,16 @@ img[class*="emoji"][src$=".svg"] {
 }
 
 .code-container .copy-button.copied {
-  background-color: var(--btn-hover-bg);
+  background-color: rgba(var(--headings), 0.4);
   color: var(--bg-default);
 }
 
 .code-container .copy-button:hover {
-  background-color: var(--btn-hover-bg);
+  background-color: rgba(var(--text-default), 0.2);
 }
 
 .code-container pre {
   margin-bottom: 0;
-  background-color: var(--code-background);
-  color: var(--code-text);
 }
 
 .comment-box {
@@ -137,18 +129,17 @@ img[class*="emoji"][src$=".svg"] {
   width: 100%;
 }
 
-.cluster {
-  rect {
-    fill: var(--bg-muted);
-    rx: 5px;
-    ry: 5px;
-    stroke: var(--bd-muted);
-    stroke-width: 1px;
-  }
-  text {
-    fill: var(--text-default);
-    font-weight: 600;
-  }
+.cluster rect {
+  fill: var(--bg-muted);
+  rx: 5px;
+  ry: 5px;
+  stroke: var(--bd-muted);
+  stroke-width: 1px;
+}
+
+.cluster text {
+  fill: var(--text-default);
+  font-weight: 600;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -180,7 +171,7 @@ img[class*="emoji"][src$=".svg"] {
 
 .edgeLabel {
   background-color: var(--bg-subtle);
-  border-radius: var(--bd-radius);
+  border-radius: 4px;
   color: var(--text-default);
   font-size: clamp(1rem, 1.6vw, 1.25rem);
   max-width: 100%;
@@ -194,19 +185,18 @@ img[class*="emoji"][src$=".svg"] {
   word-wrap: break-word;
 }
 
-.node {
-  rect,
-  circle,
-  ellipse,
-  polygon {
-    fill: var(--bg-accent);
-    stroke: var(--text-default);
-    stroke-width: 1px;
-  }
-  text {
-    fill: var(--text-default);
-    font-size: clamp(1rem, 1.6vw, 1.25rem);
-  }
+.node rect,
+.node circle,
+.node ellipse,
+.node polygon {
+  fill: var(--bg-accent);
+  stroke: var(--text-default);
+  stroke-width: 1px;
+}
+
+.node text {
+  fill: var(--text-default);
+  font-size: clamp(1rem, 1.6vw, 1.25rem);
 }
 
 @media print {
@@ -279,64 +269,95 @@ img[class*="emoji"][src$=".svg"] {
 .search-link {
   background-color: rgba(var(--accents-dodgerblue), 0.1);
   border: 1px dotted var(--accents-dodgerblue);
-  border-radius: var(--bd-radius);
-  font-size: clamp(0.8125rem, calc(0.8125rem + (1rem - 0.8125rem) * (100vw - 20rem) / (75rem - 20rem)), 1rem);
-  line-height: 1.25;
-  margin: 1.25rem 0 0.625rem;
-  padding: 0.3125rem 1.25rem;
+  border-radius: 0.1875rem;
+  display: inline-block;
+  font-size: clamp(1.5rem, calc(1.5rem + (3rem - 1.5rem) * (100vw - 20rem) / (75rem - 20rem)), 3rem);
+  padding: 0.5em;
+  transition: all 0.3s ease;
+}
+
+.search-link:hover,
+.search-link:focus {
+  background-color: rgba(var(--accents-dodgerblue), 0.2);
+  transform: scale(1.05);
+}
+
+.tagged-posts li {
+  margin-bottom: 0.5em;
+}
+
+.tagged-posts time {
+  color: rgba(var(--text-default), 0.7);
+  font-size: 0.9em;
+}
+
+.tagged-posts ul {
+  list-style: none;
+  padding-left: 0;
 }
 
 .tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   list-style: none;
-  margin: 0;
   padding: 0;
 }
 
 .tag-list a {
-  background-color: var(--bg-accent);
-  border-radius: 0.25rem;
+  background-color: var(--bg-default);
+  border: 1px solid var(--links-default);
+  border-radius: 0.25em;
   color: var(--links-default);
-  display: inline-block;
-  font-size: clamp(0.9rem, calc(0.9rem + (1.25rem - 0.9rem) * (100vw - 20rem) / (75rem - 20rem)), 1.25rem);
-  margin: 0.25rem;
-  padding: 0.5rem;
+  padding: 0.5em 1em;
   text-decoration: none;
-  transition: all 0.3s ease;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.tag-list a:hover {
-  background-color: var(--links-hover);
-  color: var(--links-visited);
+.tag-list a:hover,
+.tag-list a:focus {
+  background-color: var(--links-default);
+  color: var(--bg-default);
 }
 
-table {
-  border-collapse: collapse;
-  width: 100%;
+.tag-list li {
+  margin: 0.5em;
 }
 
-th,
-td {
-  border: 1px solid var(--table-border);
-  padding: 8px;
-  text-align: left;
+.tag-page {
+  margin: 0 auto;
+  max-width: 100%;
+  padding: 1em;
 }
 
-th {
-  background-color: var(--table-header-bg);
-  color: var(--table-header-text);
+.visually-hidden {
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute !important;
+  white-space: nowrap;
+  width: 1px;
 }
 
-thead {
-  background-color: var(--table-header-bg);
-  color: var(--table-header-text);
+::selection {
+  background-color: var(--highlights-pumpkin);
+  color: var(--code-text);
 }
 
-tbody tr:nth-child(even) {
-  background-color: var(--bg-muted);
-}
-
-tbody tr:hover {
-  background-color: var(--bg-subtle);
+:not(pre)>code,
+kbd,
+samp,
+tt {
+  background: var(--code-background);
+  border-radius: 4px;
+  color: var(--code-text);
+  font-family: var(--ft-mono);
+  font-size: clamp(1rem, 1.6vw, 1.25rem);
+  overflow-wrap: break-word;
+  overflow-x: auto;
+  padding: 0.2em 0.4em;
+  white-space: pre-wrap;
+  word-break: break-word;
 }
 
 @font-face {
@@ -383,22 +404,22 @@ body {
   background-color: var(--bg-default);
   color: var(--text-default);
   font-family: var(--ft);
-  font-size: clamp(1.5rem, calc(1.5rem + (3rem - 1.5rem) * (100vw - 20rem) / (75rem - 20rem)), 3rem);
+  font-size: var(--font-size-base);
   line-height: var(--line-height-base);
   margin: 0 auto;
   max-width: 100vw;
   padding: 1em;
   --pagefind-ui-scale: 1;
-  --pagefind-ui-primary: var(--accents-dodgerblue); /* Aligns with site's interactive elements */
-  --pagefind-ui-text: var(--text-default); /* Matches the site's primary text color */
-  --pagefind-ui-background: var(--bg-default); /* Blends seamlessly with the site's background */
-  --pagefind-ui-border: rgba(var(--text-default), 0.1); /* Creates a subtle, unobtrusive border */
-  --pagefind-ui-tag: rgba(var(--accents-amethyst), 0.1); /* Uses a softer amethyst for a cohesive look */
-  --pagefind-ui-border-width: 2px; /* Maintains original border thickness */
-  --pagefind-ui-border-radius: 0.1875rem; /* Consistent with site's rounded corner aesthetic */
-  --pagefind-ui-image-border-radius: 0.1875rem; /* Mirrors the border-radius for visual harmony */
-  --pagefind-ui-image-box-ratio: 3 / 2; /* Retains the default aspect ratio */
-  --pagefind-ui-font: var(--ft); /* Ensures consistent typography across the site */
+  --pagefind-ui-primary: var(--accents-dodgerblue);
+  --pagefind-ui-text: var(--text-default);
+  --pagefind-ui-background: var(--bg-default);
+  --pagefind-ui-border: rgba(var(--text-default), 0.1);
+  --pagefind-ui-tag: rgba(var(--accents-amethyst), 0.1);
+  --pagefind-ui-border-width: 2px;
+  --pagefind-ui-border-radius: 0.1875rem;
+  --pagefind-ui-image-border-radius: 0.1875rem;
+  --pagefind-ui-image-box-ratio: 3 / 2;
+  --pagefind-ui-font: var(--ft);
   align-items: center;
   justify-content: center;
   text-align: center;
