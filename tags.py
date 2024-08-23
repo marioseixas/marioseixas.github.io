@@ -15,30 +15,61 @@ def extract_frontmatter(file_content):
 
 def process_tags(posts_dir, output_file):
     tag_data = defaultdict(list)
-    
+    existing_single_tags = set()
+
+    # First Pass: Identify all pre-existing single-level tags
     for filename in os.listdir(posts_dir):
         if filename.endswith('.md'):
             file_path = os.path.join(posts_dir, filename)
             with open(file_path, 'r', encoding='utf-8') as f:
                 file_content = f.read()
-            
+
             frontmatter = extract_frontmatter(file_content)
             if not frontmatter:
                 print(f"Warning: No frontmatter found in {filename}")
                 continue
-            
+
             try:
                 post_data = yaml.safe_load(frontmatter)
             except yaml.YAMLError as e:
                 print(f"Error parsing frontmatter in {filename}: {e}")
                 continue
-            
+
             tags = post_data.get('tags', [])
             if isinstance(tags, str):
                 tags = [tag.strip() for tag in tags.split(',')]
             elif not isinstance(tags, list):
                 tags = [str(tags)]
-            
+
+            # Add only single-level tags to the set
+            for tag in tags:
+                if '>' not in tag:
+                    existing_single_tags.add(tag)
+
+    # Second Pass: Process tags and establish connections with existing single-level tags
+    for filename in os.listdir(posts_dir):
+        if filename.endswith('.md'):
+            file_path = os.path.join(posts_dir, filename)
+            with open(file_path, 'r', encoding='utf-8') as f:
+                file_content = f.read()
+
+            frontmatter = extract_frontmatter(file_content)
+            if not frontmatter:
+                print(f"Warning: No frontmatter found in {filename}")
+                continue
+
+            try:
+                post_data = yaml.safe_load(frontmatter)
+            except yaml.YAMLError as e:
+                print(f"Error parsing frontmatter in {filename}: {e}")
+                continue
+
+            tags = post_data.get('tags', [])
+            if isinstance(tags, str):
+                tags = [tag.strip() for tag in tags.split(',')]
+            elif not isinstance(tags, list):
+                tags = [str(tags)]
+
             title = post_data.get('title', os.path.splitext(filename)[0])
             
             # Extract the slug (remove date and file extension)
@@ -52,11 +83,8 @@ def process_tags(posts_dir, output_file):
                 post_date = datetime.min
             
             for tag in tags:
-                if isinstance(tag, str):
-                    tag_parts = tag.split('>')
-                else:
-                    tag_parts = [str(tag)]
-                
+                tag_parts = tag.split('>') if isinstance(tag, str) else [str(tag)]
+
                 for i in range(len(tag_parts)):
                     partial_tag = '>'.join(tag_parts[:i+1])
                     tag_data[partial_tag].append({
@@ -64,6 +92,17 @@ def process_tags(posts_dir, output_file):
                         'url': url,
                         'date': post_date
                     })
+
+                    # Ensure post is added to all relevant parent tags
+                    if i == len(tag_parts) - 1:
+                        for j in range(len(tag_parts)):
+                            parent_tag = tag_parts[j]
+                            if parent_tag in existing_single_tags or parent_tag in tag_data:
+                                tag_data[parent_tag].append({
+                                    'title': title,
+                                    'url': url,
+                                    'date': post_date
+                                })
 
     # Sort posts within each tag by date, most recent first
     for tag, posts in tag_data.items():
@@ -75,6 +114,7 @@ def process_tags(posts_dir, output_file):
     # Sort tags alphabetically
     sorted_tag_data = sorted(tag_data.items())
 
+    # Write processed data to YAML file
     with open(output_file, 'w', encoding='utf-8') as f:
         yaml.dump([{'tag': tag, 'posts': posts} for tag, posts in sorted_tag_data], f, allow_unicode=True)
 
