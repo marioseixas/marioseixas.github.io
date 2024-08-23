@@ -449,21 +449,10 @@ tfoot {
   body {
     transform: scale(1.5);
     transform-origin: top left;
-    width: 66.67%; /* 100% / 1.5 */
+    width: 100vw;
     overflow-x: hidden; /* Prevent horizontal scrollbar */
-    width: 66.67%;
     padding: 0 0 0 0;
     position: relative;
-  }
-
-  /* Compensate for scaling on fixed-position elements */
-  .header-container { /* Example: Assuming your header is fixed */
-    transform: scale(0.667); /* 1 / 1.5 */
-    transform-origin: top left;
-    height: 66.67%;
-    padding: 0 0 0 0;
-    position: relative;
-    width: 66.67%;
   }
   
   /* Improve image rendering (optional) */
