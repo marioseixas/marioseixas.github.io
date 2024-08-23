@@ -4,6 +4,7 @@ from collections import defaultdict
 from datetime import datetime
 
 def extract_frontmatter(file_content):
+    """Extracts frontmatter from a markdown file."""
     frontmatter = ""
     content_lines = file_content.split('\n')
     if content_lines[0].strip() == '---':
@@ -14,6 +15,7 @@ def extract_frontmatter(file_content):
     return frontmatter
 
 def process_tags(posts_dir, output_file):
+    """Processes tags from markdown files, handling both single-level and nested tags."""
     tag_data = defaultdict(list)
     existing_single_tags = set()
 
@@ -42,8 +44,8 @@ def process_tags(posts_dir, output_file):
                 tags = [str(tags)]
 
             for tag in tags:
-                if '>' not in tag:
-                    existing_single_tags.add(tag)
+                if '>' not in tag:  # Identify single-level tags
+                    existing_single_tags.add(tag.strip())
 
     # Second Pass: Process tags and establish connections with existing single-level tags
     for filename in os.listdir(posts_dir):
@@ -79,28 +81,32 @@ def process_tags(posts_dir, output_file):
                 post_date = datetime.min
 
             for tag in tags:
-                if isinstance(tag, str):
-                    tag_parts = tag.split('>')
-                else:
-                    tag_parts = [str(tag)]
-
+                tag_parts = [part.strip() for part in tag.split('>')]
+                
                 # Generate all parent tags for the nested structure
                 for i in range(len(tag_parts)):
                     partial_tag = '>'.join(tag_parts[:i+1])
-                    tag_data[partial_tag].append({
+                    if {
                         'title': title,
                         'url': url,
-                        'date': post_date
-                    })
-
-                    # Ensure proper association with existing single-level tags
-                    if i > 0 and tag_parts[i] in existing_single_tags:
-                        tag_data[tag_parts[i]].append({
+                    } not in tag_data[partial_tag]:
+                        tag_data[partial_tag].append({
                             'title': title,
                             'url': url,
                             'date': post_date
                         })
 
+                    # Ensure proper association with existing single-level tags
+                    if i > 0 and tag_parts[i] in existing_single_tags:
+                        if {
+                            'title': title,
+                            'url': url,
+                        } not in tag_data[tag_parts[i]]:
+                            tag_data[tag_parts[i]].append({
+                                'title': title,
+                                'url': url,
+                                'date': post_date
+                            })
 
     # Sort posts within each tag by date, most recent first
     for tag, posts in tag_data.items():
@@ -111,6 +117,7 @@ def process_tags(posts_dir, output_file):
     # Sort tags alphabetically
     sorted_tag_data = sorted(tag_data.items())
 
+    # Write the processed tags to a YAML file
     with open(output_file, 'w', encoding='utf-8') as f:
         yaml.dump([{'tag': tag, 'posts': posts} for tag, posts in sorted_tag_data], f, allow_unicode=True)
 
