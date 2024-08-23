@@ -1,6 +1,5 @@
 ---
-tags:
-  - serverless
+tags: scripts>cloud
 info: aberto.
 date: 2024-07-17
 type: post
