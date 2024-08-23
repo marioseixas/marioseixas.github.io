@@ -181,6 +181,8 @@
     url: /vpc-3588-motherboard
   tag: hardware
 - posts:
+  - title: iOS 18 changelog
+    url: /ios-18-changelog
   - title: 'iPhone: files2zip & zip2clipboard'
     url: /iphone-files2zip-zip2clipboard
   tag: iphone
@@ -455,6 +457,8 @@
 - posts:
   - title: Linux mobile OS
     url: /linux-mobile-os
+  - title: iOS 18 changelog
+    url: /ios-18-changelog
   tag: software>mobile
 - posts:
   - title: Longer inputs on WHISPER API
