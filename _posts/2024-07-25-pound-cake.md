@@ -1,12 +1,11 @@
 ---
-tags:
-  - receitas
+tags: misc
 info: aberto.
 date: 2024-07-25
 type: post
 layout: post
 published: true
-slug: bolo-po-pound-cake
+slug: pound-cake
 title: 'Bolo Pão (Pound Cake)'
 ---
 
