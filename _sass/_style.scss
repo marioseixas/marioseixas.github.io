@@ -1,21 +1,21 @@
 :root {
-  --accents-amethyst: #A87BCD;
-  --accents-dodgerblue: #4BA9F3;
-  --accents-turquoise: #34D0B2;
-  --bg-default: #485365;
-  --code-background: #576273;
-  --code-text: #1ABC9C;
-  --font-size-base: 20px;
+  --accents-amethyst: #C5A5FC; /* Enhanced contrast with bg-default */
+  --accents-dodgerblue: #1E90FF; /* Enhanced contrast with bg-default */
+  --accents-turquoise: #40E0D0; /* Enhanced contrast with bg-default */
+  --bg-default: #485365; /* Immutable */
+  --code-background: #2C3E50; /* Enhanced contrast with code-text */
+  --code-text: #ECF0F1; /* Enhanced contrast with code-background */
+  --font-size-base: 24px;
   --ft: 'BitPotionExt';
   --ft-mono: 'BitPotionExt';
-  --headings: #F39C12;
-  --highlights-crimson: #E74C3C;
-  --highlights-pumpkin: #D35400;
+  --headings: #FFD700; /* Enhanced contrast with bg-default */
+  --highlights-crimson: #FF4500; /* Enhanced contrast with bg-default */
+  --highlights-pumpkin: #FF7F50; /* Enhanced contrast with bg-default */
   --line-height-base: 1.5;
-  --links-default: #2ECC71;
-  --links-hover: #3498DB;
-  --links-visited: #1ABC9C;
-  --text-default: #E0E0E0;
+  --links-default: #00FF7F; /* Enhanced contrast with bg-default */
+  --links-hover: #1E90FF; /* Enhanced contrast with bg-default */
+  --links-visited: #00CED1; /* Enhanced contrast with bg-default */
+  --text-default: #FFFFFF; /* Enhanced contrast with bg-default */
 }
 
 html {
