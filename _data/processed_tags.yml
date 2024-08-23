@@ -369,6 +369,8 @@
     url: /jejum
   tag: saúde
 - posts:
+  - title: 'iPhone: files2zip & zip2clipboard'
+    url: /iphone-files2zip-zip2clipboard
   - title: Gingko JSON ToC outliner
     url: /gingko-toc-outliner
   - title: cliPaperQA
@@ -420,6 +422,10 @@
   - title: OpenAI GPT API in Google Sheets
     url: /gpt-sheets
   tag: scripts>google-apps-script
+- posts:
+  - title: 'iPhone: files2zip & zip2clipboard'
+    url: /iphone-files2zip-zip2clipboard
+  tag: scripts>mobile
 - posts:
   - title: VENDA SMTO3 04,74% a.m.
     url: /sell-smto3
