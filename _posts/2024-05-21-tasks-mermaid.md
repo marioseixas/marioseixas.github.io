@@ -1,7 +1,7 @@
 ---
 title: Task Prioritization
 date: 2024-05-21
-tags: [tasks, productivity]
+tags: tasks
 type: post
 layout: post
 ---
