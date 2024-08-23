@@ -433,8 +433,6 @@
     url: /sell-card3
   tag: sell
 - posts:
-  - title: AWS PushSafer billing alarm
-    url: /aws-pushsafer-billing-alarm
   - title: Webhooks using `Serverless.com` Lift plugin
     url: /webhooks-using-serverlesscom-lift-plugin
   tag: serverless
@@ -443,9 +441,15 @@
     url: /linux-mobile-os
   - title: iOS 18 changelog
     url: /ios-18-changelog
+  - title: AWS PushSafer billing alarm
+    url: /aws-pushsafer-billing-alarm
   - title: dasel context guide
     url: /dasel
   tag: software
+- posts:
+  - title: AWS PushSafer billing alarm
+    url: /aws-pushsafer-billing-alarm
+  tag: software>cloud
 - posts:
   - title: Linux mobile OS
     url: /linux-mobile-os
