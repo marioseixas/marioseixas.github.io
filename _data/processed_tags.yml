@@ -7,10 +7,6 @@
     url: /openai-token-limits
   tag: AI
 - posts:
-  - title: 'PageFind with Jekyll '
-    url: /pagefind-with-jekyll
-  tag: '[''github'', ''jekyll'']'
-- posts:
   - title: Linux mobile OS
     url: /linux-mobile-os
   tag: '[''software'', ''mobile'']'
@@ -163,9 +159,15 @@
     url: /gingko-toc-outliner
   tag: gingko
 - posts:
+  - title: 'PageFind with Jekyll '
+    url: /pagefind-with-jekyll
   - title: 2024-07-13-update-gemfilelock
     url: /update-gemfilelock
   tag: github
+- posts:
+  - title: 'PageFind with Jekyll '
+    url: /pagefind-with-jekyll
+  tag: github>jekyll
 - posts:
   - title: RockChip devices
     url: /rockchip-devices
