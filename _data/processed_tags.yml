@@ -143,10 +143,6 @@
     url: /vacinas
   tag: fatherhood
 - posts:
-  - title: Gingko ToC outliner [script]
-    url: /gingko-toc-outliner
-  tag: gingko
-- posts:
   - title: 'PageFind with Jekyll '
     url: /pagefind-with-jekyll
   - title: 2024-07-13-update-gemfilelock
@@ -381,7 +377,7 @@
     url: /jejum
   tag: saúde
 - posts:
-  - title: Gingko ToC outliner [script]
+  - title: Gingko JSON ToC outliner
     url: /gingko-toc-outliner
   - title: cliPaperQA
     url: /clipaper-qa
