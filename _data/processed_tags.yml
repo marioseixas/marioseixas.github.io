@@ -1,6 +1,8 @@
 - posts:
   - title: gmail2mailgrip
     url: /gmail2mailgrip-prompt
+  - title: Longer inputs on WHISPER API
+    url: /longer-inputs-on-whisper-api
   - title: reassess
     url: /reassess
   - title: Deep Chat Speech
@@ -367,6 +369,8 @@
     url: /jejum
   tag: saúde
 - posts:
+  - title: Longer inputs on WHISPER API
+    url: /longer-inputs-on-whisper-api
   - title: 'iPhone: files2zip & zip2clipboard'
     url: /iphone-files2zip-zip2clipboard
   - title: Webhooks using `Serverless.com` Lift plugin
@@ -419,6 +423,10 @@
     url: /pypdf
   tag: scripts
 - posts:
+  - title: Longer inputs on WHISPER API
+    url: /longer-inputs-on-whisper-api
+  tag: scripts>AI
+- posts:
   - title: Webhooks using `Serverless.com` Lift plugin
     url: /webhooks-using-serverlesscom-lift-plugin
   tag: scripts>cloud
@@ -460,10 +468,6 @@
   - title: iOS 18 changelog
     url: /ios-18-changelog
   tag: software>mobile
-- posts:
-  - title: Longer inputs on WHISPER API
-    url: /longer-inputs-on-whisper-api
-  tag: speech2text
 - posts:
   - title: 9gag evangelism
     url: /holy-9gag
