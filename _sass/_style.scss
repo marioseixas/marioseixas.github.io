@@ -449,10 +449,7 @@ tfoot {
   body {
     transform: scale(1.5);
     transform-origin: top left;
-    width: 100vw;
-    overflow-x: hidden; /* Prevent horizontal scrollbar */
-    padding: 0 0 0 0;
-    position: relative;
+    overflow-x: hidden;
   }
   
   /* Improve image rendering (optional) */
