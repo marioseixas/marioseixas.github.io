@@ -4,7 +4,7 @@ from collections import defaultdict
 from datetime import datetime
 
 def extract_frontmatter(file_content):
-    """Extracts frontmatter from a markdown file."""
+    """Extracts the YAML frontmatter from a markdown file."""
     frontmatter = ""
     content_lines = file_content.split('\n')
     if content_lines[0].strip() == '---':
@@ -15,7 +15,12 @@ def extract_frontmatter(file_content):
     return frontmatter
 
 def process_tags(posts_dir, output_file):
-    """Processes tags from markdown files, handling both single-level and nested tags."""
+    """Processes tags from markdown files, handling both single-level and nested tags.
+
+    Args:
+        posts_dir (str): Directory containing markdown files.
+        output_file (str): Path to the output YAML file where processed tags will be saved.
+    """
     tag_data = defaultdict(list)
     existing_single_tags = set()
 
@@ -44,7 +49,7 @@ def process_tags(posts_dir, output_file):
                 tags = [str(tags)]
 
             for tag in tags:
-                if '>' not in tag:  # Identify single-level tags
+                if '>' not in tag:
                     existing_single_tags.add(tag.strip())
 
     # Second Pass: Process tags and establish connections with existing single-level tags
@@ -86,25 +91,22 @@ def process_tags(posts_dir, output_file):
                 # Generate all parent tags for the nested structure
                 for i in range(len(tag_parts)):
                     partial_tag = '>'.join(tag_parts[:i+1])
-                    if {
+                    post_entry = {
                         'title': title,
-                        'url': url,
-                    } not in tag_data[partial_tag]:
+                        'url': url
+                    }
+
+                    if post_entry not in tag_data[partial_tag]:
                         tag_data[partial_tag].append({
-                            'title': title,
-                            'url': url,
+                            **post_entry,
                             'date': post_date
                         })
 
                     # Ensure proper association with existing single-level tags
                     if i > 0 and tag_parts[i] in existing_single_tags:
-                        if {
-                            'title': title,
-                            'url': url,
-                        } not in tag_data[tag_parts[i]]:
+                        if post_entry not in tag_data[tag_parts[i]]:
                             tag_data[tag_parts[i]].append({
-                                'title': title,
-                                'url': url,
+                                **post_entry,
                                 'date': post_date
                             })
 
