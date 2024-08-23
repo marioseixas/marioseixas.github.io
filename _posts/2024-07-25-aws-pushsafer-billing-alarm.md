@@ -1,6 +1,5 @@
 ---
-tags:
-  - serverless
+tags: software>cloud
 info: aberto.
 date: 2024-07-25
 type: post
