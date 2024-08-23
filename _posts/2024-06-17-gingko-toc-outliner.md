@@ -1,11 +1,7 @@
 ---
-title: Gingko ToC outliner [script]
-date: 2024-06-17 00:00:00 -03:00
-categories:
-- Code
-tags:
-- scripts
-- gingko
+title: Gingko JSON ToC outliner
+date: 2024-06-17
+tags: scripts
 comment: gingkowriter.com
 info: fechado.
 type: post
