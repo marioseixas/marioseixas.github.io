@@ -19,10 +19,6 @@
     url: /aye
   tag: assistir
 - posts:
-  - title: Vacinas
-    url: /vacinas
-  tag: baby
-- posts:
   - title: Call de Outubro de 2022
     url: /call-10-2022
   - title: Call de Setembro de 2022
@@ -141,14 +137,10 @@
     url: /writing
   tag: estudos
 - posts:
-  - title: 9gag evangelism
-    url: /holy-9gag
-  - title: canção da internação
-    url: /gustavo
-  tag: evangelismo
-- posts:
   - title: Board games
     url: /board-games
+  - title: Vacinas
+    url: /vacinas
   tag: fatherhood
 - posts:
   - title: Gingko ToC outliner [script]
@@ -465,6 +457,10 @@
     url: /longer-inputs-on-whisper-api
   tag: speech2text
 - posts:
+  - title: 9gag evangelism
+    url: /holy-9gag
+  - title: canção da internação
+    url: /gustavo
   - title: Envolvido ou comprometido?
     url: /tal-06-17
   tag: spirit
@@ -509,8 +505,6 @@
     url: /aposentadoria
   - title: Avaliação Funcional I/XV
     url: /taf-01
-  - title: canção da internação
-    url: /gustavo
   tag: trabalho
 - posts:
   - title: wallpaper I
