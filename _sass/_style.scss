@@ -1,21 +1,213 @@
-:root {
-  --accents-amethyst: #8B008B; /* Dark Magenta - Provides strong contrast against backgrounds */
-  --accents-dodgerblue: #1E90FF; /* Dodger Blue - More vibrant and contrasting than cyan */
-  --accents-turquoise: #FFFFFF;
-  --bg-default: #485365; /* Immutable */
-  --code-background: #576273; /* Immutable */
-  --code-text: #FFD700; /* Gold - High contrast against code background */
-  --font-size-base: 24px;
-  --ft: 'BitPotionExt';
-  --ft-mono: 'BitPotionExt';
-  --headings: #FF4500; /* Orange Red - Stands out against the background */
-  --highlights-crimson: #DC143C; /* Crimson - Slightly darker for better contrast */
-  --highlights-pumpkin: #FF8C00; /* Dark Orange - More contrast than original pumpkin */
-  --line-height-base: 1.5;
-  --links-default: #0000FF; /* Blue - Classic link color with strong contrast */
-  --links-hover: #FFFF00; /* Yellow - High contrast on hover */
-  --links-visited: #4B0082; /* Indigo - Distinct from unvisited links */
-  --text-default: #00FF7F;
+// **COLORS**
+// ---
+// Default colors
+$bg-default: #485365; 
+$text-default: #00FF7F; 
+$links-default: #0000FF;
+$links-hover: #FFFF00; 
+$links-visited: #4B0082;
+
+// Muted & Accent colors
+$bg-muted: rgba(230, 230, 230, 0.5);
+$bd-muted: #999; 
+$bg-accent: #f0f0f0;
+$bg-subtle: rgba(249, 249, 249, 0.8);
+
+// Special Colors
+$headings: #FF4500;
+$code-background: #576273; 
+$code-text: #FFD700;
+$table-header-bg: #F8F8F8;
+$table-header-text: #333;
+$table-border: #DDD; 
+$btn-bg: rgba(0, 0, 255, 0.1); 
+$btn-text: #0000FF;
+$btn-hover-bg: rgba(0, 0, 255, 0.2);
+$btn-hover-text: #0000FF;
+$accents-amethyst: #8B008B;
+$accents-dodgerblue: #1E90FF;
+$accents-turquoise: #FFFFFF; 
+$highlights-crimson: #DC143C; 
+$highlights-pumpkin: #FF8C00;
+
+// **TYPOGRAPHY**
+// ---
+$ft: 'BitPotionExt';
+$ft-mono: 'BitPotionExt'; 
+$font-size-base: 16px; // Adjusted to a more standard base font size
+$line-height-base: 1.5; 
+
+// **SPACING & SIZING**
+// ---
+$section-padding: 2rem;
+$bd-radius: 4px;
+$border-radius: 3px; 
+
+// **EFFECTS**
+// ---
+$box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+
+// **GENERAL STYLES**
+// ---
+body {
+  background-color: $bg-default;
+  color: $text-default;
+  font-family: $ft;
+  font-size: $font-size-base;
+  line-height: $line-height-base;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: $links-default;
+  text-decoration: none;
+}
+
+a:hover {
+  color: $links-hover;
+  text-decoration: underline;
+}
+
+a:visited {
+  color: $links-visited;
+}
+
+blockquote {
+  background-color: $bg-muted; 
+  border-left: 4px solid $bd-muted; 
+  color: $text-default;
+  margin: 1.5rem 0;
+  padding: 1rem;
+}
+
+button {
+  background-color: $btn-bg;
+  border: none;
+  border-radius: $border-radius;
+  color: $btn-text;
+  cursor: pointer;
+  font-size: $font-size-base; 
+  padding: 0.5em 1em; 
+}
+
+button:hover {
+  background-color: $btn-hover-bg;
+  color: $btn-hover-text;
+}
+
+footer {
+  background-color: darken($bg-default, 20%);
+  color: lighten($text-default, 40%);
+  padding: $section-padding;
+  text-align: center;
+}
+
+header {
+  background-color: darken($bg-default, 10%);
+  color: lighten($text-default, 20%); 
+  padding: $section-padding;
+  text-align: center;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+textarea {
+  border: 1px solid $bd-muted; 
+  border-radius: $border-radius; 
+  padding: 0.5rem;
+  width: 100%;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+  border-color: $links-default;
+  outline: none;
+}
+
+li {
+  padding: 0.5rem 1rem; 
+}
+
+nav {
+  background-color: darken($bg-default, 30%);
+  color: lighten($text-default, 50%); 
+  padding: $section-padding;
+}
+
+nav a {
+  color: inherit;
+}
+
+nav a:hover {
+  background-color: darken($bg-default, 40%); 
+}
+
+section {
+  padding: $section-padding;
+}
+
+footer p,
+footer a {
+  color: lighten($text-default, 40%); 
+}
+
+header h1,
+header h2,
+header h3,
+header h4,
+header h5,
+header h6 {
+  margin: 0;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid $bd-muted; 
+  margin: 2rem 0;
+}
+
+ul,
+ol {
+  list-style: none;
+  padding-left: 0;
+}
+
+ul li::before,
+ol li::before {
+  content: "• ";
+  color: $links-default; 
+}
+
+.preformatted-text {
+  background-color: $code-background; 
+  color: $code-text; 
+  padding: 1rem;
+  white-space: pre-wrap;
+}
+
+@media (max-width: 600px) {
+  .header-container,
+  .header-content,
+  .post-content-body,
+  .post-heading,
+  .search-link,
+  .tag-list {
+    padding: 1rem;
+  }
+
+  .post-content-body {
+    font-size: 1rem; 
+  }
+
+  .tag-list a {
+    font-size: 0.875rem;
+    padding: 0.25rem 0.5rem;
+  }
 }
 
 html {
@@ -43,40 +235,48 @@ img[class*="emoji"][src$=".svg"] {
   vertical-align: middle;
 }
 
+// **COMPONENTS & UTILITIES**
+// ---
+
+// Code Container
 .code-container {
   margin-bottom: 1em;
   position: relative;
+
+  .copy-button {
+    background-color: $btn-bg;
+    border: none;
+    border-radius: $border-radius;
+    color: $btn-text;
+    cursor: pointer;
+    padding: 0.5em 1em;
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    transition: background-color 0.3s ease;
+
+    &.copied {
+      background-color: $btn-hover-bg;
+      color: $bg-default;
+    }
+
+    &:hover {
+      background-color: $btn-hover-bg;
+    }
+  }
+
+  pre {
+    margin-bottom: 0;
+    background-color: $code-background;
+    color: $code-text;
+  }
 }
 
-.code-container .copy-button {
-  background-color: rgba(var(--text-default), 0.1);
-  border: none;
-  border-radius: 3px;
-  color: var(--text-default);
-  cursor: pointer;
-  padding: 0.5em 1em;
-  position: absolute;
-  right: 5px;
-  top: 5px;
-  transition: background-color 0.3s ease;
-}
 
-.code-container .copy-button.copied {
-  background-color: rgba(var(--headings), 0.4);
-  color: var(--bg-default);
-}
-
-.code-container .copy-button:hover {
-  background-color: rgba(var(--text-default), 0.2);
-}
-
-.code-container pre {
-  margin-bottom: 0;
-}
-
+// Comment Box
 .comment-box {
-  background-color: rgba(var(--accents-dodgerblue), 0.1);
-  border: 1px dotted var(--accents-dodgerblue);
+  background-color: rgba($accents-dodgerblue, 0.1);
+  border: 1px dotted $accents-dodgerblue;
   border-radius: 0.1875rem;
   font-size: clamp(0.8125rem, calc(0.8125rem + (1rem - 0.8125rem) * (100vw - 20rem) / (75rem - 20rem)), 1rem);
   line-height: 1.25;
@@ -84,155 +284,158 @@ img[class*="emoji"][src$=".svg"] {
   padding: 0.3125rem 1.25rem;
 }
 
+// Header Container
 .header-container {
   align-items: center;
   display: flex-inline;
   justify-content: center;
   padding: 1rem;
   text-align: center;
+
+  .search-link {
+    margin-top: 10px;
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+  }
 }
 
-.header-container .search-link {
-  margin-top: 10px;
-}
-
-.header-container .search-link a {
-  color: inherit;
-  text-decoration: none;
-}
-
+// Header Content
 .header-content {
   align-items: center;
   display: flex;
   gap: 10px;
 }
 
+// Iframe Container
 .iframe-container {
   overflow: hidden;
   padding-top: 56.25%;
   position: relative;
   width: 100%;
+
+  iframe {
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
 }
 
-.iframe-container iframe {
-  height: 100%;
-  left: 0;
-  position: absolute;
-  top: 0;
-  width: 100%;
+// Cluster Styles
+.cluster {
+  rect {
+    fill: $bg-muted;
+    rx: 5px;
+    ry: 5px;
+    stroke: $bd-muted;
+    stroke-width: 1px;
+  }
+  text {
+    fill: $text-default;
+    font-weight: 600;
+  }
 }
 
-  // Cluster styles
-  .cluster {
-    rect {
-      fill: var(--bg-muted, rgba(230, 230, 230, 0.5));
-      rx: 5px;
-      ry: 5px;
-      stroke: var(--bd-muted, #999);
-      stroke-width: 1px;
-    }
-    text {
-      fill: var(--default, #333);
-      font-weight: 600;
-    }
+// Dark Mode Support (using prefers-color-scheme)
+@media (prefers-color-scheme: dark) {
+  .cluster rect {
+    fill: $bg-muted;
+    stroke: $bd-muted;
   }
-
-  // Dark mode support
-  @media (prefers-color-scheme: dark) {
-    .cluster rect {
-      fill: var(--bg-muted);
-      stroke: var(--bd-muted);
-    }
-    .edgeLabel {
-      background-color: var(--bg-subtle);
-    }
-    .edgePath .path,
-    .edgePath .arrowheadPath {
-      stroke: var(--muted);
-    }
-    .node rect,
-    .node circle,
-    .node ellipse,
-    .node polygon {
-      fill: var(--bg-accent);
-      stroke: var(--accent);
-    }
-    .node text,
-    .edgeLabel,
-    .cluster text {
-      color: var(--default);
-      fill: var(--default);
-    }
-  }
-
-  // Edge styles
   .edgeLabel {
-    background-color: var(--bg-subtle, rgba(249, 249, 249, 0.8));
-    border-radius: var(--bd-radius, 4px);
-    color: var(--default, #333);
+    background-color: $bg-subtle;
+  }
+  .edgePath .path,
+  .edgePath .arrowheadPath {
+    stroke: $text-default;
+  }
+  .node rect,
+  .node circle,
+  .node ellipse,
+  .node polygon {
+    fill: $bg-accent;
+    stroke: $text-default;
+  }
+  .node text,
+  .edgeLabel,
+  .cluster text {
+    color: $text-default;
+    fill: $text-default;
+  }
+}
+
+// Edge Styles
+.edgeLabel {
+  background-color: $bg-subtle;
+  border-radius: $bd-radius;
+  color: $text-default;
+  font-size: clamp(1rem, 1.6vw, 1.25rem);
+  max-width: 100%;
+  padding: 0.25em 0.5em;
+  white-space: pre-wrap;
+}
+
+// Improved Readability for Long Text
+.label text {
+  max-width: 100%;
+  text-align: center;
+  word-wrap: break-word;
+}
+
+// Node Styles
+.node {
+  rect,
+  circle,
+  ellipse,
+  polygon {
+    fill: $bg-accent;
+    stroke: $text-default;
+    stroke-width: 1px;
+  }
+  text {
+    fill: $text-default;
     font-size: clamp(1rem, 1.6vw, 1.25rem);
-    max-width: 100%;
-    padding: 0.25em 0.5em;
-    white-space: pre-wrap;
   }
+}
 
-  // Improved readability for long text
-  .label text {
-    max-width: 100%;
-    text-align: center;
-    word-wrap: break-word;
+// Print Styles
+@media print {
+  .cluster rect {
+    fill: #ffffff;
+    stroke: #000000;
   }
-
-  // Node styles
-  .node {
-    rect,
-    circle,
-    ellipse,
-    polygon {
-      fill: var(--bg-accent, #f0f0f0);
-      stroke: var(--accent, #333);
-      stroke-width: 1px;
-    }
-    text {
-      fill: var(--default, #333);
-      font-size: clamp(1rem, 1.6vw, 1.25rem);
-    }
+  .cluster text,
+  .node text {
+    fill: #000000;
   }
-
-  // Print-friendly styles
-  @media print {
-    .cluster rect {
-      fill: #ffffff;
-      stroke: #000000;
-    }
-    .cluster text,
-    .node text {
-      fill: #000000;
-    }
-    .edgeLabel {
-      background-color: #ffffff;
-      border: 1px solid #000000;
-      color: #000000;
-    }
-    .edgePath .path,
-    .edgePath .arrowheadPath {
-      stroke: #000000;
-    }
-    .node rect,
-    .node circle,
-    .node ellipse,
-    .node polygon {
-      fill: #ffffff;
-      stroke: #000000;
-    }
+  .edgeLabel {
+    background-color: #ffffff;
+    border: 1px solid #000000;
+    color: #000000;
   }
+  .edgePath .path,
+  .edgePath .arrowheadPath {
+    stroke: #000000;
+  }
+  .node rect,
+  .node circle,
+  .node ellipse,
+  .node polygon {
+    fill: #ffffff;
+    stroke: #000000;
+  }
+}
 
+// Post Content Body
 .post-content-body {
   font-size: clamp(1.5rem, calc(1.5rem + (3rem - 1.5rem) * (100vw - 20rem) / (75rem - 20rem)), 3rem);
-  background-color: var(--bg-default);
-  color: var(--text-default);
-  font-family: var(--ft);
-  line-height: var(--line-height-base);
+  background-color: $bg-default;
+  color: $text-default;
+  font-family: $ft;
+  line-height: $line-height-base;
   margin: 0 auto;
   max-width: 100vw;
   padding: 1em;
@@ -241,302 +444,99 @@ img[class*="emoji"][src$=".svg"] {
   text-align: left;
 }
 
-.post-heading .info {
-  color: rgba(var(--text-default), 0.8);
+// Post Heading
+.post-heading {
+  .info {
+    color: rgba($text-default, 0.8);
+  }
+
+  .tags {
+    color: $accents-amethyst;
+  }
+
+  a {
+    color: $accents-dodgerblue;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
 }
 
-.post-heading .tags {
-  color: var(--accents-amethyst);
-}
-
-.post-heading a {
-  color: var(--accents-dodgerblue);
-  text-decoration: none;
-}
-
-.post-heading a:hover {
-  text-decoration: underline;
-}
-
+// Post Title
 .post-title {
-  color: var(--links-default);
+  color: $links-default; 
 }
 
+// Post Wrapper
 .post-wrapper {
   overflow-wrap: break-word;
   word-wrap: break-word;
 }
+
+// Search Link
 .search-link {
-  background-color: rgba(var(--accents-dodgerblue), 0.1);
-  border: 1px dotted var(--accents-dodgerblue);
-  border-radius: 0.1875rem;
-  display: inline-block;
-  font-size: clamp(1.5rem, calc(1.5rem + (3rem - 1.5rem) * (100vw - 20rem) / (75rem - 20rem)), 3rem);
-  padding: 0.5em;
-  transition: all 0.3s ease;
+  background-color: rgba($accents-dodgerblue, 0.1);
+  border: 1px dotted $accents-dodgerblue;
+  border-radius: $bd-radius; 
+  font-size: clamp(0.8125rem, calc(0.8125rem + (1rem - 0.8125rem) * (100vw - 20rem) / (75rem - 20rem)), 1rem);
+  line-height: 1.25;
+  margin: 1.25rem 0 0.625rem;
+  padding: 0.3125rem 1.25rem;
 }
 
-.search-link:hover,
-.search-link:focus {
-  background-color: rgba(var(--accents-dodgerblue), 0.2);
-  transform: scale(1.05);
-}
-
-.tagged-posts li {
-  margin-bottom: 0.5em;
-}
-
-.tagged-posts time {
-  color: rgba(var(--text-default), 0.7);
-  font-size: 0.9em;
-}
-
-.tagged-posts ul {
-  list-style: none;
-  padding-left: 0;
-}
-
+// Tag List
 .tag-list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
   list-style: none;
+  margin: 0;
   padding: 0;
-}
 
-.tag-list a {
-  background-color: var(--bg-default);
-  border: 1px solid var(--links-default);
-  border-radius: 0.25em;
-  color: var(--links-default);
-  padding: 0.5em 1em;
-  text-decoration: none;
-  transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-.tag-list a:hover,
-.tag-list a:focus {
-  background-color: var(--links-default);
-  color: var(--bg-default);
-}
-
-.tag-list li {
-  margin: 0.5em;
-}
-
-.tag-page {
-  margin: 0 auto;
-  max-width: 100%;
-  padding: 1em;
-}
-
-.visually-hidden {
-  clip: rect(1px, 1px, 1px, 1px);
-  height: 1px;
-  overflow: hidden;
-  position: absolute !important;
-  white-space: nowrap;
-  width: 1px;
-}
-
-::selection {
-  background-color: var(--highlights-pumpkin);
-  color: var(--code-text);
-}
-
-:not(pre)>code,
-kbd,
-samp,
-tt {
-  background: var(--code-background);
-  border-radius: 4px;
-  color: var(--code-text);
-  font-family: var(--ft-mono);
-  font-size: clamp(1rem, 1.6vw, 1.25rem);
-  overflow-wrap: break-word;
-  overflow-x: auto;
-  padding: 0.2em 0.4em;
-  white-space: pre-wrap;
-  word-break: break-word;
-}
-
-@font-face {
-  font-display: swap;
-  font-family: 'BitPotionExt';
-  font-style: normal;
-  font-weight: normal;
-  src: url('data:font/woff;charset=utf-8;base64,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') format('woff');
-}
-
-@media print {
   a {
-    color: var(--links-default) !important;
-    text-decoration: underline;
+    background-color: $bg-accent; 
+    border-radius: 0.25rem;
+    color: $links-default; 
+    display: inline-block;
+    font-size: clamp(0.9rem, calc(0.9rem + (1.25rem - 0.9rem) * (100vw - 20rem) / (75rem - 20rem)), 1.25rem);
+    margin: 0.25rem;
+    padding: 0.5rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+
+    &:hover {
+      background-color: $links-hover; 
+      color: $links-visited;
+    }
   }
-  body {
-    background-color: #FFFFFF;
-    color: #000000;
-  }
 }
 
-a {
-  color: var(--links-default);
-  transition: color 0.3s ease;
-}
-
-a:hover,
-a:focus {
-  color: var(--links-hover);
-}
-
-a:visited {
-  color: var(--links-visited);
-}
-
-blockquote {
-  background-color: rgba(var(--accents-dodgerblue), 0.1);
-  border-left: 5px solid var(--accents-dodgerblue);
-  margin-left: 0;
-  padding-left: 1em;
-}
-
-body {
-  background-color: var(--bg-default);
-  color: var(--text-default);
-  font-family: var(--ft);
-  font-size: clamp(1.5rem, calc(1.5rem + (3rem - 1.5rem) * (100vw - 20rem) / (75rem - 20rem)), 3rem);
-  line-height: var(--line-height-base);
-  margin: 0 auto;
-  max-width: 100vw;
-  padding: 1em;
-  --pagefind-ui-scale: 1;
-  --pagefind-ui-primary: var(--accents-dodgerblue); /* Aligns with site's interactive elements */
-  --pagefind-ui-text: var(--text-default); /* Matches the site's primary text color */
-  --pagefind-ui-background: var(--bg-default); /* Blends seamlessly with the site's background */
-  --pagefind-ui-border: rgba(var(--text-default), 0.1); /* Creates a subtle, unobtrusive border */
-  --pagefind-ui-tag: rgba(var(--accents-amethyst), 0.1); /* Uses a softer amethyst for a cohesive look */
-  --pagefind-ui-border-width: 2px; /* Maintains original border thickness */
-  --pagefind-ui-border-radius: 0.1875rem; /* Consistent with site's rounded corner aesthetic */
-  --pagefind-ui-image-border-radius: 0.1875rem; /* Mirrors the border-radius for visual harmony */
-  --pagefind-ui-image-box-ratio: 3 / 2; /* Retains the default aspect ratio */
-  --pagefind-ui-font: var(--ft); /* Ensures consistent typography across the site */
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-}
-
-figcaption {
-  color: var(--accents-amethyst);
-  font: caption;
-  font-size: 75%;
-}
-
-h1 {
-  font-size: clamp(2rem, 3vw, 2.5rem);
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  color: var(--headings);
-  line-height: 1.2;
-  margin: 1em 0 0.5em;
-}
-
-h2 {
-  font-size: clamp(1.5rem, 2.5vw, 2rem);
-}
-
-h3 {
-  font-size: clamp(1.25rem, 2vw, 1.75rem);
-}
-
-h4 {
-  font-size: clamp(1rem, 1.7vw, 1.5rem);
-}
-
-h5 {
-  font-size: clamp(0.875rem, 1.5vw, 1.25rem);
-}
-
-h6 {
-  font-size: clamp(0.75rem, 1.3vw, 1rem);
-}
-
-img,
-canvas,
-iframe,
-video,
-svg,
-select,
-textarea {
-  height: auto;
-  max-width: 100%;
-}
-
-img[align="left"] {
-  margin-right: 1em;
-}
-
-img[align="right"] {
-  margin-left: 1em;
-}
-
-input,
-textarea,
-select,
-button {
-  font-family: inherit;
-  font-size: 100%;
-  margin: 0.2em 0;
-}
-
-p {
-  hyphens: auto;
-  text-align: justify;
-}
-
-pre,
-code {
-  background: var(--code-background);
-  border-radius: 4px;
-  color: var(--code-text);
-  font-family: var(--ft-mono);
-  font-size: clamp(1rem, 1.6vw, 1.25rem);
-  overflow-wrap: break-word;
-  overflow-x: auto;
-  padding: 0.2em 0.4em;
-  white-space: pre-wrap;
-  word-break: break-word;
-}
-
+// Table Styles
 table {
   border-collapse: collapse;
-  table-layout: fixed;
-  width: 100%;
-}
-
-textarea {
-  display: block;
   width: 100%;
 }
 
 th,
 td {
-  border: 1px dotted var(--accents-amethyst);
-  overflow-wrap: break-word;
-  padding: 0.5em 1em;
+  border: 1px solid $table-border;
+  padding: 8px;
   text-align: left;
-  word-wrap: break-word;
 }
 
-th,
-thead,
-tfoot {
-  background: var(--headings);
-  color: var(--bg-default);
-  font-weight: bold;
+th {
+  background-color: $table-header-bg; 
+  color: $table-header-text; 
+}
+
+thead {
+  background-color: $table-header-bg;
+  color: $table-header-text; 
+}
+
+tbody tr:nth-child(even) {
+  background-color: $bg-muted; 
+}
+
+tbody tr:hover {
+  background-color: $bg-subtle; 
 }
