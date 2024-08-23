@@ -86,13 +86,10 @@ id: not-found
         {% assign all_sorted_posts = sorted_modified_posts | concat: sorted_unmodified_posts %}
         {% assign processed_tags = site.data.processed_tags %}
         {% for post in all_sorted_posts %}
-          <article>
-            <time datetime="{{ post.date | date: '%Y-%m-%d' }}" class="post-date">
-              <img src="{{ '/assets/gold.ico' | relative_url }}" alt="gold icon">
-{% for post in all_sorted_posts %}
   <article>
     <time datetime="{{ post.date | date: '%Y-%m-%d' }}" class="post-date">
       <img src="{{ '/assets/gold.ico' | relative_url }}" alt="gold icon">
+
       {%- assign post_tags = "" -%}
       {%- for entry in processed_tags -%}
         {%- if entry.posts contains post.url -%}
@@ -117,7 +114,7 @@ id: not-found
     </time>
   </article>
 {% endfor %}
-            </section>
+</section>
     </main>
   </div>
 </body>
