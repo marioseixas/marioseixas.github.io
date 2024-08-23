@@ -5,6 +5,8 @@
     url: /reassess
   - title: Deep Chat Speech
     url: /deepchat
+  - title: JSON-LD
+    url: /json-ld
   - title: Natural Language Processing (NLP) tools
     url: /nlp
   - title: OpenAI Token Limits
@@ -15,6 +17,8 @@
     url: /gmail2mailgrip-prompt
   - title: reassess
     url: /reassess
+  - title: JSON-LD
+    url: /json-ld
   tag: AI>prompt
 - posts:
   - title: Your Life in Tokens
@@ -275,8 +279,6 @@
     url: /lyrics-of-deleter-by-grouplove
   tag: music
 - posts:
-  - title: JSON-LD [prompt]
-    url: /json-ld
   - title: default [prompt]
     url: /default-prompt
   tag: prompt
