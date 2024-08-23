@@ -1,13 +1,12 @@
 ---
-tags:
-  - prompt
+tags: AI>prompt
 info: aberto.
 date: 2024-08-02
 type: post
 layout: post
 published: true
 slug: gmail2mailgrip-prompt
-title: 'gmail2mailgrip [prompt]'
+title: 'gmail2mailgrip'
 ---
 
 Step-by-Step Prompt for Email Categorization and Filtering
