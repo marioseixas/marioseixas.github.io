@@ -9,6 +9,8 @@
     url: /json-ld
   - title: Natural Language Processing (NLP) tools
     url: /nlp
+  - title: default
+    url: /default-prompt
   - title: OpenAI Token Limits
     url: /openai-token-limits
   tag: AI
@@ -19,6 +21,8 @@
     url: /reassess
   - title: JSON-LD
     url: /json-ld
+  - title: default
+    url: /default-prompt
   tag: AI>prompt
 - posts:
   - title: Your Life in Tokens
@@ -278,10 +282,6 @@
   - title: Lyrics of Deleter by Grouplove
     url: /lyrics-of-deleter-by-grouplove
   tag: music
-- posts:
-  - title: default [prompt]
-    url: /default-prompt
-  tag: prompt
 - posts:
   - title: Bolo Pão (Pound Cake)
     url: /bolo-po-pound-cake
