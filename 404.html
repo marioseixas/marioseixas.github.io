@@ -89,10 +89,14 @@ id: not-found
           <article>
             <time datetime="{{ post.date | date: '%Y-%m-%d' }}" class="post-date">
               <img src="{{ '/assets/gold.ico' | relative_url }}" alt="gold icon">
+              {%- assign post_tags = site.data.processed_tags | where_exp: "item", "item.posts contains post" | map: "tag" -%} 
+              {%- if post_tags.size > 0 -%}
+                [{%- for tag in post_tags -%}{{ tag }}{%- unless forloop.last -%},{%- endunless -%}{%- endfor -%}]
+              {%- endif -%}
               <h3>
                 {{ post.date | date: '%Y-%m-%d' }}
                 {% if post.last_modified_at != post.date %}
-                  &rightarrowtail; {{ post.last_modified_at | date_to_string }}
+                  ↣ {{ post.last_modified_at | date_to_string }}
                 {% endif %}
               </h3>
               <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
