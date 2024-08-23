@@ -3,19 +3,19 @@
   --accents-dodgerblue: #00FFFF; /* Cyan for extreme contrast and vibrancy */
   --accents-turquoise: #00FFB0; /* Electric green-blue for high visibility */
   --bg-default: #485365; /* Immutable */
-  --code-background: #1A1A1A; /* Near-black for extreme contrast with code text */
-  --code-text: #FF6347; /* Tomato red for highly visible main text */
+  --code-background: #576273;
+  --code-text: #FF0033;
   --font-size-base: 24px;
   --ft: 'BitPotionExt';
   --ft-mono: 'BitPotionExt';
-  --headings: #FFFF00; /* Pure yellow for extremely prominent headings */
-  --highlights-crimson: #FF0000; /* Pure red for maximum emphasis */
-  --highlights-pumpkin: #FFA500; /* Bright orange for strong, warm highlights */
+  --headings: #FF00FF;
+  --highlights-crimson: #FF0000;
+  --highlights-pumpkin: #FFA500;
   --line-height-base: 1.5;
-  --links-default: #00BFFF; /* Deep sky blue for clear link identification */
-  --links-hover: #FF00FF; /* Magenta for vibrant interactive feedback */
+  --links-default: #FFFFE0;
+  --links-hover: #00BFFF;
   --links-visited: #800080; /* Purple for a clear distinction from unvisited links */
-  --text-default: #FFFFE0; /* Light yellow for optimal readability against dark background */
+  --text-default: #FFFF00;
 }
 
 html {
