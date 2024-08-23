@@ -1,6 +1,6 @@
 :root {
-  --accents-amethyst: #800080; /* Purple - A rich, deep accent color. */
-  --accents-dodgerblue: #0000FF; /* Blue - A vibrant, classic accent. */
+  --accents-amethyst: #FFFF00; /* Purple - A rich, deep accent color. */
+  --accents-dodgerblue: #BFBFBF; /* Blue - A vibrant, classic accent. */
   --accents-turquoise: #008000; /* Green - Provides a natural, contrasting accent. */
   --bg-default: #485365; /* Immutable - The main background color, a cool dark gray. */
   --code-background: #576273; /* Immutable - Slightly darker than the main background for code blocks. */
@@ -13,17 +13,17 @@
   --line-height-base: 1.5; /*  Standard line-height for improved readability. */
   --links-default: #FFA500; /* Orange - Stands out against the darker backgrounds and provides a clear visual cue. */
   --links-hover: #FF0000; /* Red - A distinct change on hover, indicating interactivity. */
-  --links-visited: #800080; /* Purple - Differentiates visited links from unvisited ones. */
+  --links-visited: #FFFF00; /* Purple - Differentiates visited links from unvisited ones. */
   --text-default: #00FFFF; /* Cyan - A cooler color for body text, offering a good contrast against the dark background while reducing eye strain. */
   --bg-muted: #008000; /* Green -  A softer, less prominent background for less important elements, providing visual distinction from the main background. */
-  --bd-muted: #800080; /* Purple - Used for muted borders and separators, harmonizing with the accent color. */
+  --bd-muted: #FFFF00; /* Purple - Used for muted borders and separators, harmonizing with the accent color. */
   --bg-accent: #008000; /* Green - Provides a visually distinct background for highlighting specific content areas. */
-  --bg-subtle: #00FFFF; /* Cyan -  Used for subtle background changes, aligning with the text-default color for a harmonious look. */
+  --bg-subtle: #800080; /* Cyan -  Used for subtle background changes, aligning with the text-default color for a harmonious look. */
   --bd-radius: 4px; /* Standard border-radius for elements, creating a slightly rounded appearance. */
   --border-radius: 3px; /* A slightly sharper border-radius, potentially used for specific elements where a distinct edge is preferred. */
   --table-header-bg: #008000; /* Green - Distinguishes table headers from the rest of the table content. */
   --table-header-text: #FFFF00; /* Yellow - High contrast against the green background for clear header text visibility. */
-  --table-border: #800080; /* Purple -  Provides clear visual separation between table cells while maintaining a cohesive color scheme. */
+  --table-border: #FFFF00; /* Purple -  Provides clear visual separation between table cells while maintaining a cohesive color scheme. */
   --btn-bg: #0000FF; /* Blue - A distinct background color for buttons, making them easily identifiable. */
   --btn-text: #FFFF00; /* Yellow -  High contrast text against the blue background, ensuring clear button label visibility. */
   --btn-hover-bg: #FF0000; /* Red -  A clear visual indication that the button is being interacted with. */
