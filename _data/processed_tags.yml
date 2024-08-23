@@ -1,16 +1,32 @@
 - posts:
   - title: gmail2mailgrip
     url: /gmail2mailgrip-prompt
+  - title: gmail2mailgrip
+    url: /gmail2mailgrip-prompt
+  - title: Longer inputs on WHISPER API
+    url: /longer-inputs-on-whisper-api
+  - title: reassess
+    url: /reassess
   - title: reassess
     url: /reassess
   - title: Deep Chat Speech
     url: /deepchat
+  - title: Deep Chat Speech
+    url: /deepchat
+  - title: JSON-LD
+    url: /json-ld
   - title: JSON-LD
     url: /json-ld
   - title: Natural Language Processing (NLP) tools
     url: /nlp
+  - title: Natural Language Processing (NLP) tools
+    url: /nlp
   - title: default
     url: /default-prompt
+  - title: default
+    url: /default-prompt
+  - title: OpenAI Token Limits
+    url: /openai-token-limits
   - title: OpenAI Token Limits
     url: /openai-token-limits
   tag: AI
@@ -27,110 +43,206 @@
 - posts:
   - title: Your Life in Tokens
     url: /life-tokens
+  - title: Your Life in Tokens
+    url: /life-tokens
+  - title: Envolvido ou comprometido?
+    url: /tal-06-17
   - title: Envolvido ou comprometido?
     url: /tal-06-17
   tag: admoestação
 - posts:
   - title: streaming
     url: /streaming
+  - title: streaming
+    url: /streaming
+  - title: aye aye
+    url: /aye
   - title: aye aye
     url: /aye
   tag: assistir
 - posts:
   - title: Call de Outubro de 2022
     url: /call-10-2022
+  - title: Call de Outubro de 2022
+    url: /call-10-2022
+  - title: Call de Setembro de 2022
+    url: /call-09-2022
   - title: Call de Setembro de 2022
     url: /call-09-2022
   - title: Call de Agosto de 2022
     url: /call-08-2022
+  - title: Call de Agosto de 2022
+    url: /call-08-2022
+  - title: Call de Julho de 2022
+    url: /call-07-2022
   - title: Call de Julho de 2022
     url: /call-07-2022
   - title: Call de Junho de 2022
     url: /call-06-2022
+  - title: Call de Junho de 2022
+    url: /call-06-2022
+  - title: Call de Maio de 2022
+    url: /call-05-2022
   - title: Call de Maio de 2022
     url: /call-05-2022
   - title: Call de Abril de 2022
     url: /call-04-2022
+  - title: Call de Abril de 2022
+    url: /call-04-2022
+  - title: Call de Março de 2022
+    url: /call-03-2022
   - title: Call de Março de 2022
     url: /call-03-2022
   - title: Call de Fevereiro de 2022
     url: /call-02-2022
+  - title: Call de Fevereiro de 2022
+    url: /call-02-2022
+  - title: Call de Janeiro de 2022
+    url: /call-01-2022
   - title: Call de Janeiro de 2022
     url: /call-01-2022
   - title: Call de Dezembro de 2021
     url: /call-12-2021
+  - title: Call de Dezembro de 2021
+    url: /call-12-2021
+  - title: Call de Novembro de 2021
+    url: /call-11-2021
   - title: Call de Novembro de 2021
     url: /call-11-2021
   - title: Call de Outubro de 2021
     url: /call-10-2021
+  - title: Call de Outubro de 2021
+    url: /call-10-2021
+  - title: Call de Setembro de 2021
+    url: /call-09-2021
   - title: Call de Setembro de 2021
     url: /call-09-2021
   - title: Call de Agosto de 2021
     url: /call-08-2021
+  - title: Call de Agosto de 2021
+    url: /call-08-2021
+  - title: Call de Julho de 2021
+    url: /call-07-2021
   - title: Call de Julho de 2021
     url: /call-07-2021
   - title: Call de Junho de 2021
     url: /call-06-2021
+  - title: Call de Junho de 2021
+    url: /call-06-2021
+  - title: Call de Maio de 2021
+    url: /call-05-2021
   - title: Call de Maio de 2021
     url: /call-05-2021
   - title: Call de Abril de 2021
     url: /call-04-2021
+  - title: Call de Abril de 2021
+    url: /call-04-2021
+  - title: Call de Março de 2021
+    url: /call-03-2021
   - title: Call de Março de 2021
     url: /call-03-2021
   - title: Call de Fevereiro de 2021
     url: /call-02-2021
+  - title: Call de Fevereiro de 2021
+    url: /call-02-2021
+  - title: ' Call de Janeiro de 2021'
+    url: /call-01-2021
   - title: ' Call de Janeiro de 2021'
     url: /call-01-2021
   - title: Call de Dezembro de 2020
     url: /call-12-2020
+  - title: Call de Dezembro de 2020
+    url: /call-12-2020
+  - title: Call de Novembro de 2020
+    url: /call-11-2020
   - title: Call de Novembro de 2020
     url: /call-11-2020
   - title: Call de Outubro de 2020
     url: /call-10-2020
+  - title: Call de Outubro de 2020
+    url: /call-10-2020
+  - title: Call de Setembro de 2020
+    url: /call-09-2020
   - title: Call de Setembro de 2020
     url: /call-09-2020
   - title: Call de Agosto de 2020
     url: /call-08-2020
+  - title: Call de Agosto de 2020
+    url: /call-08-2020
+  - title: Call de Julho de 2020
+    url: /call-07-2020
   - title: Call de Julho de 2020
     url: /call-07-2020
   - title: 'Call de Junho de 2020 '
     url: /call-06-2020
+  - title: 'Call de Junho de 2020 '
+    url: /call-06-2020
   - title: Call de Maio de 2020
     url: /call-05-2020
+  - title: Call de Maio de 2020
+    url: /call-05-2020
+  - title: Call de Abril de 2020
+    url: /call-04-2020
   - title: Call de Abril de 2020
     url: /call-04-2020
   tag: calls
 - posts:
   - title: VW/GOL 1.0 G4 2010 - 196.351km
     url: /car-12-15
+  - title: VW/GOL 1.0 G4 2010 - 196.351km
+    url: /car-12-15
+  - title: VW/GOL 1.0 G4 2010 - 195.300km
+    url: /car-10-15
   - title: VW/GOL 1.0 G4 2010 - 195.300km
     url: /car-10-15
   - title: ' VW/GOL 1.0 G4 2010 - 189.111km '
     url: /car-02-10
+  - title: ' VW/GOL 1.0 G4 2010 - 189.111km '
+    url: /car-02-10
+  - title: VW/GOL 1.0 G4 2010 - 184.000km
+    url: /car-04-17
   - title: VW/GOL 1.0 G4 2010 - 184.000km
     url: /car-04-17
   tag: carro
 - posts:
   - title: Performance média
     url: /performance
+  - title: Performance média
+    url: /performance
+  - title: III Etapa do Circuito Goiano de Xadrez 2020
+    url: /torneio-001
   - title: III Etapa do Circuito Goiano de Xadrez 2020
     url: /torneio-001
   tag: chess
 - posts:
   - title: Contas
     url: /contas
+  - title: Contas
+    url: /contas
+  - title: Como calcular prestação por meio de taxa de juros e período
+    url: /emprestimo
   - title: Como calcular prestação por meio de taxa de juros e período
     url: /emprestimo
   tag: despesas
 - posts:
   - title: Ordenamento Jurídico Brasileiro [redução eidética]
     url: /ordenamento
+  - title: Ordenamento Jurídico Brasileiro [redução eidética]
+    url: /ordenamento
+  - title: Procedimento dos Crimes da Competência do Tribunal do Júri
+    url: /juri
   - title: Procedimento dos Crimes da Competência do Tribunal do Júri
     url: /juri
   - title: Núcleo duro das provas de Delegado de Polícia
     url: /hard-core
+  - title: Núcleo duro das provas de Delegado de Polícia
+    url: /hard-core
   - title: Concursos DELTA iminentes
     url: /concursos-delta
+  - title: Concursos DELTA iminentes
+    url: /concursos-delta
+  - title: Estados que exigem atividade policial para DELTA
+    url: /atividade-policial
   - title: Estados que exigem atividade policial para DELTA
     url: /atividade-policial
   tag: edital
@@ -147,28 +259,50 @@
 - posts:
   - title: Periódicos para publicar artigos
     url: /periodicos
+  - title: Periódicos para publicar artigos
+    url: /periodicos
+  - title: STF Scraper [script]
+    url: /stf-scraper
   - title: STF Scraper [script]
     url: /stf-scraper
   - title: Processo de Depósito Legal - UFJ
     url: /ufj-tcc
+  - title: Processo de Depósito Legal - UFJ
+    url: /ufj-tcc
+  - title: Se eu fosse um concurseiro - George Marmelstein
+    url: /marmelstein
   - title: Se eu fosse um concurseiro - George Marmelstein
     url: /marmelstein
   - title: 'CESPE: chute tático'
     url: /cespe
+  - title: 'CESPE: chute tático'
+    url: /cespe
   - title: Calendário Acadêmico
     url: /facul-calendar
+  - title: Calendário Acadêmico
+    url: /facul-calendar
+  - title: WRITING TO LEARN AND WHY IT MATTERS
+    url: /writing
   - title: WRITING TO LEARN AND WHY IT MATTERS
     url: /writing
   tag: estudos
 - posts:
   - title: Board games
     url: /board-games
+  - title: Board games
+    url: /board-games
+  - title: Vacinas
+    url: /vacinas
   - title: Vacinas
     url: /vacinas
   tag: fatherhood
 - posts:
   - title: 'PageFind with Jekyll '
     url: /pagefind-with-jekyll
+  - title: 'PageFind with Jekyll '
+    url: /pagefind-with-jekyll
+  - title: 2024-07-13-update-gemfilelock
+    url: /update-gemfilelock
   - title: 2024-07-13-update-gemfilelock
     url: /update-gemfilelock
   tag: github
@@ -181,250 +315,480 @@
 - posts:
   - title: RockChip devices
     url: /rockchip-devices
+  - title: RockChip devices
+    url: /rockchip-devices
   - title: Laptop alternative
     url: /laptop-alternative
+  - title: Laptop alternative
+    url: /laptop-alternative
+  - title: VPC-3588 Motherboard
+    url: /vpc-3588-motherboard
   - title: VPC-3588 Motherboard
     url: /vpc-3588-motherboard
   tag: hardware
 - posts:
   - title: iOS 18 changelog
     url: /ios-18-changelog
+  - title: iOS 18 changelog
+    url: /ios-18-changelog
+  - title: 'iPhone: files2zip & zip2clipboard'
+    url: /iphone-files2zip-zip2clipboard
   - title: 'iPhone: files2zip & zip2clipboard'
     url: /iphone-files2zip-zip2clipboard
   tag: iphone
 - posts:
   - title: libros familiares
     url: /libros-de-familia
+  - title: libros familiares
+    url: /libros-de-familia
   - title: chess books
     url: /chess-books
+  - title: chess books
+    url: /chess-books
+  - title: Livros
+    url: /livros
   - title: Livros
     url: /livros
   tag: ler
 - posts:
   - title: Linux mobile OS
     url: /linux-mobile-os
+  - title: Linux mobile OS
+    url: /linux-mobile-os
+  - title: How to use the `dd` command to create a bootable USB drive from an ISO
+      file on a Linux-based system
+    url: /how-to-use-the-dd-command-to-create-a-bootable-usb-drive-from-an-iso-file-on-a-linux-based-system
   - title: How to use the `dd` command to create a bootable USB drive from an ISO
       file on a Linux-based system
     url: /how-to-use-the-dd-command-to-create-a-bootable-usb-drive-from-an-iso-file-on-a-linux-based-system
   - title: cliPaperQA
     url: /clipaper-qa
+  - title: cliPaperQA
+    url: /clipaper-qa
+  - title: 'bulkGPT: multithreading for OpenAI''s output limits'
+    url: /bulk-gpt
   - title: 'bulkGPT: multithreading for OpenAI''s output limits'
     url: /bulk-gpt
   - title: Convert `.pdf` to `UTF-8`
     url: /pdf-utf8
+  - title: Convert `.pdf` to `UTF-8`
+    url: /pdf-utf8
+  - title: Python script to check LaTeX citations
+    url: /bibtex-check
   - title: Python script to check LaTeX citations
     url: /bibtex-check
   - title: Rename files using llm.datasette.io
     url: /llm-renamer
+  - title: Rename files using llm.datasette.io
+    url: /llm-renamer
+  - title: '"Copy Spotter" and Deduplication'
+    url: /copy-dedup
   - title: '"Copy Spotter" and Deduplication'
     url: /copy-dedup
   - title: Organize files by their extensions
     url: /files-by-type
+  - title: Organize files by their extensions
+    url: /files-by-type
+  - title: 'Rclone: Syncing STORJ Cloud to Local Storage'
+    url: /storj-sync
   - title: 'Rclone: Syncing STORJ Cloud to Local Storage'
     url: /storj-sync
   - title: /.ratpoisonrc
     url: /ratpoisonrc
+  - title: /.ratpoisonrc
+    url: /ratpoisonrc
+  - title: /sources.list
+    url: /sources
   - title: /sources.list
     url: /sources
   - title: /.bashrc
     url: /bashrc
+  - title: /.bashrc
+    url: /bashrc
+  - title: /root/.xsessionrc
+    url: /xsessionrc
   - title: /root/.xsessionrc
     url: /xsessionrc
   - title: xinitrc
     url: /xinitrc
+  - title: xinitrc
+    url: /xinitrc
+  - title: About Thorium Flags
+    url: /thorium
   - title: About Thorium Flags
     url: /thorium
   - title: cat files contents [script]
     url: /cat-files
+  - title: cat files contents [script]
+    url: /cat-files
+  - title: Installing a custom version of SQLite
+    url: /sqlite
   - title: Installing a custom version of SQLite
     url: /sqlite
   - title: Setup FTP Server on Debian and Connect a Windows machine
     url: /ftpd
+  - title: Setup FTP Server on Debian and Connect a Windows machine
+    url: /ftpd
+  - title: Gummi .tex .bib
+    url: /gummi
   - title: Gummi .tex .bib
     url: /gummi
   - title: Script to print from clipboard to a thermal printer
     url: /thermal
+  - title: Script to print from clipboard to a thermal printer
+    url: /thermal
+  - title: DP-Q803P thermal printer manual
+    url: /thermanual
   - title: DP-Q803P thermal printer manual
     url: /thermanual
   - title: Linux in a USB drive
     url: /linux-usb
+  - title: Linux in a USB drive
+    url: /linux-usb
+  - title: install_wps.sh
+    url: /wps
   - title: install_wps.sh
     url: /wps
   - title: SoC arm64 RK3588
     url: /rk3588
+  - title: SoC arm64 RK3588
+    url: /rk3588
+  - title: nedit.rc
+    url: /neditrc
   - title: nedit.rc
     url: /neditrc
   - title: rk3588 performance optimization
     url: /rk3588-enhance
+  - title: rk3588 performance optimization
+    url: /rk3588-enhance
+  - title: Shell script to replace JEKYLLER edge extension
+    url: /jekyller
   - title: Shell script to replace JEKYLLER edge extension
     url: /jekyller
   - title: Alternative option to upload a file to GitHub without cloning the entire
       repository
     url: /git-sparse-checkout
+  - title: Alternative option to upload a file to GitHub without cloning the entire
+      repository
+    url: /git-sparse-checkout
+  - title: Packages list script
+    url: /dpkg-script
   - title: Packages list script
     url: /dpkg-script
   - title: Installed Debian packages list
     url: /dpkg
+  - title: Installed Debian packages list
+    url: /dpkg
+  - title: parameter.txt
+    url: /parameter
   - title: parameter.txt
     url: /parameter
   - title: Sectors to bytes
     url: /sectors
+  - title: Sectors to bytes
+    url: /sectors
+  - title: Installation of ratpoison in debian/ubuntu
+    url: /ratpoison
   - title: Installation of ratpoison in debian/ubuntu
     url: /ratpoison
   - title: Linux typewriter setup
     url: /typewriter
+  - title: Linux typewriter setup
+    url: /typewriter
+  - title: microsoft-edge
+    url: /edge
   - title: microsoft-edge
     url: /edge
   - title: xlunch entries.dsv
     url: /xlunch
+  - title: xlunch entries.dsv
+    url: /xlunch
+  - title: Installation of nvidia-legacy-340 in debian 11 (Bullseye)
+    url: /nvidia
   - title: Installation of nvidia-legacy-340 in debian 11 (Bullseye)
     url: /nvidia
   - title: Xsession
     url: /Xsession
+  - title: Xsession
+    url: /Xsession
   - title: neofetch config.conf
     url: /neofetch
+  - title: neofetch config.conf
+    url: /neofetch
+  - title: How to make bootable Windows USB from Linux for old computers
+    url: /ms-sys
   - title: How to make bootable Windows USB from Linux for old computers
     url: /ms-sys
   tag: linux
 - posts:
   - title: Bolo Pão (Pound Cake)
     url: /pound-cake
+  - title: Bolo Pão (Pound Cake)
+    url: /pound-cake
+  - title: wallpaper I
+    url: /wallpaper-1
   - title: wallpaper I
     url: /wallpaper-1
   tag: misc
 - posts:
   - title: Lyrics of Deleter by Grouplove
     url: /lyrics-of-deleter-by-grouplove
+  - title: Lyrics of Deleter by Grouplove
+    url: /lyrics-of-deleter-by-grouplove
   tag: music
 - posts:
+  - title: IRPF
+    url: /irpf
   - title: IRPF
     url: /irpf
   tag: receitas
 - posts:
   - title: Maio 2023
     url: /maio-23
+  - title: Maio 2023
+    url: /maio-23
+  - title: Novembro 2022
+    url: /novembro-22
   - title: Novembro 2022
     url: /novembro-22
   - title: Setembro 2022
     url: /setembro-22
+  - title: Setembro 2022
+    url: /setembro-22
+  - title: Agosto 2022
+    url: /agosto-22
   - title: Agosto 2022
     url: /agosto-22
   - title: Julho 2022
     url: /julho-22
+  - title: Julho 2022
+    url: /julho-22
+  - title: Junho 2022
+    url: /junho-22
   - title: Junho 2022
     url: /junho-22
   - title: Maio 2022
     url: /maio-22
+  - title: Maio 2022
+    url: /maio-22
+  - title: Abril 2022
+    url: /abril-22
   - title: Abril 2022
     url: /abril-22
   - title: Março 2022
     url: /marco-22
+  - title: Março 2022
+    url: /marco-22
+  - title: Fevereiro 2022
+    url: /fevereiro-22
   - title: Fevereiro 2022
     url: /fevereiro-22
   - title: Janeiro 2022
     url: /janeiro-22
+  - title: Janeiro 2022
+    url: /janeiro-22
+  - title: Dezembro 2021
+    url: /dezembro-21
   - title: Dezembro 2021
     url: /dezembro-21
   - title: Novembro 2021
     url: /novembro-21
+  - title: Novembro 2021
+    url: /novembro-21
+  - title: Outubro 2021
+    url: /outubro-21
   - title: Outubro 2021
     url: /outubro-21
   - title: Setembro 2021
     url: /setembro-21
+  - title: Setembro 2021
+    url: /setembro-21
+  - title: Agosto 2021
+    url: /agosto-21
   - title: Agosto 2021
     url: /agosto-21
   - title: Julho 2021
     url: /julho-21
+  - title: Julho 2021
+    url: /julho-21
+  - title: Junho 2021
+    url: /junho-21
   - title: Junho 2021
     url: /junho-21
   - title: Maio 2021
     url: /maio-21
+  - title: Maio 2021
+    url: /maio-21
+  - title: Abril 2021
+    url: /abril-21
   - title: Abril 2021
     url: /abril-21
   - title: Março 2021
     url: /marco-21
+  - title: Março 2021
+    url: /marco-21
+  - title: Fevereiro 2021
+    url: /fevereiro-21
   - title: Fevereiro 2021
     url: /fevereiro-21
   - title: Janeiro 2021
     url: /janeiro-21
+  - title: Janeiro 2021
+    url: /janeiro-21
+  - title: Dezembro 2020
+    url: /dezembro-20
   - title: Dezembro 2020
     url: /dezembro-20
   - title: Novembro 2020
     url: /novembro-20
+  - title: Novembro 2020
+    url: /novembro-20
+  - title: Outubro 2020
+    url: /outubro-20
   - title: Outubro 2020
     url: /outubro-20
   - title: Setembro 2020
     url: /setembro-20
+  - title: Setembro 2020
+    url: /setembro-20
+  - title: Agosto 2020
+    url: /agosto-20
   - title: Agosto 2020
     url: /agosto-20
   - title: Julho 2020
     url: /julho-20
+  - title: Julho 2020
+    url: /julho-20
+  - title: Junho 2020
+    url: /junho-20
   - title: Junho 2020
     url: /junho-20
   - title: Maio 2020
     url: /maio-20
+  - title: Maio 2020
+    url: /maio-20
   - title: Abril 2020
     url: /abril-20
+  - title: Abril 2020
+    url: /abril-20
+  - title: Março 2020
+    url: /marco-20
   - title: Março 2020
     url: /marco-20
   tag: rendimentos
 - posts:
   - title: Arm Tendinitis
     url: /arm-tendinitis
+  - title: Arm Tendinitis
+    url: /arm-tendinitis
+  - title: Effects of 10-Day Complete Fasting
+    url: /jejum
   - title: Effects of 10-Day Complete Fasting
     url: /jejum
   tag: saúde
 - posts:
   - title: Longer inputs on WHISPER API
     url: /longer-inputs-on-whisper-api
+  - title: Longer inputs on WHISPER API
+    url: /longer-inputs-on-whisper-api
+  - title: 'iPhone: files2zip & zip2clipboard'
+    url: /iphone-files2zip-zip2clipboard
   - title: 'iPhone: files2zip & zip2clipboard'
     url: /iphone-files2zip-zip2clipboard
   - title: Webhooks using `Serverless.com` Lift plugin
     url: /webhooks-using-serverlesscom-lift-plugin
+  - title: Webhooks using `Serverless.com` Lift plugin
+    url: /webhooks-using-serverlesscom-lift-plugin
+  - title: Gingko JSON ToC outliner
+    url: /gingko-toc-outliner
   - title: Gingko JSON ToC outliner
     url: /gingko-toc-outliner
   - title: cliPaperQA
     url: /clipaper-qa
+  - title: cliPaperQA
+    url: /clipaper-qa
+  - title: 'bulkGPT: multithreading for OpenAI''s output limits'
+    url: /bulk-gpt
   - title: 'bulkGPT: multithreading for OpenAI''s output limits'
     url: /bulk-gpt
   - title: Convert `.pdf` to `UTF-8`
     url: /pdf-utf8
+  - title: Convert `.pdf` to `UTF-8`
+    url: /pdf-utf8
+  - title: Python script to check LaTeX citations
+    url: /bibtex-check
   - title: Python script to check LaTeX citations
     url: /bibtex-check
   - title: Rename files using llm.datasette.io
     url: /llm-renamer
+  - title: Rename files using llm.datasette.io
+    url: /llm-renamer
+  - title: '"Copy Spotter" and Deduplication'
+    url: /copy-dedup
   - title: '"Copy Spotter" and Deduplication'
     url: /copy-dedup
   - title: Organize files by their extensions
     url: /files-by-type
+  - title: Organize files by their extensions
+    url: /files-by-type
+  - title: 'Rclone: Syncing STORJ Cloud to Local Storage'
+    url: /storj-sync
   - title: 'Rclone: Syncing STORJ Cloud to Local Storage'
     url: /storj-sync
   - title: STF Scraper [script]
     url: /stf-scraper
+  - title: STF Scraper [script]
+    url: /stf-scraper
+  - title: WhatsapPY data
+    url: /whatsappy
   - title: WhatsapPY data
     url: /whatsappy
   - title: Split `.wav` for Whisper
     url: /whisper-splitter
+  - title: Split `.wav` for Whisper
+    url: /whisper-splitter
+  - title: cat files contents [script]
+    url: /cat-files
   - title: cat files contents [script]
     url: /cat-files
   - title: tampermonkey dify hit-testing [script]
     url: /tampermonkey-dify
+  - title: tampermonkey dify hit-testing [script]
+    url: /tampermonkey-dify
+  - title: dasel references filtering + citation appender [script]
+    url: /dasel_citation_appender
   - title: dasel references filtering + citation appender [script]
     url: /dasel_citation_appender
   - title: PYragraphs
     url: /pyragraphs
+  - title: PYragraphs
+    url: /pyragraphs
+  - title: Py Oda
+    url: /py-oda
   - title: Py Oda
     url: /py-oda
   - title: Script to print from clipboard to a thermal printer
     url: /thermal
+  - title: Script to print from clipboard to a thermal printer
+    url: /thermal
+  - title: install_wps.sh
+    url: /wps
   - title: install_wps.sh
     url: /wps
   - title: Shell script to replace JEKYLLER edge extension
     url: /jekyller
+  - title: Shell script to replace JEKYLLER edge extension
+    url: /jekyller
+  - title: Packages list script
+    url: /dpkg-script
   - title: Packages list script
     url: /dpkg-script
   - title: OpenAI GPT API in Google Sheets
     url: /gpt-sheets
+  - title: OpenAI GPT API in Google Sheets
+    url: /gpt-sheets
+  - title: github.com/py-pdf
+    url: /pypdf
   - title: github.com/py-pdf
     url: /pypdf
   tag: scripts
@@ -447,20 +811,36 @@
 - posts:
   - title: VENDA SMTO3 04,74% a.m.
     url: /sell-smto3
+  - title: VENDA SMTO3 04,74% a.m.
+    url: /sell-smto3
+  - title: VENDA TOTS3 04,20% a.m.
+    url: /sell-tots3
   - title: VENDA TOTS3 04,20% a.m.
     url: /sell-tots3
   - title: VENDA MTSA4 08,14% a.m.
     url: /sell-mtsa4
+  - title: VENDA MTSA4 08,14% a.m.
+    url: /sell-mtsa4
+  - title: VENDA CARD3 04,02% a.m.
+    url: /sell-card3
   - title: VENDA CARD3 04,02% a.m.
     url: /sell-card3
   tag: sell
 - posts:
   - title: Linux mobile OS
     url: /linux-mobile-os
+  - title: Linux mobile OS
+    url: /linux-mobile-os
+  - title: iOS 18 changelog
+    url: /ios-18-changelog
   - title: iOS 18 changelog
     url: /ios-18-changelog
   - title: AWS PushSafer billing alarm
     url: /aws-pushsafer-billing-alarm
+  - title: AWS PushSafer billing alarm
+    url: /aws-pushsafer-billing-alarm
+  - title: dasel context guide
+    url: /dasel
   - title: dasel context guide
     url: /dasel
   tag: software
@@ -477,44 +857,82 @@
 - posts:
   - title: 9gag evangelism
     url: /holy-9gag
+  - title: 9gag evangelism
+    url: /holy-9gag
   - title: canção da internação
     url: /gustavo
+  - title: canção da internação
+    url: /gustavo
+  - title: Envolvido ou comprometido?
+    url: /tal-06-17
   - title: Envolvido ou comprometido?
     url: /tal-06-17
   tag: spirit
 - posts:
   - title: Benjamin Franklin's 13 Virtues
     url: /benjamin-franklins-13-virtues
+  - title: Benjamin Franklin's 13 Virtues
+    url: /benjamin-franklins-13-virtues
+  - title: MLO Workspaces logic
+    url: /mlo-workspaces-logic
   - title: MLO Workspaces logic
     url: /mlo-workspaces-logic
   - title: Computed-Score Priority in MLO
     url: /computed-score-priority-in-mlo
+  - title: Computed-Score Priority in MLO
+    url: /computed-score-priority-in-mlo
+  - title: Task Prioritization
+    url: /tasks-mermaid
   - title: Task Prioritization
     url: /tasks-mermaid
   - title: Planning System Based on MyLifeOrganized (MLO)
     url: /mlo-ru
+  - title: Planning System Based on MyLifeOrganized (MLO)
+    url: /mlo-ru
+  - title: Eisenhower Matrix
+    url: /eisenhower
   - title: Eisenhower Matrix
     url: /eisenhower
   - title: github stars
     url: /stars
+  - title: github stars
+    url: /stars
+  - title: Cleaning flowchart
+    url: /cleaning-flow
   - title: Cleaning flowchart
     url: /cleaning-flow
   - title: Tasks Flow (MyLifeOrganized - MLO)
     url: /tasks-flow
+  - title: Tasks Flow (MyLifeOrganized - MLO)
+    url: /tasks-flow
+  - title: habits
+    url: /habits
   - title: habits
     url: /habits
   - title: Rubik's
     url: /rubik
+  - title: Rubik's
+    url: /rubik
+  - title: chess analysis workflow
+    url: /chess-flow
   - title: chess analysis workflow
     url: /chess-flow
   tag: tasks
 - posts:
   - title: Procedimentos de Escolta Dedicada
     url: /escolta
+  - title: Procedimentos de Escolta Dedicada
+    url: /escolta
+  - title: Periódicos para publicar artigos
+    url: /periodicos
   - title: Periódicos para publicar artigos
     url: /periodicos
   - title: QRU Aposentadoria
     url: /aposentadoria
+  - title: QRU Aposentadoria
+    url: /aposentadoria
+  - title: Avaliação Funcional I/XV
+    url: /taf-01
   - title: Avaliação Funcional I/XV
     url: /taf-01
   tag: trabalho
