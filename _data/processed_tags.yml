@@ -275,8 +275,6 @@
     url: /lyrics-of-deleter-by-grouplove
   tag: music
 - posts:
-  - title: dasel context guide [prompt]
-    url: /dasel
   - title: JSON-LD [prompt]
     url: /json-ld
   - title: default [prompt]
@@ -441,6 +439,8 @@
     url: /linux-mobile-os
   - title: iOS 18 changelog
     url: /ios-18-changelog
+  - title: dasel context guide
+    url: /dasel
   tag: software
 - posts:
   - title: Linux mobile OS
