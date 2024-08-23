@@ -75,6 +75,17 @@ body {
   line-height: $line-height-base;
   margin: 0;
   padding: 0;
+  --pagefind-ui-scale: 1;
+  --pagefind-ui-primary: $accents-dodgerblue; /* Aligns with site's interactive elements */
+  --pagefind-ui-text: $text-default; /* Matches the site's primary text color */
+  --pagefind-ui-background: $bg-default; /* Blends seamlessly with the site's background */
+  --pagefind-ui-border: $text-default; /* Creates a subtle, unobtrusive border */
+  --pagefind-ui-tag: $accents-amethyst; /* Uses a softer amethyst for a cohesive look */
+  --pagefind-ui-border-width: 2px; /* Maintains original border thickness */
+  --pagefind-ui-border-radius: 0.1875rem; /* Consistent with site's rounded corner aesthetic */
+  --pagefind-ui-image-border-radius: 0.1875rem; /* Mirrors the border-radius for visual harmony */
+  --pagefind-ui-image-box-ratio: 3 / 2; /* Retains the default aspect ratio */
+  --pagefind-ui-font: $ft; /* Ensures consistent typography across the site */
 }
 
 a {
