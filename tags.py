@@ -41,7 +41,6 @@ def process_tags(posts_dir, output_file):
             elif not isinstance(tags, list):
                 tags = [str(tags)]
 
-            # Add only single-level tags to the set
             for tag in tags:
                 if '>' not in tag:
                     existing_single_tags.add(tag)
@@ -71,20 +70,21 @@ def process_tags(posts_dir, output_file):
                 tags = [str(tags)]
 
             title = post_data.get('title', os.path.splitext(filename)[0])
-            
-            # Extract the slug (remove date and file extension)
             url = '/' + '-'.join(filename.split('-')[3:]).replace('.md', '')
-            
-            # Extract post date for sorting
+
             try:
                 post_date = datetime.strptime('-'.join(filename.split('-')[:3]), '%Y-%m-%d')
             except ValueError:
                 print(f"Warning: Unable to parse date from filename {filename}")
                 post_date = datetime.min
-            
-            for tag in tags:
-                tag_parts = tag.split('>') if isinstance(tag, str) else [str(tag)]
 
+            for tag in tags:
+                if isinstance(tag, str):
+                    tag_parts = tag.split('>')
+                else:
+                    tag_parts = [str(tag)]
+
+                # Generate all parent tags for the nested structure
                 for i in range(len(tag_parts)):
                     partial_tag = '>'.join(tag_parts[:i+1])
                     tag_data[partial_tag].append({
@@ -93,28 +93,24 @@ def process_tags(posts_dir, output_file):
                         'date': post_date
                     })
 
-                    # Ensure post is added to all relevant parent tags
-                    if i == len(tag_parts) - 1:
-                        for j in range(len(tag_parts)):
-                            parent_tag = tag_parts[j]
-                            if parent_tag in existing_single_tags or parent_tag in tag_data:
-                                tag_data[parent_tag].append({
-                                    'title': title,
-                                    'url': url,
-                                    'date': post_date
-                                })
+                    # Ensure proper association with existing single-level tags
+                    if i > 0 and tag_parts[i] in existing_single_tags:
+                        tag_data[tag_parts[i]].append({
+                            'title': title,
+                            'url': url,
+                            'date': post_date
+                        })
+
 
     # Sort posts within each tag by date, most recent first
     for tag, posts in tag_data.items():
         tag_data[tag] = sorted(posts, key=lambda x: x['date'], reverse=True)
-        # Remove date from final output
         for post in tag_data[tag]:
             del post['date']
 
     # Sort tags alphabetically
     sorted_tag_data = sorted(tag_data.items())
 
-    # Write processed data to YAML file
     with open(output_file, 'w', encoding='utf-8') as f:
         yaml.dump([{'tag': tag, 'posts': posts} for tag, posts in sorted_tag_data], f, allow_unicode=True)
 
