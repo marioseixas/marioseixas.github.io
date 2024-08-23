@@ -115,6 +115,8 @@
 - posts:
   - title: Performance média
     url: /performance
+  - title: III Etapa do Circuito Goiano de Xadrez 2020
+    url: /torneio-001
   tag: chess
 - posts:
   - title: Contas
@@ -506,10 +508,6 @@
   - title: chess analysis workflow
     url: /chess-flow
   tag: tasks
-- posts:
-  - title: III Etapa do Circuito Goiano de Xadrez 2020
-    url: /torneio-001
-  tag: torneios
 - posts:
   - title: Procedimentos de Escolta Dedicada
     url: /escolta
