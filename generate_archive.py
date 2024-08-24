@@ -7,6 +7,19 @@ with open('_data/processed_tags.yml', 'r') as file:
 # Function to format the date
 def format_date(date_obj, format_str='%Y-%m-%d'):
     return date_obj.strftime(format_str)
+# Function to convert a value to a datetime object
+def to_datetime(value):
+    if isinstance(value, str):
+        try:
+            return datetime.strptime(value, '%Y-%m-%d')
+        except ValueError as e:
+            raise ValueError(f"Date string '{value}' is not in the correct format: {e}")
+    elif isinstance(value, date):
+        return datetime.combine(value, datetime.min.time())
+    elif isinstance(value, datetime):
+        return value
+    else:
+        raise ValueError(f"Unexpected date type: {type(value)}")
 # Directory containing the posts
 posts_directory = '_posts/'
 # List to hold the post data
@@ -17,22 +30,20 @@ for post_file in os.listdir(posts_directory):
         with open(os.path.join(posts_directory, post_file), 'r') as file:
             post_content = file.read()
             # Assuming the post's front matter is YAML at the top of the file
-            try:  # Handle potential errors in YAML parsing
+            try:
                 post_meta = yaml.safe_load(post_content.split('---')[1])
                 
                 # Convert date fields to datetime objects
                 if 'date' in post_meta:
-                    if isinstance(post_meta['date'], date):
-                        post_meta['date'] = datetime.combine(post_meta['date'], datetime.min.time())
+                    post_meta['date'] = to_datetime(post_meta['date'])
                 if 'last_modified_at' in post_meta:
-                    if isinstance(post_meta['last_modified_at'], date):
-                        post_meta['last_modified_at'] = datetime.combine(post_meta['last_modified_at'], datetime.min.time())
+                    post_meta['last_modified_at'] = to_datetime(post_meta['last_modified_at'])
                 
                 all_posts.append(post_meta)
             except yaml.YAMLError as e:
                 print(f"Error parsing YAML in {post_file}: {e}")
-                continue  # Skip to the next file if YAML parsing fails
-# Sort posts by date (newest first), considering both date and last_modified_at
+                continue
+# Sort posts by date, considering both 'last_modified_at' and 'date'
 all_sorted_posts = sorted(all_posts, key=lambda x: x.get('last_modified_at', x['date']), reverse=True)
 # Function to generate HTML for the archive
 def generate_archive_html(posts, tags):
@@ -49,7 +60,6 @@ def generate_archive_html(posts, tags):
   <meta property="og:title" content="archive">
   <meta property="og:type" content="article">
   <meta property="og:url" content="https://ib.bsb.br/archive.html">
-  
   <link href="/style.css" rel="stylesheet">
   <link href="/pagefind/pagefind-ui.css" rel="stylesheet">
   <script src="/pagefind/pagefind-ui.js"></script>
@@ -58,7 +68,6 @@ def generate_archive_html(posts, tags):
     new PagefindHighlight({ highlightParam: "highlight" });
   </script>
   <script src="/assets/js/search.js" defer></script>
-  
 </head>
 <body>
   <a class="search-input-block" id="search"></a>
@@ -86,7 +95,7 @@ def generate_archive_html(posts, tags):
       <section>
     '''
     for post in posts:
-        post_url = post.get('permalink', post.get('url'))  # Use permalink if available, otherwise url
+        post_url = post.get('permalink', post.get('url'))
         post_date = format_date(post.get('date'))
         post_title = post.get('title')
         post_last_modified = post.get('last_modified_at')
@@ -94,13 +103,9 @@ def generate_archive_html(posts, tags):
         post_tags = []
         for entry in tags:
             for p in entry['posts']:
-                if p['url'] == post_url:  # Use exact matching for post URLs
+                if p['url'] == post_url:
                     post_tags.append(entry['tag'])
-        # Format the tags
-        if post_tags:
-            tags_str = f"[{', '.join(post_tags)}]"
-        else:
-            tags_str = ''
+        tags_str = f"[{', '.join(post_tags)}]" if post_tags else ''
         # Generate the HTML for the post
         html_output += f'''
         <article>
@@ -128,7 +133,7 @@ def generate_archive_html(posts, tags):
     return html_output
 # Generate the HTML for the archive
 archive_html = generate_archive_html(all_sorted_posts, processed_tags)
-# Output the generated HTML (you can save this to a file or directly to the console)
+# Output the generated HTML
 with open('archive.html', 'w') as output_file:
     output_file.write(archive_html)
 print("Archive HTML generated successfully!")
