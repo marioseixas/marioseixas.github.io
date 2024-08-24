@@ -37,9 +37,11 @@ def process_post_file(file_path):
             post_meta = yaml.safe_load(front_matter)
             
             # Convert date fields to datetime objects
-            for date_field in ['date', 'last_modified_at']:
-                if date_field in post_meta:
-                    post_meta[date_field] = to_datetime(post_meta[date_field])
+            if 'date' in post_meta:
+                post_meta['date'] = to_datetime(post_meta['date'])
+            # The Ruby script stores the last modified date as a string
+            if 'last_modified_at_str' in post_meta:
+                post_meta['last_modified_at'] = to_datetime(post_meta['last_modified_at_str'])
             
             return post_meta
         except (yaml.YAMLError, ValueError) as e:
