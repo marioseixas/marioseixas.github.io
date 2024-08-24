@@ -52,8 +52,8 @@ jobs:
         run: |
           git config --local user.email "actions@github.com"
           git config --local user.name "GitHub Actions"
-          git add assets/data/events.json _data/processed_tags.yml
-          git commit -m "Update events.json, and processed_tags.yml" || echo "Nothing at all"
+          git add -f assets/data/events.json _data/processed_tags.yml
+          git commit --allow-empty -m "Update events.json, and processed_tags.yml" || echo "Nothing at all"
           git push origin main || echo "Nothing at all"
 
       - name: Generate archive.html with Python
@@ -63,8 +63,8 @@ jobs:
         run: |
           git config --local user.email "actions@github.com"
           git config --local user.name "GitHub Actions"
-          git add archive.html
-          git commit -m "Update archive.html" || echo "Nothing at all"
+          git add -f archive.html
+          git commit --allow-empty -m "Update archive.html" || echo "Nothing at all"
           git push origin main || echo "Nothing at all"
 
       - name: Setup Pages
