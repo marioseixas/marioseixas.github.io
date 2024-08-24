@@ -50,54 +50,54 @@ title: Tags
   </script>
   <script src="{{ '/assets/js/search.js' | relative_url }}" defer></script>
   <script>
-  document.addEventListener('DOMContentLoaded', function() {
-    const tagLinks = document.querySelectorAll('.tag-list a');
-    const backToTopLinks = document.querySelectorAll('.back-to-top');
-    
-    function smoothScroll(target, duration = 300) {
-      const targetPosition = target.getBoundingClientRect().top + window.pageYOffset;
-      const startPosition = window.pageYOffset;
-      const distance = targetPosition - startPosition;
-      let startTime = null;
+    document.addEventListener('DOMContentLoaded', function() {
+      const tagLinks = document.querySelectorAll('.tag-list a');
+      const backToTopLinks = document.querySelectorAll('.back-to-top');
+      
+      function smoothScroll(target, duration = 300) {
+        const targetPosition = target.getBoundingClientRect().top + window.pageYOffset;
+        const startPosition = window.pageYOffset;
+        const distance = targetPosition - startPosition;
+        let startTime = null;
 
-      function animation(currentTime) {
-        if (startTime === null) startTime = currentTime;
-        const timeElapsed = currentTime - startTime;
-        const run = ease(timeElapsed, startPosition, distance, duration);
-        window.scrollTo(0, run);
-        if (timeElapsed < duration) requestAnimationFrame(animation);
-      }
-
-      function ease(t, b, c, d) {
-        t /= d / 2;
-        if (t < 1) return c / 2 * t * t + b;
-        t--;
-        return -c / 2 * (t * (t - 2) - 1) + b;
-      }
-
-      requestAnimationFrame(animation);
-    }
-
-    tagLinks.forEach(link => {
-      link.addEventListener('click', function(e) {
-        e.preventDefault();
-        const targetId = this.getAttribute('href');
-        const targetElement = document.querySelector(targetId);
-        if (targetElement) {
-          smoothScroll(targetElement);
-          history.pushState(null, '', targetId);
+        function animation(currentTime) {
+          if (startTime === null) startTime = currentTime;
+          const timeElapsed = currentTime - startTime;
+          const run = ease(timeElapsed, startPosition, distance, duration);
+          window.scrollTo(0, run);
+          if (timeElapsed < duration) requestAnimationFrame(animation);
         }
-      });
-    });
 
-    backToTopLinks.forEach(link => {
-      link.addEventListener('click', function(e) {
-        e.preventDefault();
-        smoothScroll(document.body);
-        history.pushState(null, '', '#');
+        function ease(t, b, c, d) {
+          t /= d / 2;
+          if (t < 1) return c / 2 * t * t + b;
+          t--;
+          return -c / 2 * (t * (t - 2) - 1) + b;
+        }
+
+        requestAnimationFrame(animation);
+      }
+
+      tagLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+          e.preventDefault();
+          const targetId = this.getAttribute('href');
+          const targetElement = document.querySelector(targetId);
+          if (targetElement) {
+            smoothScroll(targetElement);
+            history.pushState(null, '', targetId);
+          }
+        });
+      });
+
+      backToTopLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+          e.preventDefault();
+          smoothScroll(document.body);
+          history.pushState(null, '', '#');
+        });
       });
     });
-  });
   </script>  
 </head>
 <body>
@@ -152,8 +152,8 @@ title: Tags
     </main>
   </div>
   <script>
-    // Adjusting scroll to account for sticky headers or fixed elements
-    const offsetHeight = document.querySelector('header').offsetHeight;
+    // Adjust scroll behavior to account for sticky headers
+    const headerHeight = document.querySelector('header').offsetHeight;
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       anchor.addEventListener('click', function(e) {
         e.preventDefault();
@@ -161,7 +161,7 @@ title: Tags
         const targetElement = document.getElementById(targetId);
         if (targetElement) {
           window.scrollTo({
-            top: targetElement.offsetTop - offsetHeight,
+            top: targetElement.offsetTop - headerHeight,
             behavior: 'smooth'
           });
           history.pushState(null, '', `#${targetId}`);
