@@ -1,22 +1,16 @@
 import yaml
 import os
-from datetime import datetime
-
+from datetime import datetime, date
 # Load the processed tags from the YAML file
 with open('_data/processed_tags.yml', 'r') as file:
     processed_tags = yaml.safe_load(file)
-
 # Function to format the date
-def format_date(date_str, format_str='%Y-%m-%d'):
-    date_obj = datetime.strptime(date_str, '%Y-%m-%d')
+def format_date(date_obj, format_str='%Y-%m-%d'):
     return date_obj.strftime(format_str)
-
 # Directory containing the posts
 posts_directory = '_posts/'
-
 # List to hold the post data
 all_posts = []
-
 # Read the post files and extract metadata
 for post_file in os.listdir(posts_directory):
     if post_file.endswith('.md'):  # Only process Markdown files
@@ -25,14 +19,21 @@ for post_file in os.listdir(posts_directory):
             # Assuming the post's front matter is YAML at the top of the file
             try:  # Handle potential errors in YAML parsing
                 post_meta = yaml.safe_load(post_content.split('---')[1])
+                
+                # Convert date fields to datetime objects
+                if 'date' in post_meta:
+                    if isinstance(post_meta['date'], date):
+                        post_meta['date'] = datetime.combine(post_meta['date'], datetime.min.time())
+                if 'last_modified_at' in post_meta:
+                    if isinstance(post_meta['last_modified_at'], date):
+                        post_meta['last_modified_at'] = datetime.combine(post_meta['last_modified_at'], datetime.min.time())
+                
                 all_posts.append(post_meta)
             except yaml.YAMLError as e:
                 print(f"Error parsing YAML in {post_file}: {e}")
                 continue  # Skip to the next file if YAML parsing fails
-
 # Sort posts by date (newest first), considering both date and last_modified_at
 all_sorted_posts = sorted(all_posts, key=lambda x: x.get('last_modified_at', x['date']), reverse=True)
-
 # Function to generate HTML for the archive
 def generate_archive_html(posts, tags):
     html_output = '''
@@ -41,12 +42,9 @@ def generate_archive_html(posts, tags):
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <title>archive — infoBAG</title>
-
   <link rel="canonical" href="https://ib.bsb.br/archive.html">
   <link rel="alternate" type="application/rss+xml" title="infoBAG" href="/rss.xml">
-
   <meta property="og:site_name" content="infoBAG">
   <meta property="og:title" content="archive">
   <meta property="og:type" content="article">
@@ -86,27 +84,23 @@ def generate_archive_html(posts, tags):
     <main class="tags-page">
       <img src="/assets/archive.webp" alt="archive" class="favicon">
       <section>
-
     '''
     for post in posts:
         post_url = post.get('permalink', post.get('url'))  # Use permalink if available, otherwise url
         post_date = format_date(post.get('date'))
         post_title = post.get('title')
         post_last_modified = post.get('last_modified_at')
-
         # Find the tags for the current post
         post_tags = []
         for entry in tags:
             for p in entry['posts']:
                 if p['url'] == post_url:  # Use exact matching for post URLs
                     post_tags.append(entry['tag'])
-
         # Format the tags
         if post_tags:
             tags_str = f"[{', '.join(post_tags)}]"
         else:
             tags_str = ''
-
         # Generate the HTML for the post
         html_output += f'''
         <article>
@@ -118,7 +112,6 @@ def generate_archive_html(posts, tags):
         if post_last_modified and post_last_modified != post.get('date'):
             formatted_last_modified = format_date(post_last_modified)
             html_output += f'↣ {formatted_last_modified}'
-
         html_output += f'''
                 </h3>
                 <h2><a href="{post_url}">{post_title}</a></h2>
@@ -133,13 +126,9 @@ def generate_archive_html(posts, tags):
   </html>
     '''
     return html_output
-
-
 # Generate the HTML for the archive
 archive_html = generate_archive_html(all_sorted_posts, processed_tags)
-
 # Output the generated HTML (you can save this to a file or directly to the console)
 with open('archive.html', 'w') as output_file:
     output_file.write(archive_html)
-
 print("Archive HTML generated successfully!")
