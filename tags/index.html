@@ -54,12 +54,8 @@ title: Tags
     const tagLinks = document.querySelectorAll('.tag-list a');
     const backToTopLinks = document.querySelectorAll('.back-to-top');
     
-    // Get the zoom factor
-    const zoomFactor = 1.5;  // Your current zoom factor
-
     function smoothScroll(target, duration = 300) {
-      // Adjust target position by dividing by zoomFactor
-      const targetPosition = (target.getBoundingClientRect().top + window.pageYOffset) / zoomFactor;
+      const targetPosition = target.getBoundingClientRect().top + window.pageYOffset;
       const startPosition = window.pageYOffset;
       const distance = targetPosition - startPosition;
       let startTime = null;
@@ -140,7 +136,7 @@ title: Tags
     {% cusdis_comments %}
     <main class="tagged-posts">
       {% for tag_data in site.data.processed_tags %}
-        <section id="{{ tag_data.tag | slugify }}" aria-labelledby="{{ tag_data.tag | slugify }}-heading">
+        <section class="search-link" id="{{ tag_data.tag | slugify }}" aria-labelledby="{{ tag_data.tag | slugify }}-heading">
           <h2 id="{{ tag_data.tag | slugify }}-heading">
             {{ tag_data.tag }}
             <a href="#" class="back-to-top" aria-label="Back to top">↑</a>
