@@ -133,7 +133,6 @@ title: Tags
         {% endfor %}
       </ul>
     </div>
-    {% cusdis_comments %}
     <main class="tagged-posts">
       {% for tag_data in site.data.processed_tags %}
         <section class="search-link" id="{{ tag_data.tag | slugify }}" aria-labelledby="{{ tag_data.tag | slugify }}-heading">
