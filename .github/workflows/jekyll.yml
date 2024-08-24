@@ -42,11 +42,11 @@ jobs:
             pip install pyyaml
           fi
 
-      - name: Generate archive.html with Python
-        run: python generate_archive.py
-
       - name: Run Python tags script
         run: python tags.py
+
+      - name: Generate archive.html with Python
+        run: python generate_archive.py
 
       - name: Commit and push changes
         run: |
