@@ -1,3 +1,5 @@
+# This script replaces the placeholder and clear_search text in the pagefind-ui.js file with new specified values.
+
 #!/usr/bin/env python3
 
 import re
