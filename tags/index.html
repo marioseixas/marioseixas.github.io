@@ -85,37 +85,30 @@ title: Tags
     </div>
     {% cusdis_comments %}
     <main class="tagged-posts">
-    {% for tag_data in site.data.processed_tags %}
-      <section class="search-link" id="{{ tag_data.tag | slugify }}" aria-labelledby="{{ tag_data.tag | slugify }}-heading">
-        <h2 id="{{ tag_data.tag | slugify }}-heading">
-          {{ tag_data.tag }}
-          <a href="#" class="back-to-top" aria-label="Back to top">↑</a>
-        </h2>
-        <ul>
-          {% for post in tag_data.posts %}
-            <li>
-              <a href="{{ post.url }}">
-                {% assign should_highlight = false %}
-                {% assign current_tag = tag_data.tag | downcase %}
-                {% for post_tag in post.tags %}
-                  {% assign normalized_post_tag = post_tag | downcase %}
-                  {% if normalized_post_tag == current_tag or normalized_post_tag contains current_tag %}
-                    {% assign should_highlight = true %}
-                    {% break %}
-                  {% endif %}
-                {% endfor %}
-                {% if should_highlight %}
-                  <mark>{{ post.title }}</mark>
-                {% else %}
-                  {{ post.title }}
-                {% endif %}
-              </a>
-            </li>
-          {% endfor %}
-        </ul>
-      </section>
-    {% endfor %}
-  </main>
+  {% for tag_data in site.data.processed_tags %}
+    <section class="search-link" id="{{ tag_data.tag | slugify }}" aria-labelledby="{{ tag_data.tag | slugify }}-heading">
+      <h2 id="{{ tag_data.tag | slugify }}-heading">
+        {{ tag_data.tag }}
+        <a href="#" class="back-to-top" aria-label="Back to top">↑</a>
+      </h2>
+      <ul>
+        {% for post in tag_data.posts %}
+          <li>
+            <a href="{{ post.url }}">
+              {% assign post_tags = post.tags | join: ',' | downcase %}  {# Combine tags into a single string for case-insensitive comparison #}
+              {% assign current_tag = tag_data.tag | downcase %}  {# Convert current tag to lowercase #}
+              {% if post_tags contains current_tag %}  {# Highlight if the post has the tag (exact or hierarchical match) #}
+                <mark>{{ post.title }}</mark>
+              {% else %}
+                {{ post.title }}
+              {% endif %}
+            </a>
+          </li>
+        {% endfor %}
+      </ul>
+    </section>
+  {% endfor %}
+</main>
   </div>
 </body>
 </html>
