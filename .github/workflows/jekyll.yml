@@ -41,12 +41,12 @@ jobs:
           else
             pip install pyyaml
           fi
-
-      - name: Run Python tags script
-        run: python tags.py        
-
-      - name: Run Python script
-        run: python script.py
+          
+      - name: Processes markdown files in a specified directory to extract and organize tags, including nested tags, and outputs the structured tag data to a YAML file
+        run: python tags.py
+        
+      - name: Fetches calendar events from a specified URL using HTTP Digest Authentication and saves them as a JSON file
+        run: python events.py
 
       - name: Commit and push changes
         run: |
@@ -54,17 +54,6 @@ jobs:
           git config --local user.name "GitHub Actions"
           git add -f assets/data/events.json _data/processed_tags.yml
           git commit --allow-empty -m "Update events.json, and processed_tags.yml" || echo "Nothing at all"
-          git push origin main || echo "Nothing at all"
-
-      - name: Generate archive.html with Python
-        run: python generate_archive.py
-
-      - name: Commit and push changes
-        run: |
-          git config --local user.email "actions@github.com"
-          git config --local user.name "GitHub Actions"
-          git add -f archive.html
-          git commit --allow-empty -m "Update archive.html" || echo "Nothing at all"
           git push origin main || echo "Nothing at all"
 
       - name: Setup Pages
@@ -82,11 +71,8 @@ jobs:
         run: |
           npx -y pagefind --site ${{ github.workspace }}/_site --output-path ${{ github.workspace }}/_site/pagefind
 
-      - name: Run find and replace script (Python)
+      - name: Replaces the placeholder and clear_search text in the pagefind-ui.js file with new specified values
         run: python modify-pagefind-ui.py
-
-      - name: List _site directory contents
-        run: ls -la ${{ github.workspace }}/_site
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
