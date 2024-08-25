@@ -1,3 +1,5 @@
+# This script fetches calendar events from a specified URL using HTTP Digest Authentication and saves them as a JSON file.
+
 import requests
 from requests.auth import HTTPDigestAuth
 import json
