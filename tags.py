@@ -1,3 +1,5 @@
+# This script processes markdown files in a specified directory to extract and organize tags, including nested tags, and outputs the structured tag data to a YAML file.
+
 import os
 import yaml
 from collections import defaultdict
