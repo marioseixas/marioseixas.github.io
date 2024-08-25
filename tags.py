@@ -1,9 +1,11 @@
-# This script processes markdown files in a specified directory to extract and organize tags, including nested tags, and outputs the structured tag data to a YAML file.
-
 import os
 import yaml
+import logging
 from collections import defaultdict
 from datetime import datetime
+
+# Configure logging
+logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
 def extract_frontmatter(file_content):
     """Extracts the YAML frontmatter from a markdown file."""
@@ -25,6 +27,8 @@ def process_tags(posts_dir, output_file):
     """
     tag_data = defaultdict(list)
 
+    logging.info(f"Processing markdown files in directory: {posts_dir}")
+
     for filename in os.listdir(posts_dir):
         if filename.endswith('.md'):
             file_path = os.path.join(posts_dir, filename)
@@ -33,13 +37,13 @@ def process_tags(posts_dir, output_file):
 
             frontmatter = extract_frontmatter(file_content)
             if not frontmatter:
-                print(f"Warning: No frontmatter found in {filename}")
+                logging.warning(f"No frontmatter found in {filename}")
                 continue
 
             try:
                 post_data = yaml.safe_load(frontmatter)
             except yaml.YAMLError as e:
-                print(f"Error parsing frontmatter in {filename}: {e}")
+                logging.error(f"Error parsing frontmatter in {filename}: {e}")
                 continue
 
             tags = post_data.get('tags', [])
@@ -54,7 +58,7 @@ def process_tags(posts_dir, output_file):
             try:
                 post_date = datetime.strptime('-'.join(filename.split('-')[:3]), '%Y-%m-%d')
             except ValueError:
-                print(f"Warning: Unable to parse date from filename {filename}")
+                logging.warning(f"Unable to parse date from filename {filename}")
                 post_date = datetime.min
 
             for tag in tags:
@@ -87,6 +91,8 @@ def process_tags(posts_dir, output_file):
     # Write the processed tags to a YAML file
     with open(output_file, 'w', encoding='utf-8') as f:
         yaml.dump([{'tag': tag, 'posts': posts} for tag, posts in sorted_tag_data], f, allow_unicode=True)
+
+    logging.info(f"Processed tags have been written to {output_file}")
 
 if __name__ == '__main__':
     process_tags('_posts', '_data/processed_tags.yml')
