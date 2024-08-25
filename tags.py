@@ -19,19 +19,27 @@ def extract_frontmatter(file_content):
     return frontmatter
 
 def process_tags(posts_dir, output_file):
-    """Processes tags from markdown files, handling nested tags and highlighting exact matches.
+    """Processes tags from markdown files, handling nested tags, highlighting exact matches, and preventing duplicates using file paths.
 
     Args:
         posts_dir (str): Directory containing markdown files.
         output_file (str): Path to the output YAML file.
     """
     tag_data = defaultdict(list)
+    seen_posts = set() # Set to store unique post file paths
 
     logging.info(f"Processing markdown files in directory: {posts_dir}")
 
     for filename in os.listdir(posts_dir):
         if filename.endswith('.md'):
             file_path = os.path.join(posts_dir, filename)
+
+            # Duplicate prevention: Skip if this file has already been processed
+            if file_path in seen_posts: 
+                logging.warning(f"Skipping duplicate post: {filename}")
+                continue
+            seen_posts.add(file_path)
+
             with open(file_path, 'r', encoding='utf-8') as f:
                 file_content = f.read()
 
@@ -64,7 +72,6 @@ def process_tags(posts_dir, output_file):
             for tag in tags:
                 tag_parts = [part.strip() for part in tag.split('>')]
 
-                # Generate all parent tags for the nested structure
                 for i in range(len(tag_parts)):
                     partial_tag = '>'.join(tag_parts[:i+1])
                     post_entry = {
@@ -72,18 +79,11 @@ def process_tags(posts_dir, output_file):
                         'url': url,
                         'highlighted': partial_tag == tag  # Highlight if exact match
                     }
+                    tag_data[partial_tag].append(post_entry) # No duplicate check needed here now
 
-                    if post_entry not in tag_data[partial_tag]:
-                        tag_data[partial_tag].append({
-                            **post_entry,
-                            'date': post_date
-                        })
-
-    # Sort posts within each tag by date, most recent first
+    # Sort posts within each tag by date (most recent first)
     for tag, posts in tag_data.items():
-        tag_data[tag] = sorted(posts, key=lambda x: x['date'], reverse=True)
-        for post in tag_data[tag]:
-            del post['date']
+        tag_data[tag] = sorted(posts, key=lambda x: x.get('date', datetime.min), reverse=True)
 
     # Sort tags alphabetically
     sorted_tag_data = sorted(tag_data.items())
