@@ -693,6 +693,9 @@
   - highlighted: true
     title: Computed-Score Priority in MLO
     url: /computed-score-priority-in-mlo
+  - highlighted: false
+    title: MLO URL schemes
+    url: /mlo-url-schemes
   - highlighted: true
     title: Task Prioritization
     url: /tasks-mermaid
@@ -727,6 +730,11 @@
     title: habits
     url: /habits
   tag: tasks
+- posts:
+  - highlighted: true
+    title: MLO URL schemes
+    url: /mlo-url-schemes
+  tag: tasks>iphone
 - posts:
   - highlighted: true
     title: Avaliação Funcional I/XV
