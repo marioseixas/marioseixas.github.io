@@ -84,20 +84,19 @@ title: Tags
       </ul>
     </div>
     {% cusdis_comments %}
-    <main class="tagged-posts">
-  {% for tag_data in site.data.processed_tags %}
-    <section class="search-link" id="{{ tag_data.tag | slugify }}" aria-labelledby="{{ tag_data.tag | slugify }}-heading">
-      <h2 id="{{ tag_data.tag | slugify }}-heading">
-        {{ tag_data.tag }}
-        <a href="#" class="back-to-top" aria-label="Back to top">↑</a>
-      </h2>
-      <ul>
-        {% for post in tag_data.posts %}
-          <li>
-            <a href="{{ post.url }}">
-              {% assign current_tag = tag_data.tag | downcase %}
-              {% assign should_highlight = false %} {# Default to not highlighting #}
-              {% if post.tags.size %} {# Tags are an array #}
+  <main class="tagged-posts">
+    {% for tag_data in site.data.processed_tags %}
+      <section class="search-link" id="{{ tag_data.tag | slugify }}" aria-labelledby="{{ tag_data.tag | slugify }}-heading">
+        <h2 id="{{ tag_data.tag | slugify }}-heading">
+          {{ tag_data.tag }}
+          <a href="#" class="back-to-top" aria-label="Back to top">↑</a>
+        </h2>
+        <ul>
+          {% for post in tag_data.posts %}
+            <li>
+              <a href="{{ post.url }}">
+                {% assign should_highlight = false %}
+                {% assign current_tag = tag_data.tag | downcase %}
                 {% for post_tag in post.tags %}
                   {% assign normalized_post_tag = post_tag | downcase %}
                   {% if normalized_post_tag == current_tag %}
@@ -105,25 +104,22 @@ title: Tags
                     {% break %}
                   {% endif %}
                 {% endfor %}
-              {% else %} {# Tags are a string #}
-                {% assign normalized_post_tag = post.tags | downcase %}
-                {% if normalized_post_tag == current_tag %}
-                  {% assign should_highlight = true %}
+                {% if should_highlight %}
+                  <mark>{{ post.title }}</mark>
+                {% else %}
+                  {{ post.title }}
                 {% endif %}
-              {% endif %}
-              {% if should_highlight %}
-                <mark>{{ post.title }}</mark>
-              {% else %}
-                {{ post.title }}
-              {% endif %}
-              <span style="display:none;">Current Tag: {{ current_tag }}, Post Tags: {% if post.tags.size %}{{ post.tags | join: ', ' }}{% else %}{{ post.tags }}{% endif %}</span> 
-            </a>
-          </li>
-        {% endfor %}
-      </ul>
-    </section>
-  {% endfor %}
-</main>
+                <!-- Debugging output -->
+                <span style="display:none;">Current Tag: {{ current_tag }}, Post Tags: {{ post.tags | join: ', ' }}</span>
+              </a>
+            </li>
+          {% endfor %}
+        </ul>
+      </section>
+    {% endfor %}
+    <!-- Debugging output for processed tags -->
+    <span style="display:none;">Processed Tags: {{ site.data.processed_tags | inspect }}</span>
+  </main>
   </div>
 </body>
 </html>
