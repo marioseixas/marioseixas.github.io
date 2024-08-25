@@ -17,44 +17,14 @@ def extract_frontmatter(file_content):
     return frontmatter
 
 def process_tags(posts_dir, output_file):
-    """Processes tags from markdown files, handling both single-level and nested tags.
+    """Processes tags from markdown files, handling nested tags and highlighting exact matches.
 
     Args:
         posts_dir (str): Directory containing markdown files.
-        output_file (str): Path to the output YAML file where processed tags will be saved.
+        output_file (str): Path to the output YAML file.
     """
     tag_data = defaultdict(list)
-    existing_single_tags = set()
 
-    # First Pass: Identify all pre-existing single-level tags
-    for filename in os.listdir(posts_dir):
-        if filename.endswith('.md'):
-            file_path = os.path.join(posts_dir, filename)
-            with open(file_path, 'r', encoding='utf-8') as f:
-                file_content = f.read()
-
-            frontmatter = extract_frontmatter(file_content)
-            if not frontmatter:
-                print(f"Warning: No frontmatter found in {filename}")
-                continue
-
-            try:
-                post_data = yaml.safe_load(frontmatter)
-            except yaml.YAMLError as e:
-                print(f"Error parsing frontmatter in {filename}: {e}")
-                continue
-
-            tags = post_data.get('tags', [])
-            if isinstance(tags, str):
-                tags = [tag.strip() for tag in tags.split(',')]
-            elif not isinstance(tags, list):
-                tags = [str(tags)]
-
-            for tag in tags:
-                if '>' not in tag:
-                    existing_single_tags.add(tag.strip())
-
-    # Second Pass: Process tags and establish connections with existing single-level tags
     for filename in os.listdir(posts_dir):
         if filename.endswith('.md'):
             file_path = os.path.join(posts_dir, filename)
@@ -89,13 +59,14 @@ def process_tags(posts_dir, output_file):
 
             for tag in tags:
                 tag_parts = [part.strip() for part in tag.split('>')]
-                
+
                 # Generate all parent tags for the nested structure
                 for i in range(len(tag_parts)):
                     partial_tag = '>'.join(tag_parts[:i+1])
                     post_entry = {
                         'title': title,
-                        'url': url
+                        'url': url,
+                        'highlighted': partial_tag == tag  # Highlight if exact match
                     }
 
                     if post_entry not in tag_data[partial_tag]:
@@ -103,14 +74,6 @@ def process_tags(posts_dir, output_file):
                             **post_entry,
                             'date': post_date
                         })
-
-                    # Ensure proper association with existing single-level tags
-                    if i > 0 and tag_parts[i] in existing_single_tags:
-                        if post_entry not in tag_data[tag_parts[i]]:
-                            tag_data[tag_parts[i]].append({
-                                **post_entry,
-                                'date': post_date
-                            })
 
     # Sort posts within each tag by date, most recent first
     for tag, posts in tag_data.items():
