@@ -96,20 +96,25 @@ title: Tags
           <li>
             <a href="{{ post.url }}">
               {% assign current_tag = tag_data.tag | downcase %}
-              {% if post.tags.size %} {# If tags are an array #}
-                {% assign matching_tags = post.tags | where: 'downcase', current_tag  %}
-                {% if matching_tags.size > 0 %}
-                  <mark>{{ post.title }}</mark>
-                {% else %}
-                  {{ post.title }}
+              {% assign should_highlight = false %} {# Default to not highlighting #}
+              {% if post.tags.size %} {# Tags are an array #}
+                {% for post_tag in post.tags %}
+                  {% assign normalized_post_tag = post_tag | downcase %}
+                  {% if normalized_post_tag == current_tag %}
+                    {% assign should_highlight = true %}
+                    {% break %}
+                  {% endif %}
+                {% endfor %}
+              {% else %} {# Tags are a string #}
+                {% assign normalized_post_tag = post.tags | downcase %}
+                {% if normalized_post_tag == current_tag %}
+                  {% assign should_highlight = true %}
                 {% endif %}
-              {% else %} {# If tags are a string #}
-                {% assign post_tag = post.tags | downcase %}
-                {% if post_tag == current_tag %}
-                  <mark>{{ post.title }}</mark>
-                {% else %}
-                  {{ post.title }}
-                {% endif %}
+              {% endif %}
+              {% if should_highlight %}
+                <mark>{{ post.title }}</mark>
+              {% else %}
+                {{ post.title }}
               {% endif %}
               <span style="display:none;">Current Tag: {{ current_tag }}, Post Tags: {% if post.tags.size %}{{ post.tags | join: ', ' }}{% else %}{{ post.tags }}{% endif %}</span> 
             </a>
