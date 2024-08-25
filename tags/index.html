@@ -95,9 +95,9 @@ title: Tags
         {% for post in tag_data.posts %}
           <li>
             <a href="{{ post.url }}">
-              {% assign post_tags = post.tags | join: ',' | downcase %}  {# Combine tags into a single string for case-insensitive comparison #}
-              {% assign current_tag = tag_data.tag | downcase %}  {# Convert current tag to lowercase #}
-              {% if post_tags contains current_tag %}  {# Highlight if the post has the tag (exact or hierarchical match) #}
+              {% assign post_tags = post.tags | map: 'downcase' %} {# Convert all tags to lowercase for case-insensitive comparison #}
+              {% assign current_tag = tag_data.tag | downcase %} {# Convert current tag to lowercase #}
+              {% if post_tags contains current_tag %} {# Highlight if the post has the exact tag #}
                 <mark>{{ post.title }}</mark>
               {% else %}
                 {{ post.title }}
