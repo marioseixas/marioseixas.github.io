@@ -24,8 +24,6 @@
     title: OpenAI Token Limits
     url: /openai-token-limits
   tag: AI
-- posts: []
-  tag: AI>prompt
 - posts:
   - date: &id016 2018-02-15 00:00:00
     highlighted: true
@@ -204,10 +202,6 @@
     title: Concursos DELTA iminentes
     url: /concursos-delta
   tag: edital
-- posts: []
-  tag: edital>direito
-- posts: []
-  tag: edital>direito>processual-penal
 - posts:
   - date: &id017 2024-07-05 00:00:00
     highlighted: true
@@ -240,10 +234,6 @@
     title: Board games
     url: /board-games
   tag: fatherhood
-- posts: []
-  tag: github
-- posts: []
-  tag: github>jekyll
 - posts:
   - date: 2024-08-01 00:00:00
     highlighted: true
@@ -684,12 +674,6 @@
     title: Longer inputs on WHISPER API
     url: /longer-inputs-on-whisper-api
   tag: scripts>AI
-- posts: []
-  tag: scripts>cloud
-- posts: []
-  tag: scripts>google-apps-script
-- posts: []
-  tag: scripts>mobile
 - posts:
   - date: 2021-09-01 00:00:00
     highlighted: true
@@ -704,12 +688,6 @@
     title: VENDA CARD3 04,02% a.m.
     url: /sell-card3
   tag: sell
-- posts: []
-  tag: software
-- posts: []
-  tag: software>cloud
-- posts: []
-  tag: software>mobile
 - posts:
   - date: 2018-02-26 00:00:00
     highlighted: true
@@ -766,8 +744,6 @@
     title: chess analysis workflow
     url: /chess-flow
   tag: tasks
-- posts: []
-  tag: tasks>iphone
 - posts:
   - date: 2024-07-14 00:00:00
     highlighted: true
