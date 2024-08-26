@@ -4,6 +4,7 @@ title: infoBAG
 url: https://ib.bsb.br
 enforce_ssl: ib.bsb.br
 baseurl: ""
+incremental: true
 
 permalink: "/:slug/"
 relative_permalinks: false
