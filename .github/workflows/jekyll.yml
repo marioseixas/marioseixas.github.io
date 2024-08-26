@@ -17,6 +17,7 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -41,11 +42,29 @@ jobs:
           else
             pip install pyyaml
           fi
-          
-      - name: Processes markdown files in a specified directory to extract and organize tags, including nested tags, and outputs the structured tag data to a YAML file
+
+      - name: Cache tag data
+        uses: actions/cache@v4
+        with:
+          path: .cache/tag_data
+          key: tag-data-${{ github.sha }}
+          save-always: true
+          restore-keys: |
+            tag-data-
+
+      - name: Process markdown files for tags
         run: python tags.py
-        
-      - name: Fetches calendar events from a specified URL using HTTP Digest Authentication and saves them as a JSON file
+
+      - name: Cache Jekyll _site directory
+        uses: actions/cache@v4
+        with:
+          path: _site
+          key: jekyll-site-${{ github.sha }}
+          save-always: true
+          restore-keys: |
+            jekyll-site-
+
+      - name: Fetch calendar events
         run: python events.py
 
       - name: Commit and push changes
@@ -53,8 +72,8 @@ jobs:
           git config --local user.email "actions@github.com"
           git config --local user.name "GitHub Actions"
           git add -f assets/data/events.json _data/processed_tags.yml
-          git commit --allow-empty -m "Update events.json, and processed_tags.yml" || echo "Nothing at all"
-          git push origin main || echo "Nothing at all"
+          git commit --allow-empty -m "Update events.json, and processed_tags.yml" || echo "Nothing to commit"
+          git push origin main || echo "Nothing to push"
 
       - name: Setup Pages
         id: pages
@@ -71,7 +90,7 @@ jobs:
         run: |
           npx -y pagefind --site ${{ github.workspace }}/_site --output-path ${{ github.workspace }}/_site/pagefind
 
-      - name: Replaces the placeholder and clear_search text in the pagefind-ui.js file with new specified values
+      - name: Modify Pagefind UI
         run: python modify-pagefind-ui.py
 
       - name: Upload artifact
