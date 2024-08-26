@@ -13,7 +13,6 @@ THRESHOLD = 0  # Adjust this value as needed
 # Dictionary to store tag frequencies
 tag_frequency = defaultdict(int)
 
-
 def extract_frontmatter(file_content):
     """Extracts the YAML frontmatter from a markdown file."""
     frontmatter = ""
@@ -24,7 +23,6 @@ def extract_frontmatter(file_content):
                 frontmatter = '\n'.join(content_lines[1:i])
                 break
     return frontmatter
-
 
 def process_tags(posts_dir, output_file):
     """Processes tags from markdown files, handling nested tags, highlighting exact matches, and preventing duplicates using file paths."""
@@ -82,19 +80,6 @@ def process_tags(posts_dir, output_file):
                 tag_parts = [part.strip() for part in tag.split('>')]
                 full_tag_path = '>'.join(tag_parts)
 
-                # Apply threshold for partial tags
-                for i in range(1, len(tag_parts) + 1):
-                    for j in range(len(tag_parts) - i + 1):
-                        partial_tag = '>'.join(tag_parts[j:j + i])
-                        if all(tag_frequency[part] >= THRESHOLD for part in tag_parts[j:j + i]):
-                            post_entry = {
-                                'title': title,
-                                'url': url,
-                                'highlighted': partial_tag == tag,
-                                'date': post_date
-                            }
-                            tag_data[partial_tag]['posts'].append(post_entry)
-
                 # Store the post under the current tag
                 post_entry = {
                     'title': title,
@@ -107,7 +92,7 @@ def process_tags(posts_dir, output_file):
                 # Establish parent-child relationships
                 for i in range(1, len(tag_parts)):
                     parent_tag = '>'.join(tag_parts[:i])
-                    child_tag = '>'.join(tag_parts[:i + 1])
+                    child_tag = '>'.join(tag_parts[:i+1])
                     tag_data[child_tag]['parents'].append(parent_tag)
                     tag_data[parent_tag]['children'].append(child_tag)
 
@@ -117,12 +102,18 @@ def process_tags(posts_dir, output_file):
                         tag_data[full_tag_path]['related'].add(other_tag)
                         tag_data[other_tag]['related'].add(full_tag_path)
 
-    # Sort posts within each tag by date (most recent first)
+    # Apply threshold for filtering tags
+    filtered_tag_data = defaultdict(lambda: {'parents': [], 'children': [], 'related': set(), 'posts': []})
     for tag, data in tag_data.items():
+        if all(tag_frequency[part] >= THRESHOLD for part in tag.split('>')):
+            filtered_tag_data[tag] = data
+
+    # Sort posts within each tag by date (most recent first)
+    for tag, data in filtered_tag_data.items():
         data['posts'] = sorted(data['posts'], key=lambda x: x.get('date', datetime.min), reverse=True)
 
-    # Sort tags alphabetically (this was added to improve consistency)
-    sorted_tag_data = sorted(tag_data.items())
+    # Sort tags alphabetically before writing to YAML
+    sorted_tag_data = sorted(filtered_tag_data.items())
 
     # Write the processed tags to a YAML file
     with open(output_file, 'w', encoding='utf-8') as f:
@@ -130,8 +121,7 @@ def process_tags(posts_dir, output_file):
 
     logging.info(f"Processed tags have been written to {output_file}")
 
-    return tag_data
-
+    return filtered_tag_data
 
 def generate_mermaid_graph(tag_data):
     """Generates Mermaid graph code for the given tag structure."""
@@ -151,18 +141,16 @@ def generate_mermaid_graph(tag_data):
                 graph += f"{safe_tag_name} --- {safe_related_name}\n"
     return graph
 
-
 if __name__ == '__main__':
-    # Use environment variables to determine paths (this was changed for flexibility)
+    # Use environment variables to determine paths
     posts_dir = os.path.join(os.getenv('GITHUB_WORKSPACE', ''), '_posts')
     output_file = os.path.join(os.getenv('GITHUB_WORKSPACE', ''), '_data/processed_tags.yml')
-    mermaid_output_file = os.path.join(os.getenv('GITHUB_WORKSPACE', ''), '_includes/tag_graph.html')
-
+    
     tag_data = process_tags(posts_dir, output_file)
     mermaid_graph = generate_mermaid_graph(tag_data)
 
     # Write the Mermaid graph to a file
-    with open(mermaid_output_file, 'w', encoding='utf-8') as f:
+    with open(os.path.join(os.getenv('GITHUB_WORKSPACE', ''), '_includes/tag_graph.html'), 'w', encoding='utf-8') as f:
         f.write(f"<div class='mermaid'>\n{mermaid_graph}\n</div>")
 
-    logging.info(f"Mermaid graph has been written to {mermaid_output_file}")
+    logging.info("Mermaid graph has been written to _includes/tag_graph.html")
