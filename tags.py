@@ -21,86 +21,89 @@ def extract_frontmatter(file_content):
                 break
     return frontmatter
 
+def generate_partial_tags(tag):
+    """Generates all partial tags for a given tag."""
+    parts = tag.split('>')
+    partial_tags = []
+    for i in range(1, len(parts) + 1):
+        for j in range(len(parts) - i + 1):
+            partial_tags.append('>'.join(parts[j:j+i]))
+    return partial_tags
+
 def process_tags(posts_dir, output_file):
-    """Processes tags from markdown files, handling nested tags, highlighting exact matches, and preventing duplicates using file paths."""
+    """Processes tags from markdown files, handling nested tags, highlighting exact matches, and preventing duplicates."""
 
     tag_frequency = defaultdict(int)
     all_posts = []
-    seen_posts = set()  # Set to store unique post file paths
+    seen_posts = set()
 
     logging.info(f"Processing markdown files in directory: {posts_dir}")
 
     # First pass: Count tag frequencies and collect all posts
     for filename in os.listdir(posts_dir):
-        if filename.endswith('.md'):
-            file_path = os.path.join(posts_dir, filename)
+        if not filename.endswith('.md'):
+            continue
 
-            # Duplicate prevention: Skip if this file has already been processed
-            if file_path in seen_posts:
-                logging.warning(f"Skipping duplicate post: {filename}")
-                continue
-            seen_posts.add(file_path)
+        file_path = os.path.join(posts_dir, filename)
+        if file_path in seen_posts:
+            logging.warning(f"Skipping duplicate post: {filename}")
+            continue
+        seen_posts.add(file_path)
 
-            with open(file_path, 'r', encoding='utf-8') as f:
-                file_content = f.read()
+        with open(file_path, 'r', encoding='utf-8') as f:
+            file_content = f.read()
 
-            frontmatter = extract_frontmatter(file_content)
-            if not frontmatter:
-                logging.warning(f"No frontmatter found in {filename}")
-                continue
+        frontmatter = extract_frontmatter(file_content)
+        if not frontmatter:
+            logging.warning(f"No frontmatter found in {filename}")
+            continue
 
-            try:
-                post_data = yaml.safe_load(frontmatter)
-            except yaml.YAMLError as e:
-                logging.error(f"Error parsing frontmatter in {filename}: {e}")
-                continue
+        try:
+            post_data = yaml.safe_load(frontmatter)
+        except yaml.YAMLError as e:
+            logging.error(f"Error parsing frontmatter in {filename}: {e}")
+            continue
 
-            tags = post_data.get('tags', [])
-            if isinstance(tags, str):
-                tags = [tag.strip() for tag in tags.split(',')]
-            elif not isinstance(tags, list):
-                tags = [str(tags)]
+        tags = post_data.get('tags', [])
+        if isinstance(tags, str):
+            tags = [tag.strip() for tag in tags.split(',')]
+        elif not isinstance(tags, list):
+            tags = [str(tags)]
 
-            # Count tag frequencies
-            for tag in tags:
-                tag_parts = [part.strip() for part in tag.split('>')]
-                for i in range(1, len(tag_parts) + 1):
-                    for j in range(len(tag_parts) - i + 1):
-                        partial_tag = '>'.join(tag_parts[j:j+i])
-                        tag_frequency[partial_tag] += 1
+        # Count tag frequencies including partial tags
+        for tag in tags:
+            for partial_tag in generate_partial_tags(tag):
+                tag_frequency[partial_tag] += 1
 
-            title = post_data.get('title', os.path.splitext(filename)[0])
-            url = '/' + '-'.join(filename.split('-')[3:]).replace('.md', '')
+        title = post_data.get('title', os.path.splitext(filename)[0])
+        url = '/' + '-'.join(filename.split('-')[3:]).replace('.md', '')
 
-            try:
-                post_date = datetime.strptime('-'.join(filename.split('-')[:3]), '%Y-%m-%d')
-            except ValueError:
-                logging.warning(f"Unable to parse date from filename {filename}")
-                post_date = datetime.min
+        try:
+            post_date = datetime.strptime('-'.join(filename.split('-')[:3]), '%Y-%m-%d')
+        except ValueError:
+            logging.warning(f"Unable to parse date from filename {filename}")
+            post_date = datetime.min
 
-            all_posts.append({
-                'title': title,
-                'url': url,
-                'date': post_date,
-                'tags': tags
-            })
+        all_posts.append({
+            'title': title,
+            'url': url,
+            'date': post_date,
+            'tags': tags
+        })
 
     # Second pass: Generate tag data based on frequency threshold
     tag_data = defaultdict(list)
     for post in all_posts:
         for tag in post['tags']:
-            tag_parts = [part.strip() for part in tag.split('>')]
-            for i in range(1, len(tag_parts) + 1):
-                for j in range(len(tag_parts) - i + 1):
-                    partial_tag = '>'.join(tag_parts[j:j+i])
-                    if tag_frequency[partial_tag] >= THRESHOLD:
-                        post_entry = {
-                            'title': post['title'],
-                            'url': post['url'],
-                            'highlighted': partial_tag == tag,
-                            'date': post['date']
-                        }
-                        tag_data[partial_tag].append(post_entry)
+            for partial_tag in generate_partial_tags(tag):
+                if tag_frequency[partial_tag] >= THRESHOLD:
+                    post_entry = {
+                        'title': post['title'],
+                        'url': post['url'],
+                        'highlighted': partial_tag == tag,
+                        'date': post['date']
+                    }
+                    tag_data[partial_tag].append(post_entry)
 
     # Sort posts within each tag by date (most recent first)
     for tag, posts in tag_data.items():
