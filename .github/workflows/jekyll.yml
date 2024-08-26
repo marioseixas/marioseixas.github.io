@@ -46,7 +46,7 @@ jobs:
       - name: Cache tag data
         uses: actions/cache@v4
         with:
-          path: ${{ github.workspace }}/_site/_data/processed_tags
+          path: ${{ github.workspace }}/.jekyll-cache
           key: tag-data-${{ github.sha }}
           save-always: true
           restore-keys: |
