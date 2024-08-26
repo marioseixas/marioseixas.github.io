@@ -46,7 +46,7 @@ jobs:
       - name: Cache tag data
         uses: actions/cache@v4
         with:
-          path: ${{ github.workspace }}/.cache/tag_data
+          path: ${{ github.workspace }}/_site/_data/processed_tags
           key: tag-data-${{ github.sha }}
           save-always: true
           restore-keys: |
