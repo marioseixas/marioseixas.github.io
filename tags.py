@@ -8,7 +8,7 @@ from datetime import datetime
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
 # Threshold for generating permutations
-THRESHOLD = 2  # Adjust this value as needed
+THRESHOLD = 0  # Adjust this value as needed
 
 # Dictionary to store tag frequencies
 tag_frequency = defaultdict(int)
