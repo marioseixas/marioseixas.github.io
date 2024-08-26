@@ -113,8 +113,8 @@ def process_tags(posts_dir, output_file):
                 # Apply threshold for partial tags
                 for i in range(1, len(tag_parts) + 1):
                     for j in range(len(tag_parts) - i + 1):
-                        partial_tag = '>'.join(tag_parts[j:j+i])
-                        if all(tag_frequency[part] >= THRESHOLD for part in tag_parts[j:j+i]):
+                        partial_tag = '>'.join(tag_parts[j:j + i])
+                        if all(tag_frequency[part] >= THRESHOLD for part in tag_parts[j:j + i]):
                             post_entry = {
                                 'title': title,
                                 'url': url,
@@ -126,7 +126,7 @@ def process_tags(posts_dir, output_file):
                 # Establish parent-child relationships
                 for i in range(1, len(tag_parts)):
                     parent_tag = '>'.join(tag_parts[:i])
-                    child_tag = '>'.join(tag_parts[:i+1])
+                    child_tag = '>'.join(tag_parts[:i + 1])
                     tag_data[child_tag]['parents'].add(parent_tag)
                     tag_data[parent_tag]['children'].add(child_tag)
 
@@ -181,14 +181,18 @@ def generate_mermaid_graph(tag_data):
 
     return graph
 
+
 if __name__ == '__main__':
     # Use environment variables to determine paths
     posts_dir = os.path.join(os.getenv('GITHUB_WORKSPACE', ''), '_posts')
     output_file = os.path.join(os.getenv('GITHUB_WORKSPACE', ''), '_data/processed_tags.yml')
+    mermaid_output_file = os.path.join(os.getenv('GITHUB_WORKSPACE', ''), '_includes/tag_graph.html')
 
     tag_data = process_tags(posts_dir, output_file)
     mermaid_graph = generate_mermaid_graph(tag_data)
 
     # Write the Mermaid graph to a file
-    with open(os.path.join(os.getenv('GITHUB_WORKSPACE', ''), '_includes/tag_graph.html'), 'w', encoding='utf-8') as f:
+    with open(mermaid_output_file, 'w', encoding='utf-8') as f:
         f.write(f"<div class='mermaid'>\n{mermaid_graph}\n</div>")
+
+    logging.info(f"Mermaid graph has been written to {mermaid_output_file}")
