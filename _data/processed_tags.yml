@@ -286,6 +286,8 @@
     title: Procedimento dos Crimes da Competência do Tribunal do Júri
     url: /juri
   tag: edital>direito
+- posts: []
+  tag: edital>direito>processual-penal
 - posts:
   - date: &id031 2024-07-05 00:00:00
     highlighted: true
@@ -858,6 +860,14 @@
     title: github.com/py-pdf
     url: /pypdf
   tag: scripts
+- posts: []
+  tag: scripts>AI
+- posts: []
+  tag: scripts>cloud
+- posts: []
+  tag: scripts>google-apps-script
+- posts: []
+  tag: scripts>mobile
 - posts:
   - date: 2021-11-03 00:00:00
     highlighted: true
@@ -894,6 +904,8 @@
     title: dasel context guide
     url: /dasel
   tag: software
+- posts: []
+  tag: software>cloud
 - posts:
   - date: *id009
     highlighted: true
@@ -972,6 +984,8 @@
     title: chess analysis workflow
     url: /chess-flow
   tag: tasks
+- posts: []
+  tag: tasks>iphone
 - posts:
   - date: 2024-07-14 00:00:00
     highlighted: true
