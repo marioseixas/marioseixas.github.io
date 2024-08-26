@@ -46,7 +46,7 @@ jobs:
       - name: Cache tag data
         uses: actions/cache@v4
         with:
-          path: .cache/tag_data
+          path: ${{ github.workspace }}/.cache/tag_data
           key: tag-data-${{ github.sha }}
           save-always: true
           restore-keys: |
@@ -58,7 +58,7 @@ jobs:
       - name: Cache Jekyll _site directory
         uses: actions/cache@v4
         with:
-          path: _site
+          path: ${{ github.workspace }}/_site
           key: jekyll-site-${{ github.sha }}
           save-always: true
           restore-keys: |
