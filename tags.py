@@ -7,6 +7,12 @@ from datetime import datetime
 # Configure logging
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
+# Threshold for generating permutations
+THRESHOLD = 2  # Adjust this value as needed
+
+# Dictionary to store tag frequencies
+tag_frequency = defaultdict(int)
+
 def extract_frontmatter(file_content):
     """Extracts the YAML frontmatter from a markdown file."""
     frontmatter = ""
@@ -19,14 +25,10 @@ def extract_frontmatter(file_content):
     return frontmatter
 
 def process_tags(posts_dir, output_file):
-    """Processes tags from markdown files, handling nested tags, highlighting exact matches, and preventing duplicates using file paths.
+    """Processes tags from markdown files, handling nested tags, highlighting exact matches, and preventing duplicates using file paths."""
 
-    Args:
-        posts_dir (str): Directory containing markdown files.
-        output_file (str): Path to the output YAML file.
-    """
     tag_data = defaultdict(list)
-    seen_posts = set() # Set to store unique post file paths
+    seen_posts = set()  # Set to store unique post file paths
 
     logging.info(f"Processing markdown files in directory: {posts_dir}")
 
@@ -35,7 +37,7 @@ def process_tags(posts_dir, output_file):
             file_path = os.path.join(posts_dir, filename)
 
             # Duplicate prevention: Skip if this file has already been processed
-            if file_path in seen_posts: 
+            if file_path in seen_posts:
                 logging.warning(f"Skipping duplicate post: {filename}")
                 continue
             seen_posts.add(file_path)
@@ -60,6 +62,10 @@ def process_tags(posts_dir, output_file):
             elif not isinstance(tags, list):
                 tags = [str(tags)]
 
+            # Count tag frequencies
+            for tag in tags:
+                tag_frequency[tag] += 1
+
             title = post_data.get('title', os.path.splitext(filename)[0])
             url = '/' + '-'.join(filename.split('-')[3:]).replace('.md', '')
 
@@ -72,14 +78,19 @@ def process_tags(posts_dir, output_file):
             for tag in tags:
                 tag_parts = [part.strip() for part in tag.split('>')]
 
-                for i in range(len(tag_parts)):
-                    partial_tag = '>'.join(tag_parts[:i+1])
-                    post_entry = {
-                        'title': title,
-                        'url': url,
-                        'highlighted': partial_tag == tag  # Highlight if exact match
-                    }
-                    tag_data[partial_tag].append(post_entry) # No duplicate check needed here now
+                # Generate sequential partial tags with frequency filtering
+                for i in range(1, len(tag_parts) + 1):
+                    for j in range(len(tag_parts) - i + 1):
+                        partial_tag = '>'.join(tag_parts[j:j+i])
+                        # Check if all tags in the partial tag meet the frequency threshold
+                        if all(tag_frequency[part] >= THRESHOLD for part in tag_parts[j:j+i]):
+                            post_entry = {
+                                'title': title,
+                                'url': url,
+                                'highlighted': partial_tag == tag,
+                                'date': post_date
+                            }
+                            tag_data[partial_tag].append(post_entry)
 
     # Sort posts within each tag by date (most recent first)
     for tag, posts in tag_data.items():
