@@ -4,56 +4,63 @@ linux(linux)
 rendimentos(rendimentos)
 trabalho(trabalho)
 scripts(scripts)
+scripts --> scripts_mobile
+scripts --> scripts_google-apps-script
+scripts --> scripts_cloud
+scripts --> scripts_AI
 carro(carro)
 edital(edital)
+edital --> edital_direito
+edital --> edital_direito
 tasks(tasks)
+tasks --> tasks_iphone
 hardware(hardware)
 chess(chess)
 assistir(assistir)
 calls(calls)
 despesas(despesas)
+iphone(iphone)
 tasks_iphone(tasks>iphone)
-tasks --> tasks_iphone
 sell(sell)
 github(github)
-github_jekyll(github>jekyll)
 github --> github_jekyll
+github --> github_jekyll
+jekyll(jekyll)
+github_jekyll(github>jekyll)
 estudos(estudos)
+direito(direito)
 edital_direito(edital>direito)
-edital --> edital_direito
+edital_direito --> edital_direito_processual-penal
 fatherhood(fatherhood)
 misc(misc)
 AI(AI)
-software(software)
-software_mobile(software>mobile)
-software --> software_mobile
-iphone(iphone)
-AI_prompt(AI>prompt)
 AI --> AI_prompt
+AI --> AI_prompt
+AI --> AI_prompt
+AI --> AI_prompt
+software(software)
+software --> software_mobile
+software --> software_mobile
+software --> software_cloud
+mobile(mobile)
+software_mobile(software>mobile)
+prompt(prompt)
+AI_prompt(AI>prompt)
 music(music)
 scripts_mobile(scripts>mobile)
-scripts --> scripts_mobile
 spirit(spirit)
 ler(ler)
+google-apps-script(google-apps-script)
 scripts_google-apps-script(scripts>google-apps-script)
-scripts --> scripts_google-apps-script
 saúde(saúde)
+cloud(cloud)
 software_cloud(software>cloud)
-software --> software_cloud
 receitas(receitas)
 admoestação(admoestação)
 scripts_cloud(scripts>cloud)
-scripts --> scripts_cloud
+processual-penal(processual-penal)
+direito_processual-penal(direito>processual-penal)
 edital_direito_processual-penal(edital>direito>processual-penal)
-edital_direito --> edital_direito_processual-penal
 scripts_AI(scripts>AI)
-scripts --> scripts_AI
-linux -.-> scripts
-iphone -.-> software_mobile
-scripts_mobile -.-> iphone
-estudos -.-> scripts
-estudos -.-> trabalho
-linux -.-> software_mobile
-admoestação -.-> spirit
 
 </div>
