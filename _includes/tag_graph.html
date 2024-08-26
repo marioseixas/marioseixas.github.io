@@ -1,35 +1,57 @@
 <div class='mermaid'>
 graph TD
 linux(linux)
-rendimentos(rendimentos)
+linux --- software_mobile
+linux --- scripts
 scripts(scripts)
+scripts --> scripts_google-apps-script
+scripts --> scripts_cloud
+scripts --> scripts_mobile
+scripts --> scripts_AI
+scripts --- estudos
+rendimentos(rendimentos)
 carro(carro)
 edital(edital)
-calls(calls)
+edital --> edital_direito
+tasks_iphone(tasks>iphone)
 tasks(tasks)
+tasks --> tasks_iphone
+calls(calls)
+github_jekyll(github>jekyll)
+github(github)
+github --> github_jekyll
+edital_direito(edital>direito)
+edital_direito --> edital_direito_processual-penal
 hardware(hardware)
 chess(chess)
-estudos(estudos)
-AI(AI)
+software_mobile(software>mobile)
+software_mobile --- iphone
+software(software)
+software --> software_mobile
+software --> software_cloud
 iphone(iphone)
+iphone --- scripts_mobile
+estudos(estudos)
+estudos --- trabalho
+AI_prompt(AI>prompt)
+AI(AI)
+AI --> AI_prompt
+scripts_mobile(scripts>mobile)
 sell(sell)
 fatherhood(fatherhood)
+scripts_google-apps-script(scripts>google-apps-script)
 despesas(despesas)
 trabalho(trabalho)
 misc(misc)
 assistir(assistir)
 ler(ler)
+software_cloud(software>cloud)
 spirit(spirit)
+spirit --- admoestação
 admoestação(admoestação)
+scripts_cloud(scripts>cloud)
+edital_direito_processual-penal(edital>direito>processual-penal)
 scripts_AI(scripts>AI)
-scripts --> scripts_AI
 saúde(saúde)
-linux -.-> scripts
-iphone -.-> software_mobile
-iphone -.-> scripts_mobile
-estudos -.-> scripts
-trabalho -.-> estudos
-linux -.-> software_mobile
-spirit -.-> admoestação
 
 </div>
