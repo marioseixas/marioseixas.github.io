@@ -13,7 +13,6 @@ THRESHOLD = 0  # Adjust this value as needed
 # Dictionary to store tag frequencies
 tag_frequency = defaultdict(int)
 
-
 def extract_frontmatter(file_content):
     """Extracts the YAML frontmatter from a markdown file."""
     frontmatter = ""
@@ -25,96 +24,129 @@ def extract_frontmatter(file_content):
                 break
     return frontmatter
 
-
 def process_tags(posts_dir):
-    """Processes tags from markdown files to establish hierarchical and non-hierarchical relationships."""
-    tag_data = defaultdict(lambda: {'parents': set(), 'children': set(), 'posts': []})
-    post_tags = defaultdict(set)
+    """Processes tags to capture both hierarchical and non-hierarchical relationships."""
+    tag_data = defaultdict(lambda: {'children': [], 'related': set(), 'posts': []})
+    seen_posts = set()  # Set to store unique post file paths
+
+    logging.info(f"Processing markdown files in directory: {posts_dir}")
 
     for filename in os.listdir(posts_dir):
         if filename.endswith('.md'):
-            with open(os.path.join(posts_dir, filename), 'r', encoding='utf-8') as f:
-                frontmatter = extract_frontmatter(f.read())
+            file_path = os.path.join(posts_dir, filename)
 
+            # Duplicate prevention: Skip if this file has already been processed
+            if file_path in seen_posts:
+                logging.warning(f"Skipping duplicate post: {filename}")
+                continue
+            seen_posts.add(file_path)
+
+            with open(file_path, 'r', encoding='utf-8') as f:
+                file_content = f.read()
+
+            frontmatter = extract_frontmatter(file_content)
             if not frontmatter:
+                logging.warning(f"No frontmatter found in {filename}")
                 continue
 
-            post_data = yaml.safe_load(frontmatter)
+            try:
+                post_data = yaml.safe_load(frontmatter)
+            except yaml.YAMLError as e:
+                logging.error(f"Error parsing frontmatter in {filename}: {e}")
+                continue
+
             tags = post_data.get('tags', [])
             if isinstance(tags, str):
                 tags = [tag.strip() for tag in tags.split(',')]
+            elif not isinstance(tags, list):
+                tags = [str(tags)]
 
+            # Count tag frequencies
+            for tag in tags:
+                tag_frequency[tag] += 1
+
+            title = post_data.get('title', os.path.splitext(filename)[0])
             url = '/' + '-'.join(filename.split('-')[3:]).replace('.md', '')
 
+            try:
+                post_date = datetime.strptime('-'.join(filename.split('-')[:3]), '%Y-%m-%d')
+            except ValueError:
+                logging.warning(f"Unable to parse date from filename {filename}")
+                post_date = datetime.min
+
+            # Establish relationships
             for tag in tags:
-                parts = tag.split('>')
-                full_tag = tag
+                tag_parts = [part.strip() for part in tag.split('>')]
+                full_tag_path = '>'.join(tag_parts)
 
-                # Add the full tag to post_tags
-                post_tags[url].add(full_tag)
+                # Apply threshold for partial tags
+                for i in range(1, len(tag_parts) + 1):
+                    for j in range(len(tag_parts) - i + 1):
+                        partial_tag = '>'.join(tag_parts[j:j + i])
+                        if all(tag_frequency[part] >= THRESHOLD for part in tag_parts[j:j + i]):
+                            post_entry = {
+                                'title': title,
+                                'url': url,
+                                'highlighted': partial_tag == tag,
+                                'date': post_date
+                            }
+                            tag_data[partial_tag]['posts'].append(post_entry)
 
-                # Process hierarchical relationships
-                for i in range(1, len(parts) + 1):
-                    current = '>'.join(parts[:i])
-                    tag_data[current]['posts'].append({'url': url, 'title': post_data.get('title', '')})
+                # Establish parent-child relationships
+                for i in range(1, len(tag_parts)):
+                    parent_tag = '>'.join(tag_parts[:i])
+                    child_tag = '>'.join(tag_parts[:i+1])
+                    tag_data[parent_tag]['children'].append(child_tag)
 
-                    if i > 1:
-                        parent = '>'.join(parts[:i - 1])
-                        tag_data[current]['parents'].add(parent)
-                        tag_data[parent]['children'].add(current)
+                # Track non-hierarchical (shared) relationships
+                for other_tag in tags:
+                    if other_tag != full_tag_path and tag_parts[-1] == other_tag.split('>')[-1]:
+                        tag_data[full_tag_path]['related'].add(other_tag)
 
-    # Count tag frequencies (For THRESHOLD functionality)
-    for post_url, tags in post_tags.items():
-        for tag in tags:
-            tag_frequency[tag] += 1
-
-    return tag_data, post_tags
-
-
-def generate_mermaid_graph(tag_data, post_tags):
-    """Generates Mermaid graph code for visualizing tag relationships."""
-    graph = "graph TD\n"
-
-    # Add nodes and hierarchical relationships
+    # Sort posts within each tag by date (most recent first)
     for tag, data in tag_data.items():
-        safe_tag = tag.replace('>', '_')
-        graph += f"{safe_tag}({tag})\n"
-        for parent in data['parents']:
-            safe_parent = parent.replace('>', '_')
-            graph += f"{safe_parent} --> {safe_tag}\n"
+        data['posts'] = sorted(data['posts'], key=lambda x: x.get('date', datetime.min), reverse=True)
 
-    # Add non-hierarchical relationships (posts sharing tags)
-    processed_pairs = set()
-    for post, tags in post_tags.items():
-        for tag1 in tags:
-            for tag2 in tags:
-                if tag1 != tag2 and (tag1, tag2) not in processed_pairs and (tag2, tag1) not in processed_pairs:
-                    safe_tag1 = tag1.replace('>', '_')
-                    safe_tag2 = tag2.replace('>', '_')
-                    graph += f"{safe_tag1} -.-> {safe_tag2}\n"
-                    processed_pairs.add((tag1, tag2))
+    # Sort tags alphabetically before writing to YAML
+    sorted_tag_data = sorted(tag_data.items())
 
+    return tag_data, sorted_tag_data
+
+def generate_mermaid_graph(tag_data):
+    """Generates Mermaid graph code for both hierarchical and non-hierarchical tag relationships."""
+    graph = "graph TD\n"
+    for tag_name, data in tag_data.items():
+        safe_tag_name = tag_name.replace('>', '_')
+        # Add nodes for each tag
+        graph += f"{safe_tag_name}({tag_name})\n"
+        # Add edges for parent-child relationships
+        for child in data['children']:
+            safe_child_name = child.replace('>', '_')
+            graph += f"{safe_tag_name} --> {safe_child_name}\n"
+        # Add edges for related tags
+        for related in data['related']:
+            if tag_name < related:  # Ensure each relationship is added once
+                safe_related_name = related.replace('>', '_')
+                graph += f"{safe_tag_name} --- {safe_related_name}\n"
     return graph
-
 
 if __name__ == '__main__':
     # Use environment variables to determine paths
     posts_dir = os.path.join(os.getenv('GITHUB_WORKSPACE', ''), '_posts')
     output_file = os.path.join(os.getenv('GITHUB_WORKSPACE', ''), '_data/processed_tags.yml')
-    mermaid_output_file = os.path.join(os.getenv('GITHUB_WORKSPACE', ''), '_includes/tag_graph.html')
-
-    tag_data, post_tags = process_tags(posts_dir)
-    mermaid_graph = generate_mermaid_graph(tag_data, post_tags)
-
-    # Write the Mermaid graph to a file
-    with open(mermaid_output_file, 'w', encoding='utf-8') as f:
-        f.write(f"<div class='mermaid'>\n{mermaid_graph}\n</div>")
-
-    logging.info(f"Mermaid graph has been written to {mermaid_output_file}")
-
+    
+    tag_data, sorted_tag_data = process_tags(posts_dir)
+    
     # Write the processed tags to a YAML file
-    sorted_tag_data = sorted(tag_data.items())
     with open(output_file, 'w', encoding='utf-8') as f:
         yaml.dump([{'tag': tag, 'posts': posts['posts']} for tag, posts in sorted_tag_data], f, allow_unicode=True)
 
     logging.info(f"Processed tags have been written to {output_file}")
+
+    mermaid_graph = generate_mermaid_graph(tag_data)
+
+    # Write the Mermaid graph to a file
+    with open(os.path.join(os.getenv('GITHUB_WORKSPACE', ''), '_includes/tag_graph.html'), 'w', encoding='utf-8') as f:
+        f.write(f"<div class='mermaid'>\n{mermaid_graph}\n</div>")
+
+    logging.info("Mermaid graph has been written to _includes/tag_graph.html")
