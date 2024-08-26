@@ -1,31 +1,51 @@
 - posts:
+  - date: &id001 2024-08-02 00:00:00
+    highlighted: false
+    title: gmail2mailgrip
+    url: /gmail2mailgrip-prompt
+  - date: &id012 2024-07-21 00:00:00
+    highlighted: false
+    title: Longer inputs on WHISPER API
+    url: /longer-inputs-on-whisper-api
+  - date: &id002 2024-04-13 00:00:00
+    highlighted: false
+    title: reassess
+    url: /reassess
   - date: 2024-03-12 00:00:00
     highlighted: true
     title: Deep Chat Speech
     url: /deepchat
+  - date: &id003 2024-02-14 00:00:00
+    highlighted: false
+    title: JSON-LD
+    url: /json-ld
   - date: 2023-12-30 00:00:00
     highlighted: true
     title: Natural Language Processing (NLP) tools
     url: /nlp
+  - date: &id004 2023-11-05 00:00:00
+    highlighted: false
+    title: default
+    url: /default-prompt
   - date: 2023-03-10 00:00:00
     highlighted: true
     title: OpenAI Token Limits
     url: /openai-token-limits
   tag: AI
 - posts:
-  - date: 2024-08-02 00:00:00
+  - date: *id001
     highlighted: true
     title: gmail2mailgrip
     url: /gmail2mailgrip-prompt
-  - date: 2024-04-13 00:00:00
+  - date: *id002
     highlighted: true
     title: reassess
     url: /reassess
-  - date: 2024-02-14 00:00:00
+  - date: *id003
     highlighted: true
     title: JSON-LD
     url: /json-ld
-  - date: 2023-11-05 00:00:00
+  - date: *id004
     highlighted: true
     title: default
     url: /default-prompt
@@ -35,7 +55,7 @@
     highlighted: true
     title: Your Life in Tokens
     url: /life-tokens
-  - date: &id018 2018-02-15 00:00:00
+  - date: &id030 2018-02-15 00:00:00
     highlighted: true
     title: Envolvido ou comprometido?
     url: /tal-06-17
@@ -205,6 +225,16 @@
     url: /torneio-001
   tag: chess
 - posts:
+  - date: &id029 2024-07-25 00:00:00
+    highlighted: false
+    title: AWS PushSafer billing alarm
+    url: /aws-pushsafer-billing-alarm
+  - date: &id013 2024-07-17 00:00:00
+    highlighted: false
+    title: Webhooks using `Serverless.com` Lift plugin
+    url: /webhooks-using-serverlesscom-lift-plugin
+  tag: cloud
+- posts:
   - date: 2023-10-03 00:00:00
     highlighted: true
     title: Contas
@@ -215,6 +245,30 @@
     url: /emprestimo
   tag: despesas
 - posts:
+  - date: &id006 2024-04-17 00:00:00
+    highlighted: false
+    title: Ordenamento Jurídico Brasileiro [redução eidética]
+    url: /ordenamento
+  - date: &id005 2024-03-08 00:00:00
+    highlighted: false
+    title: Procedimento dos Crimes da Competência do Tribunal do Júri
+    url: /juri
+  tag: direito
+- posts:
+  - date: *id005
+    highlighted: false
+    title: Procedimento dos Crimes da Competência do Tribunal do Júri
+    url: /juri
+  tag: direito>processual-penal
+- posts:
+  - date: *id006
+    highlighted: false
+    title: Ordenamento Jurídico Brasileiro [redução eidética]
+    url: /ordenamento
+  - date: *id005
+    highlighted: false
+    title: Procedimento dos Crimes da Competência do Tribunal do Júri
+    url: /juri
   - date: 2023-12-22 00:00:00
     highlighted: true
     title: Núcleo duro das provas de Delegado de Polícia
@@ -229,23 +283,27 @@
     url: /atividade-policial
   tag: edital
 - posts:
-  - date: 2024-04-17 00:00:00
+  - date: *id006
     highlighted: true
     title: Ordenamento Jurídico Brasileiro [redução eidética]
     url: /ordenamento
+  - date: *id005
+    highlighted: false
+    title: Procedimento dos Crimes da Competência do Tribunal do Júri
+    url: /juri
   tag: edital>direito
 - posts:
-  - date: 2024-03-08 00:00:00
+  - date: *id005
     highlighted: true
     title: Procedimento dos Crimes da Competência do Tribunal do Júri
     url: /juri
   tag: edital>direito>processual-penal
 - posts:
-  - date: &id019 2024-07-05 00:00:00
+  - date: &id032 2024-07-05 00:00:00
     highlighted: true
     title: Periódicos para publicar artigos
     url: /periodicos
-  - date: &id009 2024-05-01 00:00:00
+  - date: &id022 2024-05-01 00:00:00
     highlighted: true
     title: STF Scraper [script]
     url: /stf-scraper
@@ -280,18 +338,32 @@
     title: Vacinas
     url: /vacinas
   tag: fatherhood
-- posts: []
+- posts:
+  - date: &id007 2024-08-15 00:00:00
+    highlighted: false
+    title: 'PageFind with Jekyll '
+    url: /pagefind-with-jekyll
+  - date: &id008 2024-07-13 00:00:00
+    highlighted: false
+    title: 2024-07-13-update-gemfilelock
+    url: /update-gemfilelock
   tag: github
 - posts:
-  - date: 2024-08-15 00:00:00
+  - date: *id007
     highlighted: true
     title: 'PageFind with Jekyll '
     url: /pagefind-with-jekyll
-  - date: 2024-07-13 00:00:00
+  - date: *id008
     highlighted: true
     title: 2024-07-13-update-gemfilelock
     url: /update-gemfilelock
   tag: github>jekyll
+- posts:
+  - date: &id028 2023-12-21 00:00:00
+    highlighted: false
+    title: OpenAI GPT API in Google Sheets
+    url: /gpt-sheets
+  tag: google-apps-script
 - posts:
   - date: 2024-08-18 00:00:00
     highlighted: true
@@ -307,15 +379,29 @@
     url: /vpc-3588-motherboard
   tag: hardware
 - posts:
-  - date: &id017 2024-07-30 00:00:00
+  - date: &id031 2024-08-25 00:00:00
+    highlighted: false
+    title: MLO URL schemes
+    url: /mlo-url-schemes
+  - date: &id010 2024-07-30 00:00:00
     highlighted: true
     title: iOS 18 changelog
     url: /ios-18-changelog
-  - date: &id015 2024-07-20 00:00:00
+  - date: &id011 2024-07-20 00:00:00
     highlighted: true
     title: 'iPhone: files2zip & zip2clipboard'
     url: /iphone-files2zip-zip2clipboard
   tag: iphone
+- posts:
+  - date: *id007
+    highlighted: false
+    title: 'PageFind with Jekyll '
+    url: /pagefind-with-jekyll
+  - date: *id008
+    highlighted: false
+    title: 2024-07-13-update-gemfilelock
+    url: /update-gemfilelock
+  tag: jekyll
 - posts:
   - date: 2022-07-14 00:00:00
     highlighted: true
@@ -331,7 +417,7 @@
     url: /livros
   tag: ler
 - posts:
-  - date: &id016 2024-08-17 00:00:00
+  - date: &id009 2024-08-17 00:00:00
     highlighted: true
     title: Linux mobile OS
     url: /linux-mobile-os
@@ -340,35 +426,35 @@
     title: How to use the `dd` command to create a bootable USB drive from an ISO
       file on a Linux-based system
     url: /how-to-use-the-dd-command-to-create-a-bootable-usb-drive-from-an-iso-file-on-a-linux-based-system
-  - date: &id001 2024-06-16 00:00:00
+  - date: &id014 2024-06-16 00:00:00
     highlighted: true
     title: cliPaperQA
     url: /clipaper-qa
-  - date: &id002 2024-06-13 00:00:00
+  - date: &id015 2024-06-13 00:00:00
     highlighted: true
     title: 'bulkGPT: multithreading for OpenAI''s output limits'
     url: /bulk-gpt
-  - date: &id003 2024-06-02 00:00:00
+  - date: &id016 2024-06-02 00:00:00
     highlighted: true
     title: Convert `.pdf` to `UTF-8`
     url: /pdf-utf8
-  - date: &id004 2024-06-02 00:00:00
+  - date: &id017 2024-06-02 00:00:00
     highlighted: true
     title: Python script to check LaTeX citations
     url: /bibtex-check
-  - date: &id005 2024-06-02 00:00:00
+  - date: &id018 2024-06-02 00:00:00
     highlighted: true
     title: Rename files using llm.datasette.io
     url: /llm-renamer
-  - date: &id006 2024-06-01 00:00:00
+  - date: &id019 2024-06-01 00:00:00
     highlighted: true
     title: '"Copy Spotter" and Deduplication'
     url: /copy-dedup
-  - date: &id007 2024-05-30 00:00:00
+  - date: &id020 2024-05-30 00:00:00
     highlighted: true
     title: Organize files by their extensions
     url: /files-by-type
-  - date: &id008 2024-05-06 00:00:00
+  - date: &id021 2024-05-06 00:00:00
     highlighted: true
     title: 'Rclone: Syncing STORJ Cloud to Local Storage'
     url: /storj-sync
@@ -396,7 +482,7 @@
     highlighted: true
     title: About Thorium Flags
     url: /thorium
-  - date: &id010 2024-02-22 00:00:00
+  - date: &id023 2024-02-22 00:00:00
     highlighted: true
     title: cat files contents [script]
     url: /cat-files
@@ -412,7 +498,7 @@
     highlighted: true
     title: Gummi .tex .bib
     url: /gummi
-  - date: &id011 2024-01-23 00:00:00
+  - date: &id024 2024-01-23 00:00:00
     highlighted: true
     title: Script to print from clipboard to a thermal printer
     url: /thermal
@@ -424,7 +510,7 @@
     highlighted: true
     title: Linux in a USB drive
     url: /linux-usb
-  - date: &id012 2024-01-03 00:00:00
+  - date: &id025 2024-01-03 00:00:00
     highlighted: true
     title: install_wps.sh
     url: /wps
@@ -440,7 +526,7 @@
     highlighted: true
     title: rk3588 performance optimization
     url: /rk3588-enhance
-  - date: &id013 2023-12-24 00:00:00
+  - date: &id026 2023-12-24 00:00:00
     highlighted: true
     title: Shell script to replace JEKYLLER edge extension
     url: /jekyller
@@ -449,7 +535,7 @@
     title: Alternative option to upload a file to GitHub without cloning the entire
       repository
     url: /git-sparse-checkout
-  - date: &id014 2023-12-24 00:00:00
+  - date: &id027 2023-12-24 00:00:00
     highlighted: true
     title: Packages list script
     url: /dpkg-script
@@ -509,11 +595,49 @@
     url: /wallpaper-1
   tag: misc
 - posts:
+  - date: *id009
+    highlighted: false
+    title: Linux mobile OS
+    url: /linux-mobile-os
+  - date: *id010
+    highlighted: false
+    title: iOS 18 changelog
+    url: /ios-18-changelog
+  - date: *id011
+    highlighted: false
+    title: 'iPhone: files2zip & zip2clipboard'
+    url: /iphone-files2zip-zip2clipboard
+  tag: mobile
+- posts:
   - date: 2024-07-20 00:00:00
     highlighted: true
     title: Lyrics of Deleter by Grouplove
     url: /lyrics-of-deleter-by-grouplove
   tag: music
+- posts:
+  - date: *id005
+    highlighted: false
+    title: Procedimento dos Crimes da Competência do Tribunal do Júri
+    url: /juri
+  tag: processual-penal
+- posts:
+  - date: *id001
+    highlighted: false
+    title: gmail2mailgrip
+    url: /gmail2mailgrip-prompt
+  - date: *id002
+    highlighted: false
+    title: reassess
+    url: /reassess
+  - date: *id003
+    highlighted: false
+    title: JSON-LD
+    url: /json-ld
+  - date: *id004
+    highlighted: false
+    title: default
+    url: /default-prompt
+  tag: prompt
 - posts:
   - date: 2022-03-19 00:00:00
     highlighted: true
@@ -665,43 +789,55 @@
     url: /jejum
   tag: saúde
 - posts:
+  - date: *id012
+    highlighted: false
+    title: Longer inputs on WHISPER API
+    url: /longer-inputs-on-whisper-api
+  - date: *id011
+    highlighted: false
+    title: 'iPhone: files2zip & zip2clipboard'
+    url: /iphone-files2zip-zip2clipboard
+  - date: *id013
+    highlighted: false
+    title: Webhooks using `Serverless.com` Lift plugin
+    url: /webhooks-using-serverlesscom-lift-plugin
   - date: 2024-06-17 00:00:00
     highlighted: true
     title: Gingko JSON ToC outliner
     url: /gingko-toc-outliner
-  - date: *id001
+  - date: *id014
     highlighted: true
     title: cliPaperQA
     url: /clipaper-qa
-  - date: *id002
+  - date: *id015
     highlighted: true
     title: 'bulkGPT: multithreading for OpenAI''s output limits'
     url: /bulk-gpt
-  - date: *id003
+  - date: *id016
     highlighted: true
     title: Convert `.pdf` to `UTF-8`
     url: /pdf-utf8
-  - date: *id004
+  - date: *id017
     highlighted: true
     title: Python script to check LaTeX citations
     url: /bibtex-check
-  - date: *id005
+  - date: *id018
     highlighted: true
     title: Rename files using llm.datasette.io
     url: /llm-renamer
-  - date: *id006
+  - date: *id019
     highlighted: true
     title: '"Copy Spotter" and Deduplication'
     url: /copy-dedup
-  - date: *id007
+  - date: *id020
     highlighted: true
     title: Organize files by their extensions
     url: /files-by-type
-  - date: *id008
+  - date: *id021
     highlighted: true
     title: 'Rclone: Syncing STORJ Cloud to Local Storage'
     url: /storj-sync
-  - date: *id009
+  - date: *id022
     highlighted: true
     title: STF Scraper [script]
     url: /stf-scraper
@@ -713,7 +849,7 @@
     highlighted: true
     title: Split `.wav` for Whisper
     url: /whisper-splitter
-  - date: *id010
+  - date: *id023
     highlighted: true
     title: cat files contents [script]
     url: /cat-files
@@ -733,47 +869,51 @@
     highlighted: true
     title: Py Oda
     url: /py-oda
-  - date: *id011
+  - date: *id024
     highlighted: true
     title: Script to print from clipboard to a thermal printer
     url: /thermal
-  - date: *id012
+  - date: *id025
     highlighted: true
     title: install_wps.sh
     url: /wps
-  - date: *id013
+  - date: *id026
     highlighted: true
     title: Shell script to replace JEKYLLER edge extension
     url: /jekyller
-  - date: *id014
+  - date: *id027
     highlighted: true
     title: Packages list script
     url: /dpkg-script
+  - date: *id028
+    highlighted: false
+    title: OpenAI GPT API in Google Sheets
+    url: /gpt-sheets
   - date: 2023-03-07 00:00:00
     highlighted: true
     title: github.com/py-pdf
     url: /pypdf
   tag: scripts
 - posts:
-  - date: 2024-07-21 00:00:00
+  - date: *id012
     highlighted: true
     title: Longer inputs on WHISPER API
     url: /longer-inputs-on-whisper-api
   tag: scripts>AI
 - posts:
-  - date: 2024-07-17 00:00:00
+  - date: *id013
     highlighted: true
     title: Webhooks using `Serverless.com` Lift plugin
     url: /webhooks-using-serverlesscom-lift-plugin
   tag: scripts>cloud
 - posts:
-  - date: 2023-12-21 00:00:00
+  - date: *id028
     highlighted: true
     title: OpenAI GPT API in Google Sheets
     url: /gpt-sheets
   tag: scripts>google-apps-script
 - posts:
-  - date: *id015
+  - date: *id011
     highlighted: true
     title: 'iPhone: files2zip & zip2clipboard'
     url: /iphone-files2zip-zip2clipboard
@@ -797,23 +937,35 @@
     url: /sell-card3
   tag: sell
 - posts:
+  - date: *id009
+    highlighted: false
+    title: Linux mobile OS
+    url: /linux-mobile-os
+  - date: *id010
+    highlighted: false
+    title: iOS 18 changelog
+    url: /ios-18-changelog
+  - date: *id029
+    highlighted: false
+    title: AWS PushSafer billing alarm
+    url: /aws-pushsafer-billing-alarm
   - date: 2024-02-17 00:00:00
     highlighted: true
     title: dasel context guide
     url: /dasel
   tag: software
 - posts:
-  - date: 2024-07-25 00:00:00
+  - date: *id029
     highlighted: true
     title: AWS PushSafer billing alarm
     url: /aws-pushsafer-billing-alarm
   tag: software>cloud
 - posts:
-  - date: *id016
+  - date: *id009
     highlighted: true
     title: Linux mobile OS
     url: /linux-mobile-os
-  - date: *id017
+  - date: *id010
     highlighted: true
     title: iOS 18 changelog
     url: /ios-18-changelog
@@ -827,12 +979,16 @@
     highlighted: true
     title: canção da internação
     url: /gustavo
-  - date: *id018
+  - date: *id030
     highlighted: true
     title: Envolvido ou comprometido?
     url: /tal-06-17
   tag: spirit
 - posts:
+  - date: *id031
+    highlighted: false
+    title: MLO URL schemes
+    url: /mlo-url-schemes
   - date: 2024-07-31 00:00:00
     highlighted: true
     title: Benjamin Franklin's 13 Virtues
@@ -883,7 +1039,7 @@
     url: /chess-flow
   tag: tasks
 - posts:
-  - date: 2024-08-25 00:00:00
+  - date: *id031
     highlighted: true
     title: MLO URL schemes
     url: /mlo-url-schemes
@@ -893,7 +1049,7 @@
     highlighted: true
     title: Procedimentos de Escolta Dedicada
     url: /escolta
-  - date: *id019
+  - date: *id032
     highlighted: true
     title: Periódicos para publicar artigos
     url: /periodicos
