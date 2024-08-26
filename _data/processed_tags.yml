@@ -1,1897 +1,907 @@
 - posts:
-  - date: &id004 2024-08-02 00:00:00
-    highlighted: false
-    title: gmail2mailgrip
-    url: /gmail2mailgrip-prompt
-  - date: &id155 2024-07-21 00:00:00
-    highlighted: false
-    title: Longer inputs on WHISPER API
-    url: /longer-inputs-on-whisper-api
-  - date: &id005 2024-04-13 00:00:00
-    highlighted: false
-    title: reassess
-    url: /reassess
-  - date: &id001 2024-03-12 00:00:00
+  - date: 2024-03-12 00:00:00
     highlighted: true
     title: Deep Chat Speech
     url: /deepchat
-  - date: *id001
-    highlighted: true
-    title: Deep Chat Speech
-    url: /deepchat
-  - date: &id006 2024-02-14 00:00:00
-    highlighted: false
-    title: JSON-LD
-    url: /json-ld
-  - date: &id002 2023-12-30 00:00:00
+  - date: 2023-12-30 00:00:00
     highlighted: true
     title: Natural Language Processing (NLP) tools
     url: /nlp
-  - date: *id002
-    highlighted: true
-    title: Natural Language Processing (NLP) tools
-    url: /nlp
-  - date: &id007 2023-11-05 00:00:00
-    highlighted: false
-    title: default
-    url: /default-prompt
-  - date: &id003 2023-03-10 00:00:00
-    highlighted: true
-    title: OpenAI Token Limits
-    url: /openai-token-limits
-  - date: *id003
+  - date: 2023-03-10 00:00:00
     highlighted: true
     title: OpenAI Token Limits
     url: /openai-token-limits
   tag: AI
 - posts:
-  - date: *id004
+  - date: 2024-08-02 00:00:00
     highlighted: true
     title: gmail2mailgrip
     url: /gmail2mailgrip-prompt
-  - date: *id004
-    highlighted: true
-    title: gmail2mailgrip
-    url: /gmail2mailgrip-prompt
-  - date: *id005
+  - date: 2024-04-13 00:00:00
     highlighted: true
     title: reassess
     url: /reassess
-  - date: *id005
-    highlighted: true
-    title: reassess
-    url: /reassess
-  - date: *id006
+  - date: 2024-02-14 00:00:00
     highlighted: true
     title: JSON-LD
     url: /json-ld
-  - date: *id006
-    highlighted: true
-    title: JSON-LD
-    url: /json-ld
-  - date: *id007
-    highlighted: true
-    title: default
-    url: /default-prompt
-  - date: *id007
+  - date: 2023-11-05 00:00:00
     highlighted: true
     title: default
     url: /default-prompt
   tag: AI>prompt
 - posts:
-  - date: &id008 2024-06-22 00:00:00
+  - date: 2024-06-22 00:00:00
     highlighted: true
     title: Your Life in Tokens
     url: /life-tokens
-  - date: *id008
-    highlighted: true
-    title: Your Life in Tokens
-    url: /life-tokens
-  - date: &id009 2018-02-15 00:00:00
-    highlighted: true
-    title: Envolvido ou comprometido?
-    url: /tal-06-17
-  - date: *id009
+  - date: &id018 2018-02-15 00:00:00
     highlighted: true
     title: Envolvido ou comprometido?
     url: /tal-06-17
   tag: admoestação
 - posts:
-  - date: &id010 2022-03-16 00:00:00
+  - date: 2022-03-16 00:00:00
     highlighted: true
     title: streaming
     url: /streaming
-  - date: *id010
-    highlighted: true
-    title: streaming
-    url: /streaming
-  - date: &id011 2022-03-16 00:00:00
-    highlighted: true
-    title: aye aye
-    url: /aye
-  - date: *id011
+  - date: 2022-03-16 00:00:00
     highlighted: true
     title: aye aye
     url: /aye
   tag: assistir
 - posts:
-  - date: &id012 2022-10-01 00:00:00
+  - date: 2022-10-01 00:00:00
     highlighted: true
     title: Call de Outubro de 2022
     url: /call-10-2022
-  - date: *id012
-    highlighted: true
-    title: Call de Outubro de 2022
-    url: /call-10-2022
-  - date: &id013 2022-09-07 00:00:00
+  - date: 2022-09-07 00:00:00
     highlighted: true
     title: Call de Setembro de 2022
     url: /call-09-2022
-  - date: *id013
-    highlighted: true
-    title: Call de Setembro de 2022
-    url: /call-09-2022
-  - date: &id014 2022-08-09 00:00:00
+  - date: 2022-08-09 00:00:00
     highlighted: true
     title: Call de Agosto de 2022
     url: /call-08-2022
-  - date: *id014
-    highlighted: true
-    title: Call de Agosto de 2022
-    url: /call-08-2022
-  - date: &id015 2022-07-05 00:00:00
+  - date: 2022-07-05 00:00:00
     highlighted: true
     title: Call de Julho de 2022
     url: /call-07-2022
-  - date: *id015
-    highlighted: true
-    title: Call de Julho de 2022
-    url: /call-07-2022
-  - date: &id016 2022-06-07 00:00:00
+  - date: 2022-06-07 00:00:00
     highlighted: true
     title: Call de Junho de 2022
     url: /call-06-2022
-  - date: *id016
-    highlighted: true
-    title: Call de Junho de 2022
-    url: /call-06-2022
-  - date: &id017 2022-05-10 00:00:00
+  - date: 2022-05-10 00:00:00
     highlighted: true
     title: Call de Maio de 2022
     url: /call-05-2022
-  - date: *id017
-    highlighted: true
-    title: Call de Maio de 2022
-    url: /call-05-2022
-  - date: &id018 2022-04-06 00:00:00
+  - date: 2022-04-06 00:00:00
     highlighted: true
     title: Call de Abril de 2022
     url: /call-04-2022
-  - date: *id018
-    highlighted: true
-    title: Call de Abril de 2022
-    url: /call-04-2022
-  - date: &id019 2022-03-07 00:00:00
+  - date: 2022-03-07 00:00:00
     highlighted: true
     title: Call de Março de 2022
     url: /call-03-2022
-  - date: *id019
-    highlighted: true
-    title: Call de Março de 2022
-    url: /call-03-2022
-  - date: &id020 2022-02-02 00:00:00
+  - date: 2022-02-02 00:00:00
     highlighted: true
     title: Call de Fevereiro de 2022
     url: /call-02-2022
-  - date: *id020
-    highlighted: true
-    title: Call de Fevereiro de 2022
-    url: /call-02-2022
-  - date: &id021 2022-01-06 00:00:00
+  - date: 2022-01-06 00:00:00
     highlighted: true
     title: Call de Janeiro de 2022
     url: /call-01-2022
-  - date: *id021
-    highlighted: true
-    title: Call de Janeiro de 2022
-    url: /call-01-2022
-  - date: &id022 2021-12-09 00:00:00
+  - date: 2021-12-09 00:00:00
     highlighted: true
     title: Call de Dezembro de 2021
     url: /call-12-2021
-  - date: *id022
-    highlighted: true
-    title: Call de Dezembro de 2021
-    url: /call-12-2021
-  - date: &id023 2021-11-12 00:00:00
+  - date: 2021-11-12 00:00:00
     highlighted: true
     title: Call de Novembro de 2021
     url: /call-11-2021
-  - date: *id023
-    highlighted: true
-    title: Call de Novembro de 2021
-    url: /call-11-2021
-  - date: &id024 2021-10-07 00:00:00
+  - date: 2021-10-07 00:00:00
     highlighted: true
     title: Call de Outubro de 2021
     url: /call-10-2021
-  - date: *id024
-    highlighted: true
-    title: Call de Outubro de 2021
-    url: /call-10-2021
-  - date: &id025 2021-09-03 00:00:00
+  - date: 2021-09-03 00:00:00
     highlighted: true
     title: Call de Setembro de 2021
     url: /call-09-2021
-  - date: *id025
-    highlighted: true
-    title: Call de Setembro de 2021
-    url: /call-09-2021
-  - date: &id026 2021-08-09 00:00:00
+  - date: 2021-08-09 00:00:00
     highlighted: true
     title: Call de Agosto de 2021
     url: /call-08-2021
-  - date: *id026
-    highlighted: true
-    title: Call de Agosto de 2021
-    url: /call-08-2021
-  - date: &id027 2021-07-06 00:00:00
+  - date: 2021-07-06 00:00:00
     highlighted: true
     title: Call de Julho de 2021
     url: /call-07-2021
-  - date: *id027
-    highlighted: true
-    title: Call de Julho de 2021
-    url: /call-07-2021
-  - date: &id028 2021-06-08 00:00:00
+  - date: 2021-06-08 00:00:00
     highlighted: true
     title: Call de Junho de 2021
     url: /call-06-2021
-  - date: *id028
-    highlighted: true
-    title: Call de Junho de 2021
-    url: /call-06-2021
-  - date: &id029 2021-05-07 00:00:00
+  - date: 2021-05-07 00:00:00
     highlighted: true
     title: Call de Maio de 2021
     url: /call-05-2021
-  - date: *id029
-    highlighted: true
-    title: Call de Maio de 2021
-    url: /call-05-2021
-  - date: &id030 2021-04-06 00:00:00
+  - date: 2021-04-06 00:00:00
     highlighted: true
     title: Call de Abril de 2021
     url: /call-04-2021
-  - date: *id030
-    highlighted: true
-    title: Call de Abril de 2021
-    url: /call-04-2021
-  - date: &id031 2021-03-02 00:00:00
+  - date: 2021-03-02 00:00:00
     highlighted: true
     title: Call de Março de 2021
     url: /call-03-2021
-  - date: *id031
-    highlighted: true
-    title: Call de Março de 2021
-    url: /call-03-2021
-  - date: &id032 2021-02-07 00:00:00
+  - date: 2021-02-07 00:00:00
     highlighted: true
     title: Call de Fevereiro de 2021
     url: /call-02-2021
-  - date: *id032
-    highlighted: true
-    title: Call de Fevereiro de 2021
-    url: /call-02-2021
-  - date: &id033 2021-01-07 00:00:00
+  - date: 2021-01-07 00:00:00
     highlighted: true
     title: ' Call de Janeiro de 2021'
     url: /call-01-2021
-  - date: *id033
-    highlighted: true
-    title: ' Call de Janeiro de 2021'
-    url: /call-01-2021
-  - date: &id034 2020-12-08 00:00:00
+  - date: 2020-12-08 00:00:00
     highlighted: true
     title: Call de Dezembro de 2020
     url: /call-12-2020
-  - date: *id034
-    highlighted: true
-    title: Call de Dezembro de 2020
-    url: /call-12-2020
-  - date: &id035 2020-11-07 00:00:00
+  - date: 2020-11-07 00:00:00
     highlighted: true
     title: Call de Novembro de 2020
     url: /call-11-2020
-  - date: *id035
-    highlighted: true
-    title: Call de Novembro de 2020
-    url: /call-11-2020
-  - date: &id036 2020-10-05 00:00:00
+  - date: 2020-10-05 00:00:00
     highlighted: true
     title: Call de Outubro de 2020
     url: /call-10-2020
-  - date: *id036
-    highlighted: true
-    title: Call de Outubro de 2020
-    url: /call-10-2020
-  - date: &id037 2020-09-09 00:00:00
+  - date: 2020-09-09 00:00:00
     highlighted: true
     title: Call de Setembro de 2020
     url: /call-09-2020
-  - date: *id037
-    highlighted: true
-    title: Call de Setembro de 2020
-    url: /call-09-2020
-  - date: &id038 2020-08-21 00:00:00
+  - date: 2020-08-21 00:00:00
     highlighted: true
     title: Call de Agosto de 2020
     url: /call-08-2020
-  - date: *id038
-    highlighted: true
-    title: Call de Agosto de 2020
-    url: /call-08-2020
-  - date: &id039 2020-07-20 00:00:00
+  - date: 2020-07-20 00:00:00
     highlighted: true
     title: Call de Julho de 2020
     url: /call-07-2020
-  - date: *id039
-    highlighted: true
-    title: Call de Julho de 2020
-    url: /call-07-2020
-  - date: &id040 2020-06-22 00:00:00
+  - date: 2020-06-22 00:00:00
     highlighted: true
     title: 'Call de Junho de 2020 '
     url: /call-06-2020
-  - date: *id040
-    highlighted: true
-    title: 'Call de Junho de 2020 '
-    url: /call-06-2020
-  - date: &id041 2020-05-21 00:00:00
+  - date: 2020-05-21 00:00:00
     highlighted: true
     title: Call de Maio de 2020
     url: /call-05-2020
-  - date: *id041
-    highlighted: true
-    title: Call de Maio de 2020
-    url: /call-05-2020
-  - date: &id042 2020-04-17 00:00:00
-    highlighted: true
-    title: Call de Abril de 2020
-    url: /call-04-2020
-  - date: *id042
+  - date: 2020-04-17 00:00:00
     highlighted: true
     title: Call de Abril de 2020
     url: /call-04-2020
   tag: calls
 - posts:
-  - date: &id043 2021-12-15 00:00:00
+  - date: 2021-12-15 00:00:00
     highlighted: true
     title: VW/GOL 1.0 G4 2010 - 196.351km
     url: /car-12-15
-  - date: *id043
-    highlighted: true
-    title: VW/GOL 1.0 G4 2010 - 196.351km
-    url: /car-12-15
-  - date: &id044 2021-10-15 00:00:00
+  - date: 2021-10-15 00:00:00
     highlighted: true
     title: VW/GOL 1.0 G4 2010 - 195.300km
     url: /car-10-15
-  - date: *id044
-    highlighted: true
-    title: VW/GOL 1.0 G4 2010 - 195.300km
-    url: /car-10-15
-  - date: &id045 2021-02-10 00:00:00
+  - date: 2021-02-10 00:00:00
     highlighted: true
     title: ' VW/GOL 1.0 G4 2010 - 189.111km '
     url: /car-02-10
-  - date: *id045
-    highlighted: true
-    title: ' VW/GOL 1.0 G4 2010 - 189.111km '
-    url: /car-02-10
-  - date: &id046 2020-04-17 00:00:00
-    highlighted: true
-    title: VW/GOL 1.0 G4 2010 - 184.000km
-    url: /car-04-17
-  - date: *id046
+  - date: 2020-04-17 00:00:00
     highlighted: true
     title: VW/GOL 1.0 G4 2010 - 184.000km
     url: /car-04-17
   tag: carro
 - posts:
-  - date: &id047 2021-03-02 00:00:00
+  - date: 2021-03-02 00:00:00
     highlighted: true
     title: Performance média
     url: /performance
-  - date: *id047
-    highlighted: true
-    title: Performance média
-    url: /performance
-  - date: &id048 2020-11-11 00:00:00
-    highlighted: true
-    title: III Etapa do Circuito Goiano de Xadrez 2020
-    url: /torneio-001
-  - date: *id048
+  - date: 2020-11-11 00:00:00
     highlighted: true
     title: III Etapa do Circuito Goiano de Xadrez 2020
     url: /torneio-001
   tag: chess
 - posts:
-  - date: &id170 2024-07-25 00:00:00
-    highlighted: false
-    title: AWS PushSafer billing alarm
-    url: /aws-pushsafer-billing-alarm
-  - date: &id156 2024-07-17 00:00:00
-    highlighted: false
-    title: Webhooks using `Serverless.com` Lift plugin
-    url: /webhooks-using-serverlesscom-lift-plugin
-  tag: cloud
-- posts:
-  - date: &id049 2023-10-03 00:00:00
+  - date: 2023-10-03 00:00:00
     highlighted: true
     title: Contas
     url: /contas
-  - date: *id049
-    highlighted: true
-    title: Contas
-    url: /contas
-  - date: &id050 2021-01-07 00:00:00
-    highlighted: true
-    title: Como calcular prestação por meio de taxa de juros e período
-    url: /emprestimo
-  - date: *id050
+  - date: 2021-01-07 00:00:00
     highlighted: true
     title: Como calcular prestação por meio de taxa de juros e período
     url: /emprestimo
   tag: despesas
 - posts:
-  - date: &id052 2024-04-17 00:00:00
-    highlighted: false
-    title: Ordenamento Jurídico Brasileiro [redução eidética]
-    url: /ordenamento
-  - date: &id051 2024-03-08 00:00:00
-    highlighted: false
-    title: Procedimento dos Crimes da Competência do Tribunal do Júri
-    url: /juri
-  tag: direito
-- posts:
-  - date: *id051
-    highlighted: false
-    title: Procedimento dos Crimes da Competência do Tribunal do Júri
-    url: /juri
-  tag: direito>processual-penal
-- posts:
-  - date: *id052
-    highlighted: false
-    title: Ordenamento Jurídico Brasileiro [redução eidética]
-    url: /ordenamento
-  - date: *id051
-    highlighted: false
-    title: Procedimento dos Crimes da Competência do Tribunal do Júri
-    url: /juri
-  - date: &id053 2023-12-22 00:00:00
+  - date: 2023-12-22 00:00:00
     highlighted: true
     title: Núcleo duro das provas de Delegado de Polícia
     url: /hard-core
-  - date: *id053
-    highlighted: true
-    title: Núcleo duro das provas de Delegado de Polícia
-    url: /hard-core
-  - date: &id054 2023-12-22 00:00:00
+  - date: 2023-12-22 00:00:00
     highlighted: true
     title: Concursos DELTA iminentes
     url: /concursos-delta
-  - date: *id054
-    highlighted: true
-    title: Concursos DELTA iminentes
-    url: /concursos-delta
-  - date: &id055 2022-06-07 00:00:00
-    highlighted: true
-    title: Estados que exigem atividade policial para DELTA
-    url: /atividade-policial
-  - date: *id055
+  - date: 2022-06-07 00:00:00
     highlighted: true
     title: Estados que exigem atividade policial para DELTA
     url: /atividade-policial
   tag: edital
 - posts:
-  - date: *id052
+  - date: 2024-04-17 00:00:00
     highlighted: true
     title: Ordenamento Jurídico Brasileiro [redução eidética]
     url: /ordenamento
-  - date: *id052
-    highlighted: true
-    title: Ordenamento Jurídico Brasileiro [redução eidética]
-    url: /ordenamento
-  - date: *id051
-    highlighted: false
-    title: Procedimento dos Crimes da Competência do Tribunal do Júri
-    url: /juri
   tag: edital>direito
 - posts:
-  - date: *id051
-    highlighted: true
-    title: Procedimento dos Crimes da Competência do Tribunal do Júri
-    url: /juri
-  - date: *id051
+  - date: 2024-03-08 00:00:00
     highlighted: true
     title: Procedimento dos Crimes da Competência do Tribunal do Júri
     url: /juri
   tag: edital>direito>processual-penal
 - posts:
-  - date: &id056 2024-07-05 00:00:00
+  - date: &id019 2024-07-05 00:00:00
     highlighted: true
     title: Periódicos para publicar artigos
     url: /periodicos
-  - date: *id056
-    highlighted: true
-    title: Periódicos para publicar artigos
-    url: /periodicos
-  - date: &id057 2024-05-01 00:00:00
+  - date: &id009 2024-05-01 00:00:00
     highlighted: true
     title: STF Scraper [script]
     url: /stf-scraper
-  - date: *id057
-    highlighted: true
-    title: STF Scraper [script]
-    url: /stf-scraper
-  - date: &id058 2024-03-25 00:00:00
+  - date: 2024-03-25 00:00:00
     highlighted: true
     title: Processo de Depósito Legal - UFJ
     url: /ufj-tcc
-  - date: *id058
-    highlighted: true
-    title: Processo de Depósito Legal - UFJ
-    url: /ufj-tcc
-  - date: &id059 2024-01-07 00:00:00
+  - date: 2024-01-07 00:00:00
     highlighted: true
     title: Se eu fosse um concurseiro - George Marmelstein
     url: /marmelstein
-  - date: *id059
-    highlighted: true
-    title: Se eu fosse um concurseiro - George Marmelstein
-    url: /marmelstein
-  - date: &id060 2023-12-20 00:00:00
+  - date: 2023-12-20 00:00:00
     highlighted: true
     title: 'CESPE: chute tático'
     url: /cespe
-  - date: *id060
-    highlighted: true
-    title: 'CESPE: chute tático'
-    url: /cespe
-  - date: &id061 2023-03-07 00:00:00
+  - date: 2023-03-07 00:00:00
     highlighted: true
     title: Calendário Acadêmico
     url: /facul-calendar
-  - date: *id061
-    highlighted: true
-    title: Calendário Acadêmico
-    url: /facul-calendar
-  - date: &id062 2022-11-30 00:00:00
-    highlighted: true
-    title: WRITING TO LEARN AND WHY IT MATTERS
-    url: /writing
-  - date: *id062
+  - date: 2022-11-30 00:00:00
     highlighted: true
     title: WRITING TO LEARN AND WHY IT MATTERS
     url: /writing
   tag: estudos
 - posts:
-  - date: &id063 2024-07-30 00:00:00
+  - date: 2024-07-30 00:00:00
     highlighted: true
     title: Board games
     url: /board-games
-  - date: *id063
-    highlighted: true
-    title: Board games
-    url: /board-games
-  - date: &id064 2022-09-27 00:00:00
-    highlighted: true
-    title: Vacinas
-    url: /vacinas
-  - date: *id064
+  - date: 2022-09-27 00:00:00
     highlighted: true
     title: Vacinas
     url: /vacinas
   tag: fatherhood
-- posts:
-  - date: &id065 2024-08-15 00:00:00
-    highlighted: false
-    title: 'PageFind with Jekyll '
-    url: /pagefind-with-jekyll
-  - date: &id066 2024-07-13 00:00:00
-    highlighted: false
-    title: 2024-07-13-update-gemfilelock
-    url: /update-gemfilelock
+- posts: []
   tag: github
 - posts:
-  - date: *id065
+  - date: 2024-08-15 00:00:00
     highlighted: true
     title: 'PageFind with Jekyll '
     url: /pagefind-with-jekyll
-  - date: *id065
-    highlighted: true
-    title: 'PageFind with Jekyll '
-    url: /pagefind-with-jekyll
-  - date: *id066
-    highlighted: true
-    title: 2024-07-13-update-gemfilelock
-    url: /update-gemfilelock
-  - date: *id066
+  - date: 2024-07-13 00:00:00
     highlighted: true
     title: 2024-07-13-update-gemfilelock
     url: /update-gemfilelock
   tag: github>jekyll
 - posts:
-  - date: &id164 2023-12-21 00:00:00
-    highlighted: false
-    title: OpenAI GPT API in Google Sheets
-    url: /gpt-sheets
-  tag: google-apps-script
-- posts:
-  - date: &id067 2024-08-18 00:00:00
+  - date: 2024-08-18 00:00:00
     highlighted: true
     title: RockChip devices
     url: /rockchip-devices
-  - date: *id067
-    highlighted: true
-    title: RockChip devices
-    url: /rockchip-devices
-  - date: &id068 2024-08-01 00:00:00
+  - date: 2024-08-01 00:00:00
     highlighted: true
     title: Laptop alternative
     url: /laptop-alternative
-  - date: *id068
-    highlighted: true
-    title: Laptop alternative
-    url: /laptop-alternative
-  - date: &id069 2024-07-20 00:00:00
-    highlighted: true
-    title: VPC-3588 Motherboard
-    url: /vpc-3588-motherboard
-  - date: *id069
+  - date: 2024-07-20 00:00:00
     highlighted: true
     title: VPC-3588 Motherboard
     url: /vpc-3588-motherboard
   tag: hardware
 - posts:
-  - date: &id174 2024-08-25 00:00:00
-    highlighted: false
-    title: MLO URL schemes
-    url: /mlo-url-schemes
-  - date: &id070 2024-07-30 00:00:00
+  - date: &id017 2024-07-30 00:00:00
     highlighted: true
     title: iOS 18 changelog
     url: /ios-18-changelog
-  - date: *id070
-    highlighted: true
-    title: iOS 18 changelog
-    url: /ios-18-changelog
-  - date: &id071 2024-07-20 00:00:00
-    highlighted: true
-    title: 'iPhone: files2zip & zip2clipboard'
-    url: /iphone-files2zip-zip2clipboard
-  - date: *id071
+  - date: &id015 2024-07-20 00:00:00
     highlighted: true
     title: 'iPhone: files2zip & zip2clipboard'
     url: /iphone-files2zip-zip2clipboard
   tag: iphone
 - posts:
-  - date: *id065
-    highlighted: false
-    title: 'PageFind with Jekyll '
-    url: /pagefind-with-jekyll
-  - date: *id066
-    highlighted: false
-    title: 2024-07-13-update-gemfilelock
-    url: /update-gemfilelock
-  tag: jekyll
-- posts:
-  - date: &id072 2022-07-14 00:00:00
+  - date: 2022-07-14 00:00:00
     highlighted: true
     title: libros familiares
     url: /libros-de-familia
-  - date: *id072
-    highlighted: true
-    title: libros familiares
-    url: /libros-de-familia
-  - date: &id073 2020-12-31 00:00:00
+  - date: 2020-12-31 00:00:00
     highlighted: true
     title: chess books
     url: /chess-books
-  - date: *id073
-    highlighted: true
-    title: chess books
-    url: /chess-books
-  - date: &id074 2020-06-07 00:00:00
-    highlighted: true
-    title: Livros
-    url: /livros
-  - date: *id074
+  - date: 2020-06-07 00:00:00
     highlighted: true
     title: Livros
     url: /livros
   tag: ler
 - posts:
-  - date: &id075 2024-08-17 00:00:00
+  - date: &id016 2024-08-17 00:00:00
     highlighted: true
     title: Linux mobile OS
     url: /linux-mobile-os
-  - date: *id075
-    highlighted: true
-    title: Linux mobile OS
-    url: /linux-mobile-os
-  - date: &id076 2024-08-02 00:00:00
+  - date: 2024-08-02 00:00:00
     highlighted: true
     title: How to use the `dd` command to create a bootable USB drive from an ISO
       file on a Linux-based system
     url: /how-to-use-the-dd-command-to-create-a-bootable-usb-drive-from-an-iso-file-on-a-linux-based-system
-  - date: *id076
-    highlighted: true
-    title: How to use the `dd` command to create a bootable USB drive from an ISO
-      file on a Linux-based system
-    url: /how-to-use-the-dd-command-to-create-a-bootable-usb-drive-from-an-iso-file-on-a-linux-based-system
-  - date: &id077 2024-06-16 00:00:00
+  - date: &id001 2024-06-16 00:00:00
     highlighted: true
     title: cliPaperQA
     url: /clipaper-qa
-  - date: *id077
-    highlighted: true
-    title: cliPaperQA
-    url: /clipaper-qa
-  - date: &id078 2024-06-13 00:00:00
+  - date: &id002 2024-06-13 00:00:00
     highlighted: true
     title: 'bulkGPT: multithreading for OpenAI''s output limits'
     url: /bulk-gpt
-  - date: *id078
-    highlighted: true
-    title: 'bulkGPT: multithreading for OpenAI''s output limits'
-    url: /bulk-gpt
-  - date: &id079 2024-06-02 00:00:00
+  - date: &id003 2024-06-02 00:00:00
     highlighted: true
     title: Convert `.pdf` to `UTF-8`
     url: /pdf-utf8
-  - date: *id079
-    highlighted: true
-    title: Convert `.pdf` to `UTF-8`
-    url: /pdf-utf8
-  - date: &id080 2024-06-02 00:00:00
+  - date: &id004 2024-06-02 00:00:00
     highlighted: true
     title: Python script to check LaTeX citations
     url: /bibtex-check
-  - date: *id080
-    highlighted: true
-    title: Python script to check LaTeX citations
-    url: /bibtex-check
-  - date: &id081 2024-06-02 00:00:00
+  - date: &id005 2024-06-02 00:00:00
     highlighted: true
     title: Rename files using llm.datasette.io
     url: /llm-renamer
-  - date: *id081
-    highlighted: true
-    title: Rename files using llm.datasette.io
-    url: /llm-renamer
-  - date: &id082 2024-06-01 00:00:00
+  - date: &id006 2024-06-01 00:00:00
     highlighted: true
     title: '"Copy Spotter" and Deduplication'
     url: /copy-dedup
-  - date: *id082
-    highlighted: true
-    title: '"Copy Spotter" and Deduplication'
-    url: /copy-dedup
-  - date: &id083 2024-05-30 00:00:00
+  - date: &id007 2024-05-30 00:00:00
     highlighted: true
     title: Organize files by their extensions
     url: /files-by-type
-  - date: *id083
-    highlighted: true
-    title: Organize files by their extensions
-    url: /files-by-type
-  - date: &id084 2024-05-06 00:00:00
+  - date: &id008 2024-05-06 00:00:00
     highlighted: true
     title: 'Rclone: Syncing STORJ Cloud to Local Storage'
     url: /storj-sync
-  - date: *id084
-    highlighted: true
-    title: 'Rclone: Syncing STORJ Cloud to Local Storage'
-    url: /storj-sync
-  - date: &id085 2024-04-14 00:00:00
+  - date: 2024-04-14 00:00:00
     highlighted: true
     title: /.ratpoisonrc
     url: /ratpoisonrc
-  - date: *id085
-    highlighted: true
-    title: /.ratpoisonrc
-    url: /ratpoisonrc
-  - date: &id086 2024-04-14 00:00:00
+  - date: 2024-04-14 00:00:00
     highlighted: true
     title: /sources.list
     url: /sources
-  - date: *id086
-    highlighted: true
-    title: /sources.list
-    url: /sources
-  - date: &id087 2024-04-14 00:00:00
+  - date: 2024-04-14 00:00:00
     highlighted: true
     title: /.bashrc
     url: /bashrc
-  - date: *id087
-    highlighted: true
-    title: /.bashrc
-    url: /bashrc
-  - date: &id088 2024-03-10 00:00:00
+  - date: 2024-03-10 00:00:00
     highlighted: true
     title: /root/.xsessionrc
     url: /xsessionrc
-  - date: *id088
-    highlighted: true
-    title: /root/.xsessionrc
-    url: /xsessionrc
-  - date: &id089 2024-03-10 00:00:00
+  - date: 2024-03-10 00:00:00
     highlighted: true
     title: xinitrc
     url: /xinitrc
-  - date: *id089
-    highlighted: true
-    title: xinitrc
-    url: /xinitrc
-  - date: &id090 2024-03-02 00:00:00
+  - date: 2024-03-02 00:00:00
     highlighted: true
     title: About Thorium Flags
     url: /thorium
-  - date: *id090
-    highlighted: true
-    title: About Thorium Flags
-    url: /thorium
-  - date: &id091 2024-02-22 00:00:00
+  - date: &id010 2024-02-22 00:00:00
     highlighted: true
     title: cat files contents [script]
     url: /cat-files
-  - date: *id091
-    highlighted: true
-    title: cat files contents [script]
-    url: /cat-files
-  - date: &id092 2024-02-16 00:00:00
+  - date: 2024-02-16 00:00:00
     highlighted: true
     title: Installing a custom version of SQLite
     url: /sqlite
-  - date: *id092
-    highlighted: true
-    title: Installing a custom version of SQLite
-    url: /sqlite
-  - date: &id093 2024-02-06 00:00:00
+  - date: 2024-02-06 00:00:00
     highlighted: true
     title: Setup FTP Server on Debian and Connect a Windows machine
     url: /ftpd
-  - date: *id093
-    highlighted: true
-    title: Setup FTP Server on Debian and Connect a Windows machine
-    url: /ftpd
-  - date: &id094 2024-01-31 00:00:00
+  - date: 2024-01-31 00:00:00
     highlighted: true
     title: Gummi .tex .bib
     url: /gummi
-  - date: *id094
-    highlighted: true
-    title: Gummi .tex .bib
-    url: /gummi
-  - date: &id095 2024-01-23 00:00:00
+  - date: &id011 2024-01-23 00:00:00
     highlighted: true
     title: Script to print from clipboard to a thermal printer
     url: /thermal
-  - date: *id095
-    highlighted: true
-    title: Script to print from clipboard to a thermal printer
-    url: /thermal
-  - date: &id096 2024-01-23 00:00:00
+  - date: 2024-01-23 00:00:00
     highlighted: true
     title: DP-Q803P thermal printer manual
     url: /thermanual
-  - date: *id096
-    highlighted: true
-    title: DP-Q803P thermal printer manual
-    url: /thermanual
-  - date: &id097 2024-01-22 00:00:00
+  - date: 2024-01-22 00:00:00
     highlighted: true
     title: Linux in a USB drive
     url: /linux-usb
-  - date: *id097
-    highlighted: true
-    title: Linux in a USB drive
-    url: /linux-usb
-  - date: &id098 2024-01-03 00:00:00
+  - date: &id012 2024-01-03 00:00:00
     highlighted: true
     title: install_wps.sh
     url: /wps
-  - date: *id098
-    highlighted: true
-    title: install_wps.sh
-    url: /wps
-  - date: &id099 2024-01-01 00:00:00
+  - date: 2024-01-01 00:00:00
     highlighted: true
     title: SoC arm64 RK3588
     url: /rk3588
-  - date: *id099
-    highlighted: true
-    title: SoC arm64 RK3588
-    url: /rk3588
-  - date: &id100 2023-12-30 00:00:00
+  - date: 2023-12-30 00:00:00
     highlighted: true
     title: nedit.rc
     url: /neditrc
-  - date: *id100
-    highlighted: true
-    title: nedit.rc
-    url: /neditrc
-  - date: &id101 2023-12-25 00:00:00
+  - date: 2023-12-25 00:00:00
     highlighted: true
     title: rk3588 performance optimization
     url: /rk3588-enhance
-  - date: *id101
-    highlighted: true
-    title: rk3588 performance optimization
-    url: /rk3588-enhance
-  - date: &id102 2023-12-24 00:00:00
+  - date: &id013 2023-12-24 00:00:00
     highlighted: true
     title: Shell script to replace JEKYLLER edge extension
     url: /jekyller
-  - date: *id102
-    highlighted: true
-    title: Shell script to replace JEKYLLER edge extension
-    url: /jekyller
-  - date: &id103 2023-12-24 00:00:00
+  - date: 2023-12-24 00:00:00
     highlighted: true
     title: Alternative option to upload a file to GitHub without cloning the entire
       repository
     url: /git-sparse-checkout
-  - date: *id103
-    highlighted: true
-    title: Alternative option to upload a file to GitHub without cloning the entire
-      repository
-    url: /git-sparse-checkout
-  - date: &id104 2023-12-24 00:00:00
+  - date: &id014 2023-12-24 00:00:00
     highlighted: true
     title: Packages list script
     url: /dpkg-script
-  - date: *id104
-    highlighted: true
-    title: Packages list script
-    url: /dpkg-script
-  - date: &id105 2023-12-24 00:00:00
+  - date: 2023-12-24 00:00:00
     highlighted: true
     title: Installed Debian packages list
     url: /dpkg
-  - date: *id105
-    highlighted: true
-    title: Installed Debian packages list
-    url: /dpkg
-  - date: &id106 2023-12-08 00:00:00
+  - date: 2023-12-08 00:00:00
     highlighted: true
     title: parameter.txt
     url: /parameter
-  - date: *id106
-    highlighted: true
-    title: parameter.txt
-    url: /parameter
-  - date: &id107 2023-12-07 00:00:00
+  - date: 2023-12-07 00:00:00
     highlighted: true
     title: Sectors to bytes
     url: /sectors
-  - date: *id107
-    highlighted: true
-    title: Sectors to bytes
-    url: /sectors
-  - date: &id108 2023-11-10 00:00:00
+  - date: 2023-11-10 00:00:00
     highlighted: true
     title: Installation of ratpoison in debian/ubuntu
     url: /ratpoison
-  - date: *id108
-    highlighted: true
-    title: Installation of ratpoison in debian/ubuntu
-    url: /ratpoison
-  - date: &id109 2022-11-22 00:00:00
+  - date: 2022-11-22 00:00:00
     highlighted: true
     title: Linux typewriter setup
     url: /typewriter
-  - date: *id109
-    highlighted: true
-    title: Linux typewriter setup
-    url: /typewriter
-  - date: &id110 2022-01-11 00:00:00
+  - date: 2022-01-11 00:00:00
     highlighted: true
     title: microsoft-edge
     url: /edge
-  - date: *id110
-    highlighted: true
-    title: microsoft-edge
-    url: /edge
-  - date: &id111 2022-01-11 00:00:00
+  - date: 2022-01-11 00:00:00
     highlighted: true
     title: xlunch entries.dsv
     url: /xlunch
-  - date: *id111
-    highlighted: true
-    title: xlunch entries.dsv
-    url: /xlunch
-  - date: &id112 2022-01-09 00:00:00
+  - date: 2022-01-09 00:00:00
     highlighted: true
     title: Installation of nvidia-legacy-340 in debian 11 (Bullseye)
     url: /nvidia
-  - date: *id112
-    highlighted: true
-    title: Installation of nvidia-legacy-340 in debian 11 (Bullseye)
-    url: /nvidia
-  - date: &id113 2021-05-25 00:00:00
+  - date: 2021-05-25 00:00:00
     highlighted: true
     title: Xsession
     url: /Xsession
-  - date: *id113
-    highlighted: true
-    title: Xsession
-    url: /Xsession
-  - date: &id114 2021-05-25 00:00:00
+  - date: 2021-05-25 00:00:00
     highlighted: true
     title: neofetch config.conf
     url: /neofetch
-  - date: *id114
-    highlighted: true
-    title: neofetch config.conf
-    url: /neofetch
-  - date: &id115 2020-10-22 00:00:00
-    highlighted: true
-    title: How to make bootable Windows USB from Linux for old computers
-    url: /ms-sys
-  - date: *id115
+  - date: 2020-10-22 00:00:00
     highlighted: true
     title: How to make bootable Windows USB from Linux for old computers
     url: /ms-sys
   tag: linux
 - posts:
-  - date: &id116 2024-07-25 00:00:00
+  - date: 2024-07-25 00:00:00
     highlighted: true
     title: Bolo Pão (Pound Cake)
     url: /pound-cake
-  - date: *id116
-    highlighted: true
-    title: Bolo Pão (Pound Cake)
-    url: /pound-cake
-  - date: &id117 2018-04-11 00:00:00
-    highlighted: true
-    title: wallpaper I
-    url: /wallpaper-1
-  - date: *id117
+  - date: 2018-04-11 00:00:00
     highlighted: true
     title: wallpaper I
     url: /wallpaper-1
   tag: misc
 - posts:
-  - date: *id075
-    highlighted: false
-    title: Linux mobile OS
-    url: /linux-mobile-os
-  - date: *id070
-    highlighted: false
-    title: iOS 18 changelog
-    url: /ios-18-changelog
-  - date: *id071
-    highlighted: false
-    title: 'iPhone: files2zip & zip2clipboard'
-    url: /iphone-files2zip-zip2clipboard
-  tag: mobile
-- posts:
-  - date: &id118 2024-07-20 00:00:00
-    highlighted: true
-    title: Lyrics of Deleter by Grouplove
-    url: /lyrics-of-deleter-by-grouplove
-  - date: *id118
+  - date: 2024-07-20 00:00:00
     highlighted: true
     title: Lyrics of Deleter by Grouplove
     url: /lyrics-of-deleter-by-grouplove
   tag: music
 - posts:
-  - date: *id051
-    highlighted: false
-    title: Procedimento dos Crimes da Competência do Tribunal do Júri
-    url: /juri
-  tag: processual-penal
-- posts:
-  - date: *id004
-    highlighted: false
-    title: gmail2mailgrip
-    url: /gmail2mailgrip-prompt
-  - date: *id005
-    highlighted: false
-    title: reassess
-    url: /reassess
-  - date: *id006
-    highlighted: false
-    title: JSON-LD
-    url: /json-ld
-  - date: *id007
-    highlighted: false
-    title: default
-    url: /default-prompt
-  tag: prompt
-- posts:
-  - date: &id119 2022-03-19 00:00:00
-    highlighted: true
-    title: IRPF
-    url: /irpf
-  - date: *id119
+  - date: 2022-03-19 00:00:00
     highlighted: true
     title: IRPF
     url: /irpf
   tag: receitas
 - posts:
-  - date: &id120 2023-05-29 00:00:00
+  - date: 2023-05-29 00:00:00
     highlighted: true
     title: Maio 2023
     url: /maio-23
-  - date: *id120
-    highlighted: true
-    title: Maio 2023
-    url: /maio-23
-  - date: &id121 2022-12-17 00:00:00
+  - date: 2022-12-17 00:00:00
     highlighted: true
     title: Novembro 2022
     url: /novembro-22
-  - date: *id121
-    highlighted: true
-    title: Novembro 2022
-    url: /novembro-22
-  - date: &id122 2022-10-01 00:00:00
+  - date: 2022-10-01 00:00:00
     highlighted: true
     title: Setembro 2022
     url: /setembro-22
-  - date: *id122
-    highlighted: true
-    title: Setembro 2022
-    url: /setembro-22
-  - date: &id123 2022-09-06 00:00:00
+  - date: 2022-09-06 00:00:00
     highlighted: true
     title: Agosto 2022
     url: /agosto-22
-  - date: *id123
-    highlighted: true
-    title: Agosto 2022
-    url: /agosto-22
-  - date: &id124 2022-08-01 00:00:00
+  - date: 2022-08-01 00:00:00
     highlighted: true
     title: Julho 2022
     url: /julho-22
-  - date: *id124
-    highlighted: true
-    title: Julho 2022
-    url: /julho-22
-  - date: &id125 2022-07-04 00:00:00
+  - date: 2022-07-04 00:00:00
     highlighted: true
     title: Junho 2022
     url: /junho-22
-  - date: *id125
-    highlighted: true
-    title: Junho 2022
-    url: /junho-22
-  - date: &id126 2022-06-01 00:00:00
+  - date: 2022-06-01 00:00:00
     highlighted: true
     title: Maio 2022
     url: /maio-22
-  - date: *id126
-    highlighted: true
-    title: Maio 2022
-    url: /maio-22
-  - date: &id127 2022-05-03 00:00:00
+  - date: 2022-05-03 00:00:00
     highlighted: true
     title: Abril 2022
     url: /abril-22
-  - date: *id127
-    highlighted: true
-    title: Abril 2022
-    url: /abril-22
-  - date: &id128 2022-04-02 00:00:00
+  - date: 2022-04-02 00:00:00
     highlighted: true
     title: Março 2022
     url: /marco-22
-  - date: *id128
-    highlighted: true
-    title: Março 2022
-    url: /marco-22
-  - date: &id129 2022-03-02 00:00:00
+  - date: 2022-03-02 00:00:00
     highlighted: true
     title: Fevereiro 2022
     url: /fevereiro-22
-  - date: *id129
-    highlighted: true
-    title: Fevereiro 2022
-    url: /fevereiro-22
-  - date: &id130 2022-02-01 00:00:00
+  - date: 2022-02-01 00:00:00
     highlighted: true
     title: Janeiro 2022
     url: /janeiro-22
-  - date: *id130
-    highlighted: true
-    title: Janeiro 2022
-    url: /janeiro-22
-  - date: &id131 2022-01-04 00:00:00
+  - date: 2022-01-04 00:00:00
     highlighted: true
     title: Dezembro 2021
     url: /dezembro-21
-  - date: *id131
-    highlighted: true
-    title: Dezembro 2021
-    url: /dezembro-21
-  - date: &id132 2021-12-04 00:00:00
+  - date: 2021-12-04 00:00:00
     highlighted: true
     title: Novembro 2021
     url: /novembro-21
-  - date: *id132
-    highlighted: true
-    title: Novembro 2021
-    url: /novembro-21
-  - date: &id133 2021-10-30 00:00:00
+  - date: 2021-10-30 00:00:00
     highlighted: true
     title: Outubro 2021
     url: /outubro-21
-  - date: *id133
-    highlighted: true
-    title: Outubro 2021
-    url: /outubro-21
-  - date: &id134 2021-10-01 00:00:00
+  - date: 2021-10-01 00:00:00
     highlighted: true
     title: Setembro 2021
     url: /setembro-21
-  - date: *id134
-    highlighted: true
-    title: Setembro 2021
-    url: /setembro-21
-  - date: &id135 2021-09-01 00:00:00
+  - date: 2021-09-01 00:00:00
     highlighted: true
     title: Agosto 2021
     url: /agosto-21
-  - date: *id135
-    highlighted: true
-    title: Agosto 2021
-    url: /agosto-21
-  - date: &id136 2021-08-02 00:00:00
+  - date: 2021-08-02 00:00:00
     highlighted: true
     title: Julho 2021
     url: /julho-21
-  - date: *id136
-    highlighted: true
-    title: Julho 2021
-    url: /julho-21
-  - date: &id137 2021-07-01 00:00:00
+  - date: 2021-07-01 00:00:00
     highlighted: true
     title: Junho 2021
     url: /junho-21
-  - date: *id137
-    highlighted: true
-    title: Junho 2021
-    url: /junho-21
-  - date: &id138 2021-05-31 00:00:00
+  - date: 2021-05-31 00:00:00
     highlighted: true
     title: Maio 2021
     url: /maio-21
-  - date: *id138
-    highlighted: true
-    title: Maio 2021
-    url: /maio-21
-  - date: &id139 2021-05-01 00:00:00
+  - date: 2021-05-01 00:00:00
     highlighted: true
     title: Abril 2021
     url: /abril-21
-  - date: *id139
-    highlighted: true
-    title: Abril 2021
-    url: /abril-21
-  - date: &id140 2021-04-01 00:00:00
+  - date: 2021-04-01 00:00:00
     highlighted: true
     title: Março 2021
     url: /marco-21
-  - date: *id140
-    highlighted: true
-    title: Março 2021
-    url: /marco-21
-  - date: &id141 2021-03-02 00:00:00
+  - date: 2021-03-02 00:00:00
     highlighted: true
     title: Fevereiro 2021
     url: /fevereiro-21
-  - date: *id141
-    highlighted: true
-    title: Fevereiro 2021
-    url: /fevereiro-21
-  - date: &id142 2021-01-30 00:00:00
+  - date: 2021-01-30 00:00:00
     highlighted: true
     title: Janeiro 2021
     url: /janeiro-21
-  - date: *id142
-    highlighted: true
-    title: Janeiro 2021
-    url: /janeiro-21
-  - date: &id143 2021-01-03 00:00:00
+  - date: 2021-01-03 00:00:00
     highlighted: true
     title: Dezembro 2020
     url: /dezembro-20
-  - date: *id143
-    highlighted: true
-    title: Dezembro 2020
-    url: /dezembro-20
-  - date: &id144 2020-12-01 00:00:00
+  - date: 2020-12-01 00:00:00
     highlighted: true
     title: Novembro 2020
     url: /novembro-20
-  - date: *id144
-    highlighted: true
-    title: Novembro 2020
-    url: /novembro-20
-  - date: &id145 2020-11-03 00:00:00
+  - date: 2020-11-03 00:00:00
     highlighted: true
     title: Outubro 2020
     url: /outubro-20
-  - date: *id145
-    highlighted: true
-    title: Outubro 2020
-    url: /outubro-20
-  - date: &id146 2020-09-30 00:00:00
+  - date: 2020-09-30 00:00:00
     highlighted: true
     title: Setembro 2020
     url: /setembro-20
-  - date: *id146
-    highlighted: true
-    title: Setembro 2020
-    url: /setembro-20
-  - date: &id147 2020-09-01 00:00:00
+  - date: 2020-09-01 00:00:00
     highlighted: true
     title: Agosto 2020
     url: /agosto-20
-  - date: *id147
-    highlighted: true
-    title: Agosto 2020
-    url: /agosto-20
-  - date: &id148 2020-08-01 00:00:00
+  - date: 2020-08-01 00:00:00
     highlighted: true
     title: Julho 2020
     url: /julho-20
-  - date: *id148
-    highlighted: true
-    title: Julho 2020
-    url: /julho-20
-  - date: &id149 2020-07-02 00:00:00
+  - date: 2020-07-02 00:00:00
     highlighted: true
     title: Junho 2020
     url: /junho-20
-  - date: *id149
-    highlighted: true
-    title: Junho 2020
-    url: /junho-20
-  - date: &id150 2020-05-30 00:00:00
+  - date: 2020-05-30 00:00:00
     highlighted: true
     title: Maio 2020
     url: /maio-20
-  - date: *id150
-    highlighted: true
-    title: Maio 2020
-    url: /maio-20
-  - date: &id151 2020-04-30 00:00:00
+  - date: 2020-04-30 00:00:00
     highlighted: true
     title: Abril 2020
     url: /abril-20
-  - date: *id151
-    highlighted: true
-    title: Abril 2020
-    url: /abril-20
-  - date: &id152 2020-03-30 00:00:00
-    highlighted: true
-    title: Março 2020
-    url: /marco-20
-  - date: *id152
+  - date: 2020-03-30 00:00:00
     highlighted: true
     title: Março 2020
     url: /marco-20
   tag: rendimentos
 - posts:
-  - date: &id153 2024-08-13 00:00:00
+  - date: 2024-08-13 00:00:00
     highlighted: true
     title: Arm Tendinitis
     url: /arm-tendinitis
-  - date: *id153
-    highlighted: true
-    title: Arm Tendinitis
-    url: /arm-tendinitis
-  - date: &id154 2022-10-18 00:00:00
-    highlighted: true
-    title: Effects of 10-Day Complete Fasting
-    url: /jejum
-  - date: *id154
+  - date: 2022-10-18 00:00:00
     highlighted: true
     title: Effects of 10-Day Complete Fasting
     url: /jejum
   tag: saúde
 - posts:
-  - date: *id155
-    highlighted: false
-    title: Longer inputs on WHISPER API
-    url: /longer-inputs-on-whisper-api
-  - date: *id071
-    highlighted: false
-    title: 'iPhone: files2zip & zip2clipboard'
-    url: /iphone-files2zip-zip2clipboard
-  - date: *id156
-    highlighted: false
-    title: Webhooks using `Serverless.com` Lift plugin
-    url: /webhooks-using-serverlesscom-lift-plugin
-  - date: &id157 2024-06-17 00:00:00
+  - date: 2024-06-17 00:00:00
     highlighted: true
     title: Gingko JSON ToC outliner
     url: /gingko-toc-outliner
-  - date: *id157
-    highlighted: true
-    title: Gingko JSON ToC outliner
-    url: /gingko-toc-outliner
-  - date: *id077
+  - date: *id001
     highlighted: true
     title: cliPaperQA
     url: /clipaper-qa
-  - date: *id077
-    highlighted: true
-    title: cliPaperQA
-    url: /clipaper-qa
-  - date: *id078
+  - date: *id002
     highlighted: true
     title: 'bulkGPT: multithreading for OpenAI''s output limits'
     url: /bulk-gpt
-  - date: *id078
-    highlighted: true
-    title: 'bulkGPT: multithreading for OpenAI''s output limits'
-    url: /bulk-gpt
-  - date: *id079
+  - date: *id003
     highlighted: true
     title: Convert `.pdf` to `UTF-8`
     url: /pdf-utf8
-  - date: *id079
-    highlighted: true
-    title: Convert `.pdf` to `UTF-8`
-    url: /pdf-utf8
-  - date: *id080
+  - date: *id004
     highlighted: true
     title: Python script to check LaTeX citations
     url: /bibtex-check
-  - date: *id080
-    highlighted: true
-    title: Python script to check LaTeX citations
-    url: /bibtex-check
-  - date: *id081
+  - date: *id005
     highlighted: true
     title: Rename files using llm.datasette.io
     url: /llm-renamer
-  - date: *id081
-    highlighted: true
-    title: Rename files using llm.datasette.io
-    url: /llm-renamer
-  - date: *id082
+  - date: *id006
     highlighted: true
     title: '"Copy Spotter" and Deduplication'
     url: /copy-dedup
-  - date: *id082
-    highlighted: true
-    title: '"Copy Spotter" and Deduplication'
-    url: /copy-dedup
-  - date: *id083
+  - date: *id007
     highlighted: true
     title: Organize files by their extensions
     url: /files-by-type
-  - date: *id083
-    highlighted: true
-    title: Organize files by their extensions
-    url: /files-by-type
-  - date: *id084
+  - date: *id008
     highlighted: true
     title: 'Rclone: Syncing STORJ Cloud to Local Storage'
     url: /storj-sync
-  - date: *id084
-    highlighted: true
-    title: 'Rclone: Syncing STORJ Cloud to Local Storage'
-    url: /storj-sync
-  - date: *id057
+  - date: *id009
     highlighted: true
     title: STF Scraper [script]
     url: /stf-scraper
-  - date: *id057
-    highlighted: true
-    title: STF Scraper [script]
-    url: /stf-scraper
-  - date: &id158 2024-04-28 00:00:00
+  - date: 2024-04-28 00:00:00
     highlighted: true
     title: WhatsapPY data
     url: /whatsappy
-  - date: *id158
-    highlighted: true
-    title: WhatsapPY data
-    url: /whatsappy
-  - date: &id159 2024-03-04 00:00:00
+  - date: 2024-03-04 00:00:00
     highlighted: true
     title: Split `.wav` for Whisper
     url: /whisper-splitter
-  - date: *id159
-    highlighted: true
-    title: Split `.wav` for Whisper
-    url: /whisper-splitter
-  - date: *id091
+  - date: *id010
     highlighted: true
     title: cat files contents [script]
     url: /cat-files
-  - date: *id091
-    highlighted: true
-    title: cat files contents [script]
-    url: /cat-files
-  - date: &id160 2024-02-18 00:00:00
+  - date: 2024-02-18 00:00:00
     highlighted: true
     title: tampermonkey dify hit-testing [script]
     url: /tampermonkey-dify
-  - date: *id160
-    highlighted: true
-    title: tampermonkey dify hit-testing [script]
-    url: /tampermonkey-dify
-  - date: &id161 2024-02-17 00:00:00
+  - date: 2024-02-17 00:00:00
     highlighted: true
     title: dasel references filtering + citation appender [script]
     url: /dasel_citation_appender
-  - date: *id161
-    highlighted: true
-    title: dasel references filtering + citation appender [script]
-    url: /dasel_citation_appender
-  - date: &id162 2024-02-05 00:00:00
+  - date: 2024-02-05 00:00:00
     highlighted: true
     title: PYragraphs
     url: /pyragraphs
-  - date: *id162
-    highlighted: true
-    title: PYragraphs
-    url: /pyragraphs
-  - date: &id163 2024-01-28 00:00:00
+  - date: 2024-01-28 00:00:00
     highlighted: true
     title: Py Oda
     url: /py-oda
-  - date: *id163
-    highlighted: true
-    title: Py Oda
-    url: /py-oda
-  - date: *id095
+  - date: *id011
     highlighted: true
     title: Script to print from clipboard to a thermal printer
     url: /thermal
-  - date: *id095
-    highlighted: true
-    title: Script to print from clipboard to a thermal printer
-    url: /thermal
-  - date: *id098
+  - date: *id012
     highlighted: true
     title: install_wps.sh
     url: /wps
-  - date: *id098
-    highlighted: true
-    title: install_wps.sh
-    url: /wps
-  - date: *id102
+  - date: *id013
     highlighted: true
     title: Shell script to replace JEKYLLER edge extension
     url: /jekyller
-  - date: *id102
-    highlighted: true
-    title: Shell script to replace JEKYLLER edge extension
-    url: /jekyller
-  - date: *id104
+  - date: *id014
     highlighted: true
     title: Packages list script
     url: /dpkg-script
-  - date: *id104
-    highlighted: true
-    title: Packages list script
-    url: /dpkg-script
-  - date: *id164
-    highlighted: false
-    title: OpenAI GPT API in Google Sheets
-    url: /gpt-sheets
-  - date: &id165 2023-03-07 00:00:00
-    highlighted: true
-    title: github.com/py-pdf
-    url: /pypdf
-  - date: *id165
+  - date: 2023-03-07 00:00:00
     highlighted: true
     title: github.com/py-pdf
     url: /pypdf
   tag: scripts
 - posts:
-  - date: *id155
-    highlighted: true
-    title: Longer inputs on WHISPER API
-    url: /longer-inputs-on-whisper-api
-  - date: *id155
+  - date: 2024-07-21 00:00:00
     highlighted: true
     title: Longer inputs on WHISPER API
     url: /longer-inputs-on-whisper-api
   tag: scripts>AI
 - posts:
-  - date: *id156
-    highlighted: true
-    title: Webhooks using `Serverless.com` Lift plugin
-    url: /webhooks-using-serverlesscom-lift-plugin
-  - date: *id156
+  - date: 2024-07-17 00:00:00
     highlighted: true
     title: Webhooks using `Serverless.com` Lift plugin
     url: /webhooks-using-serverlesscom-lift-plugin
   tag: scripts>cloud
 - posts:
-  - date: *id164
-    highlighted: true
-    title: OpenAI GPT API in Google Sheets
-    url: /gpt-sheets
-  - date: *id164
+  - date: 2023-12-21 00:00:00
     highlighted: true
     title: OpenAI GPT API in Google Sheets
     url: /gpt-sheets
   tag: scripts>google-apps-script
 - posts:
-  - date: *id071
-    highlighted: true
-    title: 'iPhone: files2zip & zip2clipboard'
-    url: /iphone-files2zip-zip2clipboard
-  - date: *id071
+  - date: *id015
     highlighted: true
     title: 'iPhone: files2zip & zip2clipboard'
     url: /iphone-files2zip-zip2clipboard
   tag: scripts>mobile
 - posts:
-  - date: &id166 2021-11-03 00:00:00
+  - date: 2021-11-03 00:00:00
     highlighted: true
     title: VENDA SMTO3 04,74% a.m.
     url: /sell-smto3
-  - date: *id166
-    highlighted: true
-    title: VENDA SMTO3 04,74% a.m.
-    url: /sell-smto3
-  - date: &id167 2021-09-01 00:00:00
+  - date: 2021-09-01 00:00:00
     highlighted: true
     title: VENDA TOTS3 04,20% a.m.
     url: /sell-tots3
-  - date: *id167
-    highlighted: true
-    title: VENDA TOTS3 04,20% a.m.
-    url: /sell-tots3
-  - date: &id168 2021-06-11 00:00:00
+  - date: 2021-06-11 00:00:00
     highlighted: true
     title: VENDA MTSA4 08,14% a.m.
     url: /sell-mtsa4
-  - date: *id168
-    highlighted: true
-    title: VENDA MTSA4 08,14% a.m.
-    url: /sell-mtsa4
-  - date: &id169 2021-04-02 00:00:00
-    highlighted: true
-    title: VENDA CARD3 04,02% a.m.
-    url: /sell-card3
-  - date: *id169
+  - date: 2021-04-02 00:00:00
     highlighted: true
     title: VENDA CARD3 04,02% a.m.
     url: /sell-card3
   tag: sell
 - posts:
-  - date: *id075
-    highlighted: false
-    title: Linux mobile OS
-    url: /linux-mobile-os
-  - date: *id070
-    highlighted: false
-    title: iOS 18 changelog
-    url: /ios-18-changelog
-  - date: *id170
-    highlighted: false
-    title: AWS PushSafer billing alarm
-    url: /aws-pushsafer-billing-alarm
-  - date: &id171 2024-02-17 00:00:00
-    highlighted: true
-    title: dasel context guide
-    url: /dasel
-  - date: *id171
+  - date: 2024-02-17 00:00:00
     highlighted: true
     title: dasel context guide
     url: /dasel
   tag: software
 - posts:
-  - date: *id170
-    highlighted: true
-    title: AWS PushSafer billing alarm
-    url: /aws-pushsafer-billing-alarm
-  - date: *id170
+  - date: 2024-07-25 00:00:00
     highlighted: true
     title: AWS PushSafer billing alarm
     url: /aws-pushsafer-billing-alarm
   tag: software>cloud
 - posts:
-  - date: *id075
+  - date: *id016
     highlighted: true
     title: Linux mobile OS
     url: /linux-mobile-os
-  - date: *id075
-    highlighted: true
-    title: Linux mobile OS
-    url: /linux-mobile-os
-  - date: *id070
-    highlighted: true
-    title: iOS 18 changelog
-    url: /ios-18-changelog
-  - date: *id070
+  - date: *id017
     highlighted: true
     title: iOS 18 changelog
     url: /ios-18-changelog
   tag: software>mobile
 - posts:
-  - date: &id172 2022-06-15 00:00:00
+  - date: 2022-06-15 00:00:00
     highlighted: true
     title: 9gag evangelism
     url: /holy-9gag
-  - date: *id172
-    highlighted: true
-    title: 9gag evangelism
-    url: /holy-9gag
-  - date: &id173 2018-02-26 00:00:00
+  - date: 2018-02-26 00:00:00
     highlighted: true
     title: canção da internação
     url: /gustavo
-  - date: *id173
-    highlighted: true
-    title: canção da internação
-    url: /gustavo
-  - date: *id009
-    highlighted: true
-    title: Envolvido ou comprometido?
-    url: /tal-06-17
-  - date: *id009
+  - date: *id018
     highlighted: true
     title: Envolvido ou comprometido?
     url: /tal-06-17
   tag: spirit
 - posts:
-  - date: *id174
-    highlighted: false
-    title: MLO URL schemes
-    url: /mlo-url-schemes
-  - date: &id175 2024-07-31 00:00:00
+  - date: 2024-07-31 00:00:00
     highlighted: true
     title: Benjamin Franklin's 13 Virtues
     url: /benjamin-franklins-13-virtues
-  - date: *id175
-    highlighted: true
-    title: Benjamin Franklin's 13 Virtues
-    url: /benjamin-franklins-13-virtues
-  - date: &id176 2024-07-23 00:00:00
+  - date: 2024-07-23 00:00:00
     highlighted: true
     title: MLO Workspaces logic
     url: /mlo-workspaces-logic
-  - date: *id176
-    highlighted: true
-    title: MLO Workspaces logic
-    url: /mlo-workspaces-logic
-  - date: &id177 2024-07-20 00:00:00
+  - date: 2024-07-20 00:00:00
     highlighted: true
     title: Computed-Score Priority in MLO
     url: /computed-score-priority-in-mlo
-  - date: *id177
-    highlighted: true
-    title: Computed-Score Priority in MLO
-    url: /computed-score-priority-in-mlo
-  - date: &id178 2024-05-21 00:00:00
+  - date: 2024-05-21 00:00:00
     highlighted: true
     title: Task Prioritization
     url: /tasks-mermaid
-  - date: *id178
-    highlighted: true
-    title: Task Prioritization
-    url: /tasks-mermaid
-  - date: &id179 2024-05-15 00:00:00
+  - date: 2024-05-15 00:00:00
     highlighted: true
     title: Planning System Based on MyLifeOrganized (MLO)
     url: /mlo-ru
-  - date: *id179
-    highlighted: true
-    title: Planning System Based on MyLifeOrganized (MLO)
-    url: /mlo-ru
-  - date: &id180 2024-04-12 00:00:00
+  - date: 2024-04-12 00:00:00
     highlighted: true
     title: Eisenhower Matrix
     url: /eisenhower
-  - date: *id180
-    highlighted: true
-    title: Eisenhower Matrix
-    url: /eisenhower
-  - date: &id181 2024-01-03 00:00:00
+  - date: 2024-01-03 00:00:00
     highlighted: true
     title: github stars
     url: /stars
-  - date: *id181
-    highlighted: true
-    title: github stars
-    url: /stars
-  - date: &id182 2022-11-11 00:00:00
+  - date: 2022-11-11 00:00:00
     highlighted: true
     title: Cleaning flowchart
     url: /cleaning-flow
-  - date: *id182
-    highlighted: true
-    title: Cleaning flowchart
-    url: /cleaning-flow
-  - date: &id183 2022-10-31 00:00:00
+  - date: 2022-10-31 00:00:00
     highlighted: true
     title: Tasks Flow (MyLifeOrganized - MLO)
     url: /tasks-flow
-  - date: *id183
-    highlighted: true
-    title: Tasks Flow (MyLifeOrganized - MLO)
-    url: /tasks-flow
-  - date: &id184 2022-01-16 00:00:00
+  - date: 2022-01-16 00:00:00
     highlighted: true
     title: habits
     url: /habits
-  - date: *id184
-    highlighted: true
-    title: habits
-    url: /habits
-  - date: &id185 2021-06-11 00:00:00
+  - date: 2021-06-11 00:00:00
     highlighted: true
     title: Rubik's
     url: /rubik
-  - date: *id185
-    highlighted: true
-    title: Rubik's
-    url: /rubik
-  - date: &id186 2021-04-16 00:00:00
-    highlighted: true
-    title: chess analysis workflow
-    url: /chess-flow
-  - date: *id186
+  - date: 2021-04-16 00:00:00
     highlighted: true
     title: chess analysis workflow
     url: /chess-flow
   tag: tasks
 - posts:
-  - date: *id174
-    highlighted: true
-    title: MLO URL schemes
-    url: /mlo-url-schemes
-  - date: *id174
+  - date: 2024-08-25 00:00:00
     highlighted: true
     title: MLO URL schemes
     url: /mlo-url-schemes
   tag: tasks>iphone
 - posts:
-  - date: &id187 2024-07-14 00:00:00
+  - date: 2024-07-14 00:00:00
     highlighted: true
     title: Procedimentos de Escolta Dedicada
     url: /escolta
-  - date: *id187
-    highlighted: true
-    title: Procedimentos de Escolta Dedicada
-    url: /escolta
-  - date: *id056
+  - date: *id019
     highlighted: true
     title: Periódicos para publicar artigos
     url: /periodicos
-  - date: *id056
-    highlighted: true
-    title: Periódicos para publicar artigos
-    url: /periodicos
-  - date: &id188 2024-02-25 00:00:00
+  - date: 2024-02-25 00:00:00
     highlighted: true
     title: QRU Aposentadoria
     url: /aposentadoria
-  - date: *id188
-    highlighted: true
-    title: QRU Aposentadoria
-    url: /aposentadoria
-  - date: &id189 2022-04-12 00:00:00
-    highlighted: true
-    title: Avaliação Funcional I/XV
-    url: /taf-01
-  - date: *id189
+  - date: 2022-04-12 00:00:00
     highlighted: true
     title: Avaliação Funcional I/XV
     url: /taf-01
