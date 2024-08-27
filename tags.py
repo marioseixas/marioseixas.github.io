@@ -248,18 +248,28 @@ def generate_mermaid_graph(tag_data: Union[List[Dict[str, Any]], Dict[str, Any]]
 
     return '\n'.join(graph)
 
-if __name__ == "__main__":
-    posts_dir = "posts"  # Replace with the path to your posts directory
-    output_file = "tag_data.yaml"
+if __name__ == '__main__':
+    # Use environment variables to determine paths
+    posts_dir = os.path.join(os.getenv('GITHUB_WORKSPACE', ''), '_posts')
+    output_file = os.path.join(os.getenv('GITHUB_WORKSPACE', ''), '_data/processed_tags.yml')
 
-    # Process the tags
-    tag_data = process_tags(posts_dir, output_file)
+    # Generate tag data if it doesn't exist
+    process_tags(posts_dir, output_file)
 
-    # Generate the Mermaid graph
+    try:
+        with open(output_file, 'r') as f:
+            tag_data = yaml.safe_load(f)
+    except (FileNotFoundError, yaml.YAMLError) as e:
+        logging.error(f"Error reading tag data: {e}")
+        tag_data = {}  # Initialize as empty dictionary
+
     mermaid_graph = generate_mermaid_graph(tag_data, direction="TD")
 
-    # Save the Mermaid graph to a file
-    with open("tag_graph.mmd", "w", encoding="utf-8") as f:
-        f.write(mermaid_graph)
-
-    logging.info("Mermaid graph has been written to tag_graph.mmd")
+    # Write the Mermaid graph to a file
+    output_path = os.path.join(os.getenv('GITHUB_WORKSPACE', ''), '_includes/tag_graph.html')
+    try:
+        with open(output_path, 'w', encoding='utf-8') as f:
+            f.write(f"<div class='mermaid'>\n{mermaid_graph}\n</div>")
+        logging.info(f"Mermaid graph has been written to {output_path}")
+    except IOError as e:
+        logging.error(f"Error writing Mermaid graph: {e}")
