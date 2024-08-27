@@ -75,7 +75,7 @@ id: not-found
   </header>
   <img src="{{ '/assets/archive.webp' | relative_url }}" alt="archive" class="favicon">
     <main class="post-wrapper">      
-      <section class="tag-page">
+      <section>
         {% assign modified_posts = site.posts | where_exp: "post", "post.last_modified_at != post.date" %}
         {% assign unmodified_posts = site.posts | where_exp: "post", "post.last_modified_at == post.date" %}
         
@@ -85,7 +85,9 @@ id: not-found
         {% assign all_sorted_posts = sorted_modified_posts | concat: sorted_unmodified_posts %}
         
         {% for post in all_sorted_posts %}
-<article class="tag-list">
+        <div class="tag-page">
+          <article>
+            <ul class="tag-list" aria-label="article">
   <h3>
   <time datetime="{{ post.date | date: '%Y-%m-%d' }}">
     {{ post.date | date: '%Y-%m-%d' }}
@@ -94,15 +96,19 @@ id: not-found
       {% endif %}
   </time>
   </h3>
-  <a href="#" class="back-to-top" aria-label="Back to top">
+              <li>
+                <a href="#" class="back-to-top" aria-label="Back to top">
     <img src="{{ '/assets/gold.ico' | relative_url }}" alt="gold icon">
-  </a>
-  <h2>
-    <a href="{{ post.url }}">
-      {{ post.title }}
-    </a>
-  </h2>
-</article>
+                </a>
+              </li>
+              <h2>
+                <a href="{{ post.url }}">
+                  {{ post.title }}
+                </a>
+              </h2>
+            </ul>
+          </article>
+        </div>
         {% endfor %}
       </section>
     </main>
