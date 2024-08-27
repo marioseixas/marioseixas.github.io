@@ -1,56 +1,149 @@
 <div class='mermaid'>
 graph TD
-    AI["AI"]:::mainNode
-    AI_prompt["AI>prompt"]:::combinedNode
-    AI --> AI_prompt
-    admoestação["admoestação"]:::mainNode
-    spirit["spirit"]:::mainNode
-    admoestação -.->|related| spirit
-    direito["direito"]:::mainNode
-    direito_processual-penal["direito>processual-penal"]:::combinedNode
-    direito --> direito_processual-penal
-    edital["edital"]:::mainNode
-    edital_direito["edital>direito"]:::combinedNode
-    edital --> edital_direito
-    edital_direito_processual-penal["edital>direito>processual-penal"]:::combinedNode
-    edital_direito --> edital_direito_processual-penal
-    estudos["estudos"]:::mainNode
-    trabalho["trabalho"]:::mainNode
-    estudos -.->|related| trabalho
-    scripts["scripts"]:::mainNode
-    estudos -.->|related| scripts
-    github["github"]:::mainNode
-    github_jekyll["github>jekyll"]:::combinedNode
-    github --> github_jekyll
-    iphone["iphone"]:::mainNode
-    software_mobile["software>mobile"]:::combinedNode
-    iphone -.->|related| software_mobile
-    scripts_mobile["scripts>mobile"]:::combinedNode
-    iphone -.->|related| scripts_mobile
-    linux["linux"]:::mainNode
-    linux -.->|related| software_mobile
-    linux -.->|related| scripts
-    scripts_AI["scripts>AI"]:::combinedNode
+    linux(("linux"))
+    class linux mainNode
+    scripts(("scripts"))
+    class scripts mainNode
+    linux -..->|related| scripts
+    software_mobile["software>mobile"]
+    class software_mobile combinedNode
+    linux -..->|related| software_mobile
+    rendimentos(("rendimentos"))
+    class rendimentos mainNode
+    trabalho(("trabalho"))
+    class trabalho mainNode
+    estudos(("estudos"))
+    class estudos mainNode
+    trabalho -..->|related| estudos
+    scripts_AI["scripts>AI"]
+    class scripts_AI combinedNode
     scripts --> scripts_AI
+    scripts_mobile["scripts>mobile"]
+    class scripts_mobile combinedNode
     scripts --> scripts_mobile
-    scripts_google-apps-script["scripts>google-apps-script"]:::combinedNode
+    scripts_google-apps-script["scripts>google-apps-script"]
+    class scripts_google-apps-script combinedNode
     scripts --> scripts_google-apps-script
-    scripts_cloud["scripts>cloud"]:::combinedNode
+    scripts_cloud["scripts>cloud"]
+    class scripts_cloud combinedNode
     scripts --> scripts_cloud
-    scripts -.->|related| estudos
-    scripts -.->|related| linux
-    scripts_mobile -.->|related| iphone
-    software["software"]:::mainNode
-    software_cloud["software>cloud"]:::combinedNode
+    scripts -..->|related| estudos
+    scripts -..->|related| linux
+    carro(("carro"))
+    class carro mainNode
+    edital(("edital"))
+    class edital mainNode
+    edital_direito_processual-penal["edital>direito>processual-penal"]
+    class edital_direito_processual-penal combinedNode
+    edital --> edital_direito_processual-penal
+    edital_direito["edital>direito"]
+    class edital_direito combinedNode
+    edital --> edital_direito
+    tasks(("tasks"))
+    class tasks mainNode
+    tasks_iphone["tasks>iphone"]
+    class tasks_iphone combinedNode
+    tasks --> tasks_iphone
+    hardware(("hardware"))
+    class hardware mainNode
+    chess(("chess"))
+    class chess mainNode
+    assistir(("assistir"))
+    class assistir mainNode
+    calls(("calls"))
+    class calls mainNode
+    despesas(("despesas"))
+    class despesas mainNode
+    iphone(("iphone"))
+    class iphone mainNode
+    iphone --> tasks_iphone
+    iphone -..->|related| scripts_mobile
+    iphone -..->|related| software_mobile
+    sell(("sell"))
+    class sell mainNode
+    github_jekyll(("github>jekyll"))
+    class github_jekyll mainNode
+    github(("github"))
+    class github mainNode
+    github --> github_jekyll
+    jekyll(("jekyll"))
+    class jekyll mainNode
+    jekyll --> github_jekyll
+    estudos -..->|related| scripts
+    estudos -..->|related| trabalho
+    direito(("direito"))
+    class direito mainNode
+    direito --> edital_direito
+    edital_direito --> edital_direito_processual-penal
+    direito --> edital_direito_processual-penal
+    fatherhood(("fatherhood"))
+    class fatherhood mainNode
+    misc(("misc"))
+    class misc mainNode
+    AI(("AI"))
+    class AI mainNode
+    AI_prompt["AI>prompt"]
+    class AI_prompt combinedNode
+    AI --> AI_prompt
+    software(("software"))
+    class software mainNode
+    software_cloud["software>cloud"]
+    class software_cloud combinedNode
     software --> software_cloud
     software --> software_mobile
-    software_mobile -.->|related| iphone
-    software_mobile -.->|related| linux
-    spirit -.->|related| admoestação
-    tasks["tasks"]:::mainNode
-    tasks_iphone["tasks>iphone"]:::combinedNode
-    tasks --> tasks_iphone
-    trabalho -.->|related| estudos
-    classDef mainNode fill:#f9f,stroke:#333,stroke-width:2px;
-    classDef combinedNode fill:#ff9,stroke:#333,stroke-width:2px;
+    mobile(("mobile"))
+    class mobile mainNode
+    mobile --> software_mobile
+    software_mobile -..->|related| iphone
+    software_mobile -..->|related| linux
+    prompt(("prompt"))
+    class prompt mainNode
+    prompt --> AI_prompt
+    music(("music"))
+    class music mainNode
+    mobile --> scripts_mobile
+    scripts_mobile -..->|related| iphone
+    spirit(("spirit"))
+    class spirit mainNode
+    admoestação(("admoestação"))
+    class admoestação mainNode
+    spirit -..->|related| admoestação
+    ler(("ler"))
+    class ler mainNode
+    google-apps-script(("google-apps-script"))
+    class google-apps-script mainNode
+    google-apps-script --> scripts_google-apps-script
+    saúde(("saúde"))
+    class saúde mainNode
+    cloud(("cloud"))
+    class cloud mainNode
+    cloud --> software_cloud
+    receitas(("receitas"))
+    class receitas mainNode
+    admoestação -..->|related| spirit
+    cloud --> scripts_cloud
+    processual-penal(("processual-penal"))
+    class processual-penal mainNode
+    processual-penal --> edital_direito_processual-penal
+    direito_processual-penal(("direito>processual-penal"))
+    class direito_processual-penal mainNode
+    direito --> direito_processual-penal
+    processual-penal --> direito_processual-penal
+    AI --> scripts_AI
+    %% Styling
+    classDef mainNode fill:#f9f,stroke:#333,stroke-width:4px;
+    classDef combinedNode fill:#bbf,stroke:#66f,stroke-width:2px;
+    %% Layout hints
+    scripts_AI --- scripts
+    edital_direito_processual-penal --- edital
+    scripts_google-apps-script --- scripts
+    software_cloud --- software
+    AI_prompt --- AI
+    edital_direito --- edital
+    tasks_iphone --- tasks
+    scripts_cloud --- scripts
+    github_jekyll --- github
+    scripts_mobile --- scripts
+    direito_processual-penal --- direito
+    software_mobile --- software
 </div>
