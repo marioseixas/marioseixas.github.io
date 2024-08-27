@@ -75,8 +75,8 @@ id: not-found
   </header>
   <div class="post-wrapper">
     <img src="{{ '/assets/archive.webp' | relative_url }}" alt="archive" class="favicon">
-    <main class="tag-list">      
-      <section class="search-link">
+    <main class="tag-page">      
+      <section class="tag-list">
         {% assign modified_posts = site.posts | where_exp: "post", "post.last_modified_at != post.date" %}
         {% assign unmodified_posts = site.posts | where_exp: "post", "post.last_modified_at == post.date" %}
         
@@ -86,7 +86,7 @@ id: not-found
         {% assign all_sorted_posts = sorted_modified_posts | concat: sorted_unmodified_posts %}
         
         {% for post in all_sorted_posts %}
-<article class="tagged-posts">
+<article class="search-link">
   <h3>
   <time datetime="{{ post.date | date: '%Y-%m-%d' }}" class="post-date">
     {{ post.date | date: '%Y-%m-%d' }}
