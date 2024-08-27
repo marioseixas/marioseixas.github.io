@@ -148,31 +148,54 @@ def process_tags(posts_dir, output_file):
     return tag_data
 
 def generate_mermaid_graph(tag_data):
-    """Generates Mermaid graph code for the tag structure, capturing both hierarchical and non-hierarchical relationships."""
+    """Generates Mermaid graph code for the tag structure, including hierarchical and non-hierarchical relationships."""
     graph = "graph TD\n"
-    added_edges = set()  # Keep track of added edges to avoid duplicates
+    added_nodes = set()
+    added_edges = set()
+
+    def add_node(tag):
+        safe_tag = tag.replace('>', '_').replace(' ', '_')
+        if safe_tag not in added_nodes:
+            graph += f"{safe_tag}(\"{tag}\")\n"
+            added_nodes.add(safe_tag)
+
+    def add_edge(from_tag, to_tag, edge_type):
+        safe_from = from_tag.replace('>', '_').replace(' ', '_')
+        safe_to = to_tag.replace('>', '_').replace(' ', '_')
+        edge = (safe_from, safe_to, edge_type)
+        if edge not in added_edges:
+            if edge_type == 'hierarchical':
+                graph += f"{safe_from} --> {safe_to}\n"
+            elif edge_type == 'non_hierarchical':
+                graph += f"{safe_from} -.-> {safe_to}\n"
+            added_edges.add(edge)
 
     for tag_name, data in tag_data.items():
-        safe_tag_name = tag_name.replace('>', '_')
-        graph += f"{safe_tag_name}({tag_name})\n"
+        add_node(tag_name)
 
-        # Add edges for parent-child relationships
+        # Add hierarchical relationships
         for child in data['children']:
-            safe_child_name = child.replace('>', '_')
-            edge = (safe_tag_name, safe_child_name)
-            if edge not in added_edges:
-                graph += f"{safe_tag_name} --> {safe_child_name}\n"
-                added_edges.add(edge)
+            add_node(child)
+            add_edge(tag_name, child, 'hierarchical')
 
-        # Add edges for related tags (non-hierarchical)
+        # Add non-hierarchical relationships
         for related in data['related']:
-            safe_related_name = related.replace('>', '_')
-            edge1 = (safe_tag_name, safe_related_name)
-            edge2 = (safe_related_name, safe_tag_name)
-            if edge1 not in added_edges and edge2 not in added_edges:
-                graph += f"{safe_tag_name} --- {safe_related_name}\n"
-                added_edges.add(edge1)
-                added_edges.add(edge2)
+            add_node(related)
+            add_edge(tag_name, related, 'non_hierarchical')
+
+        # Handle compound tags (e.g., 'scripts>cloud')
+        if '>' in tag_name:
+            parts = tag_name.split('>')
+            for i in range(len(parts)):
+                parent = '>'.join(parts[:i+1])
+                child = '>'.join(parts[:i+2])
+                if i+1 < len(parts):
+                    add_node(parent)
+                    add_node(child)
+                    add_edge(parent, child, 'hierarchical')
+
+                # Connect compound tags to their individual components
+                add_edge(tag_name, parts[i], 'non_hierarchical')
 
     return graph
 
