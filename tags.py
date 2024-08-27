@@ -3,7 +3,7 @@ import yaml
 import logging
 from collections import defaultdict
 from datetime import datetime
-from typing import Dict, Any
+from typing import Union, List, Dict, Any
 
 # Configure logging
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
@@ -148,12 +148,12 @@ def process_tags(posts_dir, output_file):
 
     return tag_data
 
-def generate_mermaid_graph(tag_data: Dict[str, Any], direction: str = "TD") -> str:
+def generate_mermaid_graph(tag_data: Union[List[Dict[str, Any]], Dict[str, Any]], direction: str = "TD") -> str:
     """
     Generates Mermaid graph code for the tag structure.
 
     Args:
-        tag_data (Dict[str, Any]): Dictionary containing tag relationships.
+        tag_data (Union[List[Dict[str, Any]], Dict[str, Any]]): List of dictionaries or dictionary containing tag relationships.
         direction (str): Graph direction (TD, LR, RL, BT). Defaults to "TD".
 
     Returns:
@@ -166,7 +166,7 @@ def generate_mermaid_graph(tag_data: Dict[str, Any], direction: str = "TD") -> s
     def add_node(tag: str) -> str:
         safe_tag = tag.replace('>', '_').replace(' ', '_')
         if safe_tag not in added_nodes:
-            node_def = f'    "{safe_tag}"["{tag}"]'
+            node_def = f'    {safe_tag}["{tag}"]'
             graph.append(node_def)
             added_nodes.add(safe_tag)
         return safe_tag
@@ -177,30 +177,43 @@ def generate_mermaid_graph(tag_data: Dict[str, Any], direction: str = "TD") -> s
         edge = (safe_from, safe_to, edge_type)
         if edge not in added_edges:
             edge_style = '-->' if edge_type == 'solid' else '-..->'
-            graph.append(f'    "{safe_from}"" {edge_style}"" {safe_to}"')
+            graph.append(f'    {safe_from} {edge_style} {safe_to}')
             added_edges.add(edge)
 
+    def process_tag(tag_name: str, data: Dict[str, Any]) -> None:
+        # Add hierarchical relationships
+        for child in data.get('children', []):
+            add_edge(tag_name, child, 'solid')
+
+        # Add non-hierarchical relationships
+        for related in data.get('related', []):
+            add_edge(tag_name, related, 'dashed')
+
+        # Handle compound tags
+        if '>' in tag_name:
+            parts = tag_name.split('>')
+            for i in range(len(parts) - 1):
+                parent = '>'.join(parts[:i+1])
+                child = '>'.join(parts[:i+2])
+                add_edge(parent, child, 'solid')
+                add_edge(tag_name, parts[i], 'dashed')
+
     try:
-        for tag_name, data in tag_data.items():
-            # Add hierarchical relationships
-            for child in data.get('children', []):
-                add_edge(tag_name, child, 'solid')
+        if isinstance(tag_data, list):
+            for item in tag_data:
+                if isinstance(item, dict) and 'name' in item:
+                    process_tag(item['name'], item)
+                else:
+                    logging.warning(f"Skipping invalid item in tag_data: {item}")
+        elif isinstance(tag_data, dict):
+            for tag_name, data in tag_data.items():
+                process_tag(tag_name, data)
+        else:
+            logging.error(f"Unexpected tag_data type: {type(tag_data)}")
+            return ""
 
-            # Add non-hierarchical relationships
-            for related in data.get('related', []):
-                add_edge(tag_name, related, 'dashed')
-
-            # Handle compound tags
-            if '>' in tag_name:
-                parts = tag_name.split('>')
-                for i in range(len(parts) - 1):
-                    parent = '>'.join(parts[:i+1])
-                    child = '>'.join(parts[:i+2])
-                    add_edge(parent, child, 'solid')
-                    add_edge(tag_name, parts[i], 'dashed')
-
-    except AttributeError as e:
-        logging.error(f"Invalid tag_data structure: {e}")
+    except Exception as e:
+        logging.error(f"Error processing tag_data: {e}")
         return ""
 
     return '\n'.join(graph)
