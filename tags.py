@@ -3,6 +3,7 @@ import yaml
 import logging
 from collections import defaultdict
 from datetime import datetime
+from typing import Dict, Any
 
 # Configure logging
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
@@ -147,87 +148,82 @@ def process_tags(posts_dir, output_file):
 
     return tag_data
 
-def generate_mermaid_graph(tag_data):
-    """Generates Mermaid graph code for the tag structure, including hierarchical and non-hierarchical relationships."""
-    graph = "graph TD\n"
+def generate_mermaid_graph(tag_data: Dict[str, Any], direction: str = "TD") -> str:
+    """
+    Generates Mermaid graph code for the tag structure.
+
+    Args:
+        tag_data (Dict[str, Any]): Dictionary containing tag relationships.
+        direction (str): Graph direction (TD, LR, RL, BT). Defaults to "TD".
+
+    Returns:
+        str: Mermaid graph code.
+    """
+    graph = [f"graph {direction}"]
     added_nodes = set()
     added_edges = set()
 
-    %% Initialize sets to track added nodes and edges
-    %% added_nodes = set()
-    %% added_edges = set()
+    def add_node(tag: str) -> str:
+        safe_tag = tag.replace('>', '_').replace(' ', '_')
+        if safe_tag not in added_nodes:
+            node_def = f'    "{safe_tag}"["{tag}"]'
+            graph.append(node_def)
+            added_nodes.add(safe_tag)
+        return safe_tag
 
-    %% Function to add a node
-    %% def add_node(tag):
-    %%     safe_tag = tag.replace('>', '_').replace(' ', '_')
-    %%     if safe_tag not in added_nodes:
-    %%         graph += f"{safe_tag}(\"{tag}\")\n"
-    %%         added_nodes.add(safe_tag)
+    def add_edge(from_tag: str, to_tag: str, edge_type: str = 'solid') -> None:
+        safe_from = add_node(from_tag)
+        safe_to = add_node(to_tag)
+        edge = (safe_from, safe_to, edge_type)
+        if edge not in added_edges:
+            edge_style = '-->' if edge_type == 'solid' else '-..->'
+            graph.append(f'    "{safe_from}"" {edge_style}"" {safe_to}"')
+            added_edges.add(edge)
 
-    %% Function to add an edge
-    %% def add_edge(from_tag, to_tag, edge_type):
-    %%     safe_from = from_tag.replace('>', '_').replace(' ', '_')
-    %%     safe_to = to_tag.replace('>', '_').replace(' ', '_')
-    %%     edge = (safe_from, safe_to, edge_type)
-    %%     if edge not in added_edges:
-    %%         if edge_type == 'hierarchical':
-    %%             graph += f"{safe_from} --> {safe_to}\n"
-    %%         elif edge_type == 'non_hierarchical':
-    %%             graph += f"{safe_from} -.-> {safe_to}\n"
-    %%         added_edges.add(edge)
+    try:
+        for tag_name, data in tag_data.items():
+            # Add hierarchical relationships
+            for child in data.get('children', []):
+                add_edge(tag_name, child, 'solid')
 
-    %% Main loop to process tag data
-    for tag_name, data in tag_data.items()
-        safe_tag_name = tag_name.replace('>', '_').replace(' ', '_')
-        safe_tag_name["`tag_name`"]
+            # Add non-hierarchical relationships
+            for related in data.get('related', []):
+                add_edge(tag_name, related, 'dashed')
 
-        %% Add hierarchical relationships
-        for child in data.children
-            safe_child_name = child.replace('>', '_').replace(' ', '_')
-            safe_child_name["`child`"]
-            safe_tag_name --> safe_child_name
-
-        %% Add non-hierarchical relationships
-        for related in data.related
-            safe_related_name = related.replace('>', '_').replace(' ', '_')
-            safe_related_name["`related`"]
-            safe_tag_name -.-> safe_related_name
-
-        %% Handle compound tags (e.g., 'scripts>cloud')
-        subgraph compound_tags
-            direction TB
-            if tag_name.includes('>')
+            # Handle compound tags
+            if '>' in tag_name:
                 parts = tag_name.split('>')
-                loop i in range(0, parts.length - 1)
-                    parent = parts.slice(0, i + 1).join('>')
-                    child = parts.slice(0, i + 2).join('>')
-                    safe_parent = parent.replace('>', '_').replace(' ', '_')
-                    safe_child = child.replace('>', '_').replace(' ', '_')
-                    safe_parent["`parent`"]
-                    safe_child["`child`"]
-                    safe_parent --> safe_child
+                for i in range(len(parts) - 1):
+                    parent = '>'.join(parts[:i+1])
+                    child = '>'.join(parts[:i+2])
+                    add_edge(parent, child, 'solid')
+                    add_edge(tag_name, parts[i], 'dashed')
 
-                    %% Connect compound tags to their individual components
-                    safe_part = parts[i].replace('>', '_').replace(' ', '_')
-                    safe_part["`parts[i]`"]
-                    safe_tag_name -.-> safe_part
-                end
-            end
-        end
-    end
+    except AttributeError as e:
+        logging.error(f"Invalid tag_data structure: {e}")
+        return ""
 
-    return graph
+    return '\n'.join(graph)
 
 if __name__ == '__main__':
     # Use environment variables to determine paths
     posts_dir = os.path.join(os.getenv('GITHUB_WORKSPACE', ''), '_posts')
     output_file = os.path.join(os.getenv('GITHUB_WORKSPACE', ''), '_data/processed_tags.yml')
     
-    tag_data = process_tags(posts_dir, output_file)
+    try:
+        with open(output_file, 'r') as f:
+            tag_data = yaml.safe_load(f)
+    except (FileNotFoundError, yaml.YAMLError) as e:
+        logging.error(f"Error reading tag data: {e}")
+        tag_data = {}
+
     mermaid_graph = generate_mermaid_graph(tag_data)
 
     # Write the Mermaid graph to a file
-    with open(os.path.join(os.getenv('GITHUB_WORKSPACE', ''), '_includes/tag_graph.html'), 'w', encoding='utf-8') as f:
-        f.write(f"<div class='mermaid'>\n{mermaid_graph}\n</div>")
-
-    logging.info("Mermaid graph has been written to _includes/tag_graph.html")
+    output_path = os.path.join(os.getenv('GITHUB_WORKSPACE', ''), '_includes/tag_graph.html')
+    try:
+        with open(output_path, 'w', encoding='utf-8') as f:
+            f.write(f"<div class='mermaid'>\n{mermaid_graph}\n</div>")
+        logging.info(f"Mermaid graph has been written to {output_path}")
+    except IOError as e:
+        logging.error(f"Error writing Mermaid graph: {e}")
