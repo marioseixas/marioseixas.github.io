@@ -4,44 +4,16 @@ graph TD
     AI_prompt["AI>prompt"]
     AI --> AI_prompt
     AI_prompt -..-> AI
-    direito["direito"]
-    direito_processual-penal["direito>processual-penal"]
-    direito --> direito_processual-penal
-    direito_processual-penal -..-> direito
     edital["edital"]
     edital_direito["edital>direito"]
     edital --> edital_direito
     edital_direito -..-> edital
-    edital_direito_processual-penal["edital>direito>processual-penal"]
-    edital_direito_processual-penal -..-> edital
-    edital_direito --> edital_direito_processual-penal
-    edital_direito_processual-penal -..-> direito
     github["github"]
     github_jekyll["github>jekyll"]
     github --> github_jekyll
     github_jekyll -..-> github
-    scripts["scripts"]
-    scripts_AI["scripts>AI"]
-    scripts --> scripts_AI
-    scripts_AI -..-> scripts
-    scripts_cloud["scripts>cloud"]
-    scripts --> scripts_cloud
-    scripts_cloud -..-> scripts
-    scripts_google-apps-script["scripts>google-apps-script"]
-    scripts --> scripts_google-apps-script
-    scripts_google-apps-script -..-> scripts
-    scripts_mobile["scripts>mobile"]
-    scripts --> scripts_mobile
-    scripts_mobile -..-> scripts
     software["software"]
-    software_cloud["software>cloud"]
-    software --> software_cloud
-    software_cloud -..-> software
     software_mobile["software>mobile"]
     software --> software_mobile
     software_mobile -..-> software
-    tasks["tasks"]
-    tasks_iphone["tasks>iphone"]
-    tasks --> tasks_iphone
-    tasks_iphone -..-> tasks
 </div>
