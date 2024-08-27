@@ -86,7 +86,7 @@ id: not-found
         
         {% for post in all_sorted_posts %}
 <article class="tag-list">
-  <h3 class="tagged-posts">
+  <h3>
   <time datetime="{{ post.date | date: '%Y-%m-%d' }}">
     {{ post.date | date: '%Y-%m-%d' }}
       {% if post.last_modified_at != post.date %}
