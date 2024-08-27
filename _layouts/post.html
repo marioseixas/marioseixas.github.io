@@ -115,6 +115,9 @@ layout: null
     <script src="{{ '/assets/js/copy-to-clipboard.js' | relative_url }}" defer></script>
   </article>
   <hr>
-  <a href="#" id="back-to-top" aria-label="Back to top">↑</a>{{ page.comment }}
+  <a href="#" class="back-to-top" aria-label="Back to top">
+    <img src="{{ '/assets/gold.ico' | relative_url }}" alt="gold icon">
+  </a>
+  {{ page.comment }}
 </body>
 </html>
