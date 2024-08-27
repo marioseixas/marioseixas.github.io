@@ -74,14 +74,24 @@ title: Tags
     <div class="tag-page">
       <h1>{{ page.title }}</h1>
       <ul class="tag-list" aria-label="List of all tags">
-        {% for tag_data in site.data.processed_tags %}
-          <li>
-            <a href="#{{ tag_data.tag | slugify }}" aria-label="Tag {{ tag_data.tag }} with {{ tag_data.posts.size }} posts">
-              {{ tag_data.tag }} ({{ tag_data.posts.size }})
-            </a>
-          </li>
-        {% endfor %}
-      </ul>
+  {% for tag_data in site.data.processed_tags %}
+    {% assign has_highlighted_post = false %}
+    {% for post in tag_data.posts %}
+      {% if post.highlighted %}
+        {% assign has_highlighted_post = true %}
+        {% break %}
+      {% endif %}
+    {% endfor %}
+
+    {% if has_highlighted_post %}
+      <li>
+        <a href="#{{ tag_data.tag | slugify }}" aria-label="Tag {{ tag_data.tag }} with {{ tag_data.posts.size }} posts">
+          {{ tag_data.tag }} ({{ tag_data.posts.size }})
+        </a>
+      </li>
+    {% endif %}
+  {% endfor %}
+</ul>
     </div>
     {% cusdis_comments %}
     <main class="tagged-posts">
