@@ -1,16 +1,16 @@
 <div class='mermaid'>
 graph TD
 linux(linux)
-linux --- software_mobile
 linux --- scripts
+linux --- software_mobile
 rendimentos(rendimentos)
 trabalho(trabalho)
 trabalho --- estudos
 scripts(scripts)
+scripts --> scripts_AI
 scripts --> scripts_cloud
 scripts --> scripts_mobile
 scripts --> scripts_google-apps-script
-scripts --> scripts_AI
 scripts --- estudos
 carro(carro)
 edital(edital)
@@ -23,8 +23,8 @@ assistir(assistir)
 calls(calls)
 despesas(despesas)
 iphone(iphone)
-iphone --- scripts_mobile
 iphone --- software_mobile
+iphone --- scripts_mobile
 tasks_iphone(tasks>iphone)
 sell(sell)
 github(github)
@@ -40,8 +40,8 @@ misc(misc)
 AI(AI)
 AI --> AI_prompt
 software(software)
-software --> software_mobile
 software --> software_cloud
+software --> software_mobile
 mobile(mobile)
 software_mobile(software>mobile)
 prompt(prompt)
