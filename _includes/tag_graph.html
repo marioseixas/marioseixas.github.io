@@ -1,3 +1,45 @@
 <div class='mermaid'>
+graph TD
+software((("software")))
+cloud((("cloud")))
+mobile((("mobile")))
+script((("script")))
+google_apps_script((("google-apps-script")))
+software_mobile[["software>mobile"]]
+scripts_mobile[["scripts>mobile"]]
+edital_direito[["edital>direito"]]
+edital_direito_processual-penal[["edital>direito>processual-penal"]]
+scripts_cloud[["scripts>cloud"]]
+software_cloud[["software>cloud"]]
+scripts_AI[["scripts>AI"]]
+AI_prompt[["AI>prompt"]]
+scripts_google-apps-script[["scripts>google-apps-script"]]
+tasks_iphone[["tasks>iphone"]]
+github_jekyll[["github>jekyll"]]
+scripts --> scripts_cloud
+scripts --> scripts_google-apps-script
+scripts --> scripts_mobile
+scripts --> scripts_AI
+edital --> edital_direito
+edital --> edital_direito_processual-penal
+tasks --> tasks_iphone
+github --> github_jekyll
+edital_direito --> edital_direito_processual-penal
+direito --> edital_direito_processual-penal
+AI --> AI_prompt
+software --> software_cloud
+software --> software_mobile
+linux -.->|related| scripts
+linux -.->|related| software_mobile
+trabalho -.->|related| estudos
+scripts -.->|related| estudos
+iphone -.->|related| software_mobile
+iphone -.->|related| scripts_mobile
+spirit -.->|related| admoestação
+
+classDef mainNode fill:#f9f,stroke:#333,stroke-width:4px;
+classDef combinedNode fill:#ccf,stroke:#33f,stroke-width:2px;
+class software, cloud, mobile, script, google_apps_script mainNode;
+class software_mobile, scripts_mobile, edital_direito, edital_direito_processual-penal, scripts_cloud, software_cloud, scripts_AI, AI_prompt, scripts_google-apps-script, tasks_iphone, github_jekyll combinedNode;
 
 </div>
