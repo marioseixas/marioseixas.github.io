@@ -8,7 +8,7 @@ from datetime import datetime
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
 # Threshold for generating permutations
-THRESHOLD = 0  # Adjust this value as needed
+THRESHOLD = 0  # Set this value according to your needs
 
 def extract_frontmatter(file_content):
     """Extracts the YAML frontmatter from a markdown file."""
@@ -22,7 +22,7 @@ def extract_frontmatter(file_content):
     return frontmatter
 
 def generate_partial_tags(tag):
-    """Generates all partial tags for a given tag."""
+    """Generates all possible partial tags for a given hierarchical tag."""
     parts = tag.split('>')
     partial_tags = []
     for i in range(1, len(parts) + 1):
@@ -31,8 +31,7 @@ def generate_partial_tags(tag):
     return partial_tags
 
 def process_tags(posts_dir, output_file):
-    """Processes tags from markdown files, handling nested tags, highlighting exact matches,
-    preventing duplicates using file paths, and generating a Mermaid graph."""
+    """Processes tags from markdown files, managing nested tags, and generating a Mermaid graph."""
     
     tag_frequency = defaultdict(int)
     all_posts = []
@@ -113,7 +112,7 @@ def process_tags(posts_dir, output_file):
             # Establish parent-child relationships
             for i in range(1, len(tag_parts)):
                 parent_tag = '>'.join(tag_parts[:i])
-                child_tag = '>' .join(tag_parts[:i + 1])
+                child_tag = '>'.join(tag_parts[:i + 1])
                 if tag_frequency[parent_tag] >= THRESHOLD and tag_frequency[child_tag] >= THRESHOLD:
                     tag_data[child_tag]['parents'].add(parent_tag)
                     tag_data[parent_tag]['children'].add(child_tag)
