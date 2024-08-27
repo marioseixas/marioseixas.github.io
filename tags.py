@@ -153,49 +153,68 @@ def generate_mermaid_graph(tag_data):
     added_nodes = set()
     added_edges = set()
 
-    def add_node(tag):
-        safe_tag = tag.replace('>', '_').replace(' ', '_')
-        if safe_tag not in added_nodes:
-            graph += f"{safe_tag}(\"{tag}\")\n"
-            added_nodes.add(safe_tag)
+    %% Initialize sets to track added nodes and edges
+    %% added_nodes = set()
+    %% added_edges = set()
 
-    def add_edge(from_tag, to_tag, edge_type):
-        safe_from = from_tag.replace('>', '_').replace(' ', '_')
-        safe_to = to_tag.replace('>', '_').replace(' ', '_')
-        edge = (safe_from, safe_to, edge_type)
-        if edge not in added_edges:
-            if edge_type == 'hierarchical':
-                graph += f"{safe_from} --> {safe_to}\n"
-            elif edge_type == 'non_hierarchical':
-                graph += f"{safe_from} -.-> {safe_to}\n"
-            added_edges.add(edge)
+    %% Function to add a node
+    %% def add_node(tag):
+    %%     safe_tag = tag.replace('>', '_').replace(' ', '_')
+    %%     if safe_tag not in added_nodes:
+    %%         graph += f"{safe_tag}(\"{tag}\")\n"
+    %%         added_nodes.add(safe_tag)
 
-    for tag_name, data in tag_data.items():
-        add_node(tag_name)
+    %% Function to add an edge
+    %% def add_edge(from_tag, to_tag, edge_type):
+    %%     safe_from = from_tag.replace('>', '_').replace(' ', '_')
+    %%     safe_to = to_tag.replace('>', '_').replace(' ', '_')
+    %%     edge = (safe_from, safe_to, edge_type)
+    %%     if edge not in added_edges:
+    %%         if edge_type == 'hierarchical':
+    %%             graph += f"{safe_from} --> {safe_to}\n"
+    %%         elif edge_type == 'non_hierarchical':
+    %%             graph += f"{safe_from} -.-> {safe_to}\n"
+    %%         added_edges.add(edge)
 
-        # Add hierarchical relationships
-        for child in data['children']:
-            add_node(child)
-            add_edge(tag_name, child, 'hierarchical')
+    %% Main loop to process tag data
+    for tag_name, data in tag_data.items()
+        safe_tag_name = tag_name.replace('>', '_').replace(' ', '_')
+        safe_tag_name["`tag_name`"]
 
-        # Add non-hierarchical relationships
-        for related in data['related']:
-            add_node(related)
-            add_edge(tag_name, related, 'non_hierarchical')
+        %% Add hierarchical relationships
+        for child in data.children
+            safe_child_name = child.replace('>', '_').replace(' ', '_')
+            safe_child_name["`child`"]
+            safe_tag_name --> safe_child_name
 
-        # Handle compound tags (e.g., 'scripts>cloud')
-        if '>' in tag_name:
-            parts = tag_name.split('>')
-            for i in range(len(parts)):
-                parent = '>'.join(parts[:i+1])
-                child = '>'.join(parts[:i+2])
-                if i+1 < len(parts):
-                    add_node(parent)
-                    add_node(child)
-                    add_edge(parent, child, 'hierarchical')
+        %% Add non-hierarchical relationships
+        for related in data.related
+            safe_related_name = related.replace('>', '_').replace(' ', '_')
+            safe_related_name["`related`"]
+            safe_tag_name -.-> safe_related_name
 
-                # Connect compound tags to their individual components
-                add_edge(tag_name, parts[i], 'non_hierarchical')
+        %% Handle compound tags (e.g., 'scripts>cloud')
+        subgraph compound_tags
+            direction TB
+            if tag_name.includes('>')
+                parts = tag_name.split('>')
+                loop i in range(0, parts.length - 1)
+                    parent = parts.slice(0, i + 1).join('>')
+                    child = parts.slice(0, i + 2).join('>')
+                    safe_parent = parent.replace('>', '_').replace(' ', '_')
+                    safe_child = child.replace('>', '_').replace(' ', '_')
+                    safe_parent["`parent`"]
+                    safe_child["`child`"]
+                    safe_parent --> safe_child
+
+                    %% Connect compound tags to their individual components
+                    safe_part = parts[i].replace('>', '_').replace(' ', '_')
+                    safe_part["`parts[i]`"]
+                    safe_tag_name -.-> safe_part
+                end
+            end
+        end
+    end
 
     return graph
 
