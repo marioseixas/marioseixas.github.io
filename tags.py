@@ -9,7 +9,7 @@ from typing import Union, List, Dict, Any
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
 # Threshold for generating permutations
-THRESHOLD = 2  # Set this value according to your needs
+THRESHOLD = 0  # Set this value according to your needs
 
 def extract_frontmatter(file_content: str) -> str:
     """Extracts the YAML frontmatter from a markdown file."""
