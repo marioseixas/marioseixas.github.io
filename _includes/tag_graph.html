@@ -7,18 +7,25 @@ rendimentos(rendimentos)
 trabalho(trabalho)
 trabalho --- estudos
 scripts(scripts)
+scripts --> scripts_AI
+scripts --> scripts_google-apps-script
+scripts --> scripts_mobile
+scripts --> scripts_cloud
 scripts --- estudos
 carro(carro)
 edital(edital)
 edital --> edital_direito
 tasks(tasks)
+tasks --> tasks_iphone
 hardware(hardware)
 chess(chess)
 assistir(assistir)
 calls(calls)
 despesas(despesas)
 iphone(iphone)
+iphone --- scripts_mobile
 iphone --- software_mobile
+tasks_iphone(tasks>iphone)
 sell(sell)
 github(github)
 github --> github_jekyll
@@ -27,21 +34,34 @@ github_jekyll(github>jekyll)
 estudos(estudos)
 direito(direito)
 edital_direito(edital>direito)
+edital_direito --> edital_direito_processual-penal
 fatherhood(fatherhood)
 misc(misc)
 AI(AI)
 AI --> AI_prompt
 software(software)
+software --> software_cloud
 software --> software_mobile
 mobile(mobile)
 software_mobile(software>mobile)
 prompt(prompt)
 AI_prompt(AI>prompt)
+music(music)
+scripts_mobile(scripts>mobile)
 spirit(spirit)
 spirit --- admoestação
 ler(ler)
+google-apps-script(google-apps-script)
+scripts_google-apps-script(scripts>google-apps-script)
 saúde(saúde)
 cloud(cloud)
+software_cloud(software>cloud)
+receitas(receitas)
 admoestação(admoestação)
+scripts_cloud(scripts>cloud)
+processual-penal(processual-penal)
+direito_processual-penal(direito>processual-penal)
+edital_direito_processual-penal(edital>direito>processual-penal)
+scripts_AI(scripts>AI)
 
 </div>
