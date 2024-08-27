@@ -1,22 +1,17 @@
 <div class='mermaid'>
 graph TD
 linux(linux)
-linux --- software_mobile
 linux --- scripts
+linux --- software_mobile
 rendimentos(rendimentos)
 trabalho(trabalho)
 trabalho --- estudos
 scripts(scripts)
-scripts --> scripts_cloud
-scripts --> scripts_AI
-scripts --> scripts_google-apps-script
-scripts --> scripts_mobile
 scripts --- estudos
 carro(carro)
 edital(edital)
 edital --> edital_direito
 tasks(tasks)
-tasks --> tasks_iphone
 hardware(hardware)
 chess(chess)
 assistir(assistir)
@@ -24,8 +19,6 @@ calls(calls)
 despesas(despesas)
 iphone(iphone)
 iphone --- software_mobile
-iphone --- scripts_mobile
-tasks_iphone(tasks>iphone)
 sell(sell)
 github(github)
 github --> github_jekyll
@@ -34,29 +27,21 @@ github_jekyll(github>jekyll)
 estudos(estudos)
 direito(direito)
 edital_direito(edital>direito)
-edital_direito --> edital_direito_processual-penal
 fatherhood(fatherhood)
 misc(misc)
 AI(AI)
 AI --> AI_prompt
 software(software)
 software --> software_mobile
-software --> software_cloud
 mobile(mobile)
 software_mobile(software>mobile)
 prompt(prompt)
 AI_prompt(AI>prompt)
-scripts_mobile(scripts>mobile)
 spirit(spirit)
 spirit --- admoestação
 ler(ler)
-scripts_google-apps-script(scripts>google-apps-script)
 saúde(saúde)
 cloud(cloud)
-software_cloud(software>cloud)
 admoestação(admoestação)
-scripts_cloud(scripts>cloud)
-edital_direito_processual-penal(edital>direito>processual-penal)
-scripts_AI(scripts>AI)
 
 </div>
