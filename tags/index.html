@@ -89,7 +89,9 @@ title: Tags
     <section class="search-link" id="{{ tag_data.tag | slugify }}" aria-labelledby="{{ tag_data.tag | slugify }}-heading">
       <h2 id="{{ tag_data.tag | slugify }}-heading">
         {{ tag_data.tag }}
-        <a href="#" class="back-to-top" aria-label="Back to top">↑</a>
+        <a href="#" class="back-to-top" aria-label="Back to top">
+          <img src="{{ '/assets/gold.ico' | relative_url }}" alt="gold icon">
+        </a>
       </h2>
       <ul>
         {% for post in tag_data.posts %}
