@@ -114,14 +114,24 @@ def process_tags(posts_dir, output_file):
             for i in range(1, len(tag_parts)):
                 parent_tag = '>'.join(tag_parts[:i])
                 child_tag = '>'.join(tag_parts[:i + 1])
-                tag_data[child_tag]['parents'].add(parent_tag)
-                tag_data[parent_tag]['children'].add(child_tag)
+                if tag_frequency[parent_tag] >= THRESHOLD and tag_frequency[child_tag] >= THRESHOLD:
+                    tag_data[child_tag]['parents'].add(parent_tag)
+                    tag_data[parent_tag]['children'].add(child_tag)
 
             # Track non-hierarchical (related) relationships
             for other_tag in post['tags']:
-                if other_tag != tag:
+                if other_tag != tag and tag_frequency[other_tag] >= THRESHOLD and tag_frequency[full_tag_path] >= THRESHOLD:
                     tag_data[full_tag_path]['related'].add(other_tag)
                     tag_data[other_tag]['related'].add(full_tag_path)
+
+    # Remove tags with no posts
+    tag_data = {tag: data for tag, data in tag_data.items() if data['posts']}
+
+    # Clean up relationships
+    for tag, data in tag_data.items():
+        data['parents'] = {parent for parent in data['parents'] if parent in tag_data}
+        data['children'] = {child for child in data['children'] if child in tag_data}
+        data['related'] = {related for related in data['related'] if related in tag_data}
 
     # Sort posts within each tag by date (most recent first)
     for tag, data in tag_data.items():
