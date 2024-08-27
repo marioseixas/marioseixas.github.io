@@ -73,10 +73,9 @@ id: not-found
       </div>
     </nav>
   </header>
-  <div class="post-wrapper">
-    <img src="{{ '/assets/archive.webp' | relative_url }}" alt="archive" class="favicon">
-    <main class="tag-page">      
-      <section class="tag-list">
+  <img src="{{ '/assets/archive.webp' | relative_url }}" alt="archive" class="favicon">
+    <main class="post-wrapper">      
+      <section class="tag-page">
         {% assign modified_posts = site.posts | where_exp: "post", "post.last_modified_at != post.date" %}
         {% assign unmodified_posts = site.posts | where_exp: "post", "post.last_modified_at == post.date" %}
         
@@ -86,8 +85,8 @@ id: not-found
         {% assign all_sorted_posts = sorted_modified_posts | concat: sorted_unmodified_posts %}
         
         {% for post in all_sorted_posts %}
-<article class="tagged-posts">
-  <h3>
+<article class="tag-list">
+  <h3 class="tagged-posts">
   <time datetime="{{ post.date | date: '%Y-%m-%d' }}">
     {{ post.date | date: '%Y-%m-%d' }}
       {% if post.last_modified_at != post.date %}
@@ -107,6 +106,5 @@ id: not-found
         {% endfor %}
       </section>
     </main>
-  </div>
 </body>
 </html>
