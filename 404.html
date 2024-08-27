@@ -86,20 +86,20 @@ id: not-found
         {% assign all_sorted_posts = sorted_modified_posts | concat: sorted_unmodified_posts %}
         
         {% for post in all_sorted_posts %}
-          <article>
-            <time datetime="{{ post.date | date: '%Y-%m-%d' }}" class="post-date">
-              <a href="#" id="back-to-top">
-                <img src="{{ '/assets/gold.ico' | relative_url }}" alt="gold icon">
-              </a>
-              <h3>
-                {{ post.date | date: '%Y-%m-%d' }}
-                {% if post.last_modified_at != post.date %}
-                  &rightarrowtail; {{ post.last_modified_at | date_to_string }}
-                {% endif %}
-              </h3>
-              <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
-            </time>
-          </article>
+<article style="display: flex; flex-wrap: wrap; justify-content: center; align-items: flex-start;">
+  <time datetime="{{ post.date | date: '%Y-%m-%d' }}" class="post-date">
+    <a href="#" class="back-to-top" aria-label="Back to top">
+      <img src="{{ '/assets/gold.ico' | relative_url }}" alt="gold icon">
+    </a>
+    <h3>
+      {{ post.date | date: '%Y-%m-%d' }}
+      {% if post.last_modified_at != post.date %}
+        &rightarrowtail; {{ post.last_modified_at | date_to_string }}
+      {% endif %}
+    </h3>
+    <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+  </time>
+</article>
         {% endfor %}
       </section>
     </main>
