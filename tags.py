@@ -164,6 +164,15 @@ def generate_mermaid_graph(tag_data: Union[List[Dict[str, Any]], Dict[str, Any]]
     added_edges = set()
 
     def add_node(tag: str) -> str:
+        """
+        Adds a node to the graph if it hasn't been added yet.
+
+        Args:
+            tag (str): The tag name to be added.
+
+        Returns:
+            str: The sanitized tag name used in the graph.
+        """
         safe_tag = tag.replace('>', '_').replace(' ', '_')
         if safe_tag not in added_nodes:
             node_def = f'    {safe_tag}["{tag}"]'
@@ -172,6 +181,14 @@ def generate_mermaid_graph(tag_data: Union[List[Dict[str, Any]], Dict[str, Any]]
         return safe_tag
 
     def add_edge(from_tag: str, to_tag: str, edge_type: str = 'solid') -> None:
+        """
+        Adds an edge between two nodes in the graph.
+
+        Args:
+            from_tag (str): The starting node of the edge.
+            to_tag (str): The ending node of the edge.
+            edge_type (str): The type of edge ('solid' or 'dashed'). Defaults to 'solid'.
+        """
         safe_from = add_node(from_tag)
         safe_to = add_node(to_tag)
         edge = (safe_from, safe_to, edge_type)
@@ -181,6 +198,13 @@ def generate_mermaid_graph(tag_data: Union[List[Dict[str, Any]], Dict[str, Any]]
             added_edges.add(edge)
 
     def process_tag(tag_name: str, data: Dict[str, Any]) -> None:
+        """
+        Processes a single tag and its relationships.
+
+        Args:
+            tag_name (str): The name of the tag.
+            data (Dict[str, Any]): The data associated with the tag, including children and related tags.
+        """
         # Add hierarchical relationships
         for child in data.get('children', []):
             add_edge(tag_name, child, 'solid')
@@ -201,8 +225,8 @@ def generate_mermaid_graph(tag_data: Union[List[Dict[str, Any]], Dict[str, Any]]
     try:
         if isinstance(tag_data, list):
             for item in tag_data:
-                if isinstance(item, dict) and 'name' in item:
-                    process_tag(item['name'], item)
+                if isinstance(item, dict) and 'tag' in item:
+                    process_tag(item['tag'], item)
                 else:
                     logging.warning(f"Skipping invalid item in tag_data: {item}")
         elif isinstance(tag_data, dict):
@@ -228,9 +252,7 @@ if __name__ == '__main__':
             tag_data = yaml.safe_load(f)
     except (FileNotFoundError, yaml.YAMLError) as e:
         logging.error(f"Error reading tag data: {e}")
-        tag_data = {}
-
-    mermaid_graph = generate_mermaid_graph(tag_data)
+        tag_data =" {}\n\n"    mermaid_graph = generate_mermaid_graph(tag_data)
 
     # Write the Mermaid graph to a file
     output_path = os.path.join(os.getenv('GITHUB_WORKSPACE', ''), '_includes/tag_graph.html')
