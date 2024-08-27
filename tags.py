@@ -163,12 +163,13 @@ def generate_mermaid_graph(tag_data: Union[List[Dict[str, Any]], Dict[str, Any]]
     added_nodes = set()
     added_edges = set()
 
-    def add_node(tag: str) -> str:
+    def add_node(tag: str, style: str) -> str:
         """
         Adds a node to the graph if it hasn't been added yet.
 
         Args:
             tag (str): The tag name to be added.
+            style (str): The style class for the node.
 
         Returns:
             str: The sanitized tag name used in the graph.
@@ -176,6 +177,8 @@ def generate_mermaid_graph(tag_data: Union[List[Dict[str, Any]], Dict[str, Any]]
         safe_tag = tag.replace('>', '_').replace(' ', '_')  # Sanitize tag name (basic)
         if safe_tag not in added_nodes:
             node_def = f'    {safe_tag}["{tag}"]'
+            if style:
+                node_def += f':::{style}'
             graph.append(node_def)
             added_nodes.add(safe_tag)
         return safe_tag
@@ -189,11 +192,11 @@ def generate_mermaid_graph(tag_data: Union[List[Dict[str, Any]], Dict[str, Any]]
             to_tag (str): The ending node of the edge.
             edge_type (str): The type of edge ('solid' or 'dashed'). Defaults to 'solid'.
         """
-        safe_from = add_node(from_tag)
-        safe_to = add_node(to_tag)
+        safe_from = add_node(from_tag, 'mainNode' if '>' not in from_tag else 'combinedNode')
+        safe_to = add_node(to_tag, 'mainNode' if '>' not in to_tag else 'combinedNode')
         edge = (safe_from, safe_to, edge_type)
         if edge not in added_edges:
-            edge_style = '-->' if edge_type == 'solid' else '-..->'
+            edge_style = '-->' if edge_type == 'solid' else '-.->|related|'
             graph.append(f'    {safe_from} {edge_style} {safe_to}')
             added_edges.add(edge)
 
@@ -220,50 +223,43 @@ def generate_mermaid_graph(tag_data: Union[List[Dict[str, Any]], Dict[str, Any]]
                 parent = '>'.join(parts[:i+1])
                 child = '>'.join(parts[:i+2])
                 add_edge(parent, child, 'solid')
-                add_edge(tag_name, parts[i], 'dashed')
 
     try:
-        if isinstance(tag_data, list):
-            for item in tag_data:
-                if isinstance(item, dict) and 'tag' in item:
-                    process_tag(item['tag'], item)
-                else:
-                    logging.warning(f"Skipping invalid item in tag_data: {item}")
-        elif isinstance(tag_data, dict):
+        # If tag_data is a dictionary, process each tag
+        if isinstance(tag_data, dict):
             for tag_name, data in tag_data.items():
                 process_tag(tag_name, data)
+        elif isinstance(tag_data, list):
+            # If tag_data is a list of dictionaries, process each dictionary
+            for tag_dict in tag_data:
+                for tag_name, data in tag_dict.items():
+                    process_tag(tag_name, data)
         else:
-            logging.error(f"Unexpected tag_data type: {type(tag_data)}")
+            logging.error("Invalid tag data structure.")
             return ""
 
     except Exception as e:
-        logging.error(f"Error processing tag_data: {e}")
+        logging.error(f"Error generating Mermaid graph: {e}")
         return ""
+
+    # Add Mermaid class definitions for styling
+    graph.append("    classDef mainNode fill:#f9f,stroke:#333,stroke-width:2px;")
+    graph.append("    classDef combinedNode fill:#ff9,stroke:#333,stroke-width:2px;")
 
     return '\n'.join(graph)
 
-if __name__ == '__main__':
-    # Use environment variables to determine paths
-    posts_dir = os.path.join(os.getenv('GITHUB_WORKSPACE', ''), '_posts')
-    output_file = os.path.join(os.getenv('GITHUB_WORKSPACE', ''), '_data/processed_tags.yml')
+if __name__ == "__main__":
+    posts_dir = "posts"  # Replace with the path to your posts directory
+    output_file = "tag_data.yaml"
 
-    # Generate tag data if it doesn't exist
-    process_tags(posts_dir, output_file)
+    # Process the tags
+    tag_data = process_tags(posts_dir, output_file)
 
-    try:
-        with open(output_file, 'r') as f:
-            tag_data = yaml.safe_load(f)
-    except (FileNotFoundError, yaml.YAMLError) as e:
-        logging.error(f"Error reading tag data: {e}")
-        tag_data = {}  # Initialize as empty dictionary
+    # Generate the Mermaid graph
+    mermaid_graph = generate_mermaid_graph(tag_data, direction="TD")
 
-    mermaid_graph = generate_mermaid_graph(tag_data)
+    # Save the Mermaid graph to a file
+    with open("tag_graph.mmd", "w", encoding="utf-8") as f:
+        f.write(mermaid_graph)
 
-    # Write the Mermaid graph to a file
-    output_path = os.path.join(os.getenv('GITHUB_WORKSPACE', ''), '_includes/tag_graph.html')
-    try:
-        with open(output_path, 'w', encoding='utf-8') as f:
-            f.write(f"<div class='mermaid'>\n{mermaid_graph}\n</div>")
-        logging.info(f"Mermaid graph has been written to {output_path}")
-    except IOError as e:
-        logging.error(f"Error writing Mermaid graph: {e}")
+    logging.info("Mermaid graph has been written to tag_graph.mmd")
