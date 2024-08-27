@@ -7,8 +7,8 @@ from datetime import datetime
 # Configure logging
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
-# Threshold for generating permutations
-THRESHOLD = 0  # Adjust this value as needed
+# Threshold for generating permutations - adjust as needed
+THRESHOLD = 0 
 
 def extract_frontmatter(file_content):
     """Extracts the YAML frontmatter from a markdown file."""
@@ -22,7 +22,7 @@ def extract_frontmatter(file_content):
     return frontmatter
 
 def generate_partial_tags(tag):
-    """Generates all partial tags for a given tag."""
+    """Generates all partial tags for a given tag (e.g., for 'a>b>c' generates 'a', 'a>b', 'a>b>c')."""
     parts = tag.split('>')
     partial_tags = []
     for i in range(1, len(parts) + 1):
@@ -31,16 +31,14 @@ def generate_partial_tags(tag):
     return partial_tags
 
 def process_tags(posts_dir, output_file):
-    """Processes tags from markdown files, handling nested tags, highlighting exact matches,
-    preventing duplicates using file paths, and generating a Mermaid graph."""
-    
+    """Processes tags from markdown files to generate hierarchical and non-hierarchical relationships for a Mermaid graph."""
     tag_frequency = defaultdict(int)
     all_posts = []
-    seen_posts = set()
+    seen_posts = set()  # To prevent processing duplicate posts
 
     logging.info(f"Processing markdown files in directory: {posts_dir}")
 
-    # First pass: Count tag frequencies and collect all posts
+    # First Pass: Count tag frequencies and collect post data
     for filename in os.listdir(posts_dir):
         if not filename.endswith('.md'):
             continue
@@ -71,13 +69,13 @@ def process_tags(posts_dir, output_file):
         elif not isinstance(tags, list):
             tags = [str(tags)]
 
-        # Count tag frequencies including partial tags
+        # Count tag and partial tag frequencies
         for tag in tags:
             for partial_tag in generate_partial_tags(tag):
                 tag_frequency[partial_tag] += 1
 
         title = post_data.get('title', os.path.splitext(filename)[0])
-        url = '/' + '-'.join(filename.split('-')[3:]).replace('.md', '')
+        url = '/' + '-'.join(filename.split('-')[3:]).replace('.md', '')  # Assuming a specific URL structure
 
         try:
             post_date = datetime.strptime('-'.join(filename.split('-')[:3]), '%Y-%m-%d')
@@ -92,7 +90,7 @@ def process_tags(posts_dir, output_file):
             'tags': tags
         })
 
-    # Second pass: Generate tag data based on frequency threshold
+    # Second Pass: Generate tag data with relationships based on frequency threshold
     tag_data = defaultdict(lambda: {'parents': set(), 'children': set(), 'related': set(), 'posts': []})
 
     for post in all_posts:
@@ -105,12 +103,12 @@ def process_tags(posts_dir, output_file):
                     post_entry = {
                         'title': post['title'],
                         'url': post['url'],
-                        'highlighted': partial_tag == tag,
+                        'highlighted': partial_tag == tag,  # Highlight exact tag matches
                         'date': post['date']
                     }
                     tag_data[partial_tag]['posts'].append(post_entry)
 
-            # Establish parent-child relationships
+            # Establish parent-child (hierarchical) relationships
             for i in range(1, len(tag_parts)):
                 parent_tag = '>'.join(tag_parts[:i])
                 child_tag = '>'.join(tag_parts[:i + 1])
@@ -118,29 +116,25 @@ def process_tags(posts_dir, output_file):
                     tag_data[child_tag]['parents'].add(parent_tag)
                     tag_data[parent_tag]['children'].add(child_tag)
 
-            # Track non-hierarchical (related) relationships
+            # Establish non-hierarchical relationships (tags used together in the same post)
             for other_tag in post['tags']:
                 if other_tag != tag and tag_frequency[other_tag] >= THRESHOLD and tag_frequency[full_tag_path] >= THRESHOLD:
                     tag_data[full_tag_path]['related'].add(other_tag)
                     tag_data[other_tag]['related'].add(full_tag_path)
 
-    # Remove tags with no posts
+    # Clean up: Remove tags with no associated posts and ensure relationships are valid
     tag_data = {tag: data for tag, data in tag_data.items() if data['posts']}
-
-    # Clean up relationships
     for tag, data in tag_data.items():
         data['parents'] = {parent for parent in data['parents'] if parent in tag_data}
         data['children'] = {child for child in data['children'] if child in tag_data}
         data['related'] = {related for related in data['related'] if related in tag_data}
 
-    # Sort posts within each tag by date (most recent first)
+    # Sort posts by date within each tag
     for tag, data in tag_data.items():
         data['posts'] = sorted(data['posts'], key=lambda x: x.get('date', datetime.min), reverse=True)
 
-    # Sort tags alphabetically before writing to YAML
+    # Write processed tag data to a YAML file
     sorted_tag_data = sorted(tag_data.items())
-
-    # Write the processed tags to a YAML file
     with open(output_file, 'w', encoding='utf-8') as f:
         yaml.dump([{'tag': tag, 'posts': data['posts']} for tag, data in sorted_tag_data], f, allow_unicode=True)
 
@@ -149,15 +143,15 @@ def process_tags(posts_dir, output_file):
     return tag_data
 
 def generate_mermaid_graph(tag_data):
-    """Generates Mermaid graph code for the tag structure."""
+    """Generates Mermaid graph code, representing both hierarchical and non-hierarchical relationships."""
     graph = "graph TD\n"
-    added_edges = set()  # Keep track of added edges to avoid duplicates
+    added_edges = set()  # Keep track of added edges to prevent duplicates
 
     for tag_name, data in tag_data.items():
-        safe_tag_name = tag_name.replace('>', '_')
+        safe_tag_name = tag_name.replace('>', '_')  # Make tag name safe for Mermaid
         graph += f"{safe_tag_name}({tag_name})\n"
 
-        # Add edges for parent-child relationships
+        # Add hierarchical edges (parent-child relationships)
         for child in data['children']:
             safe_child_name = child.replace('>', '_')
             edge = (safe_tag_name, safe_child_name)
@@ -165,11 +159,11 @@ def generate_mermaid_graph(tag_data):
                 graph += f"{safe_tag_name} --> {safe_child_name}\n"
                 added_edges.add(edge)
 
-        # Add edges for related tags
+        # Add non-hierarchical edges (related tags)
         for related in data['related']:
             safe_related_name = related.replace('>', '_')
             edge1 = (safe_tag_name, safe_related_name)
-            edge2 = (safe_related_name, safe_tag_name)
+            edge2 = (safe_related_name, safe_tag_name)  # Ensure bidirectional relationship
             if edge1 not in added_edges and edge2 not in added_edges:
                 graph += f"{safe_tag_name} --- {safe_related_name}\n"
                 added_edges.add(edge1)
@@ -178,14 +172,13 @@ def generate_mermaid_graph(tag_data):
     return graph
 
 if __name__ == '__main__':
-    # Use environment variables to determine paths
-    posts_dir = os.path.join(os.getenv('GITHUB_WORKSPACE', ''), '_posts')
-    output_file = os.path.join(os.getenv('GITHUB_WORKSPACE', ''), '_data/processed_tags.yml')
-    
+    posts_dir = os.path.join(os.getenv('GITHUB_WORKSPACE', ''), '_posts')  # Adjust if needed
+    output_file = os.path.join(os.getenv('GITHUB_WORKSPACE', ''), '_data/processed_tags.yml')  # Adjust if needed
+
     tag_data = process_tags(posts_dir, output_file)
     mermaid_graph = generate_mermaid_graph(tag_data)
 
-    # Write the Mermaid graph to a file
+    # Write Mermaid graph to an HTML file
     with open(os.path.join(os.getenv('GITHUB_WORKSPACE', ''), '_includes/tag_graph.html'), 'w', encoding='utf-8') as f:
         f.write(f"<div class='mermaid'>\n{mermaid_graph}\n</div>")
 
