@@ -11,7 +11,7 @@ logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(
 # Threshold for generating permutations
 THRESHOLD = 0  # Set this value according to your needs
 
-def extract_frontmatter(file_content):
+def extract_frontmatter(file_content: str) -> str:
     """Extracts the YAML frontmatter from a markdown file."""
     frontmatter = ""
     content_lines = file_content.split('\n')
@@ -22,7 +22,7 @@ def extract_frontmatter(file_content):
                 break
     return frontmatter
 
-def generate_partial_tags(tag):
+def generate_partial_tags(tag: str) -> List[str]:
     """Generates all possible partial tags for a given hierarchical tag."""
     parts = tag.split('>')
     partial_tags = []
@@ -31,7 +31,7 @@ def generate_partial_tags(tag):
             partial_tags.append('>'.join(parts[j:j+i]))
     return partial_tags
 
-def process_tags(posts_dir, output_file):
+def process_tags(posts_dir: str, output_file: str) -> Dict[str, Dict[str, Any]]:
     """Processes tags from markdown files, managing nested tags, and generating a Mermaid graph."""
     
     tag_frequency = defaultdict(int)
@@ -173,7 +173,7 @@ def generate_mermaid_graph(tag_data: Union[List[Dict[str, Any]], Dict[str, Any]]
         Returns:
             str: The sanitized tag name used in the graph.
         """
-        safe_tag = tag.replace('>', '_').replace(' ', '_')
+        safe_tag = tag.replace('>', '_').replace(' ', '_')  # Sanitize tag name (basic)
         if safe_tag not in added_nodes:
             node_def = f'    {safe_tag}["{tag}"]'
             graph.append(node_def)
@@ -213,7 +213,7 @@ def generate_mermaid_graph(tag_data: Union[List[Dict[str, Any]], Dict[str, Any]]
         for related in data.get('related', []):
             add_edge(tag_name, related, 'dashed')
 
-        # Handle compound tags
+        # Handle compound tags (optimized)
         if '>' in tag_name:
             parts = tag_name.split('>')
             for i in range(len(parts) - 1):
@@ -246,13 +246,18 @@ if __name__ == '__main__':
     # Use environment variables to determine paths
     posts_dir = os.path.join(os.getenv('GITHUB_WORKSPACE', ''), '_posts')
     output_file = os.path.join(os.getenv('GITHUB_WORKSPACE', ''), '_data/processed_tags.yml')
-    
+
+    # Generate tag data if it doesn't exist
+    process_tags(posts_dir, output_file)
+
     try:
         with open(output_file, 'r') as f:
             tag_data = yaml.safe_load(f)
     except (FileNotFoundError, yaml.YAMLError) as e:
         logging.error(f"Error reading tag data: {e}")
-        tag_data =" {}\n\n"    mermaid_graph = generate_mermaid_graph(tag_data)
+        tag_data = {}  # Initialize as empty dictionary
+
+    mermaid_graph = generate_mermaid_graph(tag_data)
 
     # Write the Mermaid graph to a file
     output_path = os.path.join(os.getenv('GITHUB_WORKSPACE', ''), '_includes/tag_graph.html')
