@@ -1,4 +1,8 @@
-- posts:
+AI:
+  children: !!set
+    AI>prompt: null
+  parents: !!set {}
+  posts:
   - date: &id001 2024-08-02 00:00:00
     highlighted: false
     title: gmail2mailgrip
@@ -31,8 +35,12 @@
     highlighted: true
     title: OpenAI Token Limits
     url: /openai-token-limits
-  tag: AI
-- posts:
+  related: !!set {}
+AI>prompt:
+  children: !!set {}
+  parents: !!set
+    AI: null
+  posts:
   - date: *id001
     highlighted: true
     title: gmail2mailgrip
@@ -49,8 +57,11 @@
     highlighted: true
     title: default
     url: /default-prompt
-  tag: AI>prompt
-- posts:
+  related: !!set {}
+admoestação:
+  children: !!set {}
+  parents: !!set {}
+  posts:
   - date: 2024-06-22 00:00:00
     highlighted: true
     title: Your Life in Tokens
@@ -59,8 +70,12 @@
     highlighted: true
     title: Envolvido ou comprometido?
     url: /tal-06-17
-  tag: admoestação
-- posts:
+  related: !!set
+    spirit: null
+assistir:
+  children: !!set {}
+  parents: !!set {}
+  posts:
   - date: 2022-03-16 00:00:00
     highlighted: true
     title: streaming
@@ -69,8 +84,11 @@
     highlighted: true
     title: aye aye
     url: /aye
-  tag: assistir
-- posts:
+  related: !!set {}
+calls:
+  children: !!set {}
+  parents: !!set {}
+  posts:
   - date: 2022-10-01 00:00:00
     highlighted: true
     title: Call de Outubro de 2022
@@ -195,8 +213,11 @@
     highlighted: true
     title: Call de Abril de 2020
     url: /call-04-2020
-  tag: calls
-- posts:
+  related: !!set {}
+carro:
+  children: !!set {}
+  parents: !!set {}
+  posts:
   - date: 2021-12-15 00:00:00
     highlighted: true
     title: VW/GOL 1.0 G4 2010 - 196.351km
@@ -213,8 +234,11 @@
     highlighted: true
     title: VW/GOL 1.0 G4 2010 - 184.000km
     url: /car-04-17
-  tag: carro
-- posts:
+  related: !!set {}
+chess:
+  children: !!set {}
+  parents: !!set {}
+  posts:
   - date: 2021-03-02 00:00:00
     highlighted: true
     title: Performance média
@@ -223,8 +247,11 @@
     highlighted: true
     title: III Etapa do Circuito Goiano de Xadrez 2020
     url: /torneio-001
-  tag: chess
-- posts:
+  related: !!set {}
+cloud:
+  children: !!set {}
+  parents: !!set {}
+  posts:
   - date: &id029 2024-07-25 00:00:00
     highlighted: false
     title: AWS PushSafer billing alarm
@@ -233,8 +260,11 @@
     highlighted: false
     title: Webhooks using `Serverless.com` Lift plugin
     url: /webhooks-using-serverlesscom-lift-plugin
-  tag: cloud
-- posts:
+  related: !!set {}
+despesas:
+  children: !!set {}
+  parents: !!set {}
+  posts:
   - date: 2023-10-03 00:00:00
     highlighted: true
     title: Contas
@@ -243,8 +273,11 @@
     highlighted: true
     title: Como calcular prestação por meio de taxa de juros e período
     url: /emprestimo
-  tag: despesas
-- posts:
+  related: !!set {}
+direito:
+  children: !!set {}
+  parents: !!set {}
+  posts:
   - date: &id006 2024-04-17 00:00:00
     highlighted: false
     title: Ordenamento Jurídico Brasileiro [redução eidética]
@@ -253,14 +286,21 @@
     highlighted: false
     title: Procedimento dos Crimes da Competência do Tribunal do Júri
     url: /juri
-  tag: direito
-- posts:
+  related: !!set {}
+direito>processual-penal:
+  children: !!set {}
+  parents: !!set {}
+  posts:
   - date: *id005
     highlighted: false
     title: Procedimento dos Crimes da Competência do Tribunal do Júri
     url: /juri
-  tag: direito>processual-penal
-- posts:
+  related: !!set {}
+edital:
+  children: !!set
+    edital>direito: null
+  parents: !!set {}
+  posts:
   - date: *id006
     highlighted: false
     title: Ordenamento Jurídico Brasileiro [redução eidética]
@@ -281,8 +321,13 @@
     highlighted: true
     title: Estados que exigem atividade policial para DELTA
     url: /atividade-policial
-  tag: edital
-- posts:
+  related: !!set {}
+edital>direito:
+  children: !!set
+    edital>direito>processual-penal: null
+  parents: !!set
+    edital: null
+  posts:
   - date: *id006
     highlighted: true
     title: Ordenamento Jurídico Brasileiro [redução eidética]
@@ -291,14 +336,21 @@
     highlighted: false
     title: Procedimento dos Crimes da Competência do Tribunal do Júri
     url: /juri
-  tag: edital>direito
-- posts:
+  related: !!set {}
+edital>direito>processual-penal:
+  children: !!set {}
+  parents: !!set
+    edital>direito: null
+  posts:
   - date: *id005
     highlighted: true
     title: Procedimento dos Crimes da Competência do Tribunal do Júri
     url: /juri
-  tag: edital>direito>processual-penal
-- posts:
+  related: !!set {}
+estudos:
+  children: !!set {}
+  parents: !!set {}
+  posts:
   - date: &id032 2024-07-05 00:00:00
     highlighted: true
     title: Periódicos para publicar artigos
@@ -327,8 +379,13 @@
     highlighted: true
     title: WRITING TO LEARN AND WHY IT MATTERS
     url: /writing
-  tag: estudos
-- posts:
+  related: !!set
+    scripts: null
+    trabalho: null
+fatherhood:
+  children: !!set {}
+  parents: !!set {}
+  posts:
   - date: 2024-07-30 00:00:00
     highlighted: true
     title: Board games
@@ -337,8 +394,12 @@
     highlighted: true
     title: Vacinas
     url: /vacinas
-  tag: fatherhood
-- posts:
+  related: !!set {}
+github:
+  children: !!set
+    github>jekyll: null
+  parents: !!set {}
+  posts:
   - date: &id007 2024-08-15 00:00:00
     highlighted: false
     title: 'PageFind with Jekyll '
@@ -347,8 +408,12 @@
     highlighted: false
     title: 2024-07-13-update-gemfilelock
     url: /update-gemfilelock
-  tag: github
-- posts:
+  related: !!set {}
+github>jekyll:
+  children: !!set {}
+  parents: !!set
+    github: null
+  posts:
   - date: *id007
     highlighted: true
     title: 'PageFind with Jekyll '
@@ -357,14 +422,20 @@
     highlighted: true
     title: 2024-07-13-update-gemfilelock
     url: /update-gemfilelock
-  tag: github>jekyll
-- posts:
+  related: !!set {}
+google-apps-script:
+  children: !!set {}
+  parents: !!set {}
+  posts:
   - date: &id028 2023-12-21 00:00:00
     highlighted: false
     title: OpenAI GPT API in Google Sheets
     url: /gpt-sheets
-  tag: google-apps-script
-- posts:
+  related: !!set {}
+hardware:
+  children: !!set {}
+  parents: !!set {}
+  posts:
   - date: 2024-08-18 00:00:00
     highlighted: true
     title: RockChip devices
@@ -377,8 +448,11 @@
     highlighted: true
     title: VPC-3588 Motherboard
     url: /vpc-3588-motherboard
-  tag: hardware
-- posts:
+  related: !!set {}
+iphone:
+  children: !!set {}
+  parents: !!set {}
+  posts:
   - date: &id031 2024-08-25 00:00:00
     highlighted: false
     title: MLO URL schemes
@@ -391,8 +465,13 @@
     highlighted: true
     title: 'iPhone: files2zip & zip2clipboard'
     url: /iphone-files2zip-zip2clipboard
-  tag: iphone
-- posts:
+  related: !!set
+    scripts>mobile: null
+    software>mobile: null
+jekyll:
+  children: !!set {}
+  parents: !!set {}
+  posts:
   - date: *id007
     highlighted: false
     title: 'PageFind with Jekyll '
@@ -401,8 +480,11 @@
     highlighted: false
     title: 2024-07-13-update-gemfilelock
     url: /update-gemfilelock
-  tag: jekyll
-- posts:
+  related: !!set {}
+ler:
+  children: !!set {}
+  parents: !!set {}
+  posts:
   - date: 2022-07-14 00:00:00
     highlighted: true
     title: libros familiares
@@ -415,8 +497,11 @@
     highlighted: true
     title: Livros
     url: /livros
-  tag: ler
-- posts:
+  related: !!set {}
+linux:
+  children: !!set {}
+  parents: !!set {}
+  posts:
   - date: &id009 2024-08-17 00:00:00
     highlighted: true
     title: Linux mobile OS
@@ -583,8 +668,13 @@
     highlighted: true
     title: How to make bootable Windows USB from Linux for old computers
     url: /ms-sys
-  tag: linux
-- posts:
+  related: !!set
+    scripts: null
+    software>mobile: null
+misc:
+  children: !!set {}
+  parents: !!set {}
+  posts:
   - date: 2024-07-25 00:00:00
     highlighted: true
     title: Bolo Pão (Pound Cake)
@@ -593,8 +683,11 @@
     highlighted: true
     title: wallpaper I
     url: /wallpaper-1
-  tag: misc
-- posts:
+  related: !!set {}
+mobile:
+  children: !!set {}
+  parents: !!set {}
+  posts:
   - date: *id009
     highlighted: false
     title: Linux mobile OS
@@ -607,20 +700,29 @@
     highlighted: false
     title: 'iPhone: files2zip & zip2clipboard'
     url: /iphone-files2zip-zip2clipboard
-  tag: mobile
-- posts:
+  related: !!set {}
+music:
+  children: !!set {}
+  parents: !!set {}
+  posts:
   - date: 2024-07-20 00:00:00
     highlighted: true
     title: Lyrics of Deleter by Grouplove
     url: /lyrics-of-deleter-by-grouplove
-  tag: music
-- posts:
+  related: !!set {}
+processual-penal:
+  children: !!set {}
+  parents: !!set {}
+  posts:
   - date: *id005
     highlighted: false
     title: Procedimento dos Crimes da Competência do Tribunal do Júri
     url: /juri
-  tag: processual-penal
-- posts:
+  related: !!set {}
+prompt:
+  children: !!set {}
+  parents: !!set {}
+  posts:
   - date: *id001
     highlighted: false
     title: gmail2mailgrip
@@ -637,14 +739,20 @@
     highlighted: false
     title: default
     url: /default-prompt
-  tag: prompt
-- posts:
+  related: !!set {}
+receitas:
+  children: !!set {}
+  parents: !!set {}
+  posts:
   - date: 2022-03-19 00:00:00
     highlighted: true
     title: IRPF
     url: /irpf
-  tag: receitas
-- posts:
+  related: !!set {}
+rendimentos:
+  children: !!set {}
+  parents: !!set {}
+  posts:
   - date: 2023-05-29 00:00:00
     highlighted: true
     title: Maio 2023
@@ -777,8 +885,11 @@
     highlighted: true
     title: Março 2020
     url: /marco-20
-  tag: rendimentos
-- posts:
+  related: !!set {}
+saúde:
+  children: !!set {}
+  parents: !!set {}
+  posts:
   - date: 2024-08-13 00:00:00
     highlighted: true
     title: Arm Tendinitis
@@ -787,8 +898,15 @@
     highlighted: true
     title: Effects of 10-Day Complete Fasting
     url: /jejum
-  tag: saúde
-- posts:
+  related: !!set {}
+scripts:
+  children: !!set
+    scripts>AI: null
+    scripts>cloud: null
+    scripts>google-apps-script: null
+    scripts>mobile: null
+  parents: !!set {}
+  posts:
   - date: *id012
     highlighted: false
     title: Longer inputs on WHISPER API
@@ -893,32 +1011,54 @@
     highlighted: true
     title: github.com/py-pdf
     url: /pypdf
-  tag: scripts
-- posts:
+  related: !!set
+    estudos: null
+    linux: null
+scripts>AI:
+  children: !!set {}
+  parents: !!set
+    scripts: null
+  posts:
   - date: *id012
     highlighted: true
     title: Longer inputs on WHISPER API
     url: /longer-inputs-on-whisper-api
-  tag: scripts>AI
-- posts:
+  related: !!set {}
+scripts>cloud:
+  children: !!set {}
+  parents: !!set
+    scripts: null
+  posts:
   - date: *id013
     highlighted: true
     title: Webhooks using `Serverless.com` Lift plugin
     url: /webhooks-using-serverlesscom-lift-plugin
-  tag: scripts>cloud
-- posts:
+  related: !!set {}
+scripts>google-apps-script:
+  children: !!set {}
+  parents: !!set
+    scripts: null
+  posts:
   - date: *id028
     highlighted: true
     title: OpenAI GPT API in Google Sheets
     url: /gpt-sheets
-  tag: scripts>google-apps-script
-- posts:
+  related: !!set {}
+scripts>mobile:
+  children: !!set {}
+  parents: !!set
+    scripts: null
+  posts:
   - date: *id011
     highlighted: true
     title: 'iPhone: files2zip & zip2clipboard'
     url: /iphone-files2zip-zip2clipboard
-  tag: scripts>mobile
-- posts:
+  related: !!set
+    iphone: null
+sell:
+  children: !!set {}
+  parents: !!set {}
+  posts:
   - date: 2021-11-03 00:00:00
     highlighted: true
     title: VENDA SMTO3 04,74% a.m.
@@ -935,8 +1075,13 @@
     highlighted: true
     title: VENDA CARD3 04,02% a.m.
     url: /sell-card3
-  tag: sell
-- posts:
+  related: !!set {}
+software:
+  children: !!set
+    software>cloud: null
+    software>mobile: null
+  parents: !!set {}
+  posts:
   - date: *id009
     highlighted: false
     title: Linux mobile OS
@@ -953,14 +1098,22 @@
     highlighted: true
     title: dasel context guide
     url: /dasel
-  tag: software
-- posts:
+  related: !!set {}
+software>cloud:
+  children: !!set {}
+  parents: !!set
+    software: null
+  posts:
   - date: *id029
     highlighted: true
     title: AWS PushSafer billing alarm
     url: /aws-pushsafer-billing-alarm
-  tag: software>cloud
-- posts:
+  related: !!set {}
+software>mobile:
+  children: !!set {}
+  parents: !!set
+    software: null
+  posts:
   - date: *id009
     highlighted: true
     title: Linux mobile OS
@@ -969,8 +1122,13 @@
     highlighted: true
     title: iOS 18 changelog
     url: /ios-18-changelog
-  tag: software>mobile
-- posts:
+  related: !!set
+    iphone: null
+    linux: null
+spirit:
+  children: !!set {}
+  parents: !!set {}
+  posts:
   - date: 2022-06-15 00:00:00
     highlighted: true
     title: 9gag evangelism
@@ -983,8 +1141,13 @@
     highlighted: true
     title: Envolvido ou comprometido?
     url: /tal-06-17
-  tag: spirit
-- posts:
+  related: !!set
+    admoestação: null
+tasks:
+  children: !!set
+    tasks>iphone: null
+  parents: !!set {}
+  posts:
   - date: *id031
     highlighted: false
     title: MLO URL schemes
@@ -1037,14 +1200,21 @@
     highlighted: true
     title: chess analysis workflow
     url: /chess-flow
-  tag: tasks
-- posts:
+  related: !!set {}
+tasks>iphone:
+  children: !!set {}
+  parents: !!set
+    tasks: null
+  posts:
   - date: *id031
     highlighted: true
     title: MLO URL schemes
     url: /mlo-url-schemes
-  tag: tasks>iphone
-- posts:
+  related: !!set {}
+trabalho:
+  children: !!set {}
+  parents: !!set {}
+  posts:
   - date: 2024-07-14 00:00:00
     highlighted: true
     title: Procedimentos de Escolta Dedicada
@@ -1061,4 +1231,5 @@
     highlighted: true
     title: Avaliação Funcional I/XV
     url: /taf-01
-  tag: trabalho
+  related: !!set
+    estudos: null
