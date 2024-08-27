@@ -3,6 +3,7 @@ import yaml
 import logging
 from collections import defaultdict
 from datetime import datetime
+from typing import Dict, List, Union, Any
 
 # Configure logging
 logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s")
@@ -10,8 +11,7 @@ logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(
 # Threshold for generating permutations
 THRESHOLD = 0  # Adjust this value as needed
 
-
-def extract_frontmatter(file_content):
+def extract_frontmatter(file_content: str) -> str:
     """Extracts the YAML frontmatter from a markdown file."""
     frontmatter = ""
     content_lines = file_content.split("\n")
@@ -22,18 +22,16 @@ def extract_frontmatter(file_content):
                 break
     return frontmatter
 
-
-def generate_partial_tags(tag):
+def generate_partial_tags(tag: str) -> List[str]:
     """Generates all partial tags for a given tag."""
     parts = tag.split(">")
     partial_tags = []
     for i in range(1, len(parts) + 1):
         for j in range(len(parts) - i + 1):
-            partial_tags.append(">".join(parts[j : j + i]))
+            partial_tags.append(">".join(parts[j: j + i]))
     return partial_tags
 
-
-def process_tags(posts_dir, output_file):
+def process_tags(posts_dir: str, output_file: str) -> tuple:
     """
     Processes tags from markdown files, handling nested tags, highlighting exact matches,
     preventing duplicates using file paths, and generating a Mermaid graph.
@@ -124,7 +122,7 @@ def process_tags(posts_dir, output_file):
             # Establish parent-child relationships
             for i in range(1, len(tag_parts)):
                 parent_tag = ">".join(tag_parts[:i])
-                child_tag = ">".join(tag_parts[: i + 1])
+                child_tag = ">".join(tag_parts[:i + 1])
                 if (
                     tag_frequency[parent_tag] >= THRESHOLD
                     and tag_frequency[child_tag] >= THRESHOLD
@@ -138,8 +136,8 @@ def process_tags(posts_dir, output_file):
                     other_tag != tag
                     and tag_frequency[other_tag] >= THRESHOLD
                     and tag_frequency[full_tag_path] >= THRESHOLD
-                    and other_tag not in tag_data[full_tag_path]['parents'] # Ensure no hierarchical relation
-                    and other_tag not in tag_data[full_tag_path]['children'] # Ensure no hierarchical relation
+                    and other_tag not in tag_data[full_tag_path]["parents"]  # Ensure no hierarchical relation
+                    and other_tag not in tag_data[full_tag_path]["children"]  # Ensure no hierarchical relation
                 ):
                     tag_data[full_tag_path]["related"].add(other_tag)
                     tag_data[other_tag]["related"].add(full_tag_path)
@@ -174,7 +172,9 @@ def process_tags(posts_dir, output_file):
 
     return tag_data, combined_tags
 
-def generate_mermaid_graph(tag_data: Union[List[Dict[str, Any]], Dict[str, Any]], direction: str = "TD") -> str:
+def generate_mermaid_graph(
+    tag_data: Union[List[Dict[str, Any]], Dict[str, Any]], direction: str = "TD"
+) -> str:
     """
     Generates Mermaid graph code for the tag structure.
 
@@ -296,7 +296,7 @@ if __name__ == "__main__":
     output_file = os.path.join(os.getenv("GITHUB_WORKSPACE", ""), "_data/processed_tags.yml")
 
     tag_data, combined_tags = process_tags(posts_dir, output_file)
-    mermaid_graph = generate_mermaid_graph(tag_data, combined_tags)
+    mermaid_graph = generate_mermaid_graph(tag_data)
 
     # Write the Mermaid graph to a file
     with open(
