@@ -55,7 +55,7 @@
     highlighted: true
     title: Your Life in Tokens
     url: /life-tokens
-  - date: &id029 2018-02-15 00:00:00
+  - date: &id030 2018-02-15 00:00:00
     highlighted: true
     title: Envolvido ou comprometido?
     url: /tal-06-17
@@ -225,7 +225,7 @@
     url: /torneio-001
   tag: chess
 - posts:
-  - date: &id028 2024-07-25 00:00:00
+  - date: &id029 2024-07-25 00:00:00
     highlighted: false
     title: AWS PushSafer billing alarm
     url: /aws-pushsafer-billing-alarm
@@ -245,11 +245,11 @@
     url: /emprestimo
   tag: despesas
 - posts:
-  - date: &id005 2024-04-17 00:00:00
+  - date: &id006 2024-04-17 00:00:00
     highlighted: false
     title: Ordenamento Jurídico Brasileiro [redução eidética]
     url: /ordenamento
-  - date: &id006 2024-03-08 00:00:00
+  - date: &id005 2024-03-08 00:00:00
     highlighted: false
     title: Procedimento dos Crimes da Competência do Tribunal do Júri
     url: /juri
@@ -257,9 +257,15 @@
 - posts:
   - date: *id005
     highlighted: false
+    title: Procedimento dos Crimes da Competência do Tribunal do Júri
+    url: /juri
+  tag: direito>processual-penal
+- posts:
+  - date: *id006
+    highlighted: false
     title: Ordenamento Jurídico Brasileiro [redução eidética]
     url: /ordenamento
-  - date: *id006
+  - date: *id005
     highlighted: false
     title: Procedimento dos Crimes da Competência do Tribunal do Júri
     url: /juri
@@ -277,17 +283,23 @@
     url: /atividade-policial
   tag: edital
 - posts:
-  - date: *id005
+  - date: *id006
     highlighted: true
     title: Ordenamento Jurídico Brasileiro [redução eidética]
     url: /ordenamento
-  - date: *id006
+  - date: *id005
     highlighted: false
     title: Procedimento dos Crimes da Competência do Tribunal do Júri
     url: /juri
   tag: edital>direito
 - posts:
-  - date: &id031 2024-07-05 00:00:00
+  - date: *id005
+    highlighted: true
+    title: Procedimento dos Crimes da Competência do Tribunal do Júri
+    url: /juri
+  tag: edital>direito>processual-penal
+- posts:
+  - date: &id032 2024-07-05 00:00:00
     highlighted: true
     title: Periódicos para publicar artigos
     url: /periodicos
@@ -347,6 +359,12 @@
     url: /update-gemfilelock
   tag: github>jekyll
 - posts:
+  - date: &id028 2023-12-21 00:00:00
+    highlighted: false
+    title: OpenAI GPT API in Google Sheets
+    url: /gpt-sheets
+  tag: google-apps-script
+- posts:
   - date: 2024-08-18 00:00:00
     highlighted: true
     title: RockChip devices
@@ -361,7 +379,7 @@
     url: /vpc-3588-motherboard
   tag: hardware
 - posts:
-  - date: &id030 2024-08-25 00:00:00
+  - date: &id031 2024-08-25 00:00:00
     highlighted: false
     title: MLO URL schemes
     url: /mlo-url-schemes
@@ -591,6 +609,18 @@
     url: /iphone-files2zip-zip2clipboard
   tag: mobile
 - posts:
+  - date: 2024-07-20 00:00:00
+    highlighted: true
+    title: Lyrics of Deleter by Grouplove
+    url: /lyrics-of-deleter-by-grouplove
+  tag: music
+- posts:
+  - date: *id005
+    highlighted: false
+    title: Procedimento dos Crimes da Competência do Tribunal do Júri
+    url: /juri
+  tag: processual-penal
+- posts:
   - date: *id001
     highlighted: false
     title: gmail2mailgrip
@@ -608,6 +638,12 @@
     title: default
     url: /default-prompt
   tag: prompt
+- posts:
+  - date: 2022-03-19 00:00:00
+    highlighted: true
+    title: IRPF
+    url: /irpf
+  tag: receitas
 - posts:
   - date: 2023-05-29 00:00:00
     highlighted: true
@@ -849,7 +885,7 @@
     highlighted: true
     title: Packages list script
     url: /dpkg-script
-  - date: 2023-12-21 00:00:00
+  - date: *id028
     highlighted: false
     title: OpenAI GPT API in Google Sheets
     url: /gpt-sheets
@@ -858,6 +894,30 @@
     title: github.com/py-pdf
     url: /pypdf
   tag: scripts
+- posts:
+  - date: *id012
+    highlighted: true
+    title: Longer inputs on WHISPER API
+    url: /longer-inputs-on-whisper-api
+  tag: scripts>AI
+- posts:
+  - date: *id013
+    highlighted: true
+    title: Webhooks using `Serverless.com` Lift plugin
+    url: /webhooks-using-serverlesscom-lift-plugin
+  tag: scripts>cloud
+- posts:
+  - date: *id028
+    highlighted: true
+    title: OpenAI GPT API in Google Sheets
+    url: /gpt-sheets
+  tag: scripts>google-apps-script
+- posts:
+  - date: *id011
+    highlighted: true
+    title: 'iPhone: files2zip & zip2clipboard'
+    url: /iphone-files2zip-zip2clipboard
+  tag: scripts>mobile
 - posts:
   - date: 2021-11-03 00:00:00
     highlighted: true
@@ -885,7 +945,7 @@
     highlighted: false
     title: iOS 18 changelog
     url: /ios-18-changelog
-  - date: *id028
+  - date: *id029
     highlighted: false
     title: AWS PushSafer billing alarm
     url: /aws-pushsafer-billing-alarm
@@ -894,6 +954,12 @@
     title: dasel context guide
     url: /dasel
   tag: software
+- posts:
+  - date: *id029
+    highlighted: true
+    title: AWS PushSafer billing alarm
+    url: /aws-pushsafer-billing-alarm
+  tag: software>cloud
 - posts:
   - date: *id009
     highlighted: true
@@ -913,13 +979,13 @@
     highlighted: true
     title: canção da internação
     url: /gustavo
-  - date: *id029
+  - date: *id030
     highlighted: true
     title: Envolvido ou comprometido?
     url: /tal-06-17
   tag: spirit
 - posts:
-  - date: *id030
+  - date: *id031
     highlighted: false
     title: MLO URL schemes
     url: /mlo-url-schemes
@@ -973,11 +1039,17 @@
     url: /chess-flow
   tag: tasks
 - posts:
+  - date: *id031
+    highlighted: true
+    title: MLO URL schemes
+    url: /mlo-url-schemes
+  tag: tasks>iphone
+- posts:
   - date: 2024-07-14 00:00:00
     highlighted: true
     title: Procedimentos de Escolta Dedicada
     url: /escolta
-  - date: *id031
+  - date: *id032
     highlighted: true
     title: Periódicos para publicar artigos
     url: /periodicos
