@@ -273,13 +273,9 @@ img[class*="emoji"][src$=".svg"] {
   padding: 0;
 }
 .tag-list a {
-  background-color: var(--bg-accent);
   border-radius: 0.25rem;
-  color: var(--links-default);
   margin: auto 0 auto 0;
   padding: 0.5rem;
-  text-decoration: none;
-  transition: background-color 0.3s ease, color 0.3s ease;
 }
 .tag-list a:hover {
   background-color: var(--links-hover);
