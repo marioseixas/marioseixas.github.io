@@ -82,15 +82,9 @@ id: not-found
     {% for post in all_sorted_posts %}
     <section class="tag-page">
       <article class="tag-list">
+        <link href="{{ site.back_to_top_url | default: '#' }}" id="back-to-top" aria-label="Back to top"><img src="{{ '/assets/gold.ico' | relative_url }}" alt="gold icon"></link>
         <a href="{{ post.url }}">  
-          <h2>{{ post.title }}</h2>
-          <link href="{{ site.back_to_top_url | default: '#' }}" id="back-to-top" aria-label="Back to top"><img src="{{ '/assets/gold.ico' | relative_url }}" alt="gold icon"></link>
-          <p class="post-title">
-            {{ post.date | date: '%Y-%m-%d' }}
-            {% if post.last_modified_at != post.date %} &rightarrowtail; 
-            {{ post.last_modified_at | date_to_string }}
-            {% endif %}
-          </p>
+          <h2>{{ post.title }}</h2><h3>{{ post.date | date: '%Y-%m-%d' }}{% if post.last_modified_at != post.date %} &rightarrowtail; {{ post.last_modified_at | date_to_string }}{% endif %}</h3>
         </a>
       </article>
     </section>
