@@ -88,7 +88,9 @@ id: not-found
         {% for post in all_sorted_posts %}
           <article>
             <time datetime="{{ post.date | date: '%Y-%m-%d' }}" class="post-date">
-              <img src="{{ '/assets/gold.ico' | relative_url }}" alt="gold icon">
+              <a href="#" id="back-to-top">
+                <img src="{{ '/assets/gold.ico' | relative_url }}" alt="gold icon">
+              </a>
               <h3>
                 {{ post.date | date: '%Y-%m-%d' }}
                 {% if post.last_modified_at != post.date %}
