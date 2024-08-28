@@ -245,15 +245,22 @@ def generate_mermaid_graph(
     # Join graph lines with line breaks
     return "\n".join(graph)
 
-def main():
-    posts_dir = "/path/to/posts/directory"  # Update with the actual directory path
-    output_file = "processed_tags.yaml"
-    tag_data, combined_tags = process_tags(posts_dir, output_file)
-
-    mermaid_code = generate_mermaid_graph(tag_data, direction="TD")
-    with open("tag_graph.mmd", "w", encoding="utf-8") as f:
-        f.write(mermaid_code)
-    logging.info("Mermaid ER Diagram has been generated and saved to tag_graph.mmd")
-
 if __name__ == "__main__":
-    main()
+    # Use environment variables to determine paths (adapt if necessary)
+    posts_dir = os.path.join(os.getenv("GITHUB_WORKSPACE", ""), "_posts")
+    output_file = os.path.join(
+        os.getenv("GITHUB_WORKSPACE", ""), "_data/processed_tags.yml"
+    )
+
+    tag_data, combined_tags = process_tags(posts_dir, output_file)
+    mermaid_graph = generate_mermaid_er_diagram(tag_data)
+
+    # Write the Mermaid graph to a file
+    with open(
+        os.path.join(os.getenv("GITHUB_WORKSPACE", ""), "_includes/tag_graph.html"),
+        "w",
+        encoding="utf-8",
+    ) as f:
+        f.write(f"<div class='mermaid'>\n{mermaid_graph}\n</div>")
+
+    logging.info("Mermaid graph has been written to _includes/tag_graph.html")
