@@ -2,12 +2,12 @@
 graph TD
     linux(("linux"))
     class linux mainNode
-    scripts(("scripts"))
-    class scripts mainNode
-    linux -..->|related| scripts
     software_mobile["software>mobile"]
     class software_mobile combinedNode
     linux -..->|related| software_mobile
+    scripts(("scripts"))
+    class scripts mainNode
+    linux -..->|related| scripts
     rendimentos(("rendimentos"))
     class rendimentos mainNode
     trabalho(("trabalho"))
@@ -15,30 +15,30 @@ graph TD
     estudos(("estudos"))
     class estudos mainNode
     trabalho -..->|related| estudos
-    scripts_AI["scripts>AI"]
-    class scripts_AI combinedNode
-    scripts --> scripts_AI
-    scripts_mobile["scripts>mobile"]
-    class scripts_mobile combinedNode
-    scripts --> scripts_mobile
-    scripts_google-apps-script["scripts>google-apps-script"]
-    class scripts_google-apps-script combinedNode
-    scripts --> scripts_google-apps-script
     scripts_cloud["scripts>cloud"]
     class scripts_cloud combinedNode
     scripts --> scripts_cloud
-    scripts -..->|related| estudos
+    scripts_AI["scripts>AI"]
+    class scripts_AI combinedNode
+    scripts --> scripts_AI
+    scripts_google-apps-script["scripts>google-apps-script"]
+    class scripts_google-apps-script combinedNode
+    scripts --> scripts_google-apps-script
+    scripts_mobile["scripts>mobile"]
+    class scripts_mobile combinedNode
+    scripts --> scripts_mobile
     scripts -..->|related| linux
+    scripts -..->|related| estudos
     carro(("carro"))
     class carro mainNode
     edital(("edital"))
     class edital mainNode
-    edital_direito_processual-penal["edital>direito>processual-penal"]
-    class edital_direito_processual-penal combinedNode
-    edital --> edital_direito_processual-penal
     edital_direito["edital>direito"]
     class edital_direito combinedNode
     edital --> edital_direito
+    edital_direito_processual-penal["edital>direito>processual-penal"]
+    class edital_direito_processual-penal combinedNode
+    edital --> edital_direito_processual-penal
     tasks(("tasks"))
     class tasks mainNode
     tasks_iphone["tasks>iphone"]
@@ -57,8 +57,8 @@ graph TD
     iphone(("iphone"))
     class iphone mainNode
     iphone --> tasks_iphone
-    iphone -..->|related| scripts_mobile
     iphone -..->|related| software_mobile
+    iphone -..->|related| scripts_mobile
     sell(("sell"))
     class sell mainNode
     github_jekyll(("github>jekyll"))
@@ -69,8 +69,8 @@ graph TD
     jekyll(("jekyll"))
     class jekyll mainNode
     jekyll --> github_jekyll
-    estudos -..->|related| scripts
     estudos -..->|related| trabalho
+    estudos -..->|related| scripts
     direito(("direito"))
     class direito mainNode
     direito --> edital_direito
@@ -87,10 +87,10 @@ graph TD
     AI --> AI_prompt
     software(("software"))
     class software mainNode
+    software --> software_mobile
     software_cloud["software>cloud"]
     class software_cloud combinedNode
     software --> software_cloud
-    software --> software_mobile
     mobile(("mobile"))
     class mobile mainNode
     mobile --> software_mobile
@@ -134,16 +134,16 @@ graph TD
     classDef mainNode fill:#f9f,stroke:#333,stroke-width:4px;
     classDef combinedNode fill:#bbf,stroke:#66f,stroke-width:2px;
     %% Layout hints
-    scripts_AI --- scripts
-    edital_direito_processual-penal --- edital
-    scripts_google-apps-script --- scripts
-    software_cloud --- software
     AI_prompt --- AI
-    edital_direito --- edital
     tasks_iphone --- tasks
-    scripts_cloud --- scripts
+    direito_processual-penal --- direito
+    edital_direito_processual-penal --- edital
+    edital_direito --- edital
+    scripts_AI --- scripts
     github_jekyll --- github
     scripts_mobile --- scripts
-    direito_processual-penal --- direito
+    scripts_google-apps-script --- scripts
     software_mobile --- software
+    scripts_cloud --- scripts
+    software_cloud --- software
 </div>
