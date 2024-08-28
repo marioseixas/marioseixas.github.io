@@ -288,10 +288,10 @@ if __name__ == "__main__":
 
     # Write the Mermaid ER diagram to a file
     with open(
-        os.path.join(os.getenv("GITHUB_WORKSPACE", ""), "_includes/tag_er_diagram.html"),
+        os.path.join(os.getenv("GITHUB_WORKSPACE", ""), "_includes/tag_graph.html"),
         "w",
         encoding="utf-8",
     ) as f:
         f.write(f"<div class='mermaid'>\n{mermaid_er_diagram}\n</div>")
 
-    logging.info("Mermaid ER diagram has been written to _includes/tag_er_diagram.html")
+    logging.info("Mermaid ER diagram has been written to _includes/tag_graph.html")
