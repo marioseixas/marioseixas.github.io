@@ -1,25 +1,25 @@
 <div class='mermaid'>
 erDiagram
     linux {
-        related scripts
         related software_mobile
+        related scripts
     }
-    scripts {
-        child scripts_mobile
-        child scripts_AI
-        child scripts_cloud
-        child scripts_google-apps-script
-        related estudos
-        related linux
-    }
-    linux: ||..|| scripts: "related to"
     software_mobile {
         parent software
-        related iphone
         related linux
+        related iphone
         part_of mobile
     }
     linux: ||..|| software_mobile: "related to"
+    scripts {
+        child scripts_google-apps-script
+        child scripts_cloud
+        child scripts_mobile
+        child scripts_AI
+        related linux
+        related estudos
+    }
+    linux: ||..|| scripts: "related to"
     rendimentos {
     }
     trabalho {
@@ -30,6 +30,16 @@ erDiagram
         related scripts
     }
     trabalho: ||..|| estudos: "related to"
+    scripts_google-apps-script {
+        parent scripts
+        part_of google-apps-script
+    }
+    scripts: ||--|{ scripts_google-apps-script: "parent of"
+    scripts_cloud {
+        parent scripts
+        part_of cloud
+    }
+    scripts: ||--|{ scripts_cloud: "parent of"
     scripts_mobile {
         parent scripts
         related iphone
@@ -41,37 +51,27 @@ erDiagram
         part_of AI
     }
     scripts: ||--|{ scripts_AI: "parent of"
-    scripts_cloud {
-        parent scripts
-        part_of cloud
-    }
-    scripts: ||--|{ scripts_cloud: "parent of"
-    scripts_google-apps-script {
-        parent scripts
-        part_of google-apps-script
-    }
-    scripts: ||--|{ scripts_google-apps-script: "parent of"
-    scripts: ||..|| estudos: "related to"
     scripts: ||..|| linux: "related to"
+    scripts: ||..|| estudos: "related to"
     carro {
     }
     edital {
-        child edital_direito_processual-penal
         child edital_direito
+        child edital_direito_processual-penal
     }
-    edital_direito_processual-penal {
-        parent edital
-        parent direito
-        parent edital_direito
-        part_of processual-penal
-    }
-    edital: ||--|{ edital_direito_processual-penal: "parent of"
     edital_direito {
         parent edital
         child edital_direito_processual-penal
         part_of direito
     }
     edital: ||--|{ edital_direito: "parent of"
+    edital_direito_processual-penal {
+        parent edital
+        parent edital_direito
+        parent direito
+        part_of processual-penal
+    }
+    edital: ||--|{ edital_direito_processual-penal: "parent of"
     tasks {
         child tasks_iphone
     }
@@ -92,13 +92,13 @@ erDiagram
     }
     tasks: }|--|{ tasks_iphone: "part of"
     iphone {
-        related scripts_mobile
         related software_mobile
+        related scripts_mobile
         collection tasks_iphone
     }
     iphone: }|--|{ tasks_iphone: "part of"
-    iphone: ||..|| scripts_mobile: "related to"
     iphone: ||..|| software_mobile: "related to"
+    iphone: ||..|| scripts_mobile: "related to"
     sell {
     }
     github_jekyll {
@@ -119,8 +119,8 @@ erDiagram
     edital: }|--|{ edital_direito: "part of"
     direito {
         child edital_direito_processual-penal
-        collection direito_processual-penal
         collection edital_direito
+        collection direito_processual-penal
     }
     direito: }|--|{ edital_direito: "part of"
     edital_direito: ||--|{ edital_direito_processual-penal: "parent of"
@@ -139,23 +139,23 @@ erDiagram
     }
     AI: ||--|{ AI_prompt: "parent of"
     software {
-        child software_cloud
         child software_mobile
+        child software_cloud
     }
+    software: ||--|{ software_mobile: "parent of"
     software_cloud {
         parent software
         part_of cloud
     }
     software: ||--|{ software_cloud: "parent of"
-    software: ||--|{ software_mobile: "parent of"
     software: }|--|{ software_mobile: "part of"
     mobile {
         collection scripts_mobile
         collection software_mobile
     }
     mobile: }|--|{ software_mobile: "part of"
-    software_mobile: ||..|| iphone: "related to"
     software_mobile: ||..|| linux: "related to"
+    software_mobile: ||..|| iphone: "related to"
     AI: }|--|{ AI_prompt: "part of"
     prompt {
         collection AI_prompt
@@ -196,8 +196,8 @@ erDiagram
     edital: }|--|{ edital_direito_processual-penal: "part of"
     direito: }|--|{ edital_direito_processual-penal: "part of"
     processual-penal {
-        collection direito_processual-penal
         collection edital_direito_processual-penal
+        collection direito_processual-penal
     }
     processual-penal: }|--|{ edital_direito_processual-penal: "part of"
     direito_processual-penal {
