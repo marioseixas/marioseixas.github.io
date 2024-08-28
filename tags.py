@@ -172,111 +172,126 @@ def process_tags(posts_dir: str, output_file: str) -> tuple:
 
     return tag_data, combined_tags
 
-def generate_mermaid_er_diagram(
-    tag_data: Union[List[Dict[str, Any]], Dict[str, Any]], direction: str = "TD"
-) -> str:
+def generate_mermaid_er_diagram(tag_data: Dict[str, Any]) -> str:
     """
-    Generates Mermaid ER diagram code for the tag structure with modified attribute definitions 
-    and fixes for invalid characters and missing colons.
+    Generates Mermaid Entity Relationship (ER) diagram code for the tag structure.
+
+    Args:
+        tag_data (Dict[str, Any]): Dictionary containing tag relationships.
+
+    Returns:
+        str: Mermaid ER diagram code.
     """
-    graph = [f"erDiagram"]
+    diagram = ["erDiagram"]
     added_entities = set()
     added_relationships = set()
+    entity_attributes = defaultdict(lambda: {"parents": set(), "related": set()})
 
-    def sanitize_entity_name(name: str) -> str:
-        """Replaces invalid characters in entity names with underscores."""
-        return name.replace(">", "_").replace(" ", "_")
+    def add_entity(tag: str) -> str:
+        """
+        Adds an entity to the diagram if it hasn't been added yet.
 
-    def add_entity(entity_name: str, data: Dict[str, Any]) -> str:
-        """Adds an entity to the diagram with parent, related, and part-of attributes."""
-        safe_name = sanitize_entity_name(entity_name)
-        if safe_name not in added_entities:
-            graph.append(f"    {safe_name} {{")
-            for parent in data.get("parents", []):
-                graph.append(f"        parent {sanitize_entity_name(parent)}")  # Sanitize parent name
-            for related in data.get("related", []):
-                graph.append(f"        related {sanitize_entity_name(related)}")  # Sanitize related name
-            if ">" in entity_name:  # Add part-of attributes for combined tags
-                parts = entity_name.split(">")
-                for part in parts:
-                    graph.append(f"        part_of {sanitize_entity_name(part)}")  # Sanitize part name
-            graph.append("    }")
-            added_entities.add(safe_name)
-        return safe_name
+        Args:
+            tag (str): The tag name to be added.
 
-    def add_relationship(
-        from_entity: str,
-        to_entity: str,
-        relationship_type: str = "||--||",
-        label: str = "",
-    ) -> None:
-        """Adds a relationship between two entities with correct colon placement."""
-        safe_from = add_entity(from_entity, tag_data.get(from_entity, {}))
-        safe_to = add_entity(to_entity, tag_data.get(to_entity, {}))
+        Returns:
+            str: The sanitized tag name used in the diagram.
+        """
+        safe_tag = tag.replace('>', '_').replace(' ', '_')
+        if safe_tag not in added_entities:
+            added_entities.add(safe_tag)
+        return safe_tag
+
+    def add_relationship(from_tag: str, to_tag: str, relationship_type: str) -> None:
+        """
+        Adds a relationship between two entities in the diagram and updates their attributes.
+
+        Args:
+            from_tag (str): The starting entity of the relationship.
+            to_tag (str): The ending entity of the relationship.
+            relationship_type (str): The type of relationship ('hierarchical' or 'related').
+        """
+        safe_from = add_entity(from_tag)
+        safe_to = add_entity(to_tag)
         relationship = (safe_from, safe_to, relationship_type)
         if relationship not in added_relationships:
-            label_part = f'"{label}"' if label else ""
-            graph.append(  # Added colon after entity names
-                f"    {safe_from}: {relationship_type} {safe_to}: {label_part}" 
-            )
+            if relationship_type == 'hierarchical':
+                diagram.append(f'    {safe_from} ||--o{{ {safe_to} : "parent of"')
+                entity_attributes[safe_to]["parents"].add(from_tag)
+            else:  # related
+                diagram.append(f'    {safe_from} ||--|| {safe_to} : "related to"')
+                entity_attributes[safe_from]["related"].add(to_tag)
+                entity_attributes[safe_to]["related"].add(from_tag)
             added_relationships.add(relationship)
 
     def process_tag(tag_name: str, data: Dict[str, Any]) -> None:
-        """Processes a single tag and its relationships."""
-        # Add main entity
-        add_entity(tag_name, data)  # Pass data to add_entity
+        """
+        Processes a single tag and its relationships.
 
-        # Handle combined tags as entities and relationships
-        if ">" in tag_name:
-            parts = tag_name.split(">")
-            combined_tag = add_entity(tag_name, data)  # Pass data to add_entity
-            for part in parts:
-                add_relationship(part, combined_tag, "}|--|{", "part of") 
+        Args:
+            tag_name (str): The name of the tag.
+            data (Dict[str, Any]): The data associated with the tag, including children and related tags.
+        """
+        # Add main entity
+        add_entity(tag_name)
+
+        # Handle combined tags
+        if '>' in tag_name:
+            parts = tag_name.split('>')
+            for i in range(len(parts) - 1):
+                add_relationship(parts[i], parts[i+1], 'hierarchical')
 
         # Add hierarchical relationships
-        for child in data.get("children", []):
-            add_relationship(tag_name, child, "||--|{", "parent of") 
+        for child in data.get('children', []):
+            add_relationship(tag_name, child, 'hierarchical')
 
         # Add non-hierarchical relationships
-        for related in data.get("related", []):
-            add_relationship(tag_name, related, "||..||", "related to") 
+        for related in data.get('related', []):
+            add_relationship(tag_name, related, 'related')
+
+    def render_entities() -> None:
+        """
+        Renders all entities with their attributes in the ER diagram.
+        """
+        for tag, safe_tag in [(tag, tag.replace('>', '_').replace(' ', '_')) for tag in added_entities]:
+            attributes = []
+            for parent in sorted(entity_attributes[safe_tag]["parents"]):
+                attributes.append(f'        string "parent:{parent}"')
+            for related in sorted(entity_attributes[safe_tag]["related"]):
+                attributes.append(f'        string "related:{related}"')
+            
+            if attributes:
+                diagram.append(f'    {safe_tag} {{')
+                diagram.extend(attributes)
+                diagram.append('    }')
+            else:
+                diagram.append(f'    {safe_tag}')
 
     try:
-        if isinstance(tag_data, list):
-            for item in tag_data:
-                if isinstance(item, dict) and "tag" in item:
-                    process_tag(item["tag"], item)
-                else:
-                    logging.warning(f"Skipping invalid item in tag_data: {item}")
-        elif isinstance(tag_data, dict):
-            for tag_name, data in tag_data.items():
-                process_tag(tag_name, data)
-        else:
-            logging.error(f"Unexpected tag_data type: {type(tag_data)}")
-            return ""
-
+        for tag_name, data in tag_data.items():
+            process_tag(tag_name, data)
+        
+        render_entities()
     except Exception as e:
         logging.error(f"Error processing tag_data: {e}")
         return ""
 
-    return "\n".join(graph)
+    return '\n'.join(diagram)
 
 if __name__ == "__main__":
     # Use environment variables to determine paths (adapt if necessary)
     posts_dir = os.path.join(os.getenv("GITHUB_WORKSPACE", ""), "_posts")
-    output_file = os.path.join(
-        os.getenv("GITHUB_WORKSPACE", ""), "_data/processed_tags.yml"
-    )
+    output_file = os.path.join(os.getenv("GITHUB_WORKSPACE", ""), "_data/processed_tags.yml")
 
     tag_data, combined_tags = process_tags(posts_dir, output_file)
-    mermaid_graph = generate_mermaid_er_diagram(tag_data)
+    mermaid_er_diagram = generate_mermaid_er_diagram(tag_data)
 
-    # Write the Mermaid graph to a file
+    # Write the Mermaid ER diagram to a file
     with open(
-        os.path.join(os.getenv("GITHUB_WORKSPACE", ""), "_includes/tag_graph.html"),
+        os.path.join(os.getenv("GITHUB_WORKSPACE", ""), "_includes/tag_er_diagram.html"),
         "w",
         encoding="utf-8",
     ) as f:
-        f.write(f"<div class='mermaid'>\n{mermaid_graph}\n</div>")
+        f.write(f"<div class='mermaid'>\n{mermaid_er_diagram}\n</div>")
 
-    logging.info("Mermaid graph has been written to _includes/tag_graph.html")
+    logging.info("Mermaid ER diagram has been written to _includes/tag_er_diagram.html")
