@@ -2,12 +2,12 @@
 graph TD
     linux(("linux"))
     class linux mainNode
-    software_mobile["software>mobile"]
-    class software_mobile combinedNode
-    linux -..->|related| software_mobile
     scripts(("scripts"))
     class scripts mainNode
     linux -..->|related| scripts
+    software_mobile["software>mobile"]
+    class software_mobile combinedNode
+    linux -..->|related| software_mobile
     rendimentos(("rendimentos"))
     class rendimentos mainNode
     trabalho(("trabalho"))
@@ -18,17 +18,17 @@ graph TD
     scripts_AI["scripts>AI"]
     class scripts_AI combinedNode
     scripts --> scripts_AI
-    scripts_cloud["scripts>cloud"]
-    class scripts_cloud combinedNode
-    scripts --> scripts_cloud
     scripts_google-apps-script["scripts>google-apps-script"]
     class scripts_google-apps-script combinedNode
     scripts --> scripts_google-apps-script
+    scripts_cloud["scripts>cloud"]
+    class scripts_cloud combinedNode
+    scripts --> scripts_cloud
     scripts_mobile["scripts>mobile"]
     class scripts_mobile combinedNode
     scripts --> scripts_mobile
-    scripts -..->|related| estudos
     scripts -..->|related| linux
+    scripts -..->|related| estudos
     carro(("carro"))
     class carro mainNode
     edital(("edital"))
@@ -134,16 +134,16 @@ graph TD
     classDef mainNode fill:#f9f,stroke:#333,stroke-width:4px;
     classDef combinedNode fill:#bbf,stroke:#66f,stroke-width:2px;
     %% Layout hints
-    AI_prompt --- AI
-    edital_direito --- edital
-    tasks_iphone --- tasks
-    scripts_mobile --- scripts
-    scripts_google-apps-script --- scripts
-    software_cloud --- software
-    direito_processual-penal --- direito
     scripts_AI --- scripts
-    scripts_cloud --- scripts
-    software_mobile --- software
     github_jekyll --- github
+    software_mobile --- software
+    AI_prompt --- AI
+    scripts_google-apps-script --- scripts
     edital_direito_processual-penal --- edital
+    direito_processual-penal --- direito
+    tasks_iphone --- tasks
+    software_cloud --- software
+    scripts_cloud --- scripts
+    scripts_mobile --- scripts
+    edital_direito --- edital
 </div>
