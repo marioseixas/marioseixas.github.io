@@ -176,9 +176,10 @@ def generate_mermaid_er_diagram(
     tag_data: Union[List[Dict[str, Any]], Dict[str, Any]], direction: str = "TD"
 ) -> str:
     """
-    Generates Mermaid ER diagram code for the tag structure with modified attribute 
-    definitions and fixes for invalid characters, missing colons, and incorrect 
-    relationship syntax. Also includes child and collection attributes.
+    Generates Mermaid ER diagram code for the tag structure with optimized attribute 
+    definitions for improved clarity and conciseness, including parent, child, related,
+    part-of, and collection attributes. Handles invalid characters and ensures correct colon 
+    placement in relationships.
     """
     graph = [f"erDiagram"]
     added_entities = set()
@@ -186,29 +187,48 @@ def generate_mermaid_er_diagram(
 
     def sanitize_entity_name(name: str) -> str:
         """Replaces invalid characters in entity names with underscores."""
-        return name.replace(">", "_").replace(" ", "_").replace("ç", "c").replace("ã", "a")  # Add more replacements as needed
+        return name.replace(">", "_").replace(" ", "_")
 
     def add_entity(entity_name: str, data: Dict[str, Any]) -> str:
-        """Adds an entity to the diagram with parent, related, part-of, child, and collection attributes."""
+        """Adds an entity to the diagram with optimized attribute definitions."""
         safe_name = sanitize_entity_name(entity_name)
         if safe_name not in added_entities:
             graph.append(f"    {safe_name} {{")
-            for parent in data.get("parents", []):
+
+            parents = set(data.get("parents", []))
+            children = set(data.get("children", []))
+            related = set(data.get("related", []))
+
+            # Add parent attributes
+            for parent in parents:
                 graph.append(f"        parent {sanitize_entity_name(parent)}")
-            for related in data.get("related", []):
-                graph.append(f"        related {sanitize_entity_name(related)}")
+
+            # Add child attributes
+            for child in children:
+                graph.append(f"        child {sanitize_entity_name(child)}")
+
+            # Add related attributes
+            for rel in related:
+                graph.append(f"        related {sanitize_entity_name(rel)}")
+
+            # Add part-of attributes (optimized) 
             if ">" in entity_name:
                 parts = entity_name.split(">")
                 for part in parts:
-                    graph.append(f"        part_of {sanitize_entity_name(part)}")
-            # Add child attributes 
-            for child in data.get("children", []):
-                graph.append(f"        child {sanitize_entity_name(child)}")
-            
-            # Add collection attributes for combined tags
-            if '>' in entity_name:  # Assuming combined tags represent collections
-                graph.append(f"        collection {sanitize_entity_name(entity_name)}")  
-                
+                    if part not in parents:  # Avoid redundancy with parent attributes
+                        graph.append(f"        part_of {sanitize_entity_name(part)}")
+
+            # Add collection attributes (optimized)
+            collected_items = set()
+            for other_tag, other_data in tag_data.items():
+                if ">" in other_tag and entity_name in other_tag.split(">"):
+                    if entity_name not in other_data.get("parents", []):
+                        collected_items.add(sanitize_entity_name(other_tag))
+
+            for collected_item in collected_items:
+                if collected_item not in children:  # Avoid redundancy with child attributes
+                    graph.append(f"        collection {collected_item}")
+
             graph.append("    }")
             added_entities.add(safe_name)
         return safe_name
@@ -219,36 +239,35 @@ def generate_mermaid_er_diagram(
         relationship_type: str = "||--||",
         label: str = "",
     ) -> None:
-        """Adds a relationship between two entities with correct syntax."""
+        """Adds a relationship between two entities."""
         safe_from = add_entity(from_entity, tag_data.get(from_entity, {}))
         safe_to = add_entity(to_entity, tag_data.get(to_entity, {}))
         relationship = (safe_from, safe_to, relationship_type)
         if relationship not in added_relationships:
             label_part = f'"{label}"' if label else ""
-            # Correct relationship syntax: EntityName RelationshipType EntityName Label (optional) 
-            graph.append(f"    {safe_from} {relationship_type} {safe_to} {label_part}")  
+            graph.append(f"    {safe_from}: {relationship_type} {safe_to}: {label_part}")
             added_relationships.add(relationship)
-
 
     def process_tag(tag_name: str, data: Dict[str, Any]) -> None:
         """Processes a single tag and its relationships."""
         # Add main entity
-        add_entity(tag_name, data)  # Pass data to add_entity
+        add_entity(tag_name, data)
 
         # Handle combined tags as entities and relationships
         if ">" in tag_name:
             parts = tag_name.split(">")
-            combined_tag = add_entity(tag_name, data)  # Pass data to add_entity
+            combined_tag = add_entity(tag_name, data)
             for part in parts:
-                add_relationship(part, combined_tag, "}|--|{", "part of") 
+                add_relationship(part, combined_tag, "}|--|{", "part of")
 
         # Add hierarchical relationships
         for child in data.get("children", []):
-            add_relationship(tag_name, child, "||--|{", "parent of") 
+            add_relationship(tag_name, child, "||--|{", "parent of")
 
         # Add non-hierarchical relationships
         for related in data.get("related", []):
-            add_relationship(tag_name, related, "||..||", "related to") 
+            add_relationship(tag_name, related, "||..||", "related to")
+
 
     try:
         if isinstance(tag_data, list):
@@ -269,6 +288,7 @@ def generate_mermaid_er_diagram(
         return ""
 
     return "\n".join(graph)
+
 
 if __name__ == "__main__":
     # Use environment variables to determine paths (adapt if necessary)
