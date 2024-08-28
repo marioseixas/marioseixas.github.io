@@ -1,3 +1,172 @@
 <div class='mermaid'>
-
+erDiagram
+    linux {
+        related scripts
+        related software>mobile
+    }
+    scripts {
+        related linux
+        related estudos
+    }
+    linux ||..|| scripts "related to"
+    software_mobile {
+        parent software
+        related iphone
+        related linux
+    }
+    linux ||..|| software_mobile "related to"
+    rendimentos {
+    }
+    trabalho {
+        related estudos
+    }
+    estudos {
+        related trabalho
+        related scripts
+    }
+    trabalho ||..|| estudos "related to"
+    scripts_mobile {
+        parent scripts
+        related iphone
+    }
+    scripts ||--|{ scripts_mobile "parent of"
+    scripts_google-apps-script {
+        parent scripts
+    }
+    scripts ||--|{ scripts_google-apps-script "parent of"
+    scripts_AI {
+        parent scripts
+    }
+    scripts ||--|{ scripts_AI "parent of"
+    scripts_cloud {
+        parent scripts
+    }
+    scripts ||--|{ scripts_cloud "parent of"
+    scripts ||..|| linux "related to"
+    scripts ||..|| estudos "related to"
+    carro {
+    }
+    edital {
+    }
+    edital_direito {
+        parent edital
+    }
+    edital ||--|{ edital_direito "parent of"
+    edital_direito_processual-penal {
+        parent edital
+        parent edital>direito
+        parent direito
+    }
+    edital ||--|{ edital_direito_processual-penal "parent of"
+    tasks {
+    }
+    tasks_iphone {
+        parent tasks
+    }
+    tasks ||--|{ tasks_iphone "parent of"
+    hardware {
+    }
+    chess {
+    }
+    assistir {
+    }
+    calls {
+    }
+    despesas {
+    }
+    tasks }|--|{ tasks_iphone "part of"
+    iphone {
+        related scripts>mobile
+        related software>mobile
+    }
+    iphone }|--|{ tasks_iphone "part of"
+    iphone ||..|| scripts_mobile "related to"
+    iphone ||..|| software_mobile "related to"
+    sell {
+    }
+    github_jekyll {
+        parent github
+    }
+    github {
+    }
+    github }|--|{ github_jekyll "part of"
+    jekyll {
+    }
+    jekyll }|--|{ github_jekyll "part of"
+    github ||--|{ github_jekyll "parent of"
+    estudos ||..|| trabalho "related to"
+    estudos ||..|| scripts "related to"
+    edital }|--|{ edital_direito "part of"
+    direito {
+    }
+    direito }|--|{ edital_direito "part of"
+    edital_direito ||--|{ edital_direito_processual-penal "parent of"
+    direito ||--|{ edital_direito_processual-penal "parent of"
+    fatherhood {
+    }
+    misc {
+    }
+    AI {
+    }
+    AI_prompt {
+        parent AI
+    }
+    AI ||--|{ AI_prompt "parent of"
+    software {
+    }
+    software_cloud {
+        parent software
+    }
+    software ||--|{ software_cloud "parent of"
+    software ||--|{ software_mobile "parent of"
+    software }|--|{ software_mobile "part of"
+    mobile {
+    }
+    mobile }|--|{ software_mobile "part of"
+    software_mobile ||..|| iphone "related to"
+    software_mobile ||..|| linux "related to"
+    AI }|--|{ AI_prompt "part of"
+    prompt {
+    }
+    prompt }|--|{ AI_prompt "part of"
+    music {
+    }
+    scripts }|--|{ scripts_mobile "part of"
+    mobile }|--|{ scripts_mobile "part of"
+    scripts_mobile ||..|| iphone "related to"
+    spirit {
+        related admoestação
+    }
+    admoestação {
+        related spirit
+    }
+    spirit ||..|| admoestação "related to"
+    ler {
+    }
+    scripts }|--|{ scripts_google-apps-script "part of"
+    google-apps-script {
+    }
+    google-apps-script }|--|{ scripts_google-apps-script "part of"
+    saúde {
+    }
+    software }|--|{ software_cloud "part of"
+    cloud {
+    }
+    cloud }|--|{ software_cloud "part of"
+    receitas {
+    }
+    admoestação ||..|| spirit "related to"
+    scripts }|--|{ scripts_cloud "part of"
+    cloud }|--|{ scripts_cloud "part of"
+    edital }|--|{ edital_direito_processual-penal "part of"
+    direito }|--|{ edital_direito_processual-penal "part of"
+    processual-penal {
+    }
+    processual-penal }|--|{ edital_direito_processual-penal "part of"
+    direito_processual-penal {
+    }
+    direito }|--|{ direito_processual-penal "part of"
+    processual-penal }|--|{ direito_processual-penal "part of"
+    scripts }|--|{ scripts_AI "part of"
+    AI }|--|{ scripts_AI "part of"
 </div>
