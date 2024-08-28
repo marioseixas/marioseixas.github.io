@@ -21,24 +21,24 @@ graph TD
     scripts_cloud["scripts>cloud"]
     class scripts_cloud combinedNode
     scripts --> scripts_cloud
-    scripts_mobile["scripts>mobile"]
-    class scripts_mobile combinedNode
-    scripts --> scripts_mobile
     scripts_google-apps-script["scripts>google-apps-script"]
     class scripts_google-apps-script combinedNode
     scripts --> scripts_google-apps-script
+    scripts_mobile["scripts>mobile"]
+    class scripts_mobile combinedNode
+    scripts --> scripts_mobile
     scripts -..->|related| estudos
     scripts -..->|related| linux
     carro(("carro"))
     class carro mainNode
     edital(("edital"))
     class edital mainNode
-    edital_direito["edital>direito"]
-    class edital_direito combinedNode
-    edital --> edital_direito
     edital_direito_processual-penal["edital>direito>processual-penal"]
     class edital_direito_processual-penal combinedNode
     edital --> edital_direito_processual-penal
+    edital_direito["edital>direito"]
+    class edital_direito combinedNode
+    edital --> edital_direito
     tasks(("tasks"))
     class tasks mainNode
     tasks_iphone["tasks>iphone"]
@@ -94,8 +94,8 @@ graph TD
     mobile(("mobile"))
     class mobile mainNode
     mobile --> software_mobile
-    software_mobile -..->|related| iphone
     software_mobile -..->|related| linux
+    software_mobile -..->|related| iphone
     prompt(("prompt"))
     class prompt mainNode
     prompt --> AI_prompt
@@ -134,16 +134,16 @@ graph TD
     classDef mainNode fill:#f9f,stroke:#333,stroke-width:4px;
     classDef combinedNode fill:#bbf,stroke:#66f,stroke-width:2px;
     %% Layout hints
-    scripts_google-apps-script --- scripts
-    scripts_cloud --- scripts
-    github_jekyll --- github
-    software_mobile --- software
-    scripts_AI --- scripts
+    AI_prompt --- AI
     edital_direito --- edital
-    software_cloud --- software
-    edital_direito_processual-penal --- edital
-    direito_processual-penal --- direito
     tasks_iphone --- tasks
     scripts_mobile --- scripts
-    AI_prompt --- AI
+    scripts_google-apps-script --- scripts
+    software_cloud --- software
+    direito_processual-penal --- direito
+    scripts_AI --- scripts
+    scripts_cloud --- scripts
+    software_mobile --- software
+    github_jekyll --- github
+    edital_direito_processual-penal --- edital
 </div>
