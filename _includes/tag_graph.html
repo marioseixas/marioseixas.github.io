@@ -6,18 +6,18 @@ erDiagram
     }
     software_mobile {
         parent software
-        related linux
         related iphone
+        related linux
         part_of mobile
     }
     linux: ||..|| software_mobile: "related to"
     scripts {
+        child scripts_cloud
         child scripts_google-apps-script
         child scripts_AI
-        child scripts_cloud
         child scripts_mobile
-        related estudos
         related linux
+        related estudos
     }
     linux: ||..|| scripts: "related to"
     rendimentos {
@@ -26,10 +26,15 @@ erDiagram
         related estudos
     }
     estudos {
-        related scripts
         related trabalho
+        related scripts
     }
     trabalho: ||..|| estudos: "related to"
+    scripts_cloud {
+        parent scripts
+        part_of cloud
+    }
+    scripts: ||--|{ scripts_cloud: "parent of"
     scripts_google-apps-script {
         parent scripts
         part_of google-apps-script
@@ -40,19 +45,14 @@ erDiagram
         part_of AI
     }
     scripts: ||--|{ scripts_AI: "parent of"
-    scripts_cloud {
-        parent scripts
-        part_of cloud
-    }
-    scripts: ||--|{ scripts_cloud: "parent of"
     scripts_mobile {
         parent scripts
         related iphone
         part_of mobile
     }
     scripts: ||--|{ scripts_mobile: "parent of"
-    scripts: ||..|| estudos: "related to"
     scripts: ||..|| linux: "related to"
+    scripts: ||..|| estudos: "related to"
     carro {
     }
     edital {
@@ -60,9 +60,9 @@ erDiagram
         child edital_direito
     }
     edital_direito_processual-penal {
-        parent direito
-        parent edital
         parent edital_direito
+        parent edital
+        parent direito
         part_of processual-penal
     }
     edital: ||--|{ edital_direito_processual-penal: "parent of"
@@ -114,8 +114,8 @@ erDiagram
     }
     jekyll: }|--|{ github_jekyll: "part of"
     github: ||--|{ github_jekyll: "parent of"
-    estudos: ||..|| scripts: "related to"
     estudos: ||..|| trabalho: "related to"
+    estudos: ||..|| scripts: "related to"
     edital: }|--|{ edital_direito: "part of"
     direito {
         child edital_direito_processual-penal
@@ -154,8 +154,8 @@ erDiagram
         collection software_mobile
     }
     mobile: }|--|{ software_mobile: "part of"
-    software_mobile: ||..|| linux: "related to"
     software_mobile: ||..|| iphone: "related to"
+    software_mobile: ||..|| linux: "related to"
     AI: }|--|{ AI_prompt: "part of"
     prompt {
         collection AI_prompt
