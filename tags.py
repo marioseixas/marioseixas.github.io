@@ -172,77 +172,93 @@ def process_tags(posts_dir: str, output_file: str) -> tuple:
 
     return tag_data, combined_tags
 
-def generate_mermaid_graph(
+def generate_mermaid_er_diagram(
     tag_data: Union[List[Dict[str, Any]], Dict[str, Any]], direction: str = "TD"
 ) -> str:
     """
-    Generates Mermaid ER Diagram code for the tag structure.
-
-    Args:
-        tag_data (Union[List[Dict[str, Any]], Dict[str, Any]]): List of dictionaries or dictionary containing tag relationships.
-        direction (str): Graph direction (TD, LR, RL, BT). Defaults to "TD".
-
-    Returns:
-        str: Mermaid ER Diagram code.
+    Generates Mermaid ER diagram code for the tag structure with modified attribute definitions 
+    and fixes for invalid characters and missing colons.
     """
     graph = [f"erDiagram"]
     added_entities = set()
     added_relationships = set()
 
-    def add_entity(tag: str, is_combined: bool = False) -> str:
-        """
-        Adds an entity to the ER diagram if it hasn't been added yet.
+    def sanitize_entity_name(name: str) -> str:
+        """Replaces invalid characters in entity names with underscores."""
+        return name.replace(">", "_").replace(" ", "_")
 
-        Args:
-            tag (str): The tag name to be added.
-            is_combined (bool): Whether this is a combined entity or a simple entity.
+    def add_entity(entity_name: str, data: Dict[str, Any]) -> str:
+        """Adds an entity to the diagram with parent, related, and part-of attributes."""
+        safe_name = sanitize_entity_name(entity_name)
+        if safe_name not in added_entities:
+            graph.append(f"    {safe_name} {{")
+            for parent in data.get("parents", []):
+                graph.append(f"        parent {sanitize_entity_name(parent)}")  # Sanitize parent name
+            for related in data.get("related", []):
+                graph.append(f"        related {sanitize_entity_name(related)}")  # Sanitize related name
+            if ">" in entity_name:  # Add part-of attributes for combined tags
+                parts = entity_name.split(">")
+                for part in parts:
+                    graph.append(f"        part_of {sanitize_entity_name(part)}")  # Sanitize part name
+            graph.append("    }")
+            added_entities.add(safe_name)
+        return safe_name
 
-        Returns:
-            str: The sanitized tag name used in the diagram.
-        """
-        safe_tag = tag.replace('>', '_').replace(' ', '_')
-        if safe_tag not in added_entities:
-            if is_combined:
-                graph.append(f"    {safe_tag} {{")
-                graph.append(f"        MULTI")
-                graph.append(f"    }}")
-            else:
-                graph.append(f"    {safe_tag} {{}}")
-            added_entities.add(safe_tag)
-        return safe_tag
+    def add_relationship(
+        from_entity: str,
+        to_entity: str,
+        relationship_type: str = "||--||",
+        label: str = "",
+    ) -> None:
+        """Adds a relationship between two entities with correct colon placement."""
+        safe_from = add_entity(from_entity, tag_data.get(from_entity, {}))
+        safe_to = add_entity(to_entity, tag_data.get(to_entity, {}))
+        relationship = (safe_from, safe_to, relationship_type)
+        if relationship not in added_relationships:
+            label_part = f'"{label}"' if label else ""
+            graph.append(  # Added colon after entity names
+                f"    {safe_from}: {relationship_type} {safe_to}: {label_part}" 
+            )
+            added_relationships.add(relationship)
 
-    def add_relationship(from_tag: str, to_tag: str, relationship_type: str = 'CHILD', label: str = '') -> None:
-        """
-        Adds a relationship between two entities in the diagram.
+    def process_tag(tag_name: str, data: Dict[str, Any]) -> None:
+        """Processes a single tag and its relationships."""
+        # Add main entity
+        add_entity(tag_name, data)  # Pass data to add_entity
 
-        Args:
-            from_tag (str): The starting entity.
-            to_tag (str): The ending entity.
-            relationship_type (str): The type of relationship ('PARENT', 'CHILD', 'RELATED'). Defaults to 'CHILD'.
-            label (str): The label for the relationship. Defaults to ''.
-        """
-        relationship_key = (from_tag, to_tag, relationship_type)
-        if relationship_key not in added_relationships:
-            arrow = '--o' if relationship_type == 'CHILD' else 'o--'
-            graph.append(f"    {from_tag} {arrow} {to_tag} : {label}")
-            added_relationships.add(relationship_key)
+        # Handle combined tags as entities and relationships
+        if ">" in tag_name:
+            parts = tag_name.split(">")
+            combined_tag = add_entity(tag_name, data)  # Pass data to add_entity
+            for part in parts:
+                add_relationship(part, combined_tag, "}|--|{", "part of") 
 
-    # Add all entities and their relationships
-    for tag, data in tag_data.items():
-        is_combined = tag in combined_tags
-        safe_tag = add_entity(tag, is_combined=is_combined)
+        # Add hierarchical relationships
+        for child in data.get("children", []):
+            add_relationship(tag_name, child, "||--|{", "parent of") 
 
-        # Add parent-child relationships
-        for parent in data['parents']:
-            parent_safe_tag = add_entity(parent)
-            add_relationship(parent_safe_tag, safe_tag, relationship_type='CHILD', label='contains')
+        # Add non-hierarchical relationships
+        for related in data.get("related", []):
+            add_relationship(tag_name, related, "||..||", "related to") 
 
-        # Add related tags relationships
-        for related in data['related']:
-            related_safe_tag = add_entity(related)
-            add_relationship(safe_tag, related_safe_tag, relationship_type='RELATED', label='relates to')
+    try:
+        if isinstance(tag_data, list):
+            for item in tag_data:
+                if isinstance(item, dict) and "tag" in item:
+                    process_tag(item["tag"], item)
+                else:
+                    logging.warning(f"Skipping invalid item in tag_data: {item}")
+        elif isinstance(tag_data, dict):
+            for tag_name, data in tag_data.items():
+                process_tag(tag_name, data)
+        else:
+            logging.error(f"Unexpected tag_data type: {type(tag_data)}")
+            return ""
 
-    # Join graph lines with line breaks
+    except Exception as e:
+        logging.error(f"Error processing tag_data: {e}")
+        return ""
+
     return "\n".join(graph)
 
 if __name__ == "__main__":
