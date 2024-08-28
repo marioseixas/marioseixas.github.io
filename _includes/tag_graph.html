@@ -1,150 +1,222 @@
 <div class='mermaid'>
 erDiagram
-    linux ||--|| scripts : "related to"
-    linux ||--|| software_mobile : "related to"
-    trabalho ||--|| estudos : "related to"
-    scripts ||--o{ scripts_google-apps-script : "parent of"
-    scripts ||--o{ scripts_AI : "parent of"
-    scripts ||--o{ scripts_cloud : "parent of"
-    scripts ||--o{ scripts_mobile : "parent of"
-    scripts ||--|| linux : "related to"
-    scripts ||--|| estudos : "related to"
-    edital ||--o{ edital_direito_processual-penal : "parent of"
-    edital ||--o{ edital_direito : "parent of"
-    tasks ||--o{ tasks_iphone : "parent of"
-    tasks ||--o{ iphone : "parent of"
-    iphone ||--|| software_mobile : "related to"
-    iphone ||--|| scripts_mobile : "related to"
-    github ||--o{ jekyll : "parent of"
-    github ||--o{ github_jekyll : "parent of"
-    estudos ||--|| scripts : "related to"
-    estudos ||--|| trabalho : "related to"
-    edital ||--o{ direito : "parent of"
-    edital_direito ||--o{ edital_direito_processual-penal : "parent of"
-    direito ||--o{ edital_direito_processual-penal : "parent of"
-    AI ||--o{ AI_prompt : "parent of"
-    software ||--o{ software_cloud : "parent of"
-    software ||--o{ software_mobile : "parent of"
-    software ||--o{ mobile : "parent of"
-    software_mobile ||--|| linux : "related to"
-    software_mobile ||--|| iphone : "related to"
-    AI ||--o{ prompt : "parent of"
-    scripts ||--o{ mobile : "parent of"
-    scripts_mobile ||--|| iphone : "related to"
-    spirit ||--|| admoestação : "related to"
-    scripts ||--o{ google-apps-script : "parent of"
-    software ||--o{ cloud : "parent of"
-    admoestação ||--|| spirit : "related to"
-    scripts ||--o{ cloud : "parent of"
-    direito ||--o{ processual-penal : "parent of"
-    scripts ||--o{ AI : "parent of"
-    saúde
-    direito {
-        string "parent:edital"
-    }
-    edital
-    software_mobile {
-        string "parent:software"
-        string "related:iphone"
-        string "related:linux"
-    }
-    music
-    despesas
-    rendimentos
-    tasks_iphone {
-        string "parent:tasks"
-    }
-    estudos {
-        string "related:scripts"
-        string "related:trabalho"
-    }
-    calls
-    admoestação {
-        string "related:spirit"
-    }
-    prompt {
-        string "parent:AI"
-    }
-    fatherhood
-    sell
-    google-apps-script {
-        string "parent:scripts"
-    }
-    software_cloud {
-        string "parent:software"
-    }
-    github_jekyll {
-        string "parent:github"
-    }
-    spirit {
-        string "related:admoestação"
-    }
-    ler
-    cloud {
-        string "parent:scripts"
-        string "parent:software"
-    }
-    edital_direito {
-        string "parent:edital"
-    }
-    misc
-    tasks
-    mobile {
-        string "parent:scripts"
-        string "parent:software"
-    }
-    scripts_cloud {
-        string "parent:scripts"
-    }
-    receitas
     linux {
-        string "related:scripts"
-        string "related:software>mobile"
+        related scripts
+        related software_mobile
     }
-    jekyll {
-        string "parent:github"
-    }
-    scripts_AI {
-        string "parent:scripts"
-    }
-    hardware
-    scripts_mobile {
-        string "parent:scripts"
-        string "related:iphone"
-    }
-    software
     scripts {
-        string "related:estudos"
-        string "related:linux"
+        related estudos
+        related linux
+        child scripts_google-apps-script
+        child scripts_AI
+        child scripts_mobile
+        child scripts_cloud
+    }
+    linux ||..|| scripts "related to"
+    software_mobile {
+        parent software
+        related iphone
+        related linux
+        part_of software
+        part_of mobile
+        collection software_mobile
+    }
+    linux ||..|| software_mobile "related to"
+    rendimentos {
     }
     trabalho {
-        string "related:estudos"
+        related estudos
     }
-    direito_processual-penal
+    estudos {
+        related scripts
+        related trabalho
+    }
+    trabalho ||..|| estudos "related to"
     scripts_google-apps-script {
-        string "parent:scripts"
+        parent scripts
+        part_of scripts
+        part_of google-apps-script
+        collection scripts_google-apps-script
     }
-    carro
-    chess
-    assistir
-    processual-penal {
-        string "parent:direito"
+    scripts ||--|{ scripts_google-apps-script "parent of"
+    scripts_AI {
+        parent scripts
+        part_of scripts
+        part_of AI
+        collection scripts_AI
     }
-    AI_prompt {
-        string "parent:AI"
+    scripts ||--|{ scripts_AI "parent of"
+    scripts_mobile {
+        parent scripts
+        related iphone
+        part_of scripts
+        part_of mobile
+        collection scripts_mobile
     }
-    iphone {
-        string "parent:tasks"
-        string "related:scripts>mobile"
-        string "related:software>mobile"
+    scripts ||--|{ scripts_mobile "parent of"
+    scripts_cloud {
+        parent scripts
+        part_of scripts
+        part_of cloud
+        collection scripts_cloud
     }
-    github
+    scripts ||--|{ scripts_cloud "parent of"
+    scripts ||..|| estudos "related to"
+    scripts ||..|| linux "related to"
+    carro {
+    }
+    edital {
+        child edital_direito
+        child edital_direito_processual-penal
+    }
+    edital_direito {
+        parent edital
+        part_of edital
+        part_of direito
+        child edital_direito_processual-penal
+        collection edital_direito
+    }
+    edital ||--|{ edital_direito "parent of"
     edital_direito_processual-penal {
-        string "parent:direito"
-        string "parent:edital"
-        string "parent:edital>direito"
+        parent edital
+        parent edital_direito
+        parent direito
+        part_of edital
+        part_of direito
+        part_of processual-penal
+        collection edital_direito_processual-penal
+    }
+    edital ||--|{ edital_direito_processual-penal "parent of"
+    tasks {
+        child tasks_iphone
+    }
+    tasks_iphone {
+        parent tasks
+        part_of tasks
+        part_of iphone
+        collection tasks_iphone
+    }
+    tasks ||--|{ tasks_iphone "parent of"
+    hardware {
+    }
+    chess {
+    }
+    assistir {
+    }
+    calls {
+    }
+    despesas {
+    }
+    tasks }|--|{ tasks_iphone "part of"
+    iphone {
+        related software_mobile
+        related scripts_mobile
+    }
+    iphone }|--|{ tasks_iphone "part of"
+    iphone ||..|| software_mobile "related to"
+    iphone ||..|| scripts_mobile "related to"
+    sell {
+    }
+    github_jekyll {
+        parent github
+        part_of github
+        part_of jekyll
+        collection github_jekyll
+    }
+    github {
+        child github_jekyll
+    }
+    github }|--|{ github_jekyll "part of"
+    jekyll {
+    }
+    jekyll }|--|{ github_jekyll "part of"
+    github ||--|{ github_jekyll "parent of"
+    estudos ||..|| scripts "related to"
+    estudos ||..|| trabalho "related to"
+    edital }|--|{ edital_direito "part of"
+    direito {
+        child edital_direito_processual-penal
+    }
+    direito }|--|{ edital_direito "part of"
+    edital_direito ||--|{ edital_direito_processual-penal "parent of"
+    direito ||--|{ edital_direito_processual-penal "parent of"
+    fatherhood {
+    }
+    misc {
     }
     AI {
-        string "parent:scripts"
+        child AI_prompt
     }
+    AI_prompt {
+        parent AI
+        part_of AI
+        part_of prompt
+        collection AI_prompt
+    }
+    AI ||--|{ AI_prompt "parent of"
+    software {
+        child software_mobile
+        child software_cloud
+    }
+    software ||--|{ software_mobile "parent of"
+    software_cloud {
+        parent software
+        part_of software
+        part_of cloud
+        collection software_cloud
+    }
+    software ||--|{ software_cloud "parent of"
+    software }|--|{ software_mobile "part of"
+    mobile {
+    }
+    mobile }|--|{ software_mobile "part of"
+    software_mobile ||..|| iphone "related to"
+    software_mobile ||..|| linux "related to"
+    AI }|--|{ AI_prompt "part of"
+    prompt {
+    }
+    prompt }|--|{ AI_prompt "part of"
+    music {
+    }
+    scripts }|--|{ scripts_mobile "part of"
+    mobile }|--|{ scripts_mobile "part of"
+    scripts_mobile ||..|| iphone "related to"
+    spirit {
+        related admoestacao
+    }
+    admoestacao {
+        related spirit
+    }
+    spirit ||..|| admoestacao "related to"
+    ler {
+    }
+    scripts }|--|{ scripts_google-apps-script "part of"
+    google-apps-script {
+    }
+    google-apps-script }|--|{ scripts_google-apps-script "part of"
+    saúde {
+    }
+    software }|--|{ software_cloud "part of"
+    cloud {
+    }
+    cloud }|--|{ software_cloud "part of"
+    receitas {
+    }
+    admoestacao ||..|| spirit "related to"
+    scripts }|--|{ scripts_cloud "part of"
+    cloud }|--|{ scripts_cloud "part of"
+    edital }|--|{ edital_direito_processual-penal "part of"
+    direito }|--|{ edital_direito_processual-penal "part of"
+    processual-penal {
+    }
+    processual-penal }|--|{ edital_direito_processual-penal "part of"
+    direito_processual-penal {
+        part_of direito
+        part_of processual-penal
+        collection direito_processual-penal
+    }
+    direito }|--|{ direito_processual-penal "part of"
+    processual-penal }|--|{ direito_processual-penal "part of"
+    scripts }|--|{ scripts_AI "part of"
+    AI }|--|{ scripts_AI "part of"
 </div>
