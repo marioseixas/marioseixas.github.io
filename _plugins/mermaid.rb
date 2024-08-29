@@ -15,23 +15,24 @@ module Jekyll
       def generate_mermaid_script
         <<~SCRIPT
           <script type='module'>
-            import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
-            mermaid.initialize({
-              startOnLoad: true,
-              theme: 'base',
-              themeVariables: {
-                'primaryColor': '#fff',
-                'primaryBorderColor': '#4a86e8',
-                'primaryTextColor': '#495c64',
-                'secondaryColor': '#fff',
-                'secondaryTextColor': '#5096f2',
-                'edgeLabelBackground': '#fff',
-                'fontFamily': 'Roboto',
-                'fontSize': '15px',
-                'lineColor': '#99b0c0'
-              }
-            });
-          </script>
+  import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+  mermaid.initialize({
+    startOnLoad: true,
+    theme: 'dark',
+    er: { useMaxWidth: true }
+  });
+  setTimeout(() => {
+    svgPanZoom(document.querySelector("#mermaid-pre>svg"), {
+      minZoom: 0.5,
+      maxZoom: 10,
+      fit: true,
+      contain: false,
+      controlIconsEnabled: true,
+      center: true,
+      refreshRate: "auto",
+    });
+  }, 200);
+</script>
         SCRIPT
       end
     end
