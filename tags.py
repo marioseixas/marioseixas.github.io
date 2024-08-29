@@ -206,9 +206,8 @@ def generate_mermaid_er_diagram(
     def sanitize_entity_name(name: str) -> str:
         """Replaces invalid characters in entity names with underscores."""
         # Enhanced sanitization to handle non-ASCII characters
-        safe_name = name.replace(">", "_").replace(" ", "_")
-        safe_name = "".join(c if c.isalnum() or c == '_' else '_' for c in safe_name)
-        return safe_name
+        safe_name = name.replace(">", "_").replace(" ", "_").replace("ç", "c").replace("ã", "a")
+        return safe_name   
 
     def add_entity(entity_name: str, data: Dict[str, Any]) -> str:
         """Adds an entity to the diagram."""
