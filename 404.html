@@ -75,7 +75,7 @@ id: not-found
   </header>
   {% cusdis_comments %}
   <div class="post-wrapper">
-    <pre id="mermaid-pre" class="mermaid">
+    {% mermaid %}
 erDiagram
 
 "tbl_user(User)" {
@@ -131,12 +131,15 @@ erDiagram
 
 "tbl_mtm_license_organization(tbl_mtm_license_organization)"  }|  --  ||  "tbl_license(License)":  "license_id"
 "tbl_mtm_license_organization(tbl_mtm_license_organization)"  }|  --  ||  "tbl_organization(Organization)":  "organization_id"
-    </pre>
+      {% endmermaid %}
   </div>
-</body>
 <script type='module'>
-            import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10.9.1/dist/mermaid.esm.min.mjs';
-            mermaid.initialize({ startOnLoad: true, er: { useMaxWidth: true } });
+  import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+  mermaid.initialize({
+    startOnLoad: true,
+    theme: 'dark',
+    er: { useMaxWidth: true }
+  });
   setTimeout(() => {
     svgPanZoom(document.querySelector("#mermaid-pre>svg"), {
       minZoom: 0.5,
@@ -148,5 +151,6 @@ erDiagram
       refreshRate: "auto",
     });
   }, 200);
-</script>
+</script>  
+</body>
 </html>
