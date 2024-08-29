@@ -1,58 +1,58 @@
 <div class='mermaid'>
 erDiagram
     linux {
-        related software_mobile
         related scripts
+        related software_mobile
     }
+    scripts {
+        child scripts_mobile
+        child scripts_cloud
+        child scripts_AI
+        child scripts_google-apps-script
+        related estudos
+        related linux
+    }
+    linux: ||..|| scripts: "related to"
     software_mobile {
         parent software
-        related linux
         related iphone
+        related linux
         part_of mobile
     }
     linux: ||..|| software_mobile: "related to"
-    scripts {
-        child scripts_google-apps-script
-        child scripts_cloud
-        child scripts_mobile
-        child scripts_AI
-        related linux
-        related estudos
-    }
-    linux: ||..|| scripts: "related to"
     rendimentos {
     }
     trabalho {
         related estudos
     }
     estudos {
-        related trabalho
         related scripts
+        related trabalho
     }
     trabalho: ||..|| estudos: "related to"
-    scripts_google-apps-script {
-        parent scripts
-        part_of google-apps-script
-    }
-    scripts: ||--|{ scripts_google-apps-script: "parent of"
-    scripts_cloud {
-        parent scripts
-        part_of cloud
-    }
-    scripts: ||--|{ scripts_cloud: "parent of"
     scripts_mobile {
         parent scripts
         related iphone
         part_of mobile
     }
     scripts: ||--|{ scripts_mobile: "parent of"
+    scripts_cloud {
+        parent scripts
+        part_of cloud
+    }
+    scripts: ||--|{ scripts_cloud: "parent of"
     scripts_AI {
         parent scripts
         part_of AI
     }
     scripts: ||--|{ scripts_AI: "parent of"
-    scripts: ||..|| linux: "related to"
+    scripts_google-apps-script {
+        parent scripts
+        part_of google-apps-script
+    }
+    scripts: ||--|{ scripts_google-apps-script: "parent of"
     scripts: ||..|| estudos: "related to"
+    scripts: ||..|| linux: "related to"
     carro {
     }
     edital {
@@ -66,8 +66,8 @@ erDiagram
     }
     edital: ||--|{ edital_direito: "parent of"
     edital_direito_processual-penal {
-        parent edital
         parent edital_direito
+        parent edital
         parent direito
         part_of processual-penal
     }
@@ -92,13 +92,13 @@ erDiagram
     }
     tasks: }|--|{ tasks_iphone: "part of"
     iphone {
-        related software_mobile
         related scripts_mobile
+        related software_mobile
         collection tasks_iphone
     }
     iphone: }|--|{ tasks_iphone: "part of"
-    iphone: ||..|| software_mobile: "related to"
     iphone: ||..|| scripts_mobile: "related to"
+    iphone: ||..|| software_mobile: "related to"
     sell {
     }
     github_jekyll {
@@ -114,13 +114,13 @@ erDiagram
     }
     jekyll: }|--|{ github_jekyll: "part of"
     github: ||--|{ github_jekyll: "parent of"
-    estudos: ||..|| trabalho: "related to"
     estudos: ||..|| scripts: "related to"
+    estudos: ||..|| trabalho: "related to"
     edital: }|--|{ edital_direito: "part of"
     direito {
         child edital_direito_processual-penal
-        collection edital_direito
         collection direito_processual-penal
+        collection edital_direito
     }
     direito: }|--|{ edital_direito: "part of"
     edital_direito: ||--|{ edital_direito_processual-penal: "parent of"
@@ -150,12 +150,12 @@ erDiagram
     software: ||--|{ software_cloud: "parent of"
     software: }|--|{ software_mobile: "part of"
     mobile {
-        collection scripts_mobile
         collection software_mobile
+        collection scripts_mobile
     }
     mobile: }|--|{ software_mobile: "part of"
-    software_mobile: ||..|| linux: "related to"
     software_mobile: ||..|| iphone: "related to"
+    software_mobile: ||..|| linux: "related to"
     AI: }|--|{ AI_prompt: "part of"
     prompt {
         collection AI_prompt
@@ -184,8 +184,8 @@ erDiagram
     }
     software: }|--|{ software_cloud: "part of"
     cloud {
-        collection software_cloud
         collection scripts_cloud
+        collection software_cloud
     }
     cloud: }|--|{ software_cloud: "part of"
     receitas {
