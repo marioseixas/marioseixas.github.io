@@ -10,12 +10,13 @@ permalink: "/:slug/"
 relative_permalinks: false
 
 plugins:
+  - jekyll-plugins
   - jekyll-last-modified-at
   - jekyll-sitemap
   - jekyll-feed
   - jekyll-data
   - jekyll-mermaid
-
+  
 sass:
   sass_dir: _sass
   style: :compressed
