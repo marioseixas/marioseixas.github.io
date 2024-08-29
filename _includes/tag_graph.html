@@ -10,10 +10,10 @@ erDiagram
         related_2 estudos
     }
     scripts {
-        child scripts_AI
-        child scripts_mobile
-        child scripts_cloud
         child scripts_google-apps-script
+        child scripts_AI
+        child scripts_cloud
+        child scripts_mobile
         related_26 linux
         related_2 estudos
     }
@@ -21,7 +21,9 @@ erDiagram
     }
     edital {
         child edital_direito
+        SUBset edital_direito_processual-penal
     }
+    edital_direito_processual-penal ||--|edital : "SUPERset of"
     tasks {
         child tasks_iphone
     }
@@ -70,8 +72,8 @@ erDiagram
         child AI_prompt
     }
     software {
-        child software_mobile
         child software_cloud
+        child software_mobile
     }
     software_mobile {
         parent software
@@ -120,7 +122,6 @@ erDiagram
         parent edital_direito
         SUPERset edital
     }
-    edital_direito_processual-penal ||--|edital : "SUPERset of"
     processual-penal {
     }
     direito_processual-penal {
