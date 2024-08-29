@@ -10,10 +10,14 @@ erDiagram
         related_2 estudos
     }
     scripts {
-        child scripts_google-apps-script
-        child scripts_mobile
-        child scripts_AI
         child scripts_cloud
+        child scripts_mobile
+        child scripts_google-apps-script
+        child scripts_AI
+        SUBset scripts_cloud
+        SUBset scripts_mobile
+        SUBset scripts_google-apps-script
+        SUBset scripts_AI
         related_26 linux
         related_2 estudos
     }
@@ -21,9 +25,12 @@ erDiagram
     }
     edital {
         child edital_direito
+        SUBset edital_direito
+        SUBset edital_direito_processual-penal
     }
     tasks {
         child tasks_iphone
+        SUBset tasks_iphone
     }
     hardware {
     }
@@ -37,6 +44,7 @@ erDiagram
     }
     tasks_iphone {
         parent tasks
+        SUBset tasks_iphone
         SUPERset tasks_iphone
         SUPERset tasks
     }
@@ -48,11 +56,13 @@ erDiagram
     }
     github_jekyll {
         parent github
+        SUBset github_jekyll
         SUPERset github
         SUPERset github_jekyll
     }
     github {
         child github_jekyll
+        SUBset github_jekyll
     }
     jekyll {
     }
@@ -63,6 +73,8 @@ erDiagram
     edital_direito {
         parent edital
         child edital_direito_processual-penal
+        SUBset edital_direito
+        SUBset edital_direito_processual-penal
         SUPERset edital
         SUPERset edital_direito
     }
@@ -74,13 +86,17 @@ erDiagram
     }
     AI {
         child AI_prompt
+        SUBset AI_prompt
     }
     software {
         child software_mobile
         child software_cloud
+        SUBset software_mobile
+        SUBset software_cloud
     }
     software_mobile {
         parent software
+        SUBset software_mobile
         SUPERset software_mobile
         SUPERset software
         related_2 iphone
@@ -90,6 +106,7 @@ erDiagram
     }
     AI_prompt {
         parent AI
+        SUBset AI_prompt
         SUPERset AI
         SUPERset AI_prompt
     }
@@ -99,8 +116,9 @@ erDiagram
     }
     scripts_mobile {
         parent scripts
-        SUPERset scripts_mobile
+        SUBset scripts_mobile
         SUPERset scripts
+        SUPERset scripts_mobile
         related_2 iphone
     }
     spirit {
@@ -110,8 +128,9 @@ erDiagram
     }
     scripts_google-apps-script {
         parent scripts
-        SUPERset scripts_google-apps-script
+        SUBset scripts_google-apps-script
         SUPERset scripts
+        SUPERset scripts_google-apps-script
     }
     google-apps-script {
     }
@@ -119,6 +138,7 @@ erDiagram
     }
     software_cloud {
         parent software
+        SUBset software_cloud
         SUPERset software_cloud
         SUPERset software
     }
@@ -131,14 +151,16 @@ erDiagram
     }
     scripts_cloud {
         parent scripts
+        SUBset scripts_cloud
         SUPERset scripts_cloud
         SUPERset scripts
     }
     edital_direito_processual-penal {
         parent edital_direito
+        SUBset edital_direito_processual-penal
         SUPERset edital
-        SUPERset edital_direito_processual-penal
         SUPERset edital_direito
+        SUPERset edital_direito_processual-penal
     }
     processual-penal {
     }
@@ -146,7 +168,8 @@ erDiagram
     }
     scripts_AI {
         parent scripts
-        SUPERset scripts_AI
+        SUBset scripts_AI
         SUPERset scripts
+        SUPERset scripts_AI
     }
 </div>
