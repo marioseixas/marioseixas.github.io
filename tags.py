@@ -34,7 +34,7 @@ def generate_partial_tags(tag: str) -> List[str]:
     return partial_tags
 
 
-def process_tags(posts_dir: str, output_file: str) -> tuple:
+def process_tags(posts_dir: str, output_file: str) -> dict:
     """
     Processes tags from markdown files, handling nested tags, highlighting exact matches,
     preventing duplicates using file paths, and generating data for a Mermaid graph.
@@ -100,7 +100,7 @@ def process_tags(posts_dir: str, output_file: str) -> tuple:
             "parents": set(),
             "children": set(),
             "related": defaultdict(int),  # Track related tags and co-occurrence counts
-            "collected_items": set(),  # Track contributions to combined tags
+            "SUPERset": set(),  # Track contributions to combined tags
             "posts": [],
         }
     )
@@ -122,11 +122,11 @@ def process_tags(posts_dir: str, output_file: str) -> tuple:
                         tag_data[child_tag]["parents"].add(parent_tag)
                         tag_data[parent_tag]["children"].add(child_tag)
 
-                # Track tags that contribute to this combined tag
+                # Track tags that contribute to this combined tag (SUPERset)
                 for i in range(len(tag_parts)):
                     part_tag = ">".join(tag_parts[: i + 1])
                     if tag_frequency[part_tag] >= THRESHOLD:
-                        tag_data[part_tag]["collected_items"].add(full_tag_path)
+                        tag_data[full_tag_path]["SUPERset"].add(part_tag)
 
             for partial_tag in generate_partial_tags(tag):
                 if tag_frequency[partial_tag] >= THRESHOLD:
@@ -166,8 +166,8 @@ def process_tags(posts_dir: str, output_file: str) -> tuple:
             for related, count in data["related"].items()
             if related in tag_data
         }
-        data["collected_items"] = {
-            item for item in data["collected_items"] if item in tag_data
+        data["SUPERset"] = {
+            item for item in data["SUPERset"] if item in tag_data
         }
 
     # Sort posts within each tag by date (most recent first)
@@ -201,7 +201,6 @@ def generate_mermaid_er_diagram(
     """
     graph = [f"erDiagram"]
     added_entities = set()
-    added_relationships = set()
 
     def sanitize_entity_name(name: str) -> str:
         """Replaces invalid characters in entity names with underscores."""
@@ -210,85 +209,30 @@ def generate_mermaid_er_diagram(
         return safe_name   
 
     def add_entity(entity_name: str, data: Dict[str, Any]) -> str:
-        """Adds an entity to the diagram."""
+        """Adds an entity to the diagram with attributes."""
         safe_name = sanitize_entity_name(entity_name)
         if safe_name not in added_entities:
             graph.append(f"    {safe_name} {{")
 
-            parents = data.get("parents", set())
-            children = data.get("children", set())
-            collected_items = data.get("collected_items", set())
-
-            # Add parent attributes
-            for parent in parents:
+            # Add attributes based on relationships
+            for parent in data.get("parents", set()):
                 graph.append(f"        parent {sanitize_entity_name(parent)}")
-
-            # Add child attributes
-            for child in children:
+            for child in data.get("children", set()):
                 graph.append(f"        child {sanitize_entity_name(child)}")
-
-            # Add contributes_to attributes
-            for collected_item in collected_items:
-                graph.append(
-                    f"        contributes_to {sanitize_entity_name(collected_item)}"
-                )
-
-            # Add collection attributes
-            for other_tag, other_data in tag_data.items():
-                if (
-                    ">" in other_tag
-                    and entity_name in other_tag.split(">")
-                    and entity_name not in other_data.get("parents", [])
-                ):
-                    graph.append(
-                        f"        collection {sanitize_entity_name(other_tag)}"
-                    )
+            for superset_item in data.get("SUPERset", set()):
+                graph.append(f"        SUPERset {sanitize_entity_name(superset_item)}")
+            for related, count in data.get("related", {}).items():
+                graph.append(f"        related_{count} {sanitize_entity_name(related)}")
 
             graph.append("    }")
             added_entities.add(safe_name)
         return safe_name
 
-    def add_relationship(
-        from_entity: str,
-        to_entity: str,
-        relationship_type: str = "||--||",
-        label: str = "",
-    ) -> None:
-        """Adds a relationship between two entities."""
-        safe_from = add_entity(from_entity, tag_data.get(from_entity, {}))
-        safe_to = add_entity(to_entity, tag_data.get(to_entity, {}))
-        relationship = (safe_from, safe_to, relationship_type)
-        if relationship not in added_relationships:
-            label_part = f'"{label}"' if label else ""
-            graph.append(
-                f"    {safe_from} {relationship_type} {safe_to} : {label_part}"
-            )
-            added_relationships.add(relationship)
+    # No need for a separate add_relationship function anymore
 
     def process_tag(tag_name: str, data: Dict[str, Any]) -> None:
         """Processes a single tag and its relationships."""
-        # Ensure entity is added before processing relations
-        add_entity(tag_name, data) 
-
-        # Handle combined tags ("parent of" relationships)
-        if ">" in tag_name:
-            parts = tag_name.split(">")
-            for i in range(len(parts) - 1):
-                parent_tag = ">".join(parts[: i + 1])
-                child_tag = ">".join(parts[: i + 2])
-                add_relationship(parent_tag, child_tag, "||--||", "parent of")
-
-        # Add hierarchical relationships from explicitly tracked data 
-        for child in data.get("children", []):
-            add_relationship(tag_name, child, "||--||", "parent of") 
-
-        # Add "contributes to" relationships 
-        for collected_item in data.get("collected_items", []):
-            add_relationship(tag_name, collected_item, "}o..||", "contributes to")
-
-        # Add non-hierarchical ("related") relationships 
-        for related, count in data.get("related", {}).items():
-            add_relationship(tag_name, related, "||..||", f"related ({count} co-occurrences)") 
+        add_entity(tag_name, data)  # Ensure the entity is added
 
     try:
         if isinstance(tag_data, list):
