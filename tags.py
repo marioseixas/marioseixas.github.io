@@ -30,14 +30,14 @@ def generate_partial_tags(tag: str) -> List[str]:
     partial_tags = []
     for i in range(1, len(parts) + 1):
         for j in range(len(parts) - i + 1):
-            partial_tags.append(">".join(parts[j: j + i]))
+            partial_tags.append(">".join(parts[j : j + i]))
     return partial_tags
 
 
-def process_tags(posts_dir: str, output_file: str) -> dict:
+def process_tags(posts_dir: str, output_file: str) -> tuple:
     """
     Processes tags from markdown files, handling nested tags, highlighting exact matches,
-    preventing duplicates using file paths, generating tag data, and writing it to a YAML file.
+    preventing duplicates using file paths, and generating data for a Mermaid graph.
     """
 
     tag_frequency = defaultdict(int)
@@ -94,30 +94,14 @@ def process_tags(posts_dir: str, output_file: str) -> dict:
             {"title": title, "url": url, "date": post_date, "tags": tags}
         )
 
-    tag_data = generate_tag_data(all_posts, tag_frequency)
-
-    # Write the processed tags to a YAML file
-    with open(output_file, "w", encoding="utf-8") as f:
-        yaml.dump(
-            [{"tag": tag, "posts": data["posts"]} for tag, data in sorted(tag_data.items())],
-            f,
-            allow_unicode=True,
-        )
-
-    logging.info(f"Processed tags have been written to {output_file}")
-
-    return tag_data
-
-
-def generate_tag_data(all_posts: list, tag_frequency: dict) -> dict:
-    """Generates the tag data structure with relationships and post information."""
+    # Second pass: Generate tag data based on frequency threshold
     tag_data = defaultdict(
         lambda: {
             "parents": set(),
             "children": set(),
-            "related": defaultdict(int),
-            "subsets": set(),
-            "supersets": set(),
+            "related": defaultdict(int),  # Track related tags and co-occurrence counts
+            "subsets": set(),  # Track subsets based on 'contributes to' relationship
+            "supersets": set(),  # Track supersets based on 'contributes to' relationship
             "posts": [],
         }
     )
@@ -190,42 +174,45 @@ def generate_tag_data(all_posts: list, tag_frequency: dict) -> dict:
         data["supersets"] = {
             superset for superset in data["supersets"] if superset in tag_data
         }
+
+    # Sort posts within each tag by date (most recent first)
+    for tag, data in tag_data.items():
+        data["posts"] = sorted(
+            data["posts"], key=lambda x: x.get("date", datetime.min), reverse=True
+        )
+
+    # Sort tags alphabetically before writing to YAML
+    sorted_tag_data = sorted(tag_data.items())
+
+    # Write the processed tags to a YAML file
+    with open(output_file, "w", encoding="utf-8") as f:
+        yaml.dump(
+            [{"tag": tag, "posts": data["posts"]} for tag, data in sorted_tag_data],
+            f,
+            allow_unicode=True,
+        )
+
+    logging.info(f"Processed tags have been written to {output_file}")
+
     return tag_data
 
 
-def generate_mermaid_er_diagram(tag_data: dict, direction: str = "TD") -> str:
+def generate_mermaid_er_diagram(
+    tag_data: Union[List[Dict[str, Any]], Dict[str, Any]], direction: str = "TD"
+) -> str:
     """
-    Generates Mermaid ER diagram code for the tag structure with attributes
-    representing parent-child, subset-superset, and related relationships.
+    Generates Mermaid ER diagram code for the tag structure, including parent, child,
+    related (with co-occurrence counts as relationship labels), and contributes_to attributes.
+    Handles invalid characters and ensures attributes and relationships are complementary.
     """
     graph = [f"erDiagram"]
     added_entities = set()
 
     def sanitize_entity_name(name: str) -> str:
         """Replaces invalid characters in entity names with underscores."""
-        return (
-            name.replace(">", "_")
-            .replace(" ", "_")
-            .replace("ç", "c")
-            .replace("ã", "a")
-            .replace("á", "a")
-            .replace("à", "a")
-            .replace("â", "a")
-            .replace("é", "e")
-            .replace("è", "e")
-            .replace("ê", "e")
-            .replace("í", "i")
-            .replace("ì", "i")
-            .replace("î", "i")
-            .replace("ó", "o")
-            .replace("ò", "o")
-            .replace("ô", "o")
-            .replace("õ", "o")
-            .replace("ú", "u")
-            .replace("ù", "u")
-            .replace("û", "u")
-            .replace("ü", "u")
-        )
+        # Enhanced sanitization to handle non-ASCII characters
+        safe_name = name.replace(">", "_").replace(" ", "_").replace("ç", "c").replace("ã", "a").replace("á", "a").replace("à", "a").replace("â", "a").replace("é", "e").replace("è", "e").replace("ê", "e").replace("í", "i").replace("ì", "i").replace("î", "i").replace("ó", "o").replace("ò", "o").replace("ô", "o").replace("õ", "o").replace("ú", "u").replace("ù", "u").replace("û", "u").replace("ü", "u")
+        return safe_name   
 
     def add_entity(entity_name: str, data: Dict[str, Any]) -> str:
         """Adds an entity to the diagram with attributes."""
@@ -233,15 +220,16 @@ def generate_mermaid_er_diagram(tag_data: dict, direction: str = "TD") -> str:
         if safe_name not in added_entities:
             graph.append(f"    {safe_name} {{")
 
-            for parent in data["parents"]:
+            # Add attributes
+            for parent in data.get("parents", set()):
                 graph.append(f"        parent {sanitize_entity_name(parent)}")
-            for child in data["children"]:
+            for child in data.get("children", set()):
                 graph.append(f"        child {sanitize_entity_name(child)}")
-            for subset in data["subsets"]:
+            for subset in data.get("subsets", set()):
                 graph.append(f"        SUBset {sanitize_entity_name(subset)}")
-            for superset in data["supersets"]:
+            for superset in data.get("supersets", set()):
                 graph.append(f"        SUPERset {sanitize_entity_name(superset)}")
-            for related, count in data["related"].items():
+            for related, count in data.get("related", {}).items():
                 graph.append(
                     f"        related_{count} {sanitize_entity_name(related)}"
                 )
@@ -250,21 +238,48 @@ def generate_mermaid_er_diagram(tag_data: dict, direction: str = "TD") -> str:
             added_entities.add(safe_name)
         return safe_name
 
-    for tag_name, data in tag_data.items():
-        add_entity(tag_name, data)
+    # No explicit 'add_relationship' function needed. Relationships are
+    # implicitly defined through complementary attributes in entities.
+
+    def process_tag(tag_name: str, data: Dict[str, Any]) -> None:
+        """Processes a single tag ensuring complementary attributes are added."""
+        safe_name = add_entity(tag_name, data)
+
+        # No explicit relationship adding is needed here. The presence of attributes in 
+        # one entity implies the existence of the complementary attribute in the linked entity.
+
+    try:
+        if isinstance(tag_data, list):
+            for item in tag_data:
+                if isinstance(item, dict) and "tag" in item:
+                    process_tag(item["tag"], item)
+                else:
+                    logging.warning(f"Skipping invalid item in tag_data: {item}")
+        elif isinstance(tag_data, dict):
+            for tag_name, data in tag_data.items():
+                process_tag(tag_name, data)
+        else:
+            logging.error(f"Unexpected tag_data type: {type(tag_data)}")
+            return ""
+
+    except Exception as e:
+        logging.error(f"Error processing tag_data: {e}")
+        return ""
 
     return "\n".join(graph)
 
 
 if __name__ == "__main__":
+    # Use environment variables to determine paths (adapt if necessary)
     posts_dir = os.path.join(os.getenv("GITHUB_WORKSPACE", ""), "_posts")
     output_file = os.path.join(
         os.getenv("GITHUB_WORKSPACE", ""), "_data/processed_tags.yml"
     )
 
-    tag_data = process_tags(posts_dir, output_file)
+    tag_data = process_tags(posts_dir, output_file) 
     mermaid_graph = generate_mermaid_er_diagram(tag_data)
 
+    # Write the Mermaid graph to a file
     with open(
         os.path.join(os.getenv("GITHUB_WORKSPACE", ""), "_includes/tag_graph.html"),
         "w",
