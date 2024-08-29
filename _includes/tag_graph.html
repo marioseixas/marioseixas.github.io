@@ -10,10 +10,10 @@ erDiagram
         related_2 estudos
     }
     scripts {
-        child scripts_AI
-        child scripts_cloud
         child scripts_google-apps-script
         child scripts_mobile
+        child scripts_cloud
+        child scripts_AI
         related_26 linux
         related_2 estudos
     }
@@ -37,9 +37,7 @@ erDiagram
     }
     tasks_iphone {
         parent tasks
-        SUPERset tasks_iphone
     }
-    tasks_iphone ||--|tasks_iphone : "SUPERset of"
     iphone {
         related_2 software_mobile
         related_2 scripts_mobile
@@ -48,9 +46,7 @@ erDiagram
     }
     github_jekyll {
         parent github
-        SUPERset github_jekyll
     }
-    github_jekyll ||--|github_jekyll : "SUPERset of"
     github {
         child github_jekyll
     }
@@ -63,9 +59,7 @@ erDiagram
     edital_direito {
         parent edital
         child edital_direito_processual-penal
-        SUPERset edital_direito
     }
-    edital_direito ||--|edital_direito : "SUPERset of"
     direito {
     }
     fatherhood {
@@ -81,28 +75,22 @@ erDiagram
     }
     software_mobile {
         parent software
-        SUPERset software_mobile
         related_2 iphone
         related_2 linux
     }
-    software_mobile ||--|software_mobile : "SUPERset of"
     mobile {
     }
     AI_prompt {
         parent AI
-        SUPERset AI_prompt
     }
-    AI_prompt ||--|AI_prompt : "SUPERset of"
     prompt {
     }
     music {
     }
     scripts_mobile {
         parent scripts
-        SUPERset scripts_mobile
         related_2 iphone
     }
-    scripts_mobile ||--|scripts_mobile : "SUPERset of"
     spirit {
         related_2 admoestacao
     }
@@ -110,18 +98,14 @@ erDiagram
     }
     scripts_google-apps-script {
         parent scripts
-        SUPERset scripts_google-apps-script
     }
-    scripts_google-apps-script ||--|scripts_google-apps-script : "SUPERset of"
     google-apps-script {
     }
     saude {
     }
     software_cloud {
         parent software
-        SUPERset software_cloud
     }
-    software_cloud ||--|software_cloud : "SUPERset of"
     cloud {
     }
     receitas {
@@ -131,23 +115,17 @@ erDiagram
     }
     scripts_cloud {
         parent scripts
-        SUPERset scripts_cloud
     }
-    scripts_cloud ||--|scripts_cloud : "SUPERset of"
     edital_direito_processual-penal {
         parent edital_direito
         SUPERset edital
-        SUPERset edital_direito_processual-penal
     }
     edital_direito_processual-penal ||--|edital : "SUPERset of"
-    edital_direito_processual-penal ||--|edital_direito_processual-penal : "SUPERset of"
     processual-penal {
     }
     direito_processual-penal {
     }
     scripts_AI {
         parent scripts
-        SUPERset scripts_AI
     }
-    scripts_AI ||--|scripts_AI : "SUPERset of"
 </div>
