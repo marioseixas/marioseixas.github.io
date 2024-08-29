@@ -75,6 +75,8 @@ id: not-found
   </header>
   {% cusdis_comments %}
   <div class="post-wrapper">
+    {% mermaid %}
+    
 %%{init: {'theme':'dark'}}%%
 
 erDiagram
@@ -132,8 +134,8 @@ erDiagram
 
 "tbl_mtm_license_organization(tbl_mtm_license_organization)"  }|  --  ||  "tbl_license(License)":  "license_id"
 "tbl_mtm_license_organization(tbl_mtm_license_organization)"  }|  --  ||  "tbl_organization(Organization)":  "organization_id"
-
-</div>
+    {% endmermaid %}
+  </div>
 </body>
 <script>
     mermaid.initialize({ startOnLoad: true, er: { useMaxWidth: true } });
