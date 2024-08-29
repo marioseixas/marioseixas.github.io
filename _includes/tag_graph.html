@@ -3,13 +3,13 @@ erDiagram
     linux {
     }
     scripts {
-        child scripts_mobile
         child scripts_google-apps-script
         child scripts_AI
+        child scripts_mobile
         child scripts_cloud
-        contributes_to scripts_mobile
         contributes_to scripts_google-apps-script
         contributes_to scripts_AI
+        contributes_to scripts_mobile
         contributes_to scripts_cloud
     }
     linux ||..|| scripts : "related (26 co-occurrences)"
@@ -25,11 +25,6 @@ erDiagram
     estudos {
     }
     trabalho ||..|| estudos : "related (2 co-occurrences)"
-    scripts_mobile {
-        parent scripts
-        contributes_to scripts_mobile
-    }
-    scripts ||--|| scripts_mobile : "parent of"
     scripts_google-apps-script {
         parent scripts
         contributes_to scripts_google-apps-script
@@ -40,14 +35,19 @@ erDiagram
         contributes_to scripts_AI
     }
     scripts ||--|| scripts_AI : "parent of"
+    scripts_mobile {
+        parent scripts
+        contributes_to scripts_mobile
+    }
+    scripts ||--|| scripts_mobile : "parent of"
     scripts_cloud {
         parent scripts
         contributes_to scripts_cloud
     }
     scripts ||--|| scripts_cloud : "parent of"
-    scripts }o..|| scripts_mobile : "contributes to"
     scripts }o..|| scripts_google-apps-script : "contributes to"
     scripts }o..|| scripts_AI : "contributes to"
+    scripts }o..|| scripts_mobile : "contributes to"
     scripts }o..|| scripts_cloud : "contributes to"
     scripts ||..|| linux : "related (26 co-occurrences)"
     scripts ||..|| estudos : "related (2 co-occurrences)"
@@ -55,23 +55,23 @@ erDiagram
     }
     edital {
         child edital_direito
-        contributes_to edital_direito_processual-penal
         contributes_to edital_direito
+        contributes_to edital_direito_processual-penal
         collection edital_direito_processual-penal
     }
     edital_direito {
         parent edital
         child edital_direito_processual-penal
-        contributes_to edital_direito_processual-penal
         contributes_to edital_direito
+        contributes_to edital_direito_processual-penal
     }
     edital ||--|| edital_direito : "parent of"
+    edital }o..|| edital_direito : "contributes to"
     edital_direito_processual-penal {
         parent edital_direito
         contributes_to edital_direito_processual-penal
     }
     edital }o..|| edital_direito_processual-penal : "contributes to"
-    edital }o..|| edital_direito : "contributes to"
     tasks {
         child tasks_iphone
         contributes_to tasks_iphone
@@ -117,8 +117,8 @@ erDiagram
     estudos ||..|| scripts : "related (2 co-occurrences)"
     estudos ||..|| trabalho : "related (2 co-occurrences)"
     edital_direito ||--|| edital_direito_processual-penal : "parent of"
-    edital_direito }o..|| edital_direito_processual-penal : "contributes to"
     edital_direito }o..|| edital_direito : "contributes to"
+    edital_direito }o..|| edital_direito_processual-penal : "contributes to"
     direito {
         collection edital_direito
         collection edital_direito_processual-penal
@@ -140,19 +140,19 @@ erDiagram
     AI ||--|| AI_prompt : "parent of"
     AI }o..|| AI_prompt : "contributes to"
     software {
-        child software_cloud
         child software_mobile
-        contributes_to software_cloud
+        child software_cloud
         contributes_to software_mobile
+        contributes_to software_cloud
     }
+    software ||--|| software_mobile : "parent of"
     software_cloud {
         parent software
         contributes_to software_cloud
     }
     software ||--|| software_cloud : "parent of"
-    software ||--|| software_mobile : "parent of"
-    software }o..|| software_cloud : "contributes to"
     software }o..|| software_mobile : "contributes to"
+    software }o..|| software_cloud : "contributes to"
     software_mobile }o..|| software_mobile : "contributes to"
     software_mobile ||..|| iphone : "related (2 co-occurrences)"
     software_mobile ||..|| linux : "related (2 co-occurrences)"
