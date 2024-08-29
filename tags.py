@@ -197,7 +197,7 @@ def generate_mermaid_er_diagram(
 ) -> str:
     """
     Generates Mermaid ER diagram code for the tag structure, including parent, child, 
-    related (with co-occurrence counts as attributes), and contributes_to attributes. 
+    related (with co-occurrence counts as relationship labels), and contributes_to attributes. 
     Handles invalid characters and includes "collection" attribute logic. 
     """
     graph = [f"erDiagram"]
@@ -216,7 +216,6 @@ def generate_mermaid_er_diagram(
 
             parents = data.get("parents", set())
             children = data.get("children", set())
-            related = data.get("related", defaultdict(int))
             collected_items = data.get("collected_items", set())
 
             # Add parent attributes
@@ -226,12 +225,6 @@ def generate_mermaid_er_diagram(
             # Add child attributes
             for child in children:
                 graph.append(f"        child {sanitize_entity_name(child)}")
-
-            # Add related attributes (with count as an attribute)
-            for rel, count in related.items():
-                graph.append(
-                    f'        related "{count} co-occurrences with {sanitize_entity_name(rel)}"'
-                )
 
             # Add contributes_to attributes
             for collected_item in collected_items:
@@ -290,11 +283,11 @@ def generate_mermaid_er_diagram(
 
         # Add "contributes to" relationships 
         for collected_item in data.get("collected_items", []):
-            add_relationship(tag_name, collected_item, "..>", "contributes to")
+            add_relationship(tag_name, collected_item, "}o..||", "contributes to")
 
         # Add non-hierarchical ("related") relationships 
         for related, count in data.get("related", {}).items():
-            add_relationship(tag_name, related, "||..||") 
+            add_relationship(tag_name, related, "||..||", f"related ({count} co-occurrences)") 
 
     try:
         if isinstance(tag_data, list):
