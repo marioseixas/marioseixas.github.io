@@ -3,10 +3,10 @@ erDiagram
     linux {
     }
     scripts {
+        contributes_to scripts_google-apps-script
         contributes_to scripts_cloud
         contributes_to scripts_mobile
         contributes_to scripts_AI
-        contributes_to scripts_google-apps-script
     }
     linux ||..|| scripts : "related (26 co-occurrences)"
     software_mobile {
@@ -20,6 +20,10 @@ erDiagram
     estudos {
     }
     trabalho ||..|| estudos : "related (2 co-occurrences)"
+    scripts_google-apps-script {
+        contributes_to scripts_google-apps-script
+    }
+    scripts ||--|| scripts_google-apps-script : "parent of"
     scripts_cloud {
         contributes_to scripts_cloud
     }
@@ -32,16 +36,12 @@ erDiagram
         contributes_to scripts_AI
     }
     scripts ||--|| scripts_AI : "parent of"
-    scripts_google-apps-script {
-        contributes_to scripts_google-apps-script
-    }
-    scripts ||--|| scripts_google-apps-script : "parent of"
     scripts ||..|| linux : "related (26 co-occurrences)"
     scripts ||..|| estudos : "related (2 co-occurrences)"
+    scripts ..> scripts_google-apps-script : "contributes to"
     scripts ..> scripts_cloud : "contributes to"
     scripts ..> scripts_mobile : "contributes to"
     scripts ..> scripts_AI : "contributes to"
-    scripts ..> scripts_google-apps-script : "contributes to"
     carro {
     }
     edital {
