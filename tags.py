@@ -35,10 +35,7 @@ def generate_partial_tags(tag: str) -> List[str]:
 
 
 def process_tags(posts_dir: str, output_file: str) -> dict:
-    """
-    Processes tags from markdown files, handling nested tags, highlighting exact matches,
-    preventing duplicates using file paths, generating tag data, and writing it to a YAML file.
-    """
+    """Processes tags from markdown files and generates tag data."""
 
     tag_frequency = defaultdict(int)
     all_posts = []
@@ -108,7 +105,6 @@ def process_tags(posts_dir: str, output_file: str) -> dict:
 
     return tag_data
 
-
 def generate_tag_data(all_posts: list, tag_frequency: dict) -> dict:
     """Generates the tag data structure with relationships and post information."""
     tag_data = defaultdict(
@@ -116,8 +112,8 @@ def generate_tag_data(all_posts: list, tag_frequency: dict) -> dict:
             "parents": set(),
             "children": set(),
             "related": defaultdict(int),
-            "supersets": set(),
-            "subsets": set(),
+            "parts": set(),  # Tracks constituent parts of combined tags
+            "collections": set(), # Tracks tags that contribute to the combined tag 
             "posts": [],
         }
     )
@@ -139,12 +135,12 @@ def generate_tag_data(all_posts: list, tag_frequency: dict) -> dict:
                         tag_data[child_tag]["parents"].add(parent_tag)
                         tag_data[parent_tag]["children"].add(child_tag)
 
-                # Track 'contributes to' as both superset and subset relationships
+                # Track 'part of' relationships - a tag is part of any combined tag that uses it
                 for i in range(len(tag_parts)):
                     part_tag = ">".join(tag_parts[: i + 1])
                     if tag_frequency[part_tag] >= THRESHOLD:
-                        tag_data[full_tag_path]["supersets"].add(part_tag)
-                        tag_data[part_tag]["subsets"].add(full_tag_path)
+                        tag_data[part_tag]["collections"].add(full_tag_path)
+                        tag_data[full_tag_path]["parts"].add(part_tag)
 
             for partial_tag in generate_partial_tags(tag):
                 if tag_frequency[partial_tag] >= THRESHOLD:
@@ -164,8 +160,6 @@ def generate_tag_data(all_posts: list, tag_frequency: dict) -> dict:
                     and tag_frequency[full_tag_path] >= THRESHOLD
                     and other_tag not in tag_data[full_tag_path]["parents"]
                     and other_tag not in tag_data[full_tag_path]["children"]
-                    and other_tag not in tag_data[full_tag_path]["supersets"]
-                    and other_tag not in tag_data[full_tag_path]["subsets"]
                 ):
                     tag_data[full_tag_path]["related"][other_tag] += 1
                     tag_data[other_tag]["related"][full_tag_path] += 1
@@ -186,23 +180,16 @@ def generate_tag_data(all_posts: list, tag_frequency: dict) -> dict:
             for related, count in data["related"].items()
             if related in tag_data
         }
-        data["supersets"] = {
-            superset for superset in data["supersets"] if superset in tag_data
-        }
-        data["subsets"] = {
-            subset for subset in data["subsets"] if subset in tag_data
-        }
+        data["parts"] = {part for part in data["parts"] if part in tag_data}
+        data["collections"] = {collection for collection in data["collections"] if collection in tag_data}
+
     return tag_data
 
-
 def generate_mermaid_er_diagram(tag_data: dict, direction: str = "TD") -> str:
-    """
-    Generates Mermaid ER diagram code for the tag structure, representing parent-child,
-    subset-superset, and related relationships, avoiding redundant relationships and attributes.
-    """
+    """Generates a Mermaid ER diagram representing the tag relationships."""
 
     graph = [f"erDiagram"]
-    added_entities = set()
+    added_relationships = set()  # Track relationships to prevent duplicates
 
     def sanitize_entity_name(name: str) -> str:
         """Replaces invalid characters in entity names with underscores."""
@@ -231,44 +218,50 @@ def generate_mermaid_er_diagram(tag_data: dict, direction: str = "TD") -> str:
         )
 
     def add_entity(entity_name: str, data: Dict[str, Any]) -> str:
-        """Adds an entity to the diagram with attributes."""
+        """Adds an entity to the diagram with its attributes."""
         safe_name = sanitize_entity_name(entity_name)
-        if safe_name not in added_entities:
-            graph.append(f"    {safe_name} {{")
-
-            for parent in data["parents"]:
-                if parent != entity_name:  # Avoid self-referential parent
-                    graph.append(f"        parent {sanitize_entity_name(parent)}")
-            for child in data["children"]:
-                if child != entity_name:  # Avoid self-referential child
-                    graph.append(f"        child {sanitize_entity_name(child)}")
-            for superset in data["supersets"]:
-                if superset != entity_name and superset not in data["parents"]:  # Avoid redundant and self-referential supersets
-                    graph.append(f"        SUPERset {sanitize_entity_name(superset)}")
-            for subset in data["subsets"]:
-                if subset != entity_name and subset not in data["children"]:  # Avoid redundant and self-referential subsets
-                    graph.append(f"        SUBset {sanitize_entity_name(subset)}")
-            for related, count in data["related"].items():
-                if related != entity_name:  # Avoid self-referential related
-                    graph.append(
-                        f"        related_{count} {sanitize_entity_name(related)}"
-                    )
-
-            graph.append("    }")
-            added_entities.add(safe_name)
+        graph.append(f"    {safe_name} {{")
+        for parent in data["parents"]:
+            if parent != entity_name:  # Prevent self-reference
+                graph.append(f"        parent {sanitize_entity_name(parent)}")
+        for child in data["children"]:
+            if child != entity_name:  # Prevent self-reference
+                graph.append(f"        child {sanitize_entity_name(child)}")
+        for related, count in data["related"].items():
+            if related != entity_name:  # Prevent self-reference
+                graph.append(f"        related {sanitize_entity_name(related)}")
+        for part in data["parts"]:
+            if part != entity_name:  # Prevent self-reference
+                graph.append(f"        part_of {sanitize_entity_name(part)}")
+        for collection in data["collections"]:
+            if collection != entity_name:  # Prevent self-reference
+                graph.append(f"        collection {sanitize_entity_name(collection)}")
+        graph.append("    }")
         return safe_name
+    
+    def add_relationship(from_entity: str, to_entity: str, label: str, relationship_type="||--||") -> None:
+        """Adds a relationship between entities, avoiding duplicates."""
+        relationship = (from_entity, to_entity, label)
+        if relationship not in added_relationships:
+            graph.append(f"    {from_entity} {relationship_type} {to_entity} : \"{label}\"")
+            added_relationships.add(relationship)
 
+    # Generate Entities
     for tag_name, data in tag_data.items():
         add_entity(tag_name, data)
 
-        # Create "SUPERset of" links (from subset to superset)
-        for subset in data["subsets"]:
-            if subset != tag_name and subset not in data["children"]:
-                safe_subset_name = sanitize_entity_name(subset)
-                graph.append(
-                    f"    {safe_subset_name} ||--|{ sanitize_entity_name(tag_name) } : \"SUPERset of\""
-                )
-
+    # Generate Relationships:
+    for tag_name, data in tag_data.items():
+        safe_tag_name = sanitize_entity_name(tag_name)
+        for child in data["children"]:
+            add_relationship(safe_tag_name, sanitize_entity_name(child), "parent of", "||--|{")
+        for related in data["related"]:
+            add_relationship(safe_tag_name, sanitize_entity_name(related), "related to", "||..||")
+        for part in data["parts"]:
+            add_relationship(safe_tag_name, sanitize_entity_name(part), "part of", "}|--|{") 
+        for collection in data["collections"]:
+            add_relationship(sanitize_entity_name(collection), safe_tag_name, "part of", "}|--|{")
+        
     return "\n".join(graph)
 
 
