@@ -10,7 +10,6 @@ permalink: "/:slug/"
 relative_permalinks: false
 
 plugins:
-  - jekyll-plugins
   - jekyll-last-modified-at
   - jekyll-sitemap
   - jekyll-feed
