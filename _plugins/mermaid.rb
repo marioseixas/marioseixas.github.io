@@ -31,8 +31,8 @@ module Jekyll
       center: true,
       refreshRate: "auto",
     });
-  }, 200);
-</script>
+  }, 0);
+</script><script src="https://cdn.jsdelivr.net/npm/svg-pan-zoom@3.6.1/dist/svg-pan-zoom.min.js"></script>
         SCRIPT
       end
     end
