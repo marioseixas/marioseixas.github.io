@@ -141,7 +141,8 @@ erDiagram
   </div>
 </body>
 <script>
-    mermaid.initialize({ startOnLoad: true, er: { useMaxWidth: true } });
+  import mermaid from 'mermaid';
+mermaid.initialize({ startOnLoad: true, er: { useMaxWidth: true } });
     setTimeout(() => {
       svgPanZoom(document.querySelector("#mermaid-pre>svg"), {
         minZoom: 0.5,
