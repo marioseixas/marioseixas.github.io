@@ -11,7 +11,6 @@ logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(
 # Threshold for generating permutations
 THRESHOLD = 0  # Adjust this value as needed
 
-
 def extract_frontmatter(file_content: str) -> str:
     """Extracts the YAML frontmatter from a markdown file."""
     frontmatter = ""
@@ -191,13 +190,14 @@ def process_tags(posts_dir: str, output_file: str) -> tuple:
 
     return tag_data
 
-
 def generate_mermaid_er_diagram(
     tag_data: Union[List[Dict[str, Any]], Dict[str, Any]], direction: str = "TD"
 ) -> str:
     """
-    Generates Mermaid ER diagram code for the tag structure, including parent, child, related,
-    and contributes_to attributes. Handles invalid characters.
+    Generates Mermaid ER diagram code for the tag structure, including parent, child, 
+    related (with co-occurrence counts), and contributes_to attributes. Handles invalid 
+    characters. Includes logic for "collection" attribute to capture implicit 
+    relationships between tags in combined tags.
     """
     graph = [f"erDiagram"]
     added_entities = set()
@@ -213,13 +213,41 @@ def generate_mermaid_er_diagram(
         if safe_name not in added_entities:
             graph.append(f"    {safe_name} {{")
 
-            # ... (Add parent, child, related attributes - same logic as before)
+            parents = data.get("parents", set())
+            children = data.get("children", set())
+            related = data.get("related", defaultdict(int))
+            collected_items = data.get("collected_items", set())
+
+            # Add parent attributes
+            for parent in parents:
+                graph.append(f"        parent {sanitize_entity_name(parent)}")
+
+            # Add child attributes
+            for child in children:
+                graph.append(f"        child {sanitize_entity_name(child)}")
+
+            # Add related attributes with counts as names (as requested)
+            for rel, count in related.items():
+                graph.append(
+                    f'        related type: "related", name: "{count} co-occurrences with {sanitize_entity_name(rel)}" '
+                )
 
             # Add contributes_to attributes
-            for collected_item in data.get("collected_items", []):
+            for collected_item in collected_items:
                 graph.append(
                     f"        contributes_to {sanitize_entity_name(collected_item)}"
                 )
+
+            # **Add collection attributes** (Restored from original logic)
+            for other_tag, other_data in tag_data.items():
+                if (
+                    ">" in other_tag
+                    and entity_name in other_tag.split(">")
+                    and entity_name not in other_data.get("parents", [])
+                ):
+                    graph.append(
+                        f"        collection {sanitize_entity_name(other_tag)}"
+                    ) 
 
             graph.append("    }")
             added_entities.add(safe_name)
@@ -244,7 +272,8 @@ def generate_mermaid_er_diagram(
 
     def process_tag(tag_name: str, data: Dict[str, Any]) -> None:
         """Processes a single tag and its relationships."""
-        add_entity(tag_name, data)  # Ensure the entity is added 
+        # Ensure the entity is added before processing relationships
+        add_entity(tag_name, data)
 
         # Handle combined tags (parent-child relationships)
         if ">" in tag_name:
