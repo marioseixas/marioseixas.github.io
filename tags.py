@@ -198,7 +198,6 @@ def generate_mermaid_er_diagram(tag_data: dict, direction: str = "TD") -> str:
 
     graph = [f"erDiagram"]
     added_entities = set()
-    added_relationships = set() # Track relationships to avoid duplicates
 
     def sanitize_entity_name(name: str) -> str:
         """Replaces invalid characters in entity names with underscores."""
@@ -233,35 +232,32 @@ def generate_mermaid_er_diagram(tag_data: dict, direction: str = "TD") -> str:
             graph.append(f"    {safe_name} {{")
 
             for parent in data["parents"]:
-                graph.append(f"        parent {sanitize_entity_name(parent)}")
+                if parent != entity_name:  # Avoid self-referential parent
+                    graph.append(f"        parent {sanitize_entity_name(parent)}")
             for child in data["children"]:
-                graph.append(f"        child {sanitize_entity_name(child)}")
+                if child != entity_name:  # Avoid self-referential child
+                    graph.append(f"        child {sanitize_entity_name(child)}")
             for superset in data["supersets"]:
-                if superset not in data["parents"]:  # Avoid redundant supersets
+                if superset != entity_name and superset not in data["parents"]:  # Avoid redundant and self-referential supersets
                     graph.append(f"        SUPERset {sanitize_entity_name(superset)}")
             for related, count in data["related"].items():
-                graph.append(
-                    f"        related_{count} {sanitize_entity_name(related)}"
-                )
+                if related != entity_name:  # Avoid self-referential related
+                    graph.append(
+                        f"        related_{count} {sanitize_entity_name(related)}"
+                    )
 
             graph.append("    }")
             added_entities.add(safe_name)
         return safe_name
-    
-    def add_relationship(from_entity: str, to_entity: str, label: str = "") -> None:
-        """Adds a relationship between two entities, avoiding duplicates."""
-        relationship = (from_entity, to_entity)
-        if relationship not in added_relationships:
-            graph.append(f"    {from_entity} ||--|{ to_entity} : \"{label}\"")
-            added_relationships.add(relationship)
-    
-    for tag_name, data in tag_data.items():
-        safe_tag_name = add_entity(tag_name, data)
-        for superset in data["supersets"]:
-            if superset not in data["parents"]: 
-                safe_superset_name = sanitize_entity_name(superset)
-                add_relationship(safe_tag_name, safe_superset_name, label="SUPERset of")
 
+    for tag_name, data in tag_data.items():
+        add_entity(tag_name, data)
+        for superset in data["supersets"]:
+            if superset != tag_name and superset not in data["parents"]:  # Avoid redundant and self-referential supersets
+                safe_superset_name = sanitize_entity_name(superset)
+                graph.append(
+                    f"    {sanitize_entity_name(tag_name)} ||--|{ safe_superset_name } : \"SUPERset of\""
+                )
 
     return "\n".join(graph)
 
