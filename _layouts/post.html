@@ -106,13 +106,11 @@ layout: null
             · Revision history
           </a>
         </span>
-      </div>
-    <pre id="mermaid-pre" class="mermaid">
+      </div>    
       <main class="post-content-body">
       {% include toc.html html=content %}
       {% include anchor_headings.html html=content anchorBody="#" %}
       </main>
-    </pre>
   </div>
     <script src="{{ '/assets/js/copy-to-clipboard.js' | relative_url }}" defer></script>
   </article>
@@ -120,11 +118,14 @@ layout: null
   <a href="#" class="back-to-top" aria-label="Back to top">
     <img src="{{ '/assets/gold.ico' | relative_url }}" alt="gold icon">
   </a>
-  {{ page.comment }}  
-</body>
-<script type='module'>
-            import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10.9.1/dist/mermaid.esm.min.mjs';
-            mermaid.initialize({ startOnLoad: true, er: { useMaxWidth: true } });
+  {{ page.comment }}
+  <script type='module'>
+  import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+  mermaid.initialize({
+    startOnLoad: true,
+    theme: 'dark',
+    er: { useMaxWidth: true }
+  });
   setTimeout(() => {
     svgPanZoom(document.querySelector("#mermaid-pre>svg"), {
       minZoom: 0.5,
@@ -136,5 +137,6 @@ layout: null
       refreshRate: "auto",
     });
   }, 200);
-</script>  
+</script>
+</body>  
 </html>
