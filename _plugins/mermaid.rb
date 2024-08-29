@@ -22,7 +22,7 @@ module Jekyll
     er: { useMaxWidth: true }
   });
   setTimeout(() => {
-    svgPanZoom(document.querySelector("#mermaid-pre>svg"), {
+    svgPanZoom(document.querySelector("#mermaid_div>svg"), {
       minZoom: 0.5,
       maxZoom: 10,
       fit: true,
