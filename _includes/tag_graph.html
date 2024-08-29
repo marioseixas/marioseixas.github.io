@@ -4,13 +4,13 @@ erDiagram
     }
     scripts {
         child scripts_mobile
-        child scripts_cloud
-        child scripts_AI
         child scripts_google-apps-script
+        child scripts_AI
+        child scripts_cloud
         contributes_to scripts_mobile
-        contributes_to scripts_cloud
-        contributes_to scripts_AI
         contributes_to scripts_google-apps-script
+        contributes_to scripts_AI
+        contributes_to scripts_cloud
     }
     linux ||..|| scripts : "related (26 co-occurrences)"
     software_mobile {
@@ -30,25 +30,25 @@ erDiagram
         contributes_to scripts_mobile
     }
     scripts ||--|| scripts_mobile : "parent of"
-    scripts_cloud {
-        parent scripts
-        contributes_to scripts_cloud
-    }
-    scripts ||--|| scripts_cloud : "parent of"
-    scripts_AI {
-        parent scripts
-        contributes_to scripts_AI
-    }
-    scripts ||--|| scripts_AI : "parent of"
     scripts_google-apps-script {
         parent scripts
         contributes_to scripts_google-apps-script
     }
     scripts ||--|| scripts_google-apps-script : "parent of"
+    scripts_AI {
+        parent scripts
+        contributes_to scripts_AI
+    }
+    scripts ||--|| scripts_AI : "parent of"
+    scripts_cloud {
+        parent scripts
+        contributes_to scripts_cloud
+    }
+    scripts ||--|| scripts_cloud : "parent of"
     scripts }o..|| scripts_mobile : "contributes to"
-    scripts }o..|| scripts_cloud : "contributes to"
-    scripts }o..|| scripts_AI : "contributes to"
     scripts }o..|| scripts_google-apps-script : "contributes to"
+    scripts }o..|| scripts_AI : "contributes to"
+    scripts }o..|| scripts_cloud : "contributes to"
     scripts ||..|| linux : "related (26 co-occurrences)"
     scripts ||..|| estudos : "related (2 co-occurrences)"
     carro {
@@ -179,7 +179,7 @@ erDiagram
     google-apps-script {
         collection scripts_google-apps-script
     }
-    saúde {
+    saude {
     }
     software_cloud }o..|| software_cloud : "contributes to"
     cloud {
