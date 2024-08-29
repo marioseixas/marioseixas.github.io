@@ -191,14 +191,13 @@ def process_tags(posts_dir: str, output_file: str) -> tuple:
 
     return tag_data
 
-
 def generate_mermaid_er_diagram(
     tag_data: Union[List[Dict[str, Any]], Dict[str, Any]], direction: str = "TD"
 ) -> str:
     """
-    Generates Mermaid ER diagram code for the tag structure, including parent, child, 
-    related (with co-occurrence counts as relationship labels), and contributes_to attributes. 
-    Handles invalid characters and includes "collection" attribute logic. 
+    Generates Mermaid ER diagram code for the tag structure, including parent, child,
+    related (with co-occurrence counts as relationship labels), and contributes_to attributes.
+    Handles invalid characters and includes "collection" attribute logic.
     """
     graph = [f"erDiagram"]
     added_entities = set()
@@ -206,7 +205,10 @@ def generate_mermaid_er_diagram(
 
     def sanitize_entity_name(name: str) -> str:
         """Replaces invalid characters in entity names with underscores."""
-        return name.replace(">", "_").replace(" ", "_")
+        # Enhanced sanitization to handle non-ASCII characters
+        safe_name = name.replace(">", "_").replace(" ", "_")
+        safe_name = "".join(c if c.isalnum() or c == '_' else '_' for c in safe_name)
+        return safe_name
 
     def add_entity(entity_name: str, data: Dict[str, Any]) -> str:
         """Adds an entity to the diagram."""
