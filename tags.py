@@ -252,13 +252,13 @@ def generate_mermaid_er_diagram(tag_data: dict) -> str:
             graph.append("    }")
             added_entities.add(safe_name)
         return safe_name
-
+    
     def add_relationship(from_entity: str, to_entity: str, label: str) -> None:
-        """Adds a relationship link between entities, preventing duplicates."""
-        relationship = (from_entity, to_entity, label)
-        if relationship not in added_relationships:
-            graph.append(f"    {from_entity} ||--|{ {to_entity} : \"{label}\"")
-            added_relationships.add(relationship)
+    """Adds a relationship link between entities, preventing duplicates."""
+    relationship = (from_entity, to_entity, label)
+    if relationship not in added_relationships:
+        graph.append(f"    {from_entity} ||--|| {to_entity} : \"{label}\"") # Correction here!
+        added_relationships.add(relationship)
 
     # Generate Entities
     for tag_name, data in tag_data.items():
