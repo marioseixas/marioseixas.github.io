@@ -72,9 +72,7 @@ id: not-found
       </div>
     </nav>
   </header>
-  {% cusdis_comments %}
-  <div class="post-wrapper">
-    {% mermaid %}
+  {% mermaid %}
 erDiagram
 
 "tbl_user(User)" {
@@ -131,6 +129,6 @@ erDiagram
 "tbl_mtm_license_organization(tbl_mtm_license_organization)"  }|  --  ||  "tbl_license(License)":  "license_id"
 "tbl_mtm_license_organization(tbl_mtm_license_organization)"  }|  --  ||  "tbl_organization(Organization)":  "organization_id"
       {% endmermaid %}
-  </div>  
 </body>
+  {% cusdis_comments %}
 </html>
