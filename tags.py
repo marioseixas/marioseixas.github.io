@@ -206,7 +206,7 @@ def generate_mermaid_er_diagram(
     def sanitize_entity_name(name: str) -> str:
         """Replaces invalid characters in entity names with underscores."""
         # Enhanced sanitization to handle non-ASCII characters
-        safe_name = name.replace(">", "_").replace(" ", "_").replace("ç", "c").replace("ã", "a")
+        safe_name = name.replace(">", "_").replace(" ", "_").replace("ç", "c").replace("ã", "a").replace("á", "a").replace("à", "a").replace("â", "a").replace("é", "e").replace("è", "e").replace("ê", "e").replace("í", "i").replace("ì", "i").replace("î", "i").replace("ó", "o").replace("ò", "o").replace("ô", "o").replace("õ", "o").replace("ú", "u").replace("ù", "u").replace("û", "u").replace("ü", "u")
         return safe_name   
 
     def add_entity(entity_name: str, data: Dict[str, Any]) -> str:
