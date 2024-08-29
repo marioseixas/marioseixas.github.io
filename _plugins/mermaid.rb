@@ -14,7 +14,7 @@ module Jekyll
   
       def generate_mermaid_script
         <<~SCRIPT
-          <script type='module'>
+          <script src="https://cdn.jsdelivr.net/npm/svg-pan-zoom@3.6.1/dist/svg-pan-zoom.min.js"></script><script type='module'>
   import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
   mermaid.initialize({
     startOnLoad: true,
@@ -31,8 +31,8 @@ module Jekyll
       center: true,
       refreshRate: "auto",
     });
-  }, 0);
-</script><script src="https://cdn.jsdelivr.net/npm/svg-pan-zoom@3.6.1/dist/svg-pan-zoom.min.js"></script>
+  }, 200);
+</script>
         SCRIPT
       end
     end
