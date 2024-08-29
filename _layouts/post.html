@@ -50,8 +50,7 @@ layout: null
   <script src="{{ '/assets/js/search.js' | relative_url }}" defer></script>
   <script src="https://cdn.jsdelivr.net/npm/svg-pan-zoom@3.6.1/dist/svg-pan-zoom.min.js"></script>
 </head>
-<body class="post-wrapper">
-  <pre id="mermaid-pre" class="mermaid">
+<body class="post-wrapper">  
   <a class="search-input-block" id="search""></a>
   <article class="post">
   <header>
@@ -108,10 +107,12 @@ layout: null
           </a>
         </span>
       </div>
-    <main class="post-content-body">
+    <pre id="mermaid-pre" class="mermaid">
+      <main class="post-content-body">
       {% include toc.html html=content %}
       {% include anchor_headings.html html=content anchorBody="#" %}
-    </main>
+      </main>
+    </pre>
   </div>
     <script src="{{ '/assets/js/copy-to-clipboard.js' | relative_url }}" defer></script>
   </article>
@@ -119,8 +120,7 @@ layout: null
   <a href="#" class="back-to-top" aria-label="Back to top">
     <img src="{{ '/assets/gold.ico' | relative_url }}" alt="gold icon">
   </a>
-  {{ page.comment }}
-  </pre>
+  {{ page.comment }}  
 </body>
 <script type='module'>
             import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10.9.1/dist/mermaid.esm.min.mjs';
