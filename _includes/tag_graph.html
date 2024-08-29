@@ -1,87 +1,30 @@
 <div class='mermaid'>
 erDiagram
     linux {
+        related_26 scripts
+        related_2 software_mobile
+    }
+    rendimentos {
+    }
+    trabalho {
+        related_2 estudos
     }
     scripts {
         child scripts_google-apps-script
         child scripts_AI
         child scripts_mobile
         child scripts_cloud
-        contributes_to scripts_google-apps-script
-        contributes_to scripts_AI
-        contributes_to scripts_mobile
-        contributes_to scripts_cloud
+        related_26 linux
+        related_2 estudos
     }
-    linux ||..|| scripts : "related (26 co-occurrences)"
-    software_mobile {
-        parent software
-        contributes_to software_mobile
-    }
-    linux ||..|| software_mobile : "related (2 co-occurrences)"
-    rendimentos {
-    }
-    trabalho {
-    }
-    estudos {
-    }
-    trabalho ||..|| estudos : "related (2 co-occurrences)"
-    scripts_google-apps-script {
-        parent scripts
-        contributes_to scripts_google-apps-script
-    }
-    scripts ||--|| scripts_google-apps-script : "parent of"
-    scripts_AI {
-        parent scripts
-        contributes_to scripts_AI
-    }
-    scripts ||--|| scripts_AI : "parent of"
-    scripts_mobile {
-        parent scripts
-        contributes_to scripts_mobile
-    }
-    scripts ||--|| scripts_mobile : "parent of"
-    scripts_cloud {
-        parent scripts
-        contributes_to scripts_cloud
-    }
-    scripts ||--|| scripts_cloud : "parent of"
-    scripts }o..|| scripts_google-apps-script : "contributes to"
-    scripts }o..|| scripts_AI : "contributes to"
-    scripts }o..|| scripts_mobile : "contributes to"
-    scripts }o..|| scripts_cloud : "contributes to"
-    scripts ||..|| linux : "related (26 co-occurrences)"
-    scripts ||..|| estudos : "related (2 co-occurrences)"
     carro {
     }
     edital {
         child edital_direito
-        contributes_to edital_direito
-        contributes_to edital_direito_processual-penal
-        collection edital_direito_processual-penal
     }
-    edital_direito {
-        parent edital
-        child edital_direito_processual-penal
-        contributes_to edital_direito
-        contributes_to edital_direito_processual-penal
-    }
-    edital ||--|| edital_direito : "parent of"
-    edital }o..|| edital_direito : "contributes to"
-    edital_direito_processual-penal {
-        parent edital_direito
-        contributes_to edital_direito_processual-penal
-    }
-    edital }o..|| edital_direito_processual-penal : "contributes to"
     tasks {
         child tasks_iphone
-        contributes_to tasks_iphone
     }
-    tasks_iphone {
-        parent tasks
-        contributes_to tasks_iphone
-    }
-    tasks ||--|| tasks_iphone : "parent of"
-    tasks }o..|| tasks_iphone : "contributes to"
     hardware {
     }
     chess {
@@ -92,37 +35,38 @@ erDiagram
     }
     despesas {
     }
-    tasks_iphone }o..|| tasks_iphone : "contributes to"
-    iphone {
-        collection tasks_iphone
+    tasks_iphone {
+        parent tasks
+        SUPERset tasks_iphone
+        SUPERset tasks
     }
-    iphone ||..|| software_mobile : "related (2 co-occurrences)"
-    iphone ||..|| scripts_mobile : "related (2 co-occurrences)"
+    iphone {
+        related_2 software_mobile
+        related_2 scripts_mobile
+    }
     sell {
     }
     github_jekyll {
         parent github
-        contributes_to github_jekyll
+        SUPERset github_jekyll
+        SUPERset github
     }
     github {
         child github_jekyll
-        contributes_to github_jekyll
     }
-    github ||--|| github_jekyll : "parent of"
-    github_jekyll }o..|| github_jekyll : "contributes to"
-    github }o..|| github_jekyll : "contributes to"
     jekyll {
-        collection github_jekyll
     }
-    estudos ||..|| scripts : "related (2 co-occurrences)"
-    estudos ||..|| trabalho : "related (2 co-occurrences)"
-    edital_direito ||--|| edital_direito_processual-penal : "parent of"
-    edital_direito }o..|| edital_direito : "contributes to"
-    edital_direito }o..|| edital_direito_processual-penal : "contributes to"
+    estudos {
+        related_2 scripts
+        related_2 trabalho
+    }
+    edital_direito {
+        parent edital
+        child edital_direito_processual-penal
+        SUPERset edital_direito
+        SUPERset edital
+    }
     direito {
-        collection edital_direito
-        collection edital_direito_processual-penal
-        collection direito_processual-penal
     }
     fatherhood {
     }
@@ -130,73 +74,79 @@ erDiagram
     }
     AI {
         child AI_prompt
-        contributes_to AI_prompt
-        collection scripts_AI
     }
-    AI_prompt {
-        parent AI
-        contributes_to AI_prompt
-    }
-    AI ||--|| AI_prompt : "parent of"
-    AI }o..|| AI_prompt : "contributes to"
     software {
         child software_mobile
         child software_cloud
-        contributes_to software_mobile
-        contributes_to software_cloud
     }
-    software ||--|| software_mobile : "parent of"
-    software_cloud {
+    software_mobile {
         parent software
-        contributes_to software_cloud
+        SUPERset software_mobile
+        SUPERset software
+        related_2 iphone
+        related_2 linux
     }
-    software ||--|| software_cloud : "parent of"
-    software }o..|| software_mobile : "contributes to"
-    software }o..|| software_cloud : "contributes to"
-    software_mobile }o..|| software_mobile : "contributes to"
-    software_mobile ||..|| iphone : "related (2 co-occurrences)"
-    software_mobile ||..|| linux : "related (2 co-occurrences)"
     mobile {
-        collection software_mobile
-        collection scripts_mobile
     }
-    AI_prompt }o..|| AI_prompt : "contributes to"
+    AI_prompt {
+        parent AI
+        SUPERset AI
+        SUPERset AI_prompt
+    }
     prompt {
-        collection AI_prompt
     }
     music {
     }
-    scripts_mobile }o..|| scripts_mobile : "contributes to"
-    scripts_mobile ||..|| iphone : "related (2 co-occurrences)"
+    scripts_mobile {
+        parent scripts
+        SUPERset scripts
+        SUPERset scripts_mobile
+        related_2 iphone
+    }
     spirit {
+        related_2 admoestacao
     }
-    admoestacao {
-    }
-    spirit ||..|| admoestacao : "related (2 co-occurrences)"
     ler {
     }
-    scripts_google-apps-script }o..|| scripts_google-apps-script : "contributes to"
+    scripts_google-apps-script {
+        parent scripts
+        SUPERset scripts
+        SUPERset scripts_google-apps-script
+    }
     google-apps-script {
-        collection scripts_google-apps-script
     }
     saude {
     }
-    software_cloud }o..|| software_cloud : "contributes to"
+    software_cloud {
+        parent software
+        SUPERset software_cloud
+        SUPERset software
+    }
     cloud {
-        collection software_cloud
-        collection scripts_cloud
     }
     receitas {
     }
-    admoestacao ||..|| spirit : "related (2 co-occurrences)"
-    scripts_cloud }o..|| scripts_cloud : "contributes to"
-    edital_direito_processual-penal }o..|| edital_direito_processual-penal : "contributes to"
+    admoestacao {
+        related_2 spirit
+    }
+    scripts_cloud {
+        parent scripts
+        SUPERset scripts
+        SUPERset scripts_cloud
+    }
+    edital_direito_processual-penal {
+        parent edital_direito
+        SUPERset edital_direito
+        SUPERset edital_direito_processual-penal
+        SUPERset edital
+    }
     processual-penal {
-        collection edital_direito_processual-penal
-        collection direito_processual-penal
     }
     direito_processual-penal {
     }
-    direito ||--|| direito_processual-penal : "parent of"
-    scripts_AI }o..|| scripts_AI : "contributes to"
+    scripts_AI {
+        parent scripts
+        SUPERset scripts
+        SUPERset scripts_AI
+    }
 </div>
