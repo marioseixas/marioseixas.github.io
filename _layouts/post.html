@@ -47,8 +47,7 @@ layout: null
     import PagefindHighlight from '{{ "/pagefind/pagefind-highlight.js" | relative_url }}';
     new PagefindHighlight({ highlightParam: "highlight" });
   </script>
-  <script src="{{ '/assets/js/search.js' | relative_url }}" defer></script>
-  <script src="https://cdn.jsdelivr.net/npm/svg-pan-zoom@3.6.1/dist/svg-pan-zoom.min.js"></script>
+  <script src="{{ '/assets/js/search.js' | relative_url }}" defer></script>  
 </head>
 <body class="post-wrapper">  
   <a class="search-input-block" id="search""></a>
@@ -136,7 +135,9 @@ layout: null
       center: true,
       refreshRate: "auto",
     });
-  }, 200);
+  }, 0);
 </script>
+  <script src="https://cdn.jsdelivr.net/npm/svg-pan-zoom@3.6.1/dist/svg-pan-zoom.min.js">    
+  </script>
 </body>  
 </html>
