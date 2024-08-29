@@ -1,16 +1,16 @@
 # frozen_string_literal: true
 
 module Jekyll
-    class RenderMermaid < Liquid::Block
-      def render(context)
-        text = super
-        mermaid_script = generate_mermaid_script
-        mermaid_pre = "<pre class='mermaid'> #{text}  </pre>"
-  
-        "#{mermaid_script}#{mermaid_pre}"
-      end
-  
-      private
+  class RenderMermaid < Liquid::Block
+    def render(context)
+      text = super
+      mermaid_script = generate_mermaid_script
+      mermaid_div = "<div class='mermaid' style='white-space: pre-wrap;'> #{text} </div>"
+
+      "#{mermaid_script}#{mermaid_div}"
+    end
+
+    private
   
       def generate_mermaid_script
         <<~SCRIPT
