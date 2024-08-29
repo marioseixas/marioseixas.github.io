@@ -11,6 +11,7 @@ logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(
 # Threshold for generating permutations
 THRESHOLD = 0  # Adjust this value as needed
 
+
 def extract_frontmatter(file_content: str) -> str:
     """Extracts the YAML frontmatter from a markdown file."""
     frontmatter = ""
@@ -190,14 +191,14 @@ def process_tags(posts_dir: str, output_file: str) -> tuple:
 
     return tag_data
 
+
 def generate_mermaid_er_diagram(
     tag_data: Union[List[Dict[str, Any]], Dict[str, Any]], direction: str = "TD"
 ) -> str:
     """
     Generates Mermaid ER diagram code for the tag structure, including parent, child, 
-    related (with co-occurrence counts), and contributes_to attributes. Handles invalid 
-    characters. Includes logic for "collection" attribute to capture implicit 
-    relationships between tags in combined tags.
+    related (with co-occurrence counts as attributes), and contributes_to attributes. 
+    Handles invalid characters and includes "collection" attribute logic. 
     """
     graph = [f"erDiagram"]
     added_entities = set()
@@ -226,10 +227,10 @@ def generate_mermaid_er_diagram(
             for child in children:
                 graph.append(f"        child {sanitize_entity_name(child)}")
 
-            # Add related attributes with counts as names (as requested)
+            # Add related attributes (with count as an attribute)
             for rel, count in related.items():
                 graph.append(
-                    f'        related type: "related", name: "{count} co-occurrences with {sanitize_entity_name(rel)}" '
+                    f'        related "{count} co-occurrences with {sanitize_entity_name(rel)}"'
                 )
 
             # Add contributes_to attributes
@@ -238,7 +239,7 @@ def generate_mermaid_er_diagram(
                     f"        contributes_to {sanitize_entity_name(collected_item)}"
                 )
 
-            # **Add collection attributes** (Restored from original logic)
+            # Add collection attributes
             for other_tag, other_data in tag_data.items():
                 if (
                     ">" in other_tag
@@ -247,7 +248,7 @@ def generate_mermaid_er_diagram(
                 ):
                     graph.append(
                         f"        collection {sanitize_entity_name(other_tag)}"
-                    ) 
+                    )
 
             graph.append("    }")
             added_entities.add(safe_name)
@@ -272,10 +273,10 @@ def generate_mermaid_er_diagram(
 
     def process_tag(tag_name: str, data: Dict[str, Any]) -> None:
         """Processes a single tag and its relationships."""
-        # Ensure the entity is added before processing relationships
-        add_entity(tag_name, data)
+        # Ensure entity is added before processing relations
+        add_entity(tag_name, data) 
 
-        # Handle combined tags (parent-child relationships)
+        # Handle combined tags ("parent of" relationships)
         if ">" in tag_name:
             parts = tag_name.split(">")
             for i in range(len(parts) - 1):
@@ -283,20 +284,18 @@ def generate_mermaid_er_diagram(
                 child_tag = ">".join(parts[: i + 2])
                 add_relationship(parent_tag, child_tag, "||--||", "parent of")
 
-        # Add hierarchical relationships (from explicitly tracked data) 
+        # Add hierarchical relationships from explicitly tracked data 
         for child in data.get("children", []):
-            add_relationship(tag_name, child, "||--||", "parent of")
+            add_relationship(tag_name, child, "||--||", "parent of") 
 
-        # Add non-hierarchical relationships with co-occurrence counts
-        for related, count in data.get("related", {}).items():
-            add_relationship(
-                tag_name, related, "||..||", f"related ({count} co-occurrences)"
-            )
-
-        # Add "contributes to" relationships
+        # Add "contributes to" relationships 
         for collected_item in data.get("collected_items", []):
             add_relationship(tag_name, collected_item, "..>", "contributes to")
-            
+
+        # Add non-hierarchical ("related") relationships 
+        for related, count in data.get("related", {}).items():
+            add_relationship(tag_name, related, "||..||") 
+
     try:
         if isinstance(tag_data, list):
             for item in tag_data:
