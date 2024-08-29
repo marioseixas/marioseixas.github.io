@@ -140,19 +140,19 @@ erDiagram
     </pre>
   </div>
 </body>
-<script>
-  import mermaid from 'mermaid';
-mermaid.initialize({ startOnLoad: true, er: { useMaxWidth: true } });
-    setTimeout(() => {
-      svgPanZoom(document.querySelector("#mermaid-pre>svg"), {
-        minZoom: 0.5,
-        maxZoom: 10,
-        fit: true,
-        contain: false,
-        controlIconsEnabled: true,
-        center: true,
-        refreshRate: "auto",
-      });
-    }, 200);
-  </script>  
+<script type='module'>
+            import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10.9.1/dist/mermaid.esm.min.mjs';
+            mermaid.initialize({ startOnLoad: true, er: { useMaxWidth: true } });
+  setTimeout(() => {
+    svgPanZoom(document.querySelector("#mermaid-pre>svg"), {
+      minZoom: 0.5,
+      maxZoom: 10,
+      fit: true,
+      contain: false,
+      controlIconsEnabled: true,
+      center: true,
+      refreshRate: "auto",
+    });
+  }, 200);
+</script>
 </html>
