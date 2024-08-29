@@ -29,7 +29,8 @@ def generate_partial_tags(tag: str) -> List[str]:
     parts = tag.split(">")
     partial_tags = []
     for i in range(1, len(parts) + 1):
-        partial_tags.append(">".join(parts[:i]))
+        for j in range(len(parts) - i + 1):
+            partial_tags.append(">".join(parts[j: j + i]))
     return partial_tags
 
 
@@ -123,7 +124,7 @@ def generate_tag_data(all_posts: list, tag_frequency: dict) -> dict:
             tag_parts = tag.split(">")
             full_tag_path = tag
 
-            # Handle combined tags (parent-child and subset-superset relationships)
+            # Handle combined tags (parent-child relationships)
             if len(tag_parts) > 1:
                 for i in range(len(tag_parts) - 1):
                     parent_tag = ">".join(tag_parts[: i + 1])
@@ -135,9 +136,9 @@ def generate_tag_data(all_posts: list, tag_frequency: dict) -> dict:
                         tag_data[child_tag]["parents"].add(parent_tag)
                         tag_data[parent_tag]["children"].add(child_tag)
 
-                        # Subset-Superset relationships
-                        tag_data[parent_tag]["SUBset"].add(child_tag)
-                        tag_data[child_tag]["SUPERset"].add(parent_tag)
+                    # Establishing SUBset and SUPERset relations based on combined tags:
+                    tag_data[parent_tag]["SUBset"].add(child_tag)
+                    tag_data[child_tag]["SUPERset"].add(parent_tag)
 
             # Process each partial tag for post association
             for partial_tag in generate_partial_tags(tag):
@@ -156,11 +157,9 @@ def generate_tag_data(all_posts: list, tag_frequency: dict) -> dict:
                     other_tag != tag
                     and tag_frequency[other_tag] >= THRESHOLD
                     and tag_frequency[full_tag_path] >= THRESHOLD
-                    # Exclude tags already linked in a parent-child or subset-superset relationship
+                    # Exclude tags already linked in a parent-child relationship
                     and other_tag not in tag_data[full_tag_path]["parents"]
                     and other_tag not in tag_data[full_tag_path]["children"]
-                    and other_tag not in tag_data[full_tag_path]["SUBset"]
-                    and other_tag not in tag_data[full_tag_path]["SUPERset"] 
                 ):
                     tag_data[full_tag_path]["related"][other_tag] += 1
                     tag_data[other_tag]["related"][full_tag_path] += 1
@@ -196,7 +195,8 @@ def generate_tag_data(all_posts: list, tag_frequency: dict) -> dict:
 def generate_mermaid_er_diagram(tag_data: dict) -> str:
     """Generates a Mermaid ER diagram representing the tag relationships."""
     graph = ["erDiagram"]
-    added_entities = set()  
+    added_entities = set()
+    added_relationships = set()  
 
     def sanitize_entity_name(name: str) -> str:
         """Sanitizes entity names for Mermaid compatibility."""
@@ -231,29 +231,52 @@ def generate_mermaid_er_diagram(tag_data: dict) -> str:
         if safe_name not in added_entities:
             graph.append(f"    {safe_name} {{")
 
-            # Attributes Definition (revised based on guidelines)
-            for parent in data["parents"]:
-                graph.append(f"        parent {sanitize_entity_name(parent)}")
-            for child in data["children"]:
-                graph.append(f"        child {sanitize_entity_name(child)}")
-            for subset in data["SUBset"]:
-                graph.append(f"        SUBset {sanitize_entity_name(subset)}")
-            for superset in data["SUPERset"]:
-                graph.append(f"        SUPERset {sanitize_entity_name(superset)}")
-            for related, count in data["related"].items():
-                graph.append(f"        related_{count} {sanitize_entity_name(related)}") 
+            # Attributes Definition 
+            if data["parents"]:
+                for parent in data["parents"]:
+                    graph.append(f"        parent {sanitize_entity_name(parent)}")
+            if data["children"]:
+                for child in data["children"]:
+                    graph.append(f"        child {sanitize_entity_name(child)}")
+            if data["SUBset"]:
+                for subset in data["SUBset"]:
+                    graph.append(f"        SUBset {sanitize_entity_name(subset)}")
+            if data["SUPERset"]:
+                for superset in data["SUPERset"]:
+                    graph.append(f"        SUPERset {sanitize_entity_name(superset)}")
+            if data["related"]:
+                for related, count in data["related"].items():
+                    graph.append(f"        related_{count} {sanitize_entity_name(related)}") 
 
             graph.append("    }")
             added_entities.add(safe_name)
         return safe_name
 
-    
+    def add_relationship(from_entity: str, to_entity: str, label: str) -> None:
+        """Adds a relationship to the diagram, avoiding duplicates."""
+        relationship = (from_entity, to_entity, label)
+        if relationship not in added_relationships:
+            if label == "parent of":
+                graph.append(f"    {from_entity} ||--|{ to_entity} : \"{label}\"")  # Parent-Child
+            elif label == "related to":
+                graph.append(f"    {from_entity} ||..|| {to_entity} : \"{label}\"")  # Related (dashed)
+            elif label == "SUBset of":
+                graph.append(f"    {from_entity} }|--|{ to_entity} : \"{label}\"")  # Subset
+            elif label == "SUPERset of":
+                graph.append(f"    {from_entity} }|--|{ to_entity} : \"{label}\"")  # Superset 
+            added_relationships.add(relationship)
+            
     # Generate Entities and Relationships 
     for tag_name, data in tag_data.items():
         safe_tag_name = add_entity(tag_name, data)
-
-        # No need to explicitly define relationship links in ER diagrams
-        # Mermaid automatically infers the links from the entity attributes
+        for child in data["children"]:
+            add_relationship(safe_tag_name, sanitize_entity_name(child), "parent of")
+        for related, count in data["related"].items():
+            add_relationship(safe_tag_name, sanitize_entity_name(related), "related to")
+        for subset in data["SUBset"]:
+            add_relationship(sanitize_entity_name(subset), safe_tag_name, "SUBset of")
+        for superset in data["SUPERset"]:
+            add_relationship(safe_tag_name, sanitize_entity_name(superset), "SUPERset of")
 
     graph.append("%% Styling")
     graph.append("classDef mainNode fill:#f9f,stroke:#333,stroke-width:4px;")
