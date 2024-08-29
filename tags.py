@@ -37,7 +37,7 @@ def generate_partial_tags(tag: str) -> List[str]:
 def process_tags(posts_dir: str, output_file: str) -> tuple:
     """
     Processes tags from markdown files, handling nested tags, highlighting exact matches,
-    preventing duplicates using file paths, and generating a Mermaid graph.
+    preventing duplicates using file paths, and generating data for a Mermaid graph.
     """
 
     tag_frequency = defaultdict(int)
@@ -100,7 +100,7 @@ def process_tags(posts_dir: str, output_file: str) -> tuple:
             "parents": set(),
             "children": set(),
             "related": defaultdict(int),  # Track related tags and co-occurrence counts
-            "collected_items": set(),
+            "collected_items": set(),  # Track contributions to combined tags
             "posts": [],
         }
     )
@@ -110,7 +110,7 @@ def process_tags(posts_dir: str, output_file: str) -> tuple:
             tag_parts = tag.split(">")
             full_tag_path = tag
 
-            # Handle combined tags (parent-child)
+            # Handle combined tags (parent-child relationships)
             if len(tag_parts) > 1:
                 for i in range(len(tag_parts) - 1):
                     parent_tag = ">".join(tag_parts[: i + 1])
@@ -122,11 +122,11 @@ def process_tags(posts_dir: str, output_file: str) -> tuple:
                         tag_data[child_tag]["parents"].add(parent_tag)
                         tag_data[parent_tag]["children"].add(child_tag)
 
-                # Track tags that contribute to this combined tag 
+                # Track tags that contribute to this combined tag
                 for i in range(len(tag_parts)):
                     part_tag = ">".join(tag_parts[: i + 1])
                     if tag_frequency[part_tag] >= THRESHOLD:
-                        tag_data[part_tag]["collected_items"].add(full_tag_path) 
+                        tag_data[part_tag]["collected_items"].add(full_tag_path)
 
             for partial_tag in generate_partial_tags(tag):
                 if tag_frequency[partial_tag] >= THRESHOLD:
@@ -147,13 +147,13 @@ def process_tags(posts_dir: str, output_file: str) -> tuple:
                     and other_tag not in tag_data[full_tag_path]["parents"]
                     and other_tag not in tag_data[full_tag_path]["children"]
                 ):
-                    tag_data[full_tag_path]["related"][other_tag] += 1  
-                    tag_data[other_tag]["related"][full_tag_path] += 1 
+                    tag_data[full_tag_path]["related"][other_tag] += 1
+                    tag_data[other_tag]["related"][full_tag_path] += 1
 
     # Remove tags with no posts
     tag_data = {tag: data for tag, data in tag_data.items() if data["posts"]}
 
-    # Clean up relationships (ensure relationships only reference existing tags)
+    # Clean up relationships to reference existing tags only
     for tag, data in tag_data.items():
         data["parents"] = {
             parent for parent in data["parents"] if parent in tag_data
@@ -162,8 +162,10 @@ def process_tags(posts_dir: str, output_file: str) -> tuple:
             child for child in data["children"] if child in tag_data
         }
         data["related"] = {
-            related: count for related, count in data["related"].items() if related in tag_data
-        } 
+            related: count
+            for related, count in data["related"].items()
+            if related in tag_data
+        }
         data["collected_items"] = {
             item for item in data["collected_items"] if item in tag_data
         }
@@ -211,11 +213,13 @@ def generate_mermaid_er_diagram(
         if safe_name not in added_entities:
             graph.append(f"    {safe_name} {{")
 
-            # ... (Existing code for parent, child, and related attributes) ...
+            # ... (Add parent, child, related attributes - same logic as before)
 
-            # Add contributes_to attributes 
+            # Add contributes_to attributes
             for collected_item in data.get("collected_items", []):
-                graph.append(f"        contributes_to {sanitize_entity_name(collected_item)}") 
+                graph.append(
+                    f"        contributes_to {sanitize_entity_name(collected_item)}"
+                )
 
             graph.append("    }")
             added_entities.add(safe_name)
@@ -240,21 +244,19 @@ def generate_mermaid_er_diagram(
 
     def process_tag(tag_name: str, data: Dict[str, Any]) -> None:
         """Processes a single tag and its relationships."""
-        # Add main entity
-        add_entity(tag_name, data)
+        add_entity(tag_name, data)  # Ensure the entity is added 
 
         # Handle combined tags (parent-child relationships)
         if ">" in tag_name:
             parts = tag_name.split(">")
-            combined_tag = add_entity(tag_name, data)
             for i in range(len(parts) - 1):
                 parent_tag = ">".join(parts[: i + 1])
                 child_tag = ">".join(parts[: i + 2])
                 add_relationship(parent_tag, child_tag, "||--||", "parent of")
 
-        # Add hierarchical relationships
+        # Add hierarchical relationships (from explicitly tracked data) 
         for child in data.get("children", []):
-            add_relationship(tag_name, child, "||--||", "parent of") 
+            add_relationship(tag_name, child, "||--||", "parent of")
 
         # Add non-hierarchical relationships with co-occurrence counts
         for related, count in data.get("related", {}).items():
@@ -265,8 +267,7 @@ def generate_mermaid_er_diagram(
         # Add "contributes to" relationships
         for collected_item in data.get("collected_items", []):
             add_relationship(tag_name, collected_item, "..>", "contributes to")
-
-
+            
     try:
         if isinstance(tag_data, list):
             for item in tag_data:
