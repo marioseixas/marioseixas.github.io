@@ -10,14 +10,14 @@ erDiagram
         related_2 estudos
     }
     scripts {
-        child scripts_cloud
         child scripts_mobile
         child scripts_google-apps-script
         child scripts_AI
-        SUBset scripts_cloud
+        child scripts_cloud
         SUBset scripts_mobile
         SUBset scripts_google-apps-script
         SUBset scripts_AI
+        SUBset scripts_cloud
         related_26 linux
         related_2 estudos
     }
@@ -25,8 +25,8 @@ erDiagram
     }
     edital {
         child edital_direito
-        SUBset edital_direito
         SUBset edital_direito_processual-penal
+        SUBset edital_direito
     }
     tasks {
         child tasks_iphone
@@ -73,8 +73,8 @@ erDiagram
     edital_direito {
         parent edital
         child edital_direito_processual-penal
-        SUBset edital_direito
         SUBset edital_direito_processual-penal
+        SUBset edital_direito
         SUPERset edital_direito
         SUPERset edital
     }
@@ -89,16 +89,16 @@ erDiagram
         SUBset AI_prompt
     }
     software {
-        child software_cloud
         child software_mobile
-        SUBset software_cloud
+        child software_cloud
         SUBset software_mobile
+        SUBset software_cloud
     }
     software_mobile {
         parent software
         SUBset software_mobile
-        SUPERset software
         SUPERset software_mobile
+        SUPERset software
         related_2 iphone
         related_2 linux
     }
@@ -107,8 +107,8 @@ erDiagram
     AI_prompt {
         parent AI
         SUBset AI_prompt
-        SUPERset AI_prompt
         SUPERset AI
+        SUPERset AI_prompt
     }
     prompt {
     }
@@ -139,8 +139,8 @@ erDiagram
     software_cloud {
         parent software
         SUBset software_cloud
-        SUPERset software_cloud
         SUPERset software
+        SUPERset software_cloud
     }
     cloud {
     }
@@ -152,15 +152,15 @@ erDiagram
     scripts_cloud {
         parent scripts
         SUBset scripts_cloud
-        SUPERset scripts_cloud
         SUPERset scripts
+        SUPERset scripts_cloud
     }
     edital_direito_processual-penal {
         parent edital_direito
         SUBset edital_direito_processual-penal
+        SUPERset edital_direito_processual-penal
         SUPERset edital_direito
         SUPERset edital
-        SUPERset edital_direito_processual-penal
     }
     processual-penal {
     }
@@ -169,7 +169,7 @@ erDiagram
     scripts_AI {
         parent scripts
         SUBset scripts_AI
-        SUPERset scripts_AI
         SUPERset scripts
+        SUPERset scripts_AI
     }
 </div>
