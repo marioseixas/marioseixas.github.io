@@ -116,7 +116,8 @@ def generate_tag_data(all_posts: list, tag_frequency: dict) -> dict:
             "parents": set(),
             "children": set(),
             "related": defaultdict(int),
-            "supersets": set(),  # Only track supersets, subsets are implicit
+            "supersets": set(),
+            "subsets": set(),
             "posts": [],
         }
     )
@@ -138,11 +139,12 @@ def generate_tag_data(all_posts: list, tag_frequency: dict) -> dict:
                         tag_data[child_tag]["parents"].add(parent_tag)
                         tag_data[parent_tag]["children"].add(child_tag)
 
-                # Track 'contributes to' as superset relationships only
+                # Track 'contributes to' as both superset and subset relationships
                 for i in range(len(tag_parts)):
                     part_tag = ">".join(tag_parts[: i + 1])
                     if tag_frequency[part_tag] >= THRESHOLD:
                         tag_data[full_tag_path]["supersets"].add(part_tag)
+                        tag_data[part_tag]["subsets"].add(full_tag_path)
 
             for partial_tag in generate_partial_tags(tag):
                 if tag_frequency[partial_tag] >= THRESHOLD:
@@ -163,6 +165,7 @@ def generate_tag_data(all_posts: list, tag_frequency: dict) -> dict:
                     and other_tag not in tag_data[full_tag_path]["parents"]
                     and other_tag not in tag_data[full_tag_path]["children"]
                     and other_tag not in tag_data[full_tag_path]["supersets"]
+                    and other_tag not in tag_data[full_tag_path]["subsets"]
                 ):
                     tag_data[full_tag_path]["related"][other_tag] += 1
                     tag_data[other_tag]["related"][full_tag_path] += 1
@@ -186,14 +189,16 @@ def generate_tag_data(all_posts: list, tag_frequency: dict) -> dict:
         data["supersets"] = {
             superset for superset in data["supersets"] if superset in tag_data
         }
+        data["subsets"] = {
+            subset for subset in data["subsets"] if subset in tag_data
+        }
     return tag_data
 
 
 def generate_mermaid_er_diagram(tag_data: dict, direction: str = "TD") -> str:
     """
     Generates Mermaid ER diagram code for the tag structure, representing parent-child,
-    subset-superset (using explicit superset links only), and related relationships, 
-    and avoiding redundant relationships and attributes.
+    subset-superset, and related relationships, avoiding redundant relationships and attributes.
     """
 
     graph = [f"erDiagram"]
@@ -240,6 +245,9 @@ def generate_mermaid_er_diagram(tag_data: dict, direction: str = "TD") -> str:
             for superset in data["supersets"]:
                 if superset != entity_name and superset not in data["parents"]:  # Avoid redundant and self-referential supersets
                     graph.append(f"        SUPERset {sanitize_entity_name(superset)}")
+            for subset in data["subsets"]:
+                if subset != entity_name and subset not in data["children"]:  # Avoid redundant and self-referential subsets
+                    graph.append(f"        SUBset {sanitize_entity_name(subset)}")
             for related, count in data["related"].items():
                 if related != entity_name:  # Avoid self-referential related
                     graph.append(
@@ -252,11 +260,13 @@ def generate_mermaid_er_diagram(tag_data: dict, direction: str = "TD") -> str:
 
     for tag_name, data in tag_data.items():
         add_entity(tag_name, data)
-        for superset in data["supersets"]:
-            if superset != tag_name and superset not in data["parents"]:  # Avoid redundant and self-referential supersets
-                safe_superset_name = sanitize_entity_name(superset)
+
+        # Create "SUPERset of" links (from subset to superset)
+        for subset in data["subsets"]:
+            if subset != tag_name and subset not in data["children"]:
+                safe_subset_name = sanitize_entity_name(subset)
                 graph.append(
-                    f"    {sanitize_entity_name(tag_name)} ||--|{ safe_superset_name } : \"SUPERset of\""
+                    f"    {safe_subset_name} ||--|{ sanitize_entity_name(tag_name) } : \"SUPERset of\""
                 )
 
     return "\n".join(graph)
