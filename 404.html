@@ -51,7 +51,7 @@ id: not-found
     new PagefindHighlight({ highlightParam: "highlight" });
   </script>
   <script src="{{ '/assets/js/search.js' | relative_url }}" defer></script>
-  
+  <script src="https://cdn.jsdelivr.net/npm/svg-pan-zoom@3.6.1/dist/svg-pan-zoom.min.js"></script>  
 </head>
 <body>
   <a class="search-input-block" id="search"></a>
@@ -74,6 +74,79 @@ id: not-found
     </nav>
   </header>
   {% cusdis_comments %}
-  <div class="post-wrapper">placeholder4mermaid</div>
+  <div class="post-wrapper">
+%%{init: {'theme':'dark'}}%%
+
+erDiagram
+
+"tbl_user(User)" {
+  *int id    PK    
+  *varchar(256) firstName      "user firstname"  
+  *varchar(256) lastName    
+  *boolean isActive      "line1<br />line2<br />line3"  
+  int photo    FK    
+}
+
+
+"tbl_user(User)"  |o  --  o|  "tbl_photo(Photo)":  "photo_id"
+
+"tbl_photo(Photo)" {
+  *int id    PK    
+  *varchar(512) title      "photo title"  
+  *varchar(2048) description      "photo description"  
+  *int width    
+  *int height    
+}
+
+
+
+"tbl_license(License)" {
+  *int id    PK    
+  *varchar(512) title    UK      "organization title"  
+  *double-precision weight      "sort weight"  
+  *varchar(200) code    UK      "organization code"  
+  *varchar(2048) description      "organization description"  
+  *datetime expire    
+  int user    FK    
+}
+
+
+"tbl_license(License)"  }o  --  o|  "tbl_user(User)":  "user_id"
+"tbl_license(License)"  }o  --  o{  "tbl_organization(Organization)":  "license_id,organization_id"
+
+"tbl_organization(Organization)" {
+  *int id    PK    
+  *varchar(512) title      "organization title"  
+  *varchar(2048) description      "organization description"  
+  *simple-json supports      "organization supports other organization"  
+  *datetime expire    
+}
+
+
+
+"tbl_mtm_license_organization(tbl_mtm_license_organization)" {
+  *int license_id    FK,PK    
+  *int organization_id    FK,PK    
+}
+
+
+"tbl_mtm_license_organization(tbl_mtm_license_organization)"  }|  --  ||  "tbl_license(License)":  "license_id"
+"tbl_mtm_license_organization(tbl_mtm_license_organization)"  }|  --  ||  "tbl_organization(Organization)":  "organization_id"
+
+</div>
 </body>
+<script>
+    mermaid.initialize({ startOnLoad: true, er: { useMaxWidth: true } });
+    setTimeout(() => {
+      svgPanZoom(document.querySelector("#mermaid-pre>svg"), {
+        minZoom: 0.5,
+        maxZoom: 10,
+        fit: true,
+        contain: false,
+        controlIconsEnabled: true,
+        center: true,
+        refreshRate: "auto",
+      });
+    }, 200);
+  </script>  
 </html>
