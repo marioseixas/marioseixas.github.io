@@ -254,12 +254,19 @@ def generate_mermaid_er_diagram(tag_data: dict) -> str:
         return safe_name
     
     def add_relationship(from_entity: str, to_entity: str, label: str) -> None:
-    """Adds a relationship link between entities, preventing duplicates."""
-    relationship = (from_entity, to_entity, label)
-    if relationship not in added_relationships:
-        graph.append(f"    {from_entity} ||--|| {to_entity} : \"{label}\"") # Correction here!
-        added_relationships.add(relationship)
-
+        """Adds a relationship to the diagram, avoiding duplicates."""
+        relationship = (from_entity, to_entity, label)
+        if relationship not in added_relationships:
+            if label == "parent of":
+                graph.append(f"    {from_entity} ||--|{ to_entity} : \"{label}\"")  # Parent-Child
+            elif label == "related to":
+                graph.append(f"    {from_entity} ||..|| {to_entity} : \"{label}\"")  # Related (dashed)
+            elif label == "SUBset of":
+                graph.append(f"    {from_entity} }|--|{ to_entity} : \"{label}\"")  # Subset
+            elif label == "SUPERset of":
+                graph.append(f"    {from_entity} }|--|{ to_entity} : \"{label}\"")  # Superset 
+            added_relationships.add(relationship)
+        
     # Generate Entities
     for tag_name, data in tag_data.items():
         add_entity(tag_name, data)
