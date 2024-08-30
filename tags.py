@@ -11,7 +11,6 @@ logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(
 # Threshold for generating permutations
 THRESHOLD = 0  # Adjust this value as needed
 
-
 def extract_frontmatter(file_content: str) -> str:
     """Extracts the YAML frontmatter from a markdown file."""
     frontmatter = ""
@@ -23,7 +22,6 @@ def extract_frontmatter(file_content: str) -> str:
                 break
     return frontmatter
 
-
 def generate_partial_tags(tag: str) -> List[str]:
     """Generates all partial tags for a given tag."""
     parts = tag.split(">")
@@ -32,7 +30,6 @@ def generate_partial_tags(tag: str) -> List[str]:
         for j in range(len(parts) - i + 1):
             partial_tags.append(">".join(parts[j: j + i]))
     return partial_tags
-
 
 def process_tags(posts_dir: str, output_file: str) -> tuple:
     """
@@ -90,11 +87,13 @@ def process_tags(posts_dir: str, output_file: str) -> tuple:
             logging.warning(f"Unable to parse date from filename {filename}")
             post_date = datetime.min
 
-        all_posts.append({"title": title, "url": url, "date": post_date, "tags": tags})
+        all_posts.append(
+            {"title": title, "url": url, "date": post_date, "tags": tags}
+        )
 
     # Second pass: Generate tag data based on frequency threshold
     tag_data = defaultdict(
-        lambda: {"parents": set(), "children": set(), "related": set(), "posts": []}
+        lambda: {"parents": set(), "children": set(), "related": defaultdict(int), "posts": []}
     )
     combined_tags = set()  # Keep track of combined tags
 
@@ -131,19 +130,17 @@ def process_tags(posts_dir: str, output_file: str) -> tuple:
                     tag_data[child_tag]["parents"].add(parent_tag)
                     tag_data[parent_tag]["children"].add(child_tag)
 
-            # Track non-hierarchical (related) relationships between tags
+            # Track non-hierarchical (related) relationships between tags and count co-occurrences
             for other_tag in post["tags"]:
                 if (
                     other_tag != tag
                     and tag_frequency[other_tag] >= THRESHOLD
                     and tag_frequency[full_tag_path] >= THRESHOLD
-                    and other_tag not in tag_data[full_tag_path]["parents"]
-                    # Ensure no hierarchical relation
-                    and other_tag not in tag_data[full_tag_path]["children"]
-                    # Ensure no hierarchical relation
+                    and other_tag not in tag_data[full_tag_path]["parents"]  # Ensure no hierarchical relation
+                    and other_tag not in tag_data[full_tag_path]["children"]  # Ensure no hierarchical relation
                 ):
-                    tag_data[full_tag_path]["related"].add(other_tag)
-                    tag_data[other_tag]["related"].add(full_tag_path)
+                    tag_data[full_tag_path]["related"][other_tag] += 1
+                    tag_data[other_tag]["related"][full_tag_path] += 1
 
     # Remove tags with no posts
     tag_data = {tag: data for tag, data in tag_data.items() if data["posts"]}
@@ -152,7 +149,7 @@ def process_tags(posts_dir: str, output_file: str) -> tuple:
     for tag, data in tag_data.items():
         data["parents"] = {parent for parent in data["parents"] if parent in tag_data}
         data["children"] = {child for child in data["children"] if child in tag_data}
-        data["related"] = {related for related in data["related"] if related in tag_data}
+        data["related"] = defaultdict(int, {related: count for related, count in data["related"].items() if related in tag_data}) # Preserve co-occurrences count
 
     # Sort posts within each tag by date (most recent first)
     for tag, data in tag_data.items():
@@ -175,136 +172,105 @@ def process_tags(posts_dir: str, output_file: str) -> tuple:
 
     return tag_data, combined_tags
 
-
 def generate_mermaid_graph(
     tag_data: Union[List[Dict[str, Any]], Dict[str, Any]], direction: str = "TD"
 ) -> str:
     """
-    Generates Mermaid ER diagram code for the tag structure,
-    including parent, child, SUPERset, and SUBset relationships.
+    Generates Mermaid graph code for the tag structure.
 
     Args:
-        tag_data (Union[List[Dict[str, Any]], Dict[str, Any]]):
-            List of dictionaries or dictionary containing tag relationships.
+        tag_data (Union[List[Dict[str, Any]], Dict[str, Any]]): List of dictionaries or dictionary containing tag relationships.
         direction (str): Graph direction (TD, LR, RL, BT). Defaults to "TD".
 
     Returns:
-        str: Mermaid ER diagram code.
+        str: Mermaid graph code.
     """
-
-    graph = [f"erDiagram"]
+    graph = [f"erDiagram"] # Modified to use erDiagram instead of graph
     added_nodes = set()
     added_edges = set()
+    combined_tags = set()
 
-    def add_node(tag: str) -> str:
+    def add_node(tag: str, is_main: bool = False) -> str:
         """
-        Adds a node (entity) to the graph if it hasn't been added yet.
+        Adds a node to the graph if it hasn't been added yet.
 
         Args:
             tag (str): The tag name to be added.
+            is_main (bool): Whether this is a main node or a combined tag node.
 
         Returns:
             str: The sanitized tag name used in the graph.
         """
-
-        safe_tag = tag.replace(">", "_").replace(" ", "_")
+        safe_tag = tag.replace('>', '_').replace(' ', '_')
         if safe_tag not in added_nodes:
-            node_def = f"    {safe_tag} {{"
+            node_def = f'    {safe_tag} {{' # Open curly brace for attributes
             graph.append(node_def)
-            graph.append(f'        type "{tag}"')  # Add type attribute
             added_nodes.add(safe_tag)
         return safe_tag
 
-    def add_edge(
-        from_tag: str, to_tag: str, edge_type: str = "solid", label: str = ""
-    ) -> None:
+
+    def add_edge(from_tag: str, to_tag: str, edge_type: str = 'solid', label: str = '') -> None:
         """
-        Adds an edge (relationship) between two nodes in the graph,
-        including relationship attributes (parent, child, SUPERset, SUBset).
+        Adds an edge between two nodes in the graph and handles attribute assignments for erDiagram.
 
         Args:
             from_tag (str): The starting node of the edge.
             to_tag (str): The ending node of the edge.
-            edge_type (str): The type of edge ('solid' or 'dashed').
-                Defaults to 'solid'.
+            edge_type (str): The type of edge ('solid' or 'dashed'). Defaults to 'solid'.
             label (str): The label for the edge. Defaults to ''.
         """
-
-        safe_from = add_node(from_tag)
-        safe_to = add_node(to_tag)
+        safe_from = add_node(from_tag, '>' not in from_tag)
+        safe_to = add_node(to_tag, '>' not in to_tag)
         edge = (safe_from, safe_to, edge_type)
 
         if edge not in added_edges:
-            if edge_type == "solid":
-                # Hierarchical relationship (parent-child)
-                graph.append(f'        parent "{to_tag}"')
-                graph.append(f"    }}")
-                graph.append(f'    {safe_from} ||--|{safe_to} : "parent of"')
+            edge_style = '||--||' # Use double lines for relationships in erDiagram
+            label_part = f' : "{label}"' if label else ''
 
-                # Add child attribute to the destination node (if not already present)
-                if f'        child "{from_tag}"' not in graph:
-                    graph[-1] = graph[-1][:-2] + f'\n        child "{from_tag}"\n    }}'
-
-            elif edge_type == "dashed":
-                # Non-hierarchical relationship (related)
-                related_count_from = 0
-                for i in range(len(graph) - 1, -1, -1):
-                    if f'related_{related_count_from} "{to_tag}"' in graph[i]:
-                        related_count_from += 1
-                        break
-
-                graph.append(f'        related_{related_count_from} "{to_tag}"')
-                graph.append(f"    }}")
-                graph.append(f'    {safe_from} ||..|{safe_to} : "related to"')
-
-                # Add related attribute to the destination node (if not already present)
-                related_count_to = 0
-                for i in range(len(graph) - 1, -1, -1):
-                    if f'related_{related_count_to} "{from_tag}"' in graph[i]:
-                        related_count_to += 1
-                        break
-
-                if f'        related_{related_count_to} "{from_tag}"' not in graph:
-                    graph[-1] = (
-                        graph[-1][:-2]
-                        + f'\n        related_{related_count_to} "{from_tag}"\n    }}'
-                    )
-
+            # Assign attributes based on edge type and relationship direction
+            if edge_type == "solid":  # Indicates "parent of" relationship
+                graph.append(f'        child {safe_to}')
+                graph.append(f'    }}') # Close curly brace after child attribute of from_tag entity
+                add_node(to_tag, '>' not in to_tag)
+                graph.append(f'        parent {safe_from}')
+                graph.append(f'    }}') # Close curly brace after parent attribute of to_tag entity
+            elif edge_type == 'dashed': # indicates 'related' relationship
+                related_count = tag_data.get(from_tag, {}).get("related", {}).get(to_tag, 0) # Get number of co-occurrences if exists otherwise 0.
+                graph.append(f'        related_{related_count} {safe_to}')
+                graph.append(f'    }}')  # Close curly brace for attributes for from_tag entity
+                add_node(to_tag, '>' not in to_tag)
+                related_count_reversed = tag_data.get(to_tag, {}).get("related", {}).get(from_tag, 0)
+                graph.append(f'        related_{related_count_reversed} {safe_from}')
+                graph.append(f'    }}') # Close curly brace for attributes for to_tag entity
+                
+            graph.append(f'    {safe_from} {edge_style} {safe_to}{label_part}')  # Append the relationship outside curly braces
             added_edges.add(edge)
+
 
     def process_tag(tag_name: str, data: Dict[str, Any]) -> None:
         """
-        Processes a single tag and its relationships, adding nodes and edges
-        to the Mermaid graph.
+        Processes a single tag and its relationships.
 
         Args:
             tag_name (str): The name of the tag.
-            data (Dict[str, Any]): The data associated with the tag,
-                including children and related tags.
+            data (Dict[str, Any]): The data associated with the tag, including children and related tags.
         """
+        # Add main node
+        add_node(tag_name, is_main=True)
 
-        # Add main node (entity)
-        add_node(tag_name)
+        # Add hierarchical relationships
+        for child in data.get('children', []):
+            add_edge(tag_name, child, 'solid')
 
-        # Handle combined tags (entities representing tag combinations)
-        if ">" in tag_name:
-            parts = tag_name.split(">")
-            for part in parts:
-                add_edge(part, tag_name, "solid")
-
-        # Add hierarchical relationships (parent-child)
-        for child in data.get("children", []):
-            add_edge(tag_name, child, "solid")
-
-        # Add non-hierarchical relationships (related)
-        for related in data.get("related", []):
-            add_edge(tag_name, related, "dashed", "related")
+        # Add non-hierarchical relationships
+        for related, count in data.get('related', {}).items(): # 'related' is a dict with co-occurrences count
+            add_edge(tag_name, related, 'dashed', f"related (co-occurrences: {count})")
 
     try:
         if isinstance(tag_data, list):
             for item in tag_data:
-                if isinstance(item, dict) and "tag" in item:
-                    process_tag(item["tag"], item)
+                if isinstance(item, dict) and 'tag' in item:
+                    process_tag(item['tag'], item)
                 else:
                     logging.warning(f"Skipping invalid item in tag_data: {item}")
         elif isinstance(tag_data, dict):
@@ -318,42 +284,33 @@ def generate_mermaid_graph(
         logging.error(f"Error processing tag_data: {e}")
         return ""
 
-    # Post-processing: Add SUPERset and SUBset relationships based on set theory
-    for tag_name, data in tag_data.items():
-        safe_tag_name = tag_name.replace(">", "_").replace(" ", "_")
-
-        for child in data.get("children", []):
-            safe_child = child.replace(">", "_").replace(" ", "_")
-            # Add SUPERset to parent, SUBset to child (if not redundant with parent/child)
-            if f'        parent "{tag_name}"' not in graph:
-                if f'        SUPERset "{child}"' not in graph:
-                    graph.insert(
-                        graph.index(f"    {safe_tag_name} {{") + 1,
-                        f'        SUPERset "{child}"',
-                    )
-            if f'        child "{tag_name}"' not in graph:
-                if f'        SUBset "{tag_name}"' not in graph:
-                    graph.insert(
-                        graph.index(f"    {safe_child} {{") + 1,
-                        f'        SUBset "{tag_name}"',
-                    )
-
-        for related in data.get("related", []):
-            # Ensure related tags are also represented as entities
-            add_node(related)
-
-    return "\n".join(graph)
-
+    return '\n'.join(graph)
 
 if __name__ == "__main__":
     # Use environment variables to determine paths (adapt if necessary)
     posts_dir = os.path.join(os.getenv("GITHUB_WORKSPACE", ""), "_posts")
-    output_file = os.path.join(
-        os.getenv("GITHUB_WORKSPACE", ""), "_data/processed_tags.yml"
-    )
+    output_file = os.path.join(os.getenv("GITHUB_WORKSPACE", ""), "_data/processed_tags.yml")
 
     tag_data, combined_tags = process_tags(posts_dir, output_file)
+
+    # Refactor for erDiagram SUPERset and SUBset attributes
+    for tag, data in tag_data.items():
+        tag_parts = tag.split(">")
+        if len(tag_parts) > 1:  # If it is a combined tag
+            for i in range(1, len(tag_parts)):  # Consider its sub-tags
+                sub_tag = ">".join(tag_parts[:i + 1])
+                super_tag = ">".join(tag_parts[:i])
+
+                if super_tag in tag_data and tag_data[super_tag]["parents"] and sub_tag not in tag_data[super_tag]["children"]:
+                    # If the super tag is in tag data, check if super_tag has any other parents besides sub_tag
+                    if tag_data[sub_tag]["parents"] and len(tag_data[sub_tag]["parents"]) > 1 and super_tag in tag_data[sub_tag]["parents"]:
+                        if f"SUPERset {super_tag}" not in graph:
+                            graph += [f"        SUPERset {super_tag}"]
+                        if f"SUBset {sub_tag}" not in graph:
+                            graph += [f"        SUBset {sub_tag}"]
+
     mermaid_graph = generate_mermaid_graph(tag_data)
+
 
     # Write the Mermaid graph to a file
     with open(
