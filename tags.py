@@ -81,7 +81,7 @@ def process_tags(posts_dir: str, output_file: str) -> tuple:
 
         # Count tag co-occurrences
         for i, tag1 in enumerate(tags):
-            for tag2 in tags[i+1:]: 
+            for tag2 in tags[i+1:]:
                 tag_cooccurrences[tag1][tag2] += 1
                 tag_cooccurrences[tag2][tag1] += 1
 
@@ -185,7 +185,7 @@ def generate_mermaid_graph(
     direction: str = "TD"
 ) -> str:
     """
-    Generates Mermaid graph code for the tag structure as an ER diagram.
+    Generates Mermaid graph code for the tag structure.
 
     Args:
         tag_data (Union[List[Dict[str, Any]], Dict[str, Any]]): List of dictionaries or dictionary containing tag relationships.
@@ -213,38 +213,12 @@ def generate_mermaid_graph(
         if safe_tag not in added_nodes:
             node_def = f'    {safe_tag} {{'
             graph.append(node_def)
-            
-            # Add attributes (parent, child, SUPERset, SUBset) 
-            if tag in tag_data: 
-                for parent in tag_data[tag].get("parents", []):
-                    graph.append(f'        parent {parent.replace(">", "_").replace(" ", "_")}')
-                for child in tag_data[tag].get("children", []):
-                    graph.append(f'        child {child.replace(">", "_").replace(" ", "_")}')
-                    
-                # Add SUPERset/SUBset based on combined tags (implicit hierarchy)
-                tag_parts = tag.split(">")
-                if len(tag_parts) > 1:
-                    for i in range(len(tag_parts) - 1):
-                        for j in range(i + 1, len(tag_parts)):
-                            superset_tag = ">".join(tag_parts[:j])
-                            subset_tag = ">".join(tag_parts[:j+1])
-                            if superset_tag != tag and subset_tag != tag : # Don't add self as superset/subset
-                                graph.append(f'        SUPERset {subset_tag.replace(">", "_").replace(" ", "_")}')
-                            if subset_tag != tag and superset_tag != tag :
-                                graph.append(f'        SUBset {superset_tag.replace(">", "_").replace(" ", "_")}')
-                            
-                # Add related attributes with co-occurrence counts 
-                for related_tag, count in tag_cooccurrences[tag].items():
-                    if related_tag in tag_data and related_tag != tag:
-                        graph.append(f'        related_{count} {related_tag.replace(">", "_").replace(" ", "_")}')
-
-            graph.append("    }")
             added_nodes.add(safe_tag)
         return safe_tag
 
     def add_edge(from_tag: str, to_tag: str, edge_type: str = 'solid', label: str = '') -> None:
         """
-        Adds an edge between two nodes in the graph if it hasn't been added yet.
+        Adds an edge between two nodes in the graph.
 
         Args:
             from_tag (str): The starting node of the edge.
@@ -255,11 +229,26 @@ def generate_mermaid_graph(
         safe_from = add_node(from_tag)
         safe_to = add_node(to_tag)
         edge = (safe_from, safe_to, edge_type)
-
         if edge not in added_edges:
-            edge_style = '||--||' if edge_type == 'solid' else '||--|{|' 
-            label_part = f' : "{label}"' if label else ''
-            graph.append(f'    {safe_from} {edge_style} {safe_to}{label_part}')
+            if edge_type == 'solid':
+                graph.append(f'        child {safe_to}')
+                graph.append(f'    }}')
+                graph.append(f'    {safe_to} {{')
+                graph.append(f'        parent {safe_from}')
+            elif edge_type == 'SUPERset':
+                graph.append(f'        SUPERset {safe_to}')
+                graph.append(f'    }}')
+                graph.append(f'    {safe_to} {{')
+                graph.append(f'        SUBset {safe_from}')
+            else:
+                cooccurrences = tag_cooccurrences.get(from_tag, {}).get(to_tag, 0)
+                graph.append(f'        related_{cooccurrences} {safe_to}')
+                graph.append(f'    }}')
+                graph.append(f'    {safe_to} {{')
+                graph.append(f'        related_{cooccurrences} {safe_from}')
+                graph.append(f'    }}')
+                label_part = f' : "{label}"' if label else ''
+                graph.append(f'    {safe_from} ||--|| {safe_to}{label_part}')
             added_edges.add(edge)
 
     def process_tag(tag_name: str, data: Dict[str, Any]) -> None:
@@ -273,15 +262,25 @@ def generate_mermaid_graph(
         # Add main node
         add_node(tag_name)
 
-        # Add hierarchical relationships (parent-child)
+        # Add hierarchical relationships
         for child in data.get('children', []):
-            add_edge(tag_name, child, 'solid', 'parent of')
+            add_edge(tag_name, child, 'solid')
 
-        # Add non-hierarchical relationships (related) with co-occurrence counts 
+        # Add non-hierarchical relationships
         for related in data.get('related', []):
-            count = tag_cooccurrences[tag_name].get(related, 0)  # Get co-occurrence count
-            add_edge(tag_name, related, 'dashed', f"related ({count} co-occurrences)")
+            add_edge(tag_name, related, 'related', 'related to')
 
+        # Add SUPERset/SUBset relationships (implicit hierarchy)
+        tag_parts = tag_name.split(">")
+        if len(tag_parts) > 1:
+            for i in range(1, len(tag_parts)):
+                parent_tag = ">".join(tag_parts[:i])
+                child_tag = ">".join(tag_parts[:i+1])
+                if parent_tag in tag_data and child_tag in tag_data:
+                    if child_tag not in tag_data[parent_tag].get("children", set()):
+                        add_edge(parent_tag, child_tag, "SUPERset")
+
+        graph.append(f'    }}')
 
     try:
         if isinstance(tag_data, list):
@@ -302,7 +301,6 @@ def generate_mermaid_graph(
         return ""
 
     return '\n'.join(graph)
-
 
 if __name__ == "__main__":
     # Use environment variables to determine paths (adapt if necessary)
