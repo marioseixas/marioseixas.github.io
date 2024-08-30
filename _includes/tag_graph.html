@@ -1,269 +1,154 @@
 <div class='mermaid'>
 erDiagram
     linux {
-        type related
-        name scripts
-        type related
-        name software_mobile
-    }
-    rendimentos {
-    }
-    trabalho {
-        type related
-        name estudos
+        related_13 scripts
+        related_1 software>mobile
     }
     scripts {
-        type child
-        name scripts_cloud
-        type child
-        name scripts_mobile
-        type child
-        name scripts_google_apps_script
-        type child
-        name scripts_AI
-        type related
-        name linux
-        type related
-        name estudos
-        type collection
-        name scripts_cloud
-        type collection
-        name scripts_mobile
-        type collection
-        name scripts_google_apps_script
-        type collection
-        name scripts_AI
+        child scripts>AI
+        child scripts>mobile
+        child scripts>cloud
+        child scripts>google-apps-script
+        related_13 linux
+        related_1 estudos
+        SUBset scripts>AI
+        SUBset scripts>mobile
+        SUBset scripts>cloud
+        SUBset scripts>google-apps-script
     }
-    carro {
+    linux ||--|| scripts : "related to, 13 co-occurrences"
+    software_mobile {
+        parent software
+        parent mobile
+        related_1 iphone
+        related_1 linux
+        SUPERset software
     }
-    edital {
-        type child
-        name edital_direito
-        type collection
-        name edital_direito
-    }
-    tasks {
-        type child
-        name tasks_iphone
-        type collection
-        name tasks_iphone
-    }
-    hardware {
-    }
-    chess {
-    }
-    assistir {
-    }
-    calls {
-    }
-    despesas {
-    }
-    tasks_iphone {
-        type parent
-        name tasks
-        type part_of
-        name tasks
-    }
-    sell {
-    }
-    github_jekyll {
-        type parent
-        name github
-        type part_of
-        name github
-    }
-    github {
-        type child
-        name github_jekyll
-        type collection
-        name github_jekyll
+    linux ||--|| software_mobile : "related to, 1 co-occurrences"
+    trabalho {
+        related_1 estudos
     }
     estudos {
-        type related
-        name scripts
-        type related
-        name trabalho
+        related_1 scripts
+        related_1 trabalho
+    }
+    trabalho ||--|| estudos : "related to, 1 co-occurrences"
+    scripts_AI {
+        parent scripts
+        parent AI
+        SUPERset scripts
+    }
+    scripts ||--|| scripts_AI : "parent of"
+    scripts_mobile {
+        parent scripts
+        parent mobile
+        related_1 iphone
+        SUPERset scripts
+    }
+    scripts ||--|| scripts_mobile : "parent of"
+    scripts_cloud {
+        parent scripts
+        parent cloud
+        SUPERset scripts
+    }
+    scripts ||--|| scripts_cloud : "parent of"
+    scripts_google-apps-script {
+        parent scripts
+        parent google-apps-script
+        SUPERset scripts
+    }
+    scripts ||--|| scripts_google-apps-script : "parent of"
+    scripts ||--|| linux : "related to, 13 co-occurrences"
+    scripts ||--|| estudos : "related to, 1 co-occurrences"
+    edital {
+        child edital>direito
+        child edital>direito>processual-penal
+        SUBset edital>direito
+        SUBset edital>direito>processual-penal
     }
     edital_direito {
-        type parent
-        name edital
-        type child
-        name edital_direito_processual_penal
-        type part_of
-        name edital
-        type collection
-        name edital_direito_processual_penal
+        parent edital
+        parent direito
+        child edital>direito>processual-penal
+        SUPERset edital
+        SUBset edital>direito>processual-penal
     }
-    fatherhood {
+    edital ||--|| edital_direito : "parent of"
+    edital_direito_processual-penal {
+        parent edital
+        parent direito
+        parent processual-penal
+        SUPERset edital>direito
+        SUPERset edital
+        SUPERset direito
     }
-    misc {
+    edital ||--|| edital_direito_processual-penal : "parent of"
+    tasks {
+        child tasks>iphone
+        SUBset tasks>iphone
     }
-    AI {
-        type child
-        name AI_prompt
-        type collection
-        name AI_prompt
+    tasks_iphone {
+        parent tasks
+        parent iphone
+        SUPERset tasks
     }
-    software {
-        type child
-        name software_mobile
-        type child
-        name software_cloud
-        type collection
-        name software_mobile
-        type collection
-        name software_cloud
-    }
-    software_mobile {
-        type parent
-        name software
-        type related
-        name iphone
-        type related
-        name linux
-        type part_of
-        name software
-    }
+    tasks ||--|| tasks_iphone : "parent of"
     iphone {
-        type related
-        name software_mobile
-        type related
-        name scripts_mobile
+        related_1 software>mobile
+        related_1 scripts>mobile
+    }
+    iphone ||--|| scripts_mobile : "related to, 1 co-occurrences"
+    iphone ||--|| software_mobile : "related to, 1 co-occurrences"
+    github {
+        child github>jekyll
+        SUBset github>jekyll
+    }
+    github_jekyll {
+        parent github
+        parent jekyll
+        SUPERset github
+    }
+    github ||--|| github_jekyll : "parent of"
+    estudos ||--|| scripts : "related to, 1 co-occurrences"
+    estudos ||--|| trabalho : "related to, 1 co-occurrences"
+    edital_direito ||--|| edital_direito_processual-penal : "parent of"
+    direito {
+        child edital>direito>processual-penal
+        SUBset edital>direito>processual-penal
+    }
+    direito ||--|| edital_direito_processual-penal : "parent of"
+    AI {
+        child AI>prompt
+        SUBset AI>prompt
     }
     AI_prompt {
-        type parent
-        name AI
-        type part_of
-        name AI
+        parent AI
+        parent prompt
+        SUPERset AI
     }
-    music {
+    AI ||--|| AI_prompt : "parent of"
+    software {
+        child software>mobile
+        child software>cloud
+        SUBset software>mobile
+        SUBset software>cloud
     }
-    scripts_mobile {
-        type parent
-        name scripts
-        type related
-        name iphone
-        type part_of
-        name scripts
-    }
-    spirit {
-        type related
-        name admoestacao
-    }
-    ler {
-    }
-    scripts_google_apps_script {
-        type parent
-        name scripts
-        type part_of
-        name scripts
-    }
-    saude {
-    }
+    software ||--|| software_mobile : "parent of"
     software_cloud {
-        type parent
-        name software
-        type part_of
-        name software
+        parent software
+        parent cloud
+        SUPERset software
     }
-    receitas {
+    software ||--|| software_cloud : "parent of"
+    software_mobile ||--|| iphone : "related to, 1 co-occurrences"
+    software_mobile ||--|| linux : "related to, 1 co-occurrences"
+    scripts_mobile ||--|| iphone : "related to, 1 co-occurrences"
+    spirit {
+        related_1 admoestação
     }
-    admoestacao {
-        type related
-        name spirit
+    admoestação {
+        related_1 spirit
     }
-    scripts_cloud {
-        type parent
-        name scripts
-        type part_of
-        name scripts
-    }
-    edital_direito_processual_penal {
-        type parent
-        name edital_direito
-        type part_of
-        name edital_direito
-    }
-    scripts_AI {
-        type parent
-        name scripts
-        type part_of
-        name scripts
-    }
-    linux ||..|||| scripts : "related to"
-    linux ||..|||| software_mobile : "related to"
-    trabalho ||..|||| estudos : "related to"
-    scripts ||--|{|| scripts_cloud : "parent of"
-    scripts ||--|{|| scripts_mobile : "parent of"
-    scripts ||--|{|| scripts_google_apps_script : "parent of"
-    scripts ||--|{|| scripts_AI : "parent of"
-    scripts ||..|||| linux : "related to"
-    scripts ||..|||| estudos : "related to"
-    scripts_cloud }|--|{|| scripts : "part of"
-    scripts_mobile }|--|{|| scripts : "part of"
-    scripts_google_apps_script }|--|{|| scripts : "part of"
-    scripts_AI }|--|{|| scripts : "part of"
-    edital ||--|{|| edital_direito : "parent of"
-    edital_direito }|--|{|| edital : "part of"
-    tasks ||--|{|| tasks_iphone : "parent of"
-    tasks_iphone }|--|{|| tasks : "part of"
-    github_jekyll }|--|{|| github : "part of"
-    github ||--|{|| github_jekyll : "parent of"
-    estudos ||..|||| scripts : "related to"
-    estudos ||..|||| trabalho : "related to"
-    edital_direito ||--|{|| edital_direito_processual_penal : "parent of"
-    edital_direito_processual_penal }|--|{|| edital_direito : "part of"
-    AI ||--|{|| AI_prompt : "parent of"
-    AI_prompt }|--|{|| AI : "part of"
-    software ||--|{|| software_mobile : "parent of"
-    software ||--|{|| software_cloud : "parent of"
-    software_mobile }|--|{|| software : "part of"
-    software_cloud }|--|{|| software : "part of"
-    software_mobile ||..|||| iphone : "related to"
-    software_mobile ||..|||| linux : "related to"
-    iphone ||..|||| software_mobile : "related to"
-    iphone ||..|||| scripts_mobile : "related to"
-    scripts_mobile ||..|||| iphone : "related to"
-    spirit ||..|||| admoestacao : "related to"
-    admoestacao ||..|||| spirit : "related to"
-%% Styling
-classDef mainNode fill:#f9f,stroke:#333,stroke-width:4px;
-classDef combinedNode fill:#bbf,stroke:#66f,stroke-width:2px;
-class linux mainNode;
-class rendimentos mainNode;
-class trabalho mainNode;
-class scripts mainNode;
-class carro mainNode;
-class edital mainNode;
-class tasks mainNode;
-class hardware mainNode;
-class chess mainNode;
-class assistir mainNode;
-class calls mainNode;
-class despesas mainNode;
-class sell mainNode;
-class github mainNode;
-class estudos mainNode;
-class fatherhood mainNode;
-class misc mainNode;
-class AI mainNode;
-class software mainNode;
-class iphone mainNode;
-class music mainNode;
-class spirit mainNode;
-class ler mainNode;
-class saude mainNode;
-class receitas mainNode;
-class admoestacao mainNode;
-class tasks_iphone combinedNode;
-class github_jekyll combinedNode;
-class edital_direito combinedNode;
-class software_mobile combinedNode;
-class AI_prompt combinedNode;
-class scripts_mobile combinedNode;
-class scripts_google_apps_script combinedNode;
-class software_cloud combinedNode;
-class scripts_cloud combinedNode;
-class edital_direito_processual_penal combinedNode;
-class scripts_AI combinedNode;
+    spirit ||--|| admoestação : "related to, 1 co-occurrences"
+    admoestação ||--|| spirit : "related to, 1 co-occurrences"
 </div>
