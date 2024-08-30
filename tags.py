@@ -253,12 +253,8 @@ def generate_mermaid_graph(
                     < graph.index(line)
                     < graph.index(f"    {safe_to} {{")
                 )
-
-                graph.append(f'        related_{related_count_from} "{to
-
-_tag}"')
-
-            added_edges.add(edge)
+                graph.append(f'        related_{related_count_from} "{to_tag}"')
+                added_edges.add(edge)
 
     for tag, data in tag_data.items():
         if len(data["parents"]) > 0:
