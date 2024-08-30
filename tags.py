@@ -277,7 +277,7 @@ def generate_mermaid_graph(
 
         for related in data.get("related", []):
             safe_related = add_node(related, tag_data[related])
-            edge = f"    {safe_tag} }|..|{safe_related} : RELATED_TO"
+            edge = f"    {safe_tag} ||..|| {safe_related} : RELATED_TO"
             if edge not in added_edges:
                 graph.append(edge)
                 added_edges.add(edge)
