@@ -1,3 +1,304 @@
 <div class='mermaid'>
-
+erDiagram
+    linux {
+        type "linux"
+    scripts {
+        SUPERset "scripts>mobile"
+        SUPERset "scripts>google-apps-script"
+        SUPERset "scripts>AI"
+        SUPERset "scripts>cloud"
+        type "scripts"
+        related_0 "scripts"
+    }
+    linux ||..|scripts : "related t
+        related_0 "linux"
+    }
+    software_mobile {
+        SUBset "software"
+        type "software>mobile"
+        related_0 "software>mobile"
+    }
+    linux ||..|software_mobile : "related t
+        related_1 "linux"
+    }
+    rendimentos {
+        type "rendimentos"
+    trabalho {
+        type "trabalho"
+    estudos {
+        type "estudos"
+        related_0 "estudos"
+    }
+    trabalho ||..|estudos : "related t
+        related_0 "trabalho"
+    }
+    scripts_cloud {
+        SUBset "scripts"
+        type "scripts>cloud"
+        parent "scripts>cloud"
+    }
+    scripts ||--|scripts_cloud : "parent o
+        child "scripts"
+    }
+    scripts_AI {
+        type "scripts>AI"
+        parent "scripts>AI"
+    }
+    scripts ||--|scripts_AI : "parent o
+        child "scripts"
+    }
+    scripts_google-apps-script {
+        type "scripts>google-apps-script"
+        parent "scripts>google-apps-script"
+    }
+    scripts ||--|scripts_google-apps-script : "parent o
+        child "scripts"
+    }
+    scripts_mobile {
+        type "scripts>mobile"
+        parent "scripts>mobile"
+    }
+    scripts ||--|scripts_mobile : "parent o
+        child "scripts"
+    }
+        related_1 "estudos"
+    }
+    scripts ||..|estudos : "related t
+        related_1 "scripts"
+    }
+        related_1 "linux"
+    }
+    scripts ||..|linux : "related t
+        related_1 "scripts"
+    }
+    carro {
+        type "carro"
+    edital {
+        SUPERset "edital>direito"
+        SUPERset "edital>direito>processual-penal"
+        type "edital"
+    edital_direito_processual-penal {
+        SUBset "direito"
+        SUBset "edital>direito"
+        SUBset "edital"
+        type "edital>direito>processual-penal"
+        parent "edital>direito>processual-penal"
+    }
+    edital ||--|edital_direito_processual-penal : "parent o
+        child "edital"
+    }
+    edital_direito {
+        type "edital>direito"
+        parent "edital>direito"
+    }
+    edital ||--|edital_direito : "parent o
+        child "edital"
+    }
+    tasks {
+        SUPERset "tasks>iphone"
+        type "tasks"
+    tasks_iphone {
+        SUBset "tasks"
+        type "tasks>iphone"
+        parent "tasks>iphone"
+    }
+    tasks ||--|tasks_iphone : "parent o
+        child "tasks"
+    }
+    hardware {
+        type "hardware"
+    chess {
+        type "chess"
+    assistir {
+        type "assistir"
+    calls {
+        type "calls"
+    despesas {
+        type "despesas"
+    iphone {
+        type "iphone"
+        parent "tasks>iphone"
+    }
+    iphone ||--|tasks_iphone : "parent o
+        child "iphone"
+    }
+        related_1 "software>mobile"
+    }
+    iphone ||..|software_mobile : "related t
+        related_0 "iphone"
+    }
+        related_0 "scripts>mobile"
+    }
+    iphone ||..|scripts_mobile : "related t
+        related_1 "iphone"
+    }
+    sell {
+        type "sell"
+    github_jekyll {
+        SUBset "github"
+        type "github>jekyll"
+    github {
+        SUPERset "github>jekyll"
+        type "github"
+        parent "github>jekyll"
+    }
+    github ||--|github_jekyll : "parent o
+        child "github"
+    }
+    jekyll {
+        type "jekyll"
+        parent "github>jekyll"
+    }
+    jekyll ||--|github_jekyll : "parent o
+        child "jekyll"
+    }
+        related_1 "scripts"
+    }
+    estudos ||..|scripts : "related to"
+        related_1 "trabalho"
+    }
+    estudos ||..|trabalho : "related to"
+    direito {
+        type "direito"
+        parent "edital>direito"
+    }
+    direito ||--|edital_direito : "parent o
+        child "direito"
+    }
+        parent "edital>direito>processual-penal"
+    }
+    edital_direito ||--|edital_direito_processual-penal : "parent o
+        child "edital>direito"
+    }
+        parent "edital>direito>processual-penal"
+    }
+    direito ||--|edital_direito_processual-penal : "parent o
+        child "direito"
+    }
+    fatherhood {
+        type "fatherhood"
+    misc {
+        type "misc"
+    AI {
+        SUPERset "AI>prompt"
+        type "AI"
+    AI_prompt {
+        SUBset "AI"
+        type "AI>prompt"
+        parent "AI>prompt"
+    }
+    AI ||--|AI_prompt : "parent o
+        child "AI"
+    }
+    software {
+        SUPERset "software>cloud"
+        SUPERset "software>mobile"
+        type "software"
+        parent "software>mobile"
+    }
+    software ||--|software_mobile : "parent o
+        child "software"
+    }
+    software_cloud {
+        type "software>cloud"
+        parent "software>cloud"
+    }
+    software ||--|software_cloud : "parent o
+        child "software"
+    }
+    mobile {
+        type "mobile"
+        parent "software>mobile"
+    }
+    mobile ||--|software_mobile : "parent o
+        child "mobile"
+    }
+        related_1 "iphone"
+    }
+    software_mobile ||..|iphone : "related to"
+        related_1 "linux"
+    }
+    software_mobile ||..|linux : "related to"
+    prompt {
+        type "prompt"
+        parent "AI>prompt"
+    }
+    prompt ||--|AI_prompt : "parent o
+        child "prompt"
+    }
+    music {
+        type "music"
+        parent "scripts>mobile"
+    }
+    mobile ||--|scripts_mobile : "parent o
+        child "mobile"
+    }
+        related_1 "iphone"
+    }
+    scripts_mobile ||..|iphone : "related t
+        related_1 "scripts>mobile"
+    }
+    spirit {
+        type "spirit"
+    admoestação {
+        type "admoestação"
+        related_0 "admoestação"
+    }
+    spirit ||..|admoestação : "related t
+        related_0 "spirit"
+    }
+    ler {
+        type "ler"
+    google-apps-script {
+        type "google-apps-script"
+        parent "scripts>google-apps-script"
+    }
+    google-apps-script ||--|scripts_google-apps-script : "parent o
+        child "google-apps-script"
+    }
+    saúde {
+        type "saúde"
+    cloud {
+        type "cloud"
+        parent "software>cloud"
+    }
+    cloud ||--|software_cloud : "parent o
+        child "cloud"
+    }
+    receitas {
+        type "receitas"
+        related_1 "spirit"
+    }
+    admoestação ||..|spirit : "related t
+        related_1 "admoestação"
+    }
+        parent "scripts>cloud"
+    }
+    cloud ||--|scripts_cloud : "parent o
+        child "cloud"
+    }
+    processual-penal {
+        type "processual-penal"
+        parent "edital>direito>processual-penal"
+    }
+    processual-penal ||--|edital_direito_processual-penal : "parent o
+        child "processual-penal"
+    }
+    direito_processual-penal {
+        type "direito>processual-penal"
+        parent "direito>processual-penal"
+    }
+    direito ||--|direito_processual-penal : "parent o
+        child "direito"
+    }
+        parent "direito>processual-penal"
+    }
+    processual-penal ||--|direito_processual-penal : "parent o
+        child "processual-penal"
+    }
+        parent "scripts>AI"
+    }
+    AI ||--|scripts_AI : "parent o
+        child "AI"
+    }
 </div>
