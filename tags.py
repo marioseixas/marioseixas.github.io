@@ -270,14 +270,6 @@ def generate_mermaid_graph(
                         f'        child "{from_tag}"',
                     )
 
-                # Close the entity definitions for both entities if not already closed
-                if not graph[graph.index(f"    {safe_from} {{") + 1].startswith("    }"):
-                    graph.insert(graph.index(f"    {safe_from} {{") + 2, "    }")
-                if not graph[graph.index(f"    {safe_to} {{") + 1].startswith("    }"):
-                    graph.insert(graph.index(f"    {safe_to} {{") + 2, "    }")
-
-                graph.append(f'    {safe_from} ||--|| {safe_to} : "parent of"')
-
             elif edge_type == "dashed":
                 # Non-hierarchical relationship (related)
                 cooccurrence_count = tag_cooccurrences[from_tag][to_tag]
@@ -324,12 +316,15 @@ def generate_mermaid_graph(
                         f'        related_{related_count_to} "{from_tag}"',
                     )
 
-                # Close the entity definitions for both entities if not already closed
-                if not graph[graph.index(f"    {safe_from} {{") + 1].startswith("    }"):
-                    graph.insert(graph.index(f"    {safe_from} {{") + 2, "    }")
-                if not graph[graph.index(f"    {safe_to} {{") + 1].startswith("    }"):
-                    graph.insert(graph.index(f"    {safe_to} {{") + 2, "    }")
+            # Close the entity definitions for both entities if not already closed
+            if not graph[graph.index(f"    {safe_from} {{") + 1].startswith("    }"):
+                graph.insert(graph.index(f"    {safe_from} {{") + 2, "    }")
+            if not graph[graph.index(f"    {safe_to} {{") + 1].startswith("    }"):
+                graph.insert(graph.index(f"    {safe_to} {{") + 2, "    }")
 
+            if edge_type == "solid":
+                graph.append(f'    {safe_from} ||--|| {safe_to} : "parent of"')
+            elif edge_type == "dashed":
                 graph.append(
                     f'    {safe_from} ||..|| {safe_to} : "related ({cooccurrence_count})"'
                 )
