@@ -186,205 +186,140 @@ def process_tags(posts_dir: str, output_file: str) -> tuple:
 
 
 def generate_mermaid_graph(
-    tag_data: Union[List[Dict[str, Any]], Dict[str, Any]], direction: str = "TD"
-) -> str:
-    """
-    Generates Mermaid ER diagram code for the tag structure,
-    including parent, child, SUPERset, and SUBset relationships.
-
-    Args:
-        tag_data (Union[List[Dict[str, Any]], Dict[str, Any]]):
-            List of dictionaries or dictionary containing tag relationships.
-        direction (str): Graph direction (TD, LR, RL, BT). Defaults to "TD".
-
-    Returns:
-        str: Mermaid ER diagram code.
-    """
-
-    graph = [f"erDiagram"]
-    added_nodes = set()
-    added_edges = set()
-
-    def add_node(tag: str) -> str:
+        tag_data: Union[List[Dict[str, Any]], Dict[str, Any]], direction: str = "TD"
+    ) -> str:
         """
-        Adds a node (entity) to the graph if it hasn't been added yet.
+        Generates Mermaid ER diagram code for the tag structure,
+        including parent, child, SUPERset, and SUBset relationships.
 
         Args:
-            tag (str): The tag name to be added.
+            tag_data (Union[List[Dict[str, Any]], Dict[str, Any]]):
+                List of dictionaries or dictionary containing tag relationships.
+            direction (str): Graph direction (TD, LR, RL, BT). Defaults to "TD".
 
         Returns:
-            str: The sanitized tag name used in the graph.
+            str: Mermaid ER diagram code.
         """
 
-        safe_tag = tag.replace(">", "_").replace(" ", "_").replace("ç", "c").replace("ã", "a").replace("á", "a").replace("à", "a").replace("â", "a").replace("é", "e").replace("è", "e").replace("ê", "e").replace("í", "i").replace("ì", "i").replace("î", "i").replace("ó", "o").replace("ò", "o").replace("ô", "o").replace("õ", "o").replace("ú", "u").replace("ù", "u").replace("û", "u").replace("ü", "u")
-        if safe_tag not in added_nodes:
-            node_def = f"    {safe_tag} {{"
-            graph.append(node_def)
-            added_nodes.add(safe_tag)
-        return safe_tag
+        graph = ["erDiagram"]
+        added_nodes = set()
+        added_edges = set()
 
-    def add_edge(
-        from_tag: str, to_tag: str, edge_type: str = "solid", label: str = ""
-    ) -> None:
-        """
-        Adds an edge (relationship) between two nodes in the graph,
-        including relationship attributes (parent, child, SUPERset, SUBset).
+        def sanitize_tag(tag: str) -> str:
+            """Sanitize the tag name for use in Mermaid syntax."""
+            return (
+                tag.replace(">", "_")
+                .replace(" ", "_")
+                .replace("ç", "c")
+                .replace("ã", "a")
+                .replace("á", "a")
+                .replace("à", "a")
+                .replace("â", "a")
+                .replace("é", "e")
+                .replace("è", "e")
+                .replace("ê", "e")
+                .replace("í", "i")
+                .replace("ì", "i")
+                .replace("î", "i")
+                .replace("ó", "o")
+                .replace("ò", "o")
+                .replace("ô", "o")
+                .replace("õ", "o")
+                .replace("ú", "u")
+                .replace("ù", "u")
+                .replace("û", "u")
+                .replace("ü", "u")
+            )
 
-        Args:
-            from_tag (str): The starting node of the edge.
-            to_tag (str): The ending node of the edge.
-            edge_type (str): The type of edge ('solid' or 'dashed').
-                Defaults to 'solid'.
-            label (str): The label for the edge. Defaults to ''.
-        """
+        def add_node(tag: str) -> str:
+            """
+            Adds a node (entity) to the graph if it hasn't been added yet.
 
-        safe_from = add_node(from_tag)
-        safe_to = add_node(to_tag)
-        edge = (safe_from, safe_to, edge_type)
+            Args:
+                tag (str): The tag name to be added.
 
-        if edge not in added_edges:
-            if edge_type == "solid":
-                # Hierarchical relationship (parent-child)
+            Returns:
+                str: The sanitized tag name used in the graph.
+            """
+            safe_tag = sanitize_tag(tag)
+            if safe_tag not in added_nodes:
+                node_def = f"    {safe_tag} {{"
+                graph.append(node_def)
+                graph.append("    }")  # Close the entity block immediately
+                added_nodes.add(safe_tag)
+            return safe_tag
 
-                # Add parent attribute to the child entity
-                graph.append(f'        parent "{to_tag}"')
+        def add_edge(
+            from_tag: str, to_tag: str, edge_type: str = "solid", label: str = ""
+        ) -> None:
+            """
+            Adds an edge (relationship) between two nodes in the graph,
+            including relationship attributes (parent, child, SUPERset, SUBset).
 
-                # Close the entity definition for the from_tag
-                graph.append(f"    }}")
-                graph.append(f'    {safe_from} ||--|| {safe_to} : "parent of"')
+            Args:
+                from_tag (str): The starting node of the edge.
+                to_tag (str): The ending node of the edge.
+                edge_type (str): The type of edge ('solid' or 'dashed').
+                    Defaults to 'solid'.
+                label (str): The label for the edge. Defaults to ''.
+            """
 
-                # Add child attribute to the parent entity (if not already present)
-                if f'        child "{from_tag}"' not in graph:
-                    # Modify the last occurrence of the entity definition to include the child attribute
-                    parent_entity_start = graph.index(f"    {safe_to} {{")
-                    for i in range(parent_entity_start + 1, len(graph)):
-                        if graph[i].startswith("    }"):
-                            graph[i] = graph[i].replace(
-                                "    }", f'        child "{from_tag}"\n    }}'
-                            )
-                            break
+            safe_from = add_node(from_tag)
+            safe_to = add_node(to_tag)
+            edge = (safe_from, safe_to, edge_type)
 
+            if edge not in added_edges:
+                relationship_line = f"    {safe_from} ||--|| {safe_to} : {label}" if edge_type == "solid" else f"    {safe_from} ||..|| {safe_to} : {label}"
+                graph.append(relationship_line)
+                added_edges.add(edge)
 
-            elif edge_type == "dashed":
-                # Non-hierarchical relationship (related)
-                related_count_from = sum(
-                    1
-                    for line in graph
-                    if line.startswith(f'        related_')
-                    and f'"{to_tag}"' in line
-                    and line.split(" ")[0].split("_")[0] == "related"
-                    and graph.index(line) < graph.index(f"    {safe_from} {{") + 10
-                    and graph.index(f"    {safe_from} {{")
-                    < graph.index(line)
-                    < graph.index(f"    {safe_to} {{")
-                )
+        def process_tag(tag_name: str, data: Dict[str, Any]) -> None:
+            """
+            Processes a single tag and its relationships, adding nodes and edges
+            to the Mermaid graph.
 
-                graph.append(f'        related_{related_count_from} "{to_tag}"')
+            Args:
+                tag_name (str): The name of the tag.
+                data (Dict[str, Any]): The data associated with the tag,
+                    including children and related tags.
+            """
 
-                # Close the entity definition for the from_tag
-                graph.append(f"    }}")
-                graph.append(f'    {safe_from} ||..|| {safe_to} : "related to"')
+            # Add main node (entity)
+            add_node(tag_name)
 
-                # Add related attribute to the destination node (if not already present)
-                related_count_to = sum(
-                    1
-                    for line in graph
-                    if line.startswith(f'        related_')
-                    and f'"{from_tag}"' in line
-                    and line.split(" ")[0].split("_")[0] == "related"
-                    and graph.index(line) < graph.index(f"    {safe_to} {{") + 10
-                    and graph.index(f"    {safe_to} {{")
-                    < graph.index(line)
-                    < graph.index(f"    {safe_from} {{")
-                )
+            # Handle combined tags (entities representing tag combinations)
+            if ">" in tag_name:
+                parts = tag_name.split(">")
+                for part in parts:
+                    add_edge(part, tag_name, "solid", '"parent of"')
 
-                if f'        related_{related_count_to} "{from_tag}"' not in graph:
-                    # Modify the last occurrence of the entity definition to include the related attribute
-                    dest_entity_start = graph.index(f"    {safe_to} {{")
-                    for i in range(dest_entity_start + 1, len(graph)):
-                        if graph[i].startswith("    }"):
-                            graph[i] = graph[i].replace(
-                                "    }",
-                                f'        related_{related_count_to} "{from_tag}"\n    }}',
-                            )
-                            break
+            # Add hierarchical relationships (parent-child)
+            for child in data.get("children", []):
+                add_edge(tag_name, child, "solid", '"parent of"')
 
-            added_edges.add(edge)
+            # Add non-hierarchical relationships (related)
+            for related, count in data.get("related", {}).items():
+                add_edge(tag_name, related, "dashed", f'"related ({count})"')
 
-    def process_tag(tag_name: str, data: Dict[str, Any]) -> None:
-        """
-        Processes a single tag and its relationships, adding nodes and edges
-        to the Mermaid graph.
+        try:
+            if isinstance(tag_data, list):
+                for item in tag_data:
+                    if isinstance(item, dict) and "tag" in item:
+                        process_tag(item["tag"], item)
+                    else:
+                        logging.warning(f"Skipping invalid item in tag_data: {item}")
+            elif isinstance(tag_data, dict):
+                for tag_name, data in tag_data.items():
+                    process_tag(tag_name, data)
+            else:
+                logging.error(f"Unexpected tag_data type: {type(tag_data)}")
+                return ""
 
-        Args:
-            tag_name (str): The name of the tag.
-            data (Dict[str, Any]): The data associated with the tag,
-                including children and related tags.
-        """
-
-        # Add main node (entity)
-        add_node(tag_name)
-
-        # Handle combined tags (entities representing tag combinations)
-        if ">" in tag_name:
-            parts = tag_name.split(">")
-            for part in parts:
-                add_edge(part, tag_name, "solid")
-
-        # Add hierarchical relationships (parent-child)
-        for child in data.get("children", []):
-            add_edge(tag_name, child, "solid")
-
-        # Add non-hierarchical relationships (related)
-        for related, count in data.get("related", {}).items():
-            add_edge(tag_name, related, "dashed", f"related ({count})")
-
-    try:
-        if isinstance(tag_data, list):
-            for item in tag_data:
-                if isinstance(item, dict) and "tag" in item:
-                    process_tag(item["tag"], item)
-                else:
-                    logging.warning(f"Skipping invalid item in tag_data: {item}")
-        elif isinstance(tag_data, dict):
-            for tag_name, data in tag_data.items():
-                process_tag(tag_name, data)
-        else:
-            logging.error(f"Unexpected tag_data type: {type(tag_data)}")
+        except Exception as e:
+            logging.error(f"Error processing tag_data: {e}")
             return ""
 
-    except Exception as e:
-        logging.error(f"Error processing tag_data: {e}")
-        return ""
-
-    # Post-processing: Add SUPERset and SUBset relationships based on set theory
-    for tag_name, data in tag_data.items():
-        safe_tag_name = tag_name.replace(">", "_").replace(" ", "_").replace("ç", "c").replace("ã", "a").replace("á", "a").replace("à", "a").replace("â", "a").replace("é", "e").replace("è", "e").replace("ê", "e").replace("í", "i").replace("ì", "i").replace("î", "i").replace("ó", "o").replace("ò", "o").replace("ô", "o").replace("õ", "o").replace("ú", "u").replace("ù", "u").replace("û", "u").replace("ü", "u")
-
-        for child in data.get("children", []):
-            safe_child = child.replace(">", "_").replace(" ", "_").replace("ç", "c").replace("ã", "a").replace("á", "a").replace("à", "a").replace("â", "a").replace("é", "e").replace("è", "e").replace("ê", "e").replace("í", "i").replace("ì", "i").replace("î", "i").replace("ó", "o").replace("ò", "o").replace("ô", "o").replace("õ", "o").replace("ú", "u").replace("ù", "u").replace("û", "u").replace("ü", "u")
-            # Add SUPERset to parent, SUBset to child (if not redundant with parent/child)
-            if f'        parent "{tag_name}"' not in graph:
-                if f'        SUPERset "{child}"' not in graph:
-                    graph.insert(
-                        graph.index(f"    {safe_tag_name} {{") + 1,
-                        f'        SUPERset "{child}"',
-                    )
-            if f'        child "{tag_name}"' not in graph:
-                if f'        SUBset "{tag_name}"' not in graph:
-                    graph.insert(
-                        graph.index(f"    {safe_child} {{") + 1,
-                        f'        SUBset "{tag_name}"',
-                    )
-
-        for related in data.get("related", []):
-            # Ensure related tags are also represented as entities
-            add_node(related)
-
-    # Clean up: Remove any empty entity blocks
-    graph = [line for line in graph if not (line.startswith("    ") and line.strip() == "{")]
-
-    return "\n".join(graph)
+        return "\n".join(graph)
 
 
 if __name__ == "__main__":
