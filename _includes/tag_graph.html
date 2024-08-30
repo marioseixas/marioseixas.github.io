@@ -14,26 +14,38 @@ erDiagram
     }
     scripts {
         type child
-        name scripts_google_apps_script
-        type child
-        name scripts_AI
-        type child
         name scripts_mobile
         type child
+        name scripts_google_apps_script
+        type child
         name scripts_cloud
+        type child
+        name scripts_AI
         type related
         name linux
         type related
         name estudos
+        type collection
+        name scripts_mobile
+        type collection
+        name scripts_google_apps_script
+        type collection
+        name scripts_cloud
+        type collection
+        name scripts_AI
     }
     carro {
     }
     edital {
         type child
         name edital_direito
+        type collection
+        name edital_direito
     }
     tasks {
         type child
+        name tasks_iphone
+        type collection
         name tasks_iphone
     }
     hardware {
@@ -49,15 +61,21 @@ erDiagram
     tasks_iphone {
         type parent
         name tasks
+        type part_of
+        name tasks
     }
     sell {
     }
     github_jekyll {
         type parent
         name github
+        type part_of
+        name github
     }
     github {
         type child
+        name github_jekyll
+        type collection
         name github_jekyll
     }
     estudos {
@@ -71,6 +89,10 @@ erDiagram
         name edital
         type child
         name edital_direito_processual_penal
+        type part_of
+        name edital
+        type collection
+        name edital_direito_processual_penal
     }
     fatherhood {
     }
@@ -79,11 +101,17 @@ erDiagram
     AI {
         type child
         name AI_prompt
+        type collection
+        name AI_prompt
     }
     software {
         type child
         name software_mobile
         type child
+        name software_cloud
+        type collection
+        name software_mobile
+        type collection
         name software_cloud
     }
     software_mobile {
@@ -93,6 +121,8 @@ erDiagram
         name iphone
         type related
         name linux
+        type part_of
+        name software
     }
     iphone {
         type related
@@ -103,6 +133,8 @@ erDiagram
     AI_prompt {
         type parent
         name AI
+        type part_of
+        name AI
     }
     music {
     }
@@ -111,6 +143,8 @@ erDiagram
         name scripts
         type related
         name iphone
+        type part_of
+        name scripts
     }
     spirit {
         type related
@@ -121,11 +155,15 @@ erDiagram
     scripts_google_apps_script {
         type parent
         name scripts
+        type part_of
+        name scripts
     }
     saude {
     }
     software_cloud {
         type parent
+        name software
+        type part_of
         name software
     }
     receitas {
@@ -137,15 +175,57 @@ erDiagram
     scripts_cloud {
         type parent
         name scripts
+        type part_of
+        name scripts
     }
     edital_direito_processual_penal {
         type parent
+        name edital_direito
+        type part_of
         name edital_direito
     }
     scripts_AI {
         type parent
         name scripts
+        type part_of
+        name scripts
     }
+    linux ||..|||| scripts : "related to"
+    linux ||..|||| software_mobile : "related to"
+    trabalho ||..|||| estudos : "related to"
+    scripts ||--|{|| scripts_mobile : "parent of"
+    scripts ||--|{|| scripts_google_apps_script : "parent of"
+    scripts ||--|{|| scripts_cloud : "parent of"
+    scripts ||--|{|| scripts_AI : "parent of"
+    scripts ||..|||| linux : "related to"
+    scripts ||..|||| estudos : "related to"
+    scripts_mobile }|--|{|| scripts : "part of"
+    scripts_google_apps_script }|--|{|| scripts : "part of"
+    scripts_cloud }|--|{|| scripts : "part of"
+    scripts_AI }|--|{|| scripts : "part of"
+    edital ||--|{|| edital_direito : "parent of"
+    edital_direito }|--|{|| edital : "part of"
+    tasks ||--|{|| tasks_iphone : "parent of"
+    tasks_iphone }|--|{|| tasks : "part of"
+    github_jekyll }|--|{|| github : "part of"
+    github ||--|{|| github_jekyll : "parent of"
+    estudos ||..|||| scripts : "related to"
+    estudos ||..|||| trabalho : "related to"
+    edital_direito ||--|{|| edital_direito_processual_penal : "parent of"
+    edital_direito_processual_penal }|--|{|| edital_direito : "part of"
+    AI ||--|{|| AI_prompt : "parent of"
+    AI_prompt }|--|{|| AI : "part of"
+    software ||--|{|| software_mobile : "parent of"
+    software ||--|{|| software_cloud : "parent of"
+    software_mobile }|--|{|| software : "part of"
+    software_cloud }|--|{|| software : "part of"
+    software_mobile ||..|||| iphone : "related to"
+    software_mobile ||..|||| linux : "related to"
+    iphone ||..|||| software_mobile : "related to"
+    iphone ||..|||| scripts_mobile : "related to"
+    scripts_mobile ||..|||| iphone : "related to"
+    spirit ||..|||| admoestacao : "related to"
+    admoestacao ||..|||| spirit : "related to"
 %% Styling
 classDef mainNode fill:#f9f,stroke:#333,stroke-width:4px;
 classDef combinedNode fill:#bbf,stroke:#66f,stroke-width:2px;
