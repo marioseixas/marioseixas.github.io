@@ -2,232 +2,252 @@
 erDiagram
     linux {
     scripts {
-        related_13 scripts
+        SUPERset "scripts>AI"
+        SUPERset "scripts>google-apps-script"
+        SUPERset "scripts>mobile"
+        SUPERset "scripts>cloud"
+        related_13 "scripts"
     }
-    scripts {
-        related_13 linux
+    linux ||..|scripts : "related t
+        related_13 "linux"
     }
-    linux ||--|| scripts : "related to"
     software_mobile {
-        related_1 software_mobile
+        SUBset "software"
+        related_1 "software>mobile"
     }
-    software_mobile {
-        related_1 linux
-    }
-    linux ||--|| software_mobile : "related to"
+    linux ||..|software_mobile : "related t
+        related_1 "linux"
     }
     rendimentos {
-    }
     trabalho {
     estudos {
-        related_1 estudos
+        related_1 "estudos"
     }
-    estudos {
-        related_1 trabalho
-    }
-    trabalho ||--|| estudos : "related to"
-    }
-    scripts_mobile {
-        child scripts_mobile
-    }
-    scripts_mobile {
-        parent scripts
-    scripts_cloud {
-        child scripts_cloud
+    trabalho ||..|estudos : "related t
+        related_1 "trabalho"
     }
     scripts_cloud {
-        parent scripts
-    scripts_google-apps-script {
-        child scripts_google-apps-script
+        SUBset "scripts"
+        parent "scripts>cloud"
+    }
+    scripts ||--|scripts_cloud : "parent o
+        child "scripts"
+    }
+    scripts_mobile {
+        parent "scripts>mobile"
+    }
+    scripts ||--|scripts_mobile : "parent o
+        child "scripts"
     }
     scripts_google-apps-script {
-        parent scripts
-    scripts_AI {
-        child scripts_AI
+        parent "scripts>google-apps-script"
+    }
+    scripts ||--|scripts_google-apps-script : "parent o
+        child "scripts"
     }
     scripts_AI {
-        parent scripts
-        related_13 linux
+        parent "scripts>AI"
     }
-    linux {
-        related_13 scripts
+    scripts ||--|scripts_AI : "parent o
+        child "scripts"
     }
-    scripts ||--|| linux : "related to"
-        related_1 estudos
+        related_13 "linux"
     }
-    estudos {
-        related_1 scripts
+    scripts ||..|linux : "related to"
+        related_1 "estudos"
     }
-    scripts ||--|| estudos : "related to"
+    scripts ||..|estudos : "related t
+        related_1 "scripts"
     }
     carro {
-    }
     edital {
-    edital_direito_processual-penal {
-        child edital_direito_processual-penal
+        SUPERset "edital>direito>processual-penal"
+        SUPERset "edital>direito"
+    edital_direito {
+        SUBset "edital"
+        parent "edital>direito"
+    }
+    edital ||--|edital_direito : "parent o
+        child "edital"
     }
     edital_direito_processual-penal {
-        parent edital
-    edital_direito {
-        child edital_direito
+        SUBset "direito"
+        SUBset "edital>direito"
+        parent "edital>direito>processual-penal"
     }
-    edital_direito {
-        parent edital
+    edital ||--|edital_direito_processual-penal : "parent o
+        child "edital"
     }
     tasks {
+        SUPERset "tasks>iphone"
     tasks_iphone {
-        child tasks_iphone
+        SUBset "tasks"
+        parent "tasks>iphone"
     }
-    tasks_iphone {
-        parent tasks
+    tasks ||--|tasks_iphone : "parent o
+        child "tasks"
     }
     hardware {
-    }
     chess {
-    }
     assistir {
-    }
     calls {
-    }
     despesas {
-    }
-    }
     iphone {
-        related_1 software_mobile
+        parent "tasks>iphone"
     }
-    software_mobile {
-        related_1 iphone
+    iphone ||--|tasks_iphone : "parent o
+        child "iphone"
     }
-    iphone ||--|| software_mobile : "related to"
-        related_1 scripts_mobile
+        related_1 "software>mobile"
     }
-    scripts_mobile {
-        related_1 iphone
+    iphone ||..|software_mobile : "related t
+        related_1 "iphone"
     }
-    iphone ||--|| scripts_mobile : "related to"
+        related_1 "scripts>mobile"
+    }
+    iphone ||..|scripts_mobile : "related t
+        related_1 "iphone"
     }
     sell {
-    }
     github_jekyll {
-    }
+        SUBset "github"
     github {
-        child github_jekyll
+        SUPERset "github>jekyll"
+        parent "github>jekyll"
     }
-    github_jekyll {
-        parent github
+    github ||--|github_jekyll : "parent o
+        child "github"
     }
     jekyll {
+        parent "github>jekyll"
     }
-        related_1 scripts
+    jekyll ||--|github_jekyll : "parent o
+        child "jekyll"
     }
-    scripts {
-        related_1 estudos
+        related_1 "scripts"
     }
-    estudos ||--|| scripts : "related to"
-        related_1 trabalho
+    estudos ||..|scripts : "related to"
+        related_1 "trabalho"
     }
-    trabalho {
-        related_1 estudos
-    }
-    estudos ||--|| trabalho : "related to"
-    }
-        child edital_direito_processual-penal
-    }
-    edital_direito_processual-penal {
-        parent edital_direito
-    }
+    estudos ||..|trabalho : "related to"
     direito {
-        child edital_direito_processual-penal
+        parent "edital>direito"
     }
-    edital_direito_processual-penal {
-        parent direito
+    direito ||--|edital_direito : "parent o
+        child "direito"
+    }
+        parent "edital>direito>processual-penal"
+    }
+    edital_direito ||--|edital_direito_processual-penal : "parent o
+        child "edital>direito"
+    }
+        parent "edital>direito>processual-penal"
+    }
+    direito ||--|edital_direito_processual-penal : "parent o
+        child "direito"
     }
     fatherhood {
-    }
     misc {
-    }
     AI {
+        SUPERset "AI>prompt"
     AI_prompt {
-        child AI_prompt
+        SUBset "AI"
+        parent "AI>prompt"
     }
-    AI_prompt {
-        parent AI
+    AI ||--|AI_prompt : "parent o
+        child "AI"
     }
     software {
-        child software_mobile
+        SUPERset "software>cloud"
+        SUPERset "software>mobile"
+        parent "software>mobile"
     }
-    software_mobile {
-        parent software
+    software ||--|software_mobile : "parent o
+        child "software"
+    }
     software_cloud {
-        child software_cloud
+        parent "software>cloud"
     }
-    software_cloud {
-        parent software
-    }
-        related_1 iphone
-    }
-    iphone {
-        related_1 software_mobile
-    }
-    software_mobile ||--|| iphone : "related to"
-        related_1 linux
-    }
-    linux {
-        related_1 software_mobile
-    }
-    software_mobile ||--|| linux : "related to"
+    software ||--|software_cloud : "parent o
+        child "software"
     }
     mobile {
+        parent "software>mobile"
     }
+    mobile ||--|software_mobile : "parent o
+        child "mobile"
     }
+        related_1 "iphone"
+    }
+    software_mobile ||..|iphone : "related to"
+        related_1 "linux"
+    }
+    software_mobile ||..|linux : "related to"
     prompt {
+        parent "AI>prompt"
+    }
+    prompt ||--|AI_prompt : "parent o
+        child "prompt"
     }
     music {
+        parent "scripts>mobile"
     }
-        related_1 iphone
+    mobile ||--|scripts_mobile : "parent o
+        child "mobile"
     }
-    iphone {
-        related_1 scripts_mobile
+        related_1 "iphone"
     }
-    scripts_mobile ||--|| iphone : "related to"
-    }
+    scripts_mobile ||..|iphone : "related to"
     spirit {
     admoestação {
-        related_1 admoestação
+        related_1 "admoestação"
     }
-    admoestação {
-        related_1 spirit
-    }
-    spirit ||--|| admoestação : "related to"
+    spirit ||..|admoestação : "related t
+        related_1 "spirit"
     }
     ler {
-    }
-    }
     google-apps-script {
+        parent "scripts>google-apps-script"
+    }
+    google-apps-script ||--|scripts_google-apps-script : "parent o
+        child "google-apps-script"
     }
     saúde {
-    }
-    }
     cloud {
+        parent "software>cloud"
+    }
+    cloud ||--|software_cloud : "parent o
+        child "cloud"
     }
     receitas {
+        related_1 "spirit"
     }
-        related_1 spirit
+    admoestação ||..|spirit : "related to"
+        parent "scripts>cloud"
     }
-    spirit {
-        related_1 admoestação
-    }
-    admoestação ||--|| spirit : "related to"
-    }
-    }
+    cloud ||--|scripts_cloud : "parent o
+        child "cloud"
     }
     processual-penal {
+        parent "edital>direito>processual-penal"
+    }
+    processual-penal ||--|edital_direito_processual-penal : "parent o
+        child "processual-penal"
     }
     direito_processual-penal {
-        SUPERset direito_processual-penal
+        parent "direito>processual-penal"
     }
-    direito_processual-penal {
-        SUBset direito
+    direito ||--|direito_processual-penal : "parent o
+        child "direito"
     }
+        parent "direito>processual-penal"
+    }
+    processual-penal ||--|direito_processual-penal : "parent o
+        child "processual-penal"
+    }
+        parent "scripts>AI"
+    }
+    AI ||--|scripts_AI : "parent o
+        child "AI"
     }
 </div>
