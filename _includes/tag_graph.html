@@ -1,3 +1,172 @@
 <div class='mermaid'>
-
+erDiagram
+    linux {
+        related_2 software_mobile
+        related_26 scripts
+    }
+    linux ||..|| scripts : "related (26)"
+    linux ||..|| software_mobile : "related (2)"
+    rendimentos {
+    }
+    trabalho {
+        related_2 estudos
+    }
+    trabalho ||..|| estudos : "related (2)"
+    scripts {
+        related_26 linux
+        SUPERset scripts_AI
+        SUPERset scripts_cloud
+        SUPERset scripts_google-apps-script
+        SUPERset scripts_mobile
+        child scripts_AI
+        child scripts_cloud
+        child scripts_google-apps-script
+        child scripts_mobile
+    }
+    scripts ||--|| scripts_mobile : "parent of"
+    scripts ||--|| scripts_google-apps-script : "parent of"
+    scripts ||--|| scripts_cloud : "parent of"
+    scripts ||--|| scripts_AI : "parent of"
+    scripts ||..|| linux : "related (26)"
+    scripts ||..|| estudos : "related (2)"
+    carro {
+    }
+    edital {
+        SUPERset edital_direito_processual-penal
+        child edital_direito_processual-penal
+    }
+    edital ||--|| edital_direito_processual-penal : "parent of"
+    edital ||--|| edital_direito : "parent of"
+    tasks {
+        SUPERset tasks_iphone
+        child tasks_iphone
+    }
+    tasks ||--|| tasks_iphone : "parent of"
+    hardware {
+    }
+    chess {
+    }
+    assistir {
+    }
+    calls {
+    }
+    despesas {
+    }
+    tasks_iphone {
+        parent tasks
+    }
+    iphone ||--|| tasks_iphone : "parent of"
+    iphone {
+        related_2 scripts_mobile
+    }
+    iphone ||..|| software_mobile : "related (2)"
+    iphone ||..|| scripts_mobile : "related (2)"
+    sell {
+    }
+    github_jekyll {
+        parent github
+    }
+    github ||--|| github_jekyll : "parent of"
+    jekyll ||--|| github_jekyll : "parent of"
+    github {
+        SUPERset github_jekyll
+        child github_jekyll
+    }
+    jekyll {
+    }
+    estudos {
+        related_2 trabalho
+    }
+    estudos ||..|| scripts : "related (2)"
+    estudos ||..|| trabalho : "related (2)"
+    edital_direito {
+        parent edital
+    }
+    direito ||--|| edital_direito : "parent of"
+    edital_direito ||--|| edital_direito_processual-penal : "parent of"
+    direito {
+    }
+    direito ||--|| edital_direito_processual-penal : "parent of"
+    fatherhood {
+    }
+    misc {
+    }
+    AI {
+        SUPERset AI_prompt
+        child AI_prompt
+    }
+    AI ||--|| AI_prompt : "parent of"
+    software {
+        SUPERset software_mobile
+        SUPERset software_cloud
+        child software_mobile
+        child software_cloud
+    }
+    software ||--|| software_cloud : "parent of"
+    software ||--|| software_mobile : "parent of"
+    software_mobile {
+        related_2 linux
+        related_2 iphone
+        parent software
+    }
+    mobile ||--|| software_mobile : "parent of"
+    software_mobile ||..|| iphone : "related (2)"
+    software_mobile ||..|| linux : "related (2)"
+    mobile {
+    }
+    AI_prompt {
+        parent AI
+    }
+    prompt ||--|| AI_prompt : "parent of"
+    prompt {
+    }
+    music {
+    }
+    scripts_mobile {
+        parent scripts
+    }
+    mobile ||--|| scripts_mobile : "parent of"
+    scripts_mobile ||..|| iphone : "related (2)"
+    spirit {
+        related_2 admoestacao
+    }
+    spirit ||..|| admoestacao : "related (2)"
+    ler {
+    }
+    scripts_google-apps-script {
+    }
+    google-apps-script ||--|| scripts_google-apps-script : "parent of"
+    google-apps-script {
+    }
+    saude {
+    }
+    software_cloud {
+    }
+    cloud ||--|| software_cloud : "parent of"
+    cloud {
+    }
+    receitas {
+    }
+    admoestacao {
+        related_2 spirit
+    }
+    admoestacao ||..|| spirit : "related (2)"
+    scripts_cloud {
+    }
+    cloud ||--|| scripts_cloud : "parent of"
+    edital_direito_processual-penal {
+        parent edital_direito
+        parent direito
+        SUBset direito
+    }
+    processual-penal ||--|| edital_direito_processual-penal : "parent of"
+    processual-penal {
+    }
+    direito_processual-penal {
+    }
+    direito ||--|| direito_processual-penal : "parent of"
+    processual-penal ||--|| direito_processual-penal : "parent of"
+    scripts_AI {
+    }
+    AI ||--|| scripts_AI : "parent of"
 </div>
