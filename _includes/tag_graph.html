@@ -1,105 +1,155 @@
 <div class='mermaid'>
 erDiagram
-    linux {
-    scripts {
-        related scripts
     linux ||..|| scripts : "related to"
-        related linux
-    software_mobile {
-        related software>mobile
     linux ||..|| software_mobile : "related to"
-    rendimentos {
-    trabalho {
-    estudos {
-        related estudos
     trabalho ||..|| estudos : "related to"
-        related trabalho
-    scripts_AI {
-        SUBset scripts>AI
     scripts ||--|| scripts_AI : "parent of"
-        SUPERset scripts
-    scripts_mobile {
-        SUBset scripts>mobile
-    scripts ||--|| scripts_mobile : "parent of"
-    scripts_google-apps-script {
-        SUBset scripts>google-apps-script
     scripts ||--|| scripts_google-apps-script : "parent of"
-    scripts_cloud {
-        SUBset scripts>cloud
     scripts ||--|| scripts_cloud : "parent of"
+    scripts ||--|| scripts_mobile : "parent of"
     scripts ||..|| linux : "related to"
     scripts ||..|| estudos : "related to"
-    carro {
-    edital {
-    edital_direito {
-        SUBset edital>direito
     edital ||--|| edital_direito : "parent of"
-        SUPERset edital
-    edital_direito_processual-penal {
-        SUBset edital>direito>processual-penal
     edital ||--|| edital_direito_processual-penal : "parent of"
-    tasks {
-    tasks_iphone {
-        SUBset tasks>iphone
     tasks ||--|| tasks_iphone : "parent of"
-        SUPERset tasks
-    hardware {
-    chess {
-    assistir {
-    calls {
-    despesas {
-    iphone {
+    tasks ||--|| tasks_iphone : "parent of"
     iphone ||..|| software_mobile : "related to"
-        related iphone
-        related scripts>mobile
     iphone ||..|| scripts_mobile : "related to"
-    sell {
-    github_jekyll {
-    github {
-        SUBset github>jekyll
     github ||--|| github_jekyll : "parent of"
-        SUPERset github
-    jekyll {
+    github ||--|| github_jekyll : "parent of"
     estudos ||..|| scripts : "related to"
     estudos ||..|| trabalho : "related to"
+    edital ||--|| edital_direito : "parent of"
     edital_direito ||--|| edital_direito_processual-penal : "parent of"
-        SUPERset edital>direito
-    direito {
     direito ||--|| edital_direito_processual-penal : "parent of"
-        SUPERset direito
-    fatherhood {
-    misc {
-    AI {
-    AI_prompt {
-        SUBset AI>prompt
     AI ||--|| AI_prompt : "parent of"
-        SUPERset AI
-    software {
-    software_cloud {
-        SUBset software>cloud
     software ||--|| software_cloud : "parent of"
-        SUPERset software
-        SUBset software>mobile
+    software ||--|| software_mobile : "parent of"
     software ||--|| software_mobile : "parent of"
     software_mobile ||..|| iphone : "related to"
     software_mobile ||..|| linux : "related to"
-    mobile {
-    prompt {
-    music {
+    AI ||--|| AI_prompt : "parent of"
+    scripts ||--|| scripts_mobile : "parent of"
     scripts_mobile ||..|| iphone : "related to"
-    spirit {
-    admoestação {
-        related admoestação
     spirit ||..|| admoestação : "related to"
-        related spirit
-    ler {
-    google-apps-script {
-    saúde {
-    cloud {
-    receitas {
+    scripts ||--|| scripts_google-apps-script : "parent of"
+    software ||--|| software_cloud : "parent of"
     admoestação ||..|| spirit : "related to"
-    processual-penal {
-    direito_processual-penal {
-        SUBset direito>processual-penal
+    scripts ||--|| scripts_cloud : "parent of"
+    edital ||--|| edital_direito : "parent of"
+    edital_direito ||--|| edital_direito_processual-penal : "parent of"
     direito ||--|| direito_processual-penal : "parent of"
+    scripts ||--|| scripts_AI : "parent of"
+    linux {
+        related scripts
+        related software>mobile
+    }
+    scripts {
+        SUBset scripts>AI
+        SUBset scripts>cloud
+        SUBset scripts>google-apps-script
+        SUBset scripts>mobile
+        related estudos
+        related linux
+    }
+    software_mobile {
+        SUPERset software
+        related iphone
+        related linux
+    }
+    rendimentos
+    trabalho {
+        related estudos
+    }
+    estudos {
+        related scripts
+        related trabalho
+    }
+    scripts_AI {
+        SUPERset scripts
+    }
+    scripts_google-apps-script {
+        SUPERset scripts
+    }
+    scripts_cloud {
+        SUPERset scripts
+    }
+    scripts_mobile {
+        SUPERset scripts
+        related iphone
+    }
+    carro
+    edital {
+        SUBset edital>direito
+        SUBset edital>direito>processual-penal
+    }
+    edital_direito {
+        SUBset edital>direito>processual-penal
+        SUPERset edital
+    }
+    edital_direito_processual-penal {
+        SUPERset direito
+        SUPERset edital
+        SUPERset edital>direito
+    }
+    tasks {
+        SUBset tasks>iphone
+    }
+    tasks_iphone {
+        SUPERset tasks
+    }
+    hardware
+    chess
+    assistir
+    calls
+    despesas
+    iphone {
+        related scripts>mobile
+        related software>mobile
+    }
+    sell
+    github_jekyll {
+        SUPERset github
+    }
+    github {
+        SUBset github>jekyll
+    }
+    jekyll
+    direito {
+        SUBset direito>processual-penal
+        SUBset edital>direito>processual-penal
+    }
+    fatherhood
+    misc
+    AI {
+        SUBset AI>prompt
+    }
+    AI_prompt {
+        SUPERset AI
+    }
+    software {
+        SUBset software>cloud
+        SUBset software>mobile
+    }
+    software_cloud {
+        SUPERset software
+    }
+    mobile
+    prompt
+    music
+    spirit {
+        related admoestação
+    }
+    admoestação {
+        related spirit
+    }
+    ler
+    google-apps-script
+    saúde
+    cloud
+    receitas
+    processual-penal
+    direito_processual-penal {
+        SUPERset direito
+    }
 </div>
