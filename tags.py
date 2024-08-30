@@ -8,8 +8,7 @@ from typing import Dict, List, Union, Any
 # Configure logging
 logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s")
 
-THRESHOLD = 0  # Adjust this value as needed
-
+THRESHOLD = 0  # Minimum tag frequency to include in the output
 
 def extract_frontmatter(file_content: str) -> str:
     """Extracts the YAML frontmatter from a markdown file."""
@@ -22,7 +21,6 @@ def extract_frontmatter(file_content: str) -> str:
                 break
     return frontmatter
 
-
 def generate_partial_tags(tag: str) -> List[str]:
     """Generates all partial tags for a given tag."""
     parts = tag.split(">")
@@ -31,7 +29,6 @@ def generate_partial_tags(tag: str) -> List[str]:
         for j in range(len(parts) - i + 1):
             partial_tags.append(">".join(parts[j: j + i]))
     return partial_tags
-
 
 def process_tags(posts_dir: str, output_file: str) -> tuple:
     """
@@ -181,13 +178,12 @@ def process_tags(posts_dir: str, output_file: str) -> tuple:
 
     return tag_data, combined_tags
 
-
 def generate_mermaid_graph(
     tag_data: Union[List[Dict[str, Any]], Dict[str, Any]], direction: str = "TD"
 ) -> str:
     """
     Generates Mermaid ER diagram code for the tag structure,
-    including parent, child, SUPERset, and SUBset relationships.
+    including parent, child, related, and combined tag relationships.
 
     Args:
         tag_data (Union[List[Dict[str, Any]], Dict[str, Any]]):
@@ -225,7 +221,7 @@ def generate_mermaid_graph(
     ) -> None:
         """
         Adds an edge (relationship) between two nodes in the graph,
-        including relationship attributes (parent, child, SUPERset, SUBset).
+        including relationship attributes (parent, child, related).
 
         Args:
             from_tag (str): The starting node of the edge.
