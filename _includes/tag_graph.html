@@ -1,194 +1,160 @@
 <div class='mermaid'>
 erDiagram
     linux {
-    related_13 scripts
-    related_1 software>mobile
+        related_13 scripts
+        related_1 software_mobile
     }
-    scripts {
-    child scripts>google-apps-script
-    child scripts>mobile
-    child scripts>cloud
-    child scripts>AI
-    related_0 linux
-    related_0 estudos
-    }
-    linux -..-> scripts : "related to"
     software_mobile {
-    related_0 linux
-    related_0 iphone
-    parent software
+        parent software
+        related_1 iphone
+        related_1 linux
     }
-    linux -..-> software_mobile : "related to"
+    linux ||--|{| software_mobile : "related (1 co-occurrences)"
+    scripts {
+        child scripts_AI
+        child scripts_cloud
+        child scripts_google-apps-script
+        child scripts_mobile
+        related_13 linux
+        related_1 estudos
+    }
+    linux ||--|{| scripts : "related (13 co-occurrences)"
     rendimentos {
-    type string
     }
     trabalho {
-    related_0 estudos
+        related_1 estudos
     }
     estudos {
-    related_1 scripts
-    related_1 trabalho
+        related_1 scripts
+        related_1 trabalho
     }
-    trabalho -..-> estudos : "related to"
+    trabalho ||--|{| estudos : "related (1 co-occurrences)"
+    scripts_AI {
+        parent scripts
+    }
+    scripts ||--|| scripts_AI : "parent of"
+    scripts_cloud {
+        parent scripts
+    }
+    scripts ||--|| scripts_cloud : "parent of"
     scripts_google-apps-script {
-    parent scripts
+        parent scripts
     }
     scripts ||--|| scripts_google-apps-script : "parent of"
     scripts_mobile {
-    related_0 iphone
-    parent scripts
+        parent scripts
+        related_1 iphone
     }
     scripts ||--|| scripts_mobile : "parent of"
-    scripts_cloud {
-    parent scripts
-    }
-    scripts ||--|| scripts_cloud : "parent of"
-    scripts_AI {
-    parent scripts
-    }
-    scripts ||--|| scripts_AI : "parent of"
-    scripts -..-> linux : "related to"
-    scripts -..-> estudos : "related to"
+    scripts ||--|{| linux : "related (13 co-occurrences)"
+    scripts ||--|{| estudos : "related (1 co-occurrences)"
     carro {
-    type string
     }
     edital {
-    child edital>direito
-    child edital>direito>processual-penal
+        child edital_direito_processual-penal
+        child edital_direito
     }
-    edital_direito {
-    child edital>direito>processual-penal
-    parent edital
-    }
-    edital ||--|| edital_direito : "parent of"
     edital_direito_processual-penal {
-    parent edital
-    parent edital>direito
-    parent direito
+        parent edital_direito
+        parent edital
+        parent direito
     }
     edital ||--|| edital_direito_processual-penal : "parent of"
+    edital_direito {
+        parent edital
+        child edital_direito_processual-penal
+    }
+    edital ||--|| edital_direito : "parent of"
     tasks {
-    child tasks>iphone
+        child tasks_iphone
     }
     tasks_iphone {
-    parent tasks
+        parent tasks
     }
     tasks ||--|| tasks_iphone : "parent of"
     hardware {
-    type string
     }
     chess {
-    type string
     }
     assistir {
-    type string
     }
     calls {
-    type string
     }
     despesas {
-    type string
     }
-    tasks_iphone ||--|| tasks : "SUPERset of"
     iphone {
-    related_1 scripts>mobile
-    related_1 software>mobile
+        related_1 software_mobile
+        related_1 scripts_mobile
     }
-    iphone -..-> scripts_mobile : "related to"
-    iphone -..-> software_mobile : "related to"
+    iphone ||--|{| software_mobile : "related (1 co-occurrences)"
+    iphone ||--|{| scripts_mobile : "related (1 co-occurrences)"
     sell {
-    type string
     }
     github_jekyll {
-    parent github
+        parent github
     }
     github {
-    child github>jekyll
+        child github_jekyll
     }
-    github_jekyll ||--|| github : "SUPERset of"
     github ||--|| github_jekyll : "parent of"
     jekyll {
-    type string
     }
-    estudos -..-> scripts : "related to"
-    estudos -..-> trabalho : "related to"
+    estudos ||--|{| trabalho : "related (1 co-occurrences)"
+    estudos ||--|{| scripts : "related (1 co-occurrences)"
     edital_direito ||--|| edital_direito_processual-penal : "parent of"
-    edital_direito ||--|| edital : "SUPERset of"
     direito {
-    child edital>direito>processual-penal
+        child edital_direito_processual-penal
     }
     direito ||--|| edital_direito_processual-penal : "parent of"
     fatherhood {
-    type string
     }
     misc {
-    type string
     }
     AI {
-    child AI>prompt
+        child AI_prompt
     }
     AI_prompt {
-    parent AI
+        parent AI
     }
     AI ||--|| AI_prompt : "parent of"
     software {
-    child software>cloud
-    child software>mobile
+        child software_mobile
+        child software_cloud
     }
+    software ||--|| software_mobile : "parent of"
     software_cloud {
-    parent software
+        parent software
     }
     software ||--|| software_cloud : "parent of"
-    software ||--|| software_mobile : "parent of"
-    software_mobile -..-> linux : "related to"
-    software_mobile -..-> iphone : "related to"
-    software_mobile ||--|| software : "SUPERset of"
+    software_mobile ||--|{| linux : "related (1 co-occurrences)"
+    software_mobile ||--|{| iphone : "related (1 co-occurrences)"
     mobile {
-    type string
     }
-    AI_prompt ||--|| AI : "SUPERset of"
     prompt {
-    type string
     }
     music {
-    type string
     }
-    scripts_mobile -..-> iphone : "related to"
-    scripts_mobile ||--|| scripts : "SUPERset of"
+    scripts_mobile ||--|{| iphone : "related (1 co-occurrences)"
     spirit {
-    related_0 admoestação
+        related_1 admoestação
     }
     admoestação {
-    related_1 spirit
+        related_1 spirit
     }
-    spirit -..-> admoestação : "related to"
+    spirit ||--|{| admoestação : "related (1 co-occurrences)"
     ler {
-    type string
     }
-    scripts_google-apps-script ||--|| scripts : "SUPERset of"
     google-apps-script {
-    type string
     }
     saúde {
-    type string
     }
-    software_cloud ||--|| software : "SUPERset of"
     cloud {
-    type string
     }
     receitas {
-    type string
     }
-    admoestação -..-> spirit : "related to"
-    scripts_cloud ||--|| scripts : "SUPERset of"
-    edital_direito_processual-penal ||--|| edital : "SUPERset of"
-    edital_direito_processual-penal ||--|| edital_direito : "SUPERset of"
-    edital_direito_processual-penal ||--|| direito : "SUPERset of"
+    admoestação ||--|{| spirit : "related (1 co-occurrences)"
     processual-penal {
-    type string
     }
     direito_processual-penal {
-    type string
     }
-    scripts_AI ||--|| scripts : "SUPERset of"
 </div>
