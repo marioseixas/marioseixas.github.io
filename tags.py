@@ -6,18 +6,6 @@ from datetime import datetime
 from typing import Dict, List, Union, Any
 import json
 
-class JsonOutputHandler:
-    def write(self, data: dict, output_file: str):
-        """Writes the tag data to a JSON file.
-
-        Args:
-            data (dict): The tag data to write.
-            output_file (str): The path to the output file.
-        """
-        with open(output_file, 'w', encoding='utf-8') as f:
-            json.dump(data, f, ensure_ascii=False, indent=4)
-        logging.info(f"Tag data has been written to {output_file}")
-
 # Configure logging
 logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s")
 
@@ -194,6 +182,31 @@ def process_tags(posts_dir: str, output_file: str) -> tuple:
 
     return tag_data, combined_tags
 
+class JsonOutputHandler(BaseOutputHandler): # Assuming BaseOutputHandler is defined elsewhere
+    def write(self, data: dict, output_file: str):
+        """Writes the tag data to a JSON file.
+
+        Args:
+            data (dict): The tag data to write.
+            output_file (str): The path to the output file.
+        """
+        # Convert sets to lists in the tag_data dictionary
+        def convert_sets_to_lists(d):
+            if isinstance(d, dict):
+                return {k: convert_sets_to_lists(v) for k, v in d.items()}
+            elif isinstance(d, list):
+                return [convert_sets_to_lists(i) for i in d]
+            elif isinstance(d, set):
+                return list(d)
+            else:
+                return d
+        
+        converted_data = convert_sets_to_lists(data)
+        
+        with open(output_file, 'w', encoding='utf-8') as f:
+            json.dump(converted_data, f, ensure_ascii=False, indent=4)
+        logging.info(f"Tag data has been written to {output_file}")
+
 def generate_mermaid_graph(
     tag_data: Union[List[Dict[str, Any]], Dict[str, Any]], direction: str = "TD"
 ) -> str:
@@ -306,16 +319,16 @@ if __name__ == "__main__":
         os.getenv("GITHUB_WORKSPACE", ""), "_data/processed_tags.yml"
     )
 
-    tag_data, combined_tags = process_tags(posts_dir, output_file)
+    tag_data, combined_tags = process_tags(posts_dir, output_file) 
 
-    # Example: Output to JSON
+    # Output to JSON
     json_output_handler = JsonOutputHandler()
     json_output_file = os.path.join(
         os.getenv("GITHUB_WORKSPACE", ""), "_data/processed_tags.json"
     )
     json_output_handler.write(tag_data, json_output_file)
 
-    # Example: Output to Mermaid graph
+    # Output to Mermaid graph
     mermaid_graph = generate_mermaid_graph(tag_data)
     with open(
         os.path.join(os.getenv("GITHUB_WORKSPACE", ""), "_includes/tag_graph.html"),
