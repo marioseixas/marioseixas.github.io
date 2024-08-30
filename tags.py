@@ -332,8 +332,7 @@ def process_tags(posts_dir: str, output_file: str) -> tuple:
         return "\n".join(graph)
 
 
-if __name__ == "__main__":
-    # Use environment variables to determine paths (adapt if necessary)
+if __name__ == "__main__":    
     posts_dir = os.path.join(os.getenv("GITHUB_WORKSPACE", ""), "_posts")
     output_file = os.path.join(
         os.getenv("GITHUB_WORKSPACE", ""), "_data/processed_tags.yml"
