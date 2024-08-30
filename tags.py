@@ -220,6 +220,8 @@ def generate_mermaid_graph(
         if safe_tag not in added_nodes:
             node_def = f"    {safe_tag} {{"
             graph.append(node_def)
+            # Add type attribute (optional)
+            # graph.append(f'        type "{tag}"')
             added_nodes.add(safe_tag)
         return safe_tag
 
@@ -247,89 +249,66 @@ def generate_mermaid_graph(
                 # Hierarchical relationship (parent-child)
 
                 # Add parent attribute to the child entity
-                if not any(
-                    line.startswith(f'        parent "{to_tag}"')
-                    for line in graph
-                    if safe_from in line
-                ):
-                    graph.insert(
-                        graph.index(f"    {safe_from} {{") + 1,
-                        f'        parent "{to_tag}"',
-                    )
+                graph.append(f'        parent "{to_tag}"')
 
                 # Close the entity definition for the from_tag
-                if not graph[-1].startswith("    }"):
-                    graph.append(f"    }}")
-
+                graph.append(f"    }}")
                 graph.append(f'    {safe_from} ||--|| {safe_to} : "parent of"')
 
                 # Add child attribute to the parent entity (if not already present)
-                if not any(
-                    line.startswith(f'        child "{from_tag}"')
-                    for line in graph
-                    if safe_to in line
-                ):
-                    graph.insert(
-                        graph.index(f"    {safe_to} {{") + 1,
-                        f'        child "{from_tag}"',
-                    )
-
-                # Close the entity definition for the to_tag
-                if not graph[-1].startswith("    }"):
-                    graph.append(f"    }}")
+                if f'        child "{from_tag}"' not in graph:
+                    # Modify the last occurrence of the entity definition to include the child attribute
+                    parent_entity_start = graph.index(f"    {safe_to} {{")
+                    for i in range(parent_entity_start + 1, len(graph)):
+                        if graph[i].startswith("    }"):
+                            graph[i] = graph[i].replace(
+                                "    }", f'        child "{from_tag}"\n    }}'
+                            )
+                            break
 
             elif edge_type == "dashed":
                 # Non-hierarchical relationship (related)
-
-                # Find the next available related_<#> index for from_tag
-                related_count_from = 0
-                while any(
-                    line.startswith(f'        related_{related_count_from} ')
+                related_count_from = sum(
+                    1
                     for line in graph
-                    if safe_from in line
-                ):
-                    related_count_from += 1
+                    if line.startswith(f"        related_")
+                    and f'"{to_tag}"' in line
+                    and line.split(" ")[0].split("_")[0] == "related"
+                    and graph.index(line) < graph.index(f"    {safe_from} {{") + 10
+                    and graph.index(f"    {safe_from} {{")
+                    < graph.index(line)
+                    < graph.index(f"    {safe_to} {{")
+                )
 
-                if not any(
-                    line.startswith(
-                        f'        related_{related_count_from} "{to_tag}"'
-                    )
+                graph.append(f'        related_{related_count_from} "{to_tag}"')
+
+                # Close the entity definition for the from_tag
+                graph.append(f"    }}")
+                graph.append(f'    {safe_from} ||..|| {safe_to} : "related to"')
+
+                # Add related attribute to the destination node (if not already present)
+                related_count_to = sum(
+                    1
                     for line in graph
-                    if safe_from in line
-                ):
-                    graph.insert(
-                        graph.index(f"    {safe_from} {{") + 1 + related_count_from,
-                        f'        related_{related_count_from} "{to_tag}"',
-                    )
+                    if line.startswith(f"        related_")
+                    and f'"{from_tag}"' in line
+                    and line.split(" ")[0].split("_")[0] == "related"
+                    and graph.index(line) < graph.index(f"    {safe_to} {{") + 10
+                    and graph.index(f"    {safe_to} {{")
+                    < graph.index(line)
+                    < graph.index(f"    {safe_from} {{")
+                )
 
-                # Close the entity definition for from_tag
-                if not graph[-1].startswith("    }"):
-                    graph.append(f"    }}")
-
-                graph.append(f'    {safe_from} ||..|| {safe_to} : "{label}"')
-
-                # Find the next available related_<#> index for to_tag
-                related_count_to = 0
-                while any(
-                    line.startswith(f'        related_{related_count_to} ')
-                    for line in graph
-                    if safe_to in line
-                ):
-                    related_count_to += 1
-
-                if not any(
-                    line.startswith(f'        related_{related_count_to} "{from_tag}"')
-                    for line in graph
-                    if safe_to in line
-                ):
-                    graph.insert(
-                        graph.index(f"    {safe_to} {{") + 1 + related_count_to,
-                        f'        related_{related_count_to} "{from_tag}"',
-                    )
-
-                # Close the entity definition for to_tag
-                if not graph[-1].startswith("    }"):
-                    graph.append(f"    }}")
+                if f'        related_{related_count_to} "{from_tag}"' not in graph:
+                    # Modify the last occurrence of the entity definition to include the related attribute
+                    dest_entity_start = graph.index(f"    {safe_to} {{")
+                    for i in range(dest_entity_start + 1, len(graph)):
+                        if graph[i].startswith("    }"):
+                            graph[i] = graph[i].replace(
+                                "    }",
+                                f'        related_{related_count_to} "{from_tag}"\n    }}',
+                            )
+                            break
 
             added_edges.add(edge)
 
@@ -386,43 +365,47 @@ def generate_mermaid_graph(
         for child in data.get("children", []):
             safe_child = child.replace(">", "_").replace(" ", "_")
 
-            # Add SUPERset to parent (if not redundant with parent/child)
+            # Add SUPERset to parent, SUBset to child (if not redundant with parent/child)
             if not any(
-                line.startswith(f'        parent "{tag_name}"')
-                for line in graph
+                f'        parent "{tag_name}"' in line for line in graph
                 if safe_child in line
-            ) and not any(
-                line.startswith(f'        SUPERset "{child}"')
-                for line in graph
-                if safe_tag_name in line
             ):
-                graph.insert(
-                    graph.index(f"    {safe_tag_name} {{") + 1,
-                    f'        SUPERset "{child}"',
-                )
+                if not any(
+                    f'        SUPERset "{child}"' in line for line in graph
+                    if safe_tag_name in line
+                ):
+                    graph.insert(
+                        graph.index(f"    {safe_tag_name} {{") + 1,
+                        f'        SUPERset "{child}"',
+                    )
 
-            # Add SUBset to child (if not redundant with parent/child)
             if not any(
-                line.startswith(f'        child "{tag_name}"')
-                for line in graph
-                if safe_tag_name in line
-            ) and not any(
-                line.startswith(f'        SUBset "{tag_name}"')
-                for line in graph
+                f'        child "{tag_name}"' in line for line in graph
                 if safe_child in line
             ):
-                graph.insert(
-                    graph.index(f"    {safe_child} {{") + 1,
-                    f'        SUBset "{tag_name}"',
-                )
+                if not any(
+                    f'        SUBset "{tag_name}"' in line for line in graph
+                    if safe_tag_name in line
+                ):
+                    graph.insert(
+                        graph.index(f"    {safe_child} {{") + 1,
+                        f'        SUBset "{tag_name}"',
+                    )
 
         for related in data.get("related", []):
             # Ensure related tags are also represented as entities
             add_node(related)
 
-    # Close any remaining open entity definitions
-    if not graph[-1].startswith("    }"):
-        graph.append("    }")
+    # Ensure proper closing of entity blocks and correct syntax:
+    for i in range(len(graph) - 1, -1, -1):  # Reverse iteration to avoid index shifting issues
+        if "{" in graph[i] and "}" not in graph[i]:
+            next_closing_brace_index = next(
+                (j for j in range(i + 1, len(graph)) if "}" in graph[j]), None
+            )
+            if next_closing_brace_index:
+                graph[next_closing_brace_index] = graph[next_closing_brace_index].replace(
+                    "}", ""
+                )  # Remove extra brace
 
     return "\n".join(graph)
 
