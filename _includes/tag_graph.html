@@ -1,45 +1,152 @@
 <div class='mermaid'>
 erDiagram
     linux {
-        related_2 software_mobile
         related_26 scripts
+        related_2 software_mobile
+    }
+    scripts {
+        child AI
+        child scripts_AI
+        child scripts_google-apps-script
+        child cloud
+        child mobile
+        child google-apps-script
+        child scripts_mobile
+        child scripts_cloud
+        related_26 linux
+        related_2 estudos
+        SUPERset AI
+        SUPERset scripts_AI
+        SUPERset scripts_google-apps-script
+        SUPERset cloud
+        SUPERset mobile
+        SUPERset google-apps-script
+        SUPERset scripts_mobile
+        SUPERset scripts_cloud
     }
     linux ||..|| scripts : "related (26)"
+    software_mobile {
+        parent software
+        related_2 iphone
+        related_2 linux
+        SUBset software
+    }
     linux ||..|| software_mobile : "related (2)"
     rendimentos {
     }
     trabalho {
         related_2 estudos
     }
+    estudos {
+        related_2 scripts
+        related_2 trabalho
+    }
     trabalho ||..|| estudos : "related (2)"
-    scripts {
-        related_26 linux
-        SUPERset scripts_AI
-        SUPERset scripts_cloud
-        SUPERset scripts_google-apps-script
-        SUPERset scripts_mobile
-        child scripts_AI
-        child scripts_cloud
-        child scripts_google-apps-script
-        child scripts_mobile
+    AI {
+        parent scripts
+        child prompt
+        child AI_prompt
+        SUPERset prompt
+        SUPERset AI_prompt
+        SUBset scripts
+    }
+    scripts ||--|| AI : "parent of"
+    scripts_AI {
+        parent scripts
+        SUBset scripts
+    }
+    scripts ||--|| scripts_AI : "parent of"
+    scripts_google-apps-script {
+        parent scripts
+        SUBset scripts
+    }
+    scripts ||--|| scripts_google-apps-script : "parent of"
+    cloud {
+        parent scripts
+        parent software
+        SUBset scripts
+        SUBset software
+    }
+    scripts ||--|| cloud : "parent of"
+    mobile {
+        parent scripts
+        parent software
+        SUBset scripts
+        SUBset software
+    }
+    scripts ||--|| mobile : "parent of"
+    google-apps-script {
+        parent scripts
+        SUBset scripts
+    }
+    scripts ||--|| google-apps-script : "parent of"
+    scripts_mobile {
+        parent scripts
+        related_2 iphone
+        SUBset scripts
     }
     scripts ||--|| scripts_mobile : "parent of"
-    scripts ||--|| scripts_google-apps-script : "parent of"
+    scripts_cloud {
+        parent scripts
+        SUBset scripts
+    }
     scripts ||--|| scripts_cloud : "parent of"
-    scripts ||--|| scripts_AI : "parent of"
     scripts ||..|| linux : "related (26)"
     scripts ||..|| estudos : "related (2)"
     carro {
     }
     edital {
-        SUPERset edital_direito_processual-penal
+        child direito
+        child edital_direito
+        child direito_processual-penal
         child edital_direito_processual-penal
+        SUPERset direito
+        SUPERset edital_direito
+        SUPERset direito_processual-penal
+        SUPERset edital_direito_processual-penal
+    }
+    direito {
+        parent edital
+        child edital_direito_processual-penal
+        SUPERset edital_direito_processual-penal
+        SUBset edital
+    }
+    edital ||--|| direito : "parent of"
+    edital_direito {
+        parent edital
+        child processual-penal
+        SUPERset processual-penal
+        SUBset edital
+    }
+    edital ||--|| edital_direito : "parent of"
+    direito_processual-penal {
+        parent edital
+        SUBset edital
+    }
+    edital ||--|| direito_processual-penal : "parent of"
+    edital_direito_processual-penal {
+        parent direito
+        parent edital
+        SUBset direito
+        SUBset edital
     }
     edital ||--|| edital_direito_processual-penal : "parent of"
-    edital ||--|| edital_direito : "parent of"
     tasks {
-        SUPERset tasks_iphone
+        child iphone
         child tasks_iphone
+        SUPERset iphone
+        SUPERset tasks_iphone
+    }
+    iphone {
+        parent tasks
+        related_2 software_mobile
+        related_2 scripts_mobile
+        SUBset tasks
+    }
+    tasks ||--|| iphone : "parent of"
+    tasks_iphone {
+        parent tasks
+        SUBset tasks
     }
     tasks ||--|| tasks_iphone : "parent of"
     hardware {
@@ -52,121 +159,96 @@ erDiagram
     }
     despesas {
     }
-    tasks_iphone {
-        parent tasks
-    }
     iphone ||--|| tasks_iphone : "parent of"
-    iphone {
-        related_2 scripts_mobile
-    }
     iphone ||..|| software_mobile : "related (2)"
     iphone ||..|| scripts_mobile : "related (2)"
     sell {
     }
     github_jekyll {
         parent github
+        SUBset github
+    }
+    github {
+        child github_jekyll
+        child jekyll
+        SUPERset github_jekyll
+        SUPERset jekyll
     }
     github ||--|| github_jekyll : "parent of"
-    jekyll ||--|| github_jekyll : "parent of"
-    github {
-        SUPERset github_jekyll
-        child github_jekyll
-    }
     jekyll {
+        parent github
+        SUBset github
     }
-    estudos {
-        related_2 trabalho
-    }
+    jekyll ||--|| github_jekyll : "parent of"
+    github ||--|| jekyll : "parent of"
     estudos ||..|| scripts : "related (2)"
     estudos ||..|| trabalho : "related (2)"
-    edital_direito {
-        parent edital
-    }
     direito ||--|| edital_direito : "parent of"
-    edital_direito ||--|| edital_direito_processual-penal : "parent of"
-    direito {
+    processual-penal {
+        parent edital_direito
+        SUBset edital_direito
     }
+    edital_direito ||--|| processual-penal : "parent of"
     direito ||--|| edital_direito_processual-penal : "parent of"
     fatherhood {
     }
     misc {
     }
-    AI {
-        SUPERset AI_prompt
-        child AI_prompt
+    prompt {
+        parent AI
+        SUBset AI
+    }
+    AI ||--|| prompt : "parent of"
+    AI_prompt {
+        parent AI
+        SUBset AI
     }
     AI ||--|| AI_prompt : "parent of"
     software {
-        SUPERset software_mobile
-        SUPERset software_cloud
+        child mobile
+        child cloud
         child software_mobile
         child software_cloud
+        SUPERset mobile
+        SUPERset cloud
+        SUPERset software_mobile
+        SUPERset software_cloud
+    }
+    software ||--|| mobile : "parent of"
+    software ||--|| cloud : "parent of"
+    software ||--|| software_mobile : "parent of"
+    software_cloud {
+        parent software
+        SUBset software
     }
     software ||--|| software_cloud : "parent of"
-    software ||--|| software_mobile : "parent of"
-    software_mobile {
-        related_2 linux
-        related_2 iphone
-        parent software
-    }
     mobile ||--|| software_mobile : "parent of"
     software_mobile ||..|| iphone : "related (2)"
     software_mobile ||..|| linux : "related (2)"
-    mobile {
-    }
-    AI_prompt {
-        parent AI
-    }
     prompt ||--|| AI_prompt : "parent of"
-    prompt {
-    }
     music {
-    }
-    scripts_mobile {
-        parent scripts
     }
     mobile ||--|| scripts_mobile : "parent of"
     scripts_mobile ||..|| iphone : "related (2)"
     spirit {
         related_2 admoestacao
     }
-    spirit ||..|| admoestacao : "related (2)"
-    ler {
-    }
-    scripts_google-apps-script {
-    }
-    google-apps-script ||--|| scripts_google-apps-script : "parent of"
-    google-apps-script {
-    }
-    saude {
-    }
-    software_cloud {
-    }
-    cloud ||--|| software_cloud : "parent of"
-    cloud {
-    }
-    receitas {
-    }
     admoestacao {
         related_2 spirit
     }
+    spirit ||..|| admoestacao : "related (2)"
+    ler {
+    }
+    google-apps-script ||--|| scripts_google-apps-script : "parent of"
+    saude {
+    }
+    cloud ||--|| software_cloud : "parent of"
+    receitas {
+    }
     admoestacao ||..|| spirit : "related (2)"
-    scripts_cloud {
-    }
     cloud ||--|| scripts_cloud : "parent of"
-    edital_direito_processual-penal {
-        parent edital_direito
-        parent direito
-        SUBset direito
-    }
     processual-penal ||--|| edital_direito_processual-penal : "parent of"
-    processual-penal {
-    }
-    direito_processual-penal {
-    }
     direito ||--|| direito_processual-penal : "parent of"
     processual-penal ||--|| direito_processual-penal : "parent of"
-    scripts_AI {
-    }
     AI ||--|| scripts_AI : "parent of"
 </div>
