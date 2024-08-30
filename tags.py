@@ -11,6 +11,7 @@ logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(
 # Threshold for generating permutations
 THRESHOLD = 0  # Adjust this value as needed
 
+
 def extract_frontmatter(file_content: str) -> str:
     """Extracts the YAML frontmatter from a markdown file."""
     frontmatter = ""
@@ -22,6 +23,7 @@ def extract_frontmatter(file_content: str) -> str:
                 break
     return frontmatter
 
+
 def generate_partial_tags(tag: str) -> List[str]:
     """Generates all partial tags for a given tag."""
     parts = tag.split(">")
@@ -30,6 +32,7 @@ def generate_partial_tags(tag: str) -> List[str]:
         for j in range(len(parts) - i + 1):
             partial_tags.append(">".join(parts[j: j + i]))
     return partial_tags
+
 
 def process_tags(posts_dir: str, output_file: str) -> tuple:
     """
@@ -181,6 +184,7 @@ def process_tags(posts_dir: str, output_file: str) -> tuple:
 
     return tag_data, combined_tags
 
+
 def generate_mermaid_graph(
     tag_data: Union[List[Dict[str, Any]], Dict[str, Any]], direction: str = "TD"
 ) -> str:
@@ -260,8 +264,7 @@ def generate_mermaid_graph(
         from_tag: str, to_tag: str, edge_type: str = "solid", label: str = ""
     ) -> None:
         """
-        Adds an edge (relationship) between two nodes in the graph,
-        including relationship attributes (parent, child, SUPERset, SUBset).
+        Adds an edge (relationship) between two nodes in the graph.
 
         Args:
             from_tag (str): The starting node of the edge.
@@ -271,13 +274,40 @@ def generate_mermaid_graph(
             label (str): The label for the edge. Defaults to ''.
         """
 
-        safe_from = add_node(from_tag, tag_data[from_tag])
-        safe_to = add_node(to_tag, tag_data[to_tag])
+        safe_from = sanitize_tag(from_tag)
+        safe_to = sanitize_tag(to_tag)
         edge = (safe_from, safe_to, edge_type)
 
         if edge not in added_edges:
-            relationship_line = f"    {safe_from} ||--|| {safe_to} : {label}" if edge_type == "solid" else f"    {safe_from} ||..|| {safe_to} : {label}"
-            graph.append(relationship_line)
+            if edge_type == "solid":
+                # Add SUPERset and SUBset attributes based on hierarchical relationships
+                if label == '"parent of"':
+                    # Add SUPERset to the parent entity, SUBset to the child entity (if not redundant)
+                    if not any(
+                        f"        SUPERset {safe_to}" in line for line in graph
+                    ) and not any(f"        parent {safe_to}" in line for line in graph):
+                        graph.insert(
+                            graph.index(f"    {safe_from} {{") + 1,
+                            f"        SUPERset {safe_to}",
+                        )
+                    if not any(
+                        f"        SUBset {safe_from}" in line for line in graph
+                    ) and not any(f"        child {safe_from}" in line for line in graph):
+                        graph.insert(
+                            graph.index(f"    {safe_to} {{") + 1,
+                            f"        SUBset {safe_from}",
+                        )
+
+                relationship_line = (
+                    f"    {safe_from} ||--|| {safe_to} : {label}"
+                    if edge_type == "solid"
+                    else f"    {safe_from} ||..|| {safe_to} : {label}"
+                )
+
+                graph.append(relationship_line)
+            else:
+                relationship_line = f"    {safe_from} ||..|| {safe_to} : {label}"
+                graph.append(relationship_line)
             added_edges.add(edge)
 
     def process_tag(tag_name: str, data: Dict[str, Any]) -> None:
@@ -308,10 +338,6 @@ def generate_mermaid_graph(
         for related, count in data.get("related", {}).items():
             add_edge(tag_name, related, "dashed", f'"related ({count})"')
 
-        # Add SUPERset and SUBset relationships
-        for child in data.get("children", []):
-            add_edge(tag_name, child, "solid", '"SUPERset of"')
-            add_edge(child, tag_name, "solid", '"SUBset of"')
 
     try:
         if isinstance(tag_data, list):
@@ -332,6 +358,7 @@ def generate_mermaid_graph(
         return ""
 
     return "\n".join(graph)
+
 
 if __name__ == "__main__":
     posts_dir = os.path.join(os.getenv("GITHUB_WORKSPACE", ""), "_posts")
