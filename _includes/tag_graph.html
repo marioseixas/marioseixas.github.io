@@ -1,233 +1,194 @@
 <div class='mermaid'>
 erDiagram
     linux {
-    scripts {
-        related_13 scripts
+    related_13 scripts
+    related_1 software>mobile
     }
     scripts {
-        related_13 linux
+    child scripts>google-apps-script
+    child scripts>mobile
+    child scripts>cloud
+    child scripts>AI
+    related_0 linux
+    related_0 estudos
     }
-    linux ||--|| scripts : "related to"
+    linux -..-> scripts : "related to"
     software_mobile {
-        related_1 software_mobile
+    related_0 linux
+    related_0 iphone
+    parent software
     }
-    software_mobile {
-        related_1 linux
-    }
-    linux ||--|| software_mobile : "related to"
-    }
+    linux -..-> software_mobile : "related to"
     rendimentos {
+    type string
     }
     trabalho {
-    estudos {
-        related_1 estudos
+    related_0 estudos
     }
     estudos {
-        related_1 trabalho
+    related_1 scripts
+    related_1 trabalho
     }
-    trabalho ||--|| estudos : "related to"
-    }
+    trabalho -..-> estudos : "related to"
     scripts_google-apps-script {
-        child scripts_google-apps-script
+    parent scripts
     }
-    scripts_google-apps-script {
-        parent scripts
+    scripts ||--|| scripts_google-apps-script : "parent of"
     scripts_mobile {
-        child scripts_mobile
+    related_0 iphone
+    parent scripts
     }
-    scripts_mobile {
-        parent scripts
-    scripts_AI {
-        child scripts_AI
-    }
-    scripts_AI {
-        parent scripts
+    scripts ||--|| scripts_mobile : "parent of"
     scripts_cloud {
-        child scripts_cloud
+    parent scripts
     }
-    scripts_cloud {
-        parent scripts
-        related_13 linux
+    scripts ||--|| scripts_cloud : "parent of"
+    scripts_AI {
+    parent scripts
     }
-    linux {
-        related_13 scripts
-    }
-    scripts ||--|| linux : "related to"
-        related_1 estudos
-    }
-    estudos {
-        related_1 scripts
-    }
-    scripts ||--|| estudos : "related to"
-    }
+    scripts ||--|| scripts_AI : "parent of"
+    scripts -..-> linux : "related to"
+    scripts -..-> estudos : "related to"
     carro {
+    type string
     }
     edital {
-    edital_direito {
-        child edital_direito
+    child edital>direito
+    child edital>direito>processual-penal
     }
     edital_direito {
-        parent edital
-    edital_direito_processual-penal {
-        child edital_direito_processual-penal
+    child edital>direito>processual-penal
+    parent edital
     }
+    edital ||--|| edital_direito : "parent of"
     edital_direito_processual-penal {
-        parent edital
+    parent edital
+    parent edital>direito
+    parent direito
     }
+    edital ||--|| edital_direito_processual-penal : "parent of"
     tasks {
-    tasks_iphone {
-        child tasks_iphone
+    child tasks>iphone
     }
     tasks_iphone {
-        parent tasks
+    parent tasks
     }
+    tasks ||--|| tasks_iphone : "parent of"
     hardware {
+    type string
     }
     chess {
+    type string
     }
     assistir {
+    type string
     }
     calls {
+    type string
     }
     despesas {
+    type string
     }
-    }
+    tasks_iphone ||--|| tasks : "SUPERset of"
     iphone {
-        related_1 software_mobile
+    related_1 scripts>mobile
+    related_1 software>mobile
     }
-    software_mobile {
-        related_1 iphone
-    }
-    iphone ||--|| software_mobile : "related to"
-        related_1 scripts_mobile
-    }
-    scripts_mobile {
-        related_1 iphone
-    }
-    iphone ||--|| scripts_mobile : "related to"
-    }
+    iphone -..-> scripts_mobile : "related to"
+    iphone -..-> software_mobile : "related to"
     sell {
+    type string
     }
     github_jekyll {
+    parent github
     }
     github {
-        child github_jekyll
+    child github>jekyll
     }
-    github_jekyll {
-        parent github
-    }
+    github_jekyll ||--|| github : "SUPERset of"
+    github ||--|| github_jekyll : "parent of"
     jekyll {
+    type string
     }
-        related_1 scripts
-    }
-    scripts {
-        related_1 estudos
-    }
-    estudos ||--|| scripts : "related to"
-        related_1 trabalho
-    }
-    trabalho {
-        related_1 estudos
-    }
-    estudos ||--|| trabalho : "related to"
-    }
-        child edital_direito_processual-penal
-    }
-    edital_direito_processual-penal {
-        parent edital_direito
-    }
+    estudos -..-> scripts : "related to"
+    estudos -..-> trabalho : "related to"
+    edital_direito ||--|| edital_direito_processual-penal : "parent of"
+    edital_direito ||--|| edital : "SUPERset of"
     direito {
-        child edital_direito_processual-penal
+    child edital>direito>processual-penal
     }
-    edital_direito_processual-penal {
-        parent direito
-    }
+    direito ||--|| edital_direito_processual-penal : "parent of"
     fatherhood {
+    type string
     }
     misc {
+    type string
     }
     AI {
-    AI_prompt {
-        child AI_prompt
+    child AI>prompt
     }
     AI_prompt {
-        parent AI
+    parent AI
     }
+    AI ||--|| AI_prompt : "parent of"
     software {
-        child software_mobile
-    }
-    software_mobile {
-        parent software
-    software_cloud {
-        child software_cloud
+    child software>cloud
+    child software>mobile
     }
     software_cloud {
-        parent software
+    parent software
     }
-        related_1 linux
-    }
-    linux {
-        related_1 software_mobile
-    }
-    software_mobile ||--|| linux : "related to"
-        related_1 iphone
-    }
-    iphone {
-        related_1 software_mobile
-    }
-    software_mobile ||--|| iphone : "related to"
-    }
+    software ||--|| software_cloud : "parent of"
+    software ||--|| software_mobile : "parent of"
+    software_mobile -..-> linux : "related to"
+    software_mobile -..-> iphone : "related to"
+    software_mobile ||--|| software : "SUPERset of"
     mobile {
+    type string
     }
-    }
+    AI_prompt ||--|| AI : "SUPERset of"
     prompt {
+    type string
     }
     music {
+    type string
     }
-        related_1 iphone
-    }
-    iphone {
-        related_1 scripts_mobile
-    }
-    scripts_mobile ||--|| iphone : "related to"
-    }
+    scripts_mobile -..-> iphone : "related to"
+    scripts_mobile ||--|| scripts : "SUPERset of"
     spirit {
-    admoestação {
-        related_1 admoestação
+    related_0 admoestação
     }
     admoestação {
-        related_1 spirit
+    related_1 spirit
     }
-    spirit ||--|| admoestação : "related to"
-    }
+    spirit -..-> admoestação : "related to"
     ler {
+    type string
     }
-    }
+    scripts_google-apps-script ||--|| scripts : "SUPERset of"
     google-apps-script {
+    type string
     }
     saúde {
+    type string
     }
-    }
+    software_cloud ||--|| software : "SUPERset of"
     cloud {
+    type string
     }
     receitas {
+    type string
     }
-        related_1 spirit
-    }
-    spirit {
-        related_1 admoestação
-    }
-    admoestação ||--|| spirit : "related to"
-    }
-    }
-    }
+    admoestação -..-> spirit : "related to"
+    scripts_cloud ||--|| scripts : "SUPERset of"
+    edital_direito_processual-penal ||--|| edital : "SUPERset of"
+    edital_direito_processual-penal ||--|| edital_direito : "SUPERset of"
+    edital_direito_processual-penal ||--|| direito : "SUPERset of"
     processual-penal {
+    type string
     }
     direito_processual-penal {
-        SUPERset direito_processual-penal
+    type string
     }
-    direito_processual-penal {
-        SUBset direito
-    }
-    }
+    scripts_AI ||--|| scripts : "SUPERset of"
 </div>
