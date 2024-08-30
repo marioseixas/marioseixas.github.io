@@ -10,14 +10,10 @@ erDiagram
         related_2 estudos
     }
     scripts {
-        child scripts_google_apps_script
+        child scripts_AI
         child scripts_mobile
         child scripts_cloud
-        child scripts_AI
-        SUBset scripts_google_apps_script
-        SUBset scripts_mobile
-        SUBset scripts_cloud
-        SUBset scripts_AI
+        child scripts_google_apps_script
         related_26 linux
         related_2 estudos
     }
@@ -25,11 +21,9 @@ erDiagram
     }
     edital {
         child edital_direito
-        SUBset edital_direito
     }
     tasks {
         child tasks_iphone
-        SUBset tasks_iphone
     }
     hardware {
     }
@@ -43,17 +37,14 @@ erDiagram
     }
     tasks_iphone {
         parent tasks
-        SUPERset tasks
     }
     sell {
     }
     github_jekyll {
         parent github
-        SUPERset github
     }
     github {
         child github_jekyll
-        SUBset github_jekyll
     }
     estudos {
         related_2 scripts
@@ -62,8 +53,6 @@ erDiagram
     edital_direito {
         parent edital
         child edital_direito_processual_penal
-        SUBset edital_direito_processual_penal
-        SUPERset edital
     }
     fatherhood {
     }
@@ -71,17 +60,13 @@ erDiagram
     }
     AI {
         child AI_prompt
-        SUBset AI_prompt
     }
     software {
-        child software_mobile
         child software_cloud
-        SUBset software_mobile
-        SUBset software_cloud
+        child software_mobile
     }
     software_mobile {
         parent software
-        SUPERset software
         related_2 iphone
         related_2 linux
     }
@@ -91,13 +76,11 @@ erDiagram
     }
     AI_prompt {
         parent AI
-        SUPERset AI
     }
     music {
     }
     scripts_mobile {
         parent scripts
-        SUPERset scripts
         related_2 iphone
     }
     spirit {
@@ -107,13 +90,11 @@ erDiagram
     }
     scripts_google_apps_script {
         parent scripts
-        SUPERset scripts
     }
     saude {
     }
     software_cloud {
         parent software
-        SUPERset software
     }
     receitas {
     }
@@ -122,15 +103,12 @@ erDiagram
     }
     scripts_cloud {
         parent scripts
-        SUPERset scripts
     }
     edital_direito_processual_penal {
         parent edital_direito
-        SUPERset edital_direito
     }
     scripts_AI {
         parent scripts
-        SUPERset scripts
     }
 %% Styling
 classDef mainNode fill:#f9f,stroke:#333,stroke-width:4px;
