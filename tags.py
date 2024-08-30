@@ -182,29 +182,27 @@ def process_tags(posts_dir: str, output_file: str) -> tuple:
 
     return tag_data, combined_tags
 
+import json
+from datetime import datetime
+
 class JsonOutputHandler:
     def write(self, data: dict, json_output_file: str):
         """Writes the tag data to a JSON file.
 
         Args:
             data (dict): The tag data to write.
-            output_file (str): The path to the output file.
+            json_output_file (str): The path to the output file.
         """
-        # Convert sets to lists in the tag_data dictionary
-        def convert_sets_to_lists(d):
-            if isinstance(d, dict):
-                return {k: convert_sets_to_lists(v) for k, v in d.items()}
-            elif isinstance(d, list):
-                return [convert_sets_to_lists(i) for i in d]
-            elif isinstance(d, set):
-                return list(d)
-            else:
-                return d
-        
-        converted_data = convert_sets_to_lists(data)
-        
+        def convert_data(obj):
+            if isinstance(obj, (set, frozenset)):
+                return list(obj)
+            elif isinstance(obj, datetime):
+                return obj.isoformat()
+            raise TypeError(f"Object of type {obj.__class__.__name__} is not JSON serializable")
+
         with open(json_output_file, 'w', encoding='utf-8') as f:
-            json.dump(converted_data, f, ensure_ascii=False, indent=4)
+            json.dump(data, f, ensure_ascii=False, indent=4, default=convert_data)
+        
         logging.info(f"Tag data has been written to {json_output_file}")
 
 def generate_mermaid_graph(
