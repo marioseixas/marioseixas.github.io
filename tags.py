@@ -231,14 +231,12 @@ def generate_mermaid_graph(
             .replace("ü", "u")
         )
 
-    def add_node(tag: str, data: Dict[str, Any]) -> str:
+    def add_node(tag: str) -> str:
         """
-        Adds a node (entity) to the graph if it hasn't been added yet,
-        including its attributes.
+        Adds a node (entity) to the graph if it hasn't been added yet.
 
         Args:
             tag (str): The tag name to be added.
-            data (Dict[str, Any]): The data associated with the tag.
 
         Returns:
             str: The sanitized tag name used in the graph.
@@ -247,15 +245,7 @@ def generate_mermaid_graph(
         if safe_tag not in added_nodes:
             node_def = f"    {safe_tag} {{"
             graph.append(node_def)
-
-            # Add attributes (parents, children, related)
-            for parent in data.get("parents", []):
-                graph.append(f"        parent {sanitize_tag(parent)}")
-            for child in data.get("children", []):
-                graph.append(f"        child {sanitize_tag(child)}")
-            for related, count in data.get("related", {}).items():
-                graph.append(f"        related_{count} {sanitize_tag(related)}")
-
+            # Attributes will be added later in the post-processing step
             graph.append("    }")  # Close the entity block
             added_nodes.add(safe_tag)
         return safe_tag
@@ -279,35 +269,12 @@ def generate_mermaid_graph(
         edge = (safe_from, safe_to, edge_type)
 
         if edge not in added_edges:
-            if edge_type == "solid":
-                # Add SUPERset and SUBset attributes based on hierarchical relationships
-                if label == '"parent of"':
-                    # Add SUPERset to the parent entity, SUBset to the child entity (if not redundant)
-                    if not any(
-                        f"        SUPERset {safe_to}" in line for line in graph
-                    ) and not any(f"        parent {safe_to}" in line for line in graph):
-                        graph.insert(
-                            graph.index(f"    {safe_from} {{") + 1,
-                            f"        SUPERset {safe_to}",
-                        )
-                    if not any(
-                        f"        SUBset {safe_from}" in line for line in graph
-                    ) and not any(f"        child {safe_from}" in line for line in graph):
-                        graph.insert(
-                            graph.index(f"    {safe_to} {{") + 1,
-                            f"        SUBset {safe_from}",
-                        )
-
-                relationship_line = (
-                    f"    {safe_from} ||--|| {safe_to} : {label}"
-                    if edge_type == "solid"
-                    else f"    {safe_from} ||..|| {safe_to} : {label}"
-                )
-
-                graph.append(relationship_line)
-            else:
-                relationship_line = f"    {safe_from} ||..|| {safe_to} : {label}"
-                graph.append(relationship_line)
+            relationship_line = (
+                f"    {safe_from} ||--|| {safe_to} : {label}"
+                if edge_type == "solid"
+                else f"    {safe_from} ||..|| {safe_to} : {label}"
+            )
+            graph.append(relationship_line)
             added_edges.add(edge)
 
     def process_tag(tag_name: str, data: Dict[str, Any]) -> None:
@@ -322,7 +289,7 @@ def generate_mermaid_graph(
         """
 
         # Add main node (entity)
-        add_node(tag_name, data)
+        add_node(tag_name)
 
         # Handle combined tags (entities representing tag combinations)
         if ">" in tag_name:
@@ -337,7 +304,6 @@ def generate_mermaid_graph(
         # Add non-hierarchical relationships (related)
         for related, count in data.get("related", {}).items():
             add_edge(tag_name, related, "dashed", f'"related ({count})"')
-
 
     try:
         if isinstance(tag_data, list):
@@ -356,6 +322,55 @@ def generate_mermaid_graph(
     except Exception as e:
         logging.error(f"Error processing tag_data: {e}")
         return ""
+
+    # Post-processing: Add SUPERset and SUBset attributes
+    for tag_name, data in tag_data.items():
+        safe_tag_name = sanitize_tag(tag_name)
+
+        # Add parent and child attributes
+        for parent in data.get("parents", []):
+            if not any(f"        parent {sanitize_tag(parent)}" in line for line in graph):  # Check for redundancy
+                graph.insert(
+                    graph.index(f"    {safe_tag_name} {{") + 1,
+                    f"        parent {sanitize_tag(parent)}",
+                )
+        for child in data.get("children", []):
+            if not any(f"        child {sanitize_tag(child)}" in line for line in graph):  # Check for redundancy
+                graph.insert(
+                    graph.index(f"    {safe_tag_name} {{") + 1,
+                    f"        child {sanitize_tag(child)}",
+                )
+
+        # Add SUPERset and SUBset attributes based on hierarchical relationships
+        for child in data.get("children", []):
+            safe_child_name = sanitize_tag(child)
+            # Add SUPERset to parent, SUBset to child (if not redundant with parent/child)
+            if not any(
+                f"        SUPERset {safe_child_name}" in line for line in graph
+            ) and not any(f"        parent {safe_child_name}" in line for line in graph):
+                graph.insert(
+                    graph.index(f"    {safe_tag_name} {{") + 1,
+                    f"        SUPERset {safe_child_name}",
+                )
+            if not any(f"        SUBset {safe_tag_name}" in line for line in graph) and not any(
+                f"        child {safe_tag_name}" in line for line in graph
+            ):
+                graph.insert(
+                    graph.index(f"    {safe_child_name} {{") + 1,
+                    f"        SUBset {safe_tag_name}",
+                )
+
+        # Add related attributes with co-occurrence counts
+        for related, count in data.get("related", {}).items():
+            safe_related_name = sanitize_tag(related)
+            if not any(
+                f"        related_{count} {safe_related_name}" in line for line in graph
+            ):
+                graph.insert(
+                    graph.index(f"    {safe_tag_name} {{") + 1,
+                    f"        related_{count} {safe_related_name}",
+                )
+
 
     return "\n".join(graph)
 
