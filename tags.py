@@ -11,6 +11,7 @@ logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(
 # Threshold for generating permutations
 THRESHOLD = 0  # Adjust this value as needed
 
+
 def extract_frontmatter(file_content: str) -> str:
     """Extracts the YAML frontmatter from a markdown file."""
     frontmatter = ""
@@ -22,6 +23,7 @@ def extract_frontmatter(file_content: str) -> str:
                 break
     return frontmatter
 
+
 def generate_partial_tags(tag: str) -> List[str]:
     """Generates all partial tags for a given tag."""
     parts = tag.split(">")
@@ -30,6 +32,7 @@ def generate_partial_tags(tag: str) -> List[str]:
         for j in range(len(parts) - i + 1):
             partial_tags.append(">".join(parts[j: j + i]))
     return partial_tags
+
 
 def process_tags(posts_dir: str, output_file: str) -> tuple:
     """
@@ -73,6 +76,7 @@ def process_tags(posts_dir: str, output_file: str) -> tuple:
         elif not isinstance(tags, list):
             tags = [str(tags)]
 
+        # Count tag frequencies including partial tags
         for tag in tags:
             for partial_tag in generate_partial_tags(tag):
                 tag_frequency[partial_tag] += 1
@@ -88,6 +92,7 @@ def process_tags(posts_dir: str, output_file: str) -> tuple:
 
         all_posts.append({"title": title, "url": url, "date": post_date, "tags": tags})
 
+    # Second pass: Generate tag data based on frequency threshold
     tag_data = defaultdict(
         lambda: {
             "parents": set(),
@@ -95,14 +100,15 @@ def process_tags(posts_dir: str, output_file: str) -> tuple:
             "related": defaultdict(int),
             "posts": [],
         }
-    )
-    combined_tags = set()
+    )  # Updated 'related' to be a defaultdict(int)
+    combined_tags = set()  # Keep track of combined tags
 
     for post in all_posts:
         for tag in post["tags"]:
             tag_parts = tag.split(">")
             full_tag_path = tag
 
+            # Detect combined tags and store relationships
             if len(tag_parts) > 1:
                 combined_tags.add(tag)
                 for i in range(len(tag_parts) - 1):
@@ -119,6 +125,7 @@ def process_tags(posts_dir: str, output_file: str) -> tuple:
                     }
                     tag_data[partial_tag]["posts"].append(post_entry)
 
+            # Establish parent-child relationships
             for i in range(1, len(tag_parts)):
                 parent_tag = ">".join(tag_parts[:i])
                 child_tag = ">".join(tag_parts[:i + 1])
@@ -129,19 +136,24 @@ def process_tags(posts_dir: str, output_file: str) -> tuple:
                     tag_data[child_tag]["parents"].add(parent_tag)
                     tag_data[parent_tag]["children"].add(child_tag)
 
+            # Track non-hierarchical (related) relationships between tags and count co-occurrences
             for other_tag in post["tags"]:
                 if (
                     other_tag != tag
                     and tag_frequency[other_tag] >= THRESHOLD
                     and tag_frequency[full_tag_path] >= THRESHOLD
                     and other_tag not in tag_data[full_tag_path]["parents"]
+                    # Ensure no hierarchical relation
                     and other_tag not in tag_data[full_tag_path]["children"]
+                    # Ensure no hierarchical relation
                 ):
                     tag_data[full_tag_path]["related"][other_tag] += 1
                     tag_data[other_tag]["related"][full_tag_path] += 1
 
+    # Remove tags with no posts
     tag_data = {tag: data for tag, data in tag_data.items() if data["posts"]}
 
+    # Clean up relationships
     for tag, data in tag_data.items():
         data["parents"] = {parent for parent in data["parents"] if parent in tag_data}
         data["children"] = {child for child in data["children"] if child in tag_data}
@@ -149,15 +161,18 @@ def process_tags(posts_dir: str, output_file: str) -> tuple:
             related: count
             for related, count in data["related"].items()
             if related in tag_data
-        }
+        }  # Keep only related tags that exist
 
+    # Sort posts within each tag by date (most recent first)
     for tag, data in tag_data.items():
         data["posts"] = sorted(
             data["posts"], key=lambda x: x.get("date", datetime.min), reverse=True
         )
 
+    # Sort tags alphabetically before writing to YAML
     sorted_tag_data = sorted(tag_data.items())
 
+    # Write the processed tags to a YAML file
     with open(output_file, "w", encoding="utf-8") as f:
         yaml.dump(
             [{"tag": tag, "posts": data["posts"]} for tag, data in sorted_tag_data],
@@ -168,6 +183,7 @@ def process_tags(posts_dir: str, output_file: str) -> tuple:
     logging.info(f"Processed tags have been written to {output_file}")
 
     return tag_data, combined_tags
+
 
 def generate_mermaid_graph(
     tag_data: Union[List[Dict[str, Any]], Dict[str, Any]], direction: str = "TD"
@@ -199,11 +215,9 @@ def generate_mermaid_graph(
         Returns:
             str: The sanitized tag name used in the graph.
         """
-
         safe_tag = tag.replace(">", "_").replace(" ", "_")
         if safe_tag not in added_nodes:
-            node_def = f"    {safe_tag} {{"
-            graph.append(node_def)
+            graph.append(f"    {safe_tag} {{")
             added_nodes.add(safe_tag)
         return safe_tag
 
@@ -221,57 +235,73 @@ def generate_mermaid_graph(
                 Defaults to 'solid'.
             label (str): The label for the edge. Defaults to ''.
         """
-
         safe_from = add_node(from_tag)
         safe_to = add_node(to_tag)
         edge = (safe_from, safe_to, edge_type)
 
         if edge not in added_edges:
             if edge_type == "solid":
-                graph.append(f'        parent "{to_tag}"')
+                graph.append(f"        SUBset {to_tag}")
                 graph.append(f"    }}")
                 graph.append(f'    {safe_from} ||--|| {safe_to} : "parent of"')
-
-                if f'        child "{from_tag}"' not in graph:
-                    parent_entity_start = graph.index(f"    {safe_to} {{")
-                    for i in range(parent_entity_start + 1, len(graph)):
-                        if graph[i].startswith("    }"):
-                            graph[i] = graph[i].replace(
-                                "    }", f'        child "{from_tag}"\n    }}'
-                            )
-                            break
-
+                graph.append(f"    {safe_to} {{")
+                graph.append(f"        SUPERset {from_tag}")
+                graph.append(f"    }}")
             elif edge_type == "dashed":
-                related_count_from = sum(
-                    1
-                    for line in graph
-                    if line.startswith(f'        related_')
-                    and f'"{to_tag}"' in line
-                    and line.split(" ")[0].split("_")[0] == "related"
-                    and graph.index(line) < graph.index(f"    {safe_from} {{") + 10
-                    and graph.index(f"    {safe_from} {{")
-                    < graph.index(line)
-                    < graph.index(f"    {safe_to} {{")
-                )
-                graph.append(f'        related_{related_count_from} "{to_tag}"')
-                added_edges.add(edge)
+                graph.append(f"        related {to_tag}")
+                graph.append(f"    }}")
+                graph.append(f'    {safe_from} ||..|| {safe_to} : "related to"')
+                graph.append(f"    {safe_to} {{")
+                graph.append(f"        related {from_tag}")
+                graph.append(f"    }}")
+            added_edges.add(edge)
 
-    for tag, data in tag_data.items():
-        if len(data["parents"]) > 0:
-            for parent in data["parents"]:
-                add_edge(parent, tag, "solid")
+    def process_tag(tag_name: str, data: Dict[str, Any]) -> None:
+        """
+        Processes a single tag and its relationships, adding nodes and edges
+        to the Mermaid graph.
 
-        if len(data["children"]) > 0:
-            for child in data["children"]:
-                add_edge(tag, child, "solid")
+        Args:
+            tag_name (str): The name of the tag.
+            data (Dict[str, Any]): The data associated with the tag,
+                including children and related tags.
+        """
+        add_node(tag_name)
 
-        if len(data["related"]) > 0:
-            for related, count in data["related"].items():
-                add_edge(tag, related, "dashed", f"related_{count}")
+        if ">" in tag_name:
+            parts = tag_name.split(">")
+            for i in range(len(parts) - 1):
+                add_edge(parts[i], ">".join(parts[:i+2]), "solid")
 
-    graph.append(f"graph {direction}")
+        for child in data.get("children", []):
+            add_edge(tag_name, child, "solid")
+
+        for related in data.get("related", {}):
+            add_edge(tag_name, related, "dashed")
+
+    try:
+        if isinstance(tag_data, list):
+            for item in tag_data:
+                if isinstance(item, dict) and "tag" in item:
+                    process_tag(item["tag"], item)
+                else:
+                    logging.warning(f"Skipping invalid item in tag_data: {item}")
+        elif isinstance(tag_data, dict):
+            for tag_name, data in tag_data.items():
+                process_tag(tag_name, data)
+        else:
+            logging.error(f"Unexpected tag_data type: {type(tag_data)}")
+            return ""
+
+    except Exception as e:
+        logging.error(f"Error processing tag_data: {e}")
+        return ""
+
+    # Remove duplicate lines and empty entity blocks
+    graph = list(dict.fromkeys(graph))
+    graph = [line for line in graph if not (line.strip() == "{" or line.strip() == "}")]
+
     return "\n".join(graph)
-
 
 if __name__ == "__main__":
     # Use environment variables to determine paths (adapt if necessary)
