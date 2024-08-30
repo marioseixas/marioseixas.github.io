@@ -8,7 +8,8 @@ from typing import Dict, List, Union, Any
 # Configure logging
 logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s")
 
-THRESHOLD = 0  # Minimum tag frequency to include in the output
+# Threshold for generating permutations
+THRESHOLD = 0  # Adjust this value as needed
 
 def extract_frontmatter(file_content: str) -> str:
     """Extracts the YAML frontmatter from a markdown file."""
@@ -72,7 +73,6 @@ def process_tags(posts_dir: str, output_file: str) -> tuple:
         elif not isinstance(tags, list):
             tags = [str(tags)]
 
-        # Count tag frequencies including partial tags
         for tag in tags:
             for partial_tag in generate_partial_tags(tag):
                 tag_frequency[partial_tag] += 1
@@ -88,7 +88,6 @@ def process_tags(posts_dir: str, output_file: str) -> tuple:
 
         all_posts.append({"title": title, "url": url, "date": post_date, "tags": tags})
 
-    # Second pass: Generate tag data based on frequency threshold
     tag_data = defaultdict(
         lambda: {
             "parents": set(),
@@ -97,14 +96,13 @@ def process_tags(posts_dir: str, output_file: str) -> tuple:
             "posts": [],
         }
     )
-    combined_tags = set()  # Keep track of combined tags
+    combined_tags = set()
 
     for post in all_posts:
         for tag in post["tags"]:
             tag_parts = tag.split(">")
             full_tag_path = tag
 
-            # Detect combined tags and store relationships
             if len(tag_parts) > 1:
                 combined_tags.add(tag)
                 for i in range(len(tag_parts) - 1):
@@ -121,7 +119,6 @@ def process_tags(posts_dir: str, output_file: str) -> tuple:
                     }
                     tag_data[partial_tag]["posts"].append(post_entry)
 
-            # Establish parent-child relationships
             for i in range(1, len(tag_parts)):
                 parent_tag = ">".join(tag_parts[:i])
                 child_tag = ">".join(tag_parts[:i + 1])
@@ -132,7 +129,6 @@ def process_tags(posts_dir: str, output_file: str) -> tuple:
                     tag_data[child_tag]["parents"].add(parent_tag)
                     tag_data[parent_tag]["children"].add(child_tag)
 
-            # Track non-hierarchical (related) relationships between tags and count co-occurrences
             for other_tag in post["tags"]:
                 if (
                     other_tag != tag
@@ -144,10 +140,8 @@ def process_tags(posts_dir: str, output_file: str) -> tuple:
                     tag_data[full_tag_path]["related"][other_tag] += 1
                     tag_data[other_tag]["related"][full_tag_path] += 1
 
-    # Remove tags with no posts
     tag_data = {tag: data for tag, data in tag_data.items() if data["posts"]}
 
-    # Clean up relationships
     for tag, data in tag_data.items():
         data["parents"] = {parent for parent in data["parents"] if parent in tag_data}
         data["children"] = {child for child in data["children"] if child in tag_data}
@@ -157,16 +151,13 @@ def process_tags(posts_dir: str, output_file: str) -> tuple:
             if related in tag_data
         }
 
-    # Sort posts within each tag by date (most recent first)
     for tag, data in tag_data.items():
         data["posts"] = sorted(
             data["posts"], key=lambda x: x.get("date", datetime.min), reverse=True
         )
 
-    # Sort tags alphabetically before writing to YAML
     sorted_tag_data = sorted(tag_data.items())
 
-    # Write the processed tags to a YAML file
     with open(output_file, "w", encoding="utf-8") as f:
         yaml.dump(
             [{"tag": tag, "posts": data["posts"]} for tag, data in sorted_tag_data],
@@ -183,7 +174,7 @@ def generate_mermaid_graph(
 ) -> str:
     """
     Generates Mermaid ER diagram code for the tag structure,
-    including parent, child, related, and combined tag relationships.
+    including parent, child, SUPERset, and SUBset relationships.
 
     Args:
         tag_data (Union[List[Dict[str, Any]], Dict[str, Any]]):
@@ -221,7 +212,7 @@ def generate_mermaid_graph(
     ) -> None:
         """
         Adds an edge (relationship) between two nodes in the graph,
-        including relationship attributes (parent, child, related).
+        including relationship attributes (parent, child, SUPERset, SUBset).
 
         Args:
             from_tag (str): The starting node of the edge.
@@ -230,21 +221,70 @@ def generate_mermaid_graph(
                 Defaults to 'solid'.
             label (str): The label for the edge. Defaults to ''.
         """
-        safe_from_tag = from_tag.replace(">", "_").replace(" ", "_")
-        safe_to_tag = to_tag.replace(">", "_").replace(" ", "_")
 
-    return "\n".join(graph) + "\n"
+        safe_from = add_node(from_tag)
+        safe_to = add_node(to_tag)
+        edge = (safe_from, safe_to, edge_type)
 
+        if edge not in added_edges:
+            if edge_type == "solid":
+                graph.append(f'        parent "{to_tag}"')
+                graph.append(f"    }}")
+                graph.append(f'    {safe_from} ||--|| {safe_to} : "parent of"')
 
-# Main script execution
-if __name__ == "__main__":
-    posts_dir = "/path/to/your/posts"
-    output_file = "output.yaml"
+                if f'        child "{from_tag}"' not in graph:
+                    parent_entity_start = graph.index(f"    {safe_to} {{")
+                    for i in range(parent_entity_start + 1, len(graph)):
+                        if graph[i].startswith("    }"):
+                            graph[i] = graph[i].replace(
+                                "    }", f'        child "{from_tag}"\n    }}'
+                            )
+                            break
 
+            elif edge_type == "dashed":
+                related_count_from = sum(
+                    1
+                    for line in graph
+                    if line.startswith(f'        related_')
+                    and f'"{to_tag}"' in line
+                    and line.split(" ")[0].split("_")[0] == "related"
+                    and graph.index(line) < graph.index(f"    {safe_from} {{") + 10
+                    and graph.index(f"    {safe_from} {{")
+                    < graph.index(line)
+                    < graph.index(f"    {safe_to} {{")
+                )
+
+                graph.append(f'        related_{related_count_from} "{to
+
+_tag}"')
+
+            added_edges.add(edge)
+
+    for tag, data in tag_data.items():
+        if len(data["parents"]) > 0:
+            for parent in data["parents"]:
+                add_edge(parent, tag, "solid")
+
+        if len(data["children"]) > 0:
+            for child in data["children"]:
+                add_edge(tag, child, "solid")
+
+        if len(data["related"]) > 0:
+            for related, count in data["related"].items():
+                add_edge(tag, related, "dashed", f"related_{count}")
+
+    graph.append(f"graph {direction}")
+    return "\n".join(graph)
+
+def main():
+    posts_dir = "path/to/your/markdown/files"
+    output_file = "tag_data.yml"
     tag_data, combined_tags = process_tags(posts_dir, output_file)
-    mermaid_graph = generate_mermaid_graph(tag_data)
 
-    with open("mermaid_graph.md", "w", encoding="utf-8") as graph_file:
-        graph_file.write("```mermaid\n" + mermaid_graph + "```\n")
+    # Output Mermaid diagram
+    mermaid_code = generate_mermaid_graph(tag_data)
+    with open("tag_graph.html", "w", encoding="utf-8") as f:
+        f.write(f"<html><body><div class='mermaid'>{mermaid_code}</div></body></html>")
 
-    logging.info("Mermaid graph generated and saved to mermaid_graph.md")
+if __name__ == "__main__":
+    main()
