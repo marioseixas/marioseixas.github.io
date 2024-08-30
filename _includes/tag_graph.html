@@ -1,29 +1,40 @@
 <div class='mermaid'>
 erDiagram
     linux {
-        related_26 scripts
-        related_2 software_mobile
+        type related
+        name scripts
+        type related
+        name software_mobile
     }
     rendimentos {
     }
     trabalho {
-        related_2 estudos
+        type related
+        name estudos
     }
     scripts {
-        child scripts_cloud
-        child scripts_mobile
-        child scripts_google_apps_script
-        child scripts_AI
-        related_26 linux
-        related_2 estudos
+        type child
+        name scripts_cloud
+        type child
+        name scripts_google_apps_script
+        type child
+        name scripts_mobile
+        type child
+        name scripts_AI
+        type related
+        name linux
+        type related
+        name estudos
     }
     carro {
     }
     edital {
-        child edital_direito
+        type child
+        name edital_direito
     }
     tasks {
-        child tasks_iphone
+        type child
+        name tasks_iphone
     }
     hardware {
     }
@@ -36,79 +47,104 @@ erDiagram
     despesas {
     }
     tasks_iphone {
-        parent tasks
+        type parent
+        name tasks
     }
     sell {
     }
     github_jekyll {
-        parent github
+        type parent
+        name github
     }
     github {
-        child github_jekyll
+        type child
+        name github_jekyll
     }
     estudos {
-        related_2 scripts
-        related_2 trabalho
+        type related
+        name scripts
+        type related
+        name trabalho
     }
     edital_direito {
-        parent edital
-        child edital_direito_processual_penal
+        type parent
+        name edital
+        type child
+        name edital_direito_processual_penal
     }
     fatherhood {
     }
     misc {
     }
     AI {
-        child AI_prompt
+        type child
+        name AI_prompt
     }
     software {
-        child software_cloud
-        child software_mobile
+        type child
+        name software_mobile
+        type child
+        name software_cloud
     }
     software_mobile {
-        parent software
-        related_2 iphone
-        related_2 linux
+        type parent
+        name software
+        type related
+        name iphone
+        type related
+        name linux
     }
     iphone {
-        related_2 software_mobile
-        related_2 scripts_mobile
+        type related
+        name software_mobile
+        type related
+        name scripts_mobile
     }
     AI_prompt {
-        parent AI
+        type parent
+        name AI
     }
     music {
     }
     scripts_mobile {
-        parent scripts
-        related_2 iphone
+        type parent
+        name scripts
+        type related
+        name iphone
     }
     spirit {
-        related_2 admoestacao
+        type related
+        name admoestacao
     }
     ler {
     }
     scripts_google_apps_script {
-        parent scripts
+        type parent
+        name scripts
     }
     saude {
     }
     software_cloud {
-        parent software
+        type parent
+        name software
     }
     receitas {
     }
     admoestacao {
-        related_2 spirit
+        type related
+        name spirit
     }
     scripts_cloud {
-        parent scripts
+        type parent
+        name scripts
     }
     edital_direito_processual_penal {
-        parent edital_direito
+        type parent
+        name edital_direito
     }
     scripts_AI {
-        parent scripts
+        type parent
+        name scripts
     }
 %% Styling
 classDef mainNode fill:#f9f,stroke:#333,stroke-width:4px;
