@@ -14,11 +14,11 @@ erDiagram
     }
     scripts {
         type child
-        name scripts_mobile
-        type child
         name scripts_google_apps_script
         type child
         name scripts_cloud
+        type child
+        name scripts_mobile
         type child
         name scripts_AI
         type related
@@ -26,11 +26,11 @@ erDiagram
         type related
         name estudos
         type collection
-        name scripts_mobile
-        type collection
         name scripts_google_apps_script
         type collection
         name scripts_cloud
+        type collection
+        name scripts_mobile
         type collection
         name scripts_AI
     }
@@ -106,13 +106,13 @@ erDiagram
     }
     software {
         type child
-        name software_mobile
+        name software_cloud
         type child
-        name software_cloud
-        type collection
         name software_mobile
         type collection
         name software_cloud
+        type collection
+        name software_mobile
     }
     software_mobile {
         type parent
@@ -193,15 +193,15 @@ erDiagram
     linux ||..|||| scripts : "related to"
     linux ||..|||| software_mobile : "related to"
     trabalho ||..|||| estudos : "related to"
-    scripts ||--|{|| scripts_mobile : "parent of"
     scripts ||--|{|| scripts_google_apps_script : "parent of"
     scripts ||--|{|| scripts_cloud : "parent of"
+    scripts ||--|{|| scripts_mobile : "parent of"
     scripts ||--|{|| scripts_AI : "parent of"
     scripts ||..|||| linux : "related to"
     scripts ||..|||| estudos : "related to"
-    scripts_mobile }|--|{|| scripts : "part of"
     scripts_google_apps_script }|--|{|| scripts : "part of"
     scripts_cloud }|--|{|| scripts : "part of"
+    scripts_mobile }|--|{|| scripts : "part of"
     scripts_AI }|--|{|| scripts : "part of"
     edital ||--|{|| edital_direito : "parent of"
     edital_direito }|--|{|| edital : "part of"
@@ -215,10 +215,10 @@ erDiagram
     edital_direito_processual_penal }|--|{|| edital_direito : "part of"
     AI ||--|{|| AI_prompt : "parent of"
     AI_prompt }|--|{|| AI : "part of"
-    software ||--|{|| software_mobile : "parent of"
     software ||--|{|| software_cloud : "parent of"
-    software_mobile }|--|{|| software : "part of"
+    software ||--|{|| software_mobile : "parent of"
     software_cloud }|--|{|| software : "part of"
+    software_mobile }|--|{|| software : "part of"
     software_mobile ||..|||| iphone : "related to"
     software_mobile ||..|||| linux : "related to"
     iphone ||..|||| software_mobile : "related to"
