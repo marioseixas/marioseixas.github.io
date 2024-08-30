@@ -193,7 +193,7 @@ def generate_mermaid_er_diagram(tag_data: dict) -> str:
     """Generates a Mermaid ER diagram representing the tag relationships."""
     graph = ["erDiagram"]
     added_entities = set()
-    added_relationships = set()
+    added_relationships = set()  # To prevent duplicate relationships
 
     def sanitize_entity_name(name: str) -> str:
         """Sanitizes entity names for Mermaid compatibility."""
@@ -228,30 +228,29 @@ def generate_mermaid_er_diagram(tag_data: dict) -> str:
         if safe_name not in added_entities:
             graph.append(f"    {safe_name} {{")
 
-            # Attributes Definition (Revised as Requested)
-            # Prioritize parent/child attributes and selectively include SUBset/SUPERset
+            # Attributes Definition (revised to prevent redundant attributes)
             for parent in data["parents"]:
-                graph.append(f"        type parent")
-                graph.append(f"        name {sanitize_entity_name(parent)}")
+                if parent != entity_name:  # Prevent self-reference
+                    graph.append(f"        type parent")
+                    graph.append(f"        name {sanitize_entity_name(parent)}")
             for child in data["children"]:
-                graph.append(f"        type child")
-                graph.append(f"        name {sanitize_entity_name(child)}")
-
-            # Only include SUBset if there's no child with the same name
+                if child != entity_name:  # Prevent self-reference
+                    graph.append(f"        type child")
+                    graph.append(f"        name {sanitize_entity_name(child)}")
+            # Exclude SUBset if it's already implied by a child relationship
             subsets_to_add = data["SUBset"].difference(data["children"])
             for subset in subsets_to_add:
                 graph.append(f"        type SUBset")
                 graph.append(f"        name {sanitize_entity_name(subset)}")
-
-            # Only include SUPERset if there's no parent with the same name
+            # Exclude SUPERset if it's already implied by a parent relationship
             supersets_to_add = data["SUPERset"].difference(data["parents"])
             for superset in supersets_to_add:
                 graph.append(f"        type SUPERset")
                 graph.append(f"        name {sanitize_entity_name(superset)}")
-
             for related, count in data["related"].items():
-                graph.append(f"        type related")
-                graph.append(f"        name {sanitize_entity_name(related)}")
+                if related != entity_name:  # Prevent self-reference
+                    graph.append(f"        type related")
+                    graph.append(f"        name {sanitize_entity_name(related)}")
 
             graph.append("    }")
             added_entities.add(safe_name)
@@ -268,14 +267,13 @@ def generate_mermaid_er_diagram(tag_data: dict) -> str:
     for tag_name, data in tag_data.items():
         add_entity(tag_name, data)
 
-    # Generate SUPERset Relationships with Explicit Links (As Requested)
+    # Generate Relationships - Now with explicit relationship definitions
     for tag_name, data in tag_data.items():
         safe_tag_name = sanitize_entity_name(tag_name)
+        # Explicit SUPERset relationship definitions
         for superset in data["SUPERset"]:
             safe_superset = sanitize_entity_name(superset)
-            if (
-                superset not in data["parents"]
-            ):  # Only add if not a direct parent
+            if superset not in data["parents"]:  # Prevent redundant links
                 add_relationship(safe_tag_name, safe_superset, "SUPERset of")
 
     graph.append("%% Styling")
