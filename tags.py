@@ -4,6 +4,19 @@ import logging
 from collections import defaultdict
 from datetime import datetime
 from typing import Dict, List, Union, Any
+import json
+
+class JsonOutputHandler:
+    def write(self, data: dict, output_file: str):
+        """Writes the tag data to a JSON file.
+
+        Args:
+            data (dict): The tag data to write.
+            output_file (str): The path to the output file.
+        """
+        with open(output_file, 'w', encoding='utf-8') as f:
+            json.dump(data, f, ensure_ascii=False, indent=4)
+        logging.info(f"Tag data has been written to {output_file}")
 
 # Configure logging
 logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s")
@@ -286,20 +299,29 @@ def generate_mermaid_graph(
     graph.insert(1, f"    direction {direction}")
 
     return "\n".join(graph)
+    
+if __name__ == "__main__":
+    posts_dir = os.path.join(os.getenv("GITHUB_WORKSPACE", ""), "_posts")
+    output_file = os.path.join(
+        os.getenv("GITHUB_WORKSPACE", ""), "_data/processed_tags.yml"
+    )
 
-# Example usage
-posts_dir = "content"
-output_file = "static/processed_tags.yaml"
+    tag_data, combined_tags = process_tags(posts_dir, output_file)
 
-tag_data, combined_tags = process_tags(posts_dir, output_file)
-mermaid_code = generate_mermaid_graph(tag_data)
+    # Example: Output to JSON
+    json_output_handler = JsonOutputHandler()
+    json_output_file = os.path.join(
+        os.getenv("GITHUB_WORKSPACE", ""), "_data/processed_tags.json"
+    )
+    json_output_handler.write(tag_data, json_output_file)
 
-
+    # Example: Output to Mermaid graph
+    mermaid_graph = generate_mermaid_graph(tag_data)
     with open(
         os.path.join(os.getenv("GITHUB_WORKSPACE", ""), "_includes/tag_graph.html"),
         "w",
         encoding="utf-8",
     ) as f:
-        f.write(f"<div class='mermaid'>\n{mermaid_code}\n</div>")
+        f.write(f"<div class='mermaid'>\n{mermaid_graph}\n</div>")
 
     logging.info("Mermaid graph has been written to _includes/tag_graph.html")
