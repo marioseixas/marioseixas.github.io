@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
-  var highlightBlocks = document.querySelectorAll('.copy-codeblock');
+  var highlightBlocks = document.querySelectorAll('pre[class^='language-']');
   highlightBlocks.forEach(function(block) {
     var button = document.createElement('button');
     button.className = 'copy-button';
