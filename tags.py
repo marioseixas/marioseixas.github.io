@@ -184,8 +184,7 @@ def process_tags(posts_dir: str, output_file: str) -> tuple:
 
     return tag_data, combined_tags
 
-
-def generate_mermaid_graph(
+    def generate_mermaid_graph(
         tag_data: Union[List[Dict[str, Any]], Dict[str, Any]], direction: str = "TD"
     ) -> str:
         """
@@ -231,12 +230,14 @@ def generate_mermaid_graph(
                 .replace("ü", "u")
             )
 
-        def add_node(tag: str) -> str:
+        def add_node(tag: str, data: Dict[str, Any]) -> str:
             """
-            Adds a node (entity) to the graph if it hasn't been added yet.
+            Adds a node (entity) to the graph if it hasn't been added yet,
+            including its attributes.
 
             Args:
                 tag (str): The tag name to be added.
+                data (Dict[str, Any]): The data associated with the tag.
 
             Returns:
                 str: The sanitized tag name used in the graph.
@@ -245,7 +246,16 @@ def generate_mermaid_graph(
             if safe_tag not in added_nodes:
                 node_def = f"    {safe_tag} {{"
                 graph.append(node_def)
-                graph.append("    }")  # Close the entity block immediately
+
+                # Add attributes (parents, children, related)
+                for parent in data.get("parents", []):
+                    graph.append(f"        parent {sanitize_tag(parent)}")
+                for child in data.get("children", []):
+                    graph.append(f"        child {sanitize_tag(child)}")
+                for related, count in data.get("related", {}).items():
+                    graph.append(f"        related_{count} {sanitize_tag(related)}")
+
+                graph.append("    }")  # Close the entity block
                 added_nodes.add(safe_tag)
             return safe_tag
 
@@ -264,8 +274,8 @@ def generate_mermaid_graph(
                 label (str): The label for the edge. Defaults to ''.
             """
 
-            safe_from = add_node(from_tag)
-            safe_to = add_node(to_tag)
+            safe_from = add_node(from_tag, tag_data[from_tag])
+            safe_to = add_node(to_tag, tag_data[to_tag])
             edge = (safe_from, safe_to, edge_type)
 
             if edge not in added_edges:
@@ -285,7 +295,7 @@ def generate_mermaid_graph(
             """
 
             # Add main node (entity)
-            add_node(tag_name)
+            add_node(tag_name, data)
 
             # Handle combined tags (entities representing tag combinations)
             if ">" in tag_name:
