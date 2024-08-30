@@ -220,8 +220,6 @@ def generate_mermaid_graph(
         if safe_tag not in added_nodes:
             node_def = f"    {safe_tag} {{"
             graph.append(node_def)
-            # Add type attribute (optional)
-            # graph.append(f'        type "{tag}"')
             added_nodes.add(safe_tag)
         return safe_tag
 
@@ -248,23 +246,46 @@ def generate_mermaid_graph(
             if edge_type == "solid":
                 # Hierarchical relationship (parent-child)
 
-                # Add parent attribute to the child entity
-                graph.append(f'        parent "{to_tag}"')
+                # Find the index where the from_tag entity starts
+                from_entity_start_index = graph.index(f"    {safe_from} {{")
 
-                # Close the entity definition for the from_tag
-                graph.append(f"    }}")
-                graph.append(f'    {safe_from} ||--|| {safe_to} : "parent of"')
+                # Check if 'parent' attribute for to_tag already exists in from_tag entity
+                parent_exists = False
+                for i in range(from_entity_start_index + 1, len(graph)):
+                    if f'        parent "{to_tag}"' in graph[i]:
+                        parent_exists = True
+                        break
+                    if "}" in graph[i]:  # Reached end of entity block
+                        break
 
-                # Add child attribute to the parent entity (if not already present)
-                if f'        child "{from_tag}"' not in graph:
-                    # Modify the last occurrence of the entity definition to include the child attribute
-                    parent_entity_start = graph.index(f"    {safe_to} {{")
-                    for i in range(parent_entity_start + 1, len(graph)):
-                        if graph[i].startswith("    }"):
-                            graph[i] = graph[i].replace(
-                                "    }", f'        child "{from_tag}"\n    }}'
-                            )
-                            break
+                if not parent_exists:
+                    graph.insert(
+                        from_entity_start_index + 1, f'        parent "{to_tag}"'
+                    )
+
+                # Find the index where the to_tag entity starts
+                to_entity_start_index = graph.index(f"    {safe_to} {{")
+
+                # Check if 'child' attribute for from_tag already exists in to_tag entity
+                child_exists = False
+                for i in range(to_entity_start_index + 1, len(graph)):
+                    if f'        child "{from_tag}"' in graph[i]:
+                        child_exists = True
+                        break
+                    if "}" in graph[i]:  # Reached end of entity block
+                        break
+
+                if not child_exists:
+                    graph.insert(
+                        to_entity_start_index + 1, f'        child "{from_tag}"'
+                    )
+
+                # Ensure entity blocks are closed properly
+                graph.append("    }")  # Close from_tag entity
+                graph.append("    }")  # Close to_tag entity (might be redundant but safer)
+                graph.append(
+                    f'    {safe_from} ||--|| {safe_to} : "parent of"'
+                )
 
             elif edge_type == "dashed":
                 # Non-hierarchical relationship (related)
@@ -374,10 +395,15 @@ def generate_mermaid_graph(
                     f'        SUPERset "{child}"' in line for line in graph
                     if safe_tag_name in line
                 ):
-                    graph.insert(
-                        graph.index(f"    {safe_tag_name} {{") + 1,
-                        f'        SUPERset "{child}"',
-                    )
+                    entity_start_index = graph.index(f"    {safe_tag_name} {{")
+                    insert_index = entity_start_index + 1
+                    while insert_index < len(graph) and (
+                        "parent" in graph[insert_index]
+                        or "child" in graph[insert_index]
+                        or "related_" in graph[insert_index]
+                    ):
+                        insert_index += 1
+                    graph.insert(insert_index, f'        SUPERset "{child}"')
 
             if not any(
                 f'        child "{tag_name}"' in line for line in graph
@@ -387,25 +413,32 @@ def generate_mermaid_graph(
                     f'        SUBset "{tag_name}"' in line for line in graph
                     if safe_tag_name in line
                 ):
-                    graph.insert(
-                        graph.index(f"    {safe_child} {{") + 1,
-                        f'        SUBset "{tag_name}"',
-                    )
+                    entity_start_index = graph.index(f"    {safe_child} {{")
+                    insert_index = entity_start_index + 1
+                    while insert_index < len(graph) and (
+                        "parent" in graph[insert_index]
+                        or "child" in graph[insert_index]
+                        or "related_" in graph[insert_index]
+                    ):
+                        insert_index += 1
+
+                    graph.insert(insert_index, f'        SUBset "{tag_name}"')
 
         for related in data.get("related", []):
             # Ensure related tags are also represented as entities
             add_node(related)
 
     # Ensure proper closing of entity blocks and correct syntax:
-    for i in range(len(graph) - 1, -1, -1):  # Reverse iteration to avoid index shifting issues
-        if "{" in graph[i] and "}" not in graph[i]:
-            next_closing_brace_index = next(
-                (j for j in range(i + 1, len(graph)) if "}" in graph[j]), None
-            )
-            if next_closing_brace_index:
-                graph[next_closing_brace_index] = graph[next_closing_brace_index].replace(
-                    "}", ""
-                )  # Remove extra brace
+    opened_blocks = 0
+    for i in range(len(graph)):
+        if "{" in graph[i]:
+            opened_blocks += 1
+        elif "}" in graph[i]:
+            opened_blocks -= 1
+
+    while opened_blocks > 0:
+        graph.append("    }")  # Add missing closing braces
+        opened_blocks -= 1
 
     return "\n".join(graph)
 
