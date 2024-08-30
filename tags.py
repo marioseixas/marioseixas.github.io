@@ -252,105 +252,54 @@ def generate_mermaid_graph(
             for related, count in data.get("related", {}).items():
                 graph.append(f"        related_{count} {sanitize_tag(related)}")
 
-            # Add SUPERset and SUBset attributes
-            for child in data.get("children", []):
-                if child not in data["parents"]:
-                    graph.append(f"        SUPERset {sanitize_tag(child)}")
-            for parent in data.get("parents", []):
-                if parent not in data["children"]:
-                    graph.append(f"        SUBset {sanitize_tag(parent)}")
-
-            graph.append("    }")  # Close the entity block
+            graph.append("    }")
             added_nodes.add(safe_tag)
+
         return safe_tag
 
-    def add_edge(
-        from_tag: str, to_tag: str, edge_type: str = "solid", label: str = ""
-    ) -> None:
-        """
-        Adds an edge (relationship) between two nodes in the graph,
-        including relationship attributes (parent, child, SUPERset, SUBset).
+    # Add nodes and edges based on relationships
+    for tag, data in tag_data.items():
+        safe_tag = add_node(tag, data)
 
-        Args:
-            from_tag (str): The starting node of the edge.
-            to_tag (str): The ending node of the edge.
-            edge_type (str): The type of edge ('solid' or 'dashed').
-                Defaults to 'solid'.
-            label (str): The label for the edge. Defaults to ''.
-        """
+        for parent in data.get("parents", []):
+            safe_parent = add_node(parent, tag_data[parent])
+            edge = f"    {safe_parent} ||--|| {safe_tag} : SUPERSET_OF"
+            if edge not in added_edges:
+                graph.append(edge)
+                added_edges.add(edge)
 
-        safe_from = add_node(from_tag, tag_data[from_tag])
-        safe_to = add_node(to_tag, tag_data[to_tag])
-        edge = (safe_from, safe_to, edge_type)
-
-        if edge not in added_edges:
-            relationship_line = f"    {safe_from} ||--|| {safe_to} : {label}" if edge_type == "solid" else f"    {safe_from} ||..|| {safe_to} : {label}"
-            graph.append(relationship_line)
-            added_edges.add(edge)
-
-    def process_tag(tag_name: str, data: Dict[str, Any]) -> None:
-        """
-        Processes a single tag and its relationships, adding nodes and edges
-        to the Mermaid graph.
-
-        Args:
-            tag_name (str): The name of the tag.
-            data (Dict[str, Any]): The data associated with the tag,
-                including children and related tags.
-        """
-
-        # Add main node (entity)
-        add_node(tag_name, data)
-
-        # Handle combined tags (entities representing tag combinations)
-        if ">" in tag_name:
-            parts = tag_name.split(">")
-            for part in parts:
-                add_edge(part, tag_name, "solid", '"parent of"')
-
-        # Add hierarchical relationships (parent-child)
         for child in data.get("children", []):
-            add_edge(tag_name, child, "solid", '"parent of"')
+            safe_child = add_node(child, tag_data[child])
+            edge = f"    {safe_tag} ||--|| {safe_child} : SUBSET_OF"
+            if edge not in added_edges:
+                graph.append(edge)
+                added_edges.add(edge)
 
-        # Add non-hierarchical relationships (related)
-        for related, count in data.get("related", {}).items():
-            add_edge(tag_name, related, "dashed", f'"related ({count})"')
+        for related in data.get("related", []):
+            safe_related = add_node(related, tag_data[related])
+            edge = f"    {safe_tag} }|..|{safe_related} : RELATED_TO"
+            if edge not in added_edges:
+                graph.append(edge)
+                added_edges.add(edge)
 
-    try:
-        if isinstance(tag_data, list):
-            for item in tag_data:
-                if isinstance(item, dict) and "tag" in item:
-                    process_tag(item["tag"], item)
-                else:
-                    logging.warning(f"Skipping invalid item in tag_data: {item}")
-        elif isinstance(tag_data, dict):
-            for tag_name, data in tag_data.items():
-                process_tag(tag_name, data)
-        else:
-            logging.error(f"Unexpected tag_data type: {type(tag_data)}")
-            return ""
-
-    except Exception as e:
-        logging.error(f"Error processing tag_data: {e}")
-        return ""
+    # Add graph direction
+    graph.insert(1, f"    direction {direction}")
 
     return "\n".join(graph)
 
-if __name__ == "__main__":
-    posts_dir = os.path.join(os.getenv("GITHUB_WORKSPACE", ""), "_posts")
-    output_file = os.path.join(
-        os.getenv("GITHUB_WORKSPACE", ""), "_data/processed_tags.yml"
-    )
+# Example usage
+posts_dir = "content"
+output_file = "static/processed_tags.yaml"
 
-    tag_data, combined_tags = process_tags(posts_dir, output_file)
-    mermaid_graph = generate_mermaid_graph(tag_data)
+tag_data, combined_tags = process_tags(posts_dir, output_file)
+mermaid_code = generate_mermaid_graph(tag_data)
 
-    # Write the Mermaid graph to a file
+
     with open(
         os.path.join(os.getenv("GITHUB_WORKSPACE", ""), "_includes/tag_graph.html"),
         "w",
         encoding="utf-8",
     ) as f:
-        f.write(f"<div class='mermaid'>\n{mermaid_graph}\n</div>")
+        f.write(f"<div class='mermaid'>\n{mermaid_code}\n</div>")
 
     logging.info("Mermaid graph has been written to _includes/tag_graph.html")
