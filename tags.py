@@ -232,30 +232,6 @@ def generate_mermaid_graph(
         """
         safe_from_tag = from_tag.replace(">", "_").replace(" ", "_")
         safe_to_tag = to_tag.replace(">", "_").replace(" ", "_")
-        if edge_type == "solid":
-            edge_def = f"{safe_from_tag} }|--|{{ {safe_to_tag} : {label}"
-        elif edge_type == "dashed":
-            edge_def = f"{safe_from_tag} }|..|{{ {safe_to_tag} : {label}"
-        if edge_def not in added_edges:
-            graph.append(f"    {edge_def}")
-            added_edges.add(edge_def)
-
-    if isinstance(tag_data, list):
-        tag_data = {tag["tag"]: tag for tag in tag_data}
-
-    for tag, data in tag_data.items():
-        safe_tag = add_node(tag)
-        for parent in data.get("parents", []):
-            safe_parent = add_node(parent)
-            add_edge(safe_parent, safe_tag, "solid", "is a parent of")
-
-        for child in data.get("children", []):
-            safe_child = add_node(child)
-            add_edge(safe_tag, safe_child, "solid", "is a child of")
-
-        for related, count in data.get("related", {}).items():
-            safe_related = add_node(related)
-            add_edge(safe_tag, safe_related, "dashed", f"related ({count})")
 
     return "\n".join(graph) + "\n"
 
