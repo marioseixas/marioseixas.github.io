@@ -1,183 +1,162 @@
 <div class='mermaid'>
 erDiagram
     linux {
-    scripts {
-        related_26 scripts
+        related_13 scripts
+        related_1 software_mobile
     }
-        related_26 linux
-    }
-    linux ||--|| scripts : "related (co-occurrences: 26)"
     software_mobile {
-        related_2 software_mobile
+        parent software
+        related_1 iphone
+        related_1 linux
     }
-        related_2 linux
-    }
-    linux ||--|| software_mobile : "related (co-occurrences: 2)"
-    rendimentos {
-    trabalho {
-    estudos {
-        related_2 estudos
-    }
-        related_2 trabalho
-    }
-    trabalho ||--|| estudos : "related (co-occurrences: 2)"
-    scripts_AI {
-        child scripts_AI
-    }
-        parent scripts
-    }
-    scripts ||--|| scripts_AI
-    scripts_mobile {
-        child scripts_mobile
-    }
-        parent scripts
-    }
-    scripts ||--|| scripts_mobile
-    scripts_cloud {
-        child scripts_cloud
-    }
-        parent scripts
-    }
-    scripts ||--|| scripts_cloud
-    scripts_google-apps-script {
+    linux ||--|{| software_mobile : "related (1 co-occurrences)"
+    scripts {
         child scripts_google-apps-script
+        child scripts_mobile
+        child scripts_AI
+        child scripts_cloud
+        related_13 linux
+        related_1 estudos
     }
+    linux ||--|{| scripts : "related (13 co-occurrences)"
+    rendimentos {
+    }
+    trabalho {
+        related_1 estudos
+    }
+    estudos {
+        related_1 scripts
+        related_1 trabalho
+    }
+    trabalho ||--|{| estudos : "related (1 co-occurrences)"
+    scripts_google-apps-script {
         parent scripts
     }
-    scripts ||--|| scripts_google-apps-script
-        related_26 linux
+    scripts ||--|| scripts_google-apps-script : "parent of"
+    scripts_mobile {
+        parent scripts
+        related_1 iphone
     }
-        related_26 scripts
+    scripts ||--|| scripts_mobile : "parent of"
+    scripts_AI {
+        parent scripts
     }
-    scripts ||--|| linux : "related (co-occurrences: 26)"
-        related_2 estudos
+    scripts ||--|| scripts_AI : "parent of"
+    scripts_cloud {
+        parent scripts
     }
-        related_2 scripts
-    }
-    scripts ||--|| estudos : "related (co-occurrences: 2)"
+    scripts ||--|| scripts_cloud : "parent of"
+    scripts ||--|{| estudos : "related (1 co-occurrences)"
+    scripts ||--|{| linux : "related (13 co-occurrences)"
     carro {
+    }
     edital {
-    edital_direito {
         child edital_direito
-    }
-        parent edital
-    }
-    edital ||--|| edital_direito
-    edital_direito_processual-penal {
         child edital_direito_processual-penal
     }
+    edital_direito {
         parent edital
+        child edital_direito_processual-penal
     }
-    edital ||--|| edital_direito_processual-penal
+    edital ||--|| edital_direito : "parent of"
+    edital_direito_processual-penal {
+        parent edital
+        parent edital_direito
+        parent direito
+        SUPERset edital_direito
+        SUBset edital
+    }
+    edital ||--|| edital_direito_processual-penal : "parent of"
     tasks {
-    tasks_iphone {
         child tasks_iphone
     }
+    tasks_iphone {
         parent tasks
     }
-    tasks ||--|| tasks_iphone
+    tasks ||--|| tasks_iphone : "parent of"
     hardware {
+    }
     chess {
+    }
     assistir {
+    }
     calls {
+    }
     despesas {
+    }
     iphone {
-        related_2 software_mobile
+        related_1 software_mobile
+        related_1 scripts_mobile
     }
-        related_2 iphone
-    }
-    iphone ||--|| software_mobile : "related (co-occurrences: 2)"
-        related_2 scripts_mobile
-    }
-        related_2 iphone
-    }
-    iphone ||--|| scripts_mobile : "related (co-occurrences: 2)"
+    iphone ||--|{| software_mobile : "related (1 co-occurrences)"
+    iphone ||--|{| scripts_mobile : "related (1 co-occurrences)"
     sell {
+    }
     github_jekyll {
+        parent github
+    }
     github {
         child github_jekyll
     }
-        parent github
-    }
-    github ||--|| github_jekyll
+    github ||--|| github_jekyll : "parent of"
     jekyll {
-        related_2 scripts
     }
-        related_2 estudos
-    }
-    estudos ||--|| scripts : "related (co-occurrences: 2)"
-        related_2 trabalho
-    }
-        related_2 estudos
-    }
-    estudos ||--|| trabalho : "related (co-occurrences: 2)"
-        child edital_direito_processual-penal
-    }
-        parent edital_direito
-    }
-    edital_direito ||--|| edital_direito_processual-penal
+    estudos ||--|{| scripts : "related (1 co-occurrences)"
+    estudos ||--|{| trabalho : "related (1 co-occurrences)"
+    edital_direito ||--|| edital_direito_processual-penal : "parent of"
     direito {
         child edital_direito_processual-penal
     }
-        parent direito
-    }
-    direito ||--|| edital_direito_processual-penal
+    direito ||--|| edital_direito_processual-penal : "parent of"
     fatherhood {
+    }
     misc {
+    }
     AI {
-    AI_prompt {
         child AI_prompt
     }
+    AI_prompt {
         parent AI
     }
-    AI ||--|| AI_prompt
+    AI ||--|| AI_prompt : "parent of"
     software {
         child software_mobile
-    }
-        parent software
-    }
-    software ||--|| software_mobile
-    software_cloud {
         child software_cloud
     }
+    software ||--|| software_mobile : "parent of"
+    software_cloud {
         parent software
     }
-    software ||--|| software_cloud
-        related_2 iphone
-    }
-        related_2 software_mobile
-    }
-    software_mobile ||--|| iphone : "related (co-occurrences: 2)"
-        related_2 linux
-    }
-        related_2 software_mobile
-    }
-    software_mobile ||--|| linux : "related (co-occurrences: 2)"
+    software ||--|| software_cloud : "parent of"
+    software_mobile ||--|{| linux : "related (1 co-occurrences)"
+    software_mobile ||--|{| iphone : "related (1 co-occurrences)"
     mobile {
+    }
     prompt {
+    }
     music {
-        related_2 iphone
     }
-        related_2 scripts_mobile
-    }
-    scripts_mobile ||--|| iphone : "related (co-occurrences: 2)"
+    scripts_mobile ||--|{| iphone : "related (1 co-occurrences)"
     spirit {
+        related_1 admoestação
+    }
     admoestação {
-        related_2 admoestação
+        related_1 spirit
     }
-        related_2 spirit
-    }
-    spirit ||--|| admoestação : "related (co-occurrences: 2)"
+    spirit ||--|{| admoestação : "related (1 co-occurrences)"
     ler {
+    }
     google-apps-script {
+    }
     saúde {
+    }
     cloud {
+    }
     receitas {
-        related_2 spirit
     }
-        related_2 admoestação
-    }
-    admoestação ||--|| spirit : "related (co-occurrences: 2)"
+    admoestação ||--|{| spirit : "related (1 co-occurrences)"
     processual-penal {
+    }
     direito_processual-penal {
+    }
 </div>
