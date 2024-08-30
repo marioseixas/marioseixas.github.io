@@ -182,8 +182,8 @@ def process_tags(posts_dir: str, output_file: str) -> tuple:
 
     return tag_data, combined_tags
 
-class JsonOutputHandler(BaseOutputHandler): # Assuming BaseOutputHandler is defined elsewhere
-    def write(self, data: dict, output_file: str):
+class JsonOutputHandler:
+    def write(self, data: dict, json_output_file: str):
         """Writes the tag data to a JSON file.
 
         Args:
@@ -203,9 +203,9 @@ class JsonOutputHandler(BaseOutputHandler): # Assuming BaseOutputHandler is defi
         
         converted_data = convert_sets_to_lists(data)
         
-        with open(output_file, 'w', encoding='utf-8') as f:
+        with open(json_output_file, 'w', encoding='utf-8') as f:
             json.dump(converted_data, f, ensure_ascii=False, indent=4)
-        logging.info(f"Tag data has been written to {output_file}")
+        logging.info(f"Tag data has been written to {json_output_file}")
 
 def generate_mermaid_graph(
     tag_data: Union[List[Dict[str, Any]], Dict[str, Any]], direction: str = "TD"
