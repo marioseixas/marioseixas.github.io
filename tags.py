@@ -11,6 +11,7 @@ logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(
 # Threshold for generating permutations
 THRESHOLD = 0  # Adjust this value as needed
 
+
 def extract_frontmatter(file_content: str) -> str:
     """Extracts the YAML frontmatter from a markdown file."""
     frontmatter = ""
@@ -22,6 +23,7 @@ def extract_frontmatter(file_content: str) -> str:
                 break
     return frontmatter
 
+
 def generate_partial_tags(tag: str) -> List[str]:
     """Generates all partial tags for a given tag."""
     parts = tag.split(">")
@@ -29,6 +31,7 @@ def generate_partial_tags(tag: str) -> List[str]:
     for i in range(1, len(parts) + 1):
         partial_tags.append(">".join(parts[:i]))
     return partial_tags
+
 
 def process_tags(posts_dir: str, output_file: str) -> dict:
     """Processes tags from markdown files and generates tag data."""
@@ -101,13 +104,14 @@ def process_tags(posts_dir: str, output_file: str) -> dict:
 
     return tag_data
 
+
 def generate_tag_data(all_posts: list, tag_frequency: dict) -> dict:
     """Generates the tag data structure with relationships and post information."""
     tag_data = defaultdict(
         lambda: {
             "parents": set(),
             "children": set(),
-            "related": defaultdict(int), 
+            "related": defaultdict(int),
             "SUBset": set(),
             "SUPERset": set(),
             "posts": [],
@@ -141,7 +145,7 @@ def generate_tag_data(all_posts: list, tag_frequency: dict) -> dict:
                     post_entry = {
                         "title": post["title"],
                         "url": post["url"],
-                        "highlighted": partial_tag == tag,  
+                        "highlighted": partial_tag == tag,  # Highlight exact tag matches
                         "date": post["date"],
                     }
                     tag_data[partial_tag]["posts"].append(post_entry)
@@ -161,7 +165,7 @@ def generate_tag_data(all_posts: list, tag_frequency: dict) -> dict:
                     tag_data[full_tag_path]["related"][other_tag] += 1
                     tag_data[other_tag]["related"][full_tag_path] += 1
 
-    # Clean up data 
+    # Clean up data - remove tags without posts and ensure relationships are with existing tags
     tag_data = {tag: data for tag, data in tag_data.items() if data["posts"]}
     for tag, data in tag_data.items():
         data["parents"] = {parent for parent in data["parents"] if parent in tag_data}
@@ -184,11 +188,12 @@ def generate_tag_data(all_posts: list, tag_frequency: dict) -> dict:
 
     return tag_data
 
+
 def generate_mermaid_er_diagram(tag_data: dict) -> str:
     """Generates a Mermaid ER diagram representing the tag relationships."""
     graph = ["erDiagram"]
     added_entities = set()
-    added_relationships = set()  # Track to avoid duplicates
+    added_relationships = set()
 
     def sanitize_entity_name(name: str) -> str:
         """Sanitizes entity names for Mermaid compatibility."""
@@ -223,6 +228,8 @@ def generate_mermaid_er_diagram(tag_data: dict) -> str:
         if safe_name not in added_entities:
             graph.append(f"    {safe_name} {{")
 
+            # Attributes Definition (Revised as Requested)
+            # Prioritize parent/child attributes and selectively include SUBset/SUPERset
             for parent in data["parents"]:
                 graph.append(f"        type parent")
                 graph.append(f"        name {sanitize_entity_name(parent)}")
@@ -231,25 +238,27 @@ def generate_mermaid_er_diagram(tag_data: dict) -> str:
                 graph.append(f"        name {sanitize_entity_name(child)}")
 
             # Only include SUBset if there's no child with the same name
-            for subset in data["SUBset"].difference(data["children"]):
+            subsets_to_add = data["SUBset"].difference(data["children"])
+            for subset in subsets_to_add:
                 graph.append(f"        type SUBset")
                 graph.append(f"        name {sanitize_entity_name(subset)}")
-            
+
             # Only include SUPERset if there's no parent with the same name
-            for superset in data["SUPERset"].difference(data["parents"]):
+            supersets_to_add = data["SUPERset"].difference(data["parents"])
+            for superset in supersets_to_add:
                 graph.append(f"        type SUPERset")
                 graph.append(f"        name {sanitize_entity_name(superset)}")
 
             for related, count in data["related"].items():
                 graph.append(f"        type related")
-                graph.append(f"        name {sanitize_entity_name(related)}") 
+                graph.append(f"        name {sanitize_entity_name(related)}")
 
             graph.append("    }")
             added_entities.add(safe_name)
         return safe_name
 
     def add_relationship(from_entity: str, to_entity: str, label: str) -> None:
-        """Adds a relationship link between entities, avoiding duplicates."""
+        """Adds a relationship link between entities, preventing duplicates."""
         relationship = (from_entity, to_entity, label)
         if relationship not in added_relationships:
             graph.append(f"    {from_entity} ||--|| {to_entity} : \"{label}\"")
@@ -259,23 +268,24 @@ def generate_mermaid_er_diagram(tag_data: dict) -> str:
     for tag_name, data in tag_data.items():
         add_entity(tag_name, data)
 
-    # Generate SUPERset Relationships
+    # Generate SUPERset Relationships with Explicit Links (As Requested)
     for tag_name, data in tag_data.items():
         safe_tag_name = sanitize_entity_name(tag_name)
         for superset in data["SUPERset"]:
             safe_superset = sanitize_entity_name(superset)
-            # Avoid redundant relationships already represented as parent
-            if superset not in data["parents"]:
+            if (
+                superset not in data["parents"]
+            ):  # Only add if not a direct parent
                 add_relationship(safe_tag_name, safe_superset, "SUPERset of")
 
     graph.append("%% Styling")
     graph.append("classDef mainNode fill:#f9f,stroke:#333,stroke-width:4px;")
     graph.append("classDef combinedNode fill:#bbf,stroke:#66f,stroke-width:2px;")
-    # Apply Styling to Atomic Tags 
+    # Mark main (atomic) tags as mainNode
     for tag_name in tag_data:
         if ">" not in tag_name:
             graph.append(f"class {sanitize_entity_name(tag_name)} mainNode;")
-    # Apply Styling to Combined Tags
+    # Mark combined tags as combinedNode
     for tag_name in tag_data:
         if ">" in tag_name:
             graph.append(f"class {sanitize_entity_name(tag_name)} combinedNode;")
