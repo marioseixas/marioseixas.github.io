@@ -167,6 +167,26 @@ def generate_mermaid_graph(
 ) -> str:
     graph = [f"erDiagram"]
     entities = {}
+    added_nodes = set()
+    added_edges = set()
+
+    def add_node(tag: str) -> str:
+        """
+        Adds a node (entity) to the graph if it hasn't been added yet.
+
+        Args:
+            tag (str): The tag name to be added.
+
+        Returns:
+            str: The sanitized tag name used in the graph.
+        """
+
+        safe_tag = tag.replace(">", "_").replace(" ", "_").replace("ç", "c").replace("ã", "a").replace("á", "a").replace("à", "a").replace("â", "a").replace("é", "e").replace("è", "e").replace("ê", "e").replace("í", "i").replace("ì", "i").replace("î", "i").replace("ó", "o").replace("ò", "o").replace("ô", "o").replace("õ", "o").replace("ú", "u").replace("ù", "u").replace("û", "u").replace("ü", "u")
+        if safe_tag not in added_nodes:
+            node_def = f"    {safe_tag} {{"
+            graph.append(node_def)
+            added_nodes.add(safe_tag)
+        return safe_tag
 
     def sanitize_tag(tag: str) -> str:
         return tag.replace(">", "_").replace(" ", "_")
@@ -279,6 +299,9 @@ def generate_mermaid_graph(
     def process_tag(tag_name: str, data: Dict[str, Any]) -> None:
         add_entity(tag_name)
 
+        # Add main node (entity)
+        add_node(tag_name)
+
         if ">" in tag_name:
             parts = tag_name.split(">")
             for part in parts:
@@ -326,6 +349,10 @@ def generate_mermaid_graph(
                 graph.append("    }")
             else:
                 graph.append(f"    {entity}")
+
+        for related in data.get("related", []):
+            # Ensure related tags are also represented as entities
+            add_node(related)
 
     except Exception as e:
         logging.error(f"Error processing tag_data: {e}")
