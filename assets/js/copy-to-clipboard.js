@@ -1,27 +1,23 @@
-document.addEventListener('DOMContentLoaded', (event) => {
-  document.querySelectorAll('pre code').forEach((codeBlock) => {
-    // Check if the code block is inside a Liquid block
-    if (codeBlock.closest('.liquid-block')) {
-      return; // Skip this code block
-    }
-    const button = document.createElement('button');
+document.addEventListener('DOMContentLoaded', function () {
+  var highlightBlocks = document.querySelectorAll('code');
+  highlightBlocks.forEach(function(block) {
+    var button = document.createElement('button');
     button.className = 'copy-button';
-    button.type = 'button';
-    button.innerText = 'Copy';
-    button.addEventListener('click', () => {
-      const code = codeBlock.innerText;
-      navigator.clipboard.writeText(code).then(() => {
-        button.innerText = 'Copied!';
-        setTimeout(() => {
-          button.innerText = 'Copy';
+    button.textContent = 'Copy';
+    button.title = 'Copy to clipboard';
+    button.addEventListener('click', function () {
+      // Find the plain text within this code block without line numbers or other additions
+      var code = block.querySelector('code').innerText;
+      navigator.clipboard.writeText(code).then(function () {
+        button.textContent = 'Copied!';
+        setTimeout(function() {
+          button.textContent = 'Copy';
         }, 2000);
-      }).catch((err) => {
-        console.error('Failed to copy text: ', err);
+      }).catch(function() {
+        button.textContent = 'Error';
       });
     });
-    const pre = codeBlock.parentNode;
-    if (pre && pre.tagName === 'PRE') {
-      pre.insertBefore(button, codeBlock);
-    }
+    // Prepend the button to the code block
+    block.insertBefore(button, block.firstChild);
   });
 });
