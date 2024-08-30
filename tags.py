@@ -257,7 +257,7 @@ def generate_mermaid_er_diagram(tag_data: dict) -> str:
         """Adds a relationship link between entities, preventing duplicates."""
         relationship = (from_entity, to_entity, label)
         if relationship not in added_relationships:
-            graph.append(f"    {from_entity} ||--|{ {to_entity} : \"{label}\"")
+            graph.append(f"    {from_entity} ||--|| {to_entity} : \"{label}\"")                                                   
             added_relationships.add(relationship)
 
     # Generate Entities
