@@ -1,23 +1,28 @@
-document.addEventListener('DOMContentLoaded', function () {
-  var highlightBlocks = document.querySelectorAll('pre[class^='language-']');
-  highlightBlocks.forEach(function(block) {
-    var button = document.createElement('button');
-    button.className = 'copy-button';
-    button.textContent = 'Copy';
-    button.title = 'Copy to clipboard';
-    button.addEventListener('click', function () {
-      // Find the plain text within this code block without line numbers or other additions
-      var code = block.querySelector('code').innerText;
-      navigator.clipboard.writeText(code).then(function () {
-        button.textContent = 'Copied!';
-        setTimeout(function() {
-          button.textContent = 'Copy';
-        }, 2000);
-      }).catch(function() {
-        button.textContent = 'Error';
-      });
+document.addEventListener('DOMContentLoaded', () => {
+  let codeBlocks = document.querySelectorAll(".code-block code");
+
+  codeBlocks.forEach((codeBlock) => {
+    const copyBtn = document.createElement("button");
+    copyBtn.innerText = "Copy";
+    copyBtn.style.marginLeft = "10px";
+    copyBtn.addEventListener("click", async () => {
+      await copyCode(codeBlock);
+      showSnackbar();
     });
-    // Prepend the button to the code block
-    block.insertBefore(button, block.firstChild);
+    codeBlock.parentNode.insertBefore(copyBtn, codeBlock.nextSibling);
   });
+
+  async function copyCode(codeBlock) {
+    try {
+      await navigator.clipboard.writeText(codeBlock.innerText);
+    } catch (err) {
+      console.error('Failed to copy: ', err);
+    }
+  }
+
+  function showSnackbar() {
+    let snackbar = document.getElementById("snackbar");
+    snackbar.className = "show";
+    setTimeout(() => { snackbar.className = snackbar.className.replace("show", ""); }, 3000);
+  }
 });
