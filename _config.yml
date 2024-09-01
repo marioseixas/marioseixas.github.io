@@ -3,7 +3,7 @@ name: infoBAG
 title: infoBAG
 url: https://ib.bsb.br
 enforce_ssl: ib.bsb.br
-baseurl: ""
+baseurl: "/marioseixas.github.io"
 incremental: true
 
 permalink: "/:slug/"
