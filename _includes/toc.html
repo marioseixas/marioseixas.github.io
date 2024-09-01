@@ -1,7 +1,6 @@
-{% capture processed_content %}
+{% capture content %}
 {{ content | replace: '<pre class="highlight"><code>', '<section><code>' | replace: '</code></pre>', '</code></section>' }}
 {% endcapture %}
-    {{ processed_content | strip }}
 {% capture tocWorkspace %}
     {% comment %}
         Copyright (c) 2017 Vladimir "allejo" Jimenez
