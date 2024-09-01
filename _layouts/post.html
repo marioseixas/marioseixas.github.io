@@ -48,10 +48,10 @@ layout: null
     new PagefindHighlight({ highlightParam: "highlight" });
   </script>
   <script src="{{ '/assets/js/search.js' | relative_url }}" defer></script>
-  <script src="{{ '/assets/js/prism.js' | relative_url }}" defer></script>  
+  <script src="{{ '/assets/js/prism.js' | relative_url }}" defer></script>
 </head>
 <body class="post-wrapper">  
-  <a class="search-input-block" id="search""></a>
+  <a class="search-input-block" id="search"></a>
   <article class="post">
   <header>
     <nav aria-label="Main navigation">
@@ -73,7 +73,7 @@ layout: null
   </header>
   <div class="post-heading">
     <h1 class="post-title">{{ page.title }}</h1>
-      <div class="search-link">
+    <div class="search-link">
         <span>
           <span class="tags">
             <time datetime="{{ page.date | date_to_xmlschema }}">
@@ -108,10 +108,12 @@ layout: null
         </span>
       </div>
     <main class="post-content-body">      
-      {% assign processed_content = content | replace: '<pre class="highlight"><code>', '<section><code>' | replace: '</code></pre>', '</code></section>' %}
-      {% include toc.html html=processed_content %}
-      {% include anchor_headings.html html=processed_content anchorBody="#" %}
-      {{ processed_content }}        
+      {% include toc.html html=content %}
+      {% include anchor_headings.html html=content anchorBody="#" %}
+      {% capture processed_content %}
+        {{ content | replace: '<pre class="highlight"><code>', '<section><code>' | replace: '</code></pre>', '</code></section>' }}
+      {% endcapture %}
+      {{ processed_content | strip }}
     </main>
     </div>  
   </article>
