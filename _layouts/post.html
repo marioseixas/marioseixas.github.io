@@ -105,15 +105,13 @@ layout: null
             · Revision history
           </a>
         </span>
-      </div>    
-      <main class="post-content-body">
-        <div class="code-container">
-          <pre class="copy-button">
-          </pre>
-        {% include toc.html html=content %}
-        {% include anchor_headings.html html=content anchorBody="#" %}
-        </div>
-      </main>
+      </div>
+    <main class="post-content-body">
+      <div id="snackbar">Copied!</div>
+      {% include toc.html html=content %}
+      {% include anchor_headings.html html=content anchorBody="#" %}
+      {{ content | replace: '<pre><code', '<section class="code-container"><code' | replace: '</code></pre>', '</code></section>' }}
+    </main>
   </div>
     <script src="{{ '/assets/js/copy-to-clipboard.js' | relative_url }}" defer></script>
   </article>
