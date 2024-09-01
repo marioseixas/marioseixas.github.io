@@ -50,34 +50,6 @@ img[class*="emoji"][src$=".svg"] {
   max-height: 30px;
   vertical-align: middle;
 }
-.code-container {
-  margin-bottom: 1em;
-  position: relative;
-}
-.code-container .copy-button {
-  background-color: var(--btn-bg);
-  border: none;
-  border-radius: var(--border-radius);
-  color: var(--btn-text);
-  cursor: pointer;
-  padding: 0.5em 1em;
-  position: absolute;
-  right: 5px;
-  top: 5px;
-  transition: background-color 0.3s ease;
-}
-.code-container .copy-button.copied {
-  background-color: var(--btn-hover-bg);
-  color: var(--bg-default);
-}
-.code-container .copy-button:hover {
-  background-color: var(--btn-hover-bg);
-}
-.code-container pre {
-  margin-bottom: 0;
-  background-color: var(--code-background);
-  color: var(--code-text);
-}
 .comment-box {
   background-color: rgba(var(--accents-dodgerblue), 0.1);
   border: 1px dotted var(--accents-dodgerblue);
@@ -414,7 +386,7 @@ p {
   hyphens: auto;
   text-align: justify;
 }
-pre,
+
 code {
   background: var(--code-background);
   border-radius: 4px;
@@ -426,6 +398,39 @@ code {
   white-space: pre-wrap;
   word-break: break-word;
 }
+
+.code-container {
+  margin-bottom: 1em;
+  position: relative;
+
+  .copy-button {
+    background-color: var(--btn-bg);
+    border: none;
+    border-radius: var(--border-radius);
+    color: var(--btn-text);
+    cursor: pointer;
+    padding: 0.5em 1em;
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    transition: background-color 0.3s ease;
+
+    &.copied, &:hover {
+      background-color: var(--btn-hover-bg);
+    }
+
+    &.copied {
+      color: var(--bg-default);
+    }
+  }
+
+  pre {
+    margin-bottom: 0;
+    background-color: var(--code-background);
+    color: var(--code-text);
+  }
+}
+
 table {
   border-collapse: collapse;
   table-layout: fixed;
