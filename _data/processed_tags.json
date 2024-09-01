@@ -496,12 +496,12 @@
     "scripts": {
         "parents": [],
         "children": [
-            "scripts>AI",
             "AI",
-            "scripts>google-apps-script",
-            "scripts>cloud",
-            "cloud",
             "mobile",
+            "cloud",
+            "scripts>cloud",
+            "scripts>AI",
+            "scripts>google-apps-script",
             "google-apps-script",
             "scripts>mobile"
         ],
@@ -702,8 +702,8 @@
     "edital": {
         "parents": [],
         "children": [
-            "edital>direito",
             "direito>processual-penal",
+            "edital>direito",
             "edital>direito>processual-penal",
             "direito"
         ],
@@ -744,8 +744,8 @@
     "tasks": {
         "parents": [],
         "children": [
-            "iphone",
-            "tasks>iphone"
+            "tasks>iphone",
+            "iphone"
         ],
         "related": {},
         "posts": [
@@ -1204,8 +1204,8 @@
     "github": {
         "parents": [],
         "children": [
-            "github>jekyll",
-            "jekyll"
+            "jekyll",
+            "github>jekyll"
         ],
         "related": {},
         "posts": [
@@ -1385,8 +1385,8 @@
             "scripts"
         ],
         "children": [
-            "AI>prompt",
-            "prompt"
+            "prompt",
+            "AI>prompt"
         ],
         "related": {},
         "posts": [
@@ -1443,10 +1443,10 @@
     "software": {
         "parents": [],
         "children": [
-            "cloud",
-            "software>mobile",
             "mobile",
-            "software>cloud"
+            "software>cloud",
+            "cloud",
+            "software>mobile"
         ],
         "related": {},
         "posts": [
@@ -1502,8 +1502,8 @@
     },
     "mobile": {
         "parents": [
-            "software",
-            "scripts"
+            "scripts",
+            "software"
         ],
         "children": [],
         "related": {},
@@ -1748,8 +1748,8 @@
     },
     "cloud": {
         "parents": [
-            "software",
-            "scripts"
+            "scripts",
+            "software"
         ],
         "children": [],
         "related": {},
