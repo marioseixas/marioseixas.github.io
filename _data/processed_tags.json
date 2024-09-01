@@ -496,14 +496,14 @@
     "scripts": {
         "parents": [],
         "children": [
-            "AI",
+            "mobile",
             "scripts>cloud",
-            "scripts>AI",
-            "cloud",
-            "scripts>google-apps-script",
-            "scripts>mobile",
             "google-apps-script",
-            "mobile"
+            "scripts>AI",
+            "scripts>google-apps-script",
+            "cloud",
+            "AI",
+            "scripts>mobile"
         ],
         "related": {
             "linux": 26,
@@ -702,10 +702,10 @@
     "edital": {
         "parents": [],
         "children": [
-            "edital>direito",
             "edital>direito>processual-penal",
+            "direito>processual-penal",
             "direito",
-            "direito>processual-penal"
+            "edital>direito"
         ],
         "related": {},
         "posts": [
@@ -744,8 +744,8 @@
     "tasks": {
         "parents": [],
         "children": [
-            "tasks>iphone",
-            "iphone"
+            "iphone",
+            "tasks>iphone"
         ],
         "related": {},
         "posts": [
@@ -1204,8 +1204,8 @@
     "github": {
         "parents": [],
         "children": [
-            "jekyll",
-            "github>jekyll"
+            "github>jekyll",
+            "jekyll"
         ],
         "related": {},
         "posts": [
@@ -1443,8 +1443,8 @@
     "software": {
         "parents": [],
         "children": [
-            "software>mobile",
             "mobile",
+            "software>mobile",
             "software>cloud",
             "cloud"
         ],
@@ -1502,8 +1502,8 @@
     },
     "mobile": {
         "parents": [
-            "scripts",
-            "software"
+            "software",
+            "scripts"
         ],
         "children": [],
         "related": {},
@@ -1748,8 +1748,8 @@
     },
     "cloud": {
         "parents": [
-            "scripts",
-            "software"
+            "software",
+            "scripts"
         ],
         "children": [],
         "related": {},
