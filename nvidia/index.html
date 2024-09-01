@@ -101,21 +101,6 @@
       </div>
     <main class="post-content-body">      
       
-    <h1 id="install-a-minimal-xorg-system">Install a minimal xorg system</h1>
-<p><code class="language-plaintext highlighter-rouge">sudo aptitude -Ry install xserver-xorg-video-fbdev xserver-xorg-input-libinput rxvt-unicode xorg dbus dbus-x11</code></p>
-
-<h1 id="install-everything-generic-for-nvidia-blobs">Install everything generic for nvidia blobs</h1>
-<p><code class="language-plaintext highlighter-rouge">sudo aptitude -Ry install dkms linux-headers-amd64 nvidia-installer-cleanup nvidia-support glx-alternative-nvidia libvdpau1 nvidia-modprobe nvidia-kernel-common</code></p>
-
-<h1 id="patch-your-depot-source-to-access-nvidia-legacy-340xx-_340108-11_amd64deb">Patch your depot source to access nvidia-legacy-340xx-*_340.108-11_amd64.deb</h1>
-<p><code class="language-plaintext highlighter-rouge">echo "deb http://snapshot.debian.org/archive/debian/20211227/ sid main contrib non-free" &gt;&gt; /etc/apt/sources.list</code></p>
-
-<h1 id="install-nvidia-legacy-340xx-_340108-11_amd64deb">Install nvidia-legacy-340xx-*_340.108-11_amd64.deb</h1>
-<p><code class="language-plaintext highlighter-rouge">sudo aptitude -y -o Acquire::Check-Valid-Until=false update</code></p>
-
-<p><code class="language-plaintext highlighter-rouge">sudo aptitude -Ry install nvidia-legacy-340xx-driver nvidia-legacy-340xx-smi</code></p>
-
-<h1 id="restore-your-depot-source-to-pure-bullseye">Restore your depot source to pure Bullseye</h1>
 <ul><li><a href="#install-a-minimal-xorg-system">Install a minimal xorg system</a></li><li><a href="#install-everything-generic-for-nvidia-blobs">Install everything generic for nvidia blobs</a></li><li><a href="#patch-your-depot-source-to-access-nvidia-legacy-340xx-_340108-11_amd64deb">Patch your depot source to access nvidia-legacy-340xx-*_340.108-11_amd64.deb</a></li><li><a href="#install-nvidia-legacy-340xx-_340108-11_amd64deb">Install nvidia-legacy-340xx-*_340.108-11_amd64.deb</a></li><li><a href="#restore-your-depot-source-to-pure-bullseye">Restore your depot source to pure Bullseye</a></li></ul>
       <h1 id="install-a-minimal-xorg-system">
   
