@@ -1,6 +1,6 @@
 ---
 layout: null
-title: 'archive'
+title: archive
 ---
 
 <!DOCTYPE html>
@@ -48,8 +48,7 @@ title: 'archive'
     import PagefindHighlight from '{{ "/pagefind/pagefind-highlight.js" | relative_url }}';
     new PagefindHighlight({ highlightParam: "highlight" });
   </script>
-  <script src="{{ '/assets/js/search.js' | relative_url }}" defer></script>
-  
+  <script src="{{ '/assets/js/search.js' | relative_url }}" defer></script>    
 </head>
 <body>
   <a class="search-input-block" id="search"></a>
