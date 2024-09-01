@@ -497,12 +497,12 @@
         "parents": [],
         "children": [
             "mobile",
-            "scripts>cloud",
             "cloud",
-            "AI",
-            "scripts>AI",
-            "google-apps-script",
             "scripts>mobile",
+            "AI",
+            "google-apps-script",
+            "scripts>AI",
+            "scripts>cloud",
             "scripts>google-apps-script"
         ],
         "related": {
@@ -702,10 +702,10 @@
     "edital": {
         "parents": [],
         "children": [
-            "edital>direito>processual-penal",
             "direito",
+            "direito>processual-penal",
             "edital>direito",
-            "direito>processual-penal"
+            "edital>direito>processual-penal"
         ],
         "related": {},
         "posts": [
@@ -1443,10 +1443,10 @@
     "software": {
         "parents": [],
         "children": [
+            "software>cloud",
             "mobile",
-            "software>mobile",
             "cloud",
-            "software>cloud"
+            "software>mobile"
         ],
         "related": {},
         "posts": [
