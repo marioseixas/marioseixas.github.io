@@ -97,7 +97,7 @@ jobs:
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ${{ github.workspace }}/_site
+          publish_dir: ${{ github.workspace }}
           publish_branch: gh-pages
           cname: ib.bsb.br
           allow_empty_commit: true
