@@ -496,14 +496,14 @@
     "scripts": {
         "parents": [],
         "children": [
+            "scripts>AI",
             "scripts>cloud",
-            "google-apps-script",
+            "scripts>google-apps-script",
+            "cloud",
             "AI",
             "mobile",
-            "cloud",
-            "scripts>google-apps-script",
-            "scripts>AI",
-            "scripts>mobile"
+            "scripts>mobile",
+            "google-apps-script"
         ],
         "related": {
             "linux": 26,
@@ -702,9 +702,9 @@
     "edital": {
         "parents": [],
         "children": [
+            "direito>processual-penal",
             "direito",
             "edital>direito>processual-penal",
-            "direito>processual-penal",
             "edital>direito"
         ],
         "related": {},
@@ -744,8 +744,8 @@
     "tasks": {
         "parents": [],
         "children": [
-            "iphone",
-            "tasks>iphone"
+            "tasks>iphone",
+            "iphone"
         ],
         "related": {},
         "posts": [
@@ -1443,9 +1443,9 @@
     "software": {
         "parents": [],
         "children": [
-            "mobile",
-            "cloud",
             "software>mobile",
+            "cloud",
+            "mobile",
             "software>cloud"
         ],
         "related": {},
@@ -1502,8 +1502,8 @@
     },
     "mobile": {
         "parents": [
-            "scripts",
-            "software"
+            "software",
+            "scripts"
         ],
         "children": [],
         "related": {},
@@ -1748,8 +1748,8 @@
     },
     "cloud": {
         "parents": [
-            "scripts",
-            "software"
+            "software",
+            "scripts"
         ],
         "children": [],
         "related": {},
@@ -1819,8 +1819,8 @@
     },
     "edital>direito>processual-penal": {
         "parents": [
-            "direito",
-            "edital"
+            "edital",
+            "direito"
         ],
         "children": [],
         "related": {},
