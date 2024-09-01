@@ -496,14 +496,14 @@
     "scripts": {
         "parents": [],
         "children": [
-            "scripts>AI",
+            "cloud",
+            "google-apps-script",
             "scripts>cloud",
-            "scripts>google-apps-script",
             "mobile",
+            "scripts>AI",
             "AI",
             "scripts>mobile",
-            "cloud",
-            "google-apps-script"
+            "scripts>google-apps-script"
         ],
         "related": {
             "linux": 26,
@@ -702,10 +702,10 @@
     "edital": {
         "parents": [],
         "children": [
-            "edital>direito",
             "direito>processual-penal",
-            "direito",
-            "edital>direito>processual-penal"
+            "edital>direito",
+            "edital>direito>processual-penal",
+            "direito"
         ],
         "related": {},
         "posts": [
@@ -1204,8 +1204,8 @@
     "github": {
         "parents": [],
         "children": [
-            "github>jekyll",
-            "jekyll"
+            "jekyll",
+            "github>jekyll"
         ],
         "related": {},
         "posts": [
@@ -1385,8 +1385,8 @@
             "scripts"
         ],
         "children": [
-            "AI>prompt",
-            "prompt"
+            "prompt",
+            "AI>prompt"
         ],
         "related": {},
         "posts": [
@@ -1443,8 +1443,8 @@
     "software": {
         "parents": [],
         "children": [
-            "software>cloud",
             "mobile",
+            "software>cloud",
             "cloud",
             "software>mobile"
         ],
@@ -1502,8 +1502,8 @@
     },
     "mobile": {
         "parents": [
-            "software",
-            "scripts"
+            "scripts",
+            "software"
         ],
         "children": [],
         "related": {},
@@ -1748,8 +1748,8 @@
     },
     "cloud": {
         "parents": [
-            "software",
-            "scripts"
+            "scripts",
+            "software"
         ],
         "children": [],
         "related": {},
