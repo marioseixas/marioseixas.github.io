@@ -108,10 +108,11 @@ layout: null
         </span>
       </div>
     <main class="post-content-body">      
-      {% include toc.html html=content %}
-      {% include anchor_headings.html html=content anchorBody="#" %}
-      {{ '<pre class="highlight"><code>' | replace: '<pre class="highlight"><code>', '<section><code>' | replace: '</code></pre>', '</code></section>' }}
-      </main>
+      {% assign processed_content = content | replace: '<pre class="highlight"><code>', '<section><code>' | replace: '</code></pre>', '</code></section>' %}
+      {% include toc.html html=processed_content %}
+      {% include anchor_headings.html html=processed_content anchorBody="#" %}
+      {{ processed_content }}        
+    </main>
     </div>  
   </article>
   <hr>
