@@ -3,7 +3,6 @@ name: infoBAG
 title: infoBAG
 url: https://ib.bsb.br
 enforce_ssl: ib.bsb.br
-baseurl: "/marioseixas.github.io"
 incremental: true
 
 permalink: "/:slug/"
@@ -20,20 +19,11 @@ sass:
   sass_dir: _sass
   style: :compressed
 
-defaults:
-  - scope:
-      path: ""
-    values:
-      layout: null
-
 git_log: false
 
 markdown: kramdown
 kramdown:
   input: GFM
-
-mermaid:
-  src: 'https://cdn.jsdelivr.net/npm/mermaid@10.9.1/dist/mermaid.esm.min.mjs'
 
 liquid:
   error_mode: strict
