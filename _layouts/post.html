@@ -1,7 +1,3 @@
----
-layout: null
----
-
 <!DOCTYPE html>
 <html lang="en">    
 <head>
@@ -110,10 +106,7 @@ layout: null
     <main class="post-content-body">      
       {% include toc.html html=content %}
       {% include anchor_headings.html html=content anchorBody="#" %}
-      {% capture processed_content %}
-        {{ content | replace: '<pre class="highlight"><code>', '<section><code>' | replace: '</code></pre>', '</code></section>' }}
-      {% endcapture %}
-      {{ processed_content | strip }}
+      {{ content | replace: '<pre class="highlight"><code>', '<section><code>' | replace: '</code></pre>', '</code></section>' }}
     </main>
     </div>  
   </article>
