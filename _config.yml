@@ -1,8 +1,6 @@
-repository: marioseixas/marioseixas.github.io
 name: infoBAG
 title: infoBAG
 url: https://ib.bsb.br
-enforce_ssl: ib.bsb.br
 incremental: true
 
 permalink: "/:slug/"
