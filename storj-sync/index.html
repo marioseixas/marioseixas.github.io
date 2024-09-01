@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">    
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>
+    
+      Rclone: Syncing STORJ Cloud to Local Storage — infoBAG
+    
+  </title>
+
+  <link rel="canonical" href="https://ib.bsb.br/storj-sync/">  
+  <link rel="alternate" type="application/rss+xml" title="infoBAG" href="/rss.xml">
+
+  <meta property="og:site_name" content="infoBAG">
+  <meta property="og:title" content="Rclone: Syncing STORJ Cloud to Local Storage">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://ib.bsb.br/storj-sync/">
+  
+  
+
+  
+    <meta property="article:published_time" content="2024-05-06T03:00:00+00:00">
+    <meta property="article:author" content="https://ib.bsb.br">
+  
+
+  
+    <meta itemprop="keywords" content="linux,scripts">
+    
+      <meta property="article:tag" content="linux">
+    
+      <meta property="article:tag" content="scripts">
+    
+  
+
+  <link href="/style.css" rel="stylesheet">
+  <link href="/pagefind/pagefind-ui.css" rel="stylesheet">
+  <script src="/pagefind/pagefind-ui.js"></script>
+  <script type="module">
+    import PagefindHighlight from '/pagefind/pagefind-highlight.js';
+    new PagefindHighlight({ highlightParam: "highlight" });
+  </script>
+  <script src="/assets/js/search.js" defer></script>
+  <script src="/assets/js/prism.js" defer></script>
+</head>
+<body class="post-wrapper">  
+  <a class="search-input-block" id="search"></a>
+  <article class="post">
+  <header>
+    <nav aria-label="Main navigation">
+  <div class="header-container">
+    <a class="internal-link" href="/">
+      <img src="https://raw.githubusercontent.com/marioseixas/marioseixas.github.io/main/assets/Sudden_Death_Rune.gif" class="favicon">
+    </a>
+    <a href="https://ib.bsb.br/archive">
+      <img src="https://raw.githubusercontent.com/marioseixas/marioseixas.github.io/main/favicon.ico" class="favicon">
+    </a>
+    <a href="https://ib.bsb.br/tags">
+      <img src="https://raw.githubusercontent.com/marioseixas/marioseixas.github.io/main/assets/Label.gif" class="favicon">
+    </a>
+    <a href="https://ib.bsb.br/events">
+      <img src="https://raw.githubusercontent.com/marioseixas/marioseixas.github.io/main/assets/Paralyse_Rune.gif" class="favicon">
+    </a>      
+  </div>
+    </nav>
+  </header>
+  <div class="post-heading">
+    <h1 class="post-title">Rclone: Syncing STORJ Cloud to Local Storage</h1>
+    <div class="search-link">
+        <span>
+          <span class="tags">
+            <time datetime="2024-05-06T03:00:00+00:00">
+              · 06 May 2024
+            </time>
+            
+            &rightarrowtail;
+            <time datetime="2024-07-13T13:46:16+00:00">
+                13 Jul 2024
+              </time>
+            
+          </span>          
+          
+            <span>
+              · Tags:
+              
+                <a href="/tags/#linux" class="tag">linux</a>,
+              
+                <a href="/tags/#scripts" class="tag">scripts</a>
+              
+            </span>
+                    
+          
+            <span class="tags">
+              · Edit: aberto.
+            </span>
+                    
+          <a href="https://github.com/marioseixas/marioseixas.github.io/edit/main/_posts/2024-05-06-storj-sync.md" target="_blank" rel="noopener noreferrer">
+            · Improve this
+          </a>
+          <a href="https://github.com/marioseixas/marioseixas.github.io/commits/main/_posts/2024-05-06-storj-sync.md" target="_blank" rel="noopener noreferrer">
+            · Revision history
+          </a>
+        </span>
+      </div>
+    <main class="post-content-body">      
+      <ul><li><a href="#automation-with-cron">Automation with Cron</a></li></ul>
+      <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#!/bin/bash
+
+# Define directories and log file locations
+LOG_DIR="/var/log/rclone/"
+SYNC_LOG="${LOG_DIR}/rclone_sync.log"
+ERROR_LOG="${LOG_DIR}/rclone_errors.log"
+
+# Ensure the log directory exists
+mkdir -p "${LOG_DIR}"
+
+# Define source, destination, and compare-dest directories
+SOURCE_DIR="/userdata/"
+DEST_DIR="Storj:transfer/999_SHARED/"
+COMPARE_DEST="Storj:transfer/999_SHARED/previous_backups"
+
+# Check if the initial sync has been done
+if [ ! -f "${LOG_DIR}/initial_sync_done" ]; then
+    # Perform the initial synchronization
+    rclone sync "${SOURCE_DIR}" "${DEST_DIR}" --progress -v --log-file="${SYNC_LOG}" 2&gt;&gt;"${ERROR_LOG}"
+
+    # Check the exit status and create a marker file if successful
+    if [ $? -eq 0 ]; then
+        touch "${LOG_DIR}/initial_sync_done"
+        echo "Initial sync completed successfully." &gt;&gt; "${SYNC_LOG}"
+    else
+        echo "Initial sync encountered an error. Check log for details." &gt;&gt; "${SYNC_LOG}"
+        exit 1
+    fi
+fi
+
+# Perform daily incremental backups using --copy-dest
+rclone sync "${SOURCE_DIR}" "${DEST_DIR}" --copy-dest="${COMPARE_DEST}" --progress -v --log-file="${SYNC_LOG}" 2&gt;&gt;"${ERROR_LOG}"
+
+# Check the exit status and log appropriately
+if [ $? -eq 0 ]; then
+    echo "Incremental sync operation completed successfully."
+    echo "Incremental sync operation completed successfully." &gt;&gt; "${SYNC_LOG}"
+else
+    echo "Incremental sync operation encountered an error. Check log for details."
+    echo "Incremental sync operation encountered an error. Check log for details." &gt;&gt; "${SYNC_LOG}"
+fi
+
+</code></pre></div></div>
+<h3 id="automation-with-cron">
+  
+  
+     <a href="#automation-with-cron">#</a>Automation with Cron
+  
+  <a href="#" class="back-to-top" aria-label="Back to top">
+  <img src="/assets/gold.ico" alt="gold icon">
+</a>
+</h3>
+      
+
+<p>For regular updates, you can automate the synchronization process through a cron job:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>crontab <span class="nt">-e</span>
+</code></pre></div></div>
+
+<p>Add the following entries to execute the synchronization daily at 9 AM:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>0 9 * * * /usr/bin/rstorj.sh
+</code></pre></div></div>
+
+      
+      <div class="language-plaintext highlighter-rouge"><div class="highlight"><section><code>#!/bin/bash
+
+# Define directories and log file locations
+LOG_DIR="/var/log/rclone/"
+SYNC_LOG="${LOG_DIR}/rclone_sync.log"
+ERROR_LOG="${LOG_DIR}/rclone_errors.log"
+
+# Ensure the log directory exists
+mkdir -p "${LOG_DIR}"
+
+# Define source, destination, and compare-dest directories
+SOURCE_DIR="/userdata/"
+DEST_DIR="Storj:transfer/999_SHARED/"
+COMPARE_DEST="Storj:transfer/999_SHARED/previous_backups"
+
+# Check if the initial sync has been done
+if [ ! -f "${LOG_DIR}/initial_sync_done" ]; then
+    # Perform the initial synchronization
+    rclone sync "${SOURCE_DIR}" "${DEST_DIR}" --progress -v --log-file="${SYNC_LOG}" 2&gt;&gt;"${ERROR_LOG}"
+
+    # Check the exit status and create a marker file if successful
+    if [ $? -eq 0 ]; then
+        touch "${LOG_DIR}/initial_sync_done"
+        echo "Initial sync completed successfully." &gt;&gt; "${SYNC_LOG}"
+    else
+        echo "Initial sync encountered an error. Check log for details." &gt;&gt; "${SYNC_LOG}"
+        exit 1
+    fi
+fi
+
+# Perform daily incremental backups using --copy-dest
+rclone sync "${SOURCE_DIR}" "${DEST_DIR}" --copy-dest="${COMPARE_DEST}" --progress -v --log-file="${SYNC_LOG}" 2&gt;&gt;"${ERROR_LOG}"
+
+# Check the exit status and log appropriately
+if [ $? -eq 0 ]; then
+    echo "Incremental sync operation completed successfully."
+    echo "Incremental sync operation completed successfully." &gt;&gt; "${SYNC_LOG}"
+else
+    echo "Incremental sync operation encountered an error. Check log for details."
+    echo "Incremental sync operation encountered an error. Check log for details." &gt;&gt; "${SYNC_LOG}"
+fi
+
+</code></section></div></div>
+
+<h3 id="automation-with-cron">Automation with Cron</h3>
+
+<p>For regular updates, you can automate the synchronization process through a cron job:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><section><code>crontab <span class="nt">-e</span>
+</code></section></div></div>
+
+<p>Add the following entries to execute the synchronization daily at 9 AM:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><section><code>0 9 * * * /usr/bin/rstorj.sh
+</code></section></div></div>
+    </main>
+    </div>  
+  </article>
+  <hr>
+  <a href="#" class="back-to-top" aria-label="Back to top">
+    <img src="/assets/gold.ico" alt="gold icon">
+  </a>
+  https://rclone.org/s3/#storj    
+</body>  
+</html>

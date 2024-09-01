@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">    
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>
+    
+      Packages list script — infoBAG
+    
+  </title>
+
+  <link rel="canonical" href="https://ib.bsb.br/dpkg-script/">  
+  <link rel="alternate" type="application/rss+xml" title="infoBAG" href="/rss.xml">
+
+  <meta property="og:site_name" content="infoBAG">
+  <meta property="og:title" content="Packages list script">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://ib.bsb.br/dpkg-script/">
+  
+  
+
+  
+    <meta property="article:published_time" content="2023-12-24T03:00:00+00:00">
+    <meta property="article:author" content="https://ib.bsb.br">
+  
+
+  
+    <meta itemprop="keywords" content="linux,scripts">
+    
+      <meta property="article:tag" content="linux">
+    
+      <meta property="article:tag" content="scripts">
+    
+  
+
+  <link href="/style.css" rel="stylesheet">
+  <link href="/pagefind/pagefind-ui.css" rel="stylesheet">
+  <script src="/pagefind/pagefind-ui.js"></script>
+  <script type="module">
+    import PagefindHighlight from '/pagefind/pagefind-highlight.js';
+    new PagefindHighlight({ highlightParam: "highlight" });
+  </script>
+  <script src="/assets/js/search.js" defer></script>
+  <script src="/assets/js/prism.js" defer></script>
+</head>
+<body class="post-wrapper">  
+  <a class="search-input-block" id="search"></a>
+  <article class="post">
+  <header>
+    <nav aria-label="Main navigation">
+  <div class="header-container">
+    <a class="internal-link" href="/">
+      <img src="https://raw.githubusercontent.com/marioseixas/marioseixas.github.io/main/assets/Sudden_Death_Rune.gif" class="favicon">
+    </a>
+    <a href="https://ib.bsb.br/archive">
+      <img src="https://raw.githubusercontent.com/marioseixas/marioseixas.github.io/main/favicon.ico" class="favicon">
+    </a>
+    <a href="https://ib.bsb.br/tags">
+      <img src="https://raw.githubusercontent.com/marioseixas/marioseixas.github.io/main/assets/Label.gif" class="favicon">
+    </a>
+    <a href="https://ib.bsb.br/events">
+      <img src="https://raw.githubusercontent.com/marioseixas/marioseixas.github.io/main/assets/Paralyse_Rune.gif" class="favicon">
+    </a>      
+  </div>
+    </nav>
+  </header>
+  <div class="post-heading">
+    <h1 class="post-title">Packages list script</h1>
+    <div class="search-link">
+        <span>
+          <span class="tags">
+            <time datetime="2023-12-24T03:00:00+00:00">
+              · 24 Dec 2023
+            </time>
+            
+            &rightarrowtail;
+            <time datetime="2024-07-13T13:46:16+00:00">
+                13 Jul 2024
+              </time>
+            
+          </span>          
+          
+            <span>
+              · Tags:
+              
+                <a href="/tags/#linux" class="tag">linux</a>,
+              
+                <a href="/tags/#scripts" class="tag">scripts</a>
+              
+            </span>
+                    
+          
+            <span class="tags">
+              · Edit: fechado.
+            </span>
+                    
+          <a href="https://github.com/marioseixas/marioseixas.github.io/edit/main/_posts/2023-12-24-dpkg-script.md" target="_blank" rel="noopener noreferrer">
+            · Improve this
+          </a>
+          <a href="https://github.com/marioseixas/marioseixas.github.io/commits/main/_posts/2023-12-24-dpkg-script.md" target="_blank" rel="noopener noreferrer">
+            · Revision history
+          </a>
+        </span>
+      </div>
+    <main class="post-content-body">      
+      
+      <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#!/bin/bash
+
+# Setup output file
+backup_dir="$HOME/backup_software_lists"
+mkdir -p "$backup_dir"
+outfile="$backup_dir/complete-installed-software-list.txt"
+
+# Clear the outfile before writing
+&gt; "$outfile"
+
+# Python Packages
+if which pip &gt;/dev/null; then
+  echo "Python Packages:" &gt;&gt; "$outfile"
+  pip freeze &gt;&gt; "$outfile"
+else
+  echo "Python pip is not installed or not found in PATH." &gt;&gt; "$outfile"
+fi
+echo &gt;&gt; "$outfile"
+
+# Node.js Global Packages
+if which npm &gt;/dev/null; then
+  echo "Node.js Global Packages:" &gt;&gt; "$outfile"
+  npm list -g --depth=0 &gt;&gt; "$outfile"
+else
+  echo "Node.js npm is not installed or not found in PATH." &gt;&gt; "$outfile"
+fi
+echo &gt;&gt; "$outfile"
+
+# Snap Packages
+if which snap &gt;/dev/null; then
+  echo "Snap Packages:" &gt;&gt; "$outfile"
+  snap list &gt;&gt; "$outfile"
+else
+  echo "Snap is not installed." &gt;&gt; "$outfile"
+fi
+echo &gt;&gt; "$outfile"
+
+# Applications in /opt
+if [ -d "/opt" ]; then
+  echo "Applications in /opt:" &gt;&gt; "$outfile"
+  ls /opt &gt;&gt; "$outfile"
+else
+  echo "/opt directory does not exist." &gt;&gt; "$outfile"
+fi
+echo &gt;&gt; "$outfile"
+
+# Local Applications in /usr/local
+echo "Local Applications in /usr/local:" &gt;&gt; "$outfile"
+ls /usr/local &gt;&gt; "$outfile"
+echo &gt;&gt; "$outfile"
+
+# User Installed Applications 
+user_applications_dir="$HOME/applications"
+if [ -d "$user_applications_dir" ]; then
+  echo "User Applications Folder:" &gt;&gt; "$outfile"
+  ls "$user_applications_dir" &gt;&gt; "$outfile"
+else
+  echo "User applications directory does not exist or not found: $user_applications_dir" &gt;&gt; "$outfile"
+fi
+echo &gt;&gt; "$outfile"
+
+# Installed Debian Packages Details
+echo "Installed Debian Packages Details:" &gt;&gt; "$outfile"
+dpkg-query -l | awk 'BEGIN {print "| Name | Description |\n|---|---|"}
+                       NR&gt;5 {
+                         desc=$5; 
+                         for (i=6; i&lt;=NF; i++) 
+                             desc=desc " " $i; 
+                         print "| " $2 " | " desc " |"
+                       }' &gt;&gt; "$outfile"
+echo "Installed packages list written to $outfile"
+echo &gt;&gt; "$outfile"
+
+# Backup of repositories
+sources_list="$backup_dir/sources.list.backup"
+sources_list_d="$backup_dir/sources.list.d.backup.tar.gz"
+echo "Backup of repositories:" &gt;&gt; "$outfile"
+echo "Sources list: $sources_list" &gt;&gt; "$outfile"
+echo "Sources list.d: $sources_list_d" &gt;&gt; "$outfile"
+cp /etc/apt/sources.list "$sources_list"
+tar czvf "$sources_list_d" -C /etc/apt sources.list.d/
+echo &gt;&gt; "$outfile"
+
+echo "Backup of software lists has been created at: $outfile."
+</code></pre></div></div>
+
+      
+      <div class="language-plaintext highlighter-rouge"><div class="highlight"><section><code>#!/bin/bash
+
+# Setup output file
+backup_dir="$HOME/backup_software_lists"
+mkdir -p "$backup_dir"
+outfile="$backup_dir/complete-installed-software-list.txt"
+
+# Clear the outfile before writing
+&gt; "$outfile"
+
+# Python Packages
+if which pip &gt;/dev/null; then
+  echo "Python Packages:" &gt;&gt; "$outfile"
+  pip freeze &gt;&gt; "$outfile"
+else
+  echo "Python pip is not installed or not found in PATH." &gt;&gt; "$outfile"
+fi
+echo &gt;&gt; "$outfile"
+
+# Node.js Global Packages
+if which npm &gt;/dev/null; then
+  echo "Node.js Global Packages:" &gt;&gt; "$outfile"
+  npm list -g --depth=0 &gt;&gt; "$outfile"
+else
+  echo "Node.js npm is not installed or not found in PATH." &gt;&gt; "$outfile"
+fi
+echo &gt;&gt; "$outfile"
+
+# Snap Packages
+if which snap &gt;/dev/null; then
+  echo "Snap Packages:" &gt;&gt; "$outfile"
+  snap list &gt;&gt; "$outfile"
+else
+  echo "Snap is not installed." &gt;&gt; "$outfile"
+fi
+echo &gt;&gt; "$outfile"
+
+# Applications in /opt
+if [ -d "/opt" ]; then
+  echo "Applications in /opt:" &gt;&gt; "$outfile"
+  ls /opt &gt;&gt; "$outfile"
+else
+  echo "/opt directory does not exist." &gt;&gt; "$outfile"
+fi
+echo &gt;&gt; "$outfile"
+
+# Local Applications in /usr/local
+echo "Local Applications in /usr/local:" &gt;&gt; "$outfile"
+ls /usr/local &gt;&gt; "$outfile"
+echo &gt;&gt; "$outfile"
+
+# User Installed Applications 
+user_applications_dir="$HOME/applications"
+if [ -d "$user_applications_dir" ]; then
+  echo "User Applications Folder:" &gt;&gt; "$outfile"
+  ls "$user_applications_dir" &gt;&gt; "$outfile"
+else
+  echo "User applications directory does not exist or not found: $user_applications_dir" &gt;&gt; "$outfile"
+fi
+echo &gt;&gt; "$outfile"
+
+# Installed Debian Packages Details
+echo "Installed Debian Packages Details:" &gt;&gt; "$outfile"
+dpkg-query -l | awk 'BEGIN {print "| Name | Description |\n|---|---|"}
+                       NR&gt;5 {
+                         desc=$5; 
+                         for (i=6; i&lt;=NF; i++) 
+                             desc=desc " " $i; 
+                         print "| " $2 " | " desc " |"
+                       }' &gt;&gt; "$outfile"
+echo "Installed packages list written to $outfile"
+echo &gt;&gt; "$outfile"
+
+# Backup of repositories
+sources_list="$backup_dir/sources.list.backup"
+sources_list_d="$backup_dir/sources.list.d.backup.tar.gz"
+echo "Backup of repositories:" &gt;&gt; "$outfile"
+echo "Sources list: $sources_list" &gt;&gt; "$outfile"
+echo "Sources list.d: $sources_list_d" &gt;&gt; "$outfile"
+cp /etc/apt/sources.list "$sources_list"
+tar czvf "$sources_list_d" -C /etc/apt sources.list.d/
+echo &gt;&gt; "$outfile"
+
+echo "Backup of software lists has been created at: $outfile."
+</code></section></div></div>
+    </main>
+    </div>  
+  </article>
+  <hr>
+  <a href="#" class="back-to-top" aria-label="Back to top">
+    <img src="/assets/gold.ico" alt="gold icon">
+  </a>
+      
+</body>  
+</html>
