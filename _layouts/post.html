@@ -47,7 +47,8 @@ layout: null
     import PagefindHighlight from '{{ "/pagefind/pagefind-highlight.js" | relative_url }}';
     new PagefindHighlight({ highlightParam: "highlight" });
   </script>
-  <script src="{{ '/assets/js/search.js' | relative_url }}" defer></script>  
+  <script src="{{ '/assets/js/search.js' | relative_url }}" defer></script>
+  <script src="{{ '/assets/js/prism.js' | relative_url }}" defer></script>  
 </head>
 <body class="post-wrapper">  
   <a class="search-input-block" id="search""></a>
@@ -109,11 +110,9 @@ layout: null
     <main class="post-content-body">      
       {% include toc.html html=content %}
       {% include anchor_headings.html html=content anchorBody="#" %}
-      {{ content | replace: '<pre><code', '<section class="code-container"><code' | replace: '</code></pre>', '</code></section>' }}
+      {{ content | replace: '<pre><code', '<section class="code-container"><code' | replace: '</code></pre>', '</code></section>' }}        
     </main>
   </div>
-    <div id="snackbar">Copied!</div>
-    <script src="{{ '/assets/js/copy-to-clipboard.js' | relative_url }}" defer></script>
   </article>
   <hr>
   <a href="#" class="back-to-top" aria-label="Back to top">
