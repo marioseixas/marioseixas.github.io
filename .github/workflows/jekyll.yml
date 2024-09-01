@@ -100,3 +100,5 @@ jobs:
           publish_dir: ${{ github.workspace }}/_site
           publish_branch: gh-pages
           cname: ib.bsb.br
+          allow_empty_commit: true
+          enable_jekyll: true
