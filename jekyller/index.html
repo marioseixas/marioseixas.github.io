@@ -191,49 +191,6 @@ git push origin main
 echo "Upload completed."
 </code></pre></div></div>
 
-      <div class="language-plaintext highlighter-rouge"><div class="highlight"><section><code>#!/bin/bash
-echo "Enter Slug Name (all spaces will be replaced with -):"
-read slugInput
-slugName=`echo $slugInput | sed 's/ /-/g'`
-time=$(date "+%Y-%m-%d")
-slug="$time-$slugName"
-echo "File Name: $slug.md"
-
-echo "Enter Title:"
-read titleName
-
-postPath="/root/data/marioseixas.github.io/_posts/$slug.md"
-
-cat &lt;&lt;EOF &gt; "$postPath"
----
-categories:
-  - 
-tags:
-  - 
-comment: 
-info: aberto.
-date: '$time'
-type: post
-layout: post
-published: true
-slug: $slugName
-title: '$titleName'
-
----
-
-EOF
-
-xnedit "$postPath"
-
-echo "Uploading $slug.md to GitHub..."
-cd "/root/data/marioseixas.github.io"
-git add "_posts/$slug.md"
-git commit -m "Add new post: $titleName"
-git push origin main
-
-echo "Upload completed."
-</code></section></div></div>
-
     </main>
     </div>  
   </article>
