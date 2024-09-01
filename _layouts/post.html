@@ -110,9 +110,9 @@ layout: null
     <main class="post-content-body">      
       {% include toc.html html=content %}
       {% include anchor_headings.html html=content anchorBody="#" %}
-      {{ content | replace: '<pre><code', '<section class="code-container"><code' | replace: '</code></pre>', '</code></section>' }}        
+      {{ content | replace: '<pre class="highlight"><code>', '<section><code>' | replace: '</code></pre>', '</code></section>' }}        
     </main>
-  </div>
+    </div>  
   </article>
   <hr>
   <a href="#" class="back-to-top" aria-label="Back to top">
