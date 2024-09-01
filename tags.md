@@ -4,11 +4,11 @@ title: Tags
 ---
 
 <!DOCTYPE html>
-<html lang="en">    
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
+
   <title>
     {% if page.id == "home" %}
       {{ site.title }}
@@ -17,8 +17,8 @@ title: Tags
     {% endif %}
   </title>
 
-  <link rel="canonical" href="{{ page.canonical_url | default: site.url | append: page.url }}">  
-  <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ site.baseurl | default: site.url }}/rss.xml">
+  <link rel="canonical" href="{{ page.canonical_url | default: site.url | append: page.url }}">
+  <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ site.baseurl }}/rss.xml">
 
   <meta property="og:site_name" content="{{ site.title }}">
   <meta property="og:title" content="{{ page.title | default: site.title }}">
@@ -26,12 +26,12 @@ title: Tags
   <meta property="og:url" content="{{ site.url }}{{ page.url }}">
   
   {% if page.image %}
-    <meta property="og:image" content="{% if page.image contains 'https://' %}{{ page.image }}{% else %}{{ site.url }}{{ page.image }}{% endif %}">
+    <meta property="og:image" content="{{ page.image | prepend: site.url }}">
   {% endif %}
 
   {% if page.date %}
     <meta property="article:published_time" content="{{ page.date | date_to_xmlschema }}">
-    <meta property="article:author" content="{{ page.author | default: site.author | default: site.url }}">
+    <meta property="article:author" content="{{ page.author | default: site.author }}">
   {% endif %}
 
   {% if page.tags %}
@@ -48,25 +48,25 @@ title: Tags
     import PagefindHighlight from '{{ "/pagefind/pagefind-highlight.js" | relative_url }}';
     new PagefindHighlight({ highlightParam: "highlight" });
   </script>
-  <script src="{{ '/assets/js/search.js' | relative_url }}" defer></script>  
+  <script src="{{ '/assets/js/search.js' | relative_url }}" defer></script>    
 </head>
 <body>
   <a class="search-input-block" id="search"></a>
   <header>
     <nav aria-label="Main navigation">
       <div class="header-container">
-        <a class="internal-link" href="{{ '/' | relative_url }}">
-          <img src="https://raw.githubusercontent.com/marioseixas/marioseixas.github.io/main/assets/Sudden_Death_Rune.gif" alt="{{ site.title }}" class="favicon">
+        <a class="internal-link" href="/">
+          <img src="{{ '/assets/Sudden_Death_Rune.gif' | relative_url }}" alt="Sudden Death Rune" class="favicon">
         </a>
         <a href="https://ib.bsb.br/archive">
-          <img src="https://raw.githubusercontent.com/marioseixas/marioseixas.github.io/main/favicon.ico" alt="Archive" class="favicon">
+          <img src="{{ '/favicon.ico' | relative_url }}" alt="Archive Icon" class="favicon">
         </a>
         <a href="https://ib.bsb.br/tags">
-          <img src="https://raw.githubusercontent.com/marioseixas/marioseixas.github.io/main/assets/Label.gif" alt="Tags" class="favicon">
+          <img src="{{ '/assets/Label.gif' | relative_url }}" alt="Tags Icon" class="favicon">
         </a>
         <a href="https://ib.bsb.br/events">
-          <img src="https://raw.githubusercontent.com/marioseixas/marioseixas.github.io/main/assets/Paralyse_Rune.gif" alt="Events" class="favicon">
-        </a>      
+          <img src="{{ '/assets/Paralyse_Rune.gif' | relative_url }}" alt="Events Icon" class="favicon">
+        </a>
       </div>
     </nav>
   </header>
