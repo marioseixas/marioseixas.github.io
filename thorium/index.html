@@ -100,7 +100,36 @@
         </span>
       </div>
     <main class="post-content-body">      
-      <ul><li><a href="#enclose-flags-within-thorium-binary">enclose flags within Thorium Binary</a></li></ul>
+      
+    <h1 id="enclose-flags-within-thorium-binary">enclose flags within Thorium Binary</h1>
+
+<p>file:///opt/chromium.org/thorium/thorium-browser</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><section><code><span class="c"># Allow users to override command-line options with a file.</span>
+<span class="k">if</span> <span class="o">[[</span> <span class="nt">-f</span> <span class="nv">$XDG_CONFIG_HOME</span>/thorium-flags.conf <span class="o">]]</span><span class="p">;</span> <span class="k">then
+   </span><span class="nv">CHROME_USER_FLAGS</span><span class="o">=</span><span class="s2">"</span><span class="si">$(</span><span class="nb">cat</span> <span class="nv">$XDG_CONFIG_HOME</span>/thorium-flags.conf<span class="si">)</span><span class="s2">"</span>
+<span class="k">fi</span>
+
+<span class="c"># Append flags to CHROME_USER_FLAGS</span>
+<span class="nv">CHROME_USER_FLAGS</span><span class="o">=</span><span class="s2">"</span><span class="nv">$CHROME_USER_FLAGS</span><span class="s2">"</span>
+
+<span class="c"># Sanitize std{in,out,err} because they'll be shared with untrusted child</span>
+<span class="c"># processes (http://crbug.com/376567).</span>
+<span class="nb">exec</span> &lt; /dev/null
+<span class="nb">exec</span> <span class="o">&gt;</span> <span class="o">&gt;(</span><span class="nb">exec cat</span><span class="o">)</span>
+<span class="nb">exec </span>2&gt; <span class="o">&gt;(</span><span class="nb">exec cat</span> <span class="o">&gt;</span>&amp;2<span class="o">)</span>
+
+<span class="k">if</span> <span class="o">[</span> <span class="nv">$want_temp_profile</span> <span class="nt">-eq</span> 1 <span class="o">]</span> <span class="p">;</span> <span class="k">then
+  </span><span class="nv">TEMP_PROFILE</span><span class="o">=</span><span class="sb">`</span><span class="nb">mktemp</span> <span class="nt">-d</span><span class="sb">`</span>
+  <span class="nb">echo</span> <span class="s2">"Using temporary profile: </span><span class="nv">$TEMP_PROFILE</span><span class="s2">"</span>
+  <span class="nv">CHROME_USER_FLAGS</span><span class="o">=</span><span class="s2">"</span><span class="nv">$CHROME_USER_FLAGS</span><span class="s2"> --user-data-dir=</span><span class="nv">$TEMP_PROFILE</span><span class="s2">"</span>
+<span class="k">fi</span>
+
+<span class="c"># Launch Thorium</span>
+<span class="c"># Note: exec -a below is a bashism.</span>
+<span class="nb">exec</span> <span class="nt">-a</span> <span class="s2">"</span><span class="nv">$0</span><span class="s2">"</span> <span class="s2">"</span><span class="nv">$HERE</span><span class="s2">/thorium"</span> <span class="nt">--no-sandbox</span> <span class="nt">--disable-nacl</span> <span class="nt">--use-gl</span><span class="o">=</span>angle <span class="nt">--use-angle</span><span class="o">=</span>gl-egl <span class="nt">--enable-unsafe-webgpu</span> <span class="nt">--disable-plugins</span> <span class="nt">--enable-gpu-rasterization</span> <span class="nt">--ignore-gpu-blacklist</span> <span class="nt">--disable-smooth-scrolling</span> <span class="nt">--disable-popup-blocking</span> <span class="nt">--enable-fast-unload</span> <span class="nt">--disable-overscroll-edge-effect</span> <span class="nt">--disable-threaded-scrolling</span> <span class="nt">--disable-composited-antialiasing</span> <span class="nt">--flag-switches-begin</span> <span class="nt">--allow-insecure-downloads</span> <span class="nt">--allow-insecure-localhost</span> <span class="nt">--close-window-with-last-tab</span><span class="o">=</span>never <span class="nt">--hide-sidepanel-button</span> <span class="nt">--unsafely-treat-insecure-origin-as-secure</span> <span class="nt">--enable-features</span><span class="o">=</span>VaapiVideoDecodeLinuxGL <span class="nt">--disable-features</span><span class="o">=</span>BlockInsecurePrivateNetworkRequests,InsecureDownloadWarnings,SideSearch <span class="nt">--flag-switches-end</span> <span class="s2">"</span><span class="nv">$CHROME_USER_FLAGS</span><span class="s2">"</span> <span class="s2">"</span><span class="nv">$@</span><span class="s2">"</span>
+</code></section></div></div>
+<ul><li><a href="#enclose-flags-within-thorium-binary">enclose flags within Thorium Binary</a></li></ul>
       <h1 id="enclose-flags-within-thorium-binary">
   
   
