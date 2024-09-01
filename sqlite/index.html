@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">    
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>
+    
+      Installing a custom version of SQLite — infoBAG
+    
+  </title>
+
+  <link rel="canonical" href="https://ib.bsb.br/sqlite/">  
+  <link rel="alternate" type="application/rss+xml" title="infoBAG" href="/rss.xml">
+
+  <meta property="og:site_name" content="infoBAG">
+  <meta property="og:title" content="Installing a custom version of SQLite">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://ib.bsb.br/sqlite/">
+  
+  
+
+  
+    <meta property="article:published_time" content="2024-02-16T03:00:00+00:00">
+    <meta property="article:author" content="https://ib.bsb.br">
+  
+
+  
+    <meta itemprop="keywords" content="linux">
+    
+      <meta property="article:tag" content="linux">
+    
+  
+
+  <link href="/style.css" rel="stylesheet">
+  <link href="/pagefind/pagefind-ui.css" rel="stylesheet">
+  <script src="/pagefind/pagefind-ui.js"></script>
+  <script type="module">
+    import PagefindHighlight from '/pagefind/pagefind-highlight.js';
+    new PagefindHighlight({ highlightParam: "highlight" });
+  </script>
+  <script src="/assets/js/search.js" defer></script>
+  <script src="/assets/js/prism.js" defer></script>
+</head>
+<body class="post-wrapper">  
+  <a class="search-input-block" id="search"></a>
+  <article class="post">
+  <header>
+    <nav aria-label="Main navigation">
+  <div class="header-container">
+    <a class="internal-link" href="/">
+      <img src="https://raw.githubusercontent.com/marioseixas/marioseixas.github.io/main/assets/Sudden_Death_Rune.gif" class="favicon">
+    </a>
+    <a href="https://ib.bsb.br/archive">
+      <img src="https://raw.githubusercontent.com/marioseixas/marioseixas.github.io/main/favicon.ico" class="favicon">
+    </a>
+    <a href="https://ib.bsb.br/tags">
+      <img src="https://raw.githubusercontent.com/marioseixas/marioseixas.github.io/main/assets/Label.gif" class="favicon">
+    </a>
+    <a href="https://ib.bsb.br/events">
+      <img src="https://raw.githubusercontent.com/marioseixas/marioseixas.github.io/main/assets/Paralyse_Rune.gif" class="favicon">
+    </a>      
+  </div>
+    </nav>
+  </header>
+  <div class="post-heading">
+    <h1 class="post-title">Installing a custom version of SQLite</h1>
+    <div class="search-link">
+        <span>
+          <span class="tags">
+            <time datetime="2024-02-16T03:00:00+00:00">
+              · 16 Feb 2024
+            </time>
+            
+            &rightarrowtail;
+            <time datetime="2024-07-13T13:46:16+00:00">
+                13 Jul 2024
+              </time>
+            
+          </span>          
+          
+            <span>
+              · Tags:
+              
+                <a href="/tags/#linux" class="tag">linux</a>
+              
+            </span>
+                    
+          
+            <span class="tags">
+              · Edit: fechado.
+            </span>
+                    
+          <a href="https://github.com/marioseixas/marioseixas.github.io/edit/main/_posts/2024-02-16-sqlite.md" target="_blank" rel="noopener noreferrer">
+            · Improve this
+          </a>
+          <a href="https://github.com/marioseixas/marioseixas.github.io/commits/main/_posts/2024-02-16-sqlite.md" target="_blank" rel="noopener noreferrer">
+            · Revision history
+          </a>
+        </span>
+      </div>
+    <main class="post-content-body">      
+      <ul><li><a href="#installing">Installing</a></li></ul>
+      <h2 id="installing">
+  
+  
+     <a href="#installing">#</a>Installing
+  
+  <a href="#" class="back-to-top" aria-label="Back to top">
+  <img src="/assets/gold.ico" alt="gold icon">
+</a>
+</h2>
+      
+
+<ol>
+  <li>
+    <p>Open .bashrc file and add:</p>
+
+    <p>. ~/.bash_profile</p>
+  </li>
+  <li>
+    <p>Make sure you’re in your user’s home directory.</p>
+
+    <p>$ cd ~</p>
+  </li>
+  <li>
+    <p>Visit the <a href="&quot;https://sqlite.org/download.html&quot;">SQLite download page</a> to download the most recent version.</p>
+  </li>
+  <li>
+    <p>Run the following to download it to your user’s directory.</p>
+
+    <p>$ wget https://sqlite.org/2020/sqlite-autoconf-3330000.tar.gz</p>
+  </li>
+  <li>
+    <p>Decompress the file.</p>
+
+    <p>$ tar zxvf sqlite-autoconf-3330000.tar.gz</p>
+  </li>
+  <li>
+    <p>Change into the new directory.</p>
+
+    <p>$ cd sqlite-autoconf-3330000</p>
+  </li>
+  <li>
+    <p>Run the following to configure it.</p>
+
+    <p>$ ./configure –prefix=$HOME/opt/sqlite</p>
+  </li>
+  <li>
+    <p>Run make and make install to complete the installation.</p>
+
+    <p>$ make
+$ make install</p>
+  </li>
+  <li>
+    <p>Add the following lines to your .bash_profile. This is a file located in your user’s home directory.</p>
+
+    <p>export PATH=$HOME/opt/sqlite/bin:$PATH
+export LD_LIBRARY_PATH=$HOME/opt/sqlite/lib
+export LD_RUN_PATH=$HOME/opt/sqlite/lib</p>
+  </li>
+  <li>
+    <p>Run the source command on your .bash_profile file.</p>
+  </li>
+</ol>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ source .bash_profile
+</code></pre></div></div>
+
+<ol>
+  <li>Check the version to confirm it’s now being used.</li>
+</ol>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ which sqlite3
+/home/username/opt/sqlite/bin/sqlite3
+$ sqlite3
+SQLite version 3.33.0 2020-08-14 13:23:32
+</code></pre></div></div>
+
+<ol>
+  <li>Quit the sqlite shell by running the following.</li>
+</ol>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sqlite&gt; .quit
+</code></pre></div></div>
+
+      
+      <h2 id="installing">Installing</h2>
+
+<ol>
+  <li>
+    <p>Open .bashrc file and add:</p>
+
+    <p>. ~/.bash_profile</p>
+  </li>
+  <li>
+    <p>Make sure you’re in your user’s home directory.</p>
+
+    <p>$ cd ~</p>
+  </li>
+  <li>
+    <p>Visit the <a href="&quot;https://sqlite.org/download.html&quot;">SQLite download page</a> to download the most recent version.</p>
+  </li>
+  <li>
+    <p>Run the following to download it to your user’s directory.</p>
+
+    <p>$ wget https://sqlite.org/2020/sqlite-autoconf-3330000.tar.gz</p>
+  </li>
+  <li>
+    <p>Decompress the file.</p>
+
+    <p>$ tar zxvf sqlite-autoconf-3330000.tar.gz</p>
+  </li>
+  <li>
+    <p>Change into the new directory.</p>
+
+    <p>$ cd sqlite-autoconf-3330000</p>
+  </li>
+  <li>
+    <p>Run the following to configure it.</p>
+
+    <p>$ ./configure –prefix=$HOME/opt/sqlite</p>
+  </li>
+  <li>
+    <p>Run make and make install to complete the installation.</p>
+
+    <p>$ make
+$ make install</p>
+  </li>
+  <li>
+    <p>Add the following lines to your .bash_profile. This is a file located in your user’s home directory.</p>
+
+    <p>export PATH=$HOME/opt/sqlite/bin:$PATH
+export LD_LIBRARY_PATH=$HOME/opt/sqlite/lib
+export LD_RUN_PATH=$HOME/opt/sqlite/lib</p>
+  </li>
+  <li>
+    <p>Run the source command on your .bash_profile file.</p>
+  </li>
+</ol>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><section><code>$ source .bash_profile
+</code></section></div></div>
+
+<ol>
+  <li>Check the version to confirm it’s now being used.</li>
+</ol>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><section><code>$ which sqlite3
+/home/username/opt/sqlite/bin/sqlite3
+$ sqlite3
+SQLite version 3.33.0 2020-08-14 13:23:32
+</code></section></div></div>
+
+<ol>
+  <li>Quit the sqlite shell by running the following.</li>
+</ol>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><section><code>sqlite&gt; .quit
+</code></section></div></div>
+    </main>
+    </div>  
+  </article>
+  <hr>
+  <a href="#" class="back-to-top" aria-label="Back to top">
+    <img src="/assets/gold.ico" alt="gold icon">
+  </a>
+  https://help.dreamhost.com/hc/en-us/articles/360028047592-Installing-a-custom-version-of-SQLite3    
+</body>  
+</html>

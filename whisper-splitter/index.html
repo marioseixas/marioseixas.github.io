@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">    
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>
+    
+      Split `.wav` for Whisper — infoBAG
+    
+  </title>
+
+  <link rel="canonical" href="https://ib.bsb.br/whisper-splitter/">  
+  <link rel="alternate" type="application/rss+xml" title="infoBAG" href="/rss.xml">
+
+  <meta property="og:site_name" content="infoBAG">
+  <meta property="og:title" content="Split `.wav` for Whisper">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://ib.bsb.br/whisper-splitter/">
+  
+  
+
+  
+    <meta property="article:published_time" content="2024-03-04T03:00:00+00:00">
+    <meta property="article:author" content="https://ib.bsb.br">
+  
+
+  
+    <meta itemprop="keywords" content="scripts">
+    
+      <meta property="article:tag" content="scripts">
+    
+  
+
+  <link href="/style.css" rel="stylesheet">
+  <link href="/pagefind/pagefind-ui.css" rel="stylesheet">
+  <script src="/pagefind/pagefind-ui.js"></script>
+  <script type="module">
+    import PagefindHighlight from '/pagefind/pagefind-highlight.js';
+    new PagefindHighlight({ highlightParam: "highlight" });
+  </script>
+  <script src="/assets/js/search.js" defer></script>
+  <script src="/assets/js/prism.js" defer></script>
+</head>
+<body class="post-wrapper">  
+  <a class="search-input-block" id="search"></a>
+  <article class="post">
+  <header>
+    <nav aria-label="Main navigation">
+  <div class="header-container">
+    <a class="internal-link" href="/">
+      <img src="https://raw.githubusercontent.com/marioseixas/marioseixas.github.io/main/assets/Sudden_Death_Rune.gif" class="favicon">
+    </a>
+    <a href="https://ib.bsb.br/archive">
+      <img src="https://raw.githubusercontent.com/marioseixas/marioseixas.github.io/main/favicon.ico" class="favicon">
+    </a>
+    <a href="https://ib.bsb.br/tags">
+      <img src="https://raw.githubusercontent.com/marioseixas/marioseixas.github.io/main/assets/Label.gif" class="favicon">
+    </a>
+    <a href="https://ib.bsb.br/events">
+      <img src="https://raw.githubusercontent.com/marioseixas/marioseixas.github.io/main/assets/Paralyse_Rune.gif" class="favicon">
+    </a>      
+  </div>
+    </nav>
+  </header>
+  <div class="post-heading">
+    <h1 class="post-title">Split `.wav` for Whisper</h1>
+    <div class="search-link">
+        <span>
+          <span class="tags">
+            <time datetime="2024-03-04T03:00:00+00:00">
+              · 04 Mar 2024
+            </time>
+            
+            &rightarrowtail;
+            <time datetime="2024-07-13T13:46:16+00:00">
+                13 Jul 2024
+              </time>
+            
+          </span>          
+          
+            <span>
+              · Tags:
+              
+                <a href="/tags/#scripts" class="tag">scripts</a>
+              
+            </span>
+                    
+          
+            <span class="tags">
+              · Edit: aberto.
+            </span>
+                    
+          <a href="https://github.com/marioseixas/marioseixas.github.io/edit/main/_posts/2024-03-04-whisper-splitter.md" target="_blank" rel="noopener noreferrer">
+            · Improve this
+          </a>
+          <a href="https://github.com/marioseixas/marioseixas.github.io/commits/main/_posts/2024-03-04-whisper-splitter.md" target="_blank" rel="noopener noreferrer">
+            · Revision history
+          </a>
+        </span>
+      </div>
+    <main class="post-content-body">      
+      
+      <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>import subprocess
+import math
+
+def get_bit_rate(input_file):
+    result = subprocess.run(["ffprobe", "-v", "error", "-select_streams", "a:0", "-show_entries", "stream=bit_rate", "-of", "default=noprint_wrappers=1:nokey=1", input_file], capture_output=True, text=True)
+    return int(result.stdout.strip())
+
+def split_audio(input_file, file_size_mb):
+    bit_rate = get_bit_rate(input_file)
+    bit_rate_kbps = bit_rate / 1000
+    segment_duration = (file_size_mb * 1024 * 8) / bit_rate_kbps
+    segment_duration = math.ceil(segment_duration)  # Round up to avoid too small last segment
+
+    subprocess.run(["ffmpeg", "-i", input_file, "-f", "segment", "-segment_time", str(segment_duration), "-c", "copy", "output%03d.wav"])
+
+# Usage
+input_file = "gelma.wav"
+file_size_mb = 25
+split_audio(input_file, file_size_mb)
+
+</code></pre></div></div>
+
+      
+      <div class="language-plaintext highlighter-rouge"><div class="highlight"><section><code>import subprocess
+import math
+
+def get_bit_rate(input_file):
+    result = subprocess.run(["ffprobe", "-v", "error", "-select_streams", "a:0", "-show_entries", "stream=bit_rate", "-of", "default=noprint_wrappers=1:nokey=1", input_file], capture_output=True, text=True)
+    return int(result.stdout.strip())
+
+def split_audio(input_file, file_size_mb):
+    bit_rate = get_bit_rate(input_file)
+    bit_rate_kbps = bit_rate / 1000
+    segment_duration = (file_size_mb * 1024 * 8) / bit_rate_kbps
+    segment_duration = math.ceil(segment_duration)  # Round up to avoid too small last segment
+
+    subprocess.run(["ffmpeg", "-i", input_file, "-f", "segment", "-segment_time", str(segment_duration), "-c", "copy", "output%03d.wav"])
+
+# Usage
+input_file = "gelma.wav"
+file_size_mb = 25
+split_audio(input_file, file_size_mb)
+
+</code></section></div></div>
+    </main>
+    </div>  
+  </article>
+  <hr>
+  <a href="#" class="back-to-top" aria-label="Back to top">
+    <img src="/assets/gold.ico" alt="gold icon">
+  </a>
+      
+</body>  
+</html>
