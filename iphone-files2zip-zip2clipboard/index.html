@@ -103,8 +103,8 @@
           </a>
         </span>
       </div>
-    <main class="post-content-body">      
-      <ul><li><a href="#script-1-ftzpy">Script 1: <code class="language-plaintext highlighter-rouge">ftz.py</code></a></li><li><a href="#script-2-ftppy">Script 2: <code class="language-plaintext highlighter-rouge">ftp.py</code></a></li><li><a href="#how-to-use-these-scripts">How to Use These Scripts</a></li></ul>
+      
+<ul><li><a href="#script-1-ftzpy">Script 1: <code class="language-plaintext highlighter-rouge">ftz.py</code></a></li><li><a href="#script-2-ftppy">Script 2: <code class="language-plaintext highlighter-rouge">ftp.py</code></a></li><li><a href="#how-to-use-these-scripts">How to Use These Scripts</a></li></ul>
       <p>iPhone:
 1) Make a zip file with the desired contents;</p>
 
@@ -203,7 +203,7 @@
 </a>
 </h2>
       
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>import os
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><section><code>import os
 import shutil
 import zipfile
 import tarfile
@@ -294,10 +294,10 @@ if __name__ == "__main__":
     else:
         print(f"The path {target_path} does not exist.")
         logging.error(f'The path {target_path} does not exist.')
-</code></pre></div></div><hr />
+</code></section></div></div><hr />
 <p>/private/var/mobile/Containers/Data/Application/5A3A90C0-A077-4A2C-80A6-0DF006769AC6/Documents/backup/CAT/ftp.py
 —</p>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>import subprocess
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><section><code>import subprocess
 import click
 @click.command()
 @click.argument('file_path')
@@ -310,10 +310,9 @@ def main(file_path):
         print(f"An error occurred: {e.stderr}")
 if __name__ == '__main__':
     main()
-</code></pre></div></div><hr />
+</code></section></div></div><hr />
 
-              
-    </main>
+    <main class="post-content-body"></main>
   </div>
   </article>
   <hr>

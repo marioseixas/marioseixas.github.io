@@ -3,7 +3,7 @@
     <title>infoBAG</title>
     <link href="//rss.xml" rel="self"/>
     <link href="//"/>
-    <updated>2024-09-02T20:45:06+00:00</updated>
+    <updated>2024-09-02T21:05:49+00:00</updated>
     <id></id>
     <author>
         <name></name>
@@ -14,11 +14,15 @@
         <link href="/links/"/>
         <updated>2024-08-31T00:00:00+00:00</updated>
         <id>/links/</id>
-        <content type="html">&lt;p&gt;https://github.com/amrit3128/amritWebsite/blob/master/themes/duckquill/static/copy-button.js
+        <content type="html">&lt;section data-src=&quot;code-block.python&quot; data-download-link=&quot;&quot; data-download-link-label=&quot;Download Python Code&quot; class=&quot;language-python&quot;&gt;&lt;code class=&quot;language-python&quot;&gt;print(&quot;Hello, world!&quot;)&lt;/code&gt;&lt;/section&gt;
+
+&lt;p&gt;Links:&lt;/p&gt;
+
+&lt;section data-src=&quot;code-block.markdown&quot; data-download-link=&quot;&quot; data-download-link-label=&quot;Download Markdown Code&quot; class=&quot;language-markdown&quot;&gt;&lt;code class=&quot;language-markdown&quot;&gt;https://github.com/amrit3128/amritWebsite/blob/master/themes/duckquill/static/copy-button.js
 https://github.com/marioseixas/marioseixas.github.io/blob/main/assets/js/copy-to-clipboard.js
 marioseixas.github.io/assets/js/copy-to-clipboard.js
 https://github.com/marioseixas/marioseixas.github.io/blob/650152814fe3c78c3e58b4efbddf7a7e307f63b2/assets/js/copy-to-clipboard.js
-https://github.com/marioseixas/marioseixas.github.io/blob/main/&lt;em&gt;sass/_style.scss
+https://github.com/marioseixas/marioseixas.github.io/blob/main/_sass/_style.scss
 marioseixas.github.io/_sass/_style.scss
 https://github.com/bumbu/svg-pan-zoom?tab=readme-ov-file
 https://github.com/marioseixas/marioseixas.github.io/blob/main/404.html
@@ -71,13 +75,13 @@ https://github.com/mehulkar/turbo-github-log-grouping
 https://github.com/github-logic/github-logic.github.io
 https://github.com/speedi33/git-log-graph-action
 https://github.com/smchan514/git-log-graph
-https://github.com/manireddy22/git-log—graph—pretty-oneline
+https://github.com/manireddy22/git-log---graph---pretty-oneline
 https://github.com/Ed-Bajo/git-status-git-log-git-diff-git-view
 https://github.com/robotex82/git_log_generator
 https://github.com/nnamdimykel/Github-Login-Git-Auth
 https://github.com/anamariabalacescu/github-login.github.io
 https://github.com/yaobinwen/git-log-S-G
-https://github.com/search?q=%22-I%20%7B%7D%20git%20–no-pager%20grep%20-n%22&amp;amp;type=repositories
+https://github.com/search?q=%22-I%20%7B%7D%20git%20--no-pager%20grep%20-n%22&amp;amp;type=repositories
 https://gitforwindows.org/
 https://github.com/BurntSushi/ripgrep/issues/411#issuecomment-1917413008
 https://github.com/ElectricRCAircraftGuy/eRCaGuy_dotfiles/issues/27#issue-1950880578
@@ -519,8 +523,8 @@ https://github.com/csexton/capturedapp.com
 https://github.com/jekyll/jekyll-import
 https://github.com/yyls1992/unpin.github.io
 https://github.com/marcoaugustoandrade/jekyll-clipboardjs
-https://wiki.postmarketos.org/wiki/Xiaomi_Redmi_Note_8T&lt;/em&gt;(xiaomi-willow)
-https://wiki.postmarketos.org/wiki/Xiaomi_Redmi_Note_8&lt;em&gt;Pro&lt;/em&gt;(xiaomi-begonia)
+https://wiki.postmarketos.org/wiki/Xiaomi_Redmi_Note_8T_(xiaomi-willow)
+https://wiki.postmarketos.org/wiki/Xiaomi_Redmi_Note_8_Pro_(xiaomi-begonia)
 https://ib.bsb.br/
 https://www.google.com/search?q=%22lxc%22+site%3Adistrowatch.com&amp;amp;sca_esv=5955bded7855a5ce&amp;amp;biw=1280&amp;amp;bih=644&amp;amp;tbs=qdr%3Ay&amp;amp;ei=VN_AZsGNFOHc5OUPjMbNwQU&amp;amp;ved=0ahUKEwjBh_L9x_yHAxVhLrkGHQxjM1g4PBDh1QMIDw&amp;amp;uact=5&amp;amp;oq=%22lxc%22+site%3Adistrowatch.com&amp;amp;gs_lp=Egxnd3Mtd2l6LXNlcnAiGiJseGMiIHNpdGU6ZGlzdHJvd2F0Y2guY29tSIAZUJYUWIwVcAN4AJABAJgBAKABAKoBALgBA8gBAPgBAZgCAKACAJgDAIgGAZIHAKAHAA&amp;amp;sclient=gws-wiz-serp
 site:distrowatch.com
@@ -593,7 +597,7 @@ https://www.google.com/search?q=Knowles+SPH0645LM4H-B+%22whisper%22&amp;amp;sca_
 https://shop.pimoroni.com/collections/all?page=26
 https://es.aliexpress.com/?gatewayAdapt=glo2esp
 https://www.jakelectronics.com/productdetail/cuidevices-cmm3729at42308tr-8759784
-https://www.google.com/search?q=%22MIC-U1%22&amp;amp;sca_esv=ee0252779c48c2ea&amp;amp;sxsrf=ADLYWIJ4trkKUp0LeM_v0mBEtwhhXcN8qA%3A1719387930762&amp;amp;ei=Gsd7ZqCSLozJ1sQP2veFoAY&amp;amp;ved=0ahUKEwigh-CW4&lt;em&gt;iGAxWMpJUCHdp7AWQQ4dUDCA8&amp;amp;uact=5&amp;amp;oq=%22MIC-U1%22&amp;amp;gs_lp=Egxnd3Mtd2l6LXNlcnAiCCJNSUMtVTEiMgYQABgIGB4yBhAAGAgYHjIIEAAYgAQYogQyCBAAGIAEGKIEMggQABiABBiiBDIIEAAYogQYiQVI05QBUM4PWLUicAJ4AJABAJgBrQGgAfsFqgEDMC41uAEDyAEA-AEBmAIFoALRBcICBBAAGB6YAwCIBgGSBwUxLjMuMaAHoQ8&amp;amp;sclient=gws-wiz-serp
+https://www.google.com/search?q=%22MIC-U1%22&amp;amp;sca_esv=ee0252779c48c2ea&amp;amp;sxsrf=ADLYWIJ4trkKUp0LeM_v0mBEtwhhXcN8qA%3A1719387930762&amp;amp;ei=Gsd7ZqCSLozJ1sQP2veFoAY&amp;amp;ved=0ahUKEwigh-CW4_iGAxWMpJUCHdp7AWQQ4dUDCA8&amp;amp;uact=5&amp;amp;oq=%22MIC-U1%22&amp;amp;gs_lp=Egxnd3Mtd2l6LXNlcnAiCCJNSUMtVTEiMgYQABgIGB4yBhAAGAgYHjIIEAAYgAQYogQyCBAAGIAEGKIEMggQABiABBiiBDIIEAAYogQYiQVI05QBUM4PWLUicAJ4AJABAJgBrQGgAfsFqgEDMC41uAEDyAEA-AEBmAIFoALRBcICBBAAGB6YAwCIBgGSBwUxLjMuMaAHoQ8&amp;amp;sclient=gws-wiz-serp
 https://www.emania.com.br/microfones-e-gravadores/microfones-para-cameras-e-filmadoras/microfone-lapela?PS=12&amp;amp;O=OrderByPriceDESC
 https://www.emania.com.br/cartao-de-memoria/compact-flash
 https://www.emania.com.br/cartao-de-memoria/micro-sd
@@ -1084,7 +1088,7 @@ https://web.archive.org/web/20180429131655/http://kraevoy.com/category/planner/m
 https://web.archive.org/web/20180509052721/http://kraevoy.com/vlasteliny-mira-ili-otkuda-berutsya-tysyachi-zadach-v-mylifeorganized.html
 https://web.archive.org/web/20180612200847/http://kraevoy.com/10-zakonov-zhizni-deystvie-kotoryh-ya-ispytal-na-sebe.html
 https://web.archive.org/web/20180605104734/http://kraevoy.com/sistema-vasi-kislogo.html
-https://l.instagram.com/?u=https%3A%2F%2Fapi.whatsapp.com%2Fsend%3Fphone%3D556133875755&amp;amp;e=AT3kI5a7NsQ44aW1Gtk43Mtfa0524HO_U-TJrGGgi-pJvzhH1uf–hadF_5NzRAHzn64rx1_tota2RMXTElrIPNEbIdtuyk-OdrZPI7ogMftwN5P
+https://l.instagram.com/?u=https%3A%2F%2Fapi.whatsapp.com%2Fsend%3Fphone%3D556133875755&amp;amp;e=AT3kI5a7NsQ44aW1Gtk43Mtfa0524HO_U-TJrGGgi-pJvzhH1uf--hadF_5NzRAHzn64rx1_tota2RMXTElrIPNEbIdtuyk-OdrZPI7ogMftwN5P
 https://m.youtube.com/watch?v=U8u1yFIdlUg
 https://us-east-1.console.aws.amazon.com/billing/home?region=us-east-1#/preferences
 https://polisante.com/convenio/
@@ -1095,7 +1099,7 @@ https://www.reddit.com/r/ios18beta/comments/1dz1rmk/battery_health_after_ios_18_
 https://www.reddit.com/r/ios18beta/comments/1e7wlym/ios_18_developer_beta_3_vs_public_beta_battery/
 https://www.reddit.com/r/iOSBeta/comments/1eeg1b9/ios_18_db4_no_animations_when_openingswitching/
 https://www.reddit.com/r/ios/comments/u5tdp1/reduce_motion/
-https://www.amazon.com.br/dp/B07847W3VT?ref=cm_sw_r_mwn_dp_DRB2DA8642D6JQV88WGQ&amp;amp;ref&lt;/em&gt;=cm_sw_r_mwn_dp_DRB2DA8642D6JQV88WGQ&amp;amp;social_share=cm_sw_r_mwn_dp_DRB2DA8642D6JQV88WGQ&amp;amp;language=en_US&amp;amp;skipTwisterOG=2
+https://www.amazon.com.br/dp/B07847W3VT?ref=cm_sw_r_mwn_dp_DRB2DA8642D6JQV88WGQ&amp;amp;ref_=cm_sw_r_mwn_dp_DRB2DA8642D6JQV88WGQ&amp;amp;social_share=cm_sw_r_mwn_dp_DRB2DA8642D6JQV88WGQ&amp;amp;language=en_US&amp;amp;skipTwisterOG=2
 https://www.amazon.com.br/dp/B077P99RTC?ref=cm_sw_r_mwn_dp_7ER7EAB8M3A3TTCRN31T&amp;amp;ref_=cm_sw_r_mwn_dp_7ER7EAB8M3A3TTCRN31T&amp;amp;social_share=cm_sw_r_mwn_dp_7ER7EAB8M3A3TTCRN31T&amp;amp;language=en_US&amp;amp;skipTwisterOG=2
 https://www.amazon.com.br/dp/B077PLGL5M/?coliid=I1Z5YHFSNKAYVQ&amp;amp;colid=3AGQI3B05AQHY&amp;amp;psc=1&amp;amp;ref_=cm_sw_r_mwn_lstpd_MVTQZMDDZEYVF3X8D07Y&amp;amp;language=en_US
 https://www.google.com/search?q=beancount+site%3Aapps.apple.com&amp;amp;ie=UTF-8&amp;amp;oe=UTF-8&amp;amp;hl=en-br&amp;amp;client=safari#ip=1
@@ -1147,7 +1151,7 @@ https://www.reddit.com/r/AnyDesk/comments/17j69yd/updated_linux_client/
 https://www.reddit.com/r/linux/comments/153cmxs/alternative_for_anydesk/
 https://www.reddit.com/r/AnyDesk/comments/15ronyu/not_happy_with_the_new_linux_upgrade/
 https://www.reddit.com/r/AnyDesk/comments/uhagaw/what_to_use_on_linux_instead_of_anydesk/
-https://www.reddit.com/r/AnyDesk/comments/17m0hd3/advertising_anydesk_8&lt;em&gt;on_linux/
+https://www.reddit.com/r/AnyDesk/comments/17m0hd3/advertising_anydesk_8_on_linux/
 https://www.reddit.com/r/AnyDesk/comments/1c8fc0i/updated_anydesk_version_for_linux/
 https://www.reddit.com/r/AnyDesk/comments/1c41h6w/is_there_ever_going_to_be_a_linux_build_for_arm64/
 https://www.reddit.com/r/linuxquestions/comments/x37ebq/anydesk_alternative_to_a_wayland_desktop/
@@ -1193,7 +1197,7 @@ https://www.remoteutilities.com/solutions/remote-access-for-education-and-govt.p
 https://www.deskin.io/mobile/price
 https://www.avica.link/
 https://www.supremocontrol.com/download-supremo/linux/
-https://e2h.totalism.org/e2h.php?&lt;/em&gt;=ethering&lt;/p&gt;
+https://e2h.totalism.org/e2h.php?_=ethering&lt;/code&gt;&lt;/section&gt;
 </content>
     </entry>
     

@@ -99,8 +99,8 @@
           </a>
         </span>
       </div>
-    <main class="post-content-body">      
-      <ul><li><a href="#you-dont-need-a-powerful-laptop-anymore">You Don’t Need a Powerful Laptop Anymore</a><ul><li><a href="#the-vision-of-remote-processing">The Vision of Remote Processing</a></li></ul></li><li><a href="#the-setup">The Setup</a><ul><li><a href="#essential-equipment">Essential Equipment</a></li></ul></li><li><a href="#setting-it-up">Setting It Up</a><ul><li><a href="#host-configuration">Host Configuration</a></li><li><a href="#configure-sunshine">Configure Sunshine</a></li><li><a href="#multimonitortool-setup">MultiMonitorTool Setup</a></li><li><a href="#additional-sunshine-configuration">Additional Sunshine Configuration</a></li><li><a href="#client-connection">Client Connection</a></li><li><a href="#internet-configuration">Internet Configuration</a></li><li><a href="#client-installation">Client Installation</a></li></ul></li><li><a href="#additional-tips-for-optimal-performance">Additional Tips for Optimal Performance</a></li><li><a href="#qa">Q&amp;A</a></li></ul>
+      
+<ul><li><a href="#you-dont-need-a-powerful-laptop-anymore">You Don’t Need a Powerful Laptop Anymore</a><ul><li><a href="#the-vision-of-remote-processing">The Vision of Remote Processing</a></li></ul></li><li><a href="#the-setup">The Setup</a><ul><li><a href="#essential-equipment">Essential Equipment</a></li></ul></li><li><a href="#setting-it-up">Setting It Up</a><ul><li><a href="#host-configuration">Host Configuration</a></li><li><a href="#configure-sunshine">Configure Sunshine</a></li><li><a href="#multimonitortool-setup">MultiMonitorTool Setup</a></li><li><a href="#additional-sunshine-configuration">Additional Sunshine Configuration</a></li><li><a href="#client-connection">Client Connection</a></li><li><a href="#internet-configuration">Internet Configuration</a></li><li><a href="#client-installation">Client Installation</a></li></ul></li><li><a href="#additional-tips-for-optimal-performance">Additional Tips for Optimal Performance</a></li><li><a href="#qa">Q&amp;A</a></li></ul>
       <h2 id="you-dont-need-a-powerful-laptop-anymore">
   
   
@@ -240,13 +240,13 @@
 <ul>
   <li>Open Sunshine and navigate to the Configuration tab.</li>
   <li>Under “Do Command,” enter:
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cmd /C C:\MultiMonitorTool.exe /SetMonitors "Name=\\.\DISPLAY1 Width=%SUNSHINE_CLIENT_WIDTH% Height=%SUNSHINE_CLIENT_HEIGHT% DisplayFrequency=%SUNSHINE_CLIENT_FPS%"
-</code></pre></div>    </div>
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><section><code>cmd /C C:\MultiMonitorTool.exe /SetMonitors "Name=\\.\DISPLAY1 Width=%SUNSHINE_CLIENT_WIDTH% Height=%SUNSHINE_CLIENT_HEIGHT% DisplayFrequency=%SUNSHINE_CLIENT_FPS%"
+</code></section></div>    </div>
   </li>
   <li>Adjust the “Name=” parameter based on your monitor’s name from MultiMonitorTool.</li>
   <li>Under “Undo Command,” enter:
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cmd /C C:\MultiMonitorTool.exe /LoadConfig C:\MonitorsDefault.cfg
-</code></pre></div>    </div>
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><section><code>cmd /C C:\MultiMonitorTool.exe /LoadConfig C:\MonitorsDefault.cfg
+</code></section></div>    </div>
   </li>
 </ul>
 <h3 id="client-connection">
@@ -344,8 +344,7 @@ Yes, the faster your internet connection, the better the visual quality you can 
 <p><strong>Did you invent this technology?</strong><br />
 No, I am sharing insights on existing technology that has matured to the point where it can deliver a smooth, responsive experience without the delays typical of older remote access solutions.</p>
 
-              
-    </main>
+    <main class="post-content-body"></main>
   </div>
   </article>
   <hr>
