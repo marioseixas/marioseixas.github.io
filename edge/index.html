@@ -101,8 +101,7 @@
       </div>
     <main class="post-content-body">      
       
-
-      <div class="language-plaintext highlighter-rouge"><div class="highlight"><section><code>
+      <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
 export CHROME_WRAPPER="`readlink -f "$0"`"
 
 HERE="`dirname "$CHROME_WRAPPER"`"
@@ -132,7 +131,7 @@ exec 2&gt; &gt;(exec cat &gt;&amp;2)
 
 exec -a "$0" "$HERE/msedge" "--no-sandbox" "$@"
 
-</code></section></div></div>
+</code></pre></div></div>
 
     </main>
     </div>  

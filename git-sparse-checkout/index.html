@@ -101,56 +101,55 @@
       </div>
     <main class="post-content-body">      
       
-
       <ol>
   <li>
     <p><strong>Initialize an empty Git repository</strong>:</p>
 
-    <div class="language-shell highlighter-rouge"><div class="highlight"><section><code>
+    <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
 git init my-repository
 <span class="nb">cd </span>my-repository
 
-</code></section></div>    </div>
+</code></pre></div>    </div>
   </li>
   <li>
     <p><strong>Add a remote for the GitHub repository</strong>:</p>
 
-    <div class="language-shell highlighter-rouge"><div class="highlight"><section><code>
+    <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
 git remote add origin https://github.com/marioseixas/marioseixas.github.io.git
 
-</code></section></div>    </div>
+</code></pre></div>    </div>
   </li>
   <li>
     <p><strong>Configure sparse-checkout</strong>:</p>
 
-    <div class="language-shell highlighter-rouge"><div class="highlight"><section><code>
+    <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
 git config core.sparseCheckout <span class="nb">true</span>
 
-</code></section></div>    </div>
+</code></pre></div>    </div>
   </li>
   <li>
     <p><strong>Specify the directory you want to checkout</strong> (if applicable):</p>
 
-    <div class="language-shell highlighter-rouge"><div class="highlight"><section><code>
+    <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
 <span class="nb">echo</span> <span class="s1">'_posts/*'</span> <span class="o">&gt;&gt;</span> .git/info/sparse-checkout
 
-</code></section></div>    </div>
+</code></pre></div>    </div>
   </li>
   <li>
     <p><strong>Fetch the main branch</strong> (change ‘main’ to your target branch if it’s named differently):</p>
 
-    <div class="language-shell highlighter-rouge"><div class="highlight"><section><code>
+    <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
 git fetch origin main
 
-</code></section></div>    </div>
+</code></pre></div>    </div>
   </li>
   <li>
     <p><strong>Checkout the files</strong>:</p>
 
-    <div class="language-shell highlighter-rouge"><div class="highlight"><section><code>
+    <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
 git checkout main
 
-</code></section></div>    </div>
+</code></pre></div>    </div>
   </li>
 </ol>
 
@@ -173,21 +172,21 @@ git checkout main
 
     <p>You need to make sure the SSH agent is running so that it can manage your keys. You seem to have already started the ssh-agent and added your key. If needed again, you can use:</p>
 
-    <div class="language-shell highlighter-rouge"><div class="highlight"><section><code>
+    <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
 <span class="nb">eval</span> <span class="s2">"</span><span class="si">$(</span>ssh-agent <span class="nt">-s</span><span class="si">)</span><span class="s2">"</span>
 ssh-add ~/.ssh/id_ed25519
 
-</code></section></div>    </div>
+</code></pre></div>    </div>
   </li>
   <li>
     <p><strong>Test Your SSH Connection</strong>:</p>
 
     <p>Before you try to push your changes to GitHub, you should test your SSH connection. You can do this with the following command:</p>
 
-    <div class="language-shell highlighter-rouge"><div class="highlight"><section><code>
+    <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
 ssh <span class="nt">-T</span> git@github.com
 
-</code></section></div>    </div>
+</code></pre></div>    </div>
 
     <p>You should see a message like “Hi username! You’ve successfully authenticated…”.</p>
   </li>
@@ -196,10 +195,10 @@ ssh <span class="nt">-T</span> git@github.com
 
     <p>If you haven’t already set Git to use SSH for GitHub, you can do so by changing your remote URL from HTTPS to SSH. Since you just added a deploy key for a specific repository, it’s tied to that repository only. The general command to change the remote URL is:</p>
 
-    <div class="language-shell highlighter-rouge"><div class="highlight"><section><code>
+    <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
 git remote set-url origin git@github.com:username/repository.git
 
-</code></section></div>    </div>
+</code></pre></div>    </div>
 
     <p>Replace <code class="language-plaintext highlighter-rouge">username</code> with your GitHub username and <code class="language-plaintext highlighter-rouge">repository.git</code> with your repository’s name.</p>
   </li>
@@ -208,10 +207,10 @@ git remote set-url origin git@github.com:username/repository.git
 
     <p>When you push changes, Git will use your SSH key for authentication. Because you’ve added the key to the SSH agent, you should not be prompted for your passphrase again during the current session.</p>
 
-    <div class="language-shell highlighter-rouge"><div class="highlight"><section><code>
+    <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
 git push origin main
 
-</code></section></div>    </div>
+</code></pre></div>    </div>
   </li>
 </ol>
 

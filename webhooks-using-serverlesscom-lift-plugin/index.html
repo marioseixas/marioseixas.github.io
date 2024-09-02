@@ -101,11 +101,10 @@
       </div>
     <main class="post-content-body">      
       
-
       <hr />
 <p>serverless.yml</p>
 
-<div class="language-yml highlighter-rouge"><div class="highlight"><section><code><span class="na">service</span><span class="pi">:</span> <span class="s">github-webhook-service</span>
+<div class="language-yml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">service</span><span class="pi">:</span> <span class="s">github-webhook-service</span>
 
 <span class="na">provider</span><span class="pi">:</span>
   <span class="na">name</span><span class="pi">:</span> <span class="s">aws</span>
@@ -141,7 +140,7 @@
   <span class="na">patterns</span><span class="pi">:</span>
     <span class="pi">-</span> <span class="s1">'</span><span class="s">!node_modules/aws-sdk/**'</span>
     <span class="pi">-</span> <span class="s1">'</span><span class="s">!node_modules/@aws-sdk/**'</span>
-</code></section></div></div><hr /><hr />
+</code></pre></div></div><hr /><hr />
 <p>handler.mjs</p>
 
 <pre><code class="language-mjs">import { Octokit } from "@octokit/rest";
@@ -259,7 +258,7 @@ export const handleWebhook = async (event) =&gt; {
     };
   }
 };
-</code></section><hr />
+</code></pre><hr />
 
     </main>
     </div>  

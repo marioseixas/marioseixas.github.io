@@ -101,8 +101,7 @@
       </div>
     <main class="post-content-body">      
       
-
-      <div class="language-plaintext highlighter-rouge"><div class="highlight"><section><code>import os
+      <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>import os
 import subprocess
 
 COMMAND_TEMPLATE = "dasel_linux_arm64 -w - -f /root/Downloads/gelmaTCC/CAP.2/api-responses/api-response-$$$.json '.records.all().segment.document.name.filter(equal(this(),&lt;!-- insert txt filename --&gt;)).parent().parent().content' &gt; $$$+&lt;!-- insert txt filename --&gt;"
@@ -155,7 +154,7 @@ def main():
 if __name__ == "__main__":
     main()
 
-</code></section></div></div>
+</code></pre></div></div>
 
     </main>
     </div>  
