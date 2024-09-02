@@ -107,7 +107,7 @@
       {% include toc.html html=content %}
       {% include anchor_headings.html html=content anchorBody="#" %}
       {% capture content %}
-      {{ content | replace: '<pre class="highlight"><code>', '<section data-src="{{ downloadUrl }}" data-download-link><code class="line-numbers language-{{ lang }}">` | replace: '</code></pre>', '</code></section>' }}
+        {{ content | replace: '<pre class="highlight"><code>', '<section><code>' | replace: '</code></pre>', '</code></section>' }}
       {% endcapture %}        
     </main>
   </div>
@@ -117,42 +117,5 @@
     <img src="{{ '/assets/gold.ico' | relative_url }}" alt="gold icon">
   </a>
   {{ page.comment }}
-<script>
-  document.addEventListener('DOMContentLoaded', function() {
-    const langRegex = /\blang(?:uage)?-([\w-]+)\b/i;
-
-    function getLanguage(element) {
-      let currentElement = element; 
-      while (currentElement) {
-        const match = langRegex.exec(currentElement.className);
-        if (match) {
-          return match[1].toLowerCase();
-        }
-        currentElement = currentElement.parentElement;
-      }
-      return 'none'; 
-    }
-
-    function updateDataSrcAttribute() {
-      const preElements = document.querySelectorAll('pre[data-src][data-download-link]');
-      preElements.forEach(preElement => {
-        const language = getLanguage(preElement);
-        if (language !== 'none') {
-          const currentSrc = preElement.getAttribute('data-src');
-          const lastDotIndex = currentSrc.lastIndexOf('.');
-          if (lastDotIndex !== -1) { // Check if a dot exists
-            const baseName = currentSrc.substring(0, lastDotIndex);
-            preElement.setAttribute('data-src', `${baseName}.${language}`);
-          } else {
-            console.warn(`Could not determine filename extension for: ${currentSrc}`); 
-            // Or handle this case in a more appropriate way for your application
-          }
-        }
-      });
-    }
-
-    updateDataSrcAttribute(); 
-  });
-</script>
 </body>  
 </html>
