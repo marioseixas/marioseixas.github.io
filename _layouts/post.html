@@ -103,14 +103,12 @@
           </a>
         </span>
       </div>
-    <main class="post-content-body">
-      {% capture content %}
-        {{ content | replace: '<pre class="highlight"><code>', 
-        '<div><script>document.addEventListener("DOMContentLoaded",function(){var lang=/\\blang(?:uage)?-([\\w-]+)\\b/i;function getLanguage(element){while(element){var m=lang.exec(element.className);if(m){return m[1].toLowerCase()}element=element.parentElement}return \'none\'}function updateDataSrcAttribute(){var preElements=document.querySelectorAll(\'pre[data-src][data-download-link]\');preElements.forEach(function(preElement){var language=getLanguage(preElement);if(language!==\'none\'){var currentSrc=preElement.getAttribute(\'data-src\');var fileNameWithoutExtension=currentSrc.split(\'.\').slice(0,-1).join(\'.\');preElement.setAttribute(\'data-src\',fileNameWithoutExtension+\'.\'+language)}})}updateDataSrcAttribute()});</script><section data-src=\"' + downloadUrl + '\" data-download-link><code class=\"line-numbers language-\' + lang + \'\">' 
-        | replace: '</code></pre>', '</code></section></div>' }}
-      {% endcapture %}
+    <main class="post-content-body">      
       {% include toc.html html=content %}
       {% include anchor_headings.html html=content anchorBody="#" %}
+      {% capture content %}
+        {{ content | replace: '<pre class="highlight"><code>', '<section data-src=\"' + downloadUrl + '\" data-download-link><code class=\"line-numbers language-\' + lang + \'\">' | replace: '</code></pre>', '</code></section>' }}
+      {% endcapture %}
     </main>
   </div>
   </article>
@@ -118,6 +116,43 @@
   <a href="#" class="back-to-top" aria-label="Back to top">
     <img src="{{ '/assets/gold.ico' | relative_url }}" alt="gold icon">
   </a>
-  {{ page.comment }}    
+  {{ page.comment }}
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const langRegex = /\blang(?:uage)?-([\w-]+)\b/i;
+
+    function getLanguage(element) {
+      let currentElement = element; 
+      while (currentElement) {
+        const match = langRegex.exec(currentElement.className);
+        if (match) {
+          return match[1].toLowerCase();
+        }
+        currentElement = currentElement.parentElement;
+      }
+      return 'none'; 
+    }
+
+    function updateDataSrcAttribute() {
+      const preElements = document.querySelectorAll('pre[data-src][data-download-link]');
+      preElements.forEach(preElement => {
+        const language = getLanguage(preElement);
+        if (language !== 'none') {
+          const currentSrc = preElement.getAttribute('data-src');
+          const lastDotIndex = currentSrc.lastIndexOf('.');
+          if (lastDotIndex !== -1) { // Check if a dot exists
+            const baseName = currentSrc.substring(0, lastDotIndex);
+            preElement.setAttribute('data-src', `${baseName}.${language}`);
+          } else {
+            console.warn(`Could not determine filename extension for: ${currentSrc}`); 
+            // Or handle this case in a more appropriate way for your application
+          }
+        }
+      });
+    }
+
+    updateDataSrcAttribute(); 
+  });
+</script>
 </body>  
 </html>
