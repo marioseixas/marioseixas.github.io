@@ -1,6 +1,6 @@
 {% capture content %}
-  {{ content | replace: '<pre class="highlight"><code>', '<section><script>document.addEventListener("DOMContentLoaded",function(){var lang=/\blang(?:uage)?-([\w-]+)\b/i;function getLanguage(element){while(element){var m=lang.exec(element.className);if(m){return m[1].toLowerCase()}element=element.parentElement}return'none'}function updateDataSrcAttribute(){var preElements=document.querySelectorAll(\'pre[data-src][data-download-link]\');preElements.forEach(function(preElement){var language=getLanguage(preElement);if(language!==\'none\'){var currentSrc=preElement.getAttribute(\'data-src\');var fileNameWithoutExtension=currentSrc.split(\'.\').slice(0,-1).join(\'.\');preElement.setAttribute(\'data-src\',fileNameWithoutExtension+\'.\'+language)}})}updateDataSrcAttribute()});</script><code>' | replace: '</code></pre>', '</code></section>' }}
-{% endcapture %}    
+  {{ content | replace: '<pre class="highlight"><code>', '<section><code>' | replace: '</code></pre>', '</code></section>' }}
+{% endcapture %}
 {% capture tocWorkspace %}
     {% comment %}
         Copyright (c) 2017 Vladimir "allejo" Jimenez
