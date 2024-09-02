@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <title>infoBAG</title>
-    <link href="/your/base/path/rss.xml" rel="self"/>
-    <link href="/your/base/path/"/>
-    <updated>2024-09-02T07:58:29+00:00</updated>
+    <link href="/rss.xml" rel="self"/>
+    <link href="/"/>
+    <updated>2024-09-02T17:33:11+00:00</updated>
     <id></id>
     <author>
         <name></name>
