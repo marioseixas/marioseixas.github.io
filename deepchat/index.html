@@ -168,7 +168,7 @@ Your mouse needs to be focused on the browser window for this to work.</p>
 </h4>
       
 
-<div class="language-html highlighter-rouge"><div class="highlight"><section><code><span class="nt">&lt;deep-chat</span> <span class="na">textToSpeech=</span><span class="s">'{"volume": 0.9}'</span><span class="nt">&gt;&lt;/deep-chat&gt;</span>
+<div class="language-html highlighter-rouge"><div class="highlight"><section class="language-html" data-src="index.html" data-download-link><code><span class="nt">&lt;deep-chat</span> <span class="na">textToSpeech=</span><span class="s">'{"volume": 0.9}'</span><span class="nt">&gt;&lt;/deep-chat&gt;</span>
 </code></section></div></div>
 <h3 id="speechtotext">
   
@@ -231,7 +231,7 @@ Your mouse needs to be focused on the browser window for this to work.</p>
 </h4>
       
 
-<div class="language-html highlighter-rouge"><div class="highlight"><section><code><span class="nt">&lt;deep-chat</span> <span class="na">speechToText=</span><span class="s">'{ "webSpeech": true, "translations": {"hello": "goodbye", "Hello": "Goodbye"}, "commands": {"resume": "resume", "settings": {"commandMode": "hello"}}, "button": {"position": "outside-left"} }'</span> <span class="nt">&gt;&lt;/deep-chat&gt;</span>
+<div class="language-html highlighter-rouge"><div class="highlight"><section class="language-html" data-src="index.html" data-download-link><code><span class="nt">&lt;deep-chat</span> <span class="na">speechToText=</span><span class="s">'{ "webSpeech": true, "translations": {"hello": "goodbye", "Hello": "Goodbye"}, "commands": {"resume": "resume", "settings": {"commandMode": "hello"}}, "button": {"position": "outside-left"} }'</span> <span class="nt">&gt;&lt;/deep-chat&gt;</span>
 </code></section></div></div>
 
 <blockquote>
@@ -292,7 +292,7 @@ Support for <code class="language-plaintext highlighter-rouge">webSpeech</code> 
 </h4>
       
 
-<div class="language-html highlighter-rouge"><div class="highlight"><section><code><span class="nt">&lt;deep-chat</span> <span class="na">speechToText=</span><span class="s">'{"webSpeech": {"language": "en-US"}}'</span><span class="nt">&gt;&lt;/deep-chat&gt;</span>
+<div class="language-html highlighter-rouge"><div class="highlight"><section class="language-html" data-src="index.html" data-download-link><code><span class="nt">&lt;deep-chat</span> <span class="na">speechToText=</span><span class="s">'{"webSpeech": {"language": "en-US"}}'</span><span class="nt">&gt;&lt;/deep-chat&gt;</span>
 </code></section></div></div>
 
 <blockquote>
@@ -344,7 +344,7 @@ To use the Azure Speech To Text service - please add the <a href="https://www.np
 </h4>
       
 
-<div class="language-html highlighter-rouge"><div class="highlight"><section><code><span class="nt">&lt;deep-chat</span> <span class="na">speechToText=</span><span class="s">'{ "azure": { "subscriptionKey": "resource-key", "region": "resource-region", "language": "en-US", "stopAfterSilenceMs": 5000 } }'</span> <span class="nt">&gt;&lt;/deep-chat&gt;</span>
+<div class="language-html highlighter-rouge"><div class="highlight"><section class="language-html" data-src="index.html" data-download-link><code><span class="nt">&lt;deep-chat</span> <span class="na">speechToText=</span><span class="s">'{ "azure": { "subscriptionKey": "resource-key", "region": "resource-region", "language": "en-US", "stopAfterSilenceMs": 5000 } }'</span> <span class="nt">&gt;&lt;/deep-chat&gt;</span>
 </code></section></div></div>
 
 <p>Location of speech service credentials in Azure Portal:</p>
@@ -366,7 +366,7 @@ The <code class="language-plaintext highlighter-rouge">subscriptionKey</code> an
 </h4>
       
 
-<div class="language-javascript highlighter-rouge"><div class="highlight"><section><code><span class="nx">speechToText</span><span class="p">.</span><span class="nx">speechToText</span> <span class="o">=</span> <span class="p">{</span>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><section class="language-html" data-src="index.html" data-download-link><code><span class="nx">speechToText</span><span class="p">.</span><span class="nx">speechToText</span> <span class="o">=</span> <span class="p">{</span>
   <span class="na">region</span><span class="p">:</span> <span class="dl">'</span><span class="s1">resource-region</span><span class="dl">'</span><span class="p">,</span>
   <span class="na">retrieveToken</span><span class="p">:</span> <span class="k">async </span><span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
     <span class="k">return</span> <span class="nf">fetch</span><span class="p">(</span><span class="dl">'</span><span class="s1">http://localhost:8080/token</span><span class="dl">'</span><span class="p">)</span>
@@ -402,7 +402,7 @@ The <code class="language-plaintext highlighter-rouge">subscriptionKey</code> an
 </h4>
       
 
-<div class="language-html highlighter-rouge"><div class="highlight"><section><code><span class="nt">&lt;deep-chat</span> <span class="na">speechToText=</span><span class="s">'{"textColor": {"interim": "green", "final": "blue"}}'</span><span class="nt">&gt;&lt;/deep-chat&gt;</span>
+<div class="language-html highlighter-rouge"><div class="highlight"><section class="language-html" data-src="index.html" data-download-link><code><span class="nt">&lt;deep-chat</span> <span class="na">speechToText=</span><span class="s">'{"textColor": {"interim": "green", "final": "blue"}}'</span><span class="nt">&gt;&lt;/deep-chat&gt;</span>
 </code></section></div></div>
 <h3 id="commands">
   
@@ -446,7 +446,7 @@ The <code class="language-plaintext highlighter-rouge">subscriptionKey</code> an
 </h4>
       
 
-<div class="language-html highlighter-rouge"><div class="highlight"><section><code><span class="nt">&lt;deep-chat</span> <span class="na">speechToText=</span><span class="s">'{ "commands": { "stop": "stop", "pause": "pause", "resume": "resume", "removeAllText": "remove text", "submit": "submit", "commandMode": "command", "settings": { "substrings": true, "caseSensitive": false }}}'</span> <span class="nt">&gt;&lt;/deep-chat&gt;</span>
+<div class="language-html highlighter-rouge"><div class="highlight"><section class="language-html" data-src="index.html" data-download-link><code><span class="nt">&lt;deep-chat</span> <span class="na">speechToText=</span><span class="s">'{ "commands": { "stop": "stop", "pause": "pause", "resume": "resume", "removeAllText": "remove text", "submit": "submit", "commandMode": "command", "settings": { "substrings": true, "caseSensitive": false }}}'</span> <span class="nt">&gt;&lt;/deep-chat&gt;</span>
 </code></section></div></div>
 <h3 id="buttonstyles">
   
@@ -477,7 +477,7 @@ The <code class="language-plaintext highlighter-rouge">subscriptionKey</code> an
 </h4>
       
 
-<div class="language-html highlighter-rouge"><div class="highlight"><section><code><span class="nt">&lt;deep-chat</span> <span class="na">speechToText=</span><span class="s">'{ "button": { "commandMode": { "svg": { "styles": { "default": { "filter": "brightness(0) saturate(100%) invert(70%) sepia(70%) saturate(4438%) hue-rotate(170deg) brightness(92%) contrast(98%)" }}}}, "active": { "svg": { "styles": { "default": { "filter": "brightness(0) saturate(100%) invert(10%) sepia(97%) saturate(7495%) hue-rotate(0deg) brightness(101%) contrast(107%)" }}}}, "default": { "svg": { "styles": { "default": { "filter": "brightness(0) saturate(100%) invert(77%) sepia(9%) saturate(7093%) hue-rotate(32deg) brightness(99%) contrast(83%)" }}}}}, "commands": { "removeAllText": "remove text", "commandMode": "command" } }'</span> <span class="nt">&gt;&lt;/deep-chat&gt;</span>
+<div class="language-html highlighter-rouge"><div class="highlight"><section class="language-html" data-src="index.html" data-download-link><code><span class="nt">&lt;deep-chat</span> <span class="na">speechToText=</span><span class="s">'{ "button": { "commandMode": { "svg": { "styles": { "default": { "filter": "brightness(0) saturate(100%) invert(70%) sepia(70%) saturate(4438%) hue-rotate(170deg) brightness(92%) contrast(98%)" }}}}, "active": { "svg": { "styles": { "default": { "filter": "brightness(0) saturate(100%) invert(10%) sepia(97%) saturate(7495%) hue-rotate(0deg) brightness(101%) contrast(107%)" }}}}, "default": { "svg": { "styles": { "default": { "filter": "brightness(0) saturate(100%) invert(77%) sepia(9%) saturate(7093%) hue-rotate(32deg) brightness(99%) contrast(83%)" }}}}}, "commands": { "removeAllText": "remove text", "commandMode": "command" } }'</span> <span class="nt">&gt;&lt;/deep-chat&gt;</span>
 </code></section></div></div>
 
 <blockquote>
@@ -522,7 +522,7 @@ You can use the <a href="https://cssfilterconverter.com/"><code class="language-
 </h4>
       
 
-<div class="language-html highlighter-rouge"><div class="highlight"><section><code><span class="nt">&lt;deep-chat</span> <span class="na">speechToText=</span><span class="s">'{"submitAfterSilence": 3000}'</span><span class="nt">&gt;&lt;/deep-chat&gt;</span>
+<div class="language-html highlighter-rouge"><div class="highlight"><section class="language-html" data-src="index.html" data-download-link><code><span class="nt">&lt;deep-chat</span> <span class="na">speechToText=</span><span class="s">'{"submitAfterSilence": 3000}'</span><span class="nt">&gt;&lt;/deep-chat&gt;</span>
 </code></section></div></div>
 
 <blockquote>
@@ -542,7 +542,7 @@ When using the default <a href="https://developer.mozilla.org/en-US/docs/Web/API
 
 <p>This is the example used in the <a href="https://github.com/OvidijusParsiunas/deep-chat/assets/18709577/e103a42e-b3a7-4449-b9db-73fed6d7876e">demo video</a>. When replicating - make sure to add the Speech SDK to your project and add your resource properties.</p>
 
-<div class="language-html highlighter-rouge"><div class="highlight"><section><code><span class="c">&lt;!-- This example is for Vanilla JS and should be tailored to your framework (see Examples) --&gt;</span>
+<div class="language-html highlighter-rouge"><div class="highlight"><section class="language-html" data-src="index.html" data-download-link><code><span class="c">&lt;!-- This example is for Vanilla JS and should be tailored to your framework (see Examples) --&gt;</span>
 <span class="nt">&lt;div</span> <span class="na">style=</span><span class="s">"display: flex"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;deep-chat</span> <span class="na">speechToText=</span><span class="s">'{ "azure": { "subscriptionKey": "resource-key", "region": "resource-region" }, "commands": { "stop": "stop", "pause": "pause", "resume": "resume", "removeAllText": "remove text", "submit": "submit", "commandMode": "command" }}'</span> <span class="na">errorMessages=</span><span class="s">'{ "overrides": {"speechToText": "Azure Speech To Text can not be used in this website as you need to set your credentials."} }'</span> <span class="na">style=</span><span class="s">"margin-right: 30px"</span> <span class="na">demo=</span><span class="s">"true"</span> <span class="nt">&gt;&lt;/deep-chat&gt;</span>
   <span class="nt">&lt;deep-chat</span> <span class="na">speechToText=</span><span class="s">'{ "commands": { "azure": { "subscriptionKey": "resource-key", "region": "resource-region" }, "stop": "stop", "pause": "pause", "resume": "resume", "removeAllText": "remove text", "submit": "submit", "commandMode": "command" }}'</span> <span class="na">errorMessages=</span><span class="s">'{ "overrides": {"speechToText": "Azure Speech To Text can not be used in this website as you need to set your credentials."} }'</span> <span class="na">demo=</span><span class="s">"true"</span> <span class="nt">&gt;&lt;/deep-chat&gt;</span>

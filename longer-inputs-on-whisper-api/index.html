@@ -121,7 +121,7 @@
 
 <p>Whisper will downsample audio to 16,000 Hz mono before transcribing. This preprocessing can be performed client-side to reduce file size and allow longer files to be uploaded to groq. The following ffmpeg command can be used to reduce file size:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><section><code>ffmpeg \
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><section class="language-html" data-src="index.html" data-download-link><code>ffmpeg \
   -i &lt;your file&gt; \
   -ar 16000 \
   -ac 1 \
@@ -133,7 +133,7 @@
 
 <p>One way to handle this is to use the PyDub open source Python package to split the audio:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><section><code>from pydub import AudioSegment
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><section class="language-html" data-src="index.html" data-download-link><code>from pydub import AudioSegment
 
 song = AudioSegment.from_mp3("good_morning.mp3")
 

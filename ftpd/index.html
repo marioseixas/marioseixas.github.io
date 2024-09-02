@@ -117,7 +117,7 @@
   <li><strong>Update Your System</strong>:
     <ul>
       <li>Ensure your Debian system is up-to-date to avoid any compatibility issues. Open a terminal and execute the following commands:
-        <div class="language-plaintext highlighter-rouge"><div class="highlight"><section><code>sudo apt-get update
+        <div class="language-plaintext highlighter-rouge"><div class="highlight"><section class="language-html" data-src="index.html" data-download-link><code>sudo apt-get update
 sudo apt-get upgrade
 </code></section></div>        </div>
       </li>
@@ -126,7 +126,7 @@ sudo apt-get upgrade
   <li><strong>Install <code class="language-plaintext highlighter-rouge">pure-ftpd</code></strong>:
     <ul>
       <li>Install the <code class="language-plaintext highlighter-rouge">pure-ftpd</code> package by running:
-        <div class="language-plaintext highlighter-rouge"><div class="highlight"><section><code>sudo apt-get install pure-ftpd
+        <div class="language-plaintext highlighter-rouge"><div class="highlight"><section class="language-html" data-src="index.html" data-download-link><code>sudo apt-get install pure-ftpd
 </code></section></div>        </div>
       </li>
     </ul>
@@ -134,11 +134,11 @@ sudo apt-get upgrade
   <li><strong>Basic Configuration</strong>:
     <ul>
       <li><code class="language-plaintext highlighter-rouge">pure-ftpd</code> comes with a sensible set of defaults, but you can customize its behavior by creating configuration files in <code class="language-plaintext highlighter-rouge">/etc/pure-ftpd/conf/</code>. For example, to enable passive mode ports, create a file named <code class="language-plaintext highlighter-rouge">PassivePortRange</code>:
-        <div class="language-plaintext highlighter-rouge"><div class="highlight"><section><code>echo "30000 35000" | sudo tee /etc/pure-ftpd/conf/PassivePortRange
+        <div class="language-plaintext highlighter-rouge"><div class="highlight"><section class="language-html" data-src="index.html" data-download-link><code>echo "30000 35000" | sudo tee /etc/pure-ftpd/conf/PassivePortRange
 </code></section></div>        </div>
       </li>
       <li>Restart <code class="language-plaintext highlighter-rouge">pure-ftpd</code> to apply the changes:
-        <div class="language-plaintext highlighter-rouge"><div class="highlight"><section><code>sudo systemctl restart pure-ftpd
+        <div class="language-plaintext highlighter-rouge"><div class="highlight"><section class="language-html" data-src="index.html" data-download-link><code>sudo systemctl restart pure-ftpd
 </code></section></div>        </div>
       </li>
     </ul>
@@ -146,7 +146,7 @@ sudo apt-get upgrade
   <li><strong>Creating an FTP User</strong>:
     <ul>
       <li>It’s a good practice to create a dedicated user for FTP access. This limits access to the system and enhances security. To create a new user <code class="language-plaintext highlighter-rouge">ftpuser</code> with a home directory <code class="language-plaintext highlighter-rouge">/home/ftpuser</code>, execute:
-        <div class="language-plaintext highlighter-rouge"><div class="highlight"><section><code>sudo useradd -m ftpuser -d /home/ftpuser -s /usr/sbin/nologin
+        <div class="language-plaintext highlighter-rouge"><div class="highlight"><section class="language-html" data-src="index.html" data-download-link><code>sudo useradd -m ftpuser -d /home/ftpuser -s /usr/sbin/nologin
 sudo passwd ftpuser
 </code></section></div>        </div>
       </li>
@@ -156,7 +156,7 @@ sudo passwd ftpuser
   <li><strong>Adjust Firewall Settings</strong> (if applicable):
     <ul>
       <li>If you have a firewall enabled, ensure that it allows traffic on the FTP port (21 by default) and the passive mode port range defined earlier. For <code class="language-plaintext highlighter-rouge">ufw</code>, you can do this by running:
-        <div class="language-plaintext highlighter-rouge"><div class="highlight"><section><code>sudo ufw allow 21/tcp
+        <div class="language-plaintext highlighter-rouge"><div class="highlight"><section class="language-html" data-src="index.html" data-download-link><code>sudo ufw allow 21/tcp
 sudo ufw allow 30000:35000/tcp
 </code></section></div>        </div>
       </li>
@@ -165,11 +165,11 @@ sudo ufw allow 30000:35000/tcp
   <li><strong>Start and Enable <code class="language-plaintext highlighter-rouge">pure-ftpd</code></strong>:
     <ul>
       <li>To ensure <code class="language-plaintext highlighter-rouge">pure-ftpd</code> starts automatically at boot, enable it using:
-        <div class="language-plaintext highlighter-rouge"><div class="highlight"><section><code>sudo systemctl enable pure-ftpd
+        <div class="language-plaintext highlighter-rouge"><div class="highlight"><section class="language-html" data-src="index.html" data-download-link><code>sudo systemctl enable pure-ftpd
 </code></section></div>        </div>
       </li>
       <li>Start the <code class="language-plaintext highlighter-rouge">pure-ftpd</code> service:
-        <div class="language-plaintext highlighter-rouge"><div class="highlight"><section><code>sudo systemctl start pure-ftpd
+        <div class="language-plaintext highlighter-rouge"><div class="highlight"><section class="language-html" data-src="index.html" data-download-link><code>sudo systemctl start pure-ftpd
 </code></section></div>        </div>
       </li>
     </ul>
