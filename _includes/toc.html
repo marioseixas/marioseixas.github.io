@@ -1,5 +1,5 @@
 {% capture content %}
-{{ content | replace: '<pre class="highlight"><code>', '<section><code>' | replace: '</code></pre>', '</code></section>' }}
+{{ content | replace: '<pre class="highlight"><code>', '<section class="language-html" data-src="index.html" data-download-link><code>' | replace: '</code></pre>', '</code></section>' }}
 {% endcapture %}
 {% capture tocWorkspace %}
     {% comment %}
