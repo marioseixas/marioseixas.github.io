@@ -6,8 +6,8 @@ module Jekyll
     end
 
     def render(context)
-      # Extract the code block content
-      code_content = super.strip 
+      # Extract the code block content while handling potential indentation
+      code_content = super.strip.gsub(/^\s+/, "")
 
       # Build data-src attribute based on language 
       filename = "code-block.#{@language}"
@@ -16,7 +16,7 @@ module Jekyll
       download_label = "Download #{@language.capitalize()} Code"
 
       # Construct the HTML output
-      "<section data-src=\"#{filename}\" data-download-link data-download-link-label=\"#{download_label}\" class=\"language-#{@language}\"><code>#{code_content}</code></section>"
+      "<section data-src=\"#{filename}\" data-download-link data-download-link-label=\"#{download_label}\" class=\"language-#{@language}\"><code class=\"language-#{@language}\">#{code_content}</code></section>"
     end
   end
 end
