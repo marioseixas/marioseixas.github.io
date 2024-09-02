@@ -1,16 +1,17 @@
 # frozen_string_literal: true
+
 module Jekyll
   class RenderMermaid < Liquid::Block
     def render(context)
-      # Capture the content inside the block, stripping unnecessary whitespace
+      # Capture the content inside the block and strip unnecessary whitespace
       text = super.strip
 
-      # Wrap the content inside a <div> or <pre> tag with appropriate classes and styles
+      # Wrap the content inside a <div> with appropriate classes and styles
       mermaid_script = generate_mermaid_script
       mermaid_div = "<div class='mermaid' style='white-space: pre-wrap;'>#{text}</div>"
 
-      # Combine the generated script and the content, ensuring it’s output as raw HTML
-      "#{mermaid_script}#{mermaid_div}".html_safe
+      # Return the script and div as a single string without any additional processing
+      "#{mermaid_script}#{mermaid_div}"
     end
 
     private
