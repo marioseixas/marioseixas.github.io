@@ -103,13 +103,9 @@
           </a>
         </span>
       </div>
-    <main class="post-content-body">      
       {% include toc.html html=content %}
       {% include anchor_headings.html html=content anchorBody="#" %}
-      {% capture content %}
-        {{ content | replace: '<pre class="highlight"><code>', '<section><code>' | replace: '</code></pre>', '</code></section>' }}
-      {% endcapture %}        
-    </main>
+    <main class="post-content-body"></main>
   </div>
   </article>
   <hr>
