@@ -87,7 +87,9 @@ jobs:
         env:
           PAGES_REPO_NWO: marioseixas/marioseixas.github.io
           JEKYLL_ENV: production
+          base_path: /your/base/path
         run: |
+          echo "base_path is set to: ${base_path}"
           bundle exec jekyll build --trace --config _config.yml --baseurl "${base_path}"
 
       - name: Generate Pagefind Index
