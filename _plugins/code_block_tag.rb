@@ -7,34 +7,35 @@ module Jekyll
 
     def render(context)
       code_content = super.strip.gsub(/^\s+/, "")
-      filename = "code-block.#{@language}"
-      download_label = "Download #{@language.capitalize()} Code"
 
-      # Determine MIME type 
-      mime_type = case @language
-                  when "python" then "text/x-python"
-                  when "html" then "text/html"
-                  when "javascript" then "text/javascript"
-                  when "css" then "text/css"
-                  when "ruby" then "text/x-ruby"
-                  when "bash", "shell" then "text/x-sh"
-                  when "json" then "application/json"
-                  when "xml" then "application/xml"
-                  when "yaml" then "text/yaml"
-                  when "markdown" then "text/markdown"
-                  when "java" then "text/x-java"
-                  when "c" then "text/x-c"
-                  when "cpp" then "text/x-c++"
-                  when "csharp" then "text/x-csharp"
-                  when "go" then "text/x-go"
-                  when "php" then "text/x-php"
-                  when "swift" then "text/x-swift"
-                  when "typescript" then "text/typescript"
-                  when "sql" then "text/x-sql"
-                  when "dockerfile" then "text/x-dockerfile"
-                  when "makefile" then "text/x-makefile"
-                  else "text/plain" # Default 
-                  end
+      # Determine file extension and MIME type based on language
+      extension, mime_type = case @language
+                              when "python" then [".py", "text/x-python"]
+                              when "html" then [".html", "text/html"]
+                              when "javascript" then [".js", "text/javascript"]
+                              when "css" then [".css", "text/css"]
+                              when "ruby" then [".rb", "text/x-ruby"]
+                              when "bash", "shell" then [".sh", "text/x-sh"]
+                              when "json" then [".json", "application/json"]
+                              when "xml" then [".xml", "application/xml"]
+                              when "yaml" then [".yaml", "text/yaml"]
+                              when "markdown" then [".md", "text/markdown"]
+                              when "java" then [".java", "text/x-java"]
+                              when "c" then [".c", "text/x-c"]
+                              when "cpp" then [".cpp", "text/x-c++"]
+                              when "csharp" then [".cs", "text/x-csharp"]
+                              when "go" then [".go", "text/x-go"]
+                              when "php" then [".php", "text/x-php"]
+                              when "swift" then [".swift", "text/x-swift"]
+                              when "typescript" then [".ts", "text/typescript"]
+                              when "sql" then [".sql", "text/x-sql"]
+                              when "dockerfile" then [".dockerfile", "text/x-dockerfile"]
+                              when "makefile" then [".mk", "text/x-makefile"]
+                              else [".txt", "text/plain"] # Default
+                              end
+
+      filename = "#{@language}_code-block#{extension}" 
+      download_label = "Download #{@language.capitalize()}"
 
       # Encode code content for data URI
       encoded_content = URI.encode_www_form_component(code_content)
