@@ -103,11 +103,16 @@
           </a>
         </span>
       </div>
-    <main class="post-content-body">      
+    <main class="post-content-body">
+      {% capture content %}
+        {{ content | replace: '<pre class="highlight"><code>', 
+        '<div><script>document.addEventListener("DOMContentLoaded",function(){var lang=/\\blang(?:uage)?-([\\w-]+)\\b/i;function getLanguage(element){while(element){var m=lang.exec(element.className);if(m){return m[1].toLowerCase()}element=element.parentElement}return \'none\'}function updateDataSrcAttribute(){var preElements=document.querySelectorAll(\'pre[data-src][data-download-link]\');preElements.forEach(function(preElement){var language=getLanguage(preElement);if(language!==\'none\'){var currentSrc=preElement.getAttribute(\'data-src\');var fileNameWithoutExtension=currentSrc.split(\'.\').slice(0,-1).join(\'.\');preElement.setAttribute(\'data-src\',fileNameWithoutExtension+\'.\'+language)}})}updateDataSrcAttribute()});</script><section data-src=\"' + downloadUrl + '\" data-download-link><code class=\"line-numbers language-\' + lang + \'\">' 
+        | replace: '</code></pre>', '</code></section></div>' }}
+      {% endcapture %}
       {% include toc.html html=content %}
       {% include anchor_headings.html html=content anchorBody="#" %}
     </main>
-    </div>  
+  </div>
   </article>
   <hr>
   <a href="#" class="back-to-top" aria-label="Back to top">
