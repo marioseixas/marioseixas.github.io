@@ -87,8 +87,8 @@ jobs:
         run: |
           echo "base_path from env is: ${base_path}"
           export base_path="${base_path}" 
-          echo "base_path after export is: ${base_path}"
-          bundle exec jekyll build --trace --config _config.yml --baseurl "${base_path}"
+          echo "base_path after export is: ${base_path}"          
+          bundle exec jekyll build --trace --verbose --config _config.yml
 
       - name: Generate Pagefind Index
         run: |
