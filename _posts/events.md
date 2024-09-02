@@ -1,8 +1,9 @@
 ---
+type: null
 layout: null
+published: true
+slug: events
 title: Events
-permalink: /events.html
-id: events
 ---
 
 <head>
