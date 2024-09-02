@@ -2,8 +2,8 @@
     "version": "https://jsonfeed.org/version/1",
     "title": "infoBAG",
     
-    "home_page_url": "/",
-    "feed_url": "/feed.json",
+    "home_page_url": "//",
+    "feed_url": "//feed.json",
     "expired": false,
     "items": [
         
