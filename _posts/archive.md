@@ -1,8 +1,8 @@
 ---
+type: null
 layout: null
-title: archive
-permalink: /archive.html
-id: archive
+published: true
+slug: archive
 ---
 
 <head>
