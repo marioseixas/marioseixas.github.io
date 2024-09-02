@@ -2,7 +2,7 @@ name: infoBAG
 title: infoBAG
 incremental: true
 
-permalink: "/:slug/"
+permalink: /:slug/
 
 plugins:
   - jekyll-last-modified-at
