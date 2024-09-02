@@ -1,12 +1,12 @@
 module Jekyll
-  class CodeBlockTag < Liquid::Tag
-    def initialize(tag_name, text, tokens)
+  class CodeBlockTag < Liquid::Block
+    def initialize(tag_name, markup, tokens)
       super
-      @language = text.strip # Extract the language from the tag (e.g., "python")
+      @language = markup.strip # Extract the language from the tag arguments
     end
 
     def render(context)
-      # Extract the code block content while handling potential indentation
+      # Extract the code block content while handling indentation
       code_content = super.strip.gsub(/^\s+/, "")
 
       # Build data-src attribute based on language 
