@@ -34,14 +34,14 @@ module Jekyll
                               else [".txt", "text/plain"] # Default
                               end
 
-      filename = "#{@language}_code-block#{extension}" 
+      filename = "#{@language}_code-block#{extension}"
       download_label = "Download #{@language.capitalize()}"
 
       # Encode code content for data URI
       encoded_content = URI.encode_www_form_component(code_content)
       data_uri = "data:#{mime_type};charset=utf-8,#{encoded_content}"
 
-      # Construct HTML output
+      # Construct HTML output with the data URI and download attribute
       "<section data-src=\"#{data_uri}\" data-download-link data-download-link-label=\"#{download_label}\" data-download=\"#{filename}\" class=\"language-#{@language}\"><code class=\"language-#{@language}\">#{code_content}</code></section>"
     end
   end
