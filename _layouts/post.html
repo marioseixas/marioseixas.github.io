@@ -107,7 +107,7 @@
       {% include toc.html html=content %}
       {% include anchor_headings.html html=content anchorBody="#" %}
       {% capture content %}
-        {{ content | replace: '<pre class="highlight"><code>', '<section data-src="{{ downloadUrl }}" data-download-link><code class="line-numbers language-{{ lang }}">' | replace: '</code></pre>', '</code></section>' }}
+        {{ content | replace: '<pre class="highlight"><code>', '<section data-src="{{ downloadUrl }}" data-download-link><code class="line-numbers language-{{ lang }}">` | replace: '</code></pre>', '</code></section>' }}
       {% endcapture %}
     </main>
   </div>
