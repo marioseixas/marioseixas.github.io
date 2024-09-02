@@ -496,14 +496,14 @@
     "scripts": {
         "parents": [],
         "children": [
-            "google-apps-script",
-            "AI",
-            "scripts>cloud",
             "scripts>mobile",
+            "google-apps-script",
+            "scripts>AI",
             "cloud",
             "scripts>google-apps-script",
-            "scripts>AI",
-            "mobile"
+            "scripts>cloud",
+            "mobile",
+            "AI"
         ],
         "related": {
             "linux": 26,
@@ -702,10 +702,10 @@
     "edital": {
         "parents": [],
         "children": [
-            "direito>processual-penal",
             "edital>direito>processual-penal",
-            "edital>direito",
-            "direito"
+            "direito>processual-penal",
+            "direito",
+            "edital>direito"
         ],
         "related": {},
         "posts": [
@@ -1348,6 +1348,12 @@
         "related": {},
         "posts": [
             {
+                "title": "Board games",
+                "url": "/board-games",
+                "highlighted": true,
+                "date": "2024-07-30T00:00:00"
+            },
+            {
                 "title": "Vacinas",
                 "url": "/vacinas",
                 "highlighted": true,
@@ -1438,9 +1444,9 @@
         "parents": [],
         "children": [
             "software>mobile",
-            "software>cloud",
             "cloud",
-            "mobile"
+            "mobile",
+            "software>cloud"
         ],
         "related": {},
         "posts": [
@@ -1496,8 +1502,8 @@
     },
     "mobile": {
         "parents": [
-            "software",
-            "scripts"
+            "scripts",
+            "software"
         ],
         "children": [],
         "related": {},
@@ -1742,8 +1748,8 @@
     },
     "cloud": {
         "parents": [
-            "software",
-            "scripts"
+            "scripts",
+            "software"
         ],
         "children": [],
         "related": {},

@@ -329,6 +329,10 @@
     url: /writing
   tag: estudos
 - posts:
+  - date: 2024-07-30 00:00:00
+    highlighted: true
+    title: Board games
+    url: /board-games
   - date: 2022-09-27 00:00:00
     highlighted: true
     title: Vacinas
