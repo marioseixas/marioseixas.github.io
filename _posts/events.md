@@ -1,5 +1,4 @@
 ---
-type: null
 layout: null
 published: true
 slug: events
