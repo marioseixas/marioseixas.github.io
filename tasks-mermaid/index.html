@@ -98,22 +98,29 @@
     <main class="post-content-body">      
       
 
-      <div class="language-plaintext highlighter-rouge"><div class="highlight"><section class="language-html" data-src="index.html" data-download-link><code>      &lt;script src="https://cdn.jsdelivr.net/npm/svg-pan-zoom@3.6.1/dist/svg-pan-zoom.min.js"&gt;&lt;/script&gt;&lt;script type='module'&gt;   import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';   mermaid.initialize({
-startOnLoad: true,
-theme: 'dark',
-er: { useMaxWidth: true }   });   setTimeout(() =&gt; {
-svgPanZoom(document.querySelector("#mermaid_div&gt;svg"), {
-  minZoom: 0.5,
-  maxZoom: 10,
-  fit: true,
-  contain: false,
-  controlIconsEnabled: true,
-  center: true,
-  refreshRate: "auto",
-});   }, 200); &lt;/script&gt;
-</code></section></div></div>
-<div class="mermaid" style="white-space: pre-wrap;"> 
-flowchart TD
+      <script src="https://cdn.jsdelivr.net/npm/svg-pan-zoom@3.6.1/dist/svg-pan-zoom.min.js"></script>
+
+<script type="module">
+  import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+  mermaid.initialize({
+    startOnLoad: true,
+    theme: 'dark',
+    er: { useMaxWidth: true }
+  });
+  setTimeout(() => {
+    svgPanZoom(document.querySelector("div.mermaid>svg"), {
+      minZoom: 0.5,
+      maxZoom: 10,
+      fit: true,
+      contain: false,
+      controlIconsEnabled: true,
+      center: true,
+      refreshRate: "auto",
+    });
+  }, 200);
+</script>
+
+<div class="mermaid" style="white-space: pre-wrap;">flowchart TD
     A[Start] --&gt; B{Specific\ndeadline?}
     B --&gt;|Yes| C{Delay causes\nharm?}
     B --&gt;|No| D{Delay causes\nharm?}
@@ -145,8 +152,7 @@ flowchart TD
         M --&gt;|H| U[Complete when\npossible]
     end
     
-    N &amp; O &amp; P &amp; Q &amp; R &amp; S &amp; T &amp; U --&gt; V[End]
- </div>
+    N &amp; O &amp; P &amp; Q &amp; R &amp; S &amp; T &amp; U --&gt; V[End]</div>
 
     </main>
     </div>  

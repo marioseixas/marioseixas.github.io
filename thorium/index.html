@@ -115,7 +115,7 @@
 
 <p>file:///opt/chromium.org/thorium/thorium-browser</p>
 
-<div class="language-bash highlighter-rouge"><div class="highlight"><section class="language-html" data-src="index.html" data-download-link><code><span class="c"># Allow users to override command-line options with a file.</span>
+<div class="language-bash highlighter-rouge"><div class="highlight"><section><code><span class="c"># Allow users to override command-line options with a file.</span>
 <span class="k">if</span> <span class="o">[[</span> <span class="nt">-f</span> <span class="nv">$XDG_CONFIG_HOME</span>/thorium-flags.conf <span class="o">]]</span><span class="p">;</span> <span class="k">then
    </span><span class="nv">CHROME_USER_FLAGS</span><span class="o">=</span><span class="s2">"</span><span class="si">$(</span><span class="nb">cat</span> <span class="nv">$XDG_CONFIG_HOME</span>/thorium-flags.conf<span class="si">)</span><span class="s2">"</span>
 <span class="k">fi</span>

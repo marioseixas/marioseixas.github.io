@@ -98,22 +98,29 @@
     <main class="post-content-body">      
       
 
-      <div class="language-plaintext highlighter-rouge"><div class="highlight"><section class="language-html" data-src="index.html" data-download-link><code>      &lt;script src="https://cdn.jsdelivr.net/npm/svg-pan-zoom@3.6.1/dist/svg-pan-zoom.min.js"&gt;&lt;/script&gt;&lt;script type='module'&gt;   import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';   mermaid.initialize({
-startOnLoad: true,
-theme: 'dark',
-er: { useMaxWidth: true }   });   setTimeout(() =&gt; {
-svgPanZoom(document.querySelector("#mermaid_div&gt;svg"), {
-  minZoom: 0.5,
-  maxZoom: 10,
-  fit: true,
-  contain: false,
-  controlIconsEnabled: true,
-  center: true,
-  refreshRate: "auto",
-});   }, 200); &lt;/script&gt;
-</code></section></div></div>
-<div class="mermaid" style="white-space: pre-wrap;"> 
-graph TB
+      <script src="https://cdn.jsdelivr.net/npm/svg-pan-zoom@3.6.1/dist/svg-pan-zoom.min.js"></script>
+
+<script type="module">
+  import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+  mermaid.initialize({
+    startOnLoad: true,
+    theme: 'dark',
+    er: { useMaxWidth: true }
+  });
+  setTimeout(() => {
+    svgPanZoom(document.querySelector("div.mermaid>svg"), {
+      minZoom: 0.5,
+      maxZoom: 10,
+      fit: true,
+      contain: false,
+      controlIconsEnabled: true,
+      center: true,
+      refreshRate: "auto",
+    });
+  }, 200);
+</script>
+
+<div class="mermaid" style="white-space: pre-wrap;">graph TB
     A[Início da Sessão de Julgamento]:::judge --&gt; B[Verificação de Presença]:::judge
     B --&gt; C[Sorteio dos Jurados]:::judge
     C --&gt; D[Exortação aos Jurados]:::judge
@@ -142,25 +149,31 @@ graph TB
     K1["Art. 493 do CPP: Juiz convoca as partes e os presentes para a leitura da sentença em plenário."]:::note --&gt; K
     L1["Juiz declara encerrada a presente sessão de julgamento do Tribunal do Júri."]:::note --&gt; L
     
-    classDef note fill:#fff,stroke:#333,stroke-width:2px,stroke-dasharray: 5 5
- </div>
+    classDef note fill:#fff,stroke:#333,stroke-width:2px,stroke-dasharray: 5 5</div>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><section class="language-html" data-src="index.html" data-download-link><code>      &lt;script src="https://cdn.jsdelivr.net/npm/svg-pan-zoom@3.6.1/dist/svg-pan-zoom.min.js"&gt;&lt;/script&gt;&lt;script type='module'&gt;   import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';   mermaid.initialize({
-startOnLoad: true,
-theme: 'dark',
-er: { useMaxWidth: true }   });   setTimeout(() =&gt; {
-svgPanZoom(document.querySelector("#mermaid_div&gt;svg"), {
-  minZoom: 0.5,
-  maxZoom: 10,
-  fit: true,
-  contain: false,
-  controlIconsEnabled: true,
-  center: true,
-  refreshRate: "auto",
-});   }, 200); &lt;/script&gt;
-</code></section></div></div>
-<div class="mermaid" style="white-space: pre-wrap;"> 
-graph TB
+<script src="https://cdn.jsdelivr.net/npm/svg-pan-zoom@3.6.1/dist/svg-pan-zoom.min.js"></script>
+
+<script type="module">
+  import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+  mermaid.initialize({
+    startOnLoad: true,
+    theme: 'dark',
+    er: { useMaxWidth: true }
+  });
+  setTimeout(() => {
+    svgPanZoom(document.querySelector("div.mermaid>svg"), {
+      minZoom: 0.5,
+      maxZoom: 10,
+      fit: true,
+      contain: false,
+      controlIconsEnabled: true,
+      center: true,
+      refreshRate: "auto",
+    });
+  }, 200);
+</script>
+
+<div class="mermaid" style="white-space: pre-wrap;">graph TB
     A[Inquérito Policial] --&gt; B(Denúncia - art. 41, CPP)
     B --&gt; C{Absolvição Sumária - art. 397, CPP}
     C --&gt;|Não| D[Citação do Acusado - art. 406, CPP]
@@ -244,8 +257,7 @@ graph TB
     P["Trânsito em Julgado\n\n* Fase em que a decisão se torna irrecorrível."]
     Q["Impronúncia (art. 414, CPP)\n\n* Inexistência do crime ou indícios insuficientes de autoria.\n* Não impede novas investigações."]
     R["Absolvição Sumária (art. 415, CPP)\n\n* Mesmas hipóteses do art. 397, CPP."]
-    S["Desclassificação (art. 419, CPP)\n\n* Crime diverso de competência do juiz singular."]
- </div>
+    S["Desclassificação (art. 419, CPP)\n\n* Crime diverso de competência do juiz singular."]</div>
 
     </main>
     </div>  

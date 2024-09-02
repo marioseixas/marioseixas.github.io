@@ -223,7 +223,7 @@ A Wildfire, outra empresa que vem da educação em sistemas embarcados, também 
 
 <p>O processo de desenvolvimento e teste é assim: primeiro executar o contêiner e mapear meu diretório de trabalho para dentro dele, também adicionando recursos de X11 Forwarding com <code class="language-plaintext highlighter-rouge">--net=host --env="DISPLAY" --volume="$HOME/.Xauthority:/root/.Xauthority:rw"</code> para que os programas GUI dentro do contêiner possam ser exibidos através do X11 Server do host:</p>
 
-<div class="language-shell highlighter-rouge"><div class="highlight"><section class="language-html" data-src="index.html" data-download-link><code>docker run <span class="nt">--name</span> rknn <span class="nt">-d</span> <span class="se">\</span>
+<div class="language-shell highlighter-rouge"><div class="highlight"><section><code>docker run <span class="nt">--name</span> rknn <span class="nt">-d</span> <span class="se">\</span>
   <span class="nt">--net</span><span class="o">=</span>host <span class="nt">--env</span><span class="o">=</span><span class="s2">"DISPLAY"</span> <span class="nt">--volume</span><span class="o">=</span><span class="s2">"</span><span class="nv">$HOME</span><span class="s2">/.Xauthority:/root/.Xauthority:rw"</span> <span class="se">\</span>
   <span class="nt">-v</span> /home/ryan/Downloads/rk3588s/:/work <span class="se">\</span>
   rknn-toolkit2:1.4.0 <span class="se">\</span>
@@ -246,7 +246,7 @@ A Wildfire, outra empresa que vem da educação em sistemas embarcados, também 
 
 <p>O processo de instalação é o mesmo que o do rknn_toolkit2:</p>
 
-<div class="language-shell highlighter-rouge"><div class="highlight"><section class="language-html" data-src="index.html" data-download-link><code><span class="c"># Instalar pacotes básicos de python</span>
+<div class="language-shell highlighter-rouge"><div class="highlight"><section><code><span class="c"># Instalar pacotes básicos de python</span>
 <span class="nb">sudo </span>apt-get update
 <span class="nb">sudo </span>apt-get <span class="nb">install</span> <span class="nt">-y</span> python3 python3-dev python3-pip gcc
 
@@ -295,14 +295,14 @@ pip <span class="nb">install</span> <span class="nt">--user</span> rknn_toolkit_
 
 <ol>
   <li>Verificar a frequência da CPU:
-    <div class="language-shell highlighter-rouge"><div class="highlight"><section class="language-html" data-src="index.html" data-download-link><code><span class="c"># Método 1</span>
+    <div class="language-shell highlighter-rouge"><div class="highlight"><section><code><span class="c"># Método 1</span>
 <span class="nb">cat</span> /sys/devices/system/cpu/cpu0/cpufreq/scaling_cur_freq
 <span class="c"># Método 2</span>
 <span class="nb">cat</span> /sys/kernel/debug/clk/clk_summary | <span class="nb">grep </span>arm
 </code></section></div>    </div>
   </li>
   <li>Fixar a frequência da CPU (suportado pelo rk3588)
-    <div class="language-shell highlighter-rouge"><div class="highlight"><section class="language-html" data-src="index.html" data-download-link><code><span class="c"># Ver as frequências disponíveis da CPU</span>
+    <div class="language-shell highlighter-rouge"><div class="highlight"><section><code><span class="c"># Ver as frequências disponíveis da CPU</span>
 <span class="nb">cat</span> /sys/devices/system/cpu/cpufreq/policy0/scaling_available_frequencies
 <span class="c"># Saidas =&gt; 408000 600000 816000 1008000 1200000 1416000 1608000 1800000</span>
 
@@ -322,13 +322,13 @@ pip <span class="nb">install</span> <span class="nt">--user</span> rknn_toolkit_
       
   </li>
   <li>Verificar a frequência da memória (DDR)
-    <div class="language-shell highlighter-rouge"><div class="highlight"><section class="language-html" data-src="index.html" data-download-link><code><span class="nb">cat</span> /sys/kernel/debug/clk/clk_summary | <span class="nb">grep </span>ddr
+    <div class="language-shell highlighter-rouge"><div class="highlight"><section><code><span class="nb">cat</span> /sys/kernel/debug/clk/clk_summary | <span class="nb">grep </span>ddr
 </code></section></div>    </div>
   </li>
   <li>Fixar a frequência da memória (DDR)
     <blockquote>
       <p>Necessita do suporte do firmware, o comando a seguir não funciona no orangepi5, provavelmente por não ser suportado</p>
-      <div class="language-shell highlighter-rouge"><div class="highlight"><section class="language-html" data-src="index.html" data-download-link><code><span class="c"># Ver as frequências disponíveis para DDR</span>
+      <div class="language-shell highlighter-rouge"><div class="highlight"><section><code><span class="c"># Ver as frequências disponíveis para DDR</span>
 <span class="nb">cat</span> /sys/class/devfreq/dmc/available_frequencies
 <span class="c"># Definir a frequência DDR, por exemplo, para 1560MHz</span>
 <span class="nb">echo </span>userspace <span class="o">&gt;</span> /sys/class/devfreq/dmc/governor
@@ -352,14 +352,14 @@ pip <span class="nb">install</span> <span class="nt">--user</span> rknn_toolkit_
   <li>
     <p>Verificar a frequência do NPU (específico para rk3588)</p>
 
-    <div class="language-shell highlighter-rouge"><div class="highlight"><section class="language-html" data-src="index.html" data-download-link><code><span class="nb">cat</span> /sys/class/devfreq/fdab0000.npu/cur_freq
+    <div class="language-shell highlighter-rouge"><div class="highlight"><section><code><span class="nb">cat</span> /sys/class/devfreq/fdab0000.npu/cur_freq
 </code></section></div>    </div>
   </li>
   <li>
     <p>Fixar a frequência do NPU (específico para rk3588)</p>
     <blockquote>
       <p>Atenção: nas versões posteriores a 0.7.2 do driver NPU, é necessário ligar a alimentação do NPU antes de configurar a frequência</p>
-      <div class="language-shell highlighter-rouge"><div class="highlight"><section class="language-html" data-src="index.html" data-download-link><code><span class="c"># Ver as frequências disponíveis do NPU</span>
+      <div class="language-shell highlighter-rouge"><div class="highlight"><section><code><span class="c"># Ver as frequências disponíveis do NPU</span>
 <span class="nb">cat</span> /sys/class/devfreq/fdab0000.npu/available_frequencies
 <span class="c"># =&gt; 300000000 400000000 500000000 600000000 700000000 800000000 900000000 1000000000</span>
 <span class="c"># Definir a frequência do NPU, por exemplo, para a máxima de 1 GHz</span>
@@ -382,7 +382,7 @@ pip <span class="nb">install</span> <span class="nt">--user</span> rknn_toolkit_
 
 <p>Para drivers do NPU versão 0.7.2 e posterior, é possível consultar através de nós a versão do NPU, a utilização dos diferentes núcleos do NPU e controlar manualmente a alimentação do NPU</p>
 
-<div class="language-shell highlighter-rouge"><div class="highlight"><section class="language-html" data-src="index.html" data-download-link><code><span class="c"># 1. Consultar a versão do driver do NPU</span>
+<div class="language-shell highlighter-rouge"><div class="highlight"><section><code><span class="c"># 1. Consultar a versão do driver do NPU</span>
 <span class="c">## Corrigi o comando, o documento oficial tinha um erro e dava erro</span>
 <span class="nb">cat</span> /sys/kernel/debug/rknpu/version
 
@@ -401,7 +401,7 @@ pip <span class="nb">install</span> <span class="nt">--user</span> rknn_toolkit_
 
 <p>Para drivers do NPU versão 0.8.2 e posteriores, foram adicionadas funcionalidades como ajuste de frequência, tensão e controle dinâmico de energia:</p>
 
-<div class="language-shell highlighter-rouge"><div class="highlight"><section class="language-html" data-src="index.html" data-download-link><code><span class="c"># 1. Consultar a frequência de trabalho do NPU</span>
+<div class="language-shell highlighter-rouge"><div class="highlight"><section><code><span class="c"># 1. Consultar a frequência de trabalho do NPU</span>
 <span class="nb">cat</span> /sys/kernel/debug/rknpu/freq
 
 <span class="c"># 2. Definir a frequência de trabalho do NPU</span>

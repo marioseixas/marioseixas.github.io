@@ -3,7 +3,7 @@
     <title>infoBAG</title>
     <link href="/rss.xml" rel="self"/>
     <link href="/"/>
-    <updated>2024-09-02T01:24:36+00:00</updated>
+    <updated>2024-09-02T07:44:52+00:00</updated>
     <id></id>
     <author>
         <name></name>
@@ -5868,22 +5868,29 @@ if __name__ == &quot;__main__&quot;:
         <link href="/tasks-mermaid/"/>
         <updated>2024-05-21T00:00:00+00:00</updated>
         <id>/tasks-mermaid/</id>
-        <content type="html">&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;      &amp;lt;script src=&quot;https://cdn.jsdelivr.net/npm/svg-pan-zoom@3.6.1/dist/svg-pan-zoom.min.js&quot;&amp;gt;&amp;lt;/script&amp;gt;&amp;lt;script type=&apos;module&apos;&amp;gt;   import mermaid from &apos;https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs&apos;;   mermaid.initialize({
-startOnLoad: true,
-theme: &apos;dark&apos;,
-er: { useMaxWidth: true }   });   setTimeout(() =&amp;gt; {
-svgPanZoom(document.querySelector(&quot;#mermaid_div&amp;gt;svg&quot;), {
-  minZoom: 0.5,
-  maxZoom: 10,
-  fit: true,
-  contain: false,
-  controlIconsEnabled: true,
-  center: true,
-  refreshRate: &quot;auto&quot;,
-});   }, 200); &amp;lt;/script&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;div class=&quot;mermaid&quot; style=&quot;white-space: pre-wrap;&quot;&gt; 
-flowchart TD
+        <content type="html">&lt;script src=&quot;https://cdn.jsdelivr.net/npm/svg-pan-zoom@3.6.1/dist/svg-pan-zoom.min.js&quot;&gt;&lt;/script&gt;
+
+&lt;script type=&quot;module&quot;&gt;
+  import mermaid from &apos;https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs&apos;;
+  mermaid.initialize({
+    startOnLoad: true,
+    theme: &apos;dark&apos;,
+    er: { useMaxWidth: true }
+  });
+  setTimeout(() =&gt; {
+    svgPanZoom(document.querySelector(&quot;div.mermaid&gt;svg&quot;), {
+      minZoom: 0.5,
+      maxZoom: 10,
+      fit: true,
+      contain: false,
+      controlIconsEnabled: true,
+      center: true,
+      refreshRate: &quot;auto&quot;,
+    });
+  }, 200);
+&lt;/script&gt;
+
+&lt;div class=&quot;mermaid&quot; style=&quot;white-space: pre-wrap;&quot;&gt;flowchart TD
     A[Start] --&amp;gt; B{Specific\ndeadline?}
     B --&amp;gt;|Yes| C{Delay causes\nharm?}
     B --&amp;gt;|No| D{Delay causes\nharm?}
@@ -5915,8 +5922,7 @@ flowchart TD
         M --&amp;gt;|H| U[Complete when\npossible]
     end
     
-    N &amp;amp; O &amp;amp; P &amp;amp; Q &amp;amp; R &amp;amp; S &amp;amp; T &amp;amp; U --&amp;gt; V[End]
- &lt;/div&gt;
+    N &amp;amp; O &amp;amp; P &amp;amp; Q &amp;amp; R &amp;amp; S &amp;amp; T &amp;amp; U --&amp;gt; V[End]&lt;/div&gt;
 </content>
     </entry>
     
@@ -7025,22 +7031,29 @@ xrandr --output DP-1 --mode &quot;1152x864_60.00&quot;
         <link href="/juri/"/>
         <updated>2024-03-08T00:00:00+00:00</updated>
         <id>/juri/</id>
-        <content type="html">&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;      &amp;lt;script src=&quot;https://cdn.jsdelivr.net/npm/svg-pan-zoom@3.6.1/dist/svg-pan-zoom.min.js&quot;&amp;gt;&amp;lt;/script&amp;gt;&amp;lt;script type=&apos;module&apos;&amp;gt;   import mermaid from &apos;https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs&apos;;   mermaid.initialize({
-startOnLoad: true,
-theme: &apos;dark&apos;,
-er: { useMaxWidth: true }   });   setTimeout(() =&amp;gt; {
-svgPanZoom(document.querySelector(&quot;#mermaid_div&amp;gt;svg&quot;), {
-  minZoom: 0.5,
-  maxZoom: 10,
-  fit: true,
-  contain: false,
-  controlIconsEnabled: true,
-  center: true,
-  refreshRate: &quot;auto&quot;,
-});   }, 200); &amp;lt;/script&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;div class=&quot;mermaid&quot; style=&quot;white-space: pre-wrap;&quot;&gt; 
-graph TB
+        <content type="html">&lt;script src=&quot;https://cdn.jsdelivr.net/npm/svg-pan-zoom@3.6.1/dist/svg-pan-zoom.min.js&quot;&gt;&lt;/script&gt;
+
+&lt;script type=&quot;module&quot;&gt;
+  import mermaid from &apos;https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs&apos;;
+  mermaid.initialize({
+    startOnLoad: true,
+    theme: &apos;dark&apos;,
+    er: { useMaxWidth: true }
+  });
+  setTimeout(() =&gt; {
+    svgPanZoom(document.querySelector(&quot;div.mermaid&gt;svg&quot;), {
+      minZoom: 0.5,
+      maxZoom: 10,
+      fit: true,
+      contain: false,
+      controlIconsEnabled: true,
+      center: true,
+      refreshRate: &quot;auto&quot;,
+    });
+  }, 200);
+&lt;/script&gt;
+
+&lt;div class=&quot;mermaid&quot; style=&quot;white-space: pre-wrap;&quot;&gt;graph TB
     A[Início da Sessão de Julgamento]:::judge --&amp;gt; B[Verificação de Presença]:::judge
     B --&amp;gt; C[Sorteio dos Jurados]:::judge
     C --&amp;gt; D[Exortação aos Jurados]:::judge
@@ -7069,25 +7082,31 @@ graph TB
     K1[&quot;Art. 493 do CPP: Juiz convoca as partes e os presentes para a leitura da sentença em plenário.&quot;]:::note --&amp;gt; K
     L1[&quot;Juiz declara encerrada a presente sessão de julgamento do Tribunal do Júri.&quot;]:::note --&amp;gt; L
     
-    classDef note fill:#fff,stroke:#333,stroke-width:2px,stroke-dasharray: 5 5
- &lt;/div&gt;
+    classDef note fill:#fff,stroke:#333,stroke-width:2px,stroke-dasharray: 5 5&lt;/div&gt;
 
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;      &amp;lt;script src=&quot;https://cdn.jsdelivr.net/npm/svg-pan-zoom@3.6.1/dist/svg-pan-zoom.min.js&quot;&amp;gt;&amp;lt;/script&amp;gt;&amp;lt;script type=&apos;module&apos;&amp;gt;   import mermaid from &apos;https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs&apos;;   mermaid.initialize({
-startOnLoad: true,
-theme: &apos;dark&apos;,
-er: { useMaxWidth: true }   });   setTimeout(() =&amp;gt; {
-svgPanZoom(document.querySelector(&quot;#mermaid_div&amp;gt;svg&quot;), {
-  minZoom: 0.5,
-  maxZoom: 10,
-  fit: true,
-  contain: false,
-  controlIconsEnabled: true,
-  center: true,
-  refreshRate: &quot;auto&quot;,
-});   }, 200); &amp;lt;/script&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;div class=&quot;mermaid&quot; style=&quot;white-space: pre-wrap;&quot;&gt; 
-graph TB
+&lt;script src=&quot;https://cdn.jsdelivr.net/npm/svg-pan-zoom@3.6.1/dist/svg-pan-zoom.min.js&quot;&gt;&lt;/script&gt;
+
+&lt;script type=&quot;module&quot;&gt;
+  import mermaid from &apos;https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs&apos;;
+  mermaid.initialize({
+    startOnLoad: true,
+    theme: &apos;dark&apos;,
+    er: { useMaxWidth: true }
+  });
+  setTimeout(() =&gt; {
+    svgPanZoom(document.querySelector(&quot;div.mermaid&gt;svg&quot;), {
+      minZoom: 0.5,
+      maxZoom: 10,
+      fit: true,
+      contain: false,
+      controlIconsEnabled: true,
+      center: true,
+      refreshRate: &quot;auto&quot;,
+    });
+  }, 200);
+&lt;/script&gt;
+
+&lt;div class=&quot;mermaid&quot; style=&quot;white-space: pre-wrap;&quot;&gt;graph TB
     A[Inquérito Policial] --&amp;gt; B(Denúncia - art. 41, CPP)
     B --&amp;gt; C{Absolvição Sumária - art. 397, CPP}
     C --&amp;gt;|Não| D[Citação do Acusado - art. 406, CPP]
@@ -7171,8 +7190,7 @@ graph TB
     P[&quot;Trânsito em Julgado\n\n* Fase em que a decisão se torna irrecorrível.&quot;]
     Q[&quot;Impronúncia (art. 414, CPP)\n\n* Inexistência do crime ou indícios insuficientes de autoria.\n* Não impede novas investigações.&quot;]
     R[&quot;Absolvição Sumária (art. 415, CPP)\n\n* Mesmas hipóteses do art. 397, CPP.&quot;]
-    S[&quot;Desclassificação (art. 419, CPP)\n\n* Crime diverso de competência do juiz singular.&quot;]
- &lt;/div&gt;
+    S[&quot;Desclassificação (art. 419, CPP)\n\n* Crime diverso de competência do juiz singular.&quot;]&lt;/div&gt;
 </content>
     </entry>
     
