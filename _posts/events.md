@@ -1,4 +1,5 @@
 ---
+type: post
 layout: null
 published: true
 slug: events
@@ -86,17 +87,6 @@ title: Events
       </div>
     </nav>
   </header>
-  
-
-
-
-
-
-
-
-
-
-  
   <div class="wrapper">
     <h1 class="title"><i class="far fa-calendar"></i>Events</h1>
     <main id="calendar"></main>
