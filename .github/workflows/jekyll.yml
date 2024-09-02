@@ -79,19 +79,14 @@ jobs:
         id: pages
         uses: actions/configure-pages@v5
 
-      - name: Set base path
-        id: set_base_path
-        run: echo "base_path=/your/base/path" >> $GITHUB_ENV
-
       - name: Build with Jekyll
         env:
           PAGES_REPO_NWO: marioseixas/marioseixas.github.io
           JEKYLL_ENV: production
-          base_path: /your/base/path
+          base_path: ${{ steps.pages.outputs.base_path }} # Access the output from the previous step
         run: |
-          echo "base_path is set to: ${base_path}"
-          bundle exec jekyll build --trace --config _config.yml --baseurl "${base_path}"
-
+          echo "base_path is set to: ${base_path}" && bundle exec jekyll build --trace --config _config.yml --baseurl "${base_path}"
+          
       - name: Generate Pagefind Index
         run: |
           npx -y pagefind --site ${{ github.workspace }}/_site --output-path ${{ github.workspace }}/_site/pagefind
