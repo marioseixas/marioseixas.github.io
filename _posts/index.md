@@ -1,7 +1,8 @@
 ---
+type: null
 layout: null
-permalink: /index.html
-id: index
+published: true
+slug: /
 ---
 
 <head>
