@@ -1,8 +1,9 @@
 ---
+type: null
 layout: null
+published: true
+slug: tags
 title: Tags
-permalink: /tags.html
-id: tags
 ---
 
 <head>
