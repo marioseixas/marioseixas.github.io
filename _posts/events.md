@@ -1,4 +1,5 @@
 ---
+date: 2024-08-31
 type: post
 layout: null
 published: true
