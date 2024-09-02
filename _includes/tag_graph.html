@@ -6,14 +6,14 @@ erDiagram
         related_2 software_mobile
     }
     scripts {
-        child mobile
-        child AI
-        child google-apps-script
         child scripts_google-apps-script
+        child AI
         child scripts_cloud
-        child scripts_mobile
-        child cloud
+        child google-apps-script
         child scripts_AI
+        child cloud
+        child scripts_mobile
+        child mobile
         related_26 linux
         related_2 estudos
     }
@@ -34,43 +34,43 @@ erDiagram
         related_2 trabalho
     }
     trabalho ||..|| estudos : RELATED_TO
-    mobile {
-        parent software
+    scripts_google-apps-script {
         parent scripts
     }
-    scripts ||--|| mobile : SUBSET_OF
+    scripts ||--|| scripts_google-apps-script : SUBSET_OF
     AI {
         parent scripts
         child prompt
         child AI_prompt
     }
     scripts ||--|| AI : SUBSET_OF
-    google-apps-script {
-        parent scripts
-    }
-    scripts ||--|| google-apps-script : SUBSET_OF
-    scripts_google-apps-script {
-        parent scripts
-    }
-    scripts ||--|| scripts_google-apps-script : SUBSET_OF
     scripts_cloud {
         parent scripts
     }
     scripts ||--|| scripts_cloud : SUBSET_OF
-    scripts_mobile {
+    google-apps-script {
         parent scripts
-        related_2 iphone
     }
-    scripts ||--|| scripts_mobile : SUBSET_OF
+    scripts ||--|| google-apps-script : SUBSET_OF
+    scripts_AI {
+        parent scripts
+    }
+    scripts ||--|| scripts_AI : SUBSET_OF
     cloud {
         parent software
         parent scripts
     }
     scripts ||--|| cloud : SUBSET_OF
-    scripts_AI {
+    scripts_mobile {
+        parent scripts
+        related_2 iphone
+    }
+    scripts ||--|| scripts_mobile : SUBSET_OF
+    mobile {
+        parent software
         parent scripts
     }
-    scripts ||--|| scripts_AI : SUBSET_OF
+    scripts ||--|| mobile : SUBSET_OF
     scripts ||..|| linux : RELATED_TO
     scripts ||..|| estudos : RELATED_TO
     carro {
@@ -167,18 +167,18 @@ erDiagram
     }
     AI ||--|| AI_prompt : SUBSET_OF
     software {
-        child mobile
-        child software_mobile
-        child software_cloud
         child cloud
+        child software_cloud
+        child software_mobile
+        child mobile
     }
-    software ||--|| mobile : SUBSET_OF
-    software ||--|| software_mobile : SUBSET_OF
+    software ||--|| cloud : SUBSET_OF
     software_cloud {
         parent software
     }
     software ||--|| software_cloud : SUBSET_OF
-    software ||--|| cloud : SUBSET_OF
+    software ||--|| software_mobile : SUBSET_OF
+    software ||--|| mobile : SUBSET_OF
     software ||--|| software_mobile : SUPERSET_OF
     software_mobile ||..|| iphone : RELATED_TO
     software_mobile ||..|| linux : RELATED_TO

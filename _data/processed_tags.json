@@ -496,14 +496,14 @@
     "scripts": {
         "parents": [],
         "children": [
-            "mobile",
-            "AI",
-            "google-apps-script",
             "scripts>google-apps-script",
+            "AI",
             "scripts>cloud",
-            "scripts>mobile",
+            "google-apps-script",
+            "scripts>AI",
             "cloud",
-            "scripts>AI"
+            "scripts>mobile",
+            "mobile"
         ],
         "related": {
             "linux": 26,
@@ -1443,10 +1443,10 @@
     "software": {
         "parents": [],
         "children": [
-            "mobile",
-            "software>mobile",
+            "cloud",
             "software>cloud",
-            "cloud"
+            "software>mobile",
+            "mobile"
         ],
         "related": {},
         "posts": [
