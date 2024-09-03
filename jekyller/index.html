@@ -91,9 +91,10 @@
           </a>
         </span>
       </div>
-      
+      <main class="post-content-body">
+        
 
-      <div class="language-plaintext highlighter-rouge"><div class="highlight"><section class="line-numbers" style="white-space: pre-line;"><code>#!/bin/bash
+        <div class="language-plaintext highlighter-rouge"><div class="highlight"><section class="line-numbers" style="white-space: pre-line;"><code>#!/bin/bash
 echo "Enter Slug Name (all spaces will be replaced with -):"
 read slugInput
 slugName=`echo $slugInput | sed 's/ /-/g'`
@@ -136,8 +137,8 @@ git push origin main
 echo "Upload completed."
 </code></section></div></div>
 
-    <main class="post-content-body"></main>
-  </div>
+      </main>
+    </div>
   </article>
   <hr>
   <a href="#" class="back-to-top" aria-label="Back to top">
