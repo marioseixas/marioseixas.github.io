@@ -3,7 +3,7 @@
     <title>infoBAG</title>
     <link href="https://ib.bsb.br/rss.xml" rel="self"/>
     <link href="https://ib.bsb.br/"/>
-    <updated>2024-09-03T22:57:46+00:00</updated>
+    <updated>2024-09-03T23:01:19+00:00</updated>
     <id>https://ib.bsb.br</id>
     <author>
         <name></name>
@@ -48121,6 +48121,26 @@ Pense duas vezes antes de se envolver.
         
       &lt;/h3&gt;
       &lt;ul&gt;
+        &lt;a href=&quot;/diff/&quot;&gt;
+          &lt;h2&gt;
+            Diff
+          &lt;/h2&gt;
+        &lt;/a&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;
+    
+    &lt;div class=&quot;search-link&quot;&gt;
+      &lt;h3&gt;
+        &lt;a class=&quot;post-heading&quot; href=&quot;#&quot; id=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;
+          &lt;img src=&quot;/assets/gold.ico&quot; alt=&quot;gold icon&quot; /&gt;
+        &lt;/a&gt;
+        1991-07-25
+        
+        &amp;rightarrowtail; 
+        03 Sep 2024
+        
+      &lt;/h3&gt;
+      &lt;ul&gt;
         &lt;a href=&quot;/somacon/&quot;&gt;
           &lt;h2&gt;
             Somacon
@@ -48224,26 +48244,6 @@ Pense duas vezes antes de se envolver.
         &lt;a href=&quot;/formatxt/&quot;&gt;
           &lt;h2&gt;
             Formatxt
-          &lt;/h2&gt;
-        &lt;/a&gt;
-      &lt;/ul&gt;
-    &lt;/div&gt;
-    
-    &lt;div class=&quot;search-link&quot;&gt;
-      &lt;h3&gt;
-        &lt;a class=&quot;post-heading&quot; href=&quot;#&quot; id=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;
-          &lt;img src=&quot;/assets/gold.ico&quot; alt=&quot;gold icon&quot; /&gt;
-        &lt;/a&gt;
-        1991-07-25
-        
-        &amp;rightarrowtail; 
-        03 Sep 2024
-        
-      &lt;/h3&gt;
-      &lt;ul&gt;
-        &lt;a href=&quot;/diff/&quot;&gt;
-          &lt;h2&gt;
-            Diff
           &lt;/h2&gt;
         &lt;/a&gt;
       &lt;/ul&gt;
@@ -53411,7 +53411,7 @@ function trimtext() {
                 &lt;/tbody&gt;
             &lt;/table&gt;
             &lt;h3&gt;Diff timeout:&lt;/h3&gt;
-            &lt;p&gt;&lt;input type=&quot;text&quot; size=&quot;3&quot; maxlength=&quot;5&quot; value=&quot;1&quot; id=&quot;timeout&quot; /&gt; seconds&lt;br /&gt;
+            &lt;p&gt;&lt;input type=&quot;text&quot; size=&quot;3&quot; maxlength=&quot;5&quot; value=&quot;0&quot; id=&quot;timeout&quot; /&gt; seconds&lt;br /&gt;
                 If the mapping phase of the diff computation takes longer than this, then the computation
                 is truncated and the best solution to date is returned. While guaranteed to be correct,
                 it may not be optimal. A timeout of &apos;0&apos; allows for unlimited computation.&lt;/p&gt;
