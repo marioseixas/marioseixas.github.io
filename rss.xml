@@ -3,7 +3,7 @@
     <title>infoBAG</title>
     <link href="https://ib.bsb.br//rss.xml" rel="self"/>
     <link href="https://ib.bsb.br//"/>
-    <updated>2024-09-03T15:18:37+00:00</updated>
+    <updated>2024-09-03T15:20:13+00:00</updated>
     <id>https://ib.bsb.br</id>
     <author>
         <name></name>
@@ -50816,7 +50816,7 @@ Pense duas vezes antes de se envolver.
     &lt;/title&gt;
 
     &lt;link rel=&quot;canonical&quot; href=&quot;https://ib.bsb.br/dedup/&quot; /&gt;
-    &lt;link rel=&quot;alternate&quot; type=&quot;application/rss+xml&quot; title=&quot;infoBAG&quot; href=&quot;//rss.xml&quot; /&gt;
+    &lt;link rel=&quot;alternate&quot; type=&quot;application/rss+xml&quot; title=&quot;infoBAG&quot; href=&quot;https://ib.bsb.br//rss.xml&quot; /&gt;
 
     
         &lt;meta itemprop=&quot;keywords&quot; content=&quot;tools&quot; /&gt;
