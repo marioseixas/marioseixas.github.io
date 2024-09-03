@@ -239,7 +239,11 @@ img[class*="emoji"][src$=".svg"] {
     display: inline-flex;
     flex-wrap: wrap;
     align-items: baseline;
-    gap: 0.5em; /* Adjust gap as needed */
+    gap: 0.5em;
+}
+
+.post-wrapper > * {
+    margin: 0.5em;
 }
 
 .search-link {
