@@ -3,7 +3,7 @@
     <title>infoBAG</title>
     <link href="https://ib.bsb.br/rss.xml" rel="self"/>
     <link href="https://ib.bsb.br/"/>
-    <updated>2024-09-03T16:15:24+00:00</updated>
+    <updated>2024-09-03T16:17:30+00:00</updated>
     <id>https://ib.bsb.br</id>
     <author>
         <name></name>
@@ -46934,9 +46934,9 @@ Pense duas vezes antes de se envolver.
         
       &lt;/h3&gt;
       &lt;ul&gt;
-        &lt;a href=&quot;/diff/&quot;&gt;
+        &lt;a href=&quot;/formatxt/&quot;&gt;
           &lt;h2&gt;
-            Diff
+            Formatxt
           &lt;/h2&gt;
         &lt;/a&gt;
       &lt;/ul&gt;
@@ -46954,9 +46954,9 @@ Pense duas vezes antes de se envolver.
         
       &lt;/h3&gt;
       &lt;ul&gt;
-        &lt;a href=&quot;/formatxt/&quot;&gt;
+        &lt;a href=&quot;/diff/&quot;&gt;
           &lt;h2&gt;
-            Formatxt
+            Diff
           &lt;/h2&gt;
         &lt;/a&gt;
       &lt;/ul&gt;
@@ -50922,7 +50922,6 @@ Pense duas vezes antes de se envolver.
     &lt;/script&gt;
     &lt;script src=&quot;/assets/js/search.js&quot; defer=&quot;&quot;&gt;&lt;/script&gt;
     &lt;script src=&quot;/assets/js/prism.js&quot; defer=&quot;&quot;&gt;&lt;/script&gt;
-    &lt;script src=&quot;/assets/js/textformatting.js&quot; defer=&quot;&quot;&gt;&lt;/script&gt;
 &lt;/head&gt;
 
 &lt;body&gt;
@@ -51031,6 +51030,226 @@ Pense duas vezes antes de se envolver.
             &lt;/div&gt;
         &lt;/div&gt;
     &lt;/div&gt;
+    &lt;script&gt;
+function cleartext() {
+    var t = document.getElementById(&quot;thetext&quot;);
+    t.value = &apos;&apos;;
+    updatetextlength();
+    updatewords();
+}
+
+function selectall() {
+    var t = document.getElementById(&quot;thetext&quot;);
+    t.focus();
+    t.select();
+}
+
+function copyText() {
+    var t = document.getElementById(&quot;thetext&quot;);
+    t.select();
+    document.execCommand(&apos;copy&apos;);
+}
+
+function updatetextlength() {
+    var t = document.getElementById(&quot;thetext&quot;);
+    var c = document.getElementById(&quot;characters&quot;);
+    c.value = t.value.length + &apos; chars&apos;;
+}
+
+function updatewords() {
+    var t = document.getElementById(&quot;thetext&quot;);
+    var char_count = t.value.length;
+    var fullStr = t.value + &quot; &quot;;
+    var initial_whitespace_rExp = /^[^A-Za-z0-9]+/gi;
+    var left_trimmedStr = fullStr.replace(initial_whitespace_rExp, &quot;&quot;);
+    var non_alphanumerics_rExp = rExp = /[^A-Za-z0-9]+/gi;
+    var cleanedStr = left_trimmedStr.replace(non_alphanumerics_rExp, &quot; &quot;);
+    var splitString = cleanedStr.split(&quot; &quot;);
+    var word_count = splitString.length - 1;
+
+    var w = document.getElementById(&quot;words&quot;);
+    w.value = word_count + &apos; words&apos;;
+}
+
+function updatelines() {
+    var t = document.getElementById(&quot;thetext&quot;).value;
+    var c = document.getElementById(&quot;lines&quot;);
+
+    if (!t) {
+        c.value = &apos;0 lines&apos;;
+    } else {
+        c.value = t.split(&quot;\n&quot;).length + &apos; lines&apos;;
+    }
+}
+
+function updateparagraphs() {
+    var t = document.getElementById(&quot;thetext&quot;).value;
+    var c = document.getElementById(&quot;paragraphs&quot;);
+    for(var r=t.split(/\n\n+/g),n=0,a=0;a&lt;r.length;a++)r[a].length!=0&amp;&amp;n++;
+    
+    if (!t) {
+        c.value = &apos;0 paragraphs&apos;;
+    } else {
+        c.value = n + &apos; paragraphs&apos;;
+    }
+}
+
+function updatecounts() {
+    updatetextlength();
+    updatewords();
+    updatelines();
+    updateparagraphs();
+}
+
+function uppercase() {
+    var t = document.getElementById(&quot;thetext&quot;);
+    t.value = t.value.toUpperCase();
+}
+
+function lowercase() {
+    var t = document.getElementById(&quot;thetext&quot;);
+    t.value = t.value.toLowerCase();
+}
+
+function capitalizewords() {
+    var t = document.getElementById(&quot;thetext&quot;);
+
+    t.value = (t.value + &apos;&apos;).replace(/^(.)|\s(.)/g, function ($1) {
+        return $1.toUpperCase();
+    });
+
+}
+
+function capitalizesentences() {
+    var t = document.getElementById(&quot;thetext&quot;);
+
+    var tarray = t.value.split(&quot;.&quot;);
+    var tstr = &apos;&apos;;
+    for (i = 0; i &lt; tarray.length; i++) {
+        tarray[i] = ltrim(tarray[i], &apos; &apos;);
+        tstr = tstr + tarray[i].substring(0, 1).toUpperCase() + tarray[i].slice(1).toLowerCase();
+        if (i &lt; (tarray.length - 1)) tstr = tstr + &apos;. &apos;;
+    }
+    t.value = tstr;
+
+
+    tarray = t.value.split(&quot;?&quot;);
+    tstr = &apos;&apos;;
+    for (i = 0; i &lt; tarray.length; i++) {
+        tarray[i] = ltrim(tarray[i], &apos; &apos;);
+        tstr = tstr + tarray[i].substring(0, 1).toUpperCase() + tarray[i].slice(1);
+        if (i &lt; (tarray.length - 1)) tstr = tstr + &apos;? &apos;;
+    }
+    t.value = tstr;
+
+
+    tarray = t.value.split(&quot;\n&quot;);
+    tstr = &apos;&apos;;
+    for (i = 0; i &lt; tarray.length; i++) {
+        tarray[i] = ltrim(tarray[i], &apos; &apos;);
+        tstr = tstr + tarray[i].substring(0, 1).toUpperCase() + tarray[i].slice(1);
+        if (i &lt; (tarray.length - 1)) tstr = tstr + &apos;\n&apos;;
+    }
+    t.value = tstr;
+
+
+    tarray = t.value.split(&quot;!&quot;);
+    tstr = &apos;&apos;;
+    for (i = 0; i &lt; tarray.length; i++) {
+        tarray[i] = ltrim(tarray[i], &apos; &apos;);
+        tstr = tstr + tarray[i].substring(0, 1).toUpperCase() + tarray[i].slice(1);
+        if (i &lt; (tarray.length - 1)) tstr = tstr + &apos;! &apos;;
+    }
+    t.value = tstr;
+}
+
+function replacetext() {
+    var t = document.getElementById(&quot;thetext&quot;);
+    var from = document.getElementById(&quot;from&quot;);
+    var to = document.getElementById(&quot;to&quot;);
+
+    var cs = document.getElementById(&quot;cs&quot;);
+    var scope;
+
+    var ff = from.value.replace(&quot;%N&quot;, &quot;\n&quot;);
+    var tt = to.value.replace(&quot;%N&quot;, &quot;\n&quot;);
+
+    if (cs.checked) scope = &apos;g&apos;;
+    else scope = &apos;gi&apos;;
+
+    var temp = t.value;
+    temp = temp.replace(new RegExp(ff, scope), tt);
+    t.value = temp;
+
+    from.value = &apos;&apos;;
+    to.value = &apos;&apos;;
+    updatecounts();
+}
+
+function addtext() {
+    var t = document.getElementById(&quot;thetext&quot;);
+    var a = document.getElementById(&quot;add&quot;);
+    var p = document.getElementById(&quot;addpos&quot;);
+    var temp = t.value;
+    var tstr = &apos;&apos;;
+    var tarray = t.value.split(&quot;\n&quot;);
+
+    if (p.value == &apos;start&apos;) {
+        for (i = 0; i &lt; tarray.length; i++) {
+            insert = a.value.replace(&quot;%L&quot;, i + 1);
+            insert = insert.replace(&quot;%N&quot;, &quot;\n&quot;);
+            tstr = tstr + insert + tarray[i];
+            if (i &lt; (tarray.length - 1)) tstr = tstr + &quot;\n&quot;;
+        }
+        t.value = tstr;
+    } else {
+        for (i = 0; i &lt; tarray.length; i++) {
+            insert = a.value.replace(&quot;%L&quot;, i + 1);
+            insert = insert.replace(&quot;%N&quot;, &quot;\n&quot;);
+            tstr = tstr + tarray[i] + insert;
+            if (i &lt; (tarray.length - 1)) tstr = tstr + &quot;\n&quot;;
+        }
+        t.value = tstr;
+    }
+
+    a.value = &apos;&apos;;
+    updatecounts();
+}
+
+function ltrim(str, chars) {
+    chars = chars || &quot;\\s&quot;;
+    return str.replace(new RegExp(&quot;^[&quot; + chars + &quot;]+&quot;, &quot;g&quot;), &quot;&quot;);
+}
+
+function rtrim(str, chars) {
+    chars = chars || &quot;\\s&quot;;
+    return str.replace(new RegExp(&quot;[&quot; + chars + &quot;]+$&quot;, &quot;g&quot;), &quot;&quot;);
+}
+
+function trimtext() {
+    var t = document.getElementById(&quot;thetext&quot;);
+    var n = document.getElementById(&quot;trimnumber&quot;);
+    var p = document.getElementById(&quot;trimpos&quot;);
+    var tarray = t.value.split(&quot;\n&quot;);
+    var i;
+    var tstr = &apos;&apos;;
+
+    if (p.value == &apos;first&apos;) {
+        for (i = 0; i &lt; tarray.length; i++) tstr = tstr + tarray[i].substr(n.value) + &quot;\n&quot;;
+        tstr = rtrim(tstr);
+    } else {
+        for (i = 0; i &lt; tarray.length; i++) {
+            tlen = tarray[i].length;
+            tpos = tlen - n.value;
+            tstr = tstr + tarray[i].substr(0, tpos) + &quot;\n&quot;;
+        }
+        tstr = rtrim(tstr);
+    }
+
+    t.value = tstr;
+    updatecounts();
+}
+    &lt;/script&gt;
     &lt;script&gt;
         updatecounts();
     &lt;/script&gt;
