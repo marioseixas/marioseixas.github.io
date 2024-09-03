@@ -496,14 +496,14 @@
     "scripts": {
         "parents": [],
         "children": [
-            "scripts>google-apps-script",
-            "cloud",
             "mobile",
-            "AI",
-            "google-apps-script",
-            "scripts>AI",
             "scripts>cloud",
-            "scripts>mobile"
+            "AI",
+            "cloud",
+            "scripts>google-apps-script",
+            "scripts>AI",
+            "scripts>mobile",
+            "google-apps-script"
         ],
         "related": {
             "linux": 26,
@@ -702,10 +702,10 @@
     "edital": {
         "parents": [],
         "children": [
-            "edital>direito",
+            "direito>processual-penal",
             "edital>direito>processual-penal",
-            "direito",
-            "direito>processual-penal"
+            "edital>direito",
+            "direito"
         ],
         "related": {},
         "posts": [
@@ -766,14 +766,20 @@
                 "url": "/dedup",
                 "highlighted": true,
                 "date": "1991-07-25T00:00:00"
+            },
+            {
+                "title": "1991-07-25-diff",
+                "url": "/diff",
+                "highlighted": true,
+                "date": "1991-07-25T00:00:00"
             }
         ]
     },
     "tasks": {
         "parents": [],
         "children": [
-            "iphone",
-            "tasks>iphone"
+            "tasks>iphone",
+            "iphone"
         ],
         "related": {},
         "posts": [
@@ -1413,9 +1419,9 @@
             "scripts"
         ],
         "children": [
-            "prompt",
             "AI>prompt",
-            "tools>AI>prompt"
+            "tools>AI>prompt",
+            "prompt"
         ],
         "related": {},
         "posts": [
@@ -1472,9 +1478,9 @@
     "software": {
         "parents": [],
         "children": [
-            "software>mobile",
             "mobile",
             "cloud",
+            "software>mobile",
             "software>cloud"
         ],
         "related": {},
@@ -1593,8 +1599,8 @@
     },
     "prompt": {
         "parents": [
-            "tools>AI",
-            "AI"
+            "AI",
+            "tools>AI"
         ],
         "children": [],
         "related": {},
@@ -1764,8 +1770,8 @@
     },
     "tools>AI>prompt": {
         "parents": [
-            "AI",
-            "tools"
+            "tools",
+            "AI"
         ],
         "children": [],
         "related": {},
