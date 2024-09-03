@@ -3,7 +3,7 @@
     <title>infoBAG</title>
     <link href="https://ib.bsb.br/rss.xml" rel="self"/>
     <link href="https://ib.bsb.br/"/>
-    <updated>2024-09-03T16:18:25+00:00</updated>
+    <updated>2024-09-03T17:07:43+00:00</updated>
     <id>https://ib.bsb.br</id>
     <author>
         <name></name>
@@ -46934,6 +46934,26 @@ Pense duas vezes antes de se envolver.
         
       &lt;/h3&gt;
       &lt;ul&gt;
+        &lt;a href=&quot;/sort/&quot;&gt;
+          &lt;h2&gt;
+            Sort
+          &lt;/h2&gt;
+        &lt;/a&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;
+    
+    &lt;div class=&quot;search-link&quot;&gt;
+      &lt;h3&gt;
+        &lt;a class=&quot;post-heading&quot; href=&quot;#&quot; id=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;
+          &lt;img src=&quot;/assets/gold.ico&quot; alt=&quot;gold icon&quot; /&gt;
+        &lt;/a&gt;
+        1991-07-25
+        
+        &amp;rightarrowtail; 
+        03 Sep 2024
+        
+      &lt;/h3&gt;
+      &lt;ul&gt;
         &lt;a href=&quot;/formatxt/&quot;&gt;
           &lt;h2&gt;
             Formatxt
@@ -50884,6 +50904,125 @@ Pense duas vezes antes de se envolver.
     
   &lt;/main&gt;
 &lt;/div&gt;
+&lt;/body&gt;
+</content>
+    </entry>
+    
+    <entry>
+        <title>Sort</title>
+        <link href="https://ib.bsb.br/sort/"/>
+        <updated>1991-07-25T00:00:00+00:00</updated>
+        <id>https://ib.bsb.br/sort/</id>
+        <content type="html">&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot; /&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot; /&gt;
+
+    &lt;title&gt;
+        
+            Sort — infoBAG
+        
+    &lt;/title&gt;
+
+    &lt;link rel=&quot;canonical&quot; href=&quot;https://ib.bsb.br/sort/&quot; /&gt;
+    &lt;link rel=&quot;alternate&quot; type=&quot;application/rss+xml&quot; title=&quot;infoBAG&quot; href=&quot;https://ib.bsb.br/rss.xml&quot; /&gt;
+
+    
+        &lt;meta itemprop=&quot;keywords&quot; content=&quot;tools&quot; /&gt;
+        
+            &lt;meta property=&quot;article:tag&quot; content=&quot;tools&quot; /&gt;
+        
+    
+
+    &lt;link href=&quot;/style.css&quot; rel=&quot;stylesheet&quot; /&gt;
+    &lt;link href=&quot;/pagefind/pagefind-ui.css&quot; rel=&quot;stylesheet&quot; /&gt;
+    &lt;script src=&quot;/pagefind/pagefind-ui.js&quot;&gt;&lt;/script&gt;
+    &lt;script type=&quot;module&quot;&gt;
+        import PagefindHighlight from &apos;/pagefind/pagefind-highlight.js&apos;;
+        new PagefindHighlight({ highlightParam: &quot;highlight&quot; });
+    &lt;/script&gt;
+    &lt;script src=&quot;/assets/js/search.js&quot; defer=&quot;&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;/assets/js/prism.js&quot; defer=&quot;&quot;&gt;&lt;/script&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+    &lt;a class=&quot;search-input-block&quot; id=&quot;search&quot;&gt;&lt;/a&gt;
+
+    &lt;header&gt;
+        &lt;nav aria-label=&quot;Main navigation&quot;&gt;
+            &lt;div class=&quot;header-container&quot;&gt;
+                &lt;a class=&quot;internal-link&quot; href=&quot;/&quot;&gt;
+                    &lt;img src=&quot;/assets/Sudden_Death_Rune.gif&quot; alt=&quot;Sudden Death Rune&quot; class=&quot;favicon&quot; /&gt;
+                &lt;/a&gt;
+                &lt;a href=&quot;https://ib.bsb.br/archive&quot;&gt;
+                    &lt;img src=&quot;/favicon.ico&quot; alt=&quot;Archive Icon&quot; class=&quot;favicon&quot; /&gt;
+                &lt;/a&gt;
+                &lt;a href=&quot;https://ib.bsb.br/tags&quot;&gt;
+                    &lt;img src=&quot;/assets/Label.gif&quot; alt=&quot;Tags Icon&quot; class=&quot;favicon&quot; /&gt;
+                &lt;/a&gt;
+                &lt;a href=&quot;https://ib.bsb.br/events&quot;&gt;
+                    &lt;img src=&quot;/assets/Paralyse_Rune.gif&quot; alt=&quot;Events Icon&quot; class=&quot;favicon&quot; /&gt;
+                &lt;/a&gt;
+            &lt;/div&gt;
+        &lt;/nav&gt;
+    &lt;/header&gt;
+&lt;div class=&quot;flex-container&quot;&gt;
+    &lt;a class=&quot;flex-items header-style&quot; href=&quot;https://fictos.com/&quot; tabindex=&quot;-1&quot;&gt;Fictos Developer Tools&lt;/a&gt;
+    &lt;h1 class=&quot;flex-items header-style&quot;&gt;Sorting Tool - Ascending &amp;amp; Descending Order&lt;/h1&gt;
+    &lt;a href=&quot;/&quot; class=&quot;flex-items header-style&quot;&gt;more tools...&lt;/a&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;editor-container&quot;&gt;
+    &lt;div class=&quot;editor-ui&quot;&gt;
+        &lt;textarea id=&quot;textarea-data-source&quot; placeholder=&quot;Paste your string here...&quot;&gt;&lt;/textarea&gt;
+    &lt;/div&gt;
+    &lt;div style=&quot;width: 240px;&quot;&gt;
+        &lt;button class=&quot;convert-btn&quot; id=&quot;ascending&quot; onclick=&quot;sort_ascending()&quot;&gt;Sort Ascending&lt;/button&gt;
+        &lt;button class=&quot;convert-btn&quot; id=&quot;descending&quot; onclick=&quot;sort_descending()&quot;&gt;Sort Descending&lt;/button&gt;
+        &lt;input id=&quot;sort-naturally&quot; type=&quot;checkbox&quot; style=&quot;margin: 10px; width: 24px; height: 24px;&quot; /&gt;Sort naturally (evaluate the value of ​​contained numbers)&amp;lt;/input&amp;gt;
+        &lt;!-- &lt;br&gt;&lt;br&gt; --&gt;
+        &lt;!-- &lt;input id=&quot;sort-case-sensitive&quot; type=&quot;checkbox&quot; style=&quot;margin: 10px; width: 24px; height: 24px;&quot;&gt;Case sensitive&lt;/input&gt; --&gt;
+    &lt;/div&gt;
+
+    &lt;div class=&quot;editor-ui&quot;&gt;
+        &lt;textarea id=&quot;textarea-result&quot; placeholder=&quot;Result will show here...&quot; readonly=&quot;&quot;&gt;&lt;/textarea&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;script src=&quot;../xml-to-json/js/common.js&quot;&gt;&lt;/script&gt;
+&lt;script&gt;
+    function sort_ascending() {
+
+        var sort_naturally = document.getElementById(&quot;sort-naturally&quot;).checked
+        // var sort_case_sensitive = document.getElementById(&quot;sort-case-sensitive&quot;).checked
+        var sensitivity = &quot;base&quot;
+        // if (sort_case_sensitive) {
+        //     sensitivity = &apos;lower&apos;
+        // }
+        var collator = new Intl.Collator(undefined, { numeric: sort_naturally, sensitivity: sensitivity});
+        var text = document.getElementById(&quot;textarea-data-source&quot;).value
+        text = text.replace(/\r\n/g, &quot;\n&quot;);
+        var result = text.split(&quot;\n&quot;);
+        result = result.sort(collator.compare)
+        result = result.join(&quot;\n&quot;)
+        document.getElementById(&apos;textarea-result&apos;).value = result
+    }
+    function sort_descending() {
+        var sort_naturally = document.getElementById(&quot;sort-naturally&quot;).checked
+        // var sort_case_sensitive = document.getElementById(&quot;sort-case-sensitive&quot;).checked
+        var sensitivity = &quot;base&quot;
+        // if (sort_case_sensitive) {
+        //     sensitivity = &apos;case&apos;
+        // }
+
+        var collator = new Intl.Collator(undefined, { numeric: sort_naturally, sensitivity: sensitivity});
+        var text = document.getElementById(&quot;textarea-data-source&quot;).value
+        text = text.replace(/\r\n/g, &quot;\n&quot;);
+        var result = text.split(&quot;\n&quot;);
+        result = result.sort(collator.compare)
+        result = result.reverse()
+        result = result.join(&quot;\n&quot;)
+        document.getElementById(&apos;textarea-result&apos;).value = result
+    }
+&lt;/script&gt;
 &lt;/body&gt;
 </content>
     </entry>
