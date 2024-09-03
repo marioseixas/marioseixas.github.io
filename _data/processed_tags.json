@@ -497,13 +497,13 @@
         "parents": [],
         "children": [
             "scripts>cloud",
-            "scripts>AI",
             "google-apps-script",
+            "cloud",
             "AI",
             "scripts>mobile",
-            "mobile",
             "scripts>google-apps-script",
-            "cloud"
+            "mobile",
+            "scripts>AI"
         ],
         "related": {
             "linux": 26,
@@ -702,10 +702,10 @@
     "edital": {
         "parents": [],
         "children": [
-            "edital>direito",
             "edital>direito>processual-penal",
-            "direito>processual-penal",
-            "direito"
+            "edital>direito",
+            "direito",
+            "direito>processual-penal"
         ],
         "related": {},
         "posts": [
@@ -744,8 +744,8 @@
     "tasks": {
         "parents": [],
         "children": [
-            "tasks>iphone",
-            "iphone"
+            "iphone",
+            "tasks>iphone"
         ],
         "related": {},
         "posts": [
@@ -1204,8 +1204,8 @@
     "github": {
         "parents": [],
         "children": [
-            "github>jekyll",
-            "jekyll"
+            "jekyll",
+            "github>jekyll"
         ],
         "related": {},
         "posts": [
@@ -1443,10 +1443,10 @@
     "software": {
         "parents": [],
         "children": [
-            "software>mobile",
+            "software>cloud",
             "mobile",
             "cloud",
-            "software>cloud"
+            "software>mobile"
         ],
         "related": {},
         "posts": [
@@ -1476,6 +1476,19 @@
             }
         ]
     },
+    "tools": {
+        "parents": [],
+        "children": [],
+        "related": {},
+        "posts": [
+            {
+                "title": "1991-07-25-dedup",
+                "url": "/dedup",
+                "highlighted": true,
+                "date": "1991-07-25T00:00:00"
+            }
+        ]
+    },
     "software>mobile": {
         "parents": [
             "software"
@@ -1502,8 +1515,8 @@
     },
     "mobile": {
         "parents": [
-            "software",
-            "scripts"
+            "scripts",
+            "software"
         ],
         "children": [],
         "related": {},
@@ -1748,8 +1761,8 @@
     },
     "cloud": {
         "parents": [
-            "software",
-            "scripts"
+            "scripts",
+            "software"
         ],
         "children": [],
         "related": {},
