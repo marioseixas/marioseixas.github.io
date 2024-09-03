@@ -1942,17 +1942,40 @@ if (typeof global !== 'undefined') {
 	}
 
 	Prism.plugins.toolbar.registerButton('download-file', function (env) {
-		var section = env.element.parentNode;
-		if (!section || !/section/i.test(section.nodeName) || !section.hasAttribute('data-src') || !section.hasAttribute('data-download-link')) {
-			return;
-		}
-		var src = section.getAttribute('data-src');
-		var a = document.createElement('a');
-		a.textContent = section.getAttribute('data-download-link-label') || 'Download';
-		a.setAttribute('download', '');
-		a.href = src;
-		return a;
-	});
+  var section = env.element.parentNode;
+  if (!section || !/section/i.test(section.nodeName) || 
+      !section.hasAttribute('data-code') || 
+      !section.hasAttribute('data-filename') ||
+      !section.hasAttribute('data-download-link')) {
+    return;
+  }
+  
+  // Get filename, code, and download label 
+  var filename = section.getAttribute('data-filename'); 
+  var code = section.getAttribute('data-code');
+  var downloadLabel = section.getAttribute('data-download-link-label') || 'Download'; 
 
+  // Create the download button element
+  var downloadButton = document.createElement('a');
+  downloadButton.textContent = downloadLabel;
+
+  // Set up download functionality 
+  downloadButton.onclick = function (event) {
+    event.sectionventDefault(); 
+    // Create a Blob with the code content 
+    var blob = new Blob([code], { type: 'text/plain' });
+    var url = URL.createObjectURL(blob); 
+
+    // Create temporary link, set download attribute, and trigger the download
+    var link = document.createElement('a'); 
+    link.href = url;
+    link.setAttribute('download', filename);
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link); 
+    URL.revokeObjectURL(url); // Clean up 
+  } 
+
+  return downloadButton; 
+});
 }());
-
