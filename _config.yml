@@ -1,8 +1,9 @@
 name: infoBAG
 title: infoBAG
-incremental: true
-
+url: "https://ib.bsb.br"
+baseurl: ""
 permalink: /:slug/
+incremental: true
 
 plugins:
   - jekyll-last-modified-at
