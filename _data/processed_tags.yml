@@ -38,7 +38,7 @@
     title: gmail2mailgrip
     url: /gmail2mailgrip-prompt
   - date: *id002
-    highlighted: true
+    highlighted: false
     title: reassess
     url: /reassess
   - date: *id003
@@ -1049,6 +1049,10 @@
     url: /mlo-url-schemes
   tag: tasks>iphone
 - posts:
+  - date: *id002
+    highlighted: false
+    title: reassess
+    url: /reassess
   - date: 1991-07-25 00:00:00
     highlighted: true
     title: 1991-07-25-dedup-spaces
@@ -1058,6 +1062,18 @@
     title: 1991-07-25-dedup
     url: /dedup
   tag: tools
+- posts:
+  - date: *id002
+    highlighted: false
+    title: reassess
+    url: /reassess
+  tag: tools>AI
+- posts:
+  - date: *id002
+    highlighted: true
+    title: reassess
+    url: /reassess
+  tag: tools>AI>prompt
 - posts:
   - date: 2024-07-14 00:00:00
     highlighted: true

@@ -497,13 +497,13 @@
         "parents": [],
         "children": [
             "scripts>google-apps-script",
-            "scripts>mobile",
-            "scripts>AI",
             "cloud",
-            "scripts>cloud",
-            "AI",
             "mobile",
-            "google-apps-script"
+            "AI",
+            "google-apps-script",
+            "scripts>AI",
+            "scripts>cloud",
+            "scripts>mobile"
         ],
         "related": {
             "linux": 26,
@@ -702,9 +702,9 @@
     "edital": {
         "parents": [],
         "children": [
-            "direito",
-            "edital>direito>processual-penal",
             "edital>direito",
+            "edital>direito>processual-penal",
+            "direito",
             "direito>processual-penal"
         ],
         "related": {},
@@ -743,9 +743,18 @@
     },
     "tools": {
         "parents": [],
-        "children": [],
+        "children": [
+            "AI>prompt",
+            "tools>AI>prompt"
+        ],
         "related": {},
         "posts": [
+            {
+                "title": "reassess",
+                "url": "/reassess",
+                "highlighted": false,
+                "date": "2024-04-13T00:00:00"
+            },
             {
                 "title": "1991-07-25-dedup-spaces",
                 "url": "/dedup-spaces",
@@ -763,8 +772,8 @@
     "tasks": {
         "parents": [],
         "children": [
-            "tasks>iphone",
-            "iphone"
+            "iphone",
+            "tasks>iphone"
         ],
         "related": {},
         "posts": [
@@ -1223,8 +1232,8 @@
     "github": {
         "parents": [],
         "children": [
-            "github>jekyll",
-            "jekyll"
+            "jekyll",
+            "github>jekyll"
         ],
         "related": {},
         "posts": [
@@ -1404,8 +1413,9 @@
             "scripts"
         ],
         "children": [
+            "prompt",
             "AI>prompt",
-            "prompt"
+            "tools>AI>prompt"
         ],
         "related": {},
         "posts": [
@@ -1521,8 +1531,8 @@
     },
     "mobile": {
         "parents": [
-            "software",
-            "scripts"
+            "scripts",
+            "software"
         ],
         "children": [],
         "related": {},
@@ -1549,7 +1559,8 @@
     },
     "AI>prompt": {
         "parents": [
-            "AI"
+            "AI",
+            "tools"
         ],
         "children": [],
         "related": {},
@@ -1563,7 +1574,7 @@
             {
                 "title": "reassess",
                 "url": "/reassess",
-                "highlighted": true,
+                "highlighted": false,
                 "date": "2024-04-13T00:00:00"
             },
             {
@@ -1582,6 +1593,7 @@
     },
     "prompt": {
         "parents": [
+            "tools>AI",
             "AI"
         ],
         "children": [],
@@ -1750,6 +1762,37 @@
             }
         ]
     },
+    "tools>AI>prompt": {
+        "parents": [
+            "AI",
+            "tools"
+        ],
+        "children": [],
+        "related": {},
+        "posts": [
+            {
+                "title": "reassess",
+                "url": "/reassess",
+                "highlighted": true,
+                "date": "2024-04-13T00:00:00"
+            }
+        ]
+    },
+    "tools>AI": {
+        "parents": [],
+        "children": [
+            "prompt"
+        ],
+        "related": {},
+        "posts": [
+            {
+                "title": "reassess",
+                "url": "/reassess",
+                "highlighted": false,
+                "date": "2024-04-13T00:00:00"
+            }
+        ]
+    },
     "software>cloud": {
         "parents": [
             "software"
@@ -1767,8 +1810,8 @@
     },
     "cloud": {
         "parents": [
-            "software",
-            "scripts"
+            "scripts",
+            "software"
         ],
         "children": [],
         "related": {},
@@ -1838,8 +1881,8 @@
     },
     "edital>direito>processual-penal": {
         "parents": [
-            "edital",
-            "direito"
+            "direito",
+            "edital"
         ],
         "children": [],
         "related": {},
