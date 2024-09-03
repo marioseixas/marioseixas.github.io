@@ -1071,6 +1071,10 @@
     url: /formatxt
   - date: 1991-07-25 00:00:00
     highlighted: true
+    title: 1991-07-25-compare
+    url: /compare
+  - date: 1991-07-25 00:00:00
+    highlighted: true
     title: 1991-07-25-diff
     url: /diff
   tag: tools
