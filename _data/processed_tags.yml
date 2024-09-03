@@ -63,12 +63,12 @@
 - posts:
   - date: 2022-03-16 00:00:00
     highlighted: true
-    title: aye aye
-    url: /aye
-  - date: 2022-03-16 00:00:00
-    highlighted: true
     title: streaming
     url: /streaming
+  - date: 2022-03-16 00:00:00
+    highlighted: true
+    title: aye aye
+    url: /aye
   tag: assistir
 - posts:
   - date: 2022-10-01 00:00:00
@@ -271,12 +271,12 @@
     url: /juri
   - date: 2023-12-22 00:00:00
     highlighted: true
-    title: Concursos DELTA iminentes
-    url: /concursos-delta
-  - date: 2023-12-22 00:00:00
-    highlighted: true
     title: Núcleo duro das provas de Delegado de Polícia
     url: /hard-core
+  - date: 2023-12-22 00:00:00
+    highlighted: true
+    title: Concursos DELTA iminentes
+    url: /concursos-delta
   - date: 2022-06-07 00:00:00
     highlighted: true
     title: Estados que exigem atividade policial para DELTA
@@ -440,16 +440,16 @@
     url: /bulk-gpt
   - date: &id016 2024-06-02 00:00:00
     highlighted: true
+    title: Convert `.pdf` to `UTF-8`
+    url: /pdf-utf8
+  - date: &id017 2024-06-02 00:00:00
+    highlighted: true
     title: Python script to check LaTeX citations
     url: /bibtex-check
-  - date: &id017 2024-06-02 00:00:00
+  - date: &id018 2024-06-02 00:00:00
     highlighted: true
     title: Rename files using llm.datasette.io
     url: /llm-renamer
-  - date: &id018 2024-06-02 00:00:00
-    highlighted: true
-    title: Convert `.pdf` to `UTF-8`
-    url: /pdf-utf8
   - date: &id019 2024-06-01 00:00:00
     highlighted: true
     title: '"Copy Spotter" and Deduplication'
@@ -468,20 +468,20 @@
     url: /ratpoisonrc
   - date: 2024-04-14 00:00:00
     highlighted: true
-    title: /.bashrc
-    url: /bashrc
-  - date: 2024-04-14 00:00:00
-    highlighted: true
     title: /sources.list
     url: /sources
-  - date: 2024-03-10 00:00:00
+  - date: 2024-04-14 00:00:00
     highlighted: true
-    title: xinitrc
-    url: /xinitrc
+    title: /.bashrc
+    url: /bashrc
   - date: 2024-03-10 00:00:00
     highlighted: true
     title: /root/.xsessionrc
     url: /xsessionrc
+  - date: 2024-03-10 00:00:00
+    highlighted: true
+    title: xinitrc
+    url: /xinitrc
   - date: 2024-03-02 00:00:00
     highlighted: true
     title: About Thorium Flags
@@ -530,14 +530,10 @@
     highlighted: true
     title: rk3588 performance optimization
     url: /rk3588-enhance
-  - date: 2023-12-24 00:00:00
-    highlighted: true
-    title: Installed Debian packages list
-    url: /dpkg
   - date: &id026 2023-12-24 00:00:00
     highlighted: true
-    title: Packages list script
-    url: /dpkg-script
+    title: Shell script to replace JEKYLLER edge extension
+    url: /jekyller
   - date: 2023-12-24 00:00:00
     highlighted: true
     title: Alternative option to upload a file to GitHub without cloning the entire
@@ -545,8 +541,12 @@
     url: /git-sparse-checkout
   - date: &id027 2023-12-24 00:00:00
     highlighted: true
-    title: Shell script to replace JEKYLLER edge extension
-    url: /jekyller
+    title: Packages list script
+    url: /dpkg-script
+  - date: 2023-12-24 00:00:00
+    highlighted: true
+    title: Installed Debian packages list
+    url: /dpkg
   - date: 2023-12-08 00:00:00
     highlighted: true
     title: parameter.txt
@@ -565,12 +565,12 @@
     url: /typewriter
   - date: 2022-01-11 00:00:00
     highlighted: true
-    title: xlunch entries.dsv
-    url: /xlunch
-  - date: 2022-01-11 00:00:00
-    highlighted: true
     title: microsoft-edge
     url: /edge
+  - date: 2022-01-11 00:00:00
+    highlighted: true
+    title: xlunch entries.dsv
+    url: /xlunch
   - date: 2022-01-09 00:00:00
     highlighted: true
     title: Installation of nvidia-legacy-340 in debian 11 (Bullseye)
@@ -819,16 +819,16 @@
     url: /bulk-gpt
   - date: *id016
     highlighted: true
+    title: Convert `.pdf` to `UTF-8`
+    url: /pdf-utf8
+  - date: *id017
+    highlighted: true
     title: Python script to check LaTeX citations
     url: /bibtex-check
-  - date: *id017
+  - date: *id018
     highlighted: true
     title: Rename files using llm.datasette.io
     url: /llm-renamer
-  - date: *id018
-    highlighted: true
-    title: Convert `.pdf` to `UTF-8`
-    url: /pdf-utf8
   - date: *id019
     highlighted: true
     title: '"Copy Spotter" and Deduplication'
@@ -883,12 +883,12 @@
     url: /wps
   - date: *id026
     highlighted: true
-    title: Packages list script
-    url: /dpkg-script
-  - date: *id027
-    highlighted: true
     title: Shell script to replace JEKYLLER edge extension
     url: /jekyller
+  - date: *id027
+    highlighted: true
+    title: Packages list script
+    url: /dpkg-script
   - date: *id028
     highlighted: false
     title: OpenAI GPT API in Google Sheets
@@ -1055,12 +1055,24 @@
     url: /reassess
   - date: 1991-07-25 00:00:00
     highlighted: true
+    title: 1991-07-25-rm-lines
+    url: /rm-lines
+  - date: 1991-07-25 00:00:00
+    highlighted: true
+    title: 1991-07-25-dedup-spaces
+    url: /dedup-spaces
+  - date: 1991-07-25 00:00:00
+    highlighted: true
     title: 1991-07-25-sort
     url: /sort
   - date: 1991-07-25 00:00:00
     highlighted: true
-    title: 1991-07-25-diff
-    url: /diff
+    title: 1991-07-25-dedup
+    url: /dedup
+  - date: 1991-07-25 00:00:00
+    highlighted: true
+    title: 1991-07-25-regex
+    url: /regex
   - date: 1991-07-25 00:00:00
     highlighted: true
     title: 1991-07-25-formatxt
@@ -1071,20 +1083,12 @@
     url: /compare
   - date: 1991-07-25 00:00:00
     highlighted: true
-    title: 1991-07-25-dedup
-    url: /dedup
+    title: 1991-07-25-diff
+    url: /diff
   - date: 1991-07-25 00:00:00
     highlighted: true
-    title: 1991-07-25-rm-lines
-    url: /rm-lines
-  - date: 1991-07-25 00:00:00
-    highlighted: true
-    title: 1991-07-25-regex
-    url: /regex
-  - date: 1991-07-25 00:00:00
-    highlighted: true
-    title: 1991-07-25-dedup-spaces
-    url: /dedup-spaces
+    title: 1991-07-25-somacon
+    url: /somacon
   tag: tools
 - posts:
   - date: *id002
