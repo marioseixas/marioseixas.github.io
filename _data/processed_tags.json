@@ -496,14 +496,14 @@
     "scripts": {
         "parents": [],
         "children": [
-            "google-apps-script",
             "mobile",
+            "AI",
+            "google-apps-script",
+            "scripts>AI",
+            "cloud",
             "scripts>google-apps-script",
             "scripts>mobile",
-            "scripts>AI",
-            "scripts>cloud",
-            "cloud",
-            "AI"
+            "scripts>cloud"
         ],
         "related": {
             "linux": 26,
@@ -671,8 +671,8 @@
     "tools": {
         "parents": [],
         "children": [
-            "tools>AI>prompt",
-            "AI>prompt"
+            "AI>prompt",
+            "tools>AI>prompt"
         ],
         "related": {},
         "posts": [
@@ -772,10 +772,10 @@
     "edital": {
         "parents": [],
         "children": [
+            "edital>direito>processual-penal",
             "edital>direito",
             "direito>processual-penal",
-            "direito",
-            "edital>direito>processual-penal"
+            "direito"
         ],
         "related": {},
         "posts": [
@@ -1274,8 +1274,8 @@
     "github": {
         "parents": [],
         "children": [
-            "jekyll",
-            "github>jekyll"
+            "github>jekyll",
+            "jekyll"
         ],
         "related": {},
         "posts": [
@@ -1455,9 +1455,9 @@
             "scripts"
         ],
         "children": [
+            "AI>prompt",
             "prompt",
-            "tools>AI>prompt",
-            "AI>prompt"
+            "tools>AI>prompt"
         ],
         "related": {},
         "posts": [
@@ -1516,8 +1516,8 @@
         "children": [
             "mobile",
             "software>cloud",
-            "software>mobile",
-            "cloud"
+            "cloud",
+            "software>mobile"
         ],
         "related": {},
         "posts": [
@@ -1635,8 +1635,8 @@
     },
     "prompt": {
         "parents": [
-            "tools>AI",
-            "AI"
+            "AI",
+            "tools>AI"
         ],
         "children": [],
         "related": {},
