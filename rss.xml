@@ -3,7 +3,7 @@
     <title>infoBAG</title>
     <link href="https://ib.bsb.br/rss.xml" rel="self"/>
     <link href="https://ib.bsb.br/"/>
-    <updated>2024-09-03T17:11:04+00:00</updated>
+    <updated>2024-09-03T17:13:41+00:00</updated>
     <id>https://ib.bsb.br</id>
     <author>
         <name></name>
@@ -46934,6 +46934,26 @@ Pense duas vezes antes de se envolver.
         
       &lt;/h3&gt;
       &lt;ul&gt;
+        &lt;a href=&quot;/compare/&quot;&gt;
+          &lt;h2&gt;
+            Compare
+          &lt;/h2&gt;
+        &lt;/a&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;
+    
+    &lt;div class=&quot;search-link&quot;&gt;
+      &lt;h3&gt;
+        &lt;a class=&quot;post-heading&quot; href=&quot;#&quot; id=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;
+          &lt;img src=&quot;/assets/gold.ico&quot; alt=&quot;gold icon&quot; /&gt;
+        &lt;/a&gt;
+        1991-07-25
+        
+        &amp;rightarrowtail; 
+        03 Sep 2024
+        
+      &lt;/h3&gt;
+      &lt;ul&gt;
         &lt;a href=&quot;/sort/&quot;&gt;
           &lt;h2&gt;
             Sort
@@ -51866,6 +51886,238 @@ this.diff_match_patch=diff_match_patch;this.DIFF_DELETE=DIFF_DELETE;this.DIFF_IN
             });
         }
     &lt;/script&gt;
+&lt;/body&gt;
+</content>
+    </entry>
+    
+    <entry>
+        <title>Compare</title>
+        <link href="https://ib.bsb.br/compare/"/>
+        <updated>1991-07-25T00:00:00+00:00</updated>
+        <id>https://ib.bsb.br/compare/</id>
+        <content type="html">&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot; /&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot; /&gt;
+
+    &lt;title&gt;
+        
+            Compare — infoBAG
+        
+    &lt;/title&gt;
+
+    &lt;link rel=&quot;canonical&quot; href=&quot;https://ib.bsb.br/compare/&quot; /&gt;
+    &lt;link rel=&quot;alternate&quot; type=&quot;application/rss+xml&quot; title=&quot;infoBAG&quot; href=&quot;https://ib.bsb.br/rss.xml&quot; /&gt;
+
+    
+        &lt;meta itemprop=&quot;keywords&quot; content=&quot;tools&quot; /&gt;
+        
+            &lt;meta property=&quot;article:tag&quot; content=&quot;tools&quot; /&gt;
+        
+    
+
+    &lt;link href=&quot;/style.css&quot; rel=&quot;stylesheet&quot; /&gt;
+    &lt;link href=&quot;/pagefind/pagefind-ui.css&quot; rel=&quot;stylesheet&quot; /&gt;
+    &lt;script src=&quot;/pagefind/pagefind-ui.js&quot;&gt;&lt;/script&gt;
+    &lt;script type=&quot;module&quot;&gt;
+        import PagefindHighlight from &apos;/pagefind/pagefind-highlight.js&apos;;
+        new PagefindHighlight({ highlightParam: &quot;highlight&quot; });
+    &lt;/script&gt;
+    &lt;script src=&quot;/assets/js/search.js&quot; defer=&quot;&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;/assets/js/prism.js&quot; defer=&quot;&quot;&gt;&lt;/script&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+    &lt;a class=&quot;search-input-block&quot; id=&quot;search&quot;&gt;&lt;/a&gt;
+
+    &lt;header&gt;
+        &lt;nav aria-label=&quot;Main navigation&quot;&gt;
+            &lt;div class=&quot;header-container&quot;&gt;
+                &lt;a class=&quot;internal-link&quot; href=&quot;/&quot;&gt;
+                    &lt;img src=&quot;/assets/Sudden_Death_Rune.gif&quot; alt=&quot;Sudden Death Rune&quot; class=&quot;favicon&quot; /&gt;
+                &lt;/a&gt;
+                &lt;a href=&quot;https://ib.bsb.br/archive&quot;&gt;
+                    &lt;img src=&quot;/favicon.ico&quot; alt=&quot;Archive Icon&quot; class=&quot;favicon&quot; /&gt;
+                &lt;/a&gt;
+                &lt;a href=&quot;https://ib.bsb.br/tags&quot;&gt;
+                    &lt;img src=&quot;/assets/Label.gif&quot; alt=&quot;Tags Icon&quot; class=&quot;favicon&quot; /&gt;
+                &lt;/a&gt;
+                &lt;a href=&quot;https://ib.bsb.br/events&quot;&gt;
+                    &lt;img src=&quot;/assets/Paralyse_Rune.gif&quot; alt=&quot;Events Icon&quot; class=&quot;favicon&quot; /&gt;
+                &lt;/a&gt;
+            &lt;/div&gt;
+        &lt;/nav&gt;
+    &lt;/header&gt;
+  &lt;div class=&quot;container mt-4&quot;&gt;
+    &lt;h2 class=&quot;text-center&quot;&gt;List Comparison Tool&lt;/h2&gt;
+    &lt;div class=&quot;row mt-4&quot;&gt;
+      &lt;div class=&quot;col-md-6&quot;&gt;
+        &lt;label for=&quot;listA&quot; class=&quot;form-label&quot;&gt;List A&lt;/label&gt;
+        &lt;input type=&quot;file&quot; id=&quot;fileA&quot; accept=&quot;.txt, .csv&quot; class=&quot;form-control mt-2 mb-2&quot; /&gt;
+        &lt;textarea id=&quot;listA&quot; class=&quot;form-control&quot; rows=&quot;5&quot; placeholder=&quot;Enter or upload List A&quot;&gt;&lt;/textarea&gt;
+        &lt;p class=&quot;text-end&quot;&gt;Number of items in List A: &lt;span id=&quot;countA&quot;&gt;0&lt;/span&gt;&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;col-md-6&quot;&gt;
+        &lt;label for=&quot;listB&quot; class=&quot;form-label&quot;&gt;List B&lt;/label&gt;
+        &lt;input type=&quot;file&quot; id=&quot;fileB&quot; accept=&quot;.txt, .csv&quot; class=&quot;form-control mt-2 mb-2&quot; /&gt;
+        &lt;textarea id=&quot;listB&quot; class=&quot;form-control&quot; rows=&quot;5&quot; placeholder=&quot;Enter or upload List B&quot;&gt;&lt;/textarea&gt;
+        &lt;p class=&quot;text-end&quot;&gt;Number of items in List B: &lt;span id=&quot;countB&quot;&gt;0&lt;/span&gt;&lt;/p&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;mt-4 text-center&quot;&gt;
+
+      &lt;tr&gt;
+        &lt;td colspan=&quot;4&quot;&gt;
+          &lt;button class=&quot;btn btn-primary&quot; id=&quot;compareBtn&quot; onclick=&quot;compareLists()&quot;&gt;Compare&lt;/button&gt;
+          &amp;nbsp;
+          &lt;input type=&quot;checkbox&quot; name=&quot;casesensitive&quot; id=&quot;casesensitive&quot; /&gt;
+          &lt;label for=&quot;casesensitive&quot;&gt;Case sensitive&lt;/label&gt;
+        &lt;/td&gt;
+      &lt;/tr&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;row mt-4&quot;&gt;
+      &lt;div class=&quot;col-md-4&quot;&gt;
+        &lt;label for=&quot;resultA&quot; class=&quot;form-label&quot;&gt;Only in List A&lt;/label&gt;
+        &lt;textarea id=&quot;resultA&quot; class=&quot;form-control result-textarea&quot; rows=&quot;5&quot; readonly=&quot;&quot;&gt;&lt;/textarea&gt;
+        &lt;button class=&quot;btn btn-success mt-2&quot; id=&quot;copyA&quot;&gt;Copy&lt;/button&gt;
+        &lt;a class=&quot;btn btn-primary mt-2&quot; id=&quot;downloadA&quot; download=&quot;&quot;&gt;Download&lt;/a&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;col-md-4&quot;&gt;
+        &lt;label for=&quot;resultB&quot; class=&quot;form-label&quot;&gt;Only in List B&lt;/label&gt;
+        &lt;textarea id=&quot;resultB&quot; class=&quot;form-control result-textarea&quot; rows=&quot;5&quot; readonly=&quot;&quot;&gt;&lt;/textarea&gt;
+        &lt;button class=&quot;btn btn-success mt-2&quot; id=&quot;copyB&quot;&gt;Copy&lt;/button&gt;
+        &lt;a class=&quot;btn btn-primary mt-2&quot; id=&quot;downloadB&quot; download=&quot;&quot;&gt;Download&lt;/a&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;col-md-4&quot;&gt;
+        &lt;label for=&quot;resultBoth&quot; class=&quot;form-label&quot;&gt;Items in Both Lists&lt;/label&gt;
+        &lt;textarea id=&quot;resultBoth&quot; class=&quot;form-control result-textarea&quot; rows=&quot;5&quot; readonly=&quot;&quot;&gt;&lt;/textarea&gt;
+        &lt;button class=&quot;btn btn-success mt-2&quot; id=&quot;copyBoth&quot;&gt;Copy&lt;/button&gt;
+        &lt;a class=&quot;btn btn-primary mt-2&quot; id=&quot;downloadBoth&quot; download=&quot;&quot;&gt;Download&lt;/a&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;script&gt;
+
+    // Function to count items in a text area
+    function countItems(textAreaId) {
+      const text = document.getElementById(textAreaId).value;
+      const items = text.split(/\r\n|\r|\n/).filter(item =&gt; item.trim() !== &quot;&quot;);
+      return items.length;
+    }
+
+    // Update the item count for List A
+    function updateCountA() {
+      const count = countItems(&quot;listA&quot;);
+      document.getElementById(&quot;countA&quot;).textContent = count;
+    }
+
+    // Update the item count for List B
+    function updateCountB() {
+      const count = countItems(&quot;listB&quot;);
+      document.getElementById(&quot;countB&quot;).textContent = count;
+    }
+
+    // Event listener for file input changes
+    document.getElementById(&quot;fileA&quot;).addEventListener(&quot;change&quot;, function () {
+      const file = this.files[0];
+      const reader = new FileReader();
+      reader.onload = function () {
+        document.getElementById(&quot;listA&quot;).value = reader.result;
+        updateCountA();
+      };
+      reader.readAsText(file);
+    });
+
+    document.getElementById(&quot;fileB&quot;).addEventListener(&quot;change&quot;, function () {
+      const file = this.files[0];
+      const reader = new FileReader();
+      reader.onload = function () {
+        document.getElementById(&quot;listB&quot;).value = reader.result;
+        updateCountB();
+      };
+      reader.readAsText(file);
+    });
+
+    document.getElementById(&quot;listA&quot;).addEventListener(&quot;input&quot;, updateCountA);
+    document.getElementById(&quot;listB&quot;).addEventListener(&quot;input&quot;, updateCountB);
+
+    // Event listeners for copy and download buttons
+    document.getElementById(&quot;copyA&quot;).addEventListener(&quot;click&quot;, function () {
+      document.getElementById(&quot;resultA&quot;).select();
+      document.execCommand(&quot;copy&quot;);
+    });
+
+    document.getElementById(&quot;copyB&quot;).addEventListener(&quot;click&quot;, function () {
+      document.getElementById(&quot;resultB&quot;).select();
+      document.execCommand(&quot;copy&quot;);
+    });
+
+    document.getElementById(&quot;copyBoth&quot;).addEventListener(&quot;click&quot;, function () {
+      document.getElementById(&quot;resultBoth&quot;).select();
+      document.execCommand(&quot;copy&quot;);
+    });
+  &lt;/script&gt;
+
+  &lt;script&gt;
+    // JavaScript function to compare lists
+    function compareLists() {
+      var listA = document.getElementById(&quot;listA&quot;).value.trim().split(/\r\n|\r|\n/);
+      var listB = document.getElementById(&quot;listB&quot;).value.trim().split(/\r\n|\r|\n/);
+      var isCaseSensitive = document.getElementById(&quot;casesensitive&quot;).checked;
+
+      var onlyInA = [];
+      var onlyInB = [];
+      var inBoth = [];
+
+      // Convert both lists to lowercase if not case-sensitive
+      if (!isCaseSensitive) {
+        listA = listA.map(item =&gt; item.toLowerCase());
+        listB = listB.map(item =&gt; item.toLowerCase());
+      }
+
+      for (var i = 0; i &lt; listA.length; i++) {
+        if (!listB.includes(listA[i])) {
+          onlyInA.push(listA[i]);
+        } else {
+          inBoth.push(listA[i]);
+        }
+      }
+
+      for (var i = 0; i &lt; listB.length; i++) {
+        if (!listA.includes(listB[i])) {
+          onlyInB.push(listB[i]);
+        }
+      }
+
+      document.getElementById(&quot;resultA&quot;).value = onlyInA.join(&quot;\n&quot;);
+      document.getElementById(&quot;resultB&quot;).value = onlyInB.join(&quot;\n&quot;);
+      document.getElementById(&quot;resultBoth&quot;).value = inBoth.join(&quot;\n&quot;);
+    }
+  &lt;/script&gt;
+
+  &lt;script&gt;
+    // Function to download the content of a textarea as a file
+    function downloadTextareaContent(textareaId, downloadId) {
+      const content = document.getElementById(textareaId).value;
+      const downloadLink = document.getElementById(downloadId);
+
+      const blob = new Blob([content], { type: &quot;text/plain&quot; });
+      downloadLink.href = URL.createObjectURL(blob);
+    }
+
+    // Event listeners for download buttons
+    document.getElementById(&quot;downloadA&quot;).addEventListener(&quot;click&quot;, function () {
+      downloadTextareaContent(&quot;resultA&quot;, &quot;downloadA&quot;);
+    });
+
+    document.getElementById(&quot;downloadB&quot;).addEventListener(&quot;click&quot;, function () {
+      downloadTextareaContent(&quot;resultB&quot;, &quot;downloadB&quot;);
+    });
+
+    document.getElementById(&quot;downloadBoth&quot;).addEventListener(&quot;click&quot;, function () {
+      downloadTextareaContent(&quot;resultBoth&quot;, &quot;downloadBoth&quot;);
+    });
+  &lt;/script&gt;
 &lt;/body&gt;
 </content>
     </entry>
