@@ -3,7 +3,7 @@
     <title>infoBAG</title>
     <link href="//rss.xml" rel="self"/>
     <link href="//"/>
-    <updated>2024-09-03T12:26:58+00:00</updated>
+    <updated>2024-09-03T12:27:46+00:00</updated>
     <id></id>
     <author>
         <name></name>
@@ -46756,81 +46756,56 @@ Pense duas vezes antes de se envolver.
         <updated>1992-07-12T00:00:00+00:00</updated>
         <id>/events/</id>
         <content type="html">&lt;head&gt;
-  &lt;meta charset=&quot;UTF-8&quot; /&gt;
-  &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot; /&gt;
+    &lt;meta charset=&quot;UTF-8&quot; /&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot; /&gt;
 
-  &lt;title&gt;
+    &lt;title&gt;
+        
+            Events — infoBAG
+        
+    &lt;/title&gt;
+
+    &lt;link rel=&quot;canonical&quot; href=&quot;/events/&quot; /&gt;
+    &lt;link rel=&quot;alternate&quot; type=&quot;application/rss+xml&quot; title=&quot;infoBAG&quot; href=&quot;//rss.xml&quot; /&gt;
+
     
-      Events — infoBAG
+        &lt;meta itemprop=&quot;keywords&quot; content=&quot;&quot; /&gt;
+        
     
-  &lt;/title&gt;
 
-  &lt;link rel=&quot;canonical&quot; href=&quot;/events/&quot; /&gt;
-  &lt;link rel=&quot;alternate&quot; type=&quot;application/rss+xml&quot; title=&quot;infoBAG&quot; href=&quot;//rss.xml&quot; /&gt;
-
-  &lt;meta property=&quot;og:site_name&quot; content=&quot;infoBAG&quot; /&gt;
-  &lt;meta property=&quot;og:title&quot; content=&quot;Events&quot; /&gt;
-  &lt;meta property=&quot;og:type&quot; content=&quot;article&quot; /&gt;
-  &lt;meta property=&quot;og:url&quot; content=&quot;/events/&quot; /&gt;
-  
-  
-
-  
-    &lt;meta property=&quot;article:published_time&quot; content=&quot;1992-07-12T00:00:00+00:00&quot; /&gt;
-    &lt;meta property=&quot;article:author&quot; content=&quot;&quot; /&gt;
-  
-
-  
-    &lt;meta itemprop=&quot;keywords&quot; content=&quot;&quot; /&gt;
-    
-  
-
-  &lt;link href=&quot;/style.css&quot; rel=&quot;stylesheet&quot; /&gt;
-  &lt;link href=&quot;/pagefind/pagefind-ui.css&quot; rel=&quot;stylesheet&quot; /&gt;
-  &lt;script src=&quot;/pagefind/pagefind-ui.js&quot;&gt;&lt;/script&gt;
-  &lt;script type=&quot;module&quot;&gt;
-    import PagefindHighlight from &apos;/pagefind/pagefind-highlight.js&apos;;
-    new PagefindHighlight({ highlightParam: &quot;highlight&quot; });
-  &lt;/script&gt;
-  &lt;script src=&quot;/assets/js/search.js&quot; defer=&quot;&quot;&gt;&lt;/script&gt;
-  &lt;script src=&quot;/assets/js/vendor/fullcalendar/index.global.min.js&quot;&gt;&lt;/script&gt;
-  &lt;script&gt;
-  document.addEventListener(&apos;DOMContentLoaded&apos;, function() {
-    var calendarEl = document.getElementById(&apos;calendar&apos;);
-
-    fetch(&apos;/assets/data/events.json&apos;)
-      .then(response =&gt; response.json())
-      .then(data =&gt; {
-        var calendar = new FullCalendar.Calendar(calendarEl, {
-          initialView: &apos;listMonth&apos;,
-          events: data
-        });
-        calendar.render();
-      });
-  });
-  &lt;/script&gt;    
+    &lt;link href=&quot;/style.css&quot; rel=&quot;stylesheet&quot; /&gt;
+    &lt;link href=&quot;/pagefind/pagefind-ui.css&quot; rel=&quot;stylesheet&quot; /&gt;
+    &lt;script src=&quot;/pagefind/pagefind-ui.js&quot;&gt;&lt;/script&gt;
+    &lt;script type=&quot;module&quot;&gt;
+        import PagefindHighlight from &apos;/pagefind/pagefind-highlight.js&apos;;
+        new PagefindHighlight({ highlightParam: &quot;highlight&quot; });
+    &lt;/script&gt;
+    &lt;script src=&quot;/assets/js/search.js&quot; defer=&quot;&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;/assets/js/prism.js&quot; defer=&quot;&quot;&gt;&lt;/script&gt;
 &lt;/head&gt;
+
 &lt;body&gt;
-  &lt;a class=&quot;search-input-block&quot; id=&quot;search&quot;&gt;&lt;/a&gt;
-  &lt;header&gt;
-    &lt;nav aria-label=&quot;Main navigation&quot;&gt;
-      &lt;div class=&quot;header-container&quot;&gt;
-        &lt;a class=&quot;internal-link&quot; href=&quot;/&quot;&gt;
-          &lt;img src=&quot;/assets/Sudden_Death_Rune.gif&quot; alt=&quot;Sudden Death Rune&quot; class=&quot;favicon&quot; /&gt;
-        &lt;/a&gt;
-        &lt;a href=&quot;https://ib.bsb.br/archive&quot;&gt;
-          &lt;img src=&quot;/favicon.ico&quot; alt=&quot;Archive Icon&quot; class=&quot;favicon&quot; /&gt;
-        &lt;/a&gt;
-        &lt;a href=&quot;https://ib.bsb.br/tags&quot;&gt;
-          &lt;img src=&quot;/assets/Label.gif&quot; alt=&quot;Tags Icon&quot; class=&quot;favicon&quot; /&gt;
-        &lt;/a&gt;
-        &lt;a href=&quot;https://ib.bsb.br/events&quot;&gt;
-          &lt;img src=&quot;/assets/Paralyse_Rune.gif&quot; alt=&quot;Events Icon&quot; class=&quot;favicon&quot; /&gt;
-        &lt;/a&gt;
-      &lt;/div&gt;
-    &lt;/nav&gt;
-  &lt;/header&gt;
-  &lt;div class=&quot;wrapper&quot;&gt;
+    &lt;a class=&quot;search-input-block&quot; id=&quot;search&quot;&gt;&lt;/a&gt;
+
+    &lt;header&gt;
+        &lt;nav aria-label=&quot;Main navigation&quot;&gt;
+            &lt;div class=&quot;header-container&quot;&gt;
+                &lt;a class=&quot;internal-link&quot; href=&quot;/&quot;&gt;
+                    &lt;img src=&quot;/assets/Sudden_Death_Rune.gif&quot; alt=&quot;Sudden Death Rune&quot; class=&quot;favicon&quot; /&gt;
+                &lt;/a&gt;
+                &lt;a href=&quot;https://ib.bsb.br/archive&quot;&gt;
+                    &lt;img src=&quot;/favicon.ico&quot; alt=&quot;Archive Icon&quot; class=&quot;favicon&quot; /&gt;
+                &lt;/a&gt;
+                &lt;a href=&quot;https://ib.bsb.br/tags&quot;&gt;
+                    &lt;img src=&quot;/assets/Label.gif&quot; alt=&quot;Tags Icon&quot; class=&quot;favicon&quot; /&gt;
+                &lt;/a&gt;
+                &lt;a href=&quot;https://ib.bsb.br/events&quot;&gt;
+                    &lt;img src=&quot;/assets/Paralyse_Rune.gif&quot; alt=&quot;Events Icon&quot; class=&quot;favicon&quot; /&gt;
+                &lt;/a&gt;
+            &lt;/div&gt;
+        &lt;/nav&gt;
+    &lt;/header&gt;
+    &lt;div class=&quot;wrapper&quot;&gt;
     &lt;h1 class=&quot;title&quot;&gt;&lt;i class=&quot;far fa-calendar&quot;&gt;&lt;/i&gt;Events&lt;/h1&gt;
     &lt;main id=&quot;calendar&quot;&gt;&lt;/main&gt;
   &lt;/div&gt;
@@ -46914,6 +46889,26 @@ Pense duas vezes antes de se envolver.
         
       &lt;/h3&gt;
       &lt;ul&gt;
+        &lt;a href=&quot;/events/&quot;&gt;
+          &lt;h2&gt;
+            Events
+          &lt;/h2&gt;
+        &lt;/a&gt;
+      &lt;/ul&gt;
+    &lt;/section&gt;
+    
+    &lt;section class=&quot;search-link&quot;&gt;
+      &lt;h3&gt;
+        &lt;a class=&quot;post-heading&quot; href=&quot;#&quot; id=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;
+          &lt;img src=&quot;/assets/gold.ico&quot; alt=&quot;gold icon&quot; /&gt;
+        &lt;/a&gt;
+        1992-07-12
+        
+        &amp;rightarrowtail; 
+        03 Sep 2024
+        
+      &lt;/h3&gt;
+      &lt;ul&gt;
         &lt;a href=&quot;/tags/&quot;&gt;
           &lt;h2&gt;
             Tags
@@ -46957,26 +46952,6 @@ Pense duas vezes antes de se envolver.
         &lt;a href=&quot;/archive/&quot;&gt;
           &lt;h2&gt;
             Archive
-          &lt;/h2&gt;
-        &lt;/a&gt;
-      &lt;/ul&gt;
-    &lt;/section&gt;
-    
-    &lt;section class=&quot;search-link&quot;&gt;
-      &lt;h3&gt;
-        &lt;a class=&quot;post-heading&quot; href=&quot;#&quot; id=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;
-          &lt;img src=&quot;/assets/gold.ico&quot; alt=&quot;gold icon&quot; /&gt;
-        &lt;/a&gt;
-        1992-07-12
-        
-        &amp;rightarrowtail; 
-        02 Sep 2024
-        
-      &lt;/h3&gt;
-      &lt;ul&gt;
-        &lt;a href=&quot;/events/&quot;&gt;
-          &lt;h2&gt;
-            Events
           &lt;/h2&gt;
         &lt;/a&gt;
       &lt;/ul&gt;
