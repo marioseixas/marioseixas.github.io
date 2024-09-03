@@ -236,10 +236,10 @@ img[class*="emoji"][src$=".svg"] {
 }
 
 .post-wrapper {
-    word-wrap: break-word;
-    overflow-wrap: break-word;
-    white-space: pre-wrap;
-    word-break: break-all;
+    display: inline-flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 0.5em; /* Adjust gap as needed */
 }
 
 .search-link {
