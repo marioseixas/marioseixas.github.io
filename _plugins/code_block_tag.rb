@@ -37,12 +37,11 @@ module Jekyll
       filename = "#{@language}_code-block#{extension}"
       download_label = "Download #{@language.capitalize()}"
 
-      # Encode code content for data URI
-      encoded_content = URI.encode_www_form_component(code_content)
-      data_uri = "data:#{mime_type};charset=utf-8,#{encoded_content}"
+      # Escape code content for safe use in HTML attributes
+      escaped_code_content = code_content.gsub('"', '&quot;')
 
-      # Construct HTML output with the data URI and download attribute
-      "<section data-src=\"#{data_uri}\" data-download-link data-download-link-label=\"#{download_label}\" data-download=\"#{filename}\" class=\"language-#{@language}\"><code class=\"language-#{@language}\">#{code_content}</code></section>"
+      # Construct HTML output with data attributes 
+      "<section data-filename=\"#{filename}\" data-code=\"#{escaped_code_content}\" data-download-link data-download-link-label=\"#{download_label}\" class=\"language-#{@language}\"><code class=\"language-#{@language}\">#{code_content}</code></section>" 
     end
   end
 end
