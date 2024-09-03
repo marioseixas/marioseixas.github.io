@@ -496,14 +496,14 @@
     "scripts": {
         "parents": [],
         "children": [
-            "cloud",
-            "scripts>google-apps-script",
-            "mobile",
             "scripts>cloud",
-            "scripts>mobile",
+            "AI",
             "google-apps-script",
+            "cloud",
+            "scripts>mobile",
             "scripts>AI",
-            "AI"
+            "scripts>google-apps-script",
+            "mobile"
         ],
         "related": {
             "linux": 26,
@@ -703,8 +703,8 @@
         "parents": [],
         "children": [
             "direito",
-            "edital>direito",
             "direito>processual-penal",
+            "edital>direito",
             "edital>direito>processual-penal"
         ],
         "related": {},
@@ -744,8 +744,8 @@
     "tasks": {
         "parents": [],
         "children": [
-            "iphone",
-            "tasks>iphone"
+            "tasks>iphone",
+            "iphone"
         ],
         "related": {},
         "posts": [
@@ -1385,8 +1385,8 @@
             "scripts"
         ],
         "children": [
-            "prompt",
-            "AI>prompt"
+            "AI>prompt",
+            "prompt"
         ],
         "related": {},
         "posts": [
@@ -1443,10 +1443,10 @@
     "software": {
         "parents": [],
         "children": [
-            "cloud",
             "software>mobile",
-            "mobile",
-            "software>cloud"
+            "cloud",
+            "software>cloud",
+            "mobile"
         ],
         "related": {},
         "posts": [
@@ -1502,8 +1502,8 @@
     },
     "mobile": {
         "parents": [
-            "software",
-            "scripts"
+            "scripts",
+            "software"
         ],
         "children": [],
         "related": {},
@@ -1748,8 +1748,8 @@
     },
     "cloud": {
         "parents": [
-            "software",
-            "scripts"
+            "scripts",
+            "software"
         ],
         "children": [],
         "related": {},
@@ -1819,8 +1819,8 @@
     },
     "edital>direito>processual-penal": {
         "parents": [
-            "edital",
-            "direito"
+            "direito",
+            "edital"
         ],
         "children": [],
         "related": {},
