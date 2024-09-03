@@ -3,7 +3,7 @@
     <title>infoBAG</title>
     <link href="https://ib.bsb.br/rss.xml" rel="self"/>
     <link href="https://ib.bsb.br/"/>
-    <updated>2024-09-03T16:00:24+00:00</updated>
+    <updated>2024-09-03T16:01:18+00:00</updated>
     <id>https://ib.bsb.br</id>
     <author>
         <name></name>
@@ -46934,6 +46934,26 @@ Pense duas vezes antes de se envolver.
         
       &lt;/h3&gt;
       &lt;ul&gt;
+        &lt;a href=&quot;/dedup-spaces/&quot;&gt;
+          &lt;h2&gt;
+            Dedup Spaces
+          &lt;/h2&gt;
+        &lt;/a&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;
+    
+    &lt;div class=&quot;search-link&quot;&gt;
+      &lt;h3&gt;
+        &lt;a class=&quot;post-heading&quot; href=&quot;#&quot; id=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;
+          &lt;img src=&quot;/assets/gold.ico&quot; alt=&quot;gold icon&quot; /&gt;
+        &lt;/a&gt;
+        1991-07-25
+        
+        &amp;rightarrowtail; 
+        03 Sep 2024
+        
+      &lt;/h3&gt;
+      &lt;ul&gt;
         &lt;a href=&quot;/diff/&quot;&gt;
           &lt;h2&gt;
             Diff
@@ -46957,26 +46977,6 @@ Pense duas vezes antes de se envolver.
         &lt;a href=&quot;/reassess/&quot;&gt;
           &lt;h2&gt;
             reassess
-          &lt;/h2&gt;
-        &lt;/a&gt;
-      &lt;/ul&gt;
-    &lt;/div&gt;
-    
-    &lt;div class=&quot;search-link&quot;&gt;
-      &lt;h3&gt;
-        &lt;a class=&quot;post-heading&quot; href=&quot;#&quot; id=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;
-          &lt;img src=&quot;/assets/gold.ico&quot; alt=&quot;gold icon&quot; /&gt;
-        &lt;/a&gt;
-        1991-07-25
-        
-        &amp;rightarrowtail; 
-        03 Sep 2024
-        
-      &lt;/h3&gt;
-      &lt;ul&gt;
-        &lt;a href=&quot;/dedup-spaces/&quot;&gt;
-          &lt;h2&gt;
-            Dedup Spaces
           &lt;/h2&gt;
         &lt;/a&gt;
       &lt;/ul&gt;
@@ -51188,7 +51188,7 @@ Pense duas vezes antes de se envolver.
     &lt;/title&gt;
 
     &lt;link rel=&quot;canonical&quot; href=&quot;https://ib.bsb.br/dedup-spaces/&quot; /&gt;
-    &lt;link rel=&quot;alternate&quot; type=&quot;application/rss+xml&quot; title=&quot;infoBAG&quot; href=&quot;/rss.xml&quot; /&gt;
+    &lt;link rel=&quot;alternate&quot; type=&quot;application/rss+xml&quot; title=&quot;infoBAG&quot; href=&quot;https://ib.bsb.br/rss.xml&quot; /&gt;
 
     
         &lt;meta itemprop=&quot;keywords&quot; content=&quot;tools&quot; /&gt;
