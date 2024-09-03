@@ -3,7 +3,7 @@
     <title>infoBAG</title>
     <link href="https://ib.bsb.br/rss.xml" rel="self"/>
     <link href="https://ib.bsb.br/"/>
-    <updated>2024-09-03T17:07:43+00:00</updated>
+    <updated>2024-09-03T17:11:04+00:00</updated>
     <id>https://ib.bsb.br</id>
     <author>
         <name></name>
@@ -50965,12 +50965,6 @@ Pense duas vezes antes de se envolver.
             &lt;/div&gt;
         &lt;/nav&gt;
     &lt;/header&gt;
-&lt;div class=&quot;flex-container&quot;&gt;
-    &lt;a class=&quot;flex-items header-style&quot; href=&quot;https://fictos.com/&quot; tabindex=&quot;-1&quot;&gt;Fictos Developer Tools&lt;/a&gt;
-    &lt;h1 class=&quot;flex-items header-style&quot;&gt;Sorting Tool - Ascending &amp;amp; Descending Order&lt;/h1&gt;
-    &lt;a href=&quot;/&quot; class=&quot;flex-items header-style&quot;&gt;more tools...&lt;/a&gt;
-&lt;/div&gt;
-
 &lt;div class=&quot;editor-container&quot;&gt;
     &lt;div class=&quot;editor-ui&quot;&gt;
         &lt;textarea id=&quot;textarea-data-source&quot; placeholder=&quot;Paste your string here...&quot;&gt;&lt;/textarea&gt;
