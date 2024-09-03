@@ -83,7 +83,7 @@ jobs:
         env:
           PAGES_REPO_NWO: marioseixas/marioseixas.github.io
           JEKYLL_ENV: production
-          base_path: /
+          base_path: ""
         run: |
           echo "base_path from env is: ${base_path}"
           export base_path="${base_path}" 
