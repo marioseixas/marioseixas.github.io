@@ -1,0 +1,119 @@
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>
+        
+            Diff — infoBAG
+        
+    </title>
+
+    <link rel="canonical" href="https://ib.bsb.br/diff/" />
+    <link rel="alternate" type="application/rss+xml" title="infoBAG" href="/rss.xml" />
+
+    
+        <meta itemprop="keywords" content="tools" />
+        
+            <meta property="article:tag" content="tools" />
+        
+    
+
+    <link href="/style.css" rel="stylesheet" />
+    <link href="/pagefind/pagefind-ui.css" rel="stylesheet" />
+    <script src="/pagefind/pagefind-ui.js"></script>
+    <script type="module">
+        import PagefindHighlight from '/pagefind/pagefind-highlight.js';
+        new PagefindHighlight({ highlightParam: "highlight" });
+    </script>
+    <script src="/assets/js/search.js" defer=""></script>
+    <script src="/assets/js/prism.js" defer=""></script>
+    <script src="/assets/js/diff_match_patch.js" defer=""></script>
+</head>
+<body>
+    <a class="search-input-block" id="search"></a>
+    <header>
+        <nav aria-label="Main navigation">
+            <div class="header-container">
+                <a class="internal-link" href="/">
+                    <img src="/assets/Sudden_Death_Rune.gif" alt="Sudden Death Rune" class="favicon" />
+                </a>
+                <a href="https://ib.bsb.br/archive">
+                    <img src="/favicon.ico" alt="Archive Icon" class="favicon" />
+                </a>
+                <a href="https://ib.bsb.br/tags">
+                    <img src="/assets/Label.gif" alt="Tags Icon" class="favicon" />
+                </a>
+                <a href="https://ib.bsb.br/events">
+                    <img src="/assets/Paralyse_Rune.gif" alt="Events Icon" class="favicon" />
+                </a>
+            </div>
+        </nav>
+    </header>
+    <div style="position: relative; margin: 30px;">
+        <form action="#" onsubmit="return false">
+            <table width="100%">
+                <tbody>
+                    <tr>
+                        <td width="50%">
+                            <h3>Text Version 1:</h3>
+                            <textarea id="text1" style="width: 100%" rows="10"></textarea>
+                        </td>
+                        <td width="50%">
+                            <h3>Text Version 2:</h3>
+                            <textarea id="text2" style="width: 100%" rows="10"></textarea>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <h3>Diff timeout:</h3>
+            <p><input type="text" size="3" maxlength="5" value="1" id="timeout" /> seconds<br />
+                If the mapping phase of the diff computation takes longer than this, then the computation
+                is truncated and the best solution to date is returned. While guaranteed to be correct,
+                it may not be optimal. A timeout of '0' allows for unlimited computation.</p>
+            <h3>Post-diff cleanup:</h3>
+            <dl>
+                <dt><input type="radio" name="cleanup" id="semantic" checked="" />
+                    <label for="semantic">Semantic Cleanup</label>
+                </dt>
+                <dd>Increase human readability by factoring out commonalities which are likely to be
+                    coincidental.</dd>
+                <dt><input type="radio" name="cleanup" id="efficiency" />
+                    <label for="efficiency">Efficiency Cleanup</label>,
+                    edit cost: <input type="text" size="3" maxlength="5" value="4" id="editcost" />
+                </dt>
+                <dd>Increase computational efficiency by factoring out short commonalities which are
+                    not worth the overhead. The larger the edit cost, the more aggressive the cleanup.</dd>
+                <dt><input type="radio" name="cleanup" id="raw" />
+                    <label for="raw">No Cleanup</label>
+                </dt>
+                <dd>Raw output.</dd>
+            </dl>
+            <p><input type="button" onclick="launch()" value="Compute Diff" /></p>
+        </form>
+    </div>
+    <br />
+    <div style="position: relative; margin: 30px;" id="outputdiv"></div>
+    <script>
+        var dmp = new diff_match_patch();
+
+        function launch() {
+            var text1 = document.getElementById('text1').value;
+            var text2 = document.getElementById('text2').value;
+            dmp.Diff_Timeout = parseFloat(document.getElementById('timeout').value);
+            dmp.Diff_EditCost = parseFloat(document.getElementById('editcost').value);
+
+            var ms_start = (new Date()).getTime();
+            var d = dmp.diff_main(text1, text2);
+            var ms_end = (new Date()).getTime();
+
+            if (document.getElementById('semantic').checked) {
+                dmp.diff_cleanupSemantic(d);
+            }
+            if (document.getElementById('efficiency').checked) {
+                dmp.diff_cleanupEfficiency(d);
+            }
+            var ds = dmp.diff_prettyHtml(d);
+            document.getElementById('outputdiv').innerHTML = ds + '<BR>Time: ' + (ms_end - ms_start) / 1000 + 's';
+        }
+    </script>
+</body>
