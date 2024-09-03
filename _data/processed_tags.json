@@ -496,14 +496,14 @@
     "scripts": {
         "parents": [],
         "children": [
-            "scripts>google-apps-script",
-            "google-apps-script",
+            "scripts>mobile",
             "scripts>cloud",
+            "AI",
+            "mobile",
+            "scripts>google-apps-script",
             "scripts>AI",
             "cloud",
-            "scripts>mobile",
-            "mobile",
-            "AI"
+            "google-apps-script"
         ],
         "related": {
             "linux": 26,
@@ -668,84 +668,11 @@
             }
         ]
     },
-    "carro": {
-        "parents": [],
-        "children": [],
-        "related": {},
-        "posts": [
-            {
-                "title": "VW/GOL 1.0 G4 2010 - 196.351km",
-                "url": "/car-12-15",
-                "highlighted": true,
-                "date": "2021-12-15T00:00:00"
-            },
-            {
-                "title": "VW/GOL 1.0 G4 2010 - 195.300km",
-                "url": "/car-10-15",
-                "highlighted": true,
-                "date": "2021-10-15T00:00:00"
-            },
-            {
-                "title": " VW/GOL 1.0 G4 2010 - 189.111km ",
-                "url": "/car-02-10",
-                "highlighted": true,
-                "date": "2021-02-10T00:00:00"
-            },
-            {
-                "title": "VW/GOL 1.0 G4 2010 - 184.000km",
-                "url": "/car-04-17",
-                "highlighted": true,
-                "date": "2020-04-17T00:00:00"
-            }
-        ]
-    },
-    "edital": {
-        "parents": [],
-        "children": [
-            "direito",
-            "direito>processual-penal",
-            "edital>direito",
-            "edital>direito>processual-penal"
-        ],
-        "related": {},
-        "posts": [
-            {
-                "title": "Ordenamento Jurídico Brasileiro [redução eidética]",
-                "url": "/ordenamento",
-                "highlighted": false,
-                "date": "2024-04-17T00:00:00"
-            },
-            {
-                "title": "Procedimento dos Crimes da Competência do Tribunal do Júri",
-                "url": "/juri",
-                "highlighted": false,
-                "date": "2024-03-08T00:00:00"
-            },
-            {
-                "title": "Núcleo duro das provas de Delegado de Polícia",
-                "url": "/hard-core",
-                "highlighted": true,
-                "date": "2023-12-22T00:00:00"
-            },
-            {
-                "title": "Concursos DELTA iminentes",
-                "url": "/concursos-delta",
-                "highlighted": true,
-                "date": "2023-12-22T00:00:00"
-            },
-            {
-                "title": "Estados que exigem atividade policial para DELTA",
-                "url": "/atividade-policial",
-                "highlighted": true,
-                "date": "2022-06-07T00:00:00"
-            }
-        ]
-    },
     "tools": {
         "parents": [],
         "children": [
-            "tools>AI>prompt",
-            "AI>prompt"
+            "AI>prompt",
+            "tools>AI>prompt"
         ],
         "related": {},
         "posts": [
@@ -754,6 +681,12 @@
                 "url": "/reassess",
                 "highlighted": false,
                 "date": "2024-04-13T00:00:00"
+            },
+            {
+                "title": "1991-07-25-rm-lines",
+                "url": "/rm-lines",
+                "highlighted": true,
+                "date": "1991-07-25T00:00:00"
             },
             {
                 "title": "1991-07-25-dedup-spaces",
@@ -793,11 +726,84 @@
             }
         ]
     },
+    "carro": {
+        "parents": [],
+        "children": [],
+        "related": {},
+        "posts": [
+            {
+                "title": "VW/GOL 1.0 G4 2010 - 196.351km",
+                "url": "/car-12-15",
+                "highlighted": true,
+                "date": "2021-12-15T00:00:00"
+            },
+            {
+                "title": "VW/GOL 1.0 G4 2010 - 195.300km",
+                "url": "/car-10-15",
+                "highlighted": true,
+                "date": "2021-10-15T00:00:00"
+            },
+            {
+                "title": " VW/GOL 1.0 G4 2010 - 189.111km ",
+                "url": "/car-02-10",
+                "highlighted": true,
+                "date": "2021-02-10T00:00:00"
+            },
+            {
+                "title": "VW/GOL 1.0 G4 2010 - 184.000km",
+                "url": "/car-04-17",
+                "highlighted": true,
+                "date": "2020-04-17T00:00:00"
+            }
+        ]
+    },
+    "edital": {
+        "parents": [],
+        "children": [
+            "direito",
+            "edital>direito>processual-penal",
+            "direito>processual-penal",
+            "edital>direito"
+        ],
+        "related": {},
+        "posts": [
+            {
+                "title": "Ordenamento Jurídico Brasileiro [redução eidética]",
+                "url": "/ordenamento",
+                "highlighted": false,
+                "date": "2024-04-17T00:00:00"
+            },
+            {
+                "title": "Procedimento dos Crimes da Competência do Tribunal do Júri",
+                "url": "/juri",
+                "highlighted": false,
+                "date": "2024-03-08T00:00:00"
+            },
+            {
+                "title": "Núcleo duro das provas de Delegado de Polícia",
+                "url": "/hard-core",
+                "highlighted": true,
+                "date": "2023-12-22T00:00:00"
+            },
+            {
+                "title": "Concursos DELTA iminentes",
+                "url": "/concursos-delta",
+                "highlighted": true,
+                "date": "2023-12-22T00:00:00"
+            },
+            {
+                "title": "Estados que exigem atividade policial para DELTA",
+                "url": "/atividade-policial",
+                "highlighted": true,
+                "date": "2022-06-07T00:00:00"
+            }
+        ]
+    },
     "tasks": {
         "parents": [],
         "children": [
-            "tasks>iphone",
-            "iphone"
+            "iphone",
+            "tasks>iphone"
         ],
         "related": {},
         "posts": [
@@ -1437,9 +1443,9 @@
             "scripts"
         ],
         "children": [
-            "tools>AI>prompt",
+            "prompt",
             "AI>prompt",
-            "prompt"
+            "tools>AI>prompt"
         ],
         "related": {},
         "posts": [
@@ -1497,8 +1503,8 @@
         "parents": [],
         "children": [
             "mobile",
-            "cloud",
             "software>mobile",
+            "cloud",
             "software>cloud"
         ],
         "related": {},
