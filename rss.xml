@@ -3,7 +3,7 @@
     <title>infoBAG</title>
     <link href="https://ib.bsb.br//rss.xml" rel="self"/>
     <link href="https://ib.bsb.br//"/>
-    <updated>2024-09-03T12:43:31+00:00</updated>
+    <updated>2024-09-03T12:53:18+00:00</updated>
     <id>https://ib.bsb.br</id>
     <author>
         <name></name>
@@ -46889,6 +46889,26 @@ Pense duas vezes antes de se envolver.
         
       &lt;/h3&gt;
       &lt;ul&gt;
+        &lt;a href=&quot;/&quot;&gt;
+          &lt;h2&gt;
+            Index
+          &lt;/h2&gt;
+        &lt;/a&gt;
+      &lt;/ul&gt;
+    &lt;/section&gt;
+    
+    &lt;section class=&quot;search-link&quot;&gt;
+      &lt;h3&gt;
+        &lt;a class=&quot;post-heading&quot; href=&quot;#&quot; id=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;
+          &lt;img src=&quot;/assets/gold.ico&quot; alt=&quot;gold icon&quot; /&gt;
+        &lt;/a&gt;
+        1992-07-12
+        
+        &amp;rightarrowtail; 
+        03 Sep 2024
+        
+      &lt;/h3&gt;
+      &lt;ul&gt;
         &lt;a href=&quot;/events/&quot;&gt;
           &lt;h2&gt;
             Events
@@ -46912,26 +46932,6 @@ Pense duas vezes antes de se envolver.
         &lt;a href=&quot;/tags/&quot;&gt;
           &lt;h2&gt;
             Tags
-          &lt;/h2&gt;
-        &lt;/a&gt;
-      &lt;/ul&gt;
-    &lt;/section&gt;
-    
-    &lt;section class=&quot;search-link&quot;&gt;
-      &lt;h3&gt;
-        &lt;a class=&quot;post-heading&quot; href=&quot;#&quot; id=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;
-          &lt;img src=&quot;/assets/gold.ico&quot; alt=&quot;gold icon&quot; /&gt;
-        &lt;/a&gt;
-        1992-07-12
-        
-        &amp;rightarrowtail; 
-        03 Sep 2024
-        
-      &lt;/h3&gt;
-      &lt;ul&gt;
-        &lt;a href=&quot;/&quot;&gt;
-          &lt;h2&gt;
-            Index
           &lt;/h2&gt;
         &lt;/a&gt;
       &lt;/ul&gt;
