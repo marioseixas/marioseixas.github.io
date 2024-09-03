@@ -6,14 +6,14 @@ erDiagram
         related_2 software_mobile
     }
     scripts {
-        child scripts_cloud
-        child google-apps-script
-        child cloud
+        child scripts_AI
         child AI
+        child cloud
+        child mobile
         child scripts_mobile
         child scripts_google-apps-script
-        child mobile
-        child scripts_AI
+        child google-apps-script
+        child scripts_cloud
         related_26 linux
         related_2 estudos
     }
@@ -34,25 +34,26 @@ erDiagram
         related_2 trabalho
     }
     trabalho ||..|| estudos : RELATED_TO
-    scripts_cloud {
+    scripts_AI {
         parent scripts
     }
-    scripts ||--|| scripts_cloud : SUBSET_OF
-    google-apps-script {
-        parent scripts
-    }
-    scripts ||--|| google-apps-script : SUBSET_OF
-    cloud {
-        parent scripts
-        parent software
-    }
-    scripts ||--|| cloud : SUBSET_OF
+    scripts ||--|| scripts_AI : SUBSET_OF
     AI {
         parent scripts
         child AI_prompt
         child prompt
     }
     scripts ||--|| AI : SUBSET_OF
+    cloud {
+        parent software
+        parent scripts
+    }
+    scripts ||--|| cloud : SUBSET_OF
+    mobile {
+        parent software
+        parent scripts
+    }
+    scripts ||--|| mobile : SUBSET_OF
     scripts_mobile {
         parent scripts
         related_2 iphone
@@ -62,35 +63,34 @@ erDiagram
         parent scripts
     }
     scripts ||--|| scripts_google-apps-script : SUBSET_OF
-    mobile {
-        parent scripts
-        parent software
-    }
-    scripts ||--|| mobile : SUBSET_OF
-    scripts_AI {
+    google-apps-script {
         parent scripts
     }
-    scripts ||--|| scripts_AI : SUBSET_OF
+    scripts ||--|| google-apps-script : SUBSET_OF
+    scripts_cloud {
+        parent scripts
+    }
+    scripts ||--|| scripts_cloud : SUBSET_OF
     scripts ||..|| linux : RELATED_TO
     scripts ||..|| estudos : RELATED_TO
     carro {
     }
     edital {
-        child edital_direito_processual-penal
         child edital_direito
+        child edital_direito_processual-penal
         child direito
         child direito_processual-penal
     }
-    edital_direito_processual-penal {
-        parent edital
-        parent direito
-    }
-    edital ||--|| edital_direito_processual-penal : SUBSET_OF
     edital_direito {
         parent edital
         child processual-penal
     }
     edital ||--|| edital_direito : SUBSET_OF
+    edital_direito_processual-penal {
+        parent edital
+        parent direito
+    }
+    edital ||--|| edital_direito_processual-penal : SUBSET_OF
     direito {
         parent edital
         child edital_direito_processual-penal
@@ -168,24 +168,24 @@ erDiagram
     AI ||--|| prompt : SUBSET_OF
     software {
         child software_cloud
-        child mobile
         child cloud
+        child mobile
         child software_mobile
     }
     software_cloud {
         parent software
     }
     software ||--|| software_cloud : SUBSET_OF
-    software ||--|| mobile : SUBSET_OF
     software ||--|| cloud : SUBSET_OF
+    software ||--|| mobile : SUBSET_OF
     software ||--|| software_mobile : SUBSET_OF
     tools {
     }
     software ||--|| software_mobile : SUPERSET_OF
     software_mobile ||..|| iphone : RELATED_TO
     software_mobile ||..|| linux : RELATED_TO
-    scripts ||--|| mobile : SUPERSET_OF
     software ||--|| mobile : SUPERSET_OF
+    scripts ||--|| mobile : SUPERSET_OF
     AI ||--|| AI_prompt : SUPERSET_OF
     AI ||--|| prompt : SUPERSET_OF
     music {
@@ -206,8 +206,8 @@ erDiagram
     saude {
     }
     software ||--|| software_cloud : SUPERSET_OF
-    scripts ||--|| cloud : SUPERSET_OF
     software ||--|| cloud : SUPERSET_OF
+    scripts ||--|| cloud : SUPERSET_OF
     receitas {
     }
     admoestacao ||..|| spirit : RELATED_TO
