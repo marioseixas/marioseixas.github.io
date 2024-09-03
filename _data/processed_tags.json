@@ -496,14 +496,14 @@
     "scripts": {
         "parents": [],
         "children": [
-            "mobile",
             "cloud",
-            "scripts>cloud",
             "google-apps-script",
-            "scripts>AI",
+            "mobile",
+            "scripts>google-apps-script",
             "AI",
             "scripts>mobile",
-            "scripts>google-apps-script"
+            "scripts>AI",
+            "scripts>cloud"
         ],
         "related": {
             "linux": 26,
@@ -703,9 +703,9 @@
         "parents": [],
         "children": [
             "direito>processual-penal",
+            "edital>direito>processual-penal",
             "edital>direito",
-            "direito",
-            "edital>direito>processual-penal"
+            "direito"
         ],
         "related": {},
         "posts": [
@@ -784,8 +784,8 @@
     "tasks": {
         "parents": [],
         "children": [
-            "iphone",
-            "tasks>iphone"
+            "tasks>iphone",
+            "iphone"
         ],
         "related": {},
         "posts": [
@@ -1425,8 +1425,8 @@
             "scripts"
         ],
         "children": [
-            "tools>AI>prompt",
             "prompt",
+            "tools>AI>prompt",
             "AI>prompt"
         ],
         "related": {},
@@ -1484,10 +1484,10 @@
     "software": {
         "parents": [],
         "children": [
-            "mobile",
+            "software>cloud",
             "cloud",
             "software>mobile",
-            "software>cloud"
+            "mobile"
         ],
         "related": {},
         "posts": [
@@ -1543,8 +1543,8 @@
     },
     "mobile": {
         "parents": [
-            "scripts",
-            "software"
+            "software",
+            "scripts"
         ],
         "children": [],
         "related": {},
@@ -1822,8 +1822,8 @@
     },
     "cloud": {
         "parents": [
-            "scripts",
-            "software"
+            "software",
+            "scripts"
         ],
         "children": [],
         "related": {},
