@@ -80,8 +80,12 @@ img[class*="emoji"][src$=".svg"] {
 .iframe-container {
   overflow: hidden;
   padding-top: 56.25%;
-  position: relative;
+  position: static;
   width: 100%;
+  overflow-wrap: break-word;
+  white-space: pre-wrap;
+  word-break: break-all;
+}  
 }
 .iframe-container iframe {
   height: 100%;
@@ -210,8 +214,10 @@ img[class*="emoji"][src$=".svg"] {
   color: var(--links-default);
 }
 .post-wrapper {
+  word-wrap: break-word;  
   overflow-wrap: break-word;
-  word-wrap: break-word;
+  white-space: pre-wrap;
+  word-break: break-all;
 }
 .search-link {
   background-color: rgba(var(--accents-dodgerblue), 0.1);
@@ -440,11 +446,13 @@ textarea {
 }
 th,
 td {
-  border: 1px dotted var(--accents-amethyst);
-  overflow-wrap: break-word;
+  border: 1px dotted var(--accents-amethyst);  
   padding: 0.5em 1em;
   text-align: left;
-  word-wrap: break-word;
+  word-wrap: break-word;  
+  overflow-wrap: break-word;
+  white-space: pre-wrap;
+  word-break: break-all;
 }
 th,
 thead,
@@ -490,6 +498,9 @@ section[class*="language-"] {
   box-shadow: 1px 1px .5em black inset;
   margin: .5em 0;
   overflow: auto;
+  overflow-wrap: break-word;
+  white-space: pre-wrap;
+  word-break: break-all;
   padding: 1em;
 
   &::-moz-selection {
@@ -708,6 +719,10 @@ div.code-toolbar {
       font: inherit;
       line-height: normal;
       overflow: visible;
+      overflow-wrap: break-word;
+      white-space: pre-wrap;
+      word-break: break-all;
+
       padding: 0;
       -webkit-user-select: none; // for button
       -moz-user-select: none;
@@ -771,6 +786,9 @@ pre[class*="language-"] {
   box-shadow: 1px 1px .5em black inset;
   margin: .5em 0;
   overflow: auto;
+  overflow-wrap: break-word;
+  white-space: pre-wrap;
+  word-break: break-all;
   padding: 1em;
 
   &::-moz-selection {
