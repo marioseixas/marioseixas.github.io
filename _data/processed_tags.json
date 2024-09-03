@@ -496,14 +496,14 @@
     "scripts": {
         "parents": [],
         "children": [
-            "google-apps-script",
-            "scripts>mobile",
-            "AI",
-            "scripts>cloud",
             "cloud",
-            "scripts>AI",
             "scripts>google-apps-script",
-            "mobile"
+            "mobile",
+            "scripts>cloud",
+            "scripts>mobile",
+            "google-apps-script",
+            "scripts>AI",
+            "AI"
         ],
         "related": {
             "linux": 26,
@@ -704,8 +704,8 @@
         "children": [
             "direito",
             "edital>direito",
-            "edital>direito>processual-penal",
-            "direito>processual-penal"
+            "direito>processual-penal",
+            "edital>direito>processual-penal"
         ],
         "related": {},
         "posts": [
@@ -744,8 +744,8 @@
     "tasks": {
         "parents": [],
         "children": [
-            "tasks>iphone",
-            "iphone"
+            "iphone",
+            "tasks>iphone"
         ],
         "related": {},
         "posts": [
@@ -1443,10 +1443,10 @@
     "software": {
         "parents": [],
         "children": [
-            "software>cloud",
+            "cloud",
             "software>mobile",
             "mobile",
-            "cloud"
+            "software>cloud"
         ],
         "related": {},
         "posts": [
@@ -1502,8 +1502,8 @@
     },
     "mobile": {
         "parents": [
-            "scripts",
-            "software"
+            "software",
+            "scripts"
         ],
         "children": [],
         "related": {},
@@ -1748,8 +1748,8 @@
     },
     "cloud": {
         "parents": [
-            "scripts",
-            "software"
+            "software",
+            "scripts"
         ],
         "children": [],
         "related": {},
@@ -1819,8 +1819,8 @@
     },
     "edital>direito>processual-penal": {
         "parents": [
-            "direito",
-            "edital"
+            "edital",
+            "direito"
         ],
         "children": [],
         "related": {},
