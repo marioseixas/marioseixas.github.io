@@ -28,7 +28,11 @@
     --btn-text: #FFFF00;
     --btn-hover-bg: #FF0000;
     --btn-hover-text: #FFFF00;
+    --heading-color-1: #434300;
+    --heading-color-2: #004343;
+    --heading-color-3: #430043;
 }
+
 html {
     box-sizing: border-box;
     margin: auto 0 auto 0;
@@ -245,4 +249,146 @@ html {
     margin: 1em auto;
     max-width: 100%;
     padding: 1em;
+}
+
+@mixin button-styles {
+  background-color: var(--btn-bg);
+  border-color: var(--btn-bg);
+  color: var(--btn-text);
+  padding: 0.3em 0.6em;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+
+  &:hover,
+  &:focus {
+    background-color: var(--btn-hover-bg);
+    color: var(--btn-hover-text);
+  }
+}
+
+// Unique Styles
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  line-height: 1.2;
+}
+
+h1 {
+  color: var(--heading-color-1);
+}
+h2 {
+  color: var(--heading-color-2);
+}
+h3 {
+  color: var(--heading-color-3);
+}
+
+p.description {
+  font-weight: bold;
+
+  &:first-letter {
+    font-size: 2em;
+    text-transform: uppercase;
+    margin-top: -0.25em;
+    float: left;
+    color: var(--highlights-crimson);
+    margin-right: 0.75ex;
+    font-family: "Monotype Corsiva", cursive;
+    font-weight: bold;
+  }
+}
+
+a.bc {
+  letter-spacing: 0.15ex;
+}
+
+div.flink a {
+  padding: 0 0.3ex;
+  line-height: 2;
+}
+
+.btn-primary,
+.btn-secondary,
+.convert-btn,
+.action-btn {
+  @include button-styles;
+}
+
+.convert-btn {
+  height: 40px;
+  margin: 5px 0;
+  width: 100%;
+}
+
+.action-btn {
+  height: 30px;
+  margin: 5px 0;
+}
+
+.editor-container {
+  position: fixed;
+  width: 100vw;
+  height: 90vh;
+  display: flex;
+  align-items: center;
+}
+
+.editor-ui {
+  width: 50%;
+  height: 100%;
+  margin: 0 30px;
+}
+
+.content {
+  max-width: 40em;
+  margin: 0 auto;
+  border: {
+    left: 0.25em outset var(--bd-muted);
+    right: 0.25em outset var(--bd-muted);
+  }
+  padding: 0.1em 5% 1.5em;
+  background-color: var(--bg-default);
+
+  pre {
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    overflow: auto;
+    background-color: var(--code-background);
+    color: var(--code-text);
+    padding: 1em;
+    border-radius: var(--border-radius);
+  }
+}
+
+textarea {
+  width: 100%;
+  height: 90%;
+  min-height: 300px;
+  resize: vertical;
+  background-color: var(--bg-subtle);
+  color: var(--text-default);
+  border: 1px solid var(--bd-muted);
+  border-radius: var(--border-radius);
+  padding: 0.5em;
+}
+
+.result-textarea {
+  margin-top: 20px;
+}
+
+.matched-text {
+  background-color: var(--highlights-pumpkin);
+  color: var(--text-default);
+}
+
+#tagline {
+  font-size: 0.8em;
+  border-bottom: 1px solid var(--bd-muted);
+  letter-spacing: 1px;
+  color: var(--text-default);
 }
