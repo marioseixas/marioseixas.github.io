@@ -1,1 +1,1 @@
-Sitemap: /sitemap.xml
+Sitemap: https://ib.bsb.br/sitemap.xml
