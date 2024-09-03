@@ -1961,7 +1961,8 @@ if (typeof global !== 'undefined') {
 
   // Set up download functionality 
   downloadButton.onclick = function (event) {
-    event.sectionventDefault(); 
+    event.preventDefault();
+
     // Create a Blob with the code content 
     var blob = new Blob([code], { type: 'text/plain' });
     var url = URL.createObjectURL(blob); 
