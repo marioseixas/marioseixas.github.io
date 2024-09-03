@@ -3,7 +3,7 @@
     <title>infoBAG</title>
     <link href="//rss.xml" rel="self"/>
     <link href="//"/>
-    <updated>2024-09-03T00:19:55+00:00</updated>
+    <updated>2024-09-03T01:40:09+00:00</updated>
     <id></id>
     <author>
         <name></name>
@@ -5878,7 +5878,8 @@ if __name__ == &quot;__main__&quot;:
   import mermaid from &apos;https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs&apos;;
   mermaid.initialize({
     startOnLoad: true,
-    theme: &apos;dark&apos;,
+    look: &apos;handDrawn&apos;,
+    theme: &apos;neo-dark&apos;,
     er: { useMaxWidth: true }
   });
   setTimeout(() =&gt; {
@@ -7041,7 +7042,8 @@ xrandr --output DP-1 --mode &quot;1152x864_60.00&quot;
   import mermaid from &apos;https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs&apos;;
   mermaid.initialize({
     startOnLoad: true,
-    theme: &apos;dark&apos;,
+    look: &apos;handDrawn&apos;,
+    theme: &apos;neo-dark&apos;,
     er: { useMaxWidth: true }
   });
   setTimeout(() =&gt; {
@@ -7094,7 +7096,8 @@ xrandr --output DP-1 --mode &quot;1152x864_60.00&quot;
   import mermaid from &apos;https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs&apos;;
   mermaid.initialize({
     startOnLoad: true,
-    theme: &apos;dark&apos;,
+    look: &apos;handDrawn&apos;,
+    theme: &apos;neo-dark&apos;,
     er: { useMaxWidth: true }
   });
   setTimeout(() =&gt; {
