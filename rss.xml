@@ -3,7 +3,7 @@
     <title>infoBAG</title>
     <link href="https://ib.bsb.br/rss.xml" rel="self"/>
     <link href="https://ib.bsb.br/"/>
-    <updated>2024-09-03T16:01:18+00:00</updated>
+    <updated>2024-09-03T16:04:58+00:00</updated>
     <id>https://ib.bsb.br</id>
     <author>
         <name></name>
@@ -46934,6 +46934,26 @@ Pense duas vezes antes de se envolver.
         
       &lt;/h3&gt;
       &lt;ul&gt;
+        &lt;a href=&quot;/formatxt/&quot;&gt;
+          &lt;h2&gt;
+            Formatxt
+          &lt;/h2&gt;
+        &lt;/a&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;
+    
+    &lt;div class=&quot;search-link&quot;&gt;
+      &lt;h3&gt;
+        &lt;a class=&quot;post-heading&quot; href=&quot;#&quot; id=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;
+          &lt;img src=&quot;/assets/gold.ico&quot; alt=&quot;gold icon&quot; /&gt;
+        &lt;/a&gt;
+        1991-07-25
+        
+        &amp;rightarrowtail; 
+        03 Sep 2024
+        
+      &lt;/h3&gt;
+      &lt;ul&gt;
         &lt;a href=&quot;/dedup-spaces/&quot;&gt;
           &lt;h2&gt;
             Dedup Spaces
@@ -50864,6 +50884,156 @@ Pense duas vezes antes de se envolver.
     
   &lt;/main&gt;
 &lt;/div&gt;
+&lt;/body&gt;
+</content>
+    </entry>
+    
+    <entry>
+        <title>Formatxt</title>
+        <link href="https://ib.bsb.br/formatxt/"/>
+        <updated>1991-07-25T00:00:00+00:00</updated>
+        <id>https://ib.bsb.br/formatxt/</id>
+        <content type="html">&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot; /&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot; /&gt;
+
+    &lt;title&gt;
+        
+            Formatxt — infoBAG
+        
+    &lt;/title&gt;
+
+    &lt;link rel=&quot;canonical&quot; href=&quot;https://ib.bsb.br/formatxt/&quot; /&gt;
+    &lt;link rel=&quot;alternate&quot; type=&quot;application/rss+xml&quot; title=&quot;infoBAG&quot; href=&quot;https://ib.bsb.br/rss.xml&quot; /&gt;
+
+    
+        &lt;meta itemprop=&quot;keywords&quot; content=&quot;tools&quot; /&gt;
+        
+            &lt;meta property=&quot;article:tag&quot; content=&quot;tools&quot; /&gt;
+        
+    
+
+    &lt;link href=&quot;/style.css&quot; rel=&quot;stylesheet&quot; /&gt;
+    &lt;link href=&quot;/pagefind/pagefind-ui.css&quot; rel=&quot;stylesheet&quot; /&gt;
+    &lt;script src=&quot;/pagefind/pagefind-ui.js&quot;&gt;&lt;/script&gt;
+    &lt;script type=&quot;module&quot;&gt;
+        import PagefindHighlight from &apos;/pagefind/pagefind-highlight.js&apos;;
+        new PagefindHighlight({ highlightParam: &quot;highlight&quot; });
+    &lt;/script&gt;
+    &lt;script src=&quot;/assets/js/search.js&quot; defer=&quot;&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;/assets/js/prism.js&quot; defer=&quot;&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;/assets/js/textformatting.js&quot; defer=&quot;&quot;&gt;&lt;/script&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+    &lt;a class=&quot;search-input-block&quot; id=&quot;search&quot;&gt;&lt;/a&gt;
+
+    &lt;header&gt;
+        &lt;nav aria-label=&quot;Main navigation&quot;&gt;
+            &lt;div class=&quot;header-container&quot;&gt;
+                &lt;a class=&quot;internal-link&quot; href=&quot;/&quot;&gt;
+                    &lt;img src=&quot;/assets/Sudden_Death_Rune.gif&quot; alt=&quot;Sudden Death Rune&quot; class=&quot;favicon&quot; /&gt;
+                &lt;/a&gt;
+                &lt;a href=&quot;https://ib.bsb.br/archive&quot;&gt;
+                    &lt;img src=&quot;/favicon.ico&quot; alt=&quot;Archive Icon&quot; class=&quot;favicon&quot; /&gt;
+                &lt;/a&gt;
+                &lt;a href=&quot;https://ib.bsb.br/tags&quot;&gt;
+                    &lt;img src=&quot;/assets/Label.gif&quot; alt=&quot;Tags Icon&quot; class=&quot;favicon&quot; /&gt;
+                &lt;/a&gt;
+                &lt;a href=&quot;https://ib.bsb.br/events&quot;&gt;
+                    &lt;img src=&quot;/assets/Paralyse_Rune.gif&quot; alt=&quot;Events Icon&quot; class=&quot;favicon&quot; /&gt;
+                &lt;/a&gt;
+            &lt;/div&gt;
+        &lt;/nav&gt;
+    &lt;/header&gt;
+    &lt;div class=&quot;container&quot;&gt;
+        &lt;div class=&quot;row justify-content-center&quot;&gt;
+            &lt;div class=&quot;col-lg-8&quot;&gt;
+                &lt;textarea class=&quot;form-control&quot; id=&quot;thetext&quot; onkeyup=&quot;updatecounts()&quot; onchange=&quot;updatecounts()&quot; onfocus=&quot;updatecounts()&quot; placeholder=&quot;Paste your text here :)&quot;&gt;&lt;/textarea&gt;
+                &lt;hr class=&quot;mt-4&quot; /&gt;
+                &lt;div class=&quot;d-flex flex-wrap justify-content-between align-items-center&quot;&gt;
+                    &lt;div class=&quot;col-12 col-md-3 mb-2&quot;&gt;
+                        &lt;input class=&quot;form-control&quot; readonly=&quot;&quot; id=&quot;words&quot; placeholder=&quot;Words&quot; /&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;col-12 col-md-3 mb-2&quot;&gt;
+                        &lt;input class=&quot;form-control&quot; readonly=&quot;&quot; id=&quot;characters&quot; placeholder=&quot;Characters&quot; /&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;col-12 col-md-3 mb-2&quot;&gt;
+                        &lt;input class=&quot;form-control&quot; readonly=&quot;&quot; id=&quot;lines&quot; placeholder=&quot;Lines&quot; /&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;col-12 col-md-3 mb-2&quot;&gt;
+                        &lt;input class=&quot;form-control&quot; readonly=&quot;&quot; id=&quot;paragraphs&quot; placeholder=&quot;Paragraphs&quot; /&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;                
+                &lt;hr class=&quot;mt-4&quot; /&gt;
+                &lt;div class=&quot;text-center&quot;&gt;
+                    &lt;button class=&quot;mt-1 btn btn-primary mr-2&quot; onclick=&quot;uppercase()&quot;&gt;UPPERCASE ALL&lt;/button&gt;
+                    &lt;button class=&quot;mt-1 btn btn-primary mr-2&quot; onclick=&quot;lowercase()&quot;&gt;lowercase all&lt;/button&gt;
+                    &lt;button class=&quot;mt-1 btn btn-primary mr-2&quot; onclick=&quot;capitalizesentences()&quot;&gt;Capitalize sentences&lt;/button&gt;
+                    &lt;button class=&quot;mt-1 btn btn-primary&quot; onclick=&quot;capitalizewords()&quot;&gt;Capitalize Words&lt;/button&gt;
+                &lt;/div&gt;
+                &lt;hr /&gt;
+                &lt;div class=&quot;row&quot;&gt;
+                    &lt;div class=&quot;col-md-8&quot;&gt;
+                        &lt;div class=&quot;input-group justify-content-center&quot;&gt;
+                            &lt;span class=&quot;align-self-center&quot;&gt;Change&lt;/span&gt;
+                            &lt;input type=&quot;text&quot; class=&quot;form-control ms-2&quot; id=&quot;from&quot; placeholder=&quot;From&quot; /&gt;
+                            &lt;span class=&quot;align-self-center ms-2&quot;&gt;with&lt;/span&gt;
+
+                            &lt;input type=&quot;text&quot; class=&quot;form-control ms-2 &quot; id=&quot;to&quot; placeholder=&quot;To&quot; /&gt;
+
+                            &lt;button class=&quot;btn btn-primary ms-2&quot; onclick=&quot;replacetext()&quot;&gt;Replace&lt;/button&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;col-md-4&quot;&gt;
+                        &lt;div class=&quot;form-check&quot;&gt;
+                            &lt;input class=&quot;form-check-input&quot; type=&quot;checkbox&quot; id=&quot;cs&quot; /&gt;
+                            &lt;label class=&quot;form-check-label&quot; for=&quot;cs&quot;&gt;Case sensitive&lt;/label&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;hr /&gt;
+                &lt;div class=&quot;row&quot;&gt;
+                    &lt;div class=&quot;col-md-8&quot;&gt;
+                        &lt;div class=&quot;input-group&quot;&gt;
+                            &lt;span class=&quot;align-self-center&quot;&gt;Add&lt;/span&gt;
+                            &lt;input class=&quot;form-control ms-2&quot; id=&quot;add&quot; placeholder=&quot;Text&quot; /&gt;
+                            &lt;span class=&quot;align-self-center ms-2&quot;&gt;to the&lt;/span&gt;
+                            &lt;select class=&quot;form-control ms-2&quot; id=&quot;addpos&quot;&gt;
+                                &lt;option value=&quot;start&quot;&gt;start&lt;/option&gt;
+                                &lt;option value=&quot;end&quot;&gt;end&lt;/option&gt;
+                            &lt;/select&gt;
+                            &lt;span class=&quot;align-self-center ms-2&quot;&gt;each line.&lt;/span&gt;
+                            &lt;button class=&quot;btn btn-primary ms-2&quot; onclick=&quot;addtext()&quot;&gt;Update&lt;/button&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;hr /&gt;
+                &lt;div class=&quot;row&quot;&gt;
+                    &lt;div class=&quot;col-md-8&quot;&gt;
+                        &lt;div class=&quot;input-group&quot;&gt;
+                            &lt;span class=&quot;align-self-center&quot;&gt;Trim&lt;/span&gt;
+                            &lt;select class=&quot;form-control d-inline ms-2&quot; id=&quot;trimpos&quot; style=&quot;width: 15%;&quot;&gt;
+                                &lt;option value=&quot;first&quot;&gt;first&lt;/option&gt;
+                                &lt;option value=&quot;last&quot;&gt;last&lt;/option&gt;
+                            &lt;/select&gt;
+
+                            &lt;input class=&quot;form-control ms-2&quot; id=&quot;trimnumber&quot; placeholder=&quot;Number&quot; type=&quot;number&quot; style=&quot;width: 15%;&quot; /&gt;
+                            characters of each line.
+                            &lt;button class=&quot;btn btn-primary ms-2&quot; onclick=&quot;trimtext()&quot;&gt;Update&lt;/button&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;p&gt;
+
+                &lt;/p&gt;
+                &lt;hr /&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;script&gt;
+        updatecounts();
+    &lt;/script&gt;
 &lt;/body&gt;
 </content>
     </entry>
