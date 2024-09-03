@@ -496,14 +496,14 @@
     "scripts": {
         "parents": [],
         "children": [
-            "mobile",
             "cloud",
             "google-apps-script",
+            "mobile",
+            "AI",
+            "scripts>AI",
             "scripts>cloud",
             "scripts>google-apps-script",
-            "scripts>AI",
-            "scripts>mobile",
-            "AI"
+            "scripts>mobile"
         ],
         "related": {
             "linux": 26,
@@ -702,10 +702,10 @@
     "edital": {
         "parents": [],
         "children": [
-            "edital>direito>processual-penal",
+            "direito>processual-penal",
             "edital>direito",
-            "direito",
-            "direito>processual-penal"
+            "edital>direito>processual-penal",
+            "direito"
         ],
         "related": {},
         "posts": [
@@ -744,8 +744,8 @@
     "tasks": {
         "parents": [],
         "children": [
-            "tasks>iphone",
-            "iphone"
+            "iphone",
+            "tasks>iphone"
         ],
         "related": {},
         "posts": [
@@ -1385,8 +1385,8 @@
             "scripts"
         ],
         "children": [
-            "AI>prompt",
-            "prompt"
+            "prompt",
+            "AI>prompt"
         ],
         "related": {},
         "posts": [
@@ -1443,9 +1443,9 @@
     "software": {
         "parents": [],
         "children": [
-            "software>mobile",
             "software>cloud",
             "mobile",
+            "software>mobile",
             "cloud"
         ],
         "related": {},
@@ -1502,8 +1502,8 @@
     },
     "mobile": {
         "parents": [
-            "scripts",
-            "software"
+            "software",
+            "scripts"
         ],
         "children": [],
         "related": {},
@@ -1748,8 +1748,8 @@
     },
     "cloud": {
         "parents": [
-            "scripts",
-            "software"
+            "software",
+            "scripts"
         ],
         "children": [],
         "related": {},
