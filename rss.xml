@@ -3,7 +3,7 @@
     <title>infoBAG</title>
     <link href="https://ib.bsb.br/rss.xml" rel="self"/>
     <link href="https://ib.bsb.br/"/>
-    <updated>2024-09-03T17:15:57+00:00</updated>
+    <updated>2024-09-03T17:18:14+00:00</updated>
     <id>https://ib.bsb.br</id>
     <author>
         <name></name>
@@ -46934,6 +46934,26 @@ Pense duas vezes antes de se envolver.
         
       &lt;/h3&gt;
       &lt;ul&gt;
+        &lt;a href=&quot;/regex/&quot;&gt;
+          &lt;h2&gt;
+            Regex
+          &lt;/h2&gt;
+        &lt;/a&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;
+    
+    &lt;div class=&quot;search-link&quot;&gt;
+      &lt;h3&gt;
+        &lt;a class=&quot;post-heading&quot; href=&quot;#&quot; id=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;
+          &lt;img src=&quot;/assets/gold.ico&quot; alt=&quot;gold icon&quot; /&gt;
+        &lt;/a&gt;
+        1991-07-25
+        
+        &amp;rightarrowtail; 
+        03 Sep 2024
+        
+      &lt;/h3&gt;
+      &lt;ul&gt;
         &lt;a href=&quot;/rm-lines/&quot;&gt;
           &lt;h2&gt;
             Rm Lines
@@ -51209,6 +51229,194 @@ Pense duas vezes antes de se envolver.
     }
     
 &lt;/script&gt;
+&lt;/body&gt;
+</content>
+    </entry>
+    
+    <entry>
+        <title>Regex</title>
+        <link href="https://ib.bsb.br/regex/"/>
+        <updated>1991-07-25T00:00:00+00:00</updated>
+        <id>https://ib.bsb.br/regex/</id>
+        <content type="html">&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot; /&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot; /&gt;
+
+    &lt;title&gt;
+        
+            Regex — infoBAG
+        
+    &lt;/title&gt;
+
+    &lt;link rel=&quot;canonical&quot; href=&quot;https://ib.bsb.br/regex/&quot; /&gt;
+    &lt;link rel=&quot;alternate&quot; type=&quot;application/rss+xml&quot; title=&quot;infoBAG&quot; href=&quot;https://ib.bsb.br/rss.xml&quot; /&gt;
+
+    
+        &lt;meta itemprop=&quot;keywords&quot; content=&quot;tools&quot; /&gt;
+        
+            &lt;meta property=&quot;article:tag&quot; content=&quot;tools&quot; /&gt;
+        
+    
+
+    &lt;link href=&quot;/style.css&quot; rel=&quot;stylesheet&quot; /&gt;
+    &lt;link href=&quot;/pagefind/pagefind-ui.css&quot; rel=&quot;stylesheet&quot; /&gt;
+    &lt;script src=&quot;/pagefind/pagefind-ui.js&quot;&gt;&lt;/script&gt;
+    &lt;script type=&quot;module&quot;&gt;
+        import PagefindHighlight from &apos;/pagefind/pagefind-highlight.js&apos;;
+        new PagefindHighlight({ highlightParam: &quot;highlight&quot; });
+    &lt;/script&gt;
+    &lt;script src=&quot;/assets/js/search.js&quot; defer=&quot;&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;/assets/js/prism.js&quot; defer=&quot;&quot;&gt;&lt;/script&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+    &lt;a class=&quot;search-input-block&quot; id=&quot;search&quot;&gt;&lt;/a&gt;
+
+    &lt;header&gt;
+        &lt;nav aria-label=&quot;Main navigation&quot;&gt;
+            &lt;div class=&quot;header-container&quot;&gt;
+                &lt;a class=&quot;internal-link&quot; href=&quot;/&quot;&gt;
+                    &lt;img src=&quot;/assets/Sudden_Death_Rune.gif&quot; alt=&quot;Sudden Death Rune&quot; class=&quot;favicon&quot; /&gt;
+                &lt;/a&gt;
+                &lt;a href=&quot;https://ib.bsb.br/archive&quot;&gt;
+                    &lt;img src=&quot;/favicon.ico&quot; alt=&quot;Archive Icon&quot; class=&quot;favicon&quot; /&gt;
+                &lt;/a&gt;
+                &lt;a href=&quot;https://ib.bsb.br/tags&quot;&gt;
+                    &lt;img src=&quot;/assets/Label.gif&quot; alt=&quot;Tags Icon&quot; class=&quot;favicon&quot; /&gt;
+                &lt;/a&gt;
+                &lt;a href=&quot;https://ib.bsb.br/events&quot;&gt;
+                    &lt;img src=&quot;/assets/Paralyse_Rune.gif&quot; alt=&quot;Events Icon&quot; class=&quot;favicon&quot; /&gt;
+                &lt;/a&gt;
+            &lt;/div&gt;
+        &lt;/nav&gt;
+    &lt;/header&gt;
+    &lt;div class=&quot;container mt-5&quot;&gt;
+        &lt;div class=&quot;row&quot;&gt;
+            &lt;!-- Options Column --&gt;
+            &lt;div class=&quot;col-md-6&quot;&gt;
+                &lt;div class=&quot;form-group&quot;&gt;
+                    &lt;label for=&quot;sourceInput&quot;&gt;Source Text:&lt;/label&gt;
+                    &lt;textarea type=&quot;text&quot; class=&quot;form-control&quot; id=&quot;sourceInput&quot;&gt;&lt;/textarea&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;form-group my-3&quot;&gt;
+                    &lt;label for=&quot;regexInput&quot;&gt;Regular Expression:&lt;/label&gt;
+                    &lt;input type=&quot;text&quot; class=&quot;form-control&quot; id=&quot;regexInput&quot; /&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;form-group my-3&quot;&gt;
+                    &lt;label for=&quot;prependInput&quot;&gt;Prepend Value:&lt;/label&gt;
+                    &lt;input type=&quot;text&quot; class=&quot;form-control&quot; id=&quot;prependInput&quot; /&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;form-group my-3&quot;&gt;
+                    &lt;label for=&quot;appendInput&quot;&gt;Append Value:&lt;/label&gt;
+                    &lt;input type=&quot;text&quot; class=&quot;form-control&quot; id=&quot;appendInput&quot; /&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;form-group my-3&quot;&gt;
+                    &lt;label for=&quot;operationSelect&quot;&gt;Select Operation:&lt;/label&gt;
+                    &lt;select class=&quot;form-control&quot; id=&quot;operationSelect&quot;&gt;
+                        &lt;option value=&quot;prepend&quot;&gt;Prepend&lt;/option&gt;
+                        &lt;option value=&quot;append&quot;&gt;Append&lt;/option&gt;
+                        &lt;option value=&quot;replace&quot;&gt;Replace&lt;/option&gt;
+                        &lt;option value=&quot;append-prepend&quot;&gt;Append and Prepend&lt;/option&gt;
+                    &lt;/select&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;form-group my-3&quot;&gt;
+                    &lt;button class=&quot;btn btn-primary btn-block&quot; id=&quot;findMatchButton&quot;&gt;Find Match&lt;/button&gt;
+                &lt;button class=&quot;btn btn-success btn-block&quot; id=&quot;applyOperationButton&quot;&gt;Apply Operation&lt;/button&gt;
+                &lt;/div&gt;
+                
+            &lt;/div&gt;
+
+            &lt;!-- Result Column --&gt;
+            &lt;div class=&quot;col-md-6&quot;&gt;
+                &lt;div class=&quot;text-center&quot;&gt;
+                    &lt;h2 class=&quot;text-center&quot;&gt;Result:&lt;/h2&gt;
+                    &lt;button class=&quot;btn btn-secondary mt-2&quot; onclick=&quot;copyResultToClipboard()&quot;&gt;Copy
+                        result&lt;/button&gt;
+                &lt;/div&gt;
+
+                &lt;div id=&quot;result&quot; class=&quot;text-center&quot;&gt;&lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;!-- Bootstrap JS and jQuery (required for Bootstrap) --&gt;
+    &lt;script src=&quot;https://code.jquery.com/jquery-3.5.1.slim.min.js&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.min.js&quot;&gt;&lt;/script&gt;
+
+    &lt;script&gt;
+        const resultDiv = document.getElementById(&apos;result&apos;);
+
+        // Function to encode HTML entities
+        function encodeHTML(html) {
+            return document.createElement(&apos;a&apos;).appendChild(document.createTextNode(html)).parentNode.innerHTML;
+        }
+
+        document.addEventListener(&quot;DOMContentLoaded&quot;, function () {
+            const findMatchButton = document.getElementById(&quot;findMatchButton&quot;);
+            const applyOperationButton = document.getElementById(&quot;applyOperationButton&quot;);
+            const resultDiv = document.getElementById(&quot;result&quot;);
+            let matchedText = &apos;&apos;;
+
+            findMatchButton.addEventListener(&quot;click&quot;, function () {
+                const sourceText = document.getElementById(&quot;sourceInput&quot;).value;
+                const regexPattern = document.getElementById(&quot;regexInput&quot;).value;
+
+                try {
+                    const regex = new RegExp(regexPattern, &quot;g&quot;);
+                    matchedText = sourceText.replace(regex, (match) =&gt; {
+                        return `&lt;span class=&quot;matched-text&quot;&gt;${encodeHTML(match)}&lt;/span&gt;`;
+                    });
+
+                    resultDiv.innerHTML = matchedText;
+                } catch (error) {
+                    resultDiv.textContent = &quot;Invalid Regular Expression&quot;;
+                }
+            });
+
+            applyOperationButton.addEventListener(&quot;click&quot;, function () {
+                const appendValue = document.getElementById(&quot;appendInput&quot;).value;
+                const prependValue = document.getElementById(&quot;prependInput&quot;).value;
+                const operation = document.getElementById(&quot;operationSelect&quot;).value;
+
+                if (matchedText) {
+                    const modifiedText = matchedText.replace(/&lt;span class=&quot;matched-text&quot;&gt;(.+?)&lt;\/span&gt;/g, (match, group) =&gt; {
+                        switch (operation) {
+                            case &quot;append&quot;:
+                                return `&lt;span class=&quot;matched-text&quot;&gt;${encodeHTML(group + appendValue)}&lt;/span&gt;`;
+                            case &quot;prepend&quot;:
+                                return `&lt;span class=&quot;matched-text&quot;&gt;${encodeHTML(prependValue + group)}&lt;/span&gt;`;
+                            case &quot;replace&quot;:
+                                return encodeHTML(appendValue);
+                            case &quot;append-prepend&quot;:
+                                return `&lt;span class=&quot;matched-text&quot;&gt;${encodeHTML(prependValue + group + appendValue)}&lt;/span&gt;`;
+                            default:
+                                return match;
+                        }
+                    });
+
+                    resultDiv.innerHTML = modifiedText;
+                } else {
+                    resultDiv.textContent = &quot;No matching text to apply the operation.&quot;;
+                }
+            });
+        });
+
+
+        function copyToClipboard(elementId) {
+            const textArea = document.getElementById(elementId);
+            textArea.select();
+            document.execCommand(&quot;copy&quot;);
+        }
+
+        function copyResultToClipboard() {
+            const range = document.createRange();
+            range.selectNode(resultDiv);
+            window.getSelection().removeAllRanges();
+            window.getSelection().addRange(range);
+            document.execCommand(&apos;copy&apos;);
+            window.getSelection().removeAllRanges();
+        }
+
+    &lt;/script&gt;
 &lt;/body&gt;
 </content>
     </entry>
