@@ -392,3 +392,272 @@ textarea {
   letter-spacing: 1px;
   color: var(--text-default);
 }
+
+.mermaid {
+  display: block; 
+  border: 1px dotted var(--accents-amethyst);
+  padding: 0.5em 1em; 
+}
+
+/* Snackbar Styles*/ 
+snackbar { 
+  visibility: hidden;
+  min-width: 250px; 
+  margin-left: -125px;
+  background-color: #333;
+  color: #fff;
+  text-align: center; 
+  border-radius: 2px;
+  padding: 16px;
+  position: fixed; 
+  left: 50%; 
+  bottom: 30px; 
+  font-size: 17px; 
+  z-index: 1000; 
+
+  &.show {
+    visibility: visible; 
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  }
+}
+
+@-webkit-keyframes fadein {
+  from {bottom: 0; opacity: 0;} 
+  to {bottom: 30px; opacity: 1;}
+}
+
+@keyframes fadein {
+  from {bottom: 0; opacity: 0;}
+  to {bottom: 30px; opacity: 1;}
+}
+
+@-webkit-keyframes fadeout {
+  from {bottom: 30px; opacity: 1;} 
+  to {bottom: 0; opacity: 0;}
+}
+
+@keyframes fadeout {
+  from {bottom: 30px; opacity: 1;}
+  to {bottom: 0; opacity: 0;}
+}
+
+
+.code-container { 
+  margin-bottom: 1em; 
+  position: relative;
+
+  pre {
+    margin-bottom: 0;
+    border: 1px dotted var(--accents-amethyst); 
+  }
+
+  .copy-button {
+    background-color: var(--btn-bg);
+    border: none;
+    color: var(--btn-text); 
+    cursor: pointer; 
+    padding: 0.5em 1em; 
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    transition: background-color 0.3s ease;
+    z-index: 1; 
+
+    &:hover,
+    &.copied {
+      background-color: var(--btn-hover-bg);
+    }
+
+    &.copied {
+      color: var(--bg-default);
+    }
+  }
+}
+
+/* Code highlighting styles */ 
+code[class*="language-"],
+pre[class*="language-"] {
+  color: white;
+  background: none;
+  font-family: consolas, monaco, 'andale mono', 'ubuntu mono', monospace;
+  font-size: 1em; 
+  text-align: left; 
+  white-space: pre;
+  word-spacing: normal; 
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 1.5;
+  -moz-tab-size: 4; 
+  -o-tab-size: 4; 
+  tab-size: 4;
+  -webkit-hyphens: none;
+  -moz-hyphens: none; 
+  -ms-hyphens: none;
+  hyphens: none;
+
+  &.language-markup .token.tag,
+  &.language-markup .token.attr-name,
+  &.language-markup .token.punctuation {
+    color: hsl(33, 33%, 52%); 
+  }
+
+  /* Styles specifically for code blocks (in <pre> tags) */
+  &[class*="language-"] { 
+    background: hsl(0, 0%, 8%);
+    border-radius: .5em;
+    border: .3em solid hsl(0, 0%, 33%);
+    box-shadow: 1px 1px .5em black inset; 
+    margin: .5em 0;
+    overflow: auto;
+    padding: 1em; 
+
+    &::-moz-selection { background: hsl(200, 4%, 16%); }
+    &::selection { background: hsl(200, 4%, 16%); }
+
+    .line-highlight {
+      background: hsla(0, 0%, 33%, 0.25);
+      background: linear-gradient(to right, hsla(0, 0%, 33%, .1) 70%, hsla(0, 0%, 33%, 0)); 
+      border-bottom: 1px dashed hsl(0, 0%, 33%);
+      border-top: 1px dashed hsl(0, 0%, 33%); 
+      margin-top: 0.75em; 
+      z-index: 0;
+
+      &:before,
+      &[data-end]:after {
+        background-color: hsl(215, 15%, 59%);
+        color: hsl(24, 20%, 95%); 
+      }
+    }
+
+    &.line-numbers {
+      position: relative; 
+      padding-left: 3.8em;
+      counter-reset: linenumber; 
+
+      > code { white-space: inherit; }
+
+      .line-numbers-rows {
+        position: absolute;
+        pointer-events: none; 
+        top: 0;
+        font-size: 100%;
+        left: -3.8em;
+        width: 3em; /* works for line-numbers below 1000 lines */
+        letter-spacing: -1px;
+        border-right: 1px solid #999;
+
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+
+        > span {
+          pointer-events: none;
+          display: block;
+          counter-increment: linenumber;
+
+          &:before {
+            content: counter(linenumber);
+            color: #999;
+            display: block;
+            padding-right: 0.8em;
+            text-align: right;
+          }
+        }
+      }
+    }
+  } 
+
+  /* Styles for inline code (in <code> tags not within <pre> tags) */
+  :not(pre) > & { 
+    border-radius: .3em;
+    border: .13em solid hsl(0, 0%, 33%);
+    box-shadow: 1px 1px .3em -.1em black inset; 
+    padding: .15em .2em .05em;
+    white-space: normal;
+  }
+
+  &::-moz-selection,
+  & ::-moz-selection { text-shadow: none; background: hsla(0, 0%, 93%, 0.15); }
+  &::selection,
+  & ::selection { text-shadow: none; background: hsla(0, 0%, 93%, 0.15); }
+
+
+  .token {
+    &.comment,
+    &.prolog, 
+    &.doctype, 
+    &.cdata { color: hsl(0, 0%, 47%); }
+    &.punctuation { color: #999; }
+    &.namespace { opacity: .7; }
+    &.tag,
+    &.boolean,
+    &.number,
+    &.constant,
+    &.symbol,
+    &.deleted { color: #e2777a; }
+    &.selector,
+    &.attr-name,
+    &.string, 
+    &.char, 
+    &.builtin, 
+    &.inserted { color: #f18eb6; } 
+    &.operator,
+    &.entity, 
+    &.url, 
+    &.variable { color: #c6a0f6; }
+    &.atrule,
+    &.attr-value, 
+    &.keyword { color: #ef9f76; }
+    &.function { color: hsl(229, 100%, 61%); }
+    &.regex, 
+    &.important { color: #e90; }
+    &.important, 
+    &.bold { font-weight: bold; } 
+    &.italic { font-style: italic; }
+    &.entity { cursor: help; }
+    &.property, 
+    &.tag,
+    &.constant,
+    &.symbol,
+    &.number { color: hsl(352, 100%, 69%); }
+
+    &.atrule {
+      color: hsl(352, 100%, 69%); 
+    } 
+
+    &.attr-value {
+      color: hsl(75, 70%, 60%); 
+    }
+
+    &.keyword {
+      color: hsl(39, 100%, 56%);
+    }
+
+    &.selector {
+      color: hsl(75, 70%, 60%);
+    } 
+
+    &.operator {
+      color: hsl(39, 100%, 56%); 
+    } 
+
+    &.function,
+    &.deleted {
+      color: hsl(0, 100%, 67%);
+    }
+
+    &.boolean {
+      color: hsl(0, 100%, 67%); 
+    }
+
+    &.variable {
+      color: hsl(0, 100%, 67%);
+    }
+
+    /* Ensure tokens are on top of their background. */
+    position: relative;
+    z-index: 1;
+  }
+}
