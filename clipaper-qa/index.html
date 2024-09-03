@@ -162,7 +162,7 @@
   <li>Install the required Python packages using pip:</li>
 </ol>
 
-<div class="language-bash highlighter-rouge"><div class="highlight"><section><code>pip3 <span class="nb">install </span>paperqa
+<div class="language-bash highlighter-rouge"><div class="highlight"><section class="line-numbers" style="white-space: pre-line;"><code>pip3 <span class="nb">install </span>paperqa
 </code></section></div></div>
 
 <p>Note: The other required packages (<code class="language-plaintext highlighter-rouge">argparse</code>, <code class="language-plaintext highlighter-rouge">glob</code>, <code class="language-plaintext highlighter-rouge">json</code>, <code class="language-plaintext highlighter-rouge">pickle</code>, <code class="language-plaintext highlighter-rouge">sys</code>, <code class="language-plaintext highlighter-rouge">pathlib</code>, <code class="language-plaintext highlighter-rouge">typing</code>) are part of the Python standard library and do not need to be installed separately.</p>
@@ -262,14 +262,14 @@
   <li>Ask a single question:</li>
 </ol>
 
-<div class="language-bash highlighter-rouge"><div class="highlight"><section><code>python script.py <span class="nt">--pdf_dir</span> /path/to/pdfs <span class="nt">--question</span> <span class="s2">"What is the impact of climate change on agriculture?"</span>
+<div class="language-bash highlighter-rouge"><div class="highlight"><section class="line-numbers" style="white-space: pre-line;"><code>python script.py <span class="nt">--pdf_dir</span> /path/to/pdfs <span class="nt">--question</span> <span class="s2">"What is the impact of climate change on agriculture?"</span>
 </code></section></div></div>
 
 <ol>
   <li>Ask multiple questions from a file:</li>
 </ol>
 
-<div class="language-bash highlighter-rouge"><div class="highlight"><section><code>python script.py <span class="nt">--pdf_dir</span> /path/to/pdfs <span class="nt">--questions_file</span> questions.txt
+<div class="language-bash highlighter-rouge"><div class="highlight"><section class="line-numbers" style="white-space: pre-line;"><code>python script.py <span class="nt">--pdf_dir</span> /path/to/pdfs <span class="nt">--questions_file</span> questions.txt
 </code></section></div></div>
 <h3 id="list-of-questions-template">
   
@@ -282,7 +282,7 @@
 </h3>
       
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><section><code>questions = [
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><section class="line-numbers" style="white-space: pre-line;"><code>questions = [
     "Q1?",
     "Q2?",
     # ... add your 28 other questions here
@@ -293,7 +293,7 @@
   <li>Load existing embeddings and ask a question:</li>
 </ol>
 
-<div class="language-bash highlighter-rouge"><div class="highlight"><section><code>python script.py <span class="nt">--load_embeddings</span> embeddings.pkl <span class="nt">--question</span> <span class="s2">"What are the latest advancements in AI?"</span>
+<div class="language-bash highlighter-rouge"><div class="highlight"><section class="line-numbers" style="white-space: pre-line;"><code>python script.py <span class="nt">--load_embeddings</span> embeddings.pkl <span class="nt">--question</span> <span class="s2">"What are the latest advancements in AI?"</span>
 </code></section></div></div>
 <h2 id="detailed-explanation">
   
@@ -412,7 +412,7 @@
 </h1>
       
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><section><code>from paperqa import Answer, Docs, PromptCollection, OpenAILLMModel, OpenAIEmbeddingModel
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><section class="line-numbers" style="white-space: pre-line;"><code>from paperqa import Answer, Docs, PromptCollection, OpenAILLMModel, OpenAIEmbeddingModel
 import argparse
 import sys
 import pickle
@@ -672,7 +672,7 @@ if __name__ == "__main__":
 <ul>
   <li>You can create a list of prompts and iterate over them, similar to the example in point 1.</li>
   <li>Here’s an example:
-    <div class="language-python highlighter-rouge"><div class="highlight"><section><code><span class="n">prompts</span> <span class="o">=</span> <span class="p">[</span>
+    <div class="language-python highlighter-rouge"><div class="highlight"><section class="line-numbers" style="white-space: pre-line;"><code><span class="n">prompts</span> <span class="o">=</span> <span class="p">[</span>
     <span class="sh">"</span><span class="s">Prompt 1</span><span class="sh">"</span><span class="p">,</span>
     <span class="sh">"</span><span class="s">Prompt 2</span><span class="sh">"</span><span class="p">,</span>
     <span class="c1"># ...
@@ -688,7 +688,7 @@ if __name__ == "__main__":
   </li>
   <li>You can use the <code class="language-plaintext highlighter-rouge">sys</code> module to read input from the command line.</li>
   <li>Here’s an example:
-    <div class="language-python highlighter-rouge"><div class="highlight"><section><code><span class="kn">import</span> <span class="n">sys</span>
+    <div class="language-python highlighter-rouge"><div class="highlight"><section class="line-numbers" style="white-space: pre-line;"><code><span class="kn">import</span> <span class="n">sys</span>
 
 <span class="n">question</span> <span class="o">=</span> <span class="n">sys</span><span class="p">.</span><span class="n">stdin</span><span class="p">.</span><span class="nf">read</span><span class="p">().</span><span class="nf">strip</span><span class="p">()</span>
 <span class="n">answer</span> <span class="o">=</span> <span class="n">loaded_docs</span><span class="p">.</span><span class="nf">query</span><span class="p">(</span><span class="n">question</span><span class="p">,</span> <span class="n">k</span><span class="o">=</span><span class="mi">50</span><span class="p">)</span>
@@ -696,13 +696,13 @@ if __name__ == "__main__":
 </code></section></div>    </div>
   </li>
   <li>You can then pipe the question from the command line:
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><section><code>echo "What is the meaning of life?" | python3 researcher.py
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><section class="line-numbers" style="white-space: pre-line;"><code>echo "What is the meaning of life?" | python3 researcher.py
 </code></section></div>    </div><hr />
     <p>Using the response of a request/query as context for subsequent prompts:</p>
   </li>
   <li>You can use the <code class="language-plaintext highlighter-rouge">answer.context</code> attribute to access the context used for generating the answer.</li>
   <li>Here’s an example:
-    <div class="language-python highlighter-rouge"><div class="highlight"><section><code><span class="n">previous_context</span> <span class="o">=</span> <span class="sh">""</span>
+    <div class="language-python highlighter-rouge"><div class="highlight"><section class="line-numbers" style="white-space: pre-line;"><code><span class="n">previous_context</span> <span class="o">=</span> <span class="sh">""</span>
 <span class="k">for</span> <span class="n">prompt</span> <span class="ow">in</span> <span class="n">prompts</span><span class="p">:</span>
     <span class="n">answer</span> <span class="o">=</span> <span class="n">loaded_docs</span><span class="p">.</span><span class="nf">query</span><span class="p">(</span><span class="n">prompt</span><span class="p">,</span> <span class="n">k</span><span class="o">=</span><span class="mi">50</span><span class="p">,</span> <span class="n">context</span><span class="o">=</span><span class="n">previous_context</span><span class="p">)</span>
     <span class="n">previous_context</span> <span class="o">=</span> <span class="n">answer</span><span class="p">.</span><span class="n">context</span>
@@ -712,7 +712,7 @@ if __name__ == "__main__":
   </li>
 </ul>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><section><code> Implement adversarial prompting. #131
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><section class="line-numbers" style="white-space: pre-line;"><code> Implement adversarial prompting. #131
 This adds a method adversarial_query. Adversarial queries first generate an answer, then asks the LLM to find problems with the answer, then finally generates the final response so that it addresses th
  1 commit
  2 files changed
