@@ -3,7 +3,7 @@
     <title>infoBAG</title>
     <link href="https://ib.bsb.br/rss.xml" rel="self"/>
     <link href="https://ib.bsb.br/"/>
-    <updated>2024-09-03T17:13:41+00:00</updated>
+    <updated>2024-09-03T17:15:57+00:00</updated>
     <id>https://ib.bsb.br</id>
     <author>
         <name></name>
@@ -46934,6 +46934,26 @@ Pense duas vezes antes de se envolver.
         
       &lt;/h3&gt;
       &lt;ul&gt;
+        &lt;a href=&quot;/rm-lines/&quot;&gt;
+          &lt;h2&gt;
+            Rm Lines
+          &lt;/h2&gt;
+        &lt;/a&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;
+    
+    &lt;div class=&quot;search-link&quot;&gt;
+      &lt;h3&gt;
+        &lt;a class=&quot;post-heading&quot; href=&quot;#&quot; id=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;
+          &lt;img src=&quot;/assets/gold.ico&quot; alt=&quot;gold icon&quot; /&gt;
+        &lt;/a&gt;
+        1991-07-25
+        
+        &amp;rightarrowtail; 
+        03 Sep 2024
+        
+      &lt;/h3&gt;
+      &lt;ul&gt;
         &lt;a href=&quot;/compare/&quot;&gt;
           &lt;h2&gt;
             Compare
@@ -51036,6 +51056,158 @@ Pense duas vezes antes de se envolver.
         result = result.join(&quot;\n&quot;)
         document.getElementById(&apos;textarea-result&apos;).value = result
     }
+&lt;/script&gt;
+&lt;/body&gt;
+</content>
+    </entry>
+    
+    <entry>
+        <title>Rm Lines</title>
+        <link href="https://ib.bsb.br/rm-lines/"/>
+        <updated>1991-07-25T00:00:00+00:00</updated>
+        <id>https://ib.bsb.br/rm-lines/</id>
+        <content type="html">&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot; /&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot; /&gt;
+
+    &lt;title&gt;
+        
+            Rm Lines — infoBAG
+        
+    &lt;/title&gt;
+
+    &lt;link rel=&quot;canonical&quot; href=&quot;https://ib.bsb.br/rm-lines/&quot; /&gt;
+    &lt;link rel=&quot;alternate&quot; type=&quot;application/rss+xml&quot; title=&quot;infoBAG&quot; href=&quot;https://ib.bsb.br/rss.xml&quot; /&gt;
+
+    
+        &lt;meta itemprop=&quot;keywords&quot; content=&quot;tools&quot; /&gt;
+        
+            &lt;meta property=&quot;article:tag&quot; content=&quot;tools&quot; /&gt;
+        
+    
+
+    &lt;link href=&quot;/style.css&quot; rel=&quot;stylesheet&quot; /&gt;
+    &lt;link href=&quot;/pagefind/pagefind-ui.css&quot; rel=&quot;stylesheet&quot; /&gt;
+    &lt;script src=&quot;/pagefind/pagefind-ui.js&quot;&gt;&lt;/script&gt;
+    &lt;script type=&quot;module&quot;&gt;
+        import PagefindHighlight from &apos;/pagefind/pagefind-highlight.js&apos;;
+        new PagefindHighlight({ highlightParam: &quot;highlight&quot; });
+    &lt;/script&gt;
+    &lt;script src=&quot;/assets/js/search.js&quot; defer=&quot;&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;/assets/js/prism.js&quot; defer=&quot;&quot;&gt;&lt;/script&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+    &lt;a class=&quot;search-input-block&quot; id=&quot;search&quot;&gt;&lt;/a&gt;
+
+    &lt;header&gt;
+        &lt;nav aria-label=&quot;Main navigation&quot;&gt;
+            &lt;div class=&quot;header-container&quot;&gt;
+                &lt;a class=&quot;internal-link&quot; href=&quot;/&quot;&gt;
+                    &lt;img src=&quot;/assets/Sudden_Death_Rune.gif&quot; alt=&quot;Sudden Death Rune&quot; class=&quot;favicon&quot; /&gt;
+                &lt;/a&gt;
+                &lt;a href=&quot;https://ib.bsb.br/archive&quot;&gt;
+                    &lt;img src=&quot;/favicon.ico&quot; alt=&quot;Archive Icon&quot; class=&quot;favicon&quot; /&gt;
+                &lt;/a&gt;
+                &lt;a href=&quot;https://ib.bsb.br/tags&quot;&gt;
+                    &lt;img src=&quot;/assets/Label.gif&quot; alt=&quot;Tags Icon&quot; class=&quot;favicon&quot; /&gt;
+                &lt;/a&gt;
+                &lt;a href=&quot;https://ib.bsb.br/events&quot;&gt;
+                    &lt;img src=&quot;/assets/Paralyse_Rune.gif&quot; alt=&quot;Events Icon&quot; class=&quot;favicon&quot; /&gt;
+                &lt;/a&gt;
+            &lt;/div&gt;
+        &lt;/nav&gt;
+    &lt;/header&gt;
+&lt;div class=&quot;editor-container&quot;&gt;
+    &lt;div class=&quot;editor-ui&quot;&gt;
+        &lt;textarea id=&quot;textarea-data-source&quot; placeholder=&quot;Paste your string here...&quot;&gt;&lt;/textarea&gt;
+    &lt;/div&gt;
+    &lt;div style=&quot;width: 270px;&quot;&gt;
+
+        &lt;input type=&quot;radio&quot; id=&quot;blank-lines&quot; name=&quot;remove-lines-from-text&quot; /&gt;
+        &lt;label for=&quot;blank-lines&quot;&gt;Blank lines&lt;/label&gt;&lt;br /&gt;
+        &lt;input class=&quot;noselect&quot; type=&quot;checkbox&quot; id=&quot;lines-with-whitespace&quot; /&gt;
+        &lt;label class=&quot;noselect&quot; for=&quot;lines-with-whitespace&quot;&gt; lines that contain only whitespace&lt;/label&gt;
+
+        &lt;br /&gt;
+        &lt;br /&gt;
+
+        &lt;input type=&quot;radio&quot; id=&quot;duplicate-lines&quot; name=&quot;remove-lines-from-text&quot; /&gt;
+        &lt;label for=&quot;duplicate-lines&quot;&gt;Duplicate lines (consecutive/mulitple lines into one line)&lt;/label&gt;
+
+        &lt;br /&gt;
+        &lt;br /&gt;
+
+        &lt;input type=&quot;radio&quot; id=&quot;lines-contains-text&quot; name=&quot;remove-lines-from-text&quot; /&gt;
+        &lt;label for=&quot;lines-contains-text&quot;&gt;Lines containing the text &lt;/label&gt;
+        &lt;input type=&quot;text&quot; id=&quot;contains-text&quot; /&gt;
+        
+        &lt;br /&gt;
+        &lt;br /&gt;
+
+        &lt;input type=&quot;radio&quot; id=&quot;lines-not-contains-text&quot; name=&quot;remove-lines-from-text&quot; /&gt;
+        &lt;label for=&quot;lines-not-contains-text&quot;&gt;Lines that not contain the text &lt;/label&gt;
+        &lt;input type=&quot;text&quot; id=&quot;not-contains-text&quot; /&gt;
+       
+        &lt;br /&gt;
+        &lt;br /&gt;
+
+        &lt;input class=&quot;noselect&quot; type=&quot;checkbox&quot; id=&quot;case-insentive&quot; /&gt;
+        &lt;label for=&quot;case-insentive&quot;&gt;Case insensitve&lt;/label&gt;
+        &lt;button class=&quot;convert-btn noselect&quot; id=&quot;remove_filter_lines&quot; onclick=&quot;remove_filter_lines()&quot;&gt;Remove Lines&lt;/button&gt;
+    &lt;/div&gt;
+
+    &lt;div class=&quot;editor-ui&quot;&gt;
+        &lt;textarea id=&quot;textarea-result&quot; placeholder=&quot;Result will show here...&quot; readonly=&quot;&quot;&gt;&lt;/textarea&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;script src=&quot;../xml-to-json/js/common.js&quot;&gt;&lt;/script&gt;
+&lt;script&gt;
+    function remove_filter_lines() {
+
+        var text = document.getElementById(&quot;textarea-data-source&quot;).value
+        text = text.replace(/\r\n/g, &quot;\n&quot;);
+
+        var blank_lines = document.getElementById(&quot;blank-lines&quot;).checked
+        var lines_with_whitespace = document.getElementById(&quot;lines-with-whitespace&quot;).checked
+
+        var duplicate_lines = document.getElementById(&quot;duplicate-lines&quot;).checked
+
+        var lines_contains_text = document.getElementById(&quot;lines-contains-text&quot;).checked
+        var contains_text = document.getElementById(&quot;contains-text&quot;).value
+
+        var lines_not_contains_text = document.getElementById(&quot;lines-not-contains-text&quot;).checked
+        var not_contains_text = document.getElementById(&quot;not-contains-text&quot;).value
+
+        var case_insentive = document.getElementById(&quot;case-insentive&quot;).checked
+
+
+        if (blank_lines) {
+
+            if (lines_with_whitespace) {
+                text = text.replace(/(\r\n|\r|\n|\s){1,}/g, &apos;\n&apos;);
+            } else {
+                text = text.replace(/(\r\n|\r|\n){1,}/g, &apos;\n&apos;);
+            }
+            document.getElementById(&apos;textarea-result&apos;).value = text
+        }
+        else if (duplicate_lines) {
+            text = text.replace(/(\r\n|\r|\n){2,}/g, &apos;$1\n&apos;);
+            document.getElementById(&apos;textarea-result&apos;).value = text
+        }
+        else if (lines_contains_text) {
+            
+            document.getElementById(&apos;textarea-result&apos;).value = text.split(&apos;\n&apos;).filter(function(line){ 
+                return line.indexOf(contains_text) == -1;
+              }).join(&apos;\n&apos;)
+        }
+        else if (lines_not_contains_text) {
+            document.getElementById(&apos;textarea-result&apos;).value = text.split(&apos;\n&apos;).filter(function(line){ 
+                return line.indexOf(contains_text) == 0;
+              }).join(&apos;\n&apos;)
+        }
+    }
+    
 &lt;/script&gt;
 &lt;/body&gt;
 </content>
