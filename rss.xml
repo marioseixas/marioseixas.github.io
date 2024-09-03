@@ -3,7 +3,7 @@
     <title>infoBAG</title>
     <link href="https://ib.bsb.br//rss.xml" rel="self"/>
     <link href="https://ib.bsb.br//"/>
-    <updated>2024-09-03T15:22:55+00:00</updated>
+    <updated>2024-09-03T15:28:47+00:00</updated>
     <id>https://ib.bsb.br</id>
     <author>
         <name></name>
@@ -46899,6 +46899,26 @@ Pense duas vezes antes de se envolver.
         &lt;a class=&quot;post-heading&quot; href=&quot;#&quot; id=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;
           &lt;img src=&quot;/assets/gold.ico&quot; alt=&quot;gold icon&quot; /&gt;
         &lt;/a&gt;
+        1991-07-25
+        
+        &amp;rightarrowtail; 
+        03 Sep 2024
+        
+      &lt;/h3&gt;
+      &lt;ul&gt;
+        &lt;a href=&quot;/dedup-spaces/&quot;&gt;
+          &lt;h2&gt;
+            Dedup Spaces
+          &lt;/h2&gt;
+        &lt;/a&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;
+    
+    &lt;div class=&quot;search-link&quot;&gt;
+      &lt;h3&gt;
+        &lt;a class=&quot;post-heading&quot; href=&quot;#&quot; id=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;
+          &lt;img src=&quot;/assets/gold.ico&quot; alt=&quot;gold icon&quot; /&gt;
+        &lt;/a&gt;
         1992-07-12
         
         &amp;rightarrowtail; 
@@ -50974,6 +50994,126 @@ Pense duas vezes antes de se envolver.
     }
   &lt;/script&gt;
   &lt;/body&gt;
+</content>
+    </entry>
+    
+    <entry>
+        <title>Dedup Spaces</title>
+        <link href="https://ib.bsb.br/dedup-spaces/"/>
+        <updated>1991-07-25T00:00:00+00:00</updated>
+        <id>https://ib.bsb.br/dedup-spaces/</id>
+        <content type="html">&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot; /&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot; /&gt;
+
+    &lt;title&gt;
+        
+            Dedup Spaces — infoBAG
+        
+    &lt;/title&gt;
+
+    &lt;link rel=&quot;canonical&quot; href=&quot;https://ib.bsb.br/dedup-spaces/&quot; /&gt;
+    &lt;link rel=&quot;alternate&quot; type=&quot;application/rss+xml&quot; title=&quot;infoBAG&quot; href=&quot;//rss.xml&quot; /&gt;
+
+    
+        &lt;meta itemprop=&quot;keywords&quot; content=&quot;tools&quot; /&gt;
+        
+            &lt;meta property=&quot;article:tag&quot; content=&quot;tools&quot; /&gt;
+        
+    
+
+    &lt;link href=&quot;/style.css&quot; rel=&quot;stylesheet&quot; /&gt;
+    &lt;link href=&quot;/pagefind/pagefind-ui.css&quot; rel=&quot;stylesheet&quot; /&gt;
+    &lt;script src=&quot;/pagefind/pagefind-ui.js&quot;&gt;&lt;/script&gt;
+    &lt;script type=&quot;module&quot;&gt;
+        import PagefindHighlight from &apos;/pagefind/pagefind-highlight.js&apos;;
+        new PagefindHighlight({ highlightParam: &quot;highlight&quot; });
+    &lt;/script&gt;
+    &lt;script src=&quot;/assets/js/search.js&quot; defer=&quot;&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;/assets/js/prism.js&quot; defer=&quot;&quot;&gt;&lt;/script&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+    &lt;a class=&quot;search-input-block&quot; id=&quot;search&quot;&gt;&lt;/a&gt;
+
+    &lt;header&gt;
+        &lt;nav aria-label=&quot;Main navigation&quot;&gt;
+            &lt;div class=&quot;header-container&quot;&gt;
+                &lt;a class=&quot;internal-link&quot; href=&quot;/&quot;&gt;
+                    &lt;img src=&quot;/assets/Sudden_Death_Rune.gif&quot; alt=&quot;Sudden Death Rune&quot; class=&quot;favicon&quot; /&gt;
+                &lt;/a&gt;
+                &lt;a href=&quot;https://ib.bsb.br/archive&quot;&gt;
+                    &lt;img src=&quot;/favicon.ico&quot; alt=&quot;Archive Icon&quot; class=&quot;favicon&quot; /&gt;
+                &lt;/a&gt;
+                &lt;a href=&quot;https://ib.bsb.br/tags&quot;&gt;
+                    &lt;img src=&quot;/assets/Label.gif&quot; alt=&quot;Tags Icon&quot; class=&quot;favicon&quot; /&gt;
+                &lt;/a&gt;
+                &lt;a href=&quot;https://ib.bsb.br/events&quot;&gt;
+                    &lt;img src=&quot;/assets/Paralyse_Rune.gif&quot; alt=&quot;Events Icon&quot; class=&quot;favicon&quot; /&gt;
+                &lt;/a&gt;
+            &lt;/div&gt;
+        &lt;/nav&gt;
+    &lt;/header&gt;
+    &lt;div class=&quot;editor-container&quot;&gt;
+        &lt;div class=&quot;editor-ui&quot;&gt;
+            &lt;textarea id=&quot;input-data&quot; placeholder=&quot;Paste your text here...&quot;&gt;&lt;/textarea&gt;
+        &lt;/div&gt;
+        &lt;div&gt;
+            &lt;button class=&quot;convert-btn&quot; id=&quot;remove-duplicate-spaces&quot; onclick=&quot;remove_duplicate_spaces()&quot;&gt;Remove Duplicate Spaces&lt;/button&gt;
+            &lt;button class=&quot;convert-btn&quot; id=&quot;copy-btn&quot; onclick=&quot;copyTextToClipboard()&quot;&gt;Copy&lt;/button&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;editor-ui&quot;&gt;
+            &lt;textarea id=&quot;result&quot; placeholder=&quot;Result will show here...&quot; readonly=&quot;&quot;&gt;&lt;/textarea&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;script type=&quot;text/javascript&quot;&gt;
+        function remove_duplicate_spaces() {
+            var input_data = document.getElementById(&quot;input-data&quot;);
+            var result = document.getElementById(&quot;result&quot;);
+            result.value = input_data.value.replace(/\s+/g,&apos; &apos;);
+        }
+    &lt;/script&gt;
+    &lt;script&gt;
+        function fallbackCopyTextToClipboard(text) {
+            var textArea = document.createElement(&quot;textarea&quot;);
+            textArea.value = text;
+
+            // Avoid scrolling to bottom
+            textArea.style.top = &quot;0&quot;;
+            textArea.style.left = &quot;0&quot;;
+            textArea.style.position = &quot;fixed&quot;;
+
+            document.body.appendChild(textArea);
+            textArea.focus();
+            textArea.select();
+
+            try {
+                var successful = document.execCommand(&apos;copy&apos;);
+                var msg = successful ? &apos;successful&apos; : &apos;unsuccessful&apos;;
+                console.log(&apos;Fallback: Copying text command was &apos; + msg);
+            } catch (err) {
+                console.error(&apos;Fallback: Oops, unable to copy&apos;, err);
+            }
+
+            document.body.removeChild(textArea);
+        }
+
+        function copyTextToClipboard() {
+    
+            let text = document.getElementById(&apos;result&apos;).value
+        
+            if (!navigator.clipboard) {
+                fallbackCopyTextToClipboard(text);
+                return;
+            }
+            navigator.clipboard.writeText(text).then(function () {
+                console.log(&apos;Async: Copying to clipboard was successful!&apos;);
+            }, function (err) {
+                console.error(&apos;Async: Could not copy text: &apos;, err);
+            });
+        }
+    &lt;/script&gt;
+&lt;/body&gt;
 </content>
     </entry>
     
