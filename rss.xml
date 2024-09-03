@@ -3,7 +3,7 @@
     <title>infoBAG</title>
     <link href="https://ib.bsb.br/rss.xml" rel="self"/>
     <link href="https://ib.bsb.br/"/>
-    <updated>2024-09-03T17:18:14+00:00</updated>
+    <updated>2024-09-03T17:29:19+00:00</updated>
     <id>https://ib.bsb.br</id>
     <author>
         <name></name>
@@ -46934,6 +46934,26 @@ Pense duas vezes antes de se envolver.
         
       &lt;/h3&gt;
       &lt;ul&gt;
+        &lt;a href=&quot;/somacon/&quot;&gt;
+          &lt;h2&gt;
+            Somacon
+          &lt;/h2&gt;
+        &lt;/a&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;
+    
+    &lt;div class=&quot;search-link&quot;&gt;
+      &lt;h3&gt;
+        &lt;a class=&quot;post-heading&quot; href=&quot;#&quot; id=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;
+          &lt;img src=&quot;/assets/gold.ico&quot; alt=&quot;gold icon&quot; /&gt;
+        &lt;/a&gt;
+        1991-07-25
+        
+        &amp;rightarrowtail; 
+        03 Sep 2024
+        
+      &lt;/h3&gt;
+      &lt;ul&gt;
         &lt;a href=&quot;/regex/&quot;&gt;
           &lt;h2&gt;
             Regex
@@ -51076,6 +51096,348 @@ Pense duas vezes antes de se envolver.
         result = result.join(&quot;\n&quot;)
         document.getElementById(&apos;textarea-result&apos;).value = result
     }
+&lt;/script&gt;
+&lt;/body&gt;
+</content>
+    </entry>
+    
+    <entry>
+        <title>Somacon</title>
+        <link href="https://ib.bsb.br/somacon/"/>
+        <updated>1991-07-25T00:00:00+00:00</updated>
+        <id>https://ib.bsb.br/somacon/</id>
+        <content type="html">&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot; /&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot; /&gt;
+
+    &lt;title&gt;
+        
+            Somacon — infoBAG
+        
+    &lt;/title&gt;
+
+    &lt;link rel=&quot;canonical&quot; href=&quot;https://ib.bsb.br/somacon/&quot; /&gt;
+    &lt;link rel=&quot;alternate&quot; type=&quot;application/rss+xml&quot; title=&quot;infoBAG&quot; href=&quot;https://ib.bsb.br/rss.xml&quot; /&gt;
+
+    
+        &lt;meta itemprop=&quot;keywords&quot; content=&quot;tools&quot; /&gt;
+        
+            &lt;meta property=&quot;article:tag&quot; content=&quot;tools&quot; /&gt;
+        
+    
+
+    &lt;link href=&quot;/style.css&quot; rel=&quot;stylesheet&quot; /&gt;
+    &lt;link href=&quot;/pagefind/pagefind-ui.css&quot; rel=&quot;stylesheet&quot; /&gt;
+    &lt;script src=&quot;/pagefind/pagefind-ui.js&quot;&gt;&lt;/script&gt;
+    &lt;script type=&quot;module&quot;&gt;
+        import PagefindHighlight from &apos;/pagefind/pagefind-highlight.js&apos;;
+        new PagefindHighlight({ highlightParam: &quot;highlight&quot; });
+    &lt;/script&gt;
+    &lt;script src=&quot;/assets/js/search.js&quot; defer=&quot;&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;/assets/js/prism.js&quot; defer=&quot;&quot;&gt;&lt;/script&gt;
+	&lt;script&gt;
+var objCountsPlaceholder = null;
+function updateCounts()
+{
+	// Global
+	objCountsPlaceholder = document.getElementById(&apos;CountsPlaceholder&apos;);
+
+	// Get references to form elements
+	var formObj = document.forms[&apos;lineCounts&apos;];
+	var textInput = formObj.elements[&apos;textInput&apos;];
+	
+	// Parse the output options
+	// Index 0 is the count, 1 is the line
+	var sortByIndex = 0;
+	if(document.getElementById(&apos;sortby_line&apos;).checked)
+	{
+		sortByIndex = 1;
+	}
+	var formatSelection = &apos;readable&apos;;
+	if(document.getElementById(&apos;format_csv&apos;).checked)
+	{
+		formatSelection = &apos;csv&apos;;
+	}
+	if(document.getElementById(&apos;format_tab&apos;).checked)
+	{
+		formatSelection = &apos;tab&apos;;
+	}
+	var includeCounts = false;
+	if(document.getElementById(&apos;counts_visibility&apos;).checked)
+	{
+		includeCounts = true;
+	}
+	var minimumCount = 1;
+	if(document.getElementById(&apos;values_visibility_duplicates&apos;).checked)
+	{
+		minimumCount = 2;
+	}
+	
+	// Set up for processing
+	inputString = new String(textInput.value);
+	var arrLines = inputString.split(&quot;\n&quot;);
+	var countLines = arrLines.length;
+	var arrUniqueLines = {};
+
+	// Loop through lines and accumulate counts
+	for(var i = 0; i &lt; countLines; i++)
+	{
+		// Ignore trailing new-line (if there is one)
+		var currentLine = arrLines[i];
+
+		if(currentLine.substr(currentLine.length - 2, 2) == &quot;\r\n&quot;)
+		{
+			currentLine = currentLine.substr(0, currentLine.length - 2);
+		}
+		if(currentLine.substr(currentLine.length - 1, 1) == &quot;\n&quot; ||
+			currentLine.substr(currentLine.length - 1, 1) == &quot;\r&quot;)
+		{
+			currentLine = currentLine.substr(0, currentLine.length - 1);
+		}
+
+	
+		// Count the lines
+		if(!(currentLine in arrUniqueLines)) {
+			arrUniqueLines[currentLine] = 1;
+		} else {
+			arrUniqueLines[currentLine] += 1;
+		}
+	}
+
+	// Delete the counts from previous run
+	if(objCountsPlaceholder.hasChildNodes())
+	{
+    	while(objCountsPlaceholder.childNodes.length &gt;= 1)
+	    {
+    	    objCountsPlaceholder.removeChild(objCountsPlaceholder.firstChild);
+	    }
+	}
+
+	// Determine separator
+	var columnSeparator = &quot;,&quot;;
+	if(formatSelection == &apos;tab&apos;)
+	{
+		columnSeparator = &quot;\t&quot;;
+	}
+	
+	// Write the header line
+	if(formatSelection == &apos;csv&apos; || formatSelection == &apos;tab&apos;)
+	{
+		if(includeCounts == true)
+		{
+			AppendLine(&quot;COUNT&quot; + columnSeparator + &quot;LINE&quot;);
+		}
+		else
+		{
+			AppendLine(&quot;LINE&quot;);
+		}
+	}
+	else
+	{
+		if(includeCounts == true)
+		{
+			AppendLine(&quot;COUNT    | LINE&quot;);
+		}
+		else
+		{
+			AppendLine(&quot;LINE&quot;);
+		}
+		AppendLine(&quot;-----------------------------------------------------&quot;);
+	}
+	
+	// Insert [count,value] into a new array for sorting
+	var sortedLines = [];
+	for(var i in arrUniqueLines)
+	{
+		// Skip lines with too few occurrences
+		if(arrUniqueLines[i] &lt; minimumCount)
+		{
+			continue;
+		}
+		sortedLines.push([arrUniqueLines[i], i]);
+	}
+	
+	// Clear the original array
+	arrUniqueLines = null;
+	
+	// Reverse sort by count
+	sortedLines.sort(function(a,b) {
+		if(sortByIndex == 0)
+		{
+			// Sort by count
+			return (b[0] - a[0] != 0 ? b[0] - a[0] : a[1].localeCompare(b[1]));
+		}
+		else
+		{
+			// Sort by line value
+			return (a[1].localeCompare(b[1]) != 0 ?a[1].localeCompare(b[1]) : b[0] - a[0]);
+		}
+	} );
+
+	// Print the line counts
+	for(var i in sortedLines)
+	{
+		if(formatSelection == &apos;csv&apos; || formatSelection == &quot;tab&quot;)
+		{
+			AppendLine((includeCounts ? sortedLines[i][0] + columnSeparator : &apos;&apos;) + &apos;&quot;&apos; + sortedLines[i][1].replace(&apos;&quot;&apos;, &apos;&quot;&quot;&apos;) + &apos;&quot;&apos;);
+		}
+		else
+		{
+			strToPrint = &apos;&apos;;
+			if(includeCounts == true)
+			{
+				strToPrint = &apos;&apos; + zeroPad(sortedLines[i][0], 8, &quot; &quot;) + &apos; | &apos;;
+			}
+			strToPrint += sortedLines[i][1] + &apos;&apos;;
+			AppendLine(strToPrint);
+		}
+	}
+	
+	// Determine distinct line label
+	var distinctLinesLabel = (minimumCount == 1 ? &quot;DISTINCT&quot; : &quot;DISTINCT DUPLICATE&quot;);
+	
+
+	// Print total character count
+	if(formatSelection == &apos;csv&apos; || formatSelection == &apos;tab&apos;)
+	{
+		AppendLine(countLines + columnSeparator + &quot;TOTAL LINES&quot;);
+		AppendLine(sortedLines.length + columnSeparator + distinctLinesLabel + &quot; LINES&quot;);
+	}
+	else
+	{
+		AppendLine(&quot;-----------------------------------------------------&quot;);
+		AppendLine(zeroPad(countLines, 8, &quot; &quot;) + &quot; | TOTAL LINES&quot;);
+		AppendLine(zeroPad(sortedLines.length, 8, &quot; &quot;) + &quot; | &quot; + distinctLinesLabel + &quot; LINES&quot;);
+	}
+	
+	return false;
+}
+
+// n = number you want padded
+// digits = length you want the final output
+function zeroPad(n, digits, padChar) {
+	n = n.toString();
+	while (n.length &lt; digits) {
+		n = padChar + n;
+	}
+	return n;
+}
+function AppendLine(str)
+{
+	objCountsPlaceholder.appendChild(document.createTextNode(str + &quot;\n&quot;));
+}
+function clearTextBox()
+{
+	// Get references to form elements
+	var formObj = document.forms[&apos;lineCounts&apos;];
+	var textInput = formObj.elements[&apos;textInput&apos;];
+
+	window.lastClearedTextValue = textInput.value;
+	textInput.value = &apos;&apos;;
+}
+function restoreTextBox()
+{
+	// Get references to form elements
+	var formObj = document.forms[&apos;lineCounts&apos;];
+	var textInput = formObj.elements[&apos;textInput&apos;];
+
+	if(typeof window.lastClearedTextValue !== &apos;undefined&apos;)
+	{
+		textInput.value = window.lastClearedTextValue;
+	}
+}
+
+&lt;/script&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+    &lt;a class=&quot;search-input-block&quot; id=&quot;search&quot;&gt;&lt;/a&gt;
+
+    &lt;header&gt;
+        &lt;nav aria-label=&quot;Main navigation&quot;&gt;
+            &lt;div class=&quot;header-container&quot;&gt;
+                &lt;a class=&quot;internal-link&quot; href=&quot;/&quot;&gt;
+                    &lt;img src=&quot;/assets/Sudden_Death_Rune.gif&quot; alt=&quot;Sudden Death Rune&quot; class=&quot;favicon&quot; /&gt;
+                &lt;/a&gt;
+                &lt;a href=&quot;https://ib.bsb.br/archive&quot;&gt;
+                    &lt;img src=&quot;/favicon.ico&quot; alt=&quot;Archive Icon&quot; class=&quot;favicon&quot; /&gt;
+                &lt;/a&gt;
+                &lt;a href=&quot;https://ib.bsb.br/tags&quot;&gt;
+                    &lt;img src=&quot;/assets/Label.gif&quot; alt=&quot;Tags Icon&quot; class=&quot;favicon&quot; /&gt;
+                &lt;/a&gt;
+                &lt;a href=&quot;https://ib.bsb.br/events&quot;&gt;
+                    &lt;img src=&quot;/assets/Paralyse_Rune.gif&quot; alt=&quot;Events Icon&quot; class=&quot;favicon&quot; /&gt;
+                &lt;/a&gt;
+            &lt;/div&gt;
+        &lt;/nav&gt;
+    &lt;/header&gt;
+&lt;form method=&quot;get&quot; action=&quot;#&quot; onsubmit=&quot;return false;&quot; name=&quot;lineCounts&quot;&gt;
+
+&lt;h1&gt;Paste Text Below&lt;/h1&gt;
+&lt;textarea name=&quot;textInput&quot; rows=&quot;10&quot; cols=&quot;80&quot;&gt;&lt;/textarea&gt;
+
+&lt;fieldset&gt;
+	&lt;legend&gt;Output Options&lt;/legend&gt;
+	&lt;div style=&quot;text-align:center;&quot;&gt;
+		Sort By: 
+
+		&lt;label for=&quot;sortby_count&quot;&gt;&lt;input type=&quot;radio&quot; name=&quot;sortby&quot; value=&quot;count&quot; checked=&quot;checked&quot; id=&quot;sortby_count&quot; /&gt; Count&lt;/label&gt;
+
+		&lt;label for=&quot;sortby_line&quot;&gt;&lt;input type=&quot;radio&quot; name=&quot;sortby&quot; value=&quot;line&quot; id=&quot;sortby_line&quot; /&gt; Line&lt;/label&gt;
+
+		Format: 
+
+		&lt;label for=&quot;format_readable&quot;&gt;&lt;input type=&quot;radio&quot; name=&quot;format&quot; value=&quot;readable&quot; checked=&quot;checked&quot; id=&quot;format_readable&quot; /&gt; Readable&lt;/label&gt;
+
+		&lt;label for=&quot;format_csv&quot;&gt;&lt;input type=&quot;radio&quot; name=&quot;format&quot; value=&quot;csv&quot; id=&quot;format_csv&quot; /&gt; CSV&lt;/label&gt;
+		
+		&lt;label for=&quot;format_tab&quot;&gt;&lt;input type=&quot;radio&quot; name=&quot;format&quot; value=&quot;tab&quot; id=&quot;format_tab&quot; /&gt; TAB&lt;/label&gt;
+	&lt;/div&gt;
+
+	&lt;div style=&quot;margin-top:1em;text-align:center;&quot;&gt;
+		&lt;label for=&quot;counts_visibility&quot;&gt;
+			&lt;input type=&quot;checkbox&quot; name=&quot;counts_visibility&quot; id=&quot;counts_visibility&quot; checked=&quot;checked&quot; /&gt; 
+			Show Counts Column
+		&lt;/label&gt;
+		
+		&amp;nbsp;&amp;nbsp;
+
+		Values: 
+
+		&lt;label for=&quot;values_visibility_all&quot;&gt;&lt;input type=&quot;radio&quot; name=&quot;values_visibility&quot; value=&quot;all&quot; checked=&quot;checked&quot; id=&quot;values_visibility_all&quot; /&gt; All&lt;/label&gt;
+
+		&lt;label for=&quot;values_visibility_duplicates&quot;&gt;&lt;input type=&quot;radio&quot; name=&quot;values_visibility&quot; value=&quot;duplicates&quot; id=&quot;values_visibility_duplicates&quot; /&gt; Duplicates Only&lt;/label&gt;
+	&lt;/div&gt;
+	
+	&lt;div style=&quot;margin-top:1.33em;text-align:center;&quot;&gt;
+		&lt;button onclick=&quot;return updateCounts();&quot; style=&quot;margin-right:1em;&quot;&gt;Display/Update Counts&lt;/button&gt;
+
+		&lt;button class=&quot;CopyClipboardButton&quot;&gt;
+			&lt;img src=&quot;https://cdnjs.cloudflare.com/ajax/libs/octicons/8.5.0/svg/clippy.svg&quot; alt=&quot;Copy Icon&quot; /&gt; Copy Results to Clipboard
+		&lt;/button&gt;
+
+		&lt;button onclick=&quot;clearTextBox();&quot;&gt;Clear&lt;/button&gt;
+		
+		&lt;button onclick=&quot;restoreTextBox();&quot;&gt;Restore&lt;/button&gt;
+	&lt;/div&gt;	
+
+&lt;/fieldset&gt;
+
+&lt;h2&gt;Counts / Results&lt;/h2&gt;
+
+&lt;pre id=&quot;CountsPlaceholder&quot; style=&quot;margin-top: 1em;&quot;&gt;counts will appear here after you click the button above&lt;/pre&gt;
+
+
+&lt;/form&gt;
+
+&lt;!-- ClipboardJS initialization --&gt;
+&lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js&quot;&gt;&lt;/script&gt;
+&lt;script&gt;
+	new ClipboardJS(&apos;.CopyClipboardButton&apos;, {
+		text: function(trigger) {
+			return document.getElementById(&apos;CountsPlaceholder&apos;).textContent;
+		}
+	});
 &lt;/script&gt;
 &lt;/body&gt;
 </content>
