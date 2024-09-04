@@ -3,7 +3,7 @@
     <title>infoBAG</title>
     <link href="https://ib.bsb.br/rss.xml" rel="self"/>
     <link href="https://ib.bsb.br/"/>
-    <updated>2024-09-04T21:55:24+00:00</updated>
+    <updated>2024-09-04T21:56:21+00:00</updated>
     <id>https://ib.bsb.br</id>
     <author>
         <name></name>
@@ -47858,6 +47858,46 @@ Pense duas vezes antes de se envolver.
     
   &amp;lt;/h3&amp;gt;
   &amp;lt;ul&amp;gt;
+    &amp;lt;a href=&quot;/regex/&quot;&amp;gt;
+      &amp;lt;h2&amp;gt;
+        Regex
+      &amp;lt;/h2&amp;gt;
+    &amp;lt;/a&amp;gt;
+  &amp;lt;/ul&amp;gt;
+&amp;lt;/div&amp;gt;
+
+&amp;lt;div class=&quot;search-link&quot;&amp;gt;
+  &amp;lt;h3&amp;gt;
+    &amp;lt;a class=&quot;post-heading&quot; href=&quot;#&quot; id=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&amp;gt;
+      &amp;lt;img src=&quot;/assets/gold.ico&quot; alt=&quot;gold icon&quot;&amp;gt;
+    &amp;lt;/a&amp;gt;
+    1991-07-25
+    
+    &amp;amp;rightarrowtail; 
+    04 Sep 2024
+    
+  &amp;lt;/h3&amp;gt;
+  &amp;lt;ul&amp;gt;
+    &amp;lt;a href=&quot;/formatxt/&quot;&amp;gt;
+      &amp;lt;h2&amp;gt;
+        Formatxt
+      &amp;lt;/h2&amp;gt;
+    &amp;lt;/a&amp;gt;
+  &amp;lt;/ul&amp;gt;
+&amp;lt;/div&amp;gt;
+
+&amp;lt;div class=&quot;search-link&quot;&amp;gt;
+  &amp;lt;h3&amp;gt;
+    &amp;lt;a class=&quot;post-heading&quot; href=&quot;#&quot; id=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&amp;gt;
+      &amp;lt;img src=&quot;/assets/gold.ico&quot; alt=&quot;gold icon&quot;&amp;gt;
+    &amp;lt;/a&amp;gt;
+    1991-07-25
+    
+    &amp;amp;rightarrowtail; 
+    04 Sep 2024
+    
+  &amp;lt;/h3&amp;gt;
+  &amp;lt;ul&amp;gt;
     &amp;lt;a href=&quot;/diff/&quot;&amp;gt;
       &amp;lt;h2&amp;gt;
         Diff
@@ -48061,46 +48101,6 @@ Pense duas vezes antes de se envolver.
     &amp;lt;a href=&quot;/rm-lines/&quot;&amp;gt;
       &amp;lt;h2&amp;gt;
         Rm Lines
-      &amp;lt;/h2&amp;gt;
-    &amp;lt;/a&amp;gt;
-  &amp;lt;/ul&amp;gt;
-&amp;lt;/div&amp;gt;
-
-&amp;lt;div class=&quot;search-link&quot;&amp;gt;
-  &amp;lt;h3&amp;gt;
-    &amp;lt;a class=&quot;post-heading&quot; href=&quot;#&quot; id=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&amp;gt;
-      &amp;lt;img src=&quot;/assets/gold.ico&quot; alt=&quot;gold icon&quot;&amp;gt;
-    &amp;lt;/a&amp;gt;
-    1991-07-25
-    
-    &amp;amp;rightarrowtail; 
-    04 Sep 2024
-    
-  &amp;lt;/h3&amp;gt;
-  &amp;lt;ul&amp;gt;
-    &amp;lt;a href=&quot;/regex/&quot;&amp;gt;
-      &amp;lt;h2&amp;gt;
-        Regex
-      &amp;lt;/h2&amp;gt;
-    &amp;lt;/a&amp;gt;
-  &amp;lt;/ul&amp;gt;
-&amp;lt;/div&amp;gt;
-
-&amp;lt;div class=&quot;search-link&quot;&amp;gt;
-  &amp;lt;h3&amp;gt;
-    &amp;lt;a class=&quot;post-heading&quot; href=&quot;#&quot; id=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&amp;gt;
-      &amp;lt;img src=&quot;/assets/gold.ico&quot; alt=&quot;gold icon&quot;&amp;gt;
-    &amp;lt;/a&amp;gt;
-    1991-07-25
-    
-    &amp;amp;rightarrowtail; 
-    04 Sep 2024
-    
-  &amp;lt;/h3&amp;gt;
-  &amp;lt;ul&amp;gt;
-    &amp;lt;a href=&quot;/formatxt/&quot;&amp;gt;
-      &amp;lt;h2&amp;gt;
-        Formatxt
       &amp;lt;/h2&amp;gt;
     &amp;lt;/a&amp;gt;
   &amp;lt;/ul&amp;gt;
