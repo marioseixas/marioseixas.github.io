@@ -3,7 +3,7 @@
     <title>infoBAG</title>
     <link href="https://ib.bsb.br/rss.xml" rel="self"/>
     <link href="https://ib.bsb.br/"/>
-    <updated>2024-09-04T10:15:16+00:00</updated>
+    <updated>2024-09-04T10:16:08+00:00</updated>
     <id>https://ib.bsb.br</id>
     <author>
         <name></name>
@@ -48121,9 +48121,9 @@ Pense duas vezes antes de se envolver.
         
       &lt;/h3&gt;
       &lt;ul&gt;
-        &lt;a href=&quot;/somacon/&quot;&gt;
+        &lt;a href=&quot;/rm-lines/&quot;&gt;
           &lt;h2&gt;
-            Somacon
+            Rm Lines
           &lt;/h2&gt;
         &lt;/a&gt;
       &lt;/ul&gt;
@@ -48141,9 +48141,9 @@ Pense duas vezes antes de se envolver.
         
       &lt;/h3&gt;
       &lt;ul&gt;
-        &lt;a href=&quot;/rm-lines/&quot;&gt;
+        &lt;a href=&quot;/somacon/&quot;&gt;
           &lt;h2&gt;
-            Rm Lines
+            Somacon
           &lt;/h2&gt;
         &lt;/a&gt;
       &lt;/ul&gt;
