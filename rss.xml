@@ -3,7 +3,7 @@
     <title>infoBAG</title>
     <link href="https://ib.bsb.br/rss.xml" rel="self"/>
     <link href="https://ib.bsb.br/"/>
-    <updated>2024-09-04T21:57:10+00:00</updated>
+    <updated>2024-09-04T21:58:04+00:00</updated>
     <id>https://ib.bsb.br</id>
     <author>
         <name></name>
@@ -47820,7 +47820,8 @@ Pense duas vezes antes de se envolver.
         <link href="https://ib.bsb.br/"/>
         <updated>1992-07-12T00:00:00+00:00</updated>
         <id>https://ib.bsb.br/</id>
-        <content type="html">&lt;iframe class=&quot;iframe-container&quot; name=&quot;embed_readwrite&quot; src=&quot;https://pad.ouvaton.coop/short-ref?alwaysShowChat=true&amp;amp;showLineNumbers=true&amp;amp;useMonospaceFont=true&amp;amp;noColors=true&quot; frameborder=&quot;0&quot; title=&quot;Embedded Pad&quot;&gt;&lt;/iframe&gt;
+        <content type="html">&lt;iframe class=&quot;iframe-container&quot; name=&quot;embed_readwrite&quot; src=&quot;https://pad.ouvaton.coop/short-ref?alwaysShowChat=true&amp;amp;showLineNumbers=true&amp;amp;useMonospaceFont=true&amp;amp;noColors=true&quot; frameborder=&quot;0&quot; title=&quot;Embedded Pad&quot;&gt;
+&lt;/iframe&gt;
 </content>
     </entry>
     
@@ -47844,6 +47845,26 @@ Pense duas vezes antes de se envolver.
 
 
 
+
+&amp;lt;div class=&quot;search-link&quot;&amp;gt;
+  &amp;lt;h3&amp;gt;
+    &amp;lt;a class=&quot;post-heading&quot; href=&quot;#&quot; id=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&amp;gt;
+      &amp;lt;img src=&quot;/assets/gold.ico&quot; alt=&quot;gold icon&quot;&amp;gt;
+    &amp;lt;/a&amp;gt;
+    1992-07-12
+    
+    &amp;amp;rightarrowtail; 
+    04 Sep 2024
+    
+  &amp;lt;/h3&amp;gt;
+  &amp;lt;ul&amp;gt;
+    &amp;lt;a href=&quot;/&quot;&amp;gt;
+      &amp;lt;h2&amp;gt;
+        Index
+      &amp;lt;/h2&amp;gt;
+    &amp;lt;/a&amp;gt;
+  &amp;lt;/ul&amp;gt;
+&amp;lt;/div&amp;gt;
 
 &amp;lt;div class=&quot;search-link&quot;&amp;gt;
   &amp;lt;h3&amp;gt;
@@ -48000,26 +48021,6 @@ Pense duas vezes antes de se envolver.
     &amp;lt;a href=&quot;/tags/&quot;&amp;gt;
       &amp;lt;h2&amp;gt;
         Tags
-      &amp;lt;/h2&amp;gt;
-    &amp;lt;/a&amp;gt;
-  &amp;lt;/ul&amp;gt;
-&amp;lt;/div&amp;gt;
-
-&amp;lt;div class=&quot;search-link&quot;&amp;gt;
-  &amp;lt;h3&amp;gt;
-    &amp;lt;a class=&quot;post-heading&quot; href=&quot;#&quot; id=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&amp;gt;
-      &amp;lt;img src=&quot;/assets/gold.ico&quot; alt=&quot;gold icon&quot;&amp;gt;
-    &amp;lt;/a&amp;gt;
-    1992-07-12
-    
-    &amp;amp;rightarrowtail; 
-    04 Sep 2024
-    
-  &amp;lt;/h3&amp;gt;
-  &amp;lt;ul&amp;gt;
-    &amp;lt;a href=&quot;/&quot;&amp;gt;
-      &amp;lt;h2&amp;gt;
-        Index
       &amp;lt;/h2&amp;gt;
     &amp;lt;/a&amp;gt;
   &amp;lt;/ul&amp;gt;
