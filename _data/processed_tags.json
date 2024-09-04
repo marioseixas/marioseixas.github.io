@@ -32,12 +32,6 @@
                 "date": "2024-06-13T00:00:00"
             },
             {
-                "title": "Convert `.pdf` to `UTF-8`",
-                "url": "/pdf-utf8",
-                "highlighted": true,
-                "date": "2024-06-02T00:00:00"
-            },
-            {
                 "title": "Python script to check LaTeX citations",
                 "url": "/bibtex-check",
                 "highlighted": true,
@@ -46,6 +40,12 @@
             {
                 "title": "Rename files using llm.datasette.io",
                 "url": "/llm-renamer",
+                "highlighted": true,
+                "date": "2024-06-02T00:00:00"
+            },
+            {
+                "title": "Convert `.pdf` to `UTF-8`",
+                "url": "/pdf-utf8",
                 "highlighted": true,
                 "date": "2024-06-02T00:00:00"
             },
@@ -74,26 +74,26 @@
                 "date": "2024-04-14T00:00:00"
             },
             {
-                "title": "/sources.list",
-                "url": "/sources",
-                "highlighted": true,
-                "date": "2024-04-14T00:00:00"
-            },
-            {
                 "title": "/.bashrc",
                 "url": "/bashrc",
                 "highlighted": true,
                 "date": "2024-04-14T00:00:00"
             },
             {
-                "title": "/root/.xsessionrc",
-                "url": "/xsessionrc",
+                "title": "/sources.list",
+                "url": "/sources",
                 "highlighted": true,
-                "date": "2024-03-10T00:00:00"
+                "date": "2024-04-14T00:00:00"
             },
             {
                 "title": "xinitrc",
                 "url": "/xinitrc",
+                "highlighted": true,
+                "date": "2024-03-10T00:00:00"
+            },
+            {
+                "title": "/root/.xsessionrc",
+                "url": "/xsessionrc",
                 "highlighted": true,
                 "date": "2024-03-10T00:00:00"
             },
@@ -170,14 +170,8 @@
                 "date": "2023-12-25T00:00:00"
             },
             {
-                "title": "Shell script to replace JEKYLLER edge extension",
-                "url": "/jekyller",
-                "highlighted": true,
-                "date": "2023-12-24T00:00:00"
-            },
-            {
-                "title": "Alternative option to upload a file to GitHub without cloning the entire repository",
-                "url": "/git-sparse-checkout",
+                "title": "Installed Debian packages list",
+                "url": "/dpkg",
                 "highlighted": true,
                 "date": "2023-12-24T00:00:00"
             },
@@ -188,8 +182,14 @@
                 "date": "2023-12-24T00:00:00"
             },
             {
-                "title": "Installed Debian packages list",
-                "url": "/dpkg",
+                "title": "Alternative option to upload a file to GitHub without cloning the entire repository",
+                "url": "/git-sparse-checkout",
+                "highlighted": true,
+                "date": "2023-12-24T00:00:00"
+            },
+            {
+                "title": "Shell script to replace JEKYLLER edge extension",
+                "url": "/jekyller",
                 "highlighted": true,
                 "date": "2023-12-24T00:00:00"
             },
@@ -218,14 +218,14 @@
                 "date": "2022-11-22T00:00:00"
             },
             {
-                "title": "microsoft-edge",
-                "url": "/edge",
+                "title": "xlunch entries.dsv",
+                "url": "/xlunch",
                 "highlighted": true,
                 "date": "2022-01-11T00:00:00"
             },
             {
-                "title": "xlunch entries.dsv",
-                "url": "/xlunch",
+                "title": "microsoft-edge",
+                "url": "/edge",
                 "highlighted": true,
                 "date": "2022-01-11T00:00:00"
             },
@@ -252,6 +252,247 @@
                 "url": "/ms-sys",
                 "highlighted": true,
                 "date": "2020-10-22T00:00:00"
+            }
+        ]
+    },
+    "spirit": {
+        "parents": [],
+        "children": [],
+        "related": {
+            "admoestação": 2
+        },
+        "posts": [
+            {
+                "title": "9gag evangelism",
+                "url": "/holy-9gag",
+                "highlighted": true,
+                "date": "2022-06-15T00:00:00"
+            },
+            {
+                "title": "canção da internação",
+                "url": "/gustavo",
+                "highlighted": true,
+                "date": "2018-02-26T00:00:00"
+            },
+            {
+                "title": "Envolvido ou comprometido?",
+                "url": "/tal-06-17",
+                "highlighted": true,
+                "date": "2018-02-15T00:00:00"
+            }
+        ]
+    },
+    "admoestação": {
+        "parents": [],
+        "children": [],
+        "related": {
+            "spirit": 2
+        },
+        "posts": [
+            {
+                "title": "Your Life in Tokens",
+                "url": "/life-tokens",
+                "highlighted": true,
+                "date": "2024-06-22T00:00:00"
+            },
+            {
+                "title": "Envolvido ou comprometido?",
+                "url": "/tal-06-17",
+                "highlighted": true,
+                "date": "2018-02-15T00:00:00"
+            }
+        ]
+    },
+    "calls": {
+        "parents": [],
+        "children": [],
+        "related": {},
+        "posts": [
+            {
+                "title": "Call de Outubro de 2022",
+                "url": "/call-10-2022",
+                "highlighted": true,
+                "date": "2022-10-01T00:00:00"
+            },
+            {
+                "title": "Call de Setembro de 2022",
+                "url": "/call-09-2022",
+                "highlighted": true,
+                "date": "2022-09-07T00:00:00"
+            },
+            {
+                "title": "Call de Agosto de 2022",
+                "url": "/call-08-2022",
+                "highlighted": true,
+                "date": "2022-08-09T00:00:00"
+            },
+            {
+                "title": "Call de Julho de 2022",
+                "url": "/call-07-2022",
+                "highlighted": true,
+                "date": "2022-07-05T00:00:00"
+            },
+            {
+                "title": "Call de Junho de 2022",
+                "url": "/call-06-2022",
+                "highlighted": true,
+                "date": "2022-06-07T00:00:00"
+            },
+            {
+                "title": "Call de Maio de 2022",
+                "url": "/call-05-2022",
+                "highlighted": true,
+                "date": "2022-05-10T00:00:00"
+            },
+            {
+                "title": "Call de Abril de 2022",
+                "url": "/call-04-2022",
+                "highlighted": true,
+                "date": "2022-04-06T00:00:00"
+            },
+            {
+                "title": "Call de Março de 2022",
+                "url": "/call-03-2022",
+                "highlighted": true,
+                "date": "2022-03-07T00:00:00"
+            },
+            {
+                "title": "Call de Fevereiro de 2022",
+                "url": "/call-02-2022",
+                "highlighted": true,
+                "date": "2022-02-02T00:00:00"
+            },
+            {
+                "title": "Call de Janeiro de 2022",
+                "url": "/call-01-2022",
+                "highlighted": true,
+                "date": "2022-01-06T00:00:00"
+            },
+            {
+                "title": "Call de Dezembro de 2021",
+                "url": "/call-12-2021",
+                "highlighted": true,
+                "date": "2021-12-09T00:00:00"
+            },
+            {
+                "title": "Call de Novembro de 2021",
+                "url": "/call-11-2021",
+                "highlighted": true,
+                "date": "2021-11-12T00:00:00"
+            },
+            {
+                "title": "Call de Outubro de 2021",
+                "url": "/call-10-2021",
+                "highlighted": true,
+                "date": "2021-10-07T00:00:00"
+            },
+            {
+                "title": "Call de Setembro de 2021",
+                "url": "/call-09-2021",
+                "highlighted": true,
+                "date": "2021-09-03T00:00:00"
+            },
+            {
+                "title": "Call de Agosto de 2021",
+                "url": "/call-08-2021",
+                "highlighted": true,
+                "date": "2021-08-09T00:00:00"
+            },
+            {
+                "title": "Call de Julho de 2021",
+                "url": "/call-07-2021",
+                "highlighted": true,
+                "date": "2021-07-06T00:00:00"
+            },
+            {
+                "title": "Call de Junho de 2021",
+                "url": "/call-06-2021",
+                "highlighted": true,
+                "date": "2021-06-08T00:00:00"
+            },
+            {
+                "title": "Call de Maio de 2021",
+                "url": "/call-05-2021",
+                "highlighted": true,
+                "date": "2021-05-07T00:00:00"
+            },
+            {
+                "title": "Call de Abril de 2021",
+                "url": "/call-04-2021",
+                "highlighted": true,
+                "date": "2021-04-06T00:00:00"
+            },
+            {
+                "title": "Call de Março de 2021",
+                "url": "/call-03-2021",
+                "highlighted": true,
+                "date": "2021-03-02T00:00:00"
+            },
+            {
+                "title": "Call de Fevereiro de 2021",
+                "url": "/call-02-2021",
+                "highlighted": true,
+                "date": "2021-02-07T00:00:00"
+            },
+            {
+                "title": " Call de Janeiro de 2021",
+                "url": "/call-01-2021",
+                "highlighted": true,
+                "date": "2021-01-07T00:00:00"
+            },
+            {
+                "title": "Call de Dezembro de 2020",
+                "url": "/call-12-2020",
+                "highlighted": true,
+                "date": "2020-12-08T00:00:00"
+            },
+            {
+                "title": "Call de Novembro de 2020",
+                "url": "/call-11-2020",
+                "highlighted": true,
+                "date": "2020-11-07T00:00:00"
+            },
+            {
+                "title": "Call de Outubro de 2020",
+                "url": "/call-10-2020",
+                "highlighted": true,
+                "date": "2020-10-05T00:00:00"
+            },
+            {
+                "title": "Call de Setembro de 2020",
+                "url": "/call-09-2020",
+                "highlighted": true,
+                "date": "2020-09-09T00:00:00"
+            },
+            {
+                "title": "Call de Agosto de 2020",
+                "url": "/call-08-2020",
+                "highlighted": true,
+                "date": "2020-08-21T00:00:00"
+            },
+            {
+                "title": "Call de Julho de 2020",
+                "url": "/call-07-2020",
+                "highlighted": true,
+                "date": "2020-07-20T00:00:00"
+            },
+            {
+                "title": "Call de Junho de 2020 ",
+                "url": "/call-06-2020",
+                "highlighted": true,
+                "date": "2020-06-22T00:00:00"
+            },
+            {
+                "title": "Call de Maio de 2020",
+                "url": "/call-05-2020",
+                "highlighted": true,
+                "date": "2020-05-21T00:00:00"
+            },
+            {
+                "title": "Call de Abril de 2020",
+                "url": "/call-04-2020",
+                "highlighted": true,
+                "date": "2020-04-17T00:00:00"
             }
         ]
     },
@@ -460,50 +701,17 @@
             }
         ]
     },
-    "trabalho": {
-        "parents": [],
-        "children": [],
-        "related": {
-            "estudos": 2
-        },
-        "posts": [
-            {
-                "title": "Procedimentos de Escolta Dedicada",
-                "url": "/escolta",
-                "highlighted": true,
-                "date": "2024-07-14T00:00:00"
-            },
-            {
-                "title": "Periódicos para publicar artigos",
-                "url": "/periodicos",
-                "highlighted": true,
-                "date": "2024-07-05T00:00:00"
-            },
-            {
-                "title": "QRU Aposentadoria",
-                "url": "/aposentadoria",
-                "highlighted": true,
-                "date": "2024-02-25T00:00:00"
-            },
-            {
-                "title": "Avaliação Funcional I/XV",
-                "url": "/taf-01",
-                "highlighted": true,
-                "date": "2022-04-12T00:00:00"
-            }
-        ]
-    },
     "scripts": {
         "parents": [],
         "children": [
-            "mobile",
-            "cloud",
             "google-apps-script",
-            "scripts>google-apps-script",
-            "scripts>cloud",
             "AI",
+            "cloud",
+            "scripts>AI",
             "scripts>mobile",
-            "scripts>AI"
+            "scripts>cloud",
+            "mobile",
+            "scripts>google-apps-script"
         ],
         "related": {
             "linux": 26,
@@ -547,12 +755,6 @@
                 "date": "2024-06-13T00:00:00"
             },
             {
-                "title": "Convert `.pdf` to `UTF-8`",
-                "url": "/pdf-utf8",
-                "highlighted": true,
-                "date": "2024-06-02T00:00:00"
-            },
-            {
                 "title": "Python script to check LaTeX citations",
                 "url": "/bibtex-check",
                 "highlighted": true,
@@ -561,6 +763,12 @@
             {
                 "title": "Rename files using llm.datasette.io",
                 "url": "/llm-renamer",
+                "highlighted": true,
+                "date": "2024-06-02T00:00:00"
+            },
+            {
+                "title": "Convert `.pdf` to `UTF-8`",
+                "url": "/pdf-utf8",
                 "highlighted": true,
                 "date": "2024-06-02T00:00:00"
             },
@@ -643,14 +851,14 @@
                 "date": "2024-01-03T00:00:00"
             },
             {
-                "title": "Shell script to replace JEKYLLER edge extension",
-                "url": "/jekyller",
+                "title": "Packages list script",
+                "url": "/dpkg-script",
                 "highlighted": true,
                 "date": "2023-12-24T00:00:00"
             },
             {
-                "title": "Packages list script",
-                "url": "/dpkg-script",
+                "title": "Shell script to replace JEKYLLER edge extension",
+                "url": "/jekyller",
                 "highlighted": true,
                 "date": "2023-12-24T00:00:00"
             },
@@ -668,11 +876,82 @@
             }
         ]
     },
+    "estudos": {
+        "parents": [],
+        "children": [],
+        "related": {
+            "trabalho": 2,
+            "scripts": 2
+        },
+        "posts": [
+            {
+                "title": "Periódicos para publicar artigos",
+                "url": "/periodicos",
+                "highlighted": true,
+                "date": "2024-07-05T00:00:00"
+            },
+            {
+                "title": "STF Scraper [script]",
+                "url": "/stf-scraper",
+                "highlighted": true,
+                "date": "2024-05-01T00:00:00"
+            },
+            {
+                "title": "Processo de Depósito Legal - UFJ",
+                "url": "/ufj-tcc",
+                "highlighted": true,
+                "date": "2024-03-25T00:00:00"
+            },
+            {
+                "title": "Se eu fosse um concurseiro - George Marmelstein",
+                "url": "/marmelstein",
+                "highlighted": true,
+                "date": "2024-01-07T00:00:00"
+            },
+            {
+                "title": "CESPE: chute tático",
+                "url": "/cespe",
+                "highlighted": true,
+                "date": "2023-12-20T00:00:00"
+            },
+            {
+                "title": "Calendário Acadêmico",
+                "url": "/facul-calendar",
+                "highlighted": true,
+                "date": "2023-03-07T00:00:00"
+            },
+            {
+                "title": "WRITING TO LEARN AND WHY IT MATTERS",
+                "url": "/writing",
+                "highlighted": true,
+                "date": "2022-11-30T00:00:00"
+            }
+        ]
+    },
+    "chess": {
+        "parents": [],
+        "children": [],
+        "related": {},
+        "posts": [
+            {
+                "title": "Performance média",
+                "url": "/performance",
+                "highlighted": true,
+                "date": "2021-03-02T00:00:00"
+            },
+            {
+                "title": "III Etapa do Circuito Goiano de Xadrez 2020",
+                "url": "/torneio-001",
+                "highlighted": true,
+                "date": "2020-11-11T00:00:00"
+            }
+        ]
+    },
     "tools": {
         "parents": [],
         "children": [
-            "tools>AI>prompt",
-            "AI>prompt"
+            "AI>prompt",
+            "tools>AI>prompt"
         ],
         "related": {},
         "posts": [
@@ -683,32 +962,20 @@
                 "date": "2024-04-13T00:00:00"
             },
             {
-                "title": "1991-07-25-rm-lines",
-                "url": "/rm-lines",
-                "highlighted": true,
-                "date": "1991-07-25T00:00:00"
-            },
-            {
-                "title": "1991-07-25-dedup-spaces",
-                "url": "/dedup-spaces",
-                "highlighted": true,
-                "date": "1991-07-25T00:00:00"
-            },
-            {
                 "title": "1991-07-25-sort",
                 "url": "/sort",
                 "highlighted": true,
                 "date": "1991-07-25T00:00:00"
             },
             {
-                "title": "1991-07-25-dedup",
-                "url": "/dedup",
+                "title": "1991-07-25-diff",
+                "url": "/diff",
                 "highlighted": true,
                 "date": "1991-07-25T00:00:00"
             },
             {
-                "title": "1991-07-25-regex",
-                "url": "/regex",
+                "title": "1991-07-25-somacon",
+                "url": "/somacon",
                 "highlighted": true,
                 "date": "1991-07-25T00:00:00"
             },
@@ -725,16 +992,163 @@
                 "date": "1991-07-25T00:00:00"
             },
             {
-                "title": "1991-07-25-diff",
-                "url": "/diff",
+                "title": "1991-07-25-dedup",
+                "url": "/dedup",
                 "highlighted": true,
                 "date": "1991-07-25T00:00:00"
             },
             {
-                "title": "1991-07-25-somacon",
-                "url": "/somacon",
+                "title": "1991-07-25-rm-lines",
+                "url": "/rm-lines",
                 "highlighted": true,
                 "date": "1991-07-25T00:00:00"
+            },
+            {
+                "title": "1991-07-25-regex",
+                "url": "/regex",
+                "highlighted": true,
+                "date": "1991-07-25T00:00:00"
+            },
+            {
+                "title": "1991-07-25-dedup-spaces",
+                "url": "/dedup-spaces",
+                "highlighted": true,
+                "date": "1991-07-25T00:00:00"
+            }
+        ]
+    },
+    "iphone": {
+        "parents": [
+            "tasks"
+        ],
+        "children": [],
+        "related": {
+            "scripts>mobile": 2,
+            "software>mobile": 2
+        },
+        "posts": [
+            {
+                "title": "MLO URL schemes",
+                "url": "/mlo-url-schemes",
+                "highlighted": false,
+                "date": "2024-08-25T00:00:00"
+            },
+            {
+                "title": "iOS 18 changelog",
+                "url": "/ios-18-changelog",
+                "highlighted": true,
+                "date": "2024-07-30T00:00:00"
+            },
+            {
+                "title": "iPhone: files2zip & zip2clipboard",
+                "url": "/iphone-files2zip-zip2clipboard",
+                "highlighted": true,
+                "date": "2024-07-20T00:00:00"
+            }
+        ]
+    },
+    "scripts>mobile": {
+        "parents": [
+            "scripts"
+        ],
+        "children": [],
+        "related": {
+            "iphone": 2
+        },
+        "posts": [
+            {
+                "title": "iPhone: files2zip & zip2clipboard",
+                "url": "/iphone-files2zip-zip2clipboard",
+                "highlighted": true,
+                "date": "2024-07-20T00:00:00"
+            }
+        ]
+    },
+    "mobile": {
+        "parents": [
+            "scripts",
+            "software"
+        ],
+        "children": [],
+        "related": {},
+        "posts": [
+            {
+                "title": "Linux mobile OS",
+                "url": "/linux-mobile-os",
+                "highlighted": false,
+                "date": "2024-08-17T00:00:00"
+            },
+            {
+                "title": "iOS 18 changelog",
+                "url": "/ios-18-changelog",
+                "highlighted": false,
+                "date": "2024-07-30T00:00:00"
+            },
+            {
+                "title": "iPhone: files2zip & zip2clipboard",
+                "url": "/iphone-files2zip-zip2clipboard",
+                "highlighted": false,
+                "date": "2024-07-20T00:00:00"
+            }
+        ]
+    },
+    "software>mobile": {
+        "parents": [
+            "software"
+        ],
+        "children": [],
+        "related": {
+            "iphone": 2,
+            "linux": 2
+        },
+        "posts": [
+            {
+                "title": "Linux mobile OS",
+                "url": "/linux-mobile-os",
+                "highlighted": true,
+                "date": "2024-08-17T00:00:00"
+            },
+            {
+                "title": "iOS 18 changelog",
+                "url": "/ios-18-changelog",
+                "highlighted": true,
+                "date": "2024-07-30T00:00:00"
+            }
+        ]
+    },
+    "software": {
+        "parents": [],
+        "children": [
+            "mobile",
+            "software>cloud",
+            "software>mobile",
+            "cloud"
+        ],
+        "related": {},
+        "posts": [
+            {
+                "title": "Linux mobile OS",
+                "url": "/linux-mobile-os",
+                "highlighted": false,
+                "date": "2024-08-17T00:00:00"
+            },
+            {
+                "title": "iOS 18 changelog",
+                "url": "/ios-18-changelog",
+                "highlighted": false,
+                "date": "2024-07-30T00:00:00"
+            },
+            {
+                "title": "AWS PushSafer billing alarm",
+                "url": "/aws-pushsafer-billing-alarm",
+                "highlighted": false,
+                "date": "2024-07-25T00:00:00"
+            },
+            {
+                "title": "dasel context guide",
+                "url": "/dasel",
+                "highlighted": true,
+                "date": "2024-02-17T00:00:00"
             }
         ]
     },
@@ -769,45 +1183,105 @@
             }
         ]
     },
-    "edital": {
+    "ler": {
         "parents": [],
-        "children": [
-            "edital>direito>processual-penal",
-            "direito",
-            "edital>direito",
-            "direito>processual-penal"
-        ],
+        "children": [],
         "related": {},
         "posts": [
             {
-                "title": "Ordenamento Jurídico Brasileiro [redução eidética]",
-                "url": "/ordenamento",
+                "title": "links",
+                "url": "/links",
+                "highlighted": true,
+                "date": "2024-08-31T00:00:00"
+            },
+            {
+                "title": "libros familiares",
+                "url": "/libros-de-familia",
+                "highlighted": true,
+                "date": "2022-07-14T00:00:00"
+            },
+            {
+                "title": "chess books",
+                "url": "/chess-books",
+                "highlighted": true,
+                "date": "2020-12-31T00:00:00"
+            },
+            {
+                "title": "Livros",
+                "url": "/livros",
+                "highlighted": true,
+                "date": "2020-06-07T00:00:00"
+            }
+        ]
+    },
+    "scripts>cloud": {
+        "parents": [
+            "scripts"
+        ],
+        "children": [],
+        "related": {},
+        "posts": [
+            {
+                "title": "Webhooks using `Serverless.com` Lift plugin",
+                "url": "/webhooks-using-serverlesscom-lift-plugin",
+                "highlighted": true,
+                "date": "2024-07-17T00:00:00"
+            }
+        ]
+    },
+    "cloud": {
+        "parents": [
+            "scripts",
+            "software"
+        ],
+        "children": [],
+        "related": {},
+        "posts": [
+            {
+                "title": "AWS PushSafer billing alarm",
+                "url": "/aws-pushsafer-billing-alarm",
                 "highlighted": false,
-                "date": "2024-04-17T00:00:00"
+                "date": "2024-07-25T00:00:00"
             },
             {
-                "title": "Procedimento dos Crimes da Competência do Tribunal do Júri",
-                "url": "/juri",
+                "title": "Webhooks using `Serverless.com` Lift plugin",
+                "url": "/webhooks-using-serverlesscom-lift-plugin",
                 "highlighted": false,
-                "date": "2024-03-08T00:00:00"
+                "date": "2024-07-17T00:00:00"
+            }
+        ]
+    },
+    "assistir": {
+        "parents": [],
+        "children": [],
+        "related": {},
+        "posts": [
+            {
+                "title": "aye aye",
+                "url": "/aye",
+                "highlighted": true,
+                "date": "2022-03-16T00:00:00"
             },
             {
-                "title": "Núcleo duro das provas de Delegado de Polícia",
-                "url": "/hard-core",
+                "title": "streaming",
+                "url": "/streaming",
                 "highlighted": true,
-                "date": "2023-12-22T00:00:00"
-            },
+                "date": "2022-03-16T00:00:00"
+            }
+        ]
+    },
+    "tasks>iphone": {
+        "parents": [
+            "tasks"
+        ],
+        "children": [],
+        "related": {},
+        "posts": [
             {
-                "title": "Concursos DELTA iminentes",
-                "url": "/concursos-delta",
+                "title": "MLO URL schemes",
+                "url": "/mlo-url-schemes",
                 "highlighted": true,
-                "date": "2023-12-22T00:00:00"
-            },
-            {
-                "title": "Estados que exigem atividade policial para DELTA",
-                "url": "/atividade-policial",
-                "highlighted": true,
-                "date": "2022-06-07T00:00:00"
+                "date": "2024-08-25T00:00:00"
             }
         ]
     },
@@ -899,554 +1373,37 @@
             }
         ]
     },
-    "hardware": {
-        "parents": [],
-        "children": [],
-        "related": {},
-        "posts": [
-            {
-                "title": "RockChip devices",
-                "url": "/rockchip-devices",
-                "highlighted": true,
-                "date": "2024-08-18T00:00:00"
-            },
-            {
-                "title": "Laptop alternative",
-                "url": "/laptop-alternative",
-                "highlighted": true,
-                "date": "2024-08-01T00:00:00"
-            },
-            {
-                "title": "VPC-3588 Motherboard",
-                "url": "/vpc-3588-motherboard",
-                "highlighted": true,
-                "date": "2024-07-20T00:00:00"
-            }
-        ]
-    },
-    "chess": {
-        "parents": [],
-        "children": [],
-        "related": {},
-        "posts": [
-            {
-                "title": "Performance média",
-                "url": "/performance",
-                "highlighted": true,
-                "date": "2021-03-02T00:00:00"
-            },
-            {
-                "title": "III Etapa do Circuito Goiano de Xadrez 2020",
-                "url": "/torneio-001",
-                "highlighted": true,
-                "date": "2020-11-11T00:00:00"
-            }
-        ]
-    },
-    "assistir": {
-        "parents": [],
-        "children": [],
-        "related": {},
-        "posts": [
-            {
-                "title": "streaming",
-                "url": "/streaming",
-                "highlighted": true,
-                "date": "2022-03-16T00:00:00"
-            },
-            {
-                "title": "aye aye",
-                "url": "/aye",
-                "highlighted": true,
-                "date": "2022-03-16T00:00:00"
-            }
-        ]
-    },
-    "calls": {
-        "parents": [],
-        "children": [],
-        "related": {},
-        "posts": [
-            {
-                "title": "Call de Outubro de 2022",
-                "url": "/call-10-2022",
-                "highlighted": true,
-                "date": "2022-10-01T00:00:00"
-            },
-            {
-                "title": "Call de Setembro de 2022",
-                "url": "/call-09-2022",
-                "highlighted": true,
-                "date": "2022-09-07T00:00:00"
-            },
-            {
-                "title": "Call de Agosto de 2022",
-                "url": "/call-08-2022",
-                "highlighted": true,
-                "date": "2022-08-09T00:00:00"
-            },
-            {
-                "title": "Call de Julho de 2022",
-                "url": "/call-07-2022",
-                "highlighted": true,
-                "date": "2022-07-05T00:00:00"
-            },
-            {
-                "title": "Call de Junho de 2022",
-                "url": "/call-06-2022",
-                "highlighted": true,
-                "date": "2022-06-07T00:00:00"
-            },
-            {
-                "title": "Call de Maio de 2022",
-                "url": "/call-05-2022",
-                "highlighted": true,
-                "date": "2022-05-10T00:00:00"
-            },
-            {
-                "title": "Call de Abril de 2022",
-                "url": "/call-04-2022",
-                "highlighted": true,
-                "date": "2022-04-06T00:00:00"
-            },
-            {
-                "title": "Call de Março de 2022",
-                "url": "/call-03-2022",
-                "highlighted": true,
-                "date": "2022-03-07T00:00:00"
-            },
-            {
-                "title": "Call de Fevereiro de 2022",
-                "url": "/call-02-2022",
-                "highlighted": true,
-                "date": "2022-02-02T00:00:00"
-            },
-            {
-                "title": "Call de Janeiro de 2022",
-                "url": "/call-01-2022",
-                "highlighted": true,
-                "date": "2022-01-06T00:00:00"
-            },
-            {
-                "title": "Call de Dezembro de 2021",
-                "url": "/call-12-2021",
-                "highlighted": true,
-                "date": "2021-12-09T00:00:00"
-            },
-            {
-                "title": "Call de Novembro de 2021",
-                "url": "/call-11-2021",
-                "highlighted": true,
-                "date": "2021-11-12T00:00:00"
-            },
-            {
-                "title": "Call de Outubro de 2021",
-                "url": "/call-10-2021",
-                "highlighted": true,
-                "date": "2021-10-07T00:00:00"
-            },
-            {
-                "title": "Call de Setembro de 2021",
-                "url": "/call-09-2021",
-                "highlighted": true,
-                "date": "2021-09-03T00:00:00"
-            },
-            {
-                "title": "Call de Agosto de 2021",
-                "url": "/call-08-2021",
-                "highlighted": true,
-                "date": "2021-08-09T00:00:00"
-            },
-            {
-                "title": "Call de Julho de 2021",
-                "url": "/call-07-2021",
-                "highlighted": true,
-                "date": "2021-07-06T00:00:00"
-            },
-            {
-                "title": "Call de Junho de 2021",
-                "url": "/call-06-2021",
-                "highlighted": true,
-                "date": "2021-06-08T00:00:00"
-            },
-            {
-                "title": "Call de Maio de 2021",
-                "url": "/call-05-2021",
-                "highlighted": true,
-                "date": "2021-05-07T00:00:00"
-            },
-            {
-                "title": "Call de Abril de 2021",
-                "url": "/call-04-2021",
-                "highlighted": true,
-                "date": "2021-04-06T00:00:00"
-            },
-            {
-                "title": "Call de Março de 2021",
-                "url": "/call-03-2021",
-                "highlighted": true,
-                "date": "2021-03-02T00:00:00"
-            },
-            {
-                "title": "Call de Fevereiro de 2021",
-                "url": "/call-02-2021",
-                "highlighted": true,
-                "date": "2021-02-07T00:00:00"
-            },
-            {
-                "title": " Call de Janeiro de 2021",
-                "url": "/call-01-2021",
-                "highlighted": true,
-                "date": "2021-01-07T00:00:00"
-            },
-            {
-                "title": "Call de Dezembro de 2020",
-                "url": "/call-12-2020",
-                "highlighted": true,
-                "date": "2020-12-08T00:00:00"
-            },
-            {
-                "title": "Call de Novembro de 2020",
-                "url": "/call-11-2020",
-                "highlighted": true,
-                "date": "2020-11-07T00:00:00"
-            },
-            {
-                "title": "Call de Outubro de 2020",
-                "url": "/call-10-2020",
-                "highlighted": true,
-                "date": "2020-10-05T00:00:00"
-            },
-            {
-                "title": "Call de Setembro de 2020",
-                "url": "/call-09-2020",
-                "highlighted": true,
-                "date": "2020-09-09T00:00:00"
-            },
-            {
-                "title": "Call de Agosto de 2020",
-                "url": "/call-08-2020",
-                "highlighted": true,
-                "date": "2020-08-21T00:00:00"
-            },
-            {
-                "title": "Call de Julho de 2020",
-                "url": "/call-07-2020",
-                "highlighted": true,
-                "date": "2020-07-20T00:00:00"
-            },
-            {
-                "title": "Call de Junho de 2020 ",
-                "url": "/call-06-2020",
-                "highlighted": true,
-                "date": "2020-06-22T00:00:00"
-            },
-            {
-                "title": "Call de Maio de 2020",
-                "url": "/call-05-2020",
-                "highlighted": true,
-                "date": "2020-05-21T00:00:00"
-            },
-            {
-                "title": "Call de Abril de 2020",
-                "url": "/call-04-2020",
-                "highlighted": true,
-                "date": "2020-04-17T00:00:00"
-            }
-        ]
-    },
-    "despesas": {
-        "parents": [],
-        "children": [],
-        "related": {},
-        "posts": [
-            {
-                "title": "Contas",
-                "url": "/contas",
-                "highlighted": true,
-                "date": "2023-10-03T00:00:00"
-            },
-            {
-                "title": "Como calcular prestação por meio de taxa de juros e período",
-                "url": "/emprestimo",
-                "highlighted": true,
-                "date": "2021-01-07T00:00:00"
-            }
-        ]
-    },
-    "tasks>iphone": {
+    "AI>prompt": {
         "parents": [
-            "tasks"
+            "tools",
+            "AI"
         ],
         "children": [],
         "related": {},
         "posts": [
             {
-                "title": "MLO URL schemes",
-                "url": "/mlo-url-schemes",
+                "title": "gmail2mailgrip",
+                "url": "/gmail2mailgrip-prompt",
                 "highlighted": true,
-                "date": "2024-08-25T00:00:00"
-            }
-        ]
-    },
-    "iphone": {
-        "parents": [
-            "tasks"
-        ],
-        "children": [],
-        "related": {
-            "software>mobile": 2,
-            "scripts>mobile": 2
-        },
-        "posts": [
+                "date": "2024-08-02T00:00:00"
+            },
             {
-                "title": "MLO URL schemes",
-                "url": "/mlo-url-schemes",
+                "title": "reassess",
+                "url": "/reassess",
                 "highlighted": false,
-                "date": "2024-08-25T00:00:00"
+                "date": "2024-04-13T00:00:00"
             },
             {
-                "title": "iOS 18 changelog",
-                "url": "/ios-18-changelog",
+                "title": "JSON-LD",
+                "url": "/json-ld",
                 "highlighted": true,
-                "date": "2024-07-30T00:00:00"
+                "date": "2024-02-14T00:00:00"
             },
             {
-                "title": "iPhone: files2zip & zip2clipboard",
-                "url": "/iphone-files2zip-zip2clipboard",
+                "title": "default",
+                "url": "/default-prompt",
                 "highlighted": true,
-                "date": "2024-07-20T00:00:00"
-            }
-        ]
-    },
-    "sell": {
-        "parents": [],
-        "children": [],
-        "related": {},
-        "posts": [
-            {
-                "title": "VENDA SMTO3 04,74% a.m.",
-                "url": "/sell-smto3",
-                "highlighted": true,
-                "date": "2021-11-03T00:00:00"
-            },
-            {
-                "title": "VENDA TOTS3 04,20% a.m.",
-                "url": "/sell-tots3",
-                "highlighted": true,
-                "date": "2021-09-01T00:00:00"
-            },
-            {
-                "title": "VENDA MTSA4 08,14% a.m.",
-                "url": "/sell-mtsa4",
-                "highlighted": true,
-                "date": "2021-06-11T00:00:00"
-            },
-            {
-                "title": "VENDA CARD3 04,02% a.m.",
-                "url": "/sell-card3",
-                "highlighted": true,
-                "date": "2021-04-02T00:00:00"
-            }
-        ]
-    },
-    "github>jekyll": {
-        "parents": [
-            "github"
-        ],
-        "children": [],
-        "related": {},
-        "posts": [
-            {
-                "title": "PageFind with Jekyll ",
-                "url": "/pagefind-with-jekyll",
-                "highlighted": true,
-                "date": "2024-08-15T00:00:00"
-            },
-            {
-                "title": "2024-07-13-update-gemfilelock",
-                "url": "/update-gemfilelock",
-                "highlighted": true,
-                "date": "2024-07-13T00:00:00"
-            }
-        ]
-    },
-    "github": {
-        "parents": [],
-        "children": [
-            "jekyll",
-            "github>jekyll"
-        ],
-        "related": {},
-        "posts": [
-            {
-                "title": "PageFind with Jekyll ",
-                "url": "/pagefind-with-jekyll",
-                "highlighted": false,
-                "date": "2024-08-15T00:00:00"
-            },
-            {
-                "title": "2024-07-13-update-gemfilelock",
-                "url": "/update-gemfilelock",
-                "highlighted": false,
-                "date": "2024-07-13T00:00:00"
-            }
-        ]
-    },
-    "jekyll": {
-        "parents": [
-            "github"
-        ],
-        "children": [],
-        "related": {},
-        "posts": [
-            {
-                "title": "PageFind with Jekyll ",
-                "url": "/pagefind-with-jekyll",
-                "highlighted": false,
-                "date": "2024-08-15T00:00:00"
-            },
-            {
-                "title": "2024-07-13-update-gemfilelock",
-                "url": "/update-gemfilelock",
-                "highlighted": false,
-                "date": "2024-07-13T00:00:00"
-            }
-        ]
-    },
-    "estudos": {
-        "parents": [],
-        "children": [],
-        "related": {
-            "scripts": 2,
-            "trabalho": 2
-        },
-        "posts": [
-            {
-                "title": "Periódicos para publicar artigos",
-                "url": "/periodicos",
-                "highlighted": true,
-                "date": "2024-07-05T00:00:00"
-            },
-            {
-                "title": "STF Scraper [script]",
-                "url": "/stf-scraper",
-                "highlighted": true,
-                "date": "2024-05-01T00:00:00"
-            },
-            {
-                "title": "Processo de Depósito Legal - UFJ",
-                "url": "/ufj-tcc",
-                "highlighted": true,
-                "date": "2024-03-25T00:00:00"
-            },
-            {
-                "title": "Se eu fosse um concurseiro - George Marmelstein",
-                "url": "/marmelstein",
-                "highlighted": true,
-                "date": "2024-01-07T00:00:00"
-            },
-            {
-                "title": "CESPE: chute tático",
-                "url": "/cespe",
-                "highlighted": true,
-                "date": "2023-12-20T00:00:00"
-            },
-            {
-                "title": "Calendário Acadêmico",
-                "url": "/facul-calendar",
-                "highlighted": true,
-                "date": "2023-03-07T00:00:00"
-            },
-            {
-                "title": "WRITING TO LEARN AND WHY IT MATTERS",
-                "url": "/writing",
-                "highlighted": true,
-                "date": "2022-11-30T00:00:00"
-            }
-        ]
-    },
-    "edital>direito": {
-        "parents": [
-            "edital"
-        ],
-        "children": [
-            "processual-penal"
-        ],
-        "related": {},
-        "posts": [
-            {
-                "title": "Ordenamento Jurídico Brasileiro [redução eidética]",
-                "url": "/ordenamento",
-                "highlighted": true,
-                "date": "2024-04-17T00:00:00"
-            },
-            {
-                "title": "Procedimento dos Crimes da Competência do Tribunal do Júri",
-                "url": "/juri",
-                "highlighted": false,
-                "date": "2024-03-08T00:00:00"
-            }
-        ]
-    },
-    "direito": {
-        "parents": [
-            "edital"
-        ],
-        "children": [
-            "edital>direito>processual-penal"
-        ],
-        "related": {},
-        "posts": [
-            {
-                "title": "Ordenamento Jurídico Brasileiro [redução eidética]",
-                "url": "/ordenamento",
-                "highlighted": false,
-                "date": "2024-04-17T00:00:00"
-            },
-            {
-                "title": "Procedimento dos Crimes da Competência do Tribunal do Júri",
-                "url": "/juri",
-                "highlighted": false,
-                "date": "2024-03-08T00:00:00"
-            }
-        ]
-    },
-    "fatherhood": {
-        "parents": [],
-        "children": [],
-        "related": {},
-        "posts": [
-            {
-                "title": "Board games",
-                "url": "/board-games",
-                "highlighted": true,
-                "date": "2024-07-30T00:00:00"
-            },
-            {
-                "title": "Vacinas",
-                "url": "/vacinas",
-                "highlighted": true,
-                "date": "2022-09-27T00:00:00"
-            }
-        ]
-    },
-    "misc": {
-        "parents": [],
-        "children": [],
-        "related": {},
-        "posts": [
-            {
-                "title": "Bolo Pão (Pound Cake)",
-                "url": "/pound-cake",
-                "highlighted": true,
-                "date": "2024-07-25T00:00:00"
-            },
-            {
-                "title": "wallpaper I",
-                "url": "/wallpaper-1",
-                "highlighted": true,
-                "date": "2018-04-11T00:00:00"
+                "date": "2023-11-05T00:00:00"
             }
         ]
     },
@@ -1511,128 +1468,6 @@
             }
         ]
     },
-    "software": {
-        "parents": [],
-        "children": [
-            "software>mobile",
-            "mobile",
-            "cloud",
-            "software>cloud"
-        ],
-        "related": {},
-        "posts": [
-            {
-                "title": "Linux mobile OS",
-                "url": "/linux-mobile-os",
-                "highlighted": false,
-                "date": "2024-08-17T00:00:00"
-            },
-            {
-                "title": "iOS 18 changelog",
-                "url": "/ios-18-changelog",
-                "highlighted": false,
-                "date": "2024-07-30T00:00:00"
-            },
-            {
-                "title": "AWS PushSafer billing alarm",
-                "url": "/aws-pushsafer-billing-alarm",
-                "highlighted": false,
-                "date": "2024-07-25T00:00:00"
-            },
-            {
-                "title": "dasel context guide",
-                "url": "/dasel",
-                "highlighted": true,
-                "date": "2024-02-17T00:00:00"
-            }
-        ]
-    },
-    "software>mobile": {
-        "parents": [
-            "software"
-        ],
-        "children": [],
-        "related": {
-            "iphone": 2,
-            "linux": 2
-        },
-        "posts": [
-            {
-                "title": "Linux mobile OS",
-                "url": "/linux-mobile-os",
-                "highlighted": true,
-                "date": "2024-08-17T00:00:00"
-            },
-            {
-                "title": "iOS 18 changelog",
-                "url": "/ios-18-changelog",
-                "highlighted": true,
-                "date": "2024-07-30T00:00:00"
-            }
-        ]
-    },
-    "mobile": {
-        "parents": [
-            "software",
-            "scripts"
-        ],
-        "children": [],
-        "related": {},
-        "posts": [
-            {
-                "title": "Linux mobile OS",
-                "url": "/linux-mobile-os",
-                "highlighted": false,
-                "date": "2024-08-17T00:00:00"
-            },
-            {
-                "title": "iOS 18 changelog",
-                "url": "/ios-18-changelog",
-                "highlighted": false,
-                "date": "2024-07-30T00:00:00"
-            },
-            {
-                "title": "iPhone: files2zip & zip2clipboard",
-                "url": "/iphone-files2zip-zip2clipboard",
-                "highlighted": false,
-                "date": "2024-07-20T00:00:00"
-            }
-        ]
-    },
-    "AI>prompt": {
-        "parents": [
-            "AI",
-            "tools"
-        ],
-        "children": [],
-        "related": {},
-        "posts": [
-            {
-                "title": "gmail2mailgrip",
-                "url": "/gmail2mailgrip-prompt",
-                "highlighted": true,
-                "date": "2024-08-02T00:00:00"
-            },
-            {
-                "title": "reassess",
-                "url": "/reassess",
-                "highlighted": false,
-                "date": "2024-04-13T00:00:00"
-            },
-            {
-                "title": "JSON-LD",
-                "url": "/json-ld",
-                "highlighted": true,
-                "date": "2024-02-14T00:00:00"
-            },
-            {
-                "title": "default",
-                "url": "/default-prompt",
-                "highlighted": true,
-                "date": "2023-11-05T00:00:00"
-            }
-        ]
-    },
     "prompt": {
         "parents": [
             "AI",
@@ -1667,91 +1502,285 @@
             }
         ]
     },
-    "music": {
+    "github>jekyll": {
+        "parents": [
+            "github"
+        ],
+        "children": [],
+        "related": {},
+        "posts": [
+            {
+                "title": "PageFind with Jekyll ",
+                "url": "/pagefind-with-jekyll",
+                "highlighted": true,
+                "date": "2024-08-15T00:00:00"
+            },
+            {
+                "title": "2024-07-13-update-gemfilelock",
+                "url": "/update-gemfilelock",
+                "highlighted": true,
+                "date": "2024-07-13T00:00:00"
+            }
+        ]
+    },
+    "github": {
+        "parents": [],
+        "children": [
+            "github>jekyll",
+            "jekyll"
+        ],
+        "related": {},
+        "posts": [
+            {
+                "title": "PageFind with Jekyll ",
+                "url": "/pagefind-with-jekyll",
+                "highlighted": false,
+                "date": "2024-08-15T00:00:00"
+            },
+            {
+                "title": "2024-07-13-update-gemfilelock",
+                "url": "/update-gemfilelock",
+                "highlighted": false,
+                "date": "2024-07-13T00:00:00"
+            }
+        ]
+    },
+    "jekyll": {
+        "parents": [
+            "github"
+        ],
+        "children": [],
+        "related": {},
+        "posts": [
+            {
+                "title": "PageFind with Jekyll ",
+                "url": "/pagefind-with-jekyll",
+                "highlighted": false,
+                "date": "2024-08-15T00:00:00"
+            },
+            {
+                "title": "2024-07-13-update-gemfilelock",
+                "url": "/update-gemfilelock",
+                "highlighted": false,
+                "date": "2024-07-13T00:00:00"
+            }
+        ]
+    },
+    "fatherhood": {
         "parents": [],
         "children": [],
         "related": {},
         "posts": [
             {
-                "title": "Lyrics of Deleter by Grouplove",
-                "url": "/lyrics-of-deleter-by-grouplove",
+                "title": "Board games",
+                "url": "/board-games",
                 "highlighted": true,
-                "date": "2024-07-20T00:00:00"
+                "date": "2024-07-30T00:00:00"
+            },
+            {
+                "title": "Vacinas",
+                "url": "/vacinas",
+                "highlighted": true,
+                "date": "2022-09-27T00:00:00"
             }
         ]
     },
-    "scripts>mobile": {
+    "scripts>AI": {
         "parents": [
             "scripts"
         ],
         "children": [],
-        "related": {
-            "iphone": 2
-        },
+        "related": {},
         "posts": [
             {
-                "title": "iPhone: files2zip & zip2clipboard",
-                "url": "/iphone-files2zip-zip2clipboard",
+                "title": "Longer inputs on WHISPER API",
+                "url": "/longer-inputs-on-whisper-api",
                 "highlighted": true,
-                "date": "2024-07-20T00:00:00"
+                "date": "2024-07-21T00:00:00"
             }
         ]
     },
-    "spirit": {
-        "parents": [],
-        "children": [],
-        "related": {
-            "admoestação": 2
-        },
-        "posts": [
-            {
-                "title": "9gag evangelism",
-                "url": "/holy-9gag",
-                "highlighted": true,
-                "date": "2022-06-15T00:00:00"
-            },
-            {
-                "title": "canção da internação",
-                "url": "/gustavo",
-                "highlighted": true,
-                "date": "2018-02-26T00:00:00"
-            },
-            {
-                "title": "Envolvido ou comprometido?",
-                "url": "/tal-06-17",
-                "highlighted": true,
-                "date": "2018-02-15T00:00:00"
-            }
-        ]
-    },
-    "ler": {
+    "hardware": {
         "parents": [],
         "children": [],
         "related": {},
         "posts": [
             {
-                "title": "links",
-                "url": "/links",
+                "title": "RockChip devices",
+                "url": "/rockchip-devices",
                 "highlighted": true,
-                "date": "2024-08-31T00:00:00"
+                "date": "2024-08-18T00:00:00"
             },
             {
-                "title": "libros familiares",
-                "url": "/libros-de-familia",
+                "title": "Laptop alternative",
+                "url": "/laptop-alternative",
                 "highlighted": true,
-                "date": "2022-07-14T00:00:00"
+                "date": "2024-08-01T00:00:00"
             },
             {
-                "title": "chess books",
-                "url": "/chess-books",
+                "title": "VPC-3588 Motherboard",
+                "url": "/vpc-3588-motherboard",
                 "highlighted": true,
-                "date": "2020-12-31T00:00:00"
+                "date": "2024-07-20T00:00:00"
+            }
+        ]
+    },
+    "saúde": {
+        "parents": [],
+        "children": [],
+        "related": {},
+        "posts": [
+            {
+                "title": "Arm Tendinitis",
+                "url": "/arm-tendinitis",
+                "highlighted": true,
+                "date": "2024-08-13T00:00:00"
             },
             {
-                "title": "Livros",
-                "url": "/livros",
+                "title": "Effects of 10-Day Complete Fasting",
+                "url": "/jejum",
                 "highlighted": true,
-                "date": "2020-06-07T00:00:00"
+                "date": "2022-10-18T00:00:00"
+            }
+        ]
+    },
+    "despesas": {
+        "parents": [],
+        "children": [],
+        "related": {},
+        "posts": [
+            {
+                "title": "Contas",
+                "url": "/contas",
+                "highlighted": true,
+                "date": "2023-10-03T00:00:00"
+            },
+            {
+                "title": "Como calcular prestação por meio de taxa de juros e período",
+                "url": "/emprestimo",
+                "highlighted": true,
+                "date": "2021-01-07T00:00:00"
+            }
+        ]
+    },
+    "edital": {
+        "parents": [],
+        "children": [
+            "edital>direito",
+            "direito>processual-penal",
+            "edital>direito>processual-penal",
+            "direito"
+        ],
+        "related": {},
+        "posts": [
+            {
+                "title": "Ordenamento Jurídico Brasileiro [redução eidética]",
+                "url": "/ordenamento",
+                "highlighted": false,
+                "date": "2024-04-17T00:00:00"
+            },
+            {
+                "title": "Procedimento dos Crimes da Competência do Tribunal do Júri",
+                "url": "/juri",
+                "highlighted": false,
+                "date": "2024-03-08T00:00:00"
+            },
+            {
+                "title": "Concursos DELTA iminentes",
+                "url": "/concursos-delta",
+                "highlighted": true,
+                "date": "2023-12-22T00:00:00"
+            },
+            {
+                "title": "Núcleo duro das provas de Delegado de Polícia",
+                "url": "/hard-core",
+                "highlighted": true,
+                "date": "2023-12-22T00:00:00"
+            },
+            {
+                "title": "Estados que exigem atividade policial para DELTA",
+                "url": "/atividade-policial",
+                "highlighted": true,
+                "date": "2022-06-07T00:00:00"
+            }
+        ]
+    },
+    "trabalho": {
+        "parents": [],
+        "children": [],
+        "related": {
+            "estudos": 2
+        },
+        "posts": [
+            {
+                "title": "Procedimentos de Escolta Dedicada",
+                "url": "/escolta",
+                "highlighted": true,
+                "date": "2024-07-14T00:00:00"
+            },
+            {
+                "title": "Periódicos para publicar artigos",
+                "url": "/periodicos",
+                "highlighted": true,
+                "date": "2024-07-05T00:00:00"
+            },
+            {
+                "title": "QRU Aposentadoria",
+                "url": "/aposentadoria",
+                "highlighted": true,
+                "date": "2024-02-25T00:00:00"
+            },
+            {
+                "title": "Avaliação Funcional I/XV",
+                "url": "/taf-01",
+                "highlighted": true,
+                "date": "2022-04-12T00:00:00"
+            }
+        ]
+    },
+    "edital>direito": {
+        "parents": [
+            "edital"
+        ],
+        "children": [
+            "processual-penal"
+        ],
+        "related": {},
+        "posts": [
+            {
+                "title": "Ordenamento Jurídico Brasileiro [redução eidética]",
+                "url": "/ordenamento",
+                "highlighted": true,
+                "date": "2024-04-17T00:00:00"
+            },
+            {
+                "title": "Procedimento dos Crimes da Competência do Tribunal do Júri",
+                "url": "/juri",
+                "highlighted": false,
+                "date": "2024-03-08T00:00:00"
+            }
+        ]
+    },
+    "direito": {
+        "parents": [
+            "edital"
+        ],
+        "children": [
+            "edital>direito>processual-penal"
+        ],
+        "related": {},
+        "posts": [
+            {
+                "title": "Ordenamento Jurídico Brasileiro [redução eidética]",
+                "url": "/ordenamento",
+                "highlighted": false,
+                "date": "2024-04-17T00:00:00"
+            },
+            {
+                "title": "Procedimento dos Crimes da Competência do Tribunal do Júri",
+                "url": "/juri",
+                "highlighted": false,
+                "date": "2024-03-08T00:00:00"
             }
         ]
     },
@@ -1785,146 +1814,10 @@
             }
         ]
     },
-    "saúde": {
-        "parents": [],
-        "children": [],
-        "related": {},
-        "posts": [
-            {
-                "title": "Arm Tendinitis",
-                "url": "/arm-tendinitis",
-                "highlighted": true,
-                "date": "2024-08-13T00:00:00"
-            },
-            {
-                "title": "Effects of 10-Day Complete Fasting",
-                "url": "/jejum",
-                "highlighted": true,
-                "date": "2022-10-18T00:00:00"
-            }
-        ]
-    },
-    "tools>AI>prompt": {
-        "parents": [
-            "AI",
-            "tools"
-        ],
-        "children": [],
-        "related": {},
-        "posts": [
-            {
-                "title": "reassess",
-                "url": "/reassess",
-                "highlighted": true,
-                "date": "2024-04-13T00:00:00"
-            }
-        ]
-    },
-    "tools>AI": {
-        "parents": [],
-        "children": [
-            "prompt"
-        ],
-        "related": {},
-        "posts": [
-            {
-                "title": "reassess",
-                "url": "/reassess",
-                "highlighted": false,
-                "date": "2024-04-13T00:00:00"
-            }
-        ]
-    },
-    "software>cloud": {
-        "parents": [
-            "software"
-        ],
-        "children": [],
-        "related": {},
-        "posts": [
-            {
-                "title": "AWS PushSafer billing alarm",
-                "url": "/aws-pushsafer-billing-alarm",
-                "highlighted": true,
-                "date": "2024-07-25T00:00:00"
-            }
-        ]
-    },
-    "cloud": {
-        "parents": [
-            "software",
-            "scripts"
-        ],
-        "children": [],
-        "related": {},
-        "posts": [
-            {
-                "title": "AWS PushSafer billing alarm",
-                "url": "/aws-pushsafer-billing-alarm",
-                "highlighted": false,
-                "date": "2024-07-25T00:00:00"
-            },
-            {
-                "title": "Webhooks using `Serverless.com` Lift plugin",
-                "url": "/webhooks-using-serverlesscom-lift-plugin",
-                "highlighted": false,
-                "date": "2024-07-17T00:00:00"
-            }
-        ]
-    },
-    "receitas": {
-        "parents": [],
-        "children": [],
-        "related": {},
-        "posts": [
-            {
-                "title": "IRPF",
-                "url": "/irpf",
-                "highlighted": true,
-                "date": "2022-03-19T00:00:00"
-            }
-        ]
-    },
-    "admoestação": {
-        "parents": [],
-        "children": [],
-        "related": {
-            "spirit": 2
-        },
-        "posts": [
-            {
-                "title": "Your Life in Tokens",
-                "url": "/life-tokens",
-                "highlighted": true,
-                "date": "2024-06-22T00:00:00"
-            },
-            {
-                "title": "Envolvido ou comprometido?",
-                "url": "/tal-06-17",
-                "highlighted": true,
-                "date": "2018-02-15T00:00:00"
-            }
-        ]
-    },
-    "scripts>cloud": {
-        "parents": [
-            "scripts"
-        ],
-        "children": [],
-        "related": {},
-        "posts": [
-            {
-                "title": "Webhooks using `Serverless.com` Lift plugin",
-                "url": "/webhooks-using-serverlesscom-lift-plugin",
-                "highlighted": true,
-                "date": "2024-07-17T00:00:00"
-            }
-        ]
-    },
     "edital>direito>processual-penal": {
         "parents": [
-            "direito",
-            "edital"
+            "edital",
+            "direito"
         ],
         "children": [],
         "related": {},
@@ -1967,18 +1860,125 @@
             }
         ]
     },
-    "scripts>AI": {
+    "sell": {
+        "parents": [],
+        "children": [],
+        "related": {},
+        "posts": [
+            {
+                "title": "VENDA SMTO3 04,74% a.m.",
+                "url": "/sell-smto3",
+                "highlighted": true,
+                "date": "2021-11-03T00:00:00"
+            },
+            {
+                "title": "VENDA TOTS3 04,20% a.m.",
+                "url": "/sell-tots3",
+                "highlighted": true,
+                "date": "2021-09-01T00:00:00"
+            },
+            {
+                "title": "VENDA MTSA4 08,14% a.m.",
+                "url": "/sell-mtsa4",
+                "highlighted": true,
+                "date": "2021-06-11T00:00:00"
+            },
+            {
+                "title": "VENDA CARD3 04,02% a.m.",
+                "url": "/sell-card3",
+                "highlighted": true,
+                "date": "2021-04-02T00:00:00"
+            }
+        ]
+    },
+    "music": {
+        "parents": [],
+        "children": [],
+        "related": {},
+        "posts": [
+            {
+                "title": "Lyrics of Deleter by Grouplove",
+                "url": "/lyrics-of-deleter-by-grouplove",
+                "highlighted": true,
+                "date": "2024-07-20T00:00:00"
+            }
+        ]
+    },
+    "misc": {
+        "parents": [],
+        "children": [],
+        "related": {},
+        "posts": [
+            {
+                "title": "Bolo Pão (Pound Cake)",
+                "url": "/pound-cake",
+                "highlighted": true,
+                "date": "2024-07-25T00:00:00"
+            },
+            {
+                "title": "wallpaper I",
+                "url": "/wallpaper-1",
+                "highlighted": true,
+                "date": "2018-04-11T00:00:00"
+            }
+        ]
+    },
+    "software>cloud": {
         "parents": [
-            "scripts"
+            "software"
         ],
         "children": [],
         "related": {},
         "posts": [
             {
-                "title": "Longer inputs on WHISPER API",
-                "url": "/longer-inputs-on-whisper-api",
+                "title": "AWS PushSafer billing alarm",
+                "url": "/aws-pushsafer-billing-alarm",
                 "highlighted": true,
-                "date": "2024-07-21T00:00:00"
+                "date": "2024-07-25T00:00:00"
+            }
+        ]
+    },
+    "tools>AI>prompt": {
+        "parents": [
+            "tools",
+            "AI"
+        ],
+        "children": [],
+        "related": {},
+        "posts": [
+            {
+                "title": "reassess",
+                "url": "/reassess",
+                "highlighted": true,
+                "date": "2024-04-13T00:00:00"
+            }
+        ]
+    },
+    "tools>AI": {
+        "parents": [],
+        "children": [
+            "prompt"
+        ],
+        "related": {},
+        "posts": [
+            {
+                "title": "reassess",
+                "url": "/reassess",
+                "highlighted": false,
+                "date": "2024-04-13T00:00:00"
+            }
+        ]
+    },
+    "receitas": {
+        "parents": [],
+        "children": [],
+        "related": {},
+        "posts": [
+            {
+                "title": "IRPF",
+                "url": "/irpf",
+                "highlighted": true,
+                "date": "2022-03-19T00:00:00"
             }
         ]
     }
