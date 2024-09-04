@@ -496,14 +496,14 @@
     "scripts": {
         "parents": [],
         "children": [
-            "mobile",
-            "cloud",
-            "scripts>mobile",
-            "scripts>AI",
-            "scripts>cloud",
-            "google-apps-script",
             "AI",
-            "scripts>google-apps-script"
+            "google-apps-script",
+            "scripts>AI",
+            "scripts>google-apps-script",
+            "mobile",
+            "scripts>cloud",
+            "cloud",
+            "scripts>mobile"
         ],
         "related": {
             "linux": 26,
@@ -671,8 +671,8 @@
     "tools": {
         "parents": [],
         "children": [
-            "AI>prompt",
-            "tools>AI>prompt"
+            "tools>AI>prompt",
+            "AI>prompt"
         ],
         "related": {},
         "posts": [
@@ -772,10 +772,10 @@
     "edital": {
         "parents": [],
         "children": [
-            "edital>direito>processual-penal",
             "direito",
             "edital>direito",
-            "direito>processual-penal"
+            "direito>processual-penal",
+            "edital>direito>processual-penal"
         ],
         "related": {},
         "posts": [
@@ -814,8 +814,8 @@
     "tasks": {
         "parents": [],
         "children": [
-            "iphone",
-            "tasks>iphone"
+            "tasks>iphone",
+            "iphone"
         ],
         "related": {},
         "posts": [
@@ -1274,8 +1274,8 @@
     "github": {
         "parents": [],
         "children": [
-            "github>jekyll",
-            "jekyll"
+            "jekyll",
+            "github>jekyll"
         ],
         "related": {},
         "posts": [
@@ -1455,9 +1455,9 @@
             "scripts"
         ],
         "children": [
+            "tools>AI>prompt",
             "prompt",
-            "AI>prompt",
-            "tools>AI>prompt"
+            "AI>prompt"
         ],
         "related": {},
         "posts": [
@@ -1514,10 +1514,10 @@
     "software": {
         "parents": [],
         "children": [
-            "mobile",
             "cloud",
-            "software>mobile",
-            "software>cloud"
+            "software>cloud",
+            "mobile",
+            "software>mobile"
         ],
         "related": {},
         "posts": [
