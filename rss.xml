@@ -3,7 +3,7 @@
     <title>infoBAG</title>
     <link href="https://ib.bsb.br/rss.xml" rel="self"/>
     <link href="https://ib.bsb.br/"/>
-    <updated>2024-09-04T03:55:30+00:00</updated>
+    <updated>2024-09-04T10:12:19+00:00</updated>
     <id>https://ib.bsb.br</id>
     <author>
         <name></name>
@@ -48121,6 +48121,26 @@ Pense duas vezes antes de se envolver.
         
       &lt;/h3&gt;
       &lt;ul&gt;
+        &lt;a href=&quot;/somacon/&quot;&gt;
+          &lt;h2&gt;
+            Somacon
+          &lt;/h2&gt;
+        &lt;/a&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;
+    
+    &lt;div class=&quot;search-link&quot;&gt;
+      &lt;h3&gt;
+        &lt;a class=&quot;post-heading&quot; href=&quot;#&quot; id=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;
+          &lt;img src=&quot;/assets/gold.ico&quot; alt=&quot;gold icon&quot; /&gt;
+        &lt;/a&gt;
+        1991-07-25
+        
+        &amp;rightarrowtail; 
+        04 Sep 2024
+        
+      &lt;/h3&gt;
+      &lt;ul&gt;
         &lt;a href=&quot;/rm-lines/&quot;&gt;
           &lt;h2&gt;
             Rm Lines
@@ -48244,26 +48264,6 @@ Pense duas vezes antes de se envolver.
         &lt;a href=&quot;/compare/&quot;&gt;
           &lt;h2&gt;
             Compare
-          &lt;/h2&gt;
-        &lt;/a&gt;
-      &lt;/ul&gt;
-    &lt;/div&gt;
-    
-    &lt;div class=&quot;search-link&quot;&gt;
-      &lt;h3&gt;
-        &lt;a class=&quot;post-heading&quot; href=&quot;#&quot; id=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;
-          &lt;img src=&quot;/assets/gold.ico&quot; alt=&quot;gold icon&quot; /&gt;
-        &lt;/a&gt;
-        1991-07-25
-        
-        &amp;rightarrowtail; 
-        03 Sep 2024
-        
-      &lt;/h3&gt;
-      &lt;ul&gt;
-        &lt;a href=&quot;/somacon/&quot;&gt;
-          &lt;h2&gt;
-            Somacon
           &lt;/h2&gt;
         &lt;/a&gt;
       &lt;/ul&gt;
@@ -52293,36 +52293,7 @@ Pense duas vezes antes de se envolver.
         <link href="https://ib.bsb.br/somacon/"/>
         <updated>1991-07-25T00:00:00+00:00</updated>
         <id>https://ib.bsb.br/somacon/</id>
-        <content type="html">&lt;head&gt;
-    &lt;meta charset=&quot;UTF-8&quot; /&gt;
-    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot; /&gt;
-
-    &lt;title&gt;
-        
-            Somacon — infoBAG
-        
-    &lt;/title&gt;
-
-    &lt;link rel=&quot;canonical&quot; href=&quot;https://ib.bsb.br/somacon/&quot; /&gt;
-    &lt;link rel=&quot;alternate&quot; type=&quot;application/rss+xml&quot; title=&quot;infoBAG&quot; href=&quot;https://ib.bsb.br/rss.xml&quot; /&gt;
-
-    
-        &lt;meta itemprop=&quot;keywords&quot; content=&quot;tools&quot; /&gt;
-        
-            &lt;meta property=&quot;article:tag&quot; content=&quot;tools&quot; /&gt;
-        
-    
-
-    &lt;link href=&quot;/style.css&quot; rel=&quot;stylesheet&quot; /&gt;
-    &lt;link href=&quot;/pagefind/pagefind-ui.css&quot; rel=&quot;stylesheet&quot; /&gt;
-    &lt;script src=&quot;/pagefind/pagefind-ui.js&quot;&gt;&lt;/script&gt;
-    &lt;script type=&quot;module&quot;&gt;
-        import PagefindHighlight from &apos;/pagefind/pagefind-highlight.js&apos;;
-        new PagefindHighlight({ highlightParam: &quot;highlight&quot; });
-    &lt;/script&gt;
-    &lt;script src=&quot;/assets/js/search.js&quot; defer=&quot;&quot;&gt;&lt;/script&gt;
-    &lt;script src=&quot;/assets/js/prism.js&quot; defer=&quot;&quot;&gt;&lt;/script&gt;
-	&lt;script&gt;
+        <content type="html">&lt;script&gt;
 var objCountsPlaceholder = null;
 function updateCounts()
 {
@@ -52535,29 +52506,7 @@ function restoreTextBox()
 }
 
 &lt;/script&gt;
-&lt;/head&gt;
 
-&lt;body&gt;
-    &lt;a class=&quot;search-input-block&quot; id=&quot;search&quot;&gt;&lt;/a&gt;
-
-    &lt;header&gt;
-        &lt;nav aria-label=&quot;Main navigation&quot;&gt;
-            &lt;div class=&quot;header-container&quot;&gt;
-                &lt;a class=&quot;internal-link&quot; href=&quot;/&quot;&gt;
-                    &lt;img src=&quot;/assets/Sudden_Death_Rune.gif&quot; alt=&quot;Sudden Death Rune&quot; class=&quot;favicon&quot; /&gt;
-                &lt;/a&gt;
-                &lt;a href=&quot;https://ib.bsb.br/archive&quot;&gt;
-                    &lt;img src=&quot;/favicon.ico&quot; alt=&quot;Archive Icon&quot; class=&quot;favicon&quot; /&gt;
-                &lt;/a&gt;
-                &lt;a href=&quot;https://ib.bsb.br/tags&quot;&gt;
-                    &lt;img src=&quot;/assets/Label.gif&quot; alt=&quot;Tags Icon&quot; class=&quot;favicon&quot; /&gt;
-                &lt;/a&gt;
-                &lt;a href=&quot;https://ib.bsb.br/events&quot;&gt;
-                    &lt;img src=&quot;/assets/Paralyse_Rune.gif&quot; alt=&quot;Events Icon&quot; class=&quot;favicon&quot; /&gt;
-                &lt;/a&gt;
-            &lt;/div&gt;
-        &lt;/nav&gt;
-    &lt;/header&gt;
 &lt;form method=&quot;get&quot; action=&quot;#&quot; onsubmit=&quot;return false;&quot; name=&quot;lineCounts&quot;&gt;
 
 &lt;h1&gt;Paste Text Below&lt;/h1&gt;
@@ -52619,6 +52568,7 @@ function restoreTextBox()
 
 &lt;!-- ClipboardJS initialization --&gt;
 &lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js&quot;&gt;&lt;/script&gt;
+
 &lt;script&gt;
 	new ClipboardJS(&apos;.CopyClipboardButton&apos;, {
 		text: function(trigger) {
@@ -52626,7 +52576,7 @@ function restoreTextBox()
 		}
 	});
 &lt;/script&gt;
-&lt;/body&gt;
+
 </content>
     </entry>
     
