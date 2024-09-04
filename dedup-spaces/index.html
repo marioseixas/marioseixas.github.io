@@ -1,112 +1,60 @@
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;div class="editor-container"&gt;
+    &lt;div class="editor-ui"&gt;
+        &lt;textarea id="input-data" placeholder="Paste your text here..."&gt;&lt;/textarea&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+        &lt;button class="convert-btn" id="remove-duplicate-spaces" onclick="remove_duplicate_spaces()"&gt;Remove Duplicate Spaces&lt;/button&gt;
+        &lt;button class="convert-btn" id="copy-btn" onclick="copyTextToClipboard()"&gt;Copy&lt;/button&gt;
+    &lt;/div&gt;
+    &lt;div class="editor-ui"&gt;
+        &lt;textarea id="result" placeholder="Result will show here..." readonly&gt;&lt;/textarea&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;script type="text/javascript"&gt;
+    function remove_duplicate_spaces() {
+        var input_data = document.getElementById("input-data");
+        var result = document.getElementById("result");
+        result.value = input_data.value.replace(/\s+/g,' ');
+    }
+&lt;/script&gt;
+&lt;script&gt;
+    function fallbackCopyTextToClipboard(text) {
+        var textArea = document.createElement("textarea");
+        textArea.value = text;
 
-    <title>
-        
-            Dedup Spaces — infoBAG
-        
-    </title>
+        // Avoid scrolling to bottom
+        textArea.style.top = "0";
+        textArea.style.left = "0";
+        textArea.style.position = "fixed";
 
-    <link rel="canonical" href="https://ib.bsb.br/dedup-spaces/" />
-    <link rel="alternate" type="application/rss+xml" title="infoBAG" href="https://ib.bsb.br/rss.xml" />
+        document.body.appendChild(textArea);
+        textArea.focus();
+        textArea.select();
 
-    
-        <meta itemprop="keywords" content="tools" />
-        
-            <meta property="article:tag" content="tools" />
-        
-    
-
-    <link href="/style.css" rel="stylesheet" />
-    <link href="/pagefind/pagefind-ui.css" rel="stylesheet" />
-    <script src="/pagefind/pagefind-ui.js"></script>
-    <script type="module">
-        import PagefindHighlight from '/pagefind/pagefind-highlight.js';
-        new PagefindHighlight({ highlightParam: "highlight" });
-    </script>
-    <script src="/assets/js/search.js" defer=""></script>
-    <script src="/assets/js/prism.js" defer=""></script>
-</head>
-
-<body>
-    <a class="search-input-block" id="search"></a>
-
-    <header>
-        <nav aria-label="Main navigation">
-            <div class="header-container">
-                <a class="internal-link" href="/">
-                    <img src="/assets/Sudden_Death_Rune.gif" alt="Sudden Death Rune" class="favicon" />
-                </a>
-                <a href="https://ib.bsb.br/archive">
-                    <img src="/favicon.ico" alt="Archive Icon" class="favicon" />
-                </a>
-                <a href="https://ib.bsb.br/tags">
-                    <img src="/assets/Label.gif" alt="Tags Icon" class="favicon" />
-                </a>
-                <a href="https://ib.bsb.br/events">
-                    <img src="/assets/Paralyse_Rune.gif" alt="Events Icon" class="favicon" />
-                </a>
-            </div>
-        </nav>
-    </header>
-    <div class="editor-container">
-        <div class="editor-ui">
-            <textarea id="input-data" placeholder="Paste your text here..."></textarea>
-        </div>
-        <div>
-            <button class="convert-btn" id="remove-duplicate-spaces" onclick="remove_duplicate_spaces()">Remove Duplicate Spaces</button>
-            <button class="convert-btn" id="copy-btn" onclick="copyTextToClipboard()">Copy</button>
-        </div>
-        <div class="editor-ui">
-            <textarea id="result" placeholder="Result will show here..." readonly=""></textarea>
-        </div>
-    </div>
-    <script type="text/javascript">
-        function remove_duplicate_spaces() {
-            var input_data = document.getElementById("input-data");
-            var result = document.getElementById("result");
-            result.value = input_data.value.replace(/\s+/g,' ');
-        }
-    </script>
-    <script>
-        function fallbackCopyTextToClipboard(text) {
-            var textArea = document.createElement("textarea");
-            textArea.value = text;
-
-            // Avoid scrolling to bottom
-            textArea.style.top = "0";
-            textArea.style.left = "0";
-            textArea.style.position = "fixed";
-
-            document.body.appendChild(textArea);
-            textArea.focus();
-            textArea.select();
-
-            try {
-                var successful = document.execCommand('copy');
-                var msg = successful ? 'successful' : 'unsuccessful';
-                console.log('Fallback: Copying text command was ' + msg);
-            } catch (err) {
-                console.error('Fallback: Oops, unable to copy', err);
-            }
-
-            document.body.removeChild(textArea);
+        try {
+            var successful = document.execCommand('copy');
+            var msg = successful ? 'successful' : 'unsuccessful';
+            console.log('Fallback: Copying text command was ' + msg);
+        } catch (err) {
+            console.error('Fallback: Oops, unable to copy', err);
         }
 
-        function copyTextToClipboard() {
+        document.body.removeChild(textArea);
+    }
+
+    function copyTextToClipboard() {
+
+        let text = document.getElementById('result').value
     
-            let text = document.getElementById('result').value
-        
-            if (!navigator.clipboard) {
-                fallbackCopyTextToClipboard(text);
-                return;
-            }
-            navigator.clipboard.writeText(text).then(function () {
-                console.log('Async: Copying to clipboard was successful!');
-            }, function (err) {
-                console.error('Async: Could not copy text: ', err);
-            });
+        if (!navigator.clipboard) {
+            fallbackCopyTextToClipboard(text);
+            return;
         }
-    </script>
-</body>
+        navigator.clipboard.writeText(text).then(function () {
+            console.log('Async: Copying to clipboard was successful!');
+        }, function (err) {
+            console.error('Async: Could not copy text: ', err);
+        });
+    }
+&lt;/script&gt;
+</code></pre></div></div>
