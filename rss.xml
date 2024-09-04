@@ -3,7 +3,7 @@
     <title>infoBAG</title>
     <link href="https://ib.bsb.br/rss.xml" rel="self"/>
     <link href="https://ib.bsb.br/"/>
-    <updated>2024-09-04T21:34:06+00:00</updated>
+    <updated>2024-09-04T21:36:25+00:00</updated>
     <id>https://ib.bsb.br</id>
     <author>
         <name></name>
@@ -47923,62 +47923,7 @@ Pense duas vezes antes de se envolver.
         <link href="https://ib.bsb.br/"/>
         <updated>1992-07-12T00:00:00+00:00</updated>
         <id>https://ib.bsb.br/</id>
-        <content type="html">&lt;head&gt;
-    &lt;meta charset=&quot;UTF-8&quot; /&gt;
-    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot; /&gt;
-
-    &lt;title&gt;
-        
-            Index — infoBAG
-        
-    &lt;/title&gt;
-
-    &lt;link rel=&quot;canonical&quot; href=&quot;https://ib.bsb.br/&quot; /&gt;
-    &lt;link rel=&quot;alternate&quot; type=&quot;application/rss+xml&quot; title=&quot;infoBAG&quot; href=&quot;https://ib.bsb.br/rss.xml&quot; /&gt;
-
-    
-        &lt;meta itemprop=&quot;keywords&quot; content=&quot;&quot; /&gt;
-        
-    
-
-    &lt;link href=&quot;/style.css&quot; rel=&quot;stylesheet&quot; /&gt;
-    &lt;link href=&quot;/pagefind/pagefind-ui.css&quot; rel=&quot;stylesheet&quot; /&gt;
-    &lt;script src=&quot;/pagefind/pagefind-ui.js&quot;&gt;&lt;/script&gt;
-    &lt;script type=&quot;module&quot;&gt;
-        import PagefindHighlight from &apos;/pagefind/pagefind-highlight.js&apos;;
-        new PagefindHighlight({ highlightParam: &quot;highlight&quot; });
-    &lt;/script&gt;
-    &lt;script src=&quot;/assets/js/search.js&quot; defer=&quot;&quot;&gt;&lt;/script&gt;
-    &lt;script src=&quot;/assets/js/prism.js&quot; defer=&quot;&quot;&gt;&lt;/script&gt;
-&lt;/head&gt;
-
-&lt;body&gt;
-    &lt;a class=&quot;search-input-block&quot; id=&quot;search&quot;&gt;&lt;/a&gt;
-
-    &lt;header&gt;
-        &lt;nav aria-label=&quot;Main navigation&quot;&gt;
-            &lt;div class=&quot;header-container&quot;&gt;
-                &lt;a class=&quot;internal-link&quot; href=&quot;/&quot;&gt;
-                    &lt;img src=&quot;/assets/Sudden_Death_Rune.gif&quot; alt=&quot;Sudden Death Rune&quot; class=&quot;favicon&quot; /&gt;
-                &lt;/a&gt;
-                &lt;a href=&quot;https://ib.bsb.br/archive&quot;&gt;
-                    &lt;img src=&quot;/favicon.ico&quot; alt=&quot;Archive Icon&quot; class=&quot;favicon&quot; /&gt;
-                &lt;/a&gt;
-                &lt;a href=&quot;https://ib.bsb.br/tags&quot;&gt;
-                    &lt;img src=&quot;/assets/Label.gif&quot; alt=&quot;Tags Icon&quot; class=&quot;favicon&quot; /&gt;
-                &lt;/a&gt;
-                &lt;a href=&quot;https://ib.bsb.br/events&quot;&gt;
-                    &lt;img src=&quot;/assets/Paralyse_Rune.gif&quot; alt=&quot;Events Icon&quot; class=&quot;favicon&quot; /&gt;
-                &lt;/a&gt;
-            &lt;/div&gt;
-        &lt;/nav&gt;
-    &lt;/header&gt;
-    &lt;div class=&quot;wrapper&quot;&gt;
-    &lt;main class=&quot;iframe-container&quot;&gt;
-      &lt;iframe name=&quot;embed_readwrite&quot; src=&quot;https://pad.ouvaton.coop/short-ref?alwaysShowChat=true&amp;amp;showLineNumbers=true&amp;amp;useMonospaceFont=true&amp;amp;noColors=true&quot; frameborder=&quot;0&quot; title=&quot;Embedded Pad&quot;&gt;&lt;/iframe&gt;
-    &lt;/main&gt;
-  &lt;/div&gt;
-&lt;/body&gt;
+        <content type="html">&lt;iframe class=&quot;iframe-container&quot; name=&quot;embed_readwrite&quot; src=&quot;https://pad.ouvaton.coop/short-ref?alwaysShowChat=true&amp;amp;showLineNumbers=true&amp;amp;useMonospaceFont=true&amp;amp;noColors=true&quot; frameborder=&quot;0&quot; title=&quot;Embedded Pad&quot;&gt;&lt;/iframe&gt;
 </content>
     </entry>
     
@@ -48003,6 +47948,26 @@ Pense duas vezes antes de se envolver.
 
 
 
+
+&amp;lt;div class=&quot;search-link&quot;&amp;gt;
+  &amp;lt;h3&amp;gt;
+    &amp;lt;a class=&quot;post-heading&quot; href=&quot;#&quot; id=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&amp;gt;
+      &amp;lt;img src=&quot;/assets/gold.ico&quot; alt=&quot;gold icon&quot;&amp;gt;
+    &amp;lt;/a&amp;gt;
+    1992-07-12
+    
+    &amp;amp;rightarrowtail; 
+    04 Sep 2024
+    
+  &amp;lt;/h3&amp;gt;
+  &amp;lt;ul&amp;gt;
+    &amp;lt;a href=&quot;/&quot;&amp;gt;
+      &amp;lt;h2&amp;gt;
+        Index
+      &amp;lt;/h2&amp;gt;
+    &amp;lt;/a&amp;gt;
+  &amp;lt;/ul&amp;gt;
+&amp;lt;/div&amp;gt;
 
 &amp;lt;div class=&quot;search-link&quot;&amp;gt;
   &amp;lt;h3&amp;gt;
@@ -48259,26 +48224,6 @@ Pense duas vezes antes de se envolver.
     &amp;lt;a href=&quot;/tags/&quot;&amp;gt;
       &amp;lt;h2&amp;gt;
         Tags
-      &amp;lt;/h2&amp;gt;
-    &amp;lt;/a&amp;gt;
-  &amp;lt;/ul&amp;gt;
-&amp;lt;/div&amp;gt;
-
-&amp;lt;div class=&quot;search-link&quot;&amp;gt;
-  &amp;lt;h3&amp;gt;
-    &amp;lt;a class=&quot;post-heading&quot; href=&quot;#&quot; id=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&amp;gt;
-      &amp;lt;img src=&quot;/assets/gold.ico&quot; alt=&quot;gold icon&quot;&amp;gt;
-    &amp;lt;/a&amp;gt;
-    1992-07-12
-    
-    &amp;amp;rightarrowtail; 
-    03 Sep 2024
-    
-  &amp;lt;/h3&amp;gt;
-  &amp;lt;ul&amp;gt;
-    &amp;lt;a href=&quot;/&quot;&amp;gt;
-      &amp;lt;h2&amp;gt;
-        Index
       &amp;lt;/h2&amp;gt;
     &amp;lt;/a&amp;gt;
   &amp;lt;/ul&amp;gt;
