@@ -1,56 +1,4 @@
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <title>
-        
-            Compare — infoBAG
-        
-    </title>
-
-    <link rel="canonical" href="https://ib.bsb.br/compare/" />
-    <link rel="alternate" type="application/rss+xml" title="infoBAG" href="https://ib.bsb.br/rss.xml" />
-
-    
-        <meta itemprop="keywords" content="tools" />
-        
-            <meta property="article:tag" content="tools" />
-        
-    
-
-    <link href="/style.css" rel="stylesheet" />
-    <link href="/pagefind/pagefind-ui.css" rel="stylesheet" />
-    <script src="/pagefind/pagefind-ui.js"></script>
-    <script type="module">
-        import PagefindHighlight from '/pagefind/pagefind-highlight.js';
-        new PagefindHighlight({ highlightParam: "highlight" });
-    </script>
-    <script src="/assets/js/search.js" defer=""></script>
-    <script src="/assets/js/prism.js" defer=""></script>
-</head>
-
-<body>
-    <a class="search-input-block" id="search"></a>
-
-    <header>
-        <nav aria-label="Main navigation">
-            <div class="header-container">
-                <a class="internal-link" href="/">
-                    <img src="/assets/Sudden_Death_Rune.gif" alt="Sudden Death Rune" class="favicon" />
-                </a>
-                <a href="https://ib.bsb.br/archive">
-                    <img src="/favicon.ico" alt="Archive Icon" class="favicon" />
-                </a>
-                <a href="https://ib.bsb.br/tags">
-                    <img src="/assets/Label.gif" alt="Tags Icon" class="favicon" />
-                </a>
-                <a href="https://ib.bsb.br/events">
-                    <img src="/assets/Paralyse_Rune.gif" alt="Events Icon" class="favicon" />
-                </a>
-            </div>
-        </nav>
-    </header>
-  <div class="container mt-4">
+<div class="container mt-4">
     <h2 class="text-center">List Comparison Tool</h2>
     <div class="row mt-4">
       <div class="col-md-6">
@@ -99,7 +47,7 @@
     </div>
   </div>
 
-  <script>
+<script>
 
     // Function to count items in a text area
     function countItems(textAreaId) {
@@ -161,7 +109,7 @@
     });
   </script>
 
-  <script>
+<script>
     // JavaScript function to compare lists
     function compareLists() {
       var listA = document.getElementById("listA").value.trim().split(/\r\n|\r|\n/);
@@ -198,7 +146,7 @@
     }
   </script>
 
-  <script>
+<script>
     // Function to download the content of a textarea as a file
     function downloadTextareaContent(textareaId, downloadId) {
       const content = document.getElementById(textareaId).value;
@@ -221,4 +169,4 @@
       downloadTextareaContent("resultBoth", "downloadBoth");
     });
   </script>
-</body>
+
