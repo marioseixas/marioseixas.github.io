@@ -1,361 +1,310 @@
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;div class="container"&gt;
+    &lt;div class="row justify-content-center"&gt;
+        &lt;div class="col-lg-8"&gt;
+            &lt;textarea class="form-control" id="thetext" onkeyup="updatecounts()" onchange="updatecounts()"
+                onfocus="updatecounts()" placeholder="Paste your text here :)"&gt;&lt;/textarea&gt;
+            &lt;hr class="mt-4"&gt;
+            &lt;div class="d-flex flex-wrap justify-content-between align-items-center"&gt;
+                &lt;div class="col-12 col-md-3 mb-2"&gt;
+                    &lt;input class="form-control" readonly id="words" placeholder="Words"&gt;
+                &lt;/div&gt;
+                &lt;div class="col-12 col-md-3 mb-2"&gt;
+                    &lt;input class="form-control" readonly id="characters" placeholder="Characters"&gt;
+                &lt;/div&gt;
+                &lt;div class="col-12 col-md-3 mb-2"&gt;
+                    &lt;input class="form-control" readonly id="lines" placeholder="Lines"&gt;
+                &lt;/div&gt;
+                &lt;div class="col-12 col-md-3 mb-2"&gt;
+                    &lt;input class="form-control" readonly id="paragraphs" placeholder="Paragraphs"&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;                
+            &lt;hr class="mt-4"&gt;
+            &lt;div class="text-center"&gt;
+                &lt;button class="mt-1 btn btn-primary mr-2" onclick="uppercase()"&gt;UPPERCASE ALL&lt;/button&gt;
+                &lt;button class="mt-1 btn btn-primary mr-2" onclick="lowercase()"&gt;lowercase all&lt;/button&gt;
+                &lt;button class="mt-1 btn btn-primary mr-2" onclick="capitalizesentences()"&gt;Capitalize sentences&lt;/button&gt;
+                &lt;button class="mt-1 btn btn-primary" onclick="capitalizewords()"&gt;Capitalize Words&lt;/button&gt;
+            &lt;/div&gt;
+            &lt;hr&gt;
+            &lt;div class="row"&gt;
+                &lt;div class="col-md-8"&gt;
+                    &lt;div class="input-group justify-content-center"&gt;
+                        &lt;span class="align-self-center"&gt;Change&lt;/span&gt;
+                        &lt;input type="text" class="form-control ms-2" id="from" placeholder="From"&gt;
+                        &lt;span class="align-self-center ms-2"&gt;with&lt;/span&gt;
 
-    <title>
-        
-            Formatxt — infoBAG
-        
-    </title>
+                        &lt;input type="text" class="form-control ms-2 " id="to" placeholder="To"&gt;
 
-    <link rel="canonical" href="https://ib.bsb.br/formatxt/" />
-    <link rel="alternate" type="application/rss+xml" title="infoBAG" href="https://ib.bsb.br/rss.xml" />
+                        &lt;button class="btn btn-primary ms-2" onclick="replacetext()"&gt;Replace&lt;/button&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class="col-md-4"&gt;
+                    &lt;div class="form-check"&gt;
+                        &lt;input class="form-check-input" type="checkbox" id="cs"&gt;
+                        &lt;label class="form-check-label" for="cs"&gt;Case sensitive&lt;/label&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;hr&gt;
+            &lt;div class="row"&gt;
+                &lt;div class="col-md-8"&gt;
+                    &lt;div class="input-group"&gt;
+                        &lt;span class="align-self-center"&gt;Add&lt;/span&gt;
+                        &lt;input class="form-control ms-2" id="add" placeholder="Text"&gt;
+                        &lt;span class="align-self-center ms-2"&gt;to the&lt;/span&gt;
+                        &lt;select class="form-control ms-2" id="addpos"&gt;
+                            &lt;option value="start"&gt;start&lt;/option&gt;
+                            &lt;option value="end"&gt;end&lt;/option&gt;
+                        &lt;/select&gt;
+                        &lt;span class="align-self-center ms-2"&gt;each line.&lt;/span&gt;
+                        &lt;button class="btn btn-primary ms-2" onclick="addtext()"&gt;Update&lt;/button&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;hr&gt;
+            &lt;div class="row"&gt;
+                &lt;div class="col-md-8"&gt;
+                    &lt;div class="input-group"&gt;
+                        &lt;span class="align-self-center"&gt;Trim&lt;/span&gt;
+                        &lt;select class="form-control d-inline ms-2" id="trimpos" style="width: 15%;"&gt;
+                            &lt;option value="first"&gt;first&lt;/option&gt;
+                            &lt;option value="last"&gt;last&lt;/option&gt;
+                        &lt;/select&gt;
 
-    
-        <meta itemprop="keywords" content="tools" />
-        
-            <meta property="article:tag" content="tools" />
-        
-    
+                        &lt;input class="form-control ms-2" id="trimnumber" placeholder="Number" type="number"
+                            style="width: 15%;"&gt;
+                        characters of each line.
+                        &lt;button class="btn btn-primary ms-2" onclick="trimtext()"&gt;Update&lt;/button&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;p&gt;
 
-    <link href="/style.css" rel="stylesheet" />
-    <link href="/pagefind/pagefind-ui.css" rel="stylesheet" />
-    <script src="/pagefind/pagefind-ui.js"></script>
-    <script type="module">
-        import PagefindHighlight from '/pagefind/pagefind-highlight.js';
-        new PagefindHighlight({ highlightParam: "highlight" });
-    </script>
-    <script src="/assets/js/search.js" defer=""></script>
-    <script src="/assets/js/prism.js" defer=""></script>
-</head>
+            &lt;/p&gt;
+            &lt;hr&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;script&gt; function cleartext() {
+var t = document.getElementById("thetext");
+t.value = '';
+updatetextlength();
+updatewords(); }
+</code></pre></div></div>
 
-<body>
-    <a class="search-input-block" id="search"></a>
-
-    <header>
-        <nav aria-label="Main navigation">
-            <div class="header-container">
-                <a class="internal-link" href="/">
-                    <img src="/assets/Sudden_Death_Rune.gif" alt="Sudden Death Rune" class="favicon" />
-                </a>
-                <a href="https://ib.bsb.br/archive">
-                    <img src="/favicon.ico" alt="Archive Icon" class="favicon" />
-                </a>
-                <a href="https://ib.bsb.br/tags">
-                    <img src="/assets/Label.gif" alt="Tags Icon" class="favicon" />
-                </a>
-                <a href="https://ib.bsb.br/events">
-                    <img src="/assets/Paralyse_Rune.gif" alt="Events Icon" class="favicon" />
-                </a>
-            </div>
-        </nav>
-    </header>
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-lg-8">
-                <textarea class="form-control" id="thetext" onkeyup="updatecounts()" onchange="updatecounts()" onfocus="updatecounts()" placeholder="Paste your text here :)"></textarea>
-                <hr class="mt-4" />
-                <div class="d-flex flex-wrap justify-content-between align-items-center">
-                    <div class="col-12 col-md-3 mb-2">
-                        <input class="form-control" readonly="" id="words" placeholder="Words" />
-                    </div>
-                    <div class="col-12 col-md-3 mb-2">
-                        <input class="form-control" readonly="" id="characters" placeholder="Characters" />
-                    </div>
-                    <div class="col-12 col-md-3 mb-2">
-                        <input class="form-control" readonly="" id="lines" placeholder="Lines" />
-                    </div>
-                    <div class="col-12 col-md-3 mb-2">
-                        <input class="form-control" readonly="" id="paragraphs" placeholder="Paragraphs" />
-                    </div>
-                </div>                
-                <hr class="mt-4" />
-                <div class="text-center">
-                    <button class="mt-1 btn btn-primary mr-2" onclick="uppercase()">UPPERCASE ALL</button>
-                    <button class="mt-1 btn btn-primary mr-2" onclick="lowercase()">lowercase all</button>
-                    <button class="mt-1 btn btn-primary mr-2" onclick="capitalizesentences()">Capitalize sentences</button>
-                    <button class="mt-1 btn btn-primary" onclick="capitalizewords()">Capitalize Words</button>
-                </div>
-                <hr />
-                <div class="row">
-                    <div class="col-md-8">
-                        <div class="input-group justify-content-center">
-                            <span class="align-self-center">Change</span>
-                            <input type="text" class="form-control ms-2" id="from" placeholder="From" />
-                            <span class="align-self-center ms-2">with</span>
-
-                            <input type="text" class="form-control ms-2 " id="to" placeholder="To" />
-
-                            <button class="btn btn-primary ms-2" onclick="replacetext()">Replace</button>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" id="cs" />
-                            <label class="form-check-label" for="cs">Case sensitive</label>
-                        </div>
-                    </div>
-                </div>
-                <hr />
-                <div class="row">
-                    <div class="col-md-8">
-                        <div class="input-group">
-                            <span class="align-self-center">Add</span>
-                            <input class="form-control ms-2" id="add" placeholder="Text" />
-                            <span class="align-self-center ms-2">to the</span>
-                            <select class="form-control ms-2" id="addpos">
-                                <option value="start">start</option>
-                                <option value="end">end</option>
-                            </select>
-                            <span class="align-self-center ms-2">each line.</span>
-                            <button class="btn btn-primary ms-2" onclick="addtext()">Update</button>
-                        </div>
-                    </div>
-                </div>
-                <hr />
-                <div class="row">
-                    <div class="col-md-8">
-                        <div class="input-group">
-                            <span class="align-self-center">Trim</span>
-                            <select class="form-control d-inline ms-2" id="trimpos" style="width: 15%;">
-                                <option value="first">first</option>
-                                <option value="last">last</option>
-                            </select>
-
-                            <input class="form-control ms-2" id="trimnumber" placeholder="Number" type="number" style="width: 15%;" />
-                            characters of each line.
-                            <button class="btn btn-primary ms-2" onclick="trimtext()">Update</button>
-                        </div>
-                    </div>
-                </div>
-                <p>
-
-                </p>
-                <hr />
-            </div>
-        </div>
-    </div>
-    <script>
-function cleartext() {
-    var t = document.getElementById("thetext");
-    t.value = '';
-    updatetextlength();
-    updatewords();
-}
-
-function selectall() {
-    var t = document.getElementById("thetext");
+<p>function selectall() {
+    var t = document.getElementById(“thetext”);
     t.focus();
     t.select();
-}
+}</p>
 
-function copyText() {
-    var t = document.getElementById("thetext");
+<p>function copyText() {
+    var t = document.getElementById(“thetext”);
     t.select();
-    document.execCommand('copy');
-}
+    document.execCommand(‘copy’);
+}</p>
 
-function updatetextlength() {
-    var t = document.getElementById("thetext");
-    var c = document.getElementById("characters");
-    c.value = t.value.length + ' chars';
-}
+<p>function updatetextlength() {
+    var t = document.getElementById(“thetext”);
+    var c = document.getElementById(“characters”);
+    c.value = t.value.length + ‘ chars’;
+}</p>
 
-function updatewords() {
-    var t = document.getElementById("thetext");
+<p>function updatewords() {
+    var t = document.getElementById(“thetext”);
     var char_count = t.value.length;
-    var fullStr = t.value + " ";
+    var fullStr = t.value + “ “;
     var initial_whitespace_rExp = /^[^A-Za-z0-9]+/gi;
-    var left_trimmedStr = fullStr.replace(initial_whitespace_rExp, "");
+    var left_trimmedStr = fullStr.replace(initial_whitespace_rExp, “”);
     var non_alphanumerics_rExp = rExp = /[^A-Za-z0-9]+/gi;
-    var cleanedStr = left_trimmedStr.replace(non_alphanumerics_rExp, " ");
-    var splitString = cleanedStr.split(" ");
-    var word_count = splitString.length - 1;
+    var cleanedStr = left_trimmedStr.replace(non_alphanumerics_rExp, “ “);
+    var splitString = cleanedStr.split(“ “);
+    var word_count = splitString.length - 1;</p>
 
-    var w = document.getElementById("words");
-    w.value = word_count + ' words';
-}
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>var w = document.getElementById("words");
+w.value = word_count + ' words'; }
+</code></pre></div></div>
 
-function updatelines() {
-    var t = document.getElementById("thetext").value;
-    var c = document.getElementById("lines");
+<p>function updatelines() {
+    var t = document.getElementById(“thetext”).value;
+    var c = document.getElementById(“lines”);</p>
 
-    if (!t) {
-        c.value = '0 lines';
-    } else {
-        c.value = t.split("\n").length + ' lines';
-    }
-}
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>if (!t) {
+    c.value = '0 lines';
+} else {
+    c.value = t.split("\n").length + ' lines';
+} }
+</code></pre></div></div>
 
-function updateparagraphs() {
-    var t = document.getElementById("thetext").value;
-    var c = document.getElementById("paragraphs");
-    for(var r=t.split(/\n\n+/g),n=0,a=0;a<r.length;a++)r[a].length!=0&&n++;
-    
-    if (!t) {
-        c.value = '0 paragraphs';
-    } else {
-        c.value = n + ' paragraphs';
-    }
-}
+<p>function updateparagraphs() {
+    var t = document.getElementById(“thetext”).value;
+    var c = document.getElementById(“paragraphs”);
+    for(var r=t.split(/\n\n+/g),n=0,a=0;a&lt;r.length;a++)r[a].length!=0&amp;&amp;n++;</p>
 
-function updatecounts() {
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>if (!t) {
+    c.value = '0 paragraphs';
+} else {
+    c.value = n + ' paragraphs';
+} }
+</code></pre></div></div>
+
+<p>function updatecounts() {
     updatetextlength();
     updatewords();
     updatelines();
     updateparagraphs();
-}
+}</p>
 
-function uppercase() {
-    var t = document.getElementById("thetext");
+<p>function uppercase() {
+    var t = document.getElementById(“thetext”);
     t.value = t.value.toUpperCase();
-}
+}</p>
 
-function lowercase() {
-    var t = document.getElementById("thetext");
+<p>function lowercase() {
+    var t = document.getElementById(“thetext”);
     t.value = t.value.toLowerCase();
+}</p>
+
+<p>function capitalizewords() {
+    var t = document.getElementById(“thetext”);</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>t.value = (t.value + '').replace(/^(.)|\s(.)/g, function ($1) {
+    return $1.toUpperCase();
+});
+</code></pre></div></div>
+
+<p>}</p>
+
+<p>function capitalizesentences() {
+    var t = document.getElementById(“thetext”);</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>var tarray = t.value.split(".");
+var tstr = '';
+for (i = 0; i &lt; tarray.length; i++) {
+    tarray[i] = ltrim(tarray[i], ' ');
+    tstr = tstr + tarray[i].substring(0, 1).toUpperCase() + tarray[i].slice(1).toLowerCase();
+    if (i &lt; (tarray.length - 1)) tstr = tstr + '. ';
 }
+t.value = tstr;
 
-function capitalizewords() {
-    var t = document.getElementById("thetext");
 
-    t.value = (t.value + '').replace(/^(.)|\s(.)/g, function ($1) {
-        return $1.toUpperCase();
-    });
-
+tarray = t.value.split("?");
+tstr = '';
+for (i = 0; i &lt; tarray.length; i++) {
+    tarray[i] = ltrim(tarray[i], ' ');
+    tstr = tstr + tarray[i].substring(0, 1).toUpperCase() + tarray[i].slice(1);
+    if (i &lt; (tarray.length - 1)) tstr = tstr + '? ';
 }
-
-function capitalizesentences() {
-    var t = document.getElementById("thetext");
-
-    var tarray = t.value.split(".");
-    var tstr = '';
-    for (i = 0; i < tarray.length; i++) {
-        tarray[i] = ltrim(tarray[i], ' ');
-        tstr = tstr + tarray[i].substring(0, 1).toUpperCase() + tarray[i].slice(1).toLowerCase();
-        if (i < (tarray.length - 1)) tstr = tstr + '. ';
-    }
-    t.value = tstr;
+t.value = tstr;
 
 
-    tarray = t.value.split("?");
-    tstr = '';
-    for (i = 0; i < tarray.length; i++) {
-        tarray[i] = ltrim(tarray[i], ' ');
-        tstr = tstr + tarray[i].substring(0, 1).toUpperCase() + tarray[i].slice(1);
-        if (i < (tarray.length - 1)) tstr = tstr + '? ';
-    }
-    t.value = tstr;
-
-
-    tarray = t.value.split("\n");
-    tstr = '';
-    for (i = 0; i < tarray.length; i++) {
-        tarray[i] = ltrim(tarray[i], ' ');
-        tstr = tstr + tarray[i].substring(0, 1).toUpperCase() + tarray[i].slice(1);
-        if (i < (tarray.length - 1)) tstr = tstr + '\n';
-    }
-    t.value = tstr;
-
-
-    tarray = t.value.split("!");
-    tstr = '';
-    for (i = 0; i < tarray.length; i++) {
-        tarray[i] = ltrim(tarray[i], ' ');
-        tstr = tstr + tarray[i].substring(0, 1).toUpperCase() + tarray[i].slice(1);
-        if (i < (tarray.length - 1)) tstr = tstr + '! ';
-    }
-    t.value = tstr;
+tarray = t.value.split("\n");
+tstr = '';
+for (i = 0; i &lt; tarray.length; i++) {
+    tarray[i] = ltrim(tarray[i], ' ');
+    tstr = tstr + tarray[i].substring(0, 1).toUpperCase() + tarray[i].slice(1);
+    if (i &lt; (tarray.length - 1)) tstr = tstr + '\n';
 }
+t.value = tstr;
 
-function replacetext() {
-    var t = document.getElementById("thetext");
-    var from = document.getElementById("from");
-    var to = document.getElementById("to");
 
-    var cs = document.getElementById("cs");
-    var scope;
+tarray = t.value.split("!");
+tstr = '';
+for (i = 0; i &lt; tarray.length; i++) {
+    tarray[i] = ltrim(tarray[i], ' ');
+    tstr = tstr + tarray[i].substring(0, 1).toUpperCase() + tarray[i].slice(1);
+    if (i &lt; (tarray.length - 1)) tstr = tstr + '! ';
+}
+t.value = tstr; }
+</code></pre></div></div>
 
-    var ff = from.value.replace("%N", "\n");
-    var tt = to.value.replace("%N", "\n");
+<p>function replacetext() {
+    var t = document.getElementById(“thetext”);
+    var from = document.getElementById(“from”);
+    var to = document.getElementById(“to”);</p>
 
-    if (cs.checked) scope = 'g';
-    else scope = 'gi';
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>var cs = document.getElementById("cs");
+var scope;
 
+var ff = from.value.replace("%N", "\n");
+var tt = to.value.replace("%N", "\n");
+
+if (cs.checked) scope = 'g';
+else scope = 'gi';
+
+var temp = t.value;
+temp = temp.replace(new RegExp(ff, scope), tt);
+t.value = temp;
+
+from.value = '';
+to.value = '';
+updatecounts(); }
+</code></pre></div></div>
+
+<p>function addtext() {
+    var t = document.getElementById(“thetext”);
+    var a = document.getElementById(“add”);
+    var p = document.getElementById(“addpos”);
     var temp = t.value;
-    temp = temp.replace(new RegExp(ff, scope), tt);
-    t.value = temp;
+    var tstr = ‘’;
+    var tarray = t.value.split(“\n”);</p>
 
-    from.value = '';
-    to.value = '';
-    updatecounts();
-}
-
-function addtext() {
-    var t = document.getElementById("thetext");
-    var a = document.getElementById("add");
-    var p = document.getElementById("addpos");
-    var temp = t.value;
-    var tstr = '';
-    var tarray = t.value.split("\n");
-
-    if (p.value == 'start') {
-        for (i = 0; i < tarray.length; i++) {
-            insert = a.value.replace("%L", i + 1);
-            insert = insert.replace("%N", "\n");
-            tstr = tstr + insert + tarray[i];
-            if (i < (tarray.length - 1)) tstr = tstr + "\n";
-        }
-        t.value = tstr;
-    } else {
-        for (i = 0; i < tarray.length; i++) {
-            insert = a.value.replace("%L", i + 1);
-            insert = insert.replace("%N", "\n");
-            tstr = tstr + tarray[i] + insert;
-            if (i < (tarray.length - 1)) tstr = tstr + "\n";
-        }
-        t.value = tstr;
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>if (p.value == 'start') {
+    for (i = 0; i &lt; tarray.length; i++) {
+        insert = a.value.replace("%L", i + 1);
+        insert = insert.replace("%N", "\n");
+        tstr = tstr + insert + tarray[i];
+        if (i &lt; (tarray.length - 1)) tstr = tstr + "\n";
     }
-
-    a.value = '';
-    updatecounts();
+    t.value = tstr;
+} else {
+    for (i = 0; i &lt; tarray.length; i++) {
+        insert = a.value.replace("%L", i + 1);
+        insert = insert.replace("%N", "\n");
+        tstr = tstr + tarray[i] + insert;
+        if (i &lt; (tarray.length - 1)) tstr = tstr + "\n";
+    }
+    t.value = tstr;
 }
 
-function ltrim(str, chars) {
-    chars = chars || "\\s";
-    return str.replace(new RegExp("^[" + chars + "]+", "g"), "");
-}
+a.value = '';
+updatecounts(); }
+</code></pre></div></div>
 
-function rtrim(str, chars) {
-    chars = chars || "\\s";
-    return str.replace(new RegExp("[" + chars + "]+$", "g"), "");
-}
+<p>function ltrim(str, chars) {
+    chars = chars || “\s”;
+    return str.replace(new RegExp(“^[” + chars + “]+”, “g”), “”);
+}</p>
 
-function trimtext() {
-    var t = document.getElementById("thetext");
-    var n = document.getElementById("trimnumber");
-    var p = document.getElementById("trimpos");
-    var tarray = t.value.split("\n");
+<p>function rtrim(str, chars) {
+    chars = chars || “\s”;
+    return str.replace(new RegExp(“[” + chars + “]+$”, “g”), “”);
+}</p>
+
+<p>function trimtext() {
+    var t = document.getElementById(“thetext”);
+    var n = document.getElementById(“trimnumber”);
+    var p = document.getElementById(“trimpos”);
+    var tarray = t.value.split(“\n”);
     var i;
-    var tstr = '';
+    var tstr = ‘’;</p>
 
-    if (p.value == 'first') {
-        for (i = 0; i < tarray.length; i++) tstr = tstr + tarray[i].substr(n.value) + "\n";
-        tstr = rtrim(tstr);
-    } else {
-        for (i = 0; i < tarray.length; i++) {
-            tlen = tarray[i].length;
-            tpos = tlen - n.value;
-            tstr = tstr + tarray[i].substr(0, tpos) + "\n";
-        }
-        tstr = rtrim(tstr);
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>if (p.value == 'first') {
+    for (i = 0; i &lt; tarray.length; i++) tstr = tstr + tarray[i].substr(n.value) + "\n";
+    tstr = rtrim(tstr);
+} else {
+    for (i = 0; i &lt; tarray.length; i++) {
+        tlen = tarray[i].length;
+        tpos = tlen - n.value;
+        tstr = tstr + tarray[i].substr(0, tpos) + "\n";
     }
-
-    t.value = tstr;
-    updatecounts();
+    tstr = rtrim(tstr);
 }
-    </script>
-    <script>
-        updatecounts();
-    </script>
-</body>
+
+t.value = tstr;
+updatecounts(); }
+&lt;/script&gt;
+&lt;script&gt;
+    updatecounts();
+&lt;/script&gt;
+</code></pre></div></div>

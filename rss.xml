@@ -3,7 +3,7 @@
     <title>infoBAG</title>
     <link href="https://ib.bsb.br/rss.xml" rel="self"/>
     <link href="https://ib.bsb.br/"/>
-    <updated>2024-09-04T03:52:16+00:00</updated>
+    <updated>2024-09-04T03:53:22+00:00</updated>
     <id>https://ib.bsb.br</id>
     <author>
         <name></name>
@@ -48121,6 +48121,26 @@ Pense duas vezes antes de se envolver.
         
       &lt;/h3&gt;
       &lt;ul&gt;
+        &lt;a href=&quot;/formatxt/&quot;&gt;
+          &lt;h2&gt;
+            Formatxt
+          &lt;/h2&gt;
+        &lt;/a&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;
+    
+    &lt;div class=&quot;search-link&quot;&gt;
+      &lt;h3&gt;
+        &lt;a class=&quot;post-heading&quot; href=&quot;#&quot; id=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;
+          &lt;img src=&quot;/assets/gold.ico&quot; alt=&quot;gold icon&quot; /&gt;
+        &lt;/a&gt;
+        1991-07-25
+        
+        &amp;rightarrowtail; 
+        04 Sep 2024
+        
+      &lt;/h3&gt;
+      &lt;ul&gt;
         &lt;a href=&quot;/diff/&quot;&gt;
           &lt;h2&gt;
             Diff
@@ -48264,26 +48284,6 @@ Pense duas vezes antes de se envolver.
         &lt;a href=&quot;/sort/&quot;&gt;
           &lt;h2&gt;
             Sort
-          &lt;/h2&gt;
-        &lt;/a&gt;
-      &lt;/ul&gt;
-    &lt;/div&gt;
-    
-    &lt;div class=&quot;search-link&quot;&gt;
-      &lt;h3&gt;
-        &lt;a class=&quot;post-heading&quot; href=&quot;#&quot; id=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;
-          &lt;img src=&quot;/assets/gold.ico&quot; alt=&quot;gold icon&quot; /&gt;
-        &lt;/a&gt;
-        1991-07-25
-        
-        &amp;rightarrowtail; 
-        03 Sep 2024
-        
-      &lt;/h3&gt;
-      &lt;ul&gt;
-        &lt;a href=&quot;/formatxt/&quot;&gt;
-          &lt;h2&gt;
-            Formatxt
           &lt;/h2&gt;
         &lt;/a&gt;
       &lt;/ul&gt;
@@ -52975,367 +52975,316 @@ function restoreTextBox()
         <link href="https://ib.bsb.br/formatxt/"/>
         <updated>1991-07-25T00:00:00+00:00</updated>
         <id>https://ib.bsb.br/formatxt/</id>
-        <content type="html">&lt;head&gt;
-    &lt;meta charset=&quot;UTF-8&quot; /&gt;
-    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot; /&gt;
+        <content type="html">&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;div class=&quot;container&quot;&amp;gt;
+    &amp;lt;div class=&quot;row justify-content-center&quot;&amp;gt;
+        &amp;lt;div class=&quot;col-lg-8&quot;&amp;gt;
+            &amp;lt;textarea class=&quot;form-control&quot; id=&quot;thetext&quot; onkeyup=&quot;updatecounts()&quot; onchange=&quot;updatecounts()&quot;
+                onfocus=&quot;updatecounts()&quot; placeholder=&quot;Paste your text here :)&quot;&amp;gt;&amp;lt;/textarea&amp;gt;
+            &amp;lt;hr class=&quot;mt-4&quot;&amp;gt;
+            &amp;lt;div class=&quot;d-flex flex-wrap justify-content-between align-items-center&quot;&amp;gt;
+                &amp;lt;div class=&quot;col-12 col-md-3 mb-2&quot;&amp;gt;
+                    &amp;lt;input class=&quot;form-control&quot; readonly id=&quot;words&quot; placeholder=&quot;Words&quot;&amp;gt;
+                &amp;lt;/div&amp;gt;
+                &amp;lt;div class=&quot;col-12 col-md-3 mb-2&quot;&amp;gt;
+                    &amp;lt;input class=&quot;form-control&quot; readonly id=&quot;characters&quot; placeholder=&quot;Characters&quot;&amp;gt;
+                &amp;lt;/div&amp;gt;
+                &amp;lt;div class=&quot;col-12 col-md-3 mb-2&quot;&amp;gt;
+                    &amp;lt;input class=&quot;form-control&quot; readonly id=&quot;lines&quot; placeholder=&quot;Lines&quot;&amp;gt;
+                &amp;lt;/div&amp;gt;
+                &amp;lt;div class=&quot;col-12 col-md-3 mb-2&quot;&amp;gt;
+                    &amp;lt;input class=&quot;form-control&quot; readonly id=&quot;paragraphs&quot; placeholder=&quot;Paragraphs&quot;&amp;gt;
+                &amp;lt;/div&amp;gt;
+            &amp;lt;/div&amp;gt;                
+            &amp;lt;hr class=&quot;mt-4&quot;&amp;gt;
+            &amp;lt;div class=&quot;text-center&quot;&amp;gt;
+                &amp;lt;button class=&quot;mt-1 btn btn-primary mr-2&quot; onclick=&quot;uppercase()&quot;&amp;gt;UPPERCASE ALL&amp;lt;/button&amp;gt;
+                &amp;lt;button class=&quot;mt-1 btn btn-primary mr-2&quot; onclick=&quot;lowercase()&quot;&amp;gt;lowercase all&amp;lt;/button&amp;gt;
+                &amp;lt;button class=&quot;mt-1 btn btn-primary mr-2&quot; onclick=&quot;capitalizesentences()&quot;&amp;gt;Capitalize sentences&amp;lt;/button&amp;gt;
+                &amp;lt;button class=&quot;mt-1 btn btn-primary&quot; onclick=&quot;capitalizewords()&quot;&amp;gt;Capitalize Words&amp;lt;/button&amp;gt;
+            &amp;lt;/div&amp;gt;
+            &amp;lt;hr&amp;gt;
+            &amp;lt;div class=&quot;row&quot;&amp;gt;
+                &amp;lt;div class=&quot;col-md-8&quot;&amp;gt;
+                    &amp;lt;div class=&quot;input-group justify-content-center&quot;&amp;gt;
+                        &amp;lt;span class=&quot;align-self-center&quot;&amp;gt;Change&amp;lt;/span&amp;gt;
+                        &amp;lt;input type=&quot;text&quot; class=&quot;form-control ms-2&quot; id=&quot;from&quot; placeholder=&quot;From&quot;&amp;gt;
+                        &amp;lt;span class=&quot;align-self-center ms-2&quot;&amp;gt;with&amp;lt;/span&amp;gt;
 
-    &lt;title&gt;
-        
-            Formatxt — infoBAG
-        
-    &lt;/title&gt;
+                        &amp;lt;input type=&quot;text&quot; class=&quot;form-control ms-2 &quot; id=&quot;to&quot; placeholder=&quot;To&quot;&amp;gt;
 
-    &lt;link rel=&quot;canonical&quot; href=&quot;https://ib.bsb.br/formatxt/&quot; /&gt;
-    &lt;link rel=&quot;alternate&quot; type=&quot;application/rss+xml&quot; title=&quot;infoBAG&quot; href=&quot;https://ib.bsb.br/rss.xml&quot; /&gt;
+                        &amp;lt;button class=&quot;btn btn-primary ms-2&quot; onclick=&quot;replacetext()&quot;&amp;gt;Replace&amp;lt;/button&amp;gt;
+                    &amp;lt;/div&amp;gt;
+                &amp;lt;/div&amp;gt;
+                &amp;lt;div class=&quot;col-md-4&quot;&amp;gt;
+                    &amp;lt;div class=&quot;form-check&quot;&amp;gt;
+                        &amp;lt;input class=&quot;form-check-input&quot; type=&quot;checkbox&quot; id=&quot;cs&quot;&amp;gt;
+                        &amp;lt;label class=&quot;form-check-label&quot; for=&quot;cs&quot;&amp;gt;Case sensitive&amp;lt;/label&amp;gt;
+                    &amp;lt;/div&amp;gt;
+                &amp;lt;/div&amp;gt;
+            &amp;lt;/div&amp;gt;
+            &amp;lt;hr&amp;gt;
+            &amp;lt;div class=&quot;row&quot;&amp;gt;
+                &amp;lt;div class=&quot;col-md-8&quot;&amp;gt;
+                    &amp;lt;div class=&quot;input-group&quot;&amp;gt;
+                        &amp;lt;span class=&quot;align-self-center&quot;&amp;gt;Add&amp;lt;/span&amp;gt;
+                        &amp;lt;input class=&quot;form-control ms-2&quot; id=&quot;add&quot; placeholder=&quot;Text&quot;&amp;gt;
+                        &amp;lt;span class=&quot;align-self-center ms-2&quot;&amp;gt;to the&amp;lt;/span&amp;gt;
+                        &amp;lt;select class=&quot;form-control ms-2&quot; id=&quot;addpos&quot;&amp;gt;
+                            &amp;lt;option value=&quot;start&quot;&amp;gt;start&amp;lt;/option&amp;gt;
+                            &amp;lt;option value=&quot;end&quot;&amp;gt;end&amp;lt;/option&amp;gt;
+                        &amp;lt;/select&amp;gt;
+                        &amp;lt;span class=&quot;align-self-center ms-2&quot;&amp;gt;each line.&amp;lt;/span&amp;gt;
+                        &amp;lt;button class=&quot;btn btn-primary ms-2&quot; onclick=&quot;addtext()&quot;&amp;gt;Update&amp;lt;/button&amp;gt;
+                    &amp;lt;/div&amp;gt;
+                &amp;lt;/div&amp;gt;
+            &amp;lt;/div&amp;gt;
+            &amp;lt;hr&amp;gt;
+            &amp;lt;div class=&quot;row&quot;&amp;gt;
+                &amp;lt;div class=&quot;col-md-8&quot;&amp;gt;
+                    &amp;lt;div class=&quot;input-group&quot;&amp;gt;
+                        &amp;lt;span class=&quot;align-self-center&quot;&amp;gt;Trim&amp;lt;/span&amp;gt;
+                        &amp;lt;select class=&quot;form-control d-inline ms-2&quot; id=&quot;trimpos&quot; style=&quot;width: 15%;&quot;&amp;gt;
+                            &amp;lt;option value=&quot;first&quot;&amp;gt;first&amp;lt;/option&amp;gt;
+                            &amp;lt;option value=&quot;last&quot;&amp;gt;last&amp;lt;/option&amp;gt;
+                        &amp;lt;/select&amp;gt;
 
-    
-        &lt;meta itemprop=&quot;keywords&quot; content=&quot;tools&quot; /&gt;
-        
-            &lt;meta property=&quot;article:tag&quot; content=&quot;tools&quot; /&gt;
-        
-    
+                        &amp;lt;input class=&quot;form-control ms-2&quot; id=&quot;trimnumber&quot; placeholder=&quot;Number&quot; type=&quot;number&quot;
+                            style=&quot;width: 15%;&quot;&amp;gt;
+                        characters of each line.
+                        &amp;lt;button class=&quot;btn btn-primary ms-2&quot; onclick=&quot;trimtext()&quot;&amp;gt;Update&amp;lt;/button&amp;gt;
+                    &amp;lt;/div&amp;gt;
+                &amp;lt;/div&amp;gt;
+            &amp;lt;/div&amp;gt;
+            &amp;lt;p&amp;gt;
 
-    &lt;link href=&quot;/style.css&quot; rel=&quot;stylesheet&quot; /&gt;
-    &lt;link href=&quot;/pagefind/pagefind-ui.css&quot; rel=&quot;stylesheet&quot; /&gt;
-    &lt;script src=&quot;/pagefind/pagefind-ui.js&quot;&gt;&lt;/script&gt;
-    &lt;script type=&quot;module&quot;&gt;
-        import PagefindHighlight from &apos;/pagefind/pagefind-highlight.js&apos;;
-        new PagefindHighlight({ highlightParam: &quot;highlight&quot; });
-    &lt;/script&gt;
-    &lt;script src=&quot;/assets/js/search.js&quot; defer=&quot;&quot;&gt;&lt;/script&gt;
-    &lt;script src=&quot;/assets/js/prism.js&quot; defer=&quot;&quot;&gt;&lt;/script&gt;
-&lt;/head&gt;
+            &amp;lt;/p&amp;gt;
+            &amp;lt;hr&amp;gt;
+        &amp;lt;/div&amp;gt;
+    &amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;script&amp;gt; function cleartext() {
+var t = document.getElementById(&quot;thetext&quot;);
+t.value = &apos;&apos;;
+updatetextlength();
+updatewords(); }
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;body&gt;
-    &lt;a class=&quot;search-input-block&quot; id=&quot;search&quot;&gt;&lt;/a&gt;
-
-    &lt;header&gt;
-        &lt;nav aria-label=&quot;Main navigation&quot;&gt;
-            &lt;div class=&quot;header-container&quot;&gt;
-                &lt;a class=&quot;internal-link&quot; href=&quot;/&quot;&gt;
-                    &lt;img src=&quot;/assets/Sudden_Death_Rune.gif&quot; alt=&quot;Sudden Death Rune&quot; class=&quot;favicon&quot; /&gt;
-                &lt;/a&gt;
-                &lt;a href=&quot;https://ib.bsb.br/archive&quot;&gt;
-                    &lt;img src=&quot;/favicon.ico&quot; alt=&quot;Archive Icon&quot; class=&quot;favicon&quot; /&gt;
-                &lt;/a&gt;
-                &lt;a href=&quot;https://ib.bsb.br/tags&quot;&gt;
-                    &lt;img src=&quot;/assets/Label.gif&quot; alt=&quot;Tags Icon&quot; class=&quot;favicon&quot; /&gt;
-                &lt;/a&gt;
-                &lt;a href=&quot;https://ib.bsb.br/events&quot;&gt;
-                    &lt;img src=&quot;/assets/Paralyse_Rune.gif&quot; alt=&quot;Events Icon&quot; class=&quot;favicon&quot; /&gt;
-                &lt;/a&gt;
-            &lt;/div&gt;
-        &lt;/nav&gt;
-    &lt;/header&gt;
-    &lt;div class=&quot;container&quot;&gt;
-        &lt;div class=&quot;row justify-content-center&quot;&gt;
-            &lt;div class=&quot;col-lg-8&quot;&gt;
-                &lt;textarea class=&quot;form-control&quot; id=&quot;thetext&quot; onkeyup=&quot;updatecounts()&quot; onchange=&quot;updatecounts()&quot; onfocus=&quot;updatecounts()&quot; placeholder=&quot;Paste your text here :)&quot;&gt;&lt;/textarea&gt;
-                &lt;hr class=&quot;mt-4&quot; /&gt;
-                &lt;div class=&quot;d-flex flex-wrap justify-content-between align-items-center&quot;&gt;
-                    &lt;div class=&quot;col-12 col-md-3 mb-2&quot;&gt;
-                        &lt;input class=&quot;form-control&quot; readonly=&quot;&quot; id=&quot;words&quot; placeholder=&quot;Words&quot; /&gt;
-                    &lt;/div&gt;
-                    &lt;div class=&quot;col-12 col-md-3 mb-2&quot;&gt;
-                        &lt;input class=&quot;form-control&quot; readonly=&quot;&quot; id=&quot;characters&quot; placeholder=&quot;Characters&quot; /&gt;
-                    &lt;/div&gt;
-                    &lt;div class=&quot;col-12 col-md-3 mb-2&quot;&gt;
-                        &lt;input class=&quot;form-control&quot; readonly=&quot;&quot; id=&quot;lines&quot; placeholder=&quot;Lines&quot; /&gt;
-                    &lt;/div&gt;
-                    &lt;div class=&quot;col-12 col-md-3 mb-2&quot;&gt;
-                        &lt;input class=&quot;form-control&quot; readonly=&quot;&quot; id=&quot;paragraphs&quot; placeholder=&quot;Paragraphs&quot; /&gt;
-                    &lt;/div&gt;
-                &lt;/div&gt;                
-                &lt;hr class=&quot;mt-4&quot; /&gt;
-                &lt;div class=&quot;text-center&quot;&gt;
-                    &lt;button class=&quot;mt-1 btn btn-primary mr-2&quot; onclick=&quot;uppercase()&quot;&gt;UPPERCASE ALL&lt;/button&gt;
-                    &lt;button class=&quot;mt-1 btn btn-primary mr-2&quot; onclick=&quot;lowercase()&quot;&gt;lowercase all&lt;/button&gt;
-                    &lt;button class=&quot;mt-1 btn btn-primary mr-2&quot; onclick=&quot;capitalizesentences()&quot;&gt;Capitalize sentences&lt;/button&gt;
-                    &lt;button class=&quot;mt-1 btn btn-primary&quot; onclick=&quot;capitalizewords()&quot;&gt;Capitalize Words&lt;/button&gt;
-                &lt;/div&gt;
-                &lt;hr /&gt;
-                &lt;div class=&quot;row&quot;&gt;
-                    &lt;div class=&quot;col-md-8&quot;&gt;
-                        &lt;div class=&quot;input-group justify-content-center&quot;&gt;
-                            &lt;span class=&quot;align-self-center&quot;&gt;Change&lt;/span&gt;
-                            &lt;input type=&quot;text&quot; class=&quot;form-control ms-2&quot; id=&quot;from&quot; placeholder=&quot;From&quot; /&gt;
-                            &lt;span class=&quot;align-self-center ms-2&quot;&gt;with&lt;/span&gt;
-
-                            &lt;input type=&quot;text&quot; class=&quot;form-control ms-2 &quot; id=&quot;to&quot; placeholder=&quot;To&quot; /&gt;
-
-                            &lt;button class=&quot;btn btn-primary ms-2&quot; onclick=&quot;replacetext()&quot;&gt;Replace&lt;/button&gt;
-                        &lt;/div&gt;
-                    &lt;/div&gt;
-                    &lt;div class=&quot;col-md-4&quot;&gt;
-                        &lt;div class=&quot;form-check&quot;&gt;
-                            &lt;input class=&quot;form-check-input&quot; type=&quot;checkbox&quot; id=&quot;cs&quot; /&gt;
-                            &lt;label class=&quot;form-check-label&quot; for=&quot;cs&quot;&gt;Case sensitive&lt;/label&gt;
-                        &lt;/div&gt;
-                    &lt;/div&gt;
-                &lt;/div&gt;
-                &lt;hr /&gt;
-                &lt;div class=&quot;row&quot;&gt;
-                    &lt;div class=&quot;col-md-8&quot;&gt;
-                        &lt;div class=&quot;input-group&quot;&gt;
-                            &lt;span class=&quot;align-self-center&quot;&gt;Add&lt;/span&gt;
-                            &lt;input class=&quot;form-control ms-2&quot; id=&quot;add&quot; placeholder=&quot;Text&quot; /&gt;
-                            &lt;span class=&quot;align-self-center ms-2&quot;&gt;to the&lt;/span&gt;
-                            &lt;select class=&quot;form-control ms-2&quot; id=&quot;addpos&quot;&gt;
-                                &lt;option value=&quot;start&quot;&gt;start&lt;/option&gt;
-                                &lt;option value=&quot;end&quot;&gt;end&lt;/option&gt;
-                            &lt;/select&gt;
-                            &lt;span class=&quot;align-self-center ms-2&quot;&gt;each line.&lt;/span&gt;
-                            &lt;button class=&quot;btn btn-primary ms-2&quot; onclick=&quot;addtext()&quot;&gt;Update&lt;/button&gt;
-                        &lt;/div&gt;
-                    &lt;/div&gt;
-                &lt;/div&gt;
-                &lt;hr /&gt;
-                &lt;div class=&quot;row&quot;&gt;
-                    &lt;div class=&quot;col-md-8&quot;&gt;
-                        &lt;div class=&quot;input-group&quot;&gt;
-                            &lt;span class=&quot;align-self-center&quot;&gt;Trim&lt;/span&gt;
-                            &lt;select class=&quot;form-control d-inline ms-2&quot; id=&quot;trimpos&quot; style=&quot;width: 15%;&quot;&gt;
-                                &lt;option value=&quot;first&quot;&gt;first&lt;/option&gt;
-                                &lt;option value=&quot;last&quot;&gt;last&lt;/option&gt;
-                            &lt;/select&gt;
-
-                            &lt;input class=&quot;form-control ms-2&quot; id=&quot;trimnumber&quot; placeholder=&quot;Number&quot; type=&quot;number&quot; style=&quot;width: 15%;&quot; /&gt;
-                            characters of each line.
-                            &lt;button class=&quot;btn btn-primary ms-2&quot; onclick=&quot;trimtext()&quot;&gt;Update&lt;/button&gt;
-                        &lt;/div&gt;
-                    &lt;/div&gt;
-                &lt;/div&gt;
-                &lt;p&gt;
-
-                &lt;/p&gt;
-                &lt;hr /&gt;
-            &lt;/div&gt;
-        &lt;/div&gt;
-    &lt;/div&gt;
-    &lt;script&gt;
-function cleartext() {
-    var t = document.getElementById(&quot;thetext&quot;);
-    t.value = &apos;&apos;;
-    updatetextlength();
-    updatewords();
-}
-
-function selectall() {
-    var t = document.getElementById(&quot;thetext&quot;);
+&lt;p&gt;function selectall() {
+    var t = document.getElementById(“thetext”);
     t.focus();
     t.select();
-}
+}&lt;/p&gt;
 
-function copyText() {
-    var t = document.getElementById(&quot;thetext&quot;);
+&lt;p&gt;function copyText() {
+    var t = document.getElementById(“thetext”);
     t.select();
-    document.execCommand(&apos;copy&apos;);
-}
+    document.execCommand(‘copy’);
+}&lt;/p&gt;
 
-function updatetextlength() {
-    var t = document.getElementById(&quot;thetext&quot;);
-    var c = document.getElementById(&quot;characters&quot;);
-    c.value = t.value.length + &apos; chars&apos;;
-}
+&lt;p&gt;function updatetextlength() {
+    var t = document.getElementById(“thetext”);
+    var c = document.getElementById(“characters”);
+    c.value = t.value.length + ‘ chars’;
+}&lt;/p&gt;
 
-function updatewords() {
-    var t = document.getElementById(&quot;thetext&quot;);
+&lt;p&gt;function updatewords() {
+    var t = document.getElementById(“thetext”);
     var char_count = t.value.length;
-    var fullStr = t.value + &quot; &quot;;
+    var fullStr = t.value + “ “;
     var initial_whitespace_rExp = /^[^A-Za-z0-9]+/gi;
-    var left_trimmedStr = fullStr.replace(initial_whitespace_rExp, &quot;&quot;);
+    var left_trimmedStr = fullStr.replace(initial_whitespace_rExp, “”);
     var non_alphanumerics_rExp = rExp = /[^A-Za-z0-9]+/gi;
-    var cleanedStr = left_trimmedStr.replace(non_alphanumerics_rExp, &quot; &quot;);
-    var splitString = cleanedStr.split(&quot; &quot;);
-    var word_count = splitString.length - 1;
+    var cleanedStr = left_trimmedStr.replace(non_alphanumerics_rExp, “ “);
+    var splitString = cleanedStr.split(“ “);
+    var word_count = splitString.length - 1;&lt;/p&gt;
 
-    var w = document.getElementById(&quot;words&quot;);
-    w.value = word_count + &apos; words&apos;;
-}
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;var w = document.getElementById(&quot;words&quot;);
+w.value = word_count + &apos; words&apos;; }
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-function updatelines() {
-    var t = document.getElementById(&quot;thetext&quot;).value;
-    var c = document.getElementById(&quot;lines&quot;);
+&lt;p&gt;function updatelines() {
+    var t = document.getElementById(“thetext”).value;
+    var c = document.getElementById(“lines”);&lt;/p&gt;
 
-    if (!t) {
-        c.value = &apos;0 lines&apos;;
-    } else {
-        c.value = t.split(&quot;\n&quot;).length + &apos; lines&apos;;
-    }
-}
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;if (!t) {
+    c.value = &apos;0 lines&apos;;
+} else {
+    c.value = t.split(&quot;\n&quot;).length + &apos; lines&apos;;
+} }
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-function updateparagraphs() {
-    var t = document.getElementById(&quot;thetext&quot;).value;
-    var c = document.getElementById(&quot;paragraphs&quot;);
-    for(var r=t.split(/\n\n+/g),n=0,a=0;a&lt;r.length;a++)r[a].length!=0&amp;&amp;n++;
-    
-    if (!t) {
-        c.value = &apos;0 paragraphs&apos;;
-    } else {
-        c.value = n + &apos; paragraphs&apos;;
-    }
-}
+&lt;p&gt;function updateparagraphs() {
+    var t = document.getElementById(“thetext”).value;
+    var c = document.getElementById(“paragraphs”);
+    for(var r=t.split(/\n\n+/g),n=0,a=0;a&amp;lt;r.length;a++)r[a].length!=0&amp;amp;&amp;amp;n++;&lt;/p&gt;
 
-function updatecounts() {
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;if (!t) {
+    c.value = &apos;0 paragraphs&apos;;
+} else {
+    c.value = n + &apos; paragraphs&apos;;
+} }
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;function updatecounts() {
     updatetextlength();
     updatewords();
     updatelines();
     updateparagraphs();
-}
+}&lt;/p&gt;
 
-function uppercase() {
-    var t = document.getElementById(&quot;thetext&quot;);
+&lt;p&gt;function uppercase() {
+    var t = document.getElementById(“thetext”);
     t.value = t.value.toUpperCase();
-}
+}&lt;/p&gt;
 
-function lowercase() {
-    var t = document.getElementById(&quot;thetext&quot;);
+&lt;p&gt;function lowercase() {
+    var t = document.getElementById(“thetext”);
     t.value = t.value.toLowerCase();
+}&lt;/p&gt;
+
+&lt;p&gt;function capitalizewords() {
+    var t = document.getElementById(“thetext”);&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;t.value = (t.value + &apos;&apos;).replace(/^(.)|\s(.)/g, function ($1) {
+    return $1.toUpperCase();
+});
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;}&lt;/p&gt;
+
+&lt;p&gt;function capitalizesentences() {
+    var t = document.getElementById(“thetext”);&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;var tarray = t.value.split(&quot;.&quot;);
+var tstr = &apos;&apos;;
+for (i = 0; i &amp;lt; tarray.length; i++) {
+    tarray[i] = ltrim(tarray[i], &apos; &apos;);
+    tstr = tstr + tarray[i].substring(0, 1).toUpperCase() + tarray[i].slice(1).toLowerCase();
+    if (i &amp;lt; (tarray.length - 1)) tstr = tstr + &apos;. &apos;;
 }
+t.value = tstr;
 
-function capitalizewords() {
-    var t = document.getElementById(&quot;thetext&quot;);
 
-    t.value = (t.value + &apos;&apos;).replace(/^(.)|\s(.)/g, function ($1) {
-        return $1.toUpperCase();
-    });
-
+tarray = t.value.split(&quot;?&quot;);
+tstr = &apos;&apos;;
+for (i = 0; i &amp;lt; tarray.length; i++) {
+    tarray[i] = ltrim(tarray[i], &apos; &apos;);
+    tstr = tstr + tarray[i].substring(0, 1).toUpperCase() + tarray[i].slice(1);
+    if (i &amp;lt; (tarray.length - 1)) tstr = tstr + &apos;? &apos;;
 }
-
-function capitalizesentences() {
-    var t = document.getElementById(&quot;thetext&quot;);
-
-    var tarray = t.value.split(&quot;.&quot;);
-    var tstr = &apos;&apos;;
-    for (i = 0; i &lt; tarray.length; i++) {
-        tarray[i] = ltrim(tarray[i], &apos; &apos;);
-        tstr = tstr + tarray[i].substring(0, 1).toUpperCase() + tarray[i].slice(1).toLowerCase();
-        if (i &lt; (tarray.length - 1)) tstr = tstr + &apos;. &apos;;
-    }
-    t.value = tstr;
+t.value = tstr;
 
 
-    tarray = t.value.split(&quot;?&quot;);
-    tstr = &apos;&apos;;
-    for (i = 0; i &lt; tarray.length; i++) {
-        tarray[i] = ltrim(tarray[i], &apos; &apos;);
-        tstr = tstr + tarray[i].substring(0, 1).toUpperCase() + tarray[i].slice(1);
-        if (i &lt; (tarray.length - 1)) tstr = tstr + &apos;? &apos;;
-    }
-    t.value = tstr;
-
-
-    tarray = t.value.split(&quot;\n&quot;);
-    tstr = &apos;&apos;;
-    for (i = 0; i &lt; tarray.length; i++) {
-        tarray[i] = ltrim(tarray[i], &apos; &apos;);
-        tstr = tstr + tarray[i].substring(0, 1).toUpperCase() + tarray[i].slice(1);
-        if (i &lt; (tarray.length - 1)) tstr = tstr + &apos;\n&apos;;
-    }
-    t.value = tstr;
-
-
-    tarray = t.value.split(&quot;!&quot;);
-    tstr = &apos;&apos;;
-    for (i = 0; i &lt; tarray.length; i++) {
-        tarray[i] = ltrim(tarray[i], &apos; &apos;);
-        tstr = tstr + tarray[i].substring(0, 1).toUpperCase() + tarray[i].slice(1);
-        if (i &lt; (tarray.length - 1)) tstr = tstr + &apos;! &apos;;
-    }
-    t.value = tstr;
+tarray = t.value.split(&quot;\n&quot;);
+tstr = &apos;&apos;;
+for (i = 0; i &amp;lt; tarray.length; i++) {
+    tarray[i] = ltrim(tarray[i], &apos; &apos;);
+    tstr = tstr + tarray[i].substring(0, 1).toUpperCase() + tarray[i].slice(1);
+    if (i &amp;lt; (tarray.length - 1)) tstr = tstr + &apos;\n&apos;;
 }
+t.value = tstr;
 
-function replacetext() {
-    var t = document.getElementById(&quot;thetext&quot;);
-    var from = document.getElementById(&quot;from&quot;);
-    var to = document.getElementById(&quot;to&quot;);
 
-    var cs = document.getElementById(&quot;cs&quot;);
-    var scope;
+tarray = t.value.split(&quot;!&quot;);
+tstr = &apos;&apos;;
+for (i = 0; i &amp;lt; tarray.length; i++) {
+    tarray[i] = ltrim(tarray[i], &apos; &apos;);
+    tstr = tstr + tarray[i].substring(0, 1).toUpperCase() + tarray[i].slice(1);
+    if (i &amp;lt; (tarray.length - 1)) tstr = tstr + &apos;! &apos;;
+}
+t.value = tstr; }
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-    var ff = from.value.replace(&quot;%N&quot;, &quot;\n&quot;);
-    var tt = to.value.replace(&quot;%N&quot;, &quot;\n&quot;);
+&lt;p&gt;function replacetext() {
+    var t = document.getElementById(“thetext”);
+    var from = document.getElementById(“from”);
+    var to = document.getElementById(“to”);&lt;/p&gt;
 
-    if (cs.checked) scope = &apos;g&apos;;
-    else scope = &apos;gi&apos;;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;var cs = document.getElementById(&quot;cs&quot;);
+var scope;
 
+var ff = from.value.replace(&quot;%N&quot;, &quot;\n&quot;);
+var tt = to.value.replace(&quot;%N&quot;, &quot;\n&quot;);
+
+if (cs.checked) scope = &apos;g&apos;;
+else scope = &apos;gi&apos;;
+
+var temp = t.value;
+temp = temp.replace(new RegExp(ff, scope), tt);
+t.value = temp;
+
+from.value = &apos;&apos;;
+to.value = &apos;&apos;;
+updatecounts(); }
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;function addtext() {
+    var t = document.getElementById(“thetext”);
+    var a = document.getElementById(“add”);
+    var p = document.getElementById(“addpos”);
     var temp = t.value;
-    temp = temp.replace(new RegExp(ff, scope), tt);
-    t.value = temp;
+    var tstr = ‘’;
+    var tarray = t.value.split(“\n”);&lt;/p&gt;
 
-    from.value = &apos;&apos;;
-    to.value = &apos;&apos;;
-    updatecounts();
-}
-
-function addtext() {
-    var t = document.getElementById(&quot;thetext&quot;);
-    var a = document.getElementById(&quot;add&quot;);
-    var p = document.getElementById(&quot;addpos&quot;);
-    var temp = t.value;
-    var tstr = &apos;&apos;;
-    var tarray = t.value.split(&quot;\n&quot;);
-
-    if (p.value == &apos;start&apos;) {
-        for (i = 0; i &lt; tarray.length; i++) {
-            insert = a.value.replace(&quot;%L&quot;, i + 1);
-            insert = insert.replace(&quot;%N&quot;, &quot;\n&quot;);
-            tstr = tstr + insert + tarray[i];
-            if (i &lt; (tarray.length - 1)) tstr = tstr + &quot;\n&quot;;
-        }
-        t.value = tstr;
-    } else {
-        for (i = 0; i &lt; tarray.length; i++) {
-            insert = a.value.replace(&quot;%L&quot;, i + 1);
-            insert = insert.replace(&quot;%N&quot;, &quot;\n&quot;);
-            tstr = tstr + tarray[i] + insert;
-            if (i &lt; (tarray.length - 1)) tstr = tstr + &quot;\n&quot;;
-        }
-        t.value = tstr;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;if (p.value == &apos;start&apos;) {
+    for (i = 0; i &amp;lt; tarray.length; i++) {
+        insert = a.value.replace(&quot;%L&quot;, i + 1);
+        insert = insert.replace(&quot;%N&quot;, &quot;\n&quot;);
+        tstr = tstr + insert + tarray[i];
+        if (i &amp;lt; (tarray.length - 1)) tstr = tstr + &quot;\n&quot;;
     }
-
-    a.value = &apos;&apos;;
-    updatecounts();
+    t.value = tstr;
+} else {
+    for (i = 0; i &amp;lt; tarray.length; i++) {
+        insert = a.value.replace(&quot;%L&quot;, i + 1);
+        insert = insert.replace(&quot;%N&quot;, &quot;\n&quot;);
+        tstr = tstr + tarray[i] + insert;
+        if (i &amp;lt; (tarray.length - 1)) tstr = tstr + &quot;\n&quot;;
+    }
+    t.value = tstr;
 }
 
-function ltrim(str, chars) {
-    chars = chars || &quot;\\s&quot;;
-    return str.replace(new RegExp(&quot;^[&quot; + chars + &quot;]+&quot;, &quot;g&quot;), &quot;&quot;);
-}
+a.value = &apos;&apos;;
+updatecounts(); }
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-function rtrim(str, chars) {
-    chars = chars || &quot;\\s&quot;;
-    return str.replace(new RegExp(&quot;[&quot; + chars + &quot;]+$&quot;, &quot;g&quot;), &quot;&quot;);
-}
+&lt;p&gt;function ltrim(str, chars) {
+    chars = chars || “\s”;
+    return str.replace(new RegExp(“^[” + chars + “]+”, “g”), “”);
+}&lt;/p&gt;
 
-function trimtext() {
-    var t = document.getElementById(&quot;thetext&quot;);
-    var n = document.getElementById(&quot;trimnumber&quot;);
-    var p = document.getElementById(&quot;trimpos&quot;);
-    var tarray = t.value.split(&quot;\n&quot;);
+&lt;p&gt;function rtrim(str, chars) {
+    chars = chars || “\s”;
+    return str.replace(new RegExp(“[” + chars + “]+$”, “g”), “”);
+}&lt;/p&gt;
+
+&lt;p&gt;function trimtext() {
+    var t = document.getElementById(“thetext”);
+    var n = document.getElementById(“trimnumber”);
+    var p = document.getElementById(“trimpos”);
+    var tarray = t.value.split(“\n”);
     var i;
-    var tstr = &apos;&apos;;
+    var tstr = ‘’;&lt;/p&gt;
 
-    if (p.value == &apos;first&apos;) {
-        for (i = 0; i &lt; tarray.length; i++) tstr = tstr + tarray[i].substr(n.value) + &quot;\n&quot;;
-        tstr = rtrim(tstr);
-    } else {
-        for (i = 0; i &lt; tarray.length; i++) {
-            tlen = tarray[i].length;
-            tpos = tlen - n.value;
-            tstr = tstr + tarray[i].substr(0, tpos) + &quot;\n&quot;;
-        }
-        tstr = rtrim(tstr);
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;if (p.value == &apos;first&apos;) {
+    for (i = 0; i &amp;lt; tarray.length; i++) tstr = tstr + tarray[i].substr(n.value) + &quot;\n&quot;;
+    tstr = rtrim(tstr);
+} else {
+    for (i = 0; i &amp;lt; tarray.length; i++) {
+        tlen = tarray[i].length;
+        tpos = tlen - n.value;
+        tstr = tstr + tarray[i].substr(0, tpos) + &quot;\n&quot;;
     }
-
-    t.value = tstr;
-    updatecounts();
+    tstr = rtrim(tstr);
 }
-    &lt;/script&gt;
-    &lt;script&gt;
-        updatecounts();
-    &lt;/script&gt;
-&lt;/body&gt;
+
+t.value = tstr;
+updatecounts(); }
+&amp;lt;/script&amp;gt;
+&amp;lt;script&amp;gt;
+    updatecounts();
+&amp;lt;/script&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 </content>
     </entry>
     
