@@ -3,26 +3,22 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
   <title>
     
       How to use the `dd` command to create a bootable USB drive from an ISO file on a Linux-based system — infoBAG
     
   </title>
-
   <link rel="canonical" href="https://ib.bsb.br/how-to-use-the-dd-command-to-create-a-bootable-usb-drive-from-an-iso-file-on-a-linux-based-system/">
   <link rel="alternate" type="application/rss+xml" title="infoBAG" href="https://ib.bsb.br/rss.xml">
-
   
     <meta itemprop="keywords" content="linux">
     
       <meta property="article:tag" content="linux">
     
   
-
   <link href="/style.css" rel="stylesheet">
   <link href="/pagefind/pagefind-ui.css" rel="stylesheet">
-  <script src="/pagefind/pagefind-ui.js"></script>
+  <script src="/pagefind/pagefind-ui.js" type="text/javascript"></script>
   <script type="module">
     import PagefindHighlight from '/pagefind/pagefind-highlight.js';
     new PagefindHighlight({ highlightParam: "highlight" });
@@ -30,67 +26,68 @@
   <script src="/assets/js/search.js" defer></script>
   <script src="/assets/js/prism.js" defer></script>
 </head>
-<body class="post-wrapper">
-  <a class="search-input-block" id="search"></a>
-  <article class="post">
-    <header>
-      <nav aria-label="Main navigation">
-        <div class="header-container">
-          <a class="internal-link" href="/">
-            <img src="/assets/Sudden_Death_Rune.gif" alt="Sudden Death Rune" class="favicon">
+<body class="post-wrapper post-content-body">
+  <header class="header-container">
+    <nav aria-label="Main navigation" class="header-content">
+      <a class="internal-link" href="/" aria-label="Home">
+        <img src="/assets/Sudden_Death_Rune.gif" alt="Sudden Death Rune" class="favicon">
+      </a>
+      <a href="https://ib.bsb.br/archive" aria-label="Archive">
+        <img src="/favicon.ico" alt="Archive Icon" class="favicon">
+      </a>
+      <a href="https://ib.bsb.br/tags" aria-label="Tags">
+        <img src="/assets/Label.gif" alt="Tags Icon" class="favicon">
+      </a>
+      <a href="https://ib.bsb.br/events" aria-label="Events">
+        <img src="/assets/Paralyse_Rune.gif" alt="Events Icon" class="favicon">
+      </a>
+    </nav>
+    <div class="search-link">
+      <div id="search" class="search-input-block"></div>
+    </div>
+  </header>
+  <article class="post content">
+    <header class="post-heading">
+      <h1 class="post-title">How to use the `dd` command to create a bootable USB drive from an ISO file on a Linux-based system</h1>
+      <div class="post-meta">
+        <time datetime="2024-08-02T00:00:00+00:00" class="post-date">
+          02 Aug 2024
+        </time>
+        
+          <span class="post-updated">
+            &rightarrowtail; Updated: 
+            <time datetime="2024-08-02T01:15:37+00:00">
+              02 Aug 2024
+            </time>
+          </span>
+        
+        
+          <div class="post-tags">
+            Tags:
+            
+              <a href="https://ib.bsb.br/tags/#linux" class="tag">linux</a>
+            
+          </div>
+        
+        
+          <div class="post-info">
+            Edit: aberto.
+          </div>
+        
+        <div class="post-actions">
+          <a href="https://github.com/marioseixas/marioseixas.github.io/edit/main/_posts/2024-08-02-how-to-use-the-dd-command-to-create-a-bootable-usb-drive-from-an-iso-file-on-a-linux-based-system.md" target="_blank" rel="noopener noreferrer" class="btn-primary">
+            Improve this page
           </a>
-          <a href="https://ib.bsb.br/archive">
-            <img src="/favicon.ico" alt="Archive Icon" class="favicon">
-          </a>
-          <a href="https://ib.bsb.br/tags">
-            <img src="/assets/Label.gif" alt="Tags Icon" class="favicon">
-          </a>
-          <a href="https://ib.bsb.br/events">
-            <img src="/assets/Paralyse_Rune.gif" alt="Events Icon" class="favicon">
+          <a href="https://github.com/marioseixas/marioseixas.github.io/commits/main/_posts/2024-08-02-how-to-use-the-dd-command-to-create-a-bootable-usb-drive-from-an-iso-file-on-a-linux-based-system.md" target="_blank" rel="noopener noreferrer" class="btn-secondary">
+            View revision history
           </a>
         </div>
-      </nav>
-    </header>
-    <div class="post-heading">
-    <h1 class="post-title">How to use the `dd` command to create a bootable USB drive from an ISO file on a Linux-based system</h1>
-    <div class="search-link">
-        <span>
-          <span class="tags">
-            <time datetime="2024-08-02T00:00:00+00:00">
-              · 02 Aug 2024
-            </time>
-            
-            &rightarrowtail;
-            <time datetime="2024-08-02T01:15:37+00:00">
-                02 Aug 2024
-              </time>
-            
-          </span>          
-          
-            <span>
-              · Tags:
-              
-                <a href="https://ib.bsb.br/tags/#linux" class="tag">linux</a>
-              
-            </span>
-                    
-          
-            <span class="tags">
-              · Edit: aberto.
-            </span>
-                    
-          <a href="https://github.com/marioseixas/marioseixas.github.io/edit/main/_posts/2024-08-02-how-to-use-the-dd-command-to-create-a-bootable-usb-drive-from-an-iso-file-on-a-linux-based-system.md" target="_blank" rel="noopener noreferrer">
-            · Improve this
-          </a>
-          <a href="https://github.com/marioseixas/marioseixas.github.io/commits/main/_posts/2024-08-02-how-to-use-the-dd-command-to-create-a-bootable-usb-drive-from-an-iso-file-on-a-linux-based-system.md" target="_blank" rel="noopener noreferrer">
-            · Revision history
-          </a>
-        </span>
       </div>
-      <main class="post-content-body">
-        
+    </header>
+    <main class="post-content">
+      
 <ul><li><a href="#prerequisites">Prerequisites</a></li><li><a href="#step-by-step-guide">Step-by-Step Guide</a><ul><li><a href="#step-1-identify-the-usb-drive">Step 1: Identify the USB Drive</a></li><li><a href="#step-2-unmount-the-usb-drive">Step 2: Unmount the USB Drive</a></li><li><a href="#step-3-write-the-iso-to-the-usb-drive">Step 3: Write the ISO to the USB Drive</a></li><li><a href="#step-4-wait-for-the-process-to-complete">Step 4: Wait for the Process to Complete</a></li><li><a href="#step-5-sync-and-eject-the-usb-drive">Step 5: Sync and Eject the USB Drive</a></li></ul></li><li><a href="#important-considerations">Important Considerations</a></li></ul>
-        <h3 id="prerequisites">
+      <h3 id="prerequisites">
   
   
      <a href="#prerequisites">#</a>Prerequisites
@@ -233,13 +230,14 @@
   <li><strong>Booting from USB</strong>: After creating the bootable USB drive, you can boot from it by changing the boot order in your BIOS/UEFI settings. You may need to press a specific key (like F2, F12, ESC, or DEL) during startup to access the boot menu.</li>
 </ul>
 
-      </main>
-    </div>
+    </main>
   </article>
-  <hr>
-  <a href="#" class="back-to-top" aria-label="Back to top">
-    <img src="/assets/gold.ico" alt="gold icon">
-  </a>
-  
+  <footer>
+    <hr>
+    <a href="#" class="back-to-top" aria-label="Back to top">
+      <img src="/assets/gold.ico" alt="Back to top">
+    </a>
+    
+  </footer>
 </body>  
 </html>

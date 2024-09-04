@@ -3,16 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
   <title>
     
       cliPaperQA — infoBAG
     
   </title>
-
   <link rel="canonical" href="https://ib.bsb.br/clipaper-qa/">
   <link rel="alternate" type="application/rss+xml" title="infoBAG" href="https://ib.bsb.br/rss.xml">
-
   
     <meta itemprop="keywords" content="linux,scripts">
     
@@ -21,10 +18,9 @@
       <meta property="article:tag" content="scripts">
     
   
-
   <link href="/style.css" rel="stylesheet">
   <link href="/pagefind/pagefind-ui.css" rel="stylesheet">
-  <script src="/pagefind/pagefind-ui.js"></script>
+  <script src="/pagefind/pagefind-ui.js" type="text/javascript"></script>
   <script type="module">
     import PagefindHighlight from '/pagefind/pagefind-highlight.js';
     new PagefindHighlight({ highlightParam: "highlight" });
@@ -32,69 +28,70 @@
   <script src="/assets/js/search.js" defer></script>
   <script src="/assets/js/prism.js" defer></script>
 </head>
-<body class="post-wrapper">
-  <a class="search-input-block" id="search"></a>
-  <article class="post">
-    <header>
-      <nav aria-label="Main navigation">
-        <div class="header-container">
-          <a class="internal-link" href="/">
-            <img src="/assets/Sudden_Death_Rune.gif" alt="Sudden Death Rune" class="favicon">
+<body class="post-wrapper post-content-body">
+  <header class="header-container">
+    <nav aria-label="Main navigation" class="header-content">
+      <a class="internal-link" href="/" aria-label="Home">
+        <img src="/assets/Sudden_Death_Rune.gif" alt="Sudden Death Rune" class="favicon">
+      </a>
+      <a href="https://ib.bsb.br/archive" aria-label="Archive">
+        <img src="/favicon.ico" alt="Archive Icon" class="favicon">
+      </a>
+      <a href="https://ib.bsb.br/tags" aria-label="Tags">
+        <img src="/assets/Label.gif" alt="Tags Icon" class="favicon">
+      </a>
+      <a href="https://ib.bsb.br/events" aria-label="Events">
+        <img src="/assets/Paralyse_Rune.gif" alt="Events Icon" class="favicon">
+      </a>
+    </nav>
+    <div class="search-link">
+      <div id="search" class="search-input-block"></div>
+    </div>
+  </header>
+  <article class="post content">
+    <header class="post-heading">
+      <h1 class="post-title">cliPaperQA</h1>
+      <div class="post-meta">
+        <time datetime="2024-06-16T00:00:00+00:00" class="post-date">
+          16 Jun 2024
+        </time>
+        
+          <span class="post-updated">
+            &rightarrowtail; Updated: 
+            <time datetime="2024-08-16T14:42:44+00:00">
+              16 Aug 2024
+            </time>
+          </span>
+        
+        
+          <div class="post-tags">
+            Tags:
+            
+              <a href="https://ib.bsb.br/tags/#linux" class="tag">linux</a>,
+            
+              <a href="https://ib.bsb.br/tags/#scripts" class="tag">scripts</a>
+            
+          </div>
+        
+        
+          <div class="post-info">
+            Edit: aberto.
+          </div>
+        
+        <div class="post-actions">
+          <a href="https://github.com/marioseixas/marioseixas.github.io/edit/main/_posts/2024-06-16-clipaper-qa.md" target="_blank" rel="noopener noreferrer" class="btn-primary">
+            Improve this page
           </a>
-          <a href="https://ib.bsb.br/archive">
-            <img src="/favicon.ico" alt="Archive Icon" class="favicon">
-          </a>
-          <a href="https://ib.bsb.br/tags">
-            <img src="/assets/Label.gif" alt="Tags Icon" class="favicon">
-          </a>
-          <a href="https://ib.bsb.br/events">
-            <img src="/assets/Paralyse_Rune.gif" alt="Events Icon" class="favicon">
+          <a href="https://github.com/marioseixas/marioseixas.github.io/commits/main/_posts/2024-06-16-clipaper-qa.md" target="_blank" rel="noopener noreferrer" class="btn-secondary">
+            View revision history
           </a>
         </div>
-      </nav>
-    </header>
-    <div class="post-heading">
-    <h1 class="post-title">cliPaperQA</h1>
-    <div class="search-link">
-        <span>
-          <span class="tags">
-            <time datetime="2024-06-16T00:00:00+00:00">
-              · 16 Jun 2024
-            </time>
-            
-            &rightarrowtail;
-            <time datetime="2024-08-16T14:42:44+00:00">
-                16 Aug 2024
-              </time>
-            
-          </span>          
-          
-            <span>
-              · Tags:
-              
-                <a href="https://ib.bsb.br/tags/#linux" class="tag">linux</a>,
-              
-                <a href="https://ib.bsb.br/tags/#scripts" class="tag">scripts</a>
-              
-            </span>
-                    
-          
-            <span class="tags">
-              · Edit: aberto.
-            </span>
-                    
-          <a href="https://github.com/marioseixas/marioseixas.github.io/edit/main/_posts/2024-06-16-clipaper-qa.md" target="_blank" rel="noopener noreferrer">
-            · Improve this
-          </a>
-          <a href="https://github.com/marioseixas/marioseixas.github.io/commits/main/_posts/2024-06-16-clipaper-qa.md" target="_blank" rel="noopener noreferrer">
-            · Revision history
-          </a>
-        </span>
       </div>
-      <main class="post-content-body">
-        
+    </header>
+    <main class="post-content">
+      
 <ul><li><a href="#paperqa-cli-script-documentation">PaperQA CLI Script Documentation</a><ul><li><a href="#introduction">Introduction</a></li><li><a href="#prerequisites">Prerequisites</a></li><li><a href="#installation">Installation</a></li><li><a href="#usage">Usage</a><ul><li><a href="#command-line-arguments">Command Line Arguments</a></li><li><a href="#favorites">Favorites</a></li><li><a href="#examples">Examples</a></li><li><a href="#list-of-questions-template">List of questions template:</a></li></ul></li><li><a href="#detailed-explanation">Detailed Explanation</a><ul><li><a href="#loading-custom-prompts">Loading Custom Prompts</a></li><li><a href="#creating-docs-object">Creating Docs Object</a></li><li><a href="#loading-existing-embeddings">Loading Existing Embeddings</a></li><li><a href="#adding-pdf-documents">Adding PDF Documents</a></li><li><a href="#getting-questions">Getting Questions</a></li><li><a href="#answering-questions">Answering Questions</a></li><li><a href="#saving-data">Saving Data</a></li></ul></li><li><a href="#error-handling">Error Handling</a></li></ul></li><li><a href="#script">Script</a></li><li><a href="#2add">2add</a></li></ul>
-        <h1 id="paperqa-cli-script-documentation">
+      <h1 id="paperqa-cli-script-documentation">
   
   
      <a href="#paperqa-cli-script-documentation">#</a>PaperQA CLI Script Documentation
@@ -921,13 +918,18 @@ search_prompt = prompts.PromptTemplate(
     template="We want to answer the following question: {question} \n"
 </code></section></div></div><hr />
 
-      </main>
-    </div>
+    </main>
   </article>
-  <hr>
-  <a href="#" class="back-to-top" aria-label="Back to top">
-    <img src="/assets/gold.ico" alt="gold icon">
-  </a>
-  https://github.com/whitead/paper-qa
+  <footer>
+    <hr>
+    <a href="#" class="back-to-top" aria-label="Back to top">
+      <img src="/assets/gold.ico" alt="Back to top">
+    </a>
+    
+      <div class="comment-box">
+        https://github.com/whitead/paper-qa
+      </div>
+    
+  </footer>
 </body>  
 </html>
