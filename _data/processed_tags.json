@@ -496,14 +496,14 @@
     "scripts": {
         "parents": [],
         "children": [
-            "cloud",
-            "AI",
-            "mobile",
             "google-apps-script",
-            "scripts>mobile",
-            "scripts>google-apps-script",
+            "cloud",
             "scripts>cloud",
-            "scripts>AI"
+            "mobile",
+            "AI",
+            "scripts>AI",
+            "scripts>google-apps-script",
+            "scripts>mobile"
         ],
         "related": {
             "linux": 26,
@@ -671,8 +671,8 @@
     "tools": {
         "parents": [],
         "children": [
-            "tools>AI>prompt",
-            "AI>prompt"
+            "AI>prompt",
+            "tools>AI>prompt"
         ],
         "related": {},
         "posts": [
@@ -772,9 +772,9 @@
     "edital": {
         "parents": [],
         "children": [
-            "direito",
-            "edital>direito",
             "direito>processual-penal",
+            "edital>direito",
+            "direito",
             "edital>direito>processual-penal"
         ],
         "related": {},
@@ -814,8 +814,8 @@
     "tasks": {
         "parents": [],
         "children": [
-            "tasks>iphone",
-            "iphone"
+            "iphone",
+            "tasks>iphone"
         ],
         "related": {},
         "posts": [
@@ -1455,9 +1455,9 @@
             "scripts"
         ],
         "children": [
-            "tools>AI>prompt",
             "prompt",
-            "AI>prompt"
+            "AI>prompt",
+            "tools>AI>prompt"
         ],
         "related": {},
         "posts": [
@@ -1514,10 +1514,10 @@
     "software": {
         "parents": [],
         "children": [
-            "software>mobile",
-            "cloud",
+            "software>cloud",
             "mobile",
-            "software>cloud"
+            "software>mobile",
+            "cloud"
         ],
         "related": {},
         "posts": [
@@ -1573,8 +1573,8 @@
     },
     "mobile": {
         "parents": [
-            "scripts",
-            "software"
+            "software",
+            "scripts"
         ],
         "children": [],
         "related": {},
@@ -1852,8 +1852,8 @@
     },
     "cloud": {
         "parents": [
-            "scripts",
-            "software"
+            "software",
+            "scripts"
         ],
         "children": [],
         "related": {},
