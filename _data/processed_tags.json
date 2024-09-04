@@ -496,14 +496,14 @@
     "scripts": {
         "parents": [],
         "children": [
-            "AI",
-            "google-apps-script",
-            "scripts>AI",
-            "scripts>google-apps-script",
-            "mobile",
-            "scripts>cloud",
             "cloud",
-            "scripts>mobile"
+            "AI",
+            "mobile",
+            "google-apps-script",
+            "scripts>mobile",
+            "scripts>google-apps-script",
+            "scripts>cloud",
+            "scripts>AI"
         ],
         "related": {
             "linux": 26,
@@ -1514,10 +1514,10 @@
     "software": {
         "parents": [],
         "children": [
+            "software>mobile",
             "cloud",
-            "software>cloud",
             "mobile",
-            "software>mobile"
+            "software>cloud"
         ],
         "related": {},
         "posts": [
@@ -1573,8 +1573,8 @@
     },
     "mobile": {
         "parents": [
-            "software",
-            "scripts"
+            "scripts",
+            "software"
         ],
         "children": [],
         "related": {},
@@ -1852,8 +1852,8 @@
     },
     "cloud": {
         "parents": [
-            "software",
-            "scripts"
+            "scripts",
+            "software"
         ],
         "children": [],
         "related": {},
