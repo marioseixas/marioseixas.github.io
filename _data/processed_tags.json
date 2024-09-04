@@ -496,14 +496,14 @@
     "scripts": {
         "parents": [],
         "children": [
+            "mobile",
+            "scripts>AI",
+            "cloud",
+            "scripts>cloud",
             "scripts>mobile",
             "google-apps-script",
-            "cloud",
-            "mobile",
-            "AI",
-            "scripts>AI",
             "scripts>google-apps-script",
-            "scripts>cloud"
+            "AI"
         ],
         "related": {
             "linux": 26,
@@ -773,9 +773,9 @@
         "parents": [],
         "children": [
             "direito",
-            "edital>direito",
             "edital>direito>processual-penal",
-            "direito>processual-penal"
+            "direito>processual-penal",
+            "edital>direito"
         ],
         "related": {},
         "posts": [
@@ -1274,8 +1274,8 @@
     "github": {
         "parents": [],
         "children": [
-            "github>jekyll",
-            "jekyll"
+            "jekyll",
+            "github>jekyll"
         ],
         "related": {},
         "posts": [
@@ -1455,8 +1455,8 @@
             "scripts"
         ],
         "children": [
-            "prompt",
             "AI>prompt",
+            "prompt",
             "tools>AI>prompt"
         ],
         "related": {},
@@ -1514,10 +1514,10 @@
     "software": {
         "parents": [],
         "children": [
-            "cloud",
-            "software>mobile",
             "mobile",
-            "software>cloud"
+            "software>mobile",
+            "software>cloud",
+            "cloud"
         ],
         "related": {},
         "posts": [
@@ -1573,8 +1573,8 @@
     },
     "mobile": {
         "parents": [
-            "software",
-            "scripts"
+            "scripts",
+            "software"
         ],
         "children": [],
         "related": {},
@@ -1601,8 +1601,8 @@
     },
     "AI>prompt": {
         "parents": [
-            "AI",
-            "tools"
+            "tools",
+            "AI"
         ],
         "children": [],
         "related": {},
@@ -1852,8 +1852,8 @@
     },
     "cloud": {
         "parents": [
-            "software",
-            "scripts"
+            "scripts",
+            "software"
         ],
         "children": [],
         "related": {},
