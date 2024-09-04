@@ -3,7 +3,7 @@
     <title>infoBAG</title>
     <link href="https://ib.bsb.br/rss.xml" rel="self"/>
     <link href="https://ib.bsb.br/"/>
-    <updated>2024-09-04T03:50:18+00:00</updated>
+    <updated>2024-09-04T03:51:13+00:00</updated>
     <id>https://ib.bsb.br</id>
     <author>
         <name></name>
@@ -48121,6 +48121,26 @@ Pense duas vezes antes de se envolver.
         
       &lt;/h3&gt;
       &lt;ul&gt;
+        &lt;a href=&quot;/dedup/&quot;&gt;
+          &lt;h2&gt;
+            Dedup
+          &lt;/h2&gt;
+        &lt;/a&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;
+    
+    &lt;div class=&quot;search-link&quot;&gt;
+      &lt;h3&gt;
+        &lt;a class=&quot;post-heading&quot; href=&quot;#&quot; id=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;
+          &lt;img src=&quot;/assets/gold.ico&quot; alt=&quot;gold icon&quot; /&gt;
+        &lt;/a&gt;
+        1991-07-25
+        
+        &amp;rightarrowtail; 
+        04 Sep 2024
+        
+      &lt;/h3&gt;
+      &lt;ul&gt;
         &lt;a href=&quot;/dedup-spaces/&quot;&gt;
           &lt;h2&gt;
             Dedup Spaces
@@ -48364,26 +48384,6 @@ Pense duas vezes antes de se envolver.
         &lt;a href=&quot;/archive/&quot;&gt;
           &lt;h2&gt;
             Archive
-          &lt;/h2&gt;
-        &lt;/a&gt;
-      &lt;/ul&gt;
-    &lt;/div&gt;
-    
-    &lt;div class=&quot;search-link&quot;&gt;
-      &lt;h3&gt;
-        &lt;a class=&quot;post-heading&quot; href=&quot;#&quot; id=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;
-          &lt;img src=&quot;/assets/gold.ico&quot; alt=&quot;gold icon&quot; /&gt;
-        &lt;/a&gt;
-        1991-07-25
-        
-        &amp;rightarrowtail; 
-        03 Sep 2024
-        
-      &lt;/h3&gt;
-      &lt;ul&gt;
-        &lt;a href=&quot;/dedup/&quot;&gt;
-          &lt;h2&gt;
-            Dedup
           &lt;/h2&gt;
         &lt;/a&gt;
       &lt;/ul&gt;
@@ -53527,59 +53527,7 @@ this.diff_match_patch=diff_match_patch;this.DIFF_DELETE=DIFF_DELETE;this.DIFF_IN
         <link href="https://ib.bsb.br/dedup/"/>
         <updated>1991-07-25T00:00:00+00:00</updated>
         <id>https://ib.bsb.br/dedup/</id>
-        <content type="html">&lt;head&gt;
-    &lt;meta charset=&quot;UTF-8&quot; /&gt;
-    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot; /&gt;
-
-    &lt;title&gt;
-        
-            Dedup — infoBAG
-        
-    &lt;/title&gt;
-
-    &lt;link rel=&quot;canonical&quot; href=&quot;https://ib.bsb.br/dedup/&quot; /&gt;
-    &lt;link rel=&quot;alternate&quot; type=&quot;application/rss+xml&quot; title=&quot;infoBAG&quot; href=&quot;https://ib.bsb.br/rss.xml&quot; /&gt;
-
-    
-        &lt;meta itemprop=&quot;keywords&quot; content=&quot;tools&quot; /&gt;
-        
-            &lt;meta property=&quot;article:tag&quot; content=&quot;tools&quot; /&gt;
-        
-    
-
-    &lt;link href=&quot;/style.css&quot; rel=&quot;stylesheet&quot; /&gt;
-    &lt;link href=&quot;/pagefind/pagefind-ui.css&quot; rel=&quot;stylesheet&quot; /&gt;
-    &lt;script src=&quot;/pagefind/pagefind-ui.js&quot;&gt;&lt;/script&gt;
-    &lt;script type=&quot;module&quot;&gt;
-        import PagefindHighlight from &apos;/pagefind/pagefind-highlight.js&apos;;
-        new PagefindHighlight({ highlightParam: &quot;highlight&quot; });
-    &lt;/script&gt;
-    &lt;script src=&quot;/assets/js/search.js&quot; defer=&quot;&quot;&gt;&lt;/script&gt;
-    &lt;script src=&quot;/assets/js/prism.js&quot; defer=&quot;&quot;&gt;&lt;/script&gt;
-&lt;/head&gt;
-
-&lt;body&gt;
-    &lt;a class=&quot;search-input-block&quot; id=&quot;search&quot;&gt;&lt;/a&gt;
-
-    &lt;header&gt;
-        &lt;nav aria-label=&quot;Main navigation&quot;&gt;
-            &lt;div class=&quot;header-container&quot;&gt;
-                &lt;a class=&quot;internal-link&quot; href=&quot;/&quot;&gt;
-                    &lt;img src=&quot;/assets/Sudden_Death_Rune.gif&quot; alt=&quot;Sudden Death Rune&quot; class=&quot;favicon&quot; /&gt;
-                &lt;/a&gt;
-                &lt;a href=&quot;https://ib.bsb.br/archive&quot;&gt;
-                    &lt;img src=&quot;/favicon.ico&quot; alt=&quot;Archive Icon&quot; class=&quot;favicon&quot; /&gt;
-                &lt;/a&gt;
-                &lt;a href=&quot;https://ib.bsb.br/tags&quot;&gt;
-                    &lt;img src=&quot;/assets/Label.gif&quot; alt=&quot;Tags Icon&quot; class=&quot;favicon&quot; /&gt;
-                &lt;/a&gt;
-                &lt;a href=&quot;https://ib.bsb.br/events&quot;&gt;
-                    &lt;img src=&quot;/assets/Paralyse_Rune.gif&quot; alt=&quot;Events Icon&quot; class=&quot;favicon&quot; /&gt;
-                &lt;/a&gt;
-            &lt;/div&gt;
-        &lt;/nav&gt;
-    &lt;/header&gt;
-  &lt;div class=&quot;container mt-5&quot;&gt;
+        <content type="html">&lt;div class=&quot;container mt-5&quot;&gt;
     &lt;h1 class=&quot;mb-4&quot;&gt;Duplicate Entry Tool&lt;/h1&gt;
     &lt;div class=&quot;form-group&quot;&gt;
       &lt;label for=&quot;inputText&quot;&gt;Enter your list of strings:&lt;/label&gt;
@@ -53613,7 +53561,7 @@ this.diff_match_patch=diff_match_patch;this.DIFF_DELETE=DIFF_DELETE;this.DIFF_IN
     &lt;textarea class=&quot;form-control&quot; id=&quot;outputText&quot; rows=&quot;5&quot; readonly=&quot;&quot;&gt;&lt;/textarea&gt;
     &lt;button class=&quot;btn btn-secondary mt-2&quot; onclick=&quot;copyToClipboard(&apos;outputText&apos;)&quot;&gt;Copy Result&lt;/button&gt;
   &lt;/div&gt;
-  &lt;script&gt;
+&lt;script&gt;
     function removeDuplicates() {
       const inputText = document.getElementById(&quot;inputText&quot;).value;
       let delimiter = &quot;&quot;;
@@ -53695,7 +53643,7 @@ this.diff_match_patch=diff_match_patch;this.DIFF_DELETE=DIFF_DELETE;this.DIFF_IN
       document.execCommand(&quot;copy&quot;);
     }
   &lt;/script&gt;
-  &lt;/body&gt;
+
 </content>
     </entry>
     
