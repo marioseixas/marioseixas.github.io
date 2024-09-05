@@ -49,7 +49,7 @@
     </div>
   </header>
   <article class="post content">
-    <header class="post-heading">
+    <div class="post-heading">
       <h1 class="post-title">{{ page.title }}</h1>
       <div class="post-meta">
         <time datetime="{{ page.date | date_to_xmlschema }}" class="post-date">
@@ -85,22 +85,31 @@
           </a>
         </div>
       </div>
-    </header>
+    </div>
     <main class="post-content">
       {% include toc.html html=content %}
       {% include anchor_headings.html html=content anchorBody="#" %}
     </main>
-  </article>
-  <footer>
     <hr>
     <a href="#" class="back-to-top" aria-label="Back to top">
       <img src="{{ '/assets/gold.ico' | relative_url }}" alt="Back to top">
     </a>
     {% if page.comment %}
-      <div class="comment-box">
-        {{ page.comment }}
-      </div>
+    <div class="comment-box">
+      {{ page.comment }}
+    </div>
     {% endif %}
+  </article>
+  <footer class="post-footer">
+    <p>Published on {{ page.date | date: "%B %-d, %Y" }}</p>
+    <nav class="post-navigation">
+      {% if page.previous %}
+      <a href="{{ page.previous.url | relative_url }}" class="previous-post">Previous: {{ page.previous.title }}</a>
+      {% endif %}
+      {% if page.next %}
+      <a href="{{ page.next.url | relative_url }}" class="next-post">Next: {{ page.next.title }}</a>
+      {% endif %}
+    </nav>
   </footer>
 </body>  
 </html>
