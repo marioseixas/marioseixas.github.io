@@ -18,6 +18,14 @@
       <meta property="article:tag" content="{{ tag }}">
     {% endfor %}
   {% endif %}
+  {% if page.next_context or page.prev_context %}
+        {% if page.prev_context %}
+  <link rel="temp" data-rel="prefetch" href="{{page.prev_context.url}}">
+        {% endif %}
+        {% if page.next_context %}
+  <link rel="temp" data-rel="prefetch" href="{{page.next_context.url}}">
+        {% endif %}
+    {% endif %}
   <link href="{{ '/style.css' | relative_url }}" rel="stylesheet">
   <link href="{{ '/pagefind/pagefind-ui.css' | relative_url }}" rel="stylesheet">
   <script src="{{ '/pagefind/pagefind-ui.js' | relative_url }}" type="text/javascript"></script>
@@ -89,6 +97,12 @@
     <main class="post-content">
       {% include toc.html html=content %}
       {% include anchor_headings.html html=content anchorBody="#" %}
+      {% if page.layout=='post' and page.prev_context %}
+      <div class="nav-arrow prev"><a href="{{page.prev_context.url}}" title="{{ page.prev_context.title }}"><span class="sr-only">{{ "Précédent :" | t: page.locale }}</span><span aria-hidden="true">&#8672;</span></a></div>
+      {% endif %}
+      {% if page.layout=='post' and page.next_context %}
+      <div class="nav-arrow next"><a href="{{page.next_context.url}}" title="{{ page.next_context.title }}"><span class="sr-only">{{ "Suivant :" | t: page.locale }}</span><span aria-hidden="true">&#8674;</span></a>
+        {% endif %}
     </main>
     <hr>
     <a href="#" class="back-to-top" aria-label="Back to top">
