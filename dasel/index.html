@@ -16,7 +16,6 @@
       <meta property="article:tag" content="software">
     
   
-  
   <link href="/style.css" rel="stylesheet">
   <link href="/pagefind/pagefind-ui.css" rel="stylesheet">
   <script src="/pagefind/pagefind-ui.js" type="text/javascript"></script>
@@ -27,7 +26,7 @@
   <script src="/assets/js/search.js" defer></script>
   <script src="/assets/js/prism.js" defer></script>
 </head>
-<body class="post-wrapper post-content-body">
+<body class="post-content-body">
   <header class="header-container">
     <nav aria-label="Main navigation" class="header-content">
       <a class="internal-link" href="/" aria-label="Home">
@@ -47,33 +46,26 @@
       <div id="search" class="search-input-block"></div>
     </div>
   </header>
-  <article class="post content">
+  <article class="post-wrapper">
     <div class="post-heading">
       <h1 class="post-title">dasel context guide</h1>
       <div class="post-meta">
         <time datetime="2024-02-17T00:00:00+00:00" class="post-date">
-          17 Feb 2024
-        </time>
-        
-          <span class="post-updated">
-            &rightarrowtail; Updated: 
-            <time datetime="2024-08-23T02:46:37+00:00">
-              23 Aug 2024
-            </time>
+          17 Feb 2024</time><span class="post-updated"> &rightarrowtail; <time datetime="2024-08-23T02:46:37+00:00">23 Aug 2024
+          </time>
           </span>
         
         
-          <div class="post-tags">
-            Tags:
-            
-              <a href="https://ib.bsb.br/tags/#software" class="tag">software</a>
-            
-          </div>
+        <div class="post-info">
+          Edit: aberto.
+        </div>
         
         
-          <div class="post-info">
-            Edit: aberto.
-          </div>
+        <div class="post-tags">
+          Tags:
+          
+          <a href="https://ib.bsb.br/tags/#software" class="tag">software</a>
+        </div>
         
         <div class="post-actions">
           <a href="https://github.com/marioseixas/marioseixas.github.io/edit/main/_posts/2024-02-17-dasel.md" target="_blank" rel="noopener noreferrer" class="btn-primary">
@@ -85,51 +77,45 @@
         </div>
       </div>
     </div>
-    <main class="post-content">
+    <main class="content">
       
 <ul><li><a href="#introduction-to-dasel">Introduction to Dasel</a></li><li><a href="#installation">Installation</a></li><li><a href="#basic-usage">Basic Usage</a></li><li><a href="#selectors-and-operators">Selectors and Operators</a></li><li><a href="#examples">Examples</a></li><li><a href="#conclusion">Conclusion</a></li></ul>
       <p>Detailed guide on using <code class="language-plaintext highlighter-rouge">dasel</code>, a versatile command-line tool for querying and modifying data structures, focusing on its powerful selection syntax and operators. This guide is designed to help you understand and utilize <code class="language-plaintext highlighter-rouge">dasel</code> effectively in various scenarios.</p>
-<h3 id="introduction-to-dasel">
-  
-  
+  <h3 id="introduction-to-dasel">
+    
+    
      <a href="#introduction-to-dasel">#</a>Introduction to Dasel
-  
-  <a href="#" class="back-to-top" aria-label="Back to top">
-  <img src="/assets/gold.ico" alt="gold icon">
-</a>
-</h3>
-      
+    
+    </h3>
+    <img src="/assets/gold.ico" alt="gold icon">
+    
 
 <p><code class="language-plaintext highlighter-rouge">Dasel</code> (Data-Selector) is a command-line utility that simplifies the process of querying and modifying data in various formats, including JSON, YAML, TOML, and XML. It employs a unified selector syntax, allowing users to seamlessly switch between different data formats without learning new query languages.</p>
-<h3 id="installation">
-  
-  
+  <h3 id="installation">
+    
+    
      <a href="#installation">#</a>Installation
-  
-  <a href="#" class="back-to-top" aria-label="Back to top">
-  <img src="/assets/gold.ico" alt="gold icon">
-</a>
-</h3>
-      
+    
+    </h3>
+    <img src="/assets/gold.ico" alt="gold icon">
+    
 
 <p>Before using <code class="language-plaintext highlighter-rouge">dasel</code>, ensure it’s installed on your system. You can download the latest binary for your platform from the <a href="https://github.com/TomWright/dasel/releases">official GitHub releases page</a> or use package managers like <code class="language-plaintext highlighter-rouge">brew</code> for macOS:</p>
 
-<div class="language-sh highlighter-rouge"><div class="highlight"><section class="line-numbers" style="white-space: pre-line;"><code>brew <span class="nb">install </span>dasel
+<div class="language-sh highlighter-rouge"><div class="highlight"><section><code>brew <span class="nb">install </span>dasel
 </code></section></div></div>
-<h3 id="basic-usage">
-  
-  
+  <h3 id="basic-usage">
+    
+    
      <a href="#basic-usage">#</a>Basic Usage
-  
-  <a href="#" class="back-to-top" aria-label="Back to top">
-  <img src="/assets/gold.ico" alt="gold icon">
-</a>
-</h3>
-      
+    
+    </h3>
+    <img src="/assets/gold.ico" alt="gold icon">
+    
 
 <p>The fundamental operation of <code class="language-plaintext highlighter-rouge">dasel</code> involves specifying the file (<code class="language-plaintext highlighter-rouge">-f</code> flag) and the query. Here’s the general syntax:</p>
 
-<div class="language-sh highlighter-rouge"><div class="highlight"><section class="line-numbers" style="white-space: pre-line;"><code>dasel <span class="nt">-f</span> &lt;file&gt; <span class="nt">-r</span> &lt;format&gt; &lt;selector&gt;
+<div class="language-sh highlighter-rouge"><div class="highlight"><section><code>dasel <span class="nt">-f</span> &lt;file&gt; <span class="nt">-r</span> &lt;format&gt; &lt;selector&gt;
 </code></section></div></div>
 
 <ul>
@@ -137,16 +123,14 @@
   <li><code class="language-plaintext highlighter-rouge">-r</code>: The parser format to use when reading the file. Can be <code class="language-plaintext highlighter-rouge">json</code>, <code class="language-plaintext highlighter-rouge">yaml</code>, <code class="language-plaintext highlighter-rouge">toml</code>, or <code class="language-plaintext highlighter-rouge">xml</code>.</li>
   <li><code class="language-plaintext highlighter-rouge">&lt;selector&gt;</code>: The query used to select data from the file.</li>
 </ul>
-<h3 id="selectors-and-operators">
-  
-  
+  <h3 id="selectors-and-operators">
+    
+    
      <a href="#selectors-and-operators">#</a>Selectors and Operators
-  
-  <a href="#" class="back-to-top" aria-label="Back to top">
-  <img src="/assets/gold.ico" alt="gold icon">
-</a>
-</h3>
-      
+    
+    </h3>
+    <img src="/assets/gold.ico" alt="gold icon">
+    
 
 <p><code class="language-plaintext highlighter-rouge">Dasel</code> selectors are used to navigate through the data structure. Here are some of the key operators and their uses:</p>
 
@@ -154,40 +138,38 @@
   <li>
     <p><strong>Property Access</strong>: Access properties of an object or fields of a map by name.</p>
 
-    <div class="language-sh highlighter-rouge"><div class="highlight"><section class="line-numbers" style="white-space: pre-line;"><code>.propertyName
+    <div class="language-sh highlighter-rouge"><div class="highlight"><section><code>.propertyName
 </code></section></div>    </div>
   </li>
   <li>
     <p><strong>Array Indexing</strong>: Access an element of an array using its zero-based index.</p>
 
-    <div class="language-sh highlighter-rouge"><div class="highlight"><section class="line-numbers" style="white-space: pre-line;"><code>.arrayName.[index]
+    <div class="language-sh highlighter-rouge"><div class="highlight"><section><code>.arrayName.[index]
 </code></section></div>    </div>
   </li>
   <li>
     <p><strong>All Elements</strong>: To select all elements of an array, use <code class="language-plaintext highlighter-rouge">.all()</code>.</p>
 
-    <div class="language-sh highlighter-rouge"><div class="highlight"><section class="line-numbers" style="white-space: pre-line;"><code>.arrayName.all<span class="o">()</span>
+    <div class="language-sh highlighter-rouge"><div class="highlight"><section><code>.arrayName.all<span class="o">()</span>
 </code></section></div>    </div>
   </li>
   <li>
     <p><strong>Filtering</strong>: <code class="language-plaintext highlighter-rouge">Dasel</code> supports filtering arrays based on conditions.</p>
 
-    <div class="language-sh highlighter-rouge"><div class="highlight"><section class="line-numbers" style="white-space: pre-line;"><code>.arrayName.all<span class="o">()</span>.filter<span class="o">(</span>&lt;condition&gt;<span class="o">)</span>
+    <div class="language-sh highlighter-rouge"><div class="highlight"><section><code>.arrayName.all<span class="o">()</span>.filter<span class="o">(</span>&lt;condition&gt;<span class="o">)</span>
 </code></section></div>    </div>
 
     <p>Conditions can include checks for the presence of a field, value comparisons, and more.</p>
   </li>
 </ul>
-<h3 id="examples">
-  
-  
+  <h3 id="examples">
+    
+    
      <a href="#examples">#</a>Examples
-  
-  <a href="#" class="back-to-top" aria-label="Back to top">
-  <img src="/assets/gold.ico" alt="gold icon">
-</a>
-</h3>
-      
+    
+    </h3>
+    <img src="/assets/gold.ico" alt="gold icon">
+    
 
 <ol>
   <li>
@@ -195,7 +177,7 @@
 
     <p>To select the <code class="language-plaintext highlighter-rouge">name</code> property from a JSON file:</p>
 
-    <div class="language-sh highlighter-rouge"><div class="highlight"><section class="line-numbers" style="white-space: pre-line;"><code>dasel <span class="nt">-f</span> data.json <span class="s1">'.name'</span>
+    <div class="language-sh highlighter-rouge"><div class="highlight"><section><code>dasel <span class="nt">-f</span> data.json <span class="s1">'.name'</span>
 </code></section></div>    </div>
   </li>
   <li>
@@ -203,7 +185,7 @@
 
     <p>To get the third item from an array named <code class="language-plaintext highlighter-rouge">items</code>:</p>
 
-    <div class="language-sh highlighter-rouge"><div class="highlight"><section class="line-numbers" style="white-space: pre-line;"><code>dasel <span class="nt">-f</span> data.json <span class="s1">'.items.[2]'</span>
+    <div class="language-sh highlighter-rouge"><div class="highlight"><section><code>dasel <span class="nt">-f</span> data.json <span class="s1">'.items.[2]'</span>
 </code></section></div>    </div>
   </li>
   <li>
@@ -211,7 +193,7 @@
 
     <p>To select all elements within an array <code class="language-plaintext highlighter-rouge">users</code>:</p>
 
-    <div class="language-sh highlighter-rouge"><div class="highlight"><section class="line-numbers" style="white-space: pre-line;"><code>dasel <span class="nt">-f</span> data.json <span class="s1">'.users.all()'</span>
+    <div class="language-sh highlighter-rouge"><div class="highlight"><section><code>dasel <span class="nt">-f</span> data.json <span class="s1">'.users.all()'</span>
 </code></section></div>    </div>
   </li>
   <li>
@@ -219,7 +201,7 @@
 
     <p>To find all users with a non-empty <code class="language-plaintext highlighter-rouge">name</code> field:</p>
 
-    <div class="language-sh highlighter-rouge"><div class="highlight"><section class="line-numbers" style="white-space: pre-line;"><code>dasel <span class="nt">-f</span> data.json <span class="s1">'.users.all().filter(name?.len())'</span>
+    <div class="language-sh highlighter-rouge"><div class="highlight"><section><code>dasel <span class="nt">-f</span> data.json <span class="s1">'.users.all().filter(name?.len())'</span>
 </code></section></div>    </div>
   </li>
   <li>
@@ -227,25 +209,41 @@
 
     <p>To select the <code class="language-plaintext highlighter-rouge">name</code> property within the <code class="language-plaintext highlighter-rouge">document</code> object of each <code class="language-plaintext highlighter-rouge">segment</code> in all records:</p>
 
-    <div class="language-sh highlighter-rouge"><div class="highlight"><section class="line-numbers" style="white-space: pre-line;"><code>dasel <span class="nt">-f</span> data.json <span class="s1">'.records.all().segment.document.name'</span>
+    <div class="language-sh highlighter-rouge"><div class="highlight"><section><code>dasel <span class="nt">-f</span> data.json <span class="s1">'.records.all().segment.document.name'</span>
 </code></section></div>    </div>
   </li>
 </ol>
-<h3 id="conclusion">
-  
-  
+  <h3 id="conclusion">
+    
+    
      <a href="#conclusion">#</a>Conclusion
-  
-  <a href="#" class="back-to-top" aria-label="Back to top">
-  <img src="/assets/gold.ico" alt="gold icon">
-</a>
-</h3>
-      
+    
+    </h3>
+    <img src="/assets/gold.ico" alt="gold icon">
+    
 
 <p><code class="language-plaintext highlighter-rouge">Dasel</code> offers a powerful yet simple way to interact with various data formats using a unified query language. Its flexibility in handling different data types and structures makes it an invaluable tool for developers and system administrators alike. This guide covers the basics to get started with <code class="language-plaintext highlighter-rouge">dasel</code>, but the tool’s capabilities extend far beyond what’s covered here. For more detailed information and advanced features, refer to the <a href="https://daseldocs.tomwright.me/">official documentation</a>.</p>
 
       
       
+      <div class="nav-arrow prev">
+        <a href="/sqlite/" title="Installing a custom version of SQLite">
+          <span class="sr-only">
+            Anterior:
+          </span>
+          <span aria-hidden="true">&#8672;</span>
+        </a>
+      </div>
+      
+      
+      <div class="nav-arrow next">
+        <a href="/dasel-citation-appender/" title="dasel references filtering + citation appender [script]">
+          <span class="sr-only">
+            Seguinte:
+          </span>
+          <span aria-hidden="true">&#8674;</span>
+        </a>
+        
     </main>
     <hr>
     <a href="#" class="back-to-top" aria-label="Back to top">
@@ -257,16 +255,5 @@
     </div>
     
   </article>
-  <footer class="post-footer">
-    <p>Published on February 17, 2024</p>
-    <nav class="post-navigation">
-      
-      <a href="/sqlite/" class="previous-post">Previous: Installing a custom version of SQLite</a>
-      
-      
-      <a href="/dasel-citation-appender/" class="next-post">Next: dasel references filtering + citation appender [script]</a>
-      
-    </nav>
-  </footer>
-</body>  
+</body>
 </html>

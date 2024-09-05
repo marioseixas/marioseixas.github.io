@@ -16,7 +16,6 @@
       <meta property="article:tag" content="linux">
     
   
-  
   <link href="/style.css" rel="stylesheet">
   <link href="/pagefind/pagefind-ui.css" rel="stylesheet">
   <script src="/pagefind/pagefind-ui.js" type="text/javascript"></script>
@@ -27,7 +26,7 @@
   <script src="/assets/js/search.js" defer></script>
   <script src="/assets/js/prism.js" defer></script>
 </head>
-<body class="post-wrapper post-content-body">
+<body class="post-content-body">
   <header class="header-container">
     <nav aria-label="Main navigation" class="header-content">
       <a class="internal-link" href="/" aria-label="Home">
@@ -47,33 +46,26 @@
       <div id="search" class="search-input-block"></div>
     </div>
   </header>
-  <article class="post content">
+  <article class="post-wrapper">
     <div class="post-heading">
       <h1 class="post-title">Setup FTP Server on Debian and Connect a Windows machine</h1>
       <div class="post-meta">
         <time datetime="2024-02-06T03:00:00+00:00" class="post-date">
-          06 Feb 2024
-        </time>
-        
-          <span class="post-updated">
-            &rightarrowtail; Updated: 
-            <time datetime="2024-07-13T13:46:16+00:00">
-              13 Jul 2024
-            </time>
+          06 Feb 2024</time><span class="post-updated"> &rightarrowtail; <time datetime="2024-07-13T13:46:16+00:00">13 Jul 2024
+          </time>
           </span>
         
         
-          <div class="post-tags">
-            Tags:
-            
-              <a href="https://ib.bsb.br/tags/#linux" class="tag">linux</a>
-            
-          </div>
+        <div class="post-info">
+          Edit: fechado.
+        </div>
         
         
-          <div class="post-info">
-            Edit: fechado.
-          </div>
+        <div class="post-tags">
+          Tags:
+          
+          <a href="https://ib.bsb.br/tags/#linux" class="tag">linux</a>
+        </div>
         
         <div class="post-actions">
           <a href="https://github.com/marioseixas/marioseixas.github.io/edit/main/_posts/2024-02-06-ftpd.md" target="_blank" rel="noopener noreferrer" class="btn-primary">
@@ -85,25 +77,23 @@
         </div>
       </div>
     </div>
-    <main class="post-content">
+    <main class="content">
       
 <ul><li><a href="#setup-ftp-server-using-pure-ftpd-on-debian-bullseye">Setup FTP Server Using <code class="language-plaintext highlighter-rouge">pure-ftpd</code> on Debian Bullseye</a></li><li><a href="#connect-a-windows-11-machine-to-the-debian-ftp-server">Connect a Windows 11 Machine to the Debian FTP Server</a><ul><li><a href="#using-built-in-windows-ftp">Using Built-In Windows FTP</a></li></ul></li></ul>
       <h3 id="setup-ftp-server-using-pure-ftpd-on-debian-bullseye">
-  
-  
+    
+    
      <a href="#setup-ftp-server-using-pure-ftpd-on-debian-bullseye">#</a>Setup FTP Server Using <code class="language-plaintext highlighter-rouge">pure-ftpd</code> on Debian Bullseye
-  
-  <a href="#" class="back-to-top" aria-label="Back to top">
-  <img src="/assets/gold.ico" alt="gold icon">
-</a>
-</h3>
-      
+    
+    </h3>
+    <img src="/assets/gold.ico" alt="gold icon">
+    
 
 <ol>
   <li><strong>Update Your System</strong>:
     <ul>
       <li>Ensure your Debian system is up-to-date to avoid any compatibility issues. Open a terminal and execute the following commands:
-        <div class="language-plaintext highlighter-rouge"><div class="highlight"><section class="line-numbers" style="white-space: pre-line;"><code>sudo apt-get update
+        <div class="language-plaintext highlighter-rouge"><div class="highlight"><section><code>sudo apt-get update
 sudo apt-get upgrade
 </code></section></div>        </div>
       </li>
@@ -112,7 +102,7 @@ sudo apt-get upgrade
   <li><strong>Install <code class="language-plaintext highlighter-rouge">pure-ftpd</code></strong>:
     <ul>
       <li>Install the <code class="language-plaintext highlighter-rouge">pure-ftpd</code> package by running:
-        <div class="language-plaintext highlighter-rouge"><div class="highlight"><section class="line-numbers" style="white-space: pre-line;"><code>sudo apt-get install pure-ftpd
+        <div class="language-plaintext highlighter-rouge"><div class="highlight"><section><code>sudo apt-get install pure-ftpd
 </code></section></div>        </div>
       </li>
     </ul>
@@ -120,11 +110,11 @@ sudo apt-get upgrade
   <li><strong>Basic Configuration</strong>:
     <ul>
       <li><code class="language-plaintext highlighter-rouge">pure-ftpd</code> comes with a sensible set of defaults, but you can customize its behavior by creating configuration files in <code class="language-plaintext highlighter-rouge">/etc/pure-ftpd/conf/</code>. For example, to enable passive mode ports, create a file named <code class="language-plaintext highlighter-rouge">PassivePortRange</code>:
-        <div class="language-plaintext highlighter-rouge"><div class="highlight"><section class="line-numbers" style="white-space: pre-line;"><code>echo "30000 35000" | sudo tee /etc/pure-ftpd/conf/PassivePortRange
+        <div class="language-plaintext highlighter-rouge"><div class="highlight"><section><code>echo "30000 35000" | sudo tee /etc/pure-ftpd/conf/PassivePortRange
 </code></section></div>        </div>
       </li>
       <li>Restart <code class="language-plaintext highlighter-rouge">pure-ftpd</code> to apply the changes:
-        <div class="language-plaintext highlighter-rouge"><div class="highlight"><section class="line-numbers" style="white-space: pre-line;"><code>sudo systemctl restart pure-ftpd
+        <div class="language-plaintext highlighter-rouge"><div class="highlight"><section><code>sudo systemctl restart pure-ftpd
 </code></section></div>        </div>
       </li>
     </ul>
@@ -132,7 +122,7 @@ sudo apt-get upgrade
   <li><strong>Creating an FTP User</strong>:
     <ul>
       <li>It’s a good practice to create a dedicated user for FTP access. This limits access to the system and enhances security. To create a new user <code class="language-plaintext highlighter-rouge">ftpuser</code> with a home directory <code class="language-plaintext highlighter-rouge">/home/ftpuser</code>, execute:
-        <div class="language-plaintext highlighter-rouge"><div class="highlight"><section class="line-numbers" style="white-space: pre-line;"><code>sudo useradd -m ftpuser -d /home/ftpuser -s /usr/sbin/nologin
+        <div class="language-plaintext highlighter-rouge"><div class="highlight"><section><code>sudo useradd -m ftpuser -d /home/ftpuser -s /usr/sbin/nologin
 sudo passwd ftpuser
 </code></section></div>        </div>
       </li>
@@ -142,7 +132,7 @@ sudo passwd ftpuser
   <li><strong>Adjust Firewall Settings</strong> (if applicable):
     <ul>
       <li>If you have a firewall enabled, ensure that it allows traffic on the FTP port (21 by default) and the passive mode port range defined earlier. For <code class="language-plaintext highlighter-rouge">ufw</code>, you can do this by running:
-        <div class="language-plaintext highlighter-rouge"><div class="highlight"><section class="line-numbers" style="white-space: pre-line;"><code>sudo ufw allow 21/tcp
+        <div class="language-plaintext highlighter-rouge"><div class="highlight"><section><code>sudo ufw allow 21/tcp
 sudo ufw allow 30000:35000/tcp
 </code></section></div>        </div>
       </li>
@@ -151,36 +141,32 @@ sudo ufw allow 30000:35000/tcp
   <li><strong>Start and Enable <code class="language-plaintext highlighter-rouge">pure-ftpd</code></strong>:
     <ul>
       <li>To ensure <code class="language-plaintext highlighter-rouge">pure-ftpd</code> starts automatically at boot, enable it using:
-        <div class="language-plaintext highlighter-rouge"><div class="highlight"><section class="line-numbers" style="white-space: pre-line;"><code>sudo systemctl enable pure-ftpd
+        <div class="language-plaintext highlighter-rouge"><div class="highlight"><section><code>sudo systemctl enable pure-ftpd
 </code></section></div>        </div>
       </li>
       <li>Start the <code class="language-plaintext highlighter-rouge">pure-ftpd</code> service:
-        <div class="language-plaintext highlighter-rouge"><div class="highlight"><section class="line-numbers" style="white-space: pre-line;"><code>sudo systemctl start pure-ftpd
+        <div class="language-plaintext highlighter-rouge"><div class="highlight"><section><code>sudo systemctl start pure-ftpd
 </code></section></div>        </div>
       </li>
     </ul>
   </li>
 </ol>
-<h3 id="connect-a-windows-11-machine-to-the-debian-ftp-server">
-  
-  
+  <h3 id="connect-a-windows-11-machine-to-the-debian-ftp-server">
+    
+    
      <a href="#connect-a-windows-11-machine-to-the-debian-ftp-server">#</a>Connect a Windows 11 Machine to the Debian FTP Server
-  
-  <a href="#" class="back-to-top" aria-label="Back to top">
-  <img src="/assets/gold.ico" alt="gold icon">
-</a>
-</h3>
-      
-<h4 id="using-built-in-windows-ftp">
-  
-  
+    
+    </h3>
+    <img src="/assets/gold.ico" alt="gold icon">
+    
+  <h4 id="using-built-in-windows-ftp">
+    
+    
      <a href="#using-built-in-windows-ftp">#</a>Using Built-In Windows FTP
-  
-  <a href="#" class="back-to-top" aria-label="Back to top">
-  <img src="/assets/gold.ico" alt="gold icon">
-</a>
-</h4>
-      
+    
+    </h4>
+    <img src="/assets/gold.ico" alt="gold icon">
+    
 
 <ol>
   <li><strong>Open File Explorer</strong>:
@@ -207,6 +193,24 @@ sudo ufw allow 30000:35000/tcp
 
       
       
+      <div class="nav-arrow prev">
+        <a href="/pyragraphs/" title="PYragraphs">
+          <span class="sr-only">
+            Anterior:
+          </span>
+          <span aria-hidden="true">&#8672;</span>
+        </a>
+      </div>
+      
+      
+      <div class="nav-arrow next">
+        <a href="/json-ld/" title="JSON-LD">
+          <span class="sr-only">
+            Seguinte:
+          </span>
+          <span aria-hidden="true">&#8674;</span>
+        </a>
+        
     </main>
     <hr>
     <a href="#" class="back-to-top" aria-label="Back to top">
@@ -214,16 +218,5 @@ sudo ufw allow 30000:35000/tcp
     </a>
     
   </article>
-  <footer class="post-footer">
-    <p>Published on February 6, 2024</p>
-    <nav class="post-navigation">
-      
-      <a href="/pyragraphs/" class="previous-post">Previous: PYragraphs</a>
-      
-      
-      <a href="/json-ld/" class="next-post">Next: JSON-LD</a>
-      
-    </nav>
-  </footer>
-</body>  
+</body>
 </html>

@@ -16,7 +16,6 @@
       <meta property="article:tag" content="scripts>cloud">
     
   
-  
   <link href="/style.css" rel="stylesheet">
   <link href="/pagefind/pagefind-ui.css" rel="stylesheet">
   <script src="/pagefind/pagefind-ui.js" type="text/javascript"></script>
@@ -27,7 +26,7 @@
   <script src="/assets/js/search.js" defer></script>
   <script src="/assets/js/prism.js" defer></script>
 </head>
-<body class="post-wrapper post-content-body">
+<body class="post-content-body">
   <header class="header-container">
     <nav aria-label="Main navigation" class="header-content">
       <a class="internal-link" href="/" aria-label="Home">
@@ -47,33 +46,26 @@
       <div id="search" class="search-input-block"></div>
     </div>
   </header>
-  <article class="post content">
+  <article class="post-wrapper">
     <div class="post-heading">
       <h1 class="post-title">Webhooks using `Serverless.com` Lift plugin</h1>
       <div class="post-meta">
         <time datetime="2024-07-17T00:00:00+00:00" class="post-date">
-          17 Jul 2024
-        </time>
-        
-          <span class="post-updated">
-            &rightarrowtail; Updated: 
-            <time datetime="2024-08-23T02:57:37+00:00">
-              23 Aug 2024
-            </time>
+          17 Jul 2024</time><span class="post-updated"> &rightarrowtail; <time datetime="2024-08-23T02:57:37+00:00">23 Aug 2024
+          </time>
           </span>
         
         
-          <div class="post-tags">
-            Tags:
-            
-              <a href="https://ib.bsb.br/tags/#scripts-cloud" class="tag">scripts>cloud</a>
-            
-          </div>
+        <div class="post-info">
+          Edit: aberto.
+        </div>
         
         
-          <div class="post-info">
-            Edit: aberto.
-          </div>
+        <div class="post-tags">
+          Tags:
+          
+          <a href="https://ib.bsb.br/tags/#scripts-cloud" class="tag">scripts>cloud</a>
+        </div>
         
         <div class="post-actions">
           <a href="https://github.com/marioseixas/marioseixas.github.io/edit/main/_posts/2024-07-17-webhooks-using-serverlesscom-lift-plugin.md" target="_blank" rel="noopener noreferrer" class="btn-primary">
@@ -85,13 +77,13 @@
         </div>
       </div>
     </div>
-    <main class="post-content">
+    <main class="content">
       
 
       <hr />
 <p>serverless.yml</p>
 
-<div class="language-yml highlighter-rouge"><div class="highlight"><section class="line-numbers" style="white-space: pre-line;"><code><span class="na">service</span><span class="pi">:</span> <span class="s">github-webhook-service</span>
+<div class="language-yml highlighter-rouge"><div class="highlight"><section><code><span class="na">service</span><span class="pi">:</span> <span class="s">github-webhook-service</span>
 
 <span class="na">provider</span><span class="pi">:</span>
   <span class="na">name</span><span class="pi">:</span> <span class="s">aws</span>
@@ -249,6 +241,24 @@ export const handleWebhook = async (event) =&gt; {
 
       
       
+      <div class="nav-arrow prev">
+        <a href="/escolta/" title="Procedimentos de Escolta Dedicada">
+          <span class="sr-only">
+            Anterior:
+          </span>
+          <span aria-hidden="true">&#8672;</span>
+        </a>
+      </div>
+      
+      
+      <div class="nav-arrow next">
+        <a href="/computed-score-priority-in-mlo/" title="Computed-Score Priority in MLO">
+          <span class="sr-only">
+            Seguinte:
+          </span>
+          <span aria-hidden="true">&#8674;</span>
+        </a>
+        
     </main>
     <hr>
     <a href="#" class="back-to-top" aria-label="Back to top">
@@ -256,16 +266,5 @@ export const handleWebhook = async (event) =&gt; {
     </a>
     
   </article>
-  <footer class="post-footer">
-    <p>Published on July 17, 2024</p>
-    <nav class="post-navigation">
-      
-      <a href="/escolta/" class="previous-post">Previous: Procedimentos de Escolta Dedicada</a>
-      
-      
-      <a href="/computed-score-priority-in-mlo/" class="next-post">Next: Computed-Score Priority in MLO</a>
-      
-    </nav>
-  </footer>
-</body>  
+</body>
 </html>

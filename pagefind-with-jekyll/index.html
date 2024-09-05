@@ -16,7 +16,6 @@
       <meta property="article:tag" content="github>jekyll">
     
   
-  
   <link href="/style.css" rel="stylesheet">
   <link href="/pagefind/pagefind-ui.css" rel="stylesheet">
   <script src="/pagefind/pagefind-ui.js" type="text/javascript"></script>
@@ -27,7 +26,7 @@
   <script src="/assets/js/search.js" defer></script>
   <script src="/assets/js/prism.js" defer></script>
 </head>
-<body class="post-wrapper post-content-body">
+<body class="post-content-body">
   <header class="header-container">
     <nav aria-label="Main navigation" class="header-content">
       <a class="internal-link" href="/" aria-label="Home">
@@ -47,33 +46,26 @@
       <div id="search" class="search-input-block"></div>
     </div>
   </header>
-  <article class="post content">
+  <article class="post-wrapper">
     <div class="post-heading">
       <h1 class="post-title">PageFind with Jekyll </h1>
       <div class="post-meta">
         <time datetime="2024-08-15T00:00:00+00:00" class="post-date">
-          15 Aug 2024
-        </time>
-        
-          <span class="post-updated">
-            &rightarrowtail; Updated: 
-            <time datetime="2024-08-23T00:31:10+00:00">
-              23 Aug 2024
-            </time>
+          15 Aug 2024</time><span class="post-updated"> &rightarrowtail; <time datetime="2024-08-23T00:31:10+00:00">23 Aug 2024
+          </time>
           </span>
         
         
-          <div class="post-tags">
-            Tags:
-            
-              <a href="https://ib.bsb.br/tags/#github-jekyll" class="tag">github>jekyll</a>
-            
-          </div>
+        <div class="post-info">
+          Edit: aberto.
+        </div>
         
         
-          <div class="post-info">
-            Edit: aberto.
-          </div>
+        <div class="post-tags">
+          Tags:
+          
+          <a href="https://ib.bsb.br/tags/#github-jekyll" class="tag">github>jekyll</a>
+        </div>
         
         <div class="post-actions">
           <a href="https://github.com/marioseixas/marioseixas.github.io/edit/main/_posts/2024-08-15-pagefind-with-jekyll.md" target="_blank" rel="noopener noreferrer" class="btn-primary">
@@ -85,42 +77,38 @@
         </div>
       </div>
     </div>
-    <main class="post-content">
+    <main class="content">
       
 <ul><li><a href="#understanding-the-components"><strong>Understanding the Components</strong></a></li><li><a href="#step-by-step-implementation"><strong>Step-by-Step Implementation</strong></a></li><li><a href="#explanation-and-key-considerations"><strong>Explanation and Key Considerations</strong></a></li></ul>
       <h4 id="understanding-the-components">
-  
-  
+    
+    
      <a href="#understanding-the-components">#</a><strong>Understanding the Components</strong>
-  
-  <a href="#" class="back-to-top" aria-label="Back to top">
-  <img src="/assets/gold.ico" alt="gold icon">
-</a>
-</h4>
-      
+    
+    </h4>
+    <img src="/assets/gold.ico" alt="gold icon">
+    
 
 <ul>
   <li><strong>PageFind:</strong> A powerful search library designed for static websites, offering a fast and efficient search experience without server-side components.</li>
   <li><strong>Jekyll Plugin:</strong> A custom Ruby plugin (<code class="language-plaintext highlighter-rouge">_plugins/pagefind.rb</code>) that automatically triggers PageFind indexing after your Jekyll site is built.</li>
   <li><strong>GitHub Actions:</strong> A CI/CD platform that automates the build and deployment process, ensuring your site is updated whenever changes are pushed to your repository.</li>
 </ul>
-<h4 id="step-by-step-implementation">
-  
-  
+  <h4 id="step-by-step-implementation">
+    
+    
      <a href="#step-by-step-implementation">#</a><strong>Step-by-Step Implementation</strong>
-  
-  <a href="#" class="back-to-top" aria-label="Back to top">
-  <img src="/assets/gold.ico" alt="gold icon">
-</a>
-</h4>
-      
+    
+    </h4>
+    <img src="/assets/gold.ico" alt="gold icon">
+    
 
 <ol>
   <li>
     <p><strong>Create the Search Page:</strong><br />
 Add a new Markdown file named <code class="language-plaintext highlighter-rouge">search.md</code> to your Jekyll site’s <code class="language-plaintext highlighter-rouge">pages</code> directory. This file will contain the search interface:</p>
 
-    <div class="language-markdown highlighter-rouge"><div class="highlight"><section class="line-numbers" style="white-space: pre-line;"><code><span class="nn">---</span>
+    <div class="language-markdown highlighter-rouge"><div class="highlight"><section><code><span class="nn">---</span>
 <span class="na">layout</span><span class="pi">:</span> <span class="s">default</span>
 <span class="na">title</span><span class="pi">:</span> <span class="s">Site Search</span>
 <span class="na">permalink</span><span class="pi">:</span> <span class="s">/search/</span>
@@ -144,7 +132,7 @@ Add a new Markdown file named <code class="language-plaintext highlighter-rouge"
     <p><strong>Configure Jekyll:</strong><br />
 Update your <code class="language-plaintext highlighter-rouge">_config.yml</code> file to include the custom PageFind plugin:</p>
 
-    <div class="language-yaml highlighter-rouge"><div class="highlight"><section class="line-numbers" style="white-space: pre-line;"><code><span class="na">plugins</span><span class="pi">:</span>
+    <div class="language-yaml highlighter-rouge"><div class="highlight"><section><code><span class="na">plugins</span><span class="pi">:</span>
   <span class="pi">-</span> <span class="s">jekyll-sitemap</span>
   <span class="pi">-</span> <span class="s">jekyll-gist</span>
   <span class="pi">-</span> <span class="s">jekyll-feed</span>
@@ -158,7 +146,7 @@ Update your <code class="language-plaintext highlighter-rouge">_config.yml</code
     <p><strong>Create the PageFind Plugin:</strong><br />
 Create a new directory named <code class="language-plaintext highlighter-rouge">_plugins</code> at the root of your Jekyll project and add a file named <code class="language-plaintext highlighter-rouge">pagefind.rb</code> with the following content:</p>
 
-    <div class="language-ruby highlighter-rouge"><div class="highlight"><section class="line-numbers" style="white-space: pre-line;"><code><span class="no">Jekyll</span><span class="o">::</span><span class="no">Hooks</span><span class="p">.</span><span class="nf">register</span> <span class="ss">:site</span><span class="p">,</span> <span class="ss">:post_write</span> <span class="k">do</span> <span class="o">|</span><span class="n">site</span><span class="o">|</span>
+    <div class="language-ruby highlighter-rouge"><div class="highlight"><section><code><span class="no">Jekyll</span><span class="o">::</span><span class="no">Hooks</span><span class="p">.</span><span class="nf">register</span> <span class="ss">:site</span><span class="p">,</span> <span class="ss">:post_write</span> <span class="k">do</span> <span class="o">|</span><span class="n">site</span><span class="o">|</span>
   <span class="nb">system</span><span class="p">(</span><span class="s2">"pagefind --source '_site'"</span><span class="p">)</span>
 <span class="k">end</span>
 </code></section></div>    </div>
@@ -167,7 +155,7 @@ Create a new directory named <code class="language-plaintext highlighter-rouge">
     <p><strong>Configure PageFind:</strong><br />
 Create a file named <code class="language-plaintext highlighter-rouge">pagefind.yml</code> in your root directory to configure PageFind’s behavior:</p>
 
-    <div class="language-yaml highlighter-rouge"><div class="highlight"><section class="line-numbers" style="white-space: pre-line;"><code><span class="na">source</span><span class="pi">:</span> <span class="s">_site</span>
+    <div class="language-yaml highlighter-rouge"><div class="highlight"><section><code><span class="na">source</span><span class="pi">:</span> <span class="s">_site</span>
 <span class="na">bundle_dir</span><span class="pi">:</span> <span class="s">_pagefind</span>
 <span class="na">split_pages_on</span><span class="pi">:</span> <span class="s2">"</span><span class="s">h2"</span>
 </code></section></div>    </div>
@@ -176,7 +164,7 @@ Create a file named <code class="language-plaintext highlighter-rouge">pagefind.
     <p><strong>Set up GitHub Actions:</strong><br />
 Create a new file named <code class="language-plaintext highlighter-rouge">.github/workflows/deploy.yml</code> in your repository with the following content. This setup will install PageFind during the deployment process, eliminating the need for a local installation:</p>
 
-    <div class="language-yaml highlighter-rouge"><div class="highlight"><section class="line-numbers" style="white-space: pre-line;"><code><span class="na">name</span><span class="pi">:</span> <span class="s">GitHub Pages</span>
+    <div class="language-yaml highlighter-rouge"><div class="highlight"><section><code><span class="na">name</span><span class="pi">:</span> <span class="s">GitHub Pages</span>
 
 <span class="na">on</span><span class="pi">:</span>
   <span class="na">push</span><span class="pi">:</span>
@@ -223,16 +211,14 @@ Create a new file named <code class="language-plaintext highlighter-rouge">.gith
 </code></section></div>    </div>
   </li>
 </ol>
-<h4 id="explanation-and-key-considerations">
-  
-  
+  <h4 id="explanation-and-key-considerations">
+    
+    
      <a href="#explanation-and-key-considerations">#</a><strong>Explanation and Key Considerations</strong>
-  
-  <a href="#" class="back-to-top" aria-label="Back to top">
-  <img src="/assets/gold.ico" alt="gold icon">
-</a>
-</h4>
-      
+    
+    </h4>
+    <img src="/assets/gold.ico" alt="gold icon">
+    
 
 <ul>
   <li><strong><code class="language-plaintext highlighter-rouge">_plugins/pagefind.rb</code>:</strong> This plugin ensures that PageFind indexes your site content after each build.</li>
@@ -244,6 +230,24 @@ Create a new file named <code class="language-plaintext highlighter-rouge">.gith
 
       
       
+      <div class="nav-arrow prev">
+        <a href="/arm-tendinitis/" title="Arm Tendinitis">
+          <span class="sr-only">
+            Anterior:
+          </span>
+          <span aria-hidden="true">&#8672;</span>
+        </a>
+      </div>
+      
+      
+      <div class="nav-arrow next">
+        <a href="/linux-mobile-os/" title="Linux mobile OS">
+          <span class="sr-only">
+            Seguinte:
+          </span>
+          <span aria-hidden="true">&#8674;</span>
+        </a>
+        
     </main>
     <hr>
     <a href="#" class="back-to-top" aria-label="Back to top">
@@ -251,16 +255,5 @@ Create a new file named <code class="language-plaintext highlighter-rouge">.gith
     </a>
     
   </article>
-  <footer class="post-footer">
-    <p>Published on August 15, 2024</p>
-    <nav class="post-navigation">
-      
-      <a href="/arm-tendinitis/" class="previous-post">Previous: Arm Tendinitis</a>
-      
-      
-      <a href="/linux-mobile-os/" class="next-post">Next: Linux mobile OS</a>
-      
-    </nav>
-  </footer>
-</body>  
+</body>
 </html>

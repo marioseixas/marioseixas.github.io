@@ -18,7 +18,6 @@
       <meta property="article:tag" content="scripts">
     
   
-  
   <link href="/style.css" rel="stylesheet">
   <link href="/pagefind/pagefind-ui.css" rel="stylesheet">
   <script src="/pagefind/pagefind-ui.js" type="text/javascript"></script>
@@ -29,7 +28,7 @@
   <script src="/assets/js/search.js" defer></script>
   <script src="/assets/js/prism.js" defer></script>
 </head>
-<body class="post-wrapper post-content-body">
+<body class="post-content-body">
   <header class="header-container">
     <nav aria-label="Main navigation" class="header-content">
       <a class="internal-link" href="/" aria-label="Home">
@@ -49,35 +48,27 @@
       <div id="search" class="search-input-block"></div>
     </div>
   </header>
-  <article class="post content">
+  <article class="post-wrapper">
     <div class="post-heading">
       <h1 class="post-title">cliPaperQA</h1>
       <div class="post-meta">
         <time datetime="2024-06-16T00:00:00+00:00" class="post-date">
-          16 Jun 2024
-        </time>
-        
-          <span class="post-updated">
-            &rightarrowtail; Updated: 
-            <time datetime="2024-08-16T14:42:44+00:00">
-              16 Aug 2024
-            </time>
+          16 Jun 2024</time><span class="post-updated"> &rightarrowtail; <time datetime="2024-08-16T14:42:44+00:00">16 Aug 2024
+          </time>
           </span>
         
         
-          <div class="post-tags">
-            Tags:
-            
-              <a href="https://ib.bsb.br/tags/#linux" class="tag">linux</a>,
-            
-              <a href="https://ib.bsb.br/tags/#scripts" class="tag">scripts</a>
-            
-          </div>
+        <div class="post-info">
+          Edit: aberto.
+        </div>
         
         
-          <div class="post-info">
-            Edit: aberto.
-          </div>
+        <div class="post-tags">
+          Tags:
+          
+          <a href="https://ib.bsb.br/tags/#linux" class="tag">linux</a>,
+          <a href="https://ib.bsb.br/tags/#scripts" class="tag">scripts</a>
+        </div>
         
         <div class="post-actions">
           <a href="https://github.com/marioseixas/marioseixas.github.io/edit/main/_posts/2024-06-16-clipaper-qa.md" target="_blank" rel="noopener noreferrer" class="btn-primary">
@@ -89,43 +80,37 @@
         </div>
       </div>
     </div>
-    <main class="post-content">
+    <main class="content">
       
 <ul><li><a href="#paperqa-cli-script-documentation">PaperQA CLI Script Documentation</a><ul><li><a href="#introduction">Introduction</a></li><li><a href="#prerequisites">Prerequisites</a></li><li><a href="#installation">Installation</a></li><li><a href="#usage">Usage</a><ul><li><a href="#command-line-arguments">Command Line Arguments</a></li><li><a href="#favorites">Favorites</a></li><li><a href="#examples">Examples</a></li><li><a href="#list-of-questions-template">List of questions template:</a></li></ul></li><li><a href="#detailed-explanation">Detailed Explanation</a><ul><li><a href="#loading-custom-prompts">Loading Custom Prompts</a></li><li><a href="#creating-docs-object">Creating Docs Object</a></li><li><a href="#loading-existing-embeddings">Loading Existing Embeddings</a></li><li><a href="#adding-pdf-documents">Adding PDF Documents</a></li><li><a href="#getting-questions">Getting Questions</a></li><li><a href="#answering-questions">Answering Questions</a></li><li><a href="#saving-data">Saving Data</a></li></ul></li><li><a href="#error-handling">Error Handling</a></li></ul></li><li><a href="#script">Script</a></li><li><a href="#2add">2add</a></li></ul>
       <h1 id="paperqa-cli-script-documentation">
-  
-  
+    
+    
      <a href="#paperqa-cli-script-documentation">#</a>PaperQA CLI Script Documentation
-  
-  <a href="#" class="back-to-top" aria-label="Back to top">
-  <img src="/assets/gold.ico" alt="gold icon">
-</a>
-</h1>
-      
+    
+    </h1>
+    <img src="/assets/gold.ico" alt="gold icon">
+    
 
 <p>This documentation provides a comprehensive guide on how to use the provided PaperQA CLI script. The script is designed to process PDF documents, generate embeddings, and answer questions using OpenAI’s language models.</p>
-<h2 id="introduction">
-  
-  
+  <h2 id="introduction">
+    
+    
      <a href="#introduction">#</a>Introduction
-  
-  <a href="#" class="back-to-top" aria-label="Back to top">
-  <img src="/assets/gold.ico" alt="gold icon">
-</a>
-</h2>
-      
+    
+    </h2>
+    <img src="/assets/gold.ico" alt="gold icon">
+    
 
 <p>The PaperQA CLI script is a command-line tool that allows users to process PDF documents, generate embeddings, and answer questions using OpenAI’s language models. It supports various configurations and options to customize the processing and querying of documents.</p>
-<h2 id="prerequisites">
-  
-  
+  <h2 id="prerequisites">
+    
+    
      <a href="#prerequisites">#</a>Prerequisites
-  
-  <a href="#" class="back-to-top" aria-label="Back to top">
-  <img src="/assets/gold.ico" alt="gold icon">
-</a>
-</h2>
-      
+    
+    </h2>
+    <img src="/assets/gold.ico" alt="gold icon">
+    
 
 <p>Before using the script, ensure you have the following:</p>
 
@@ -133,46 +118,40 @@
   <li>Python 3.7 or higher</li>
   <li>Required Python packages: <code class="language-plaintext highlighter-rouge">argparse</code>, <code class="language-plaintext highlighter-rouge">glob</code>, <code class="language-plaintext highlighter-rouge">json</code>, <code class="language-plaintext highlighter-rouge">pickle</code>, <code class="language-plaintext highlighter-rouge">sys</code>, <code class="language-plaintext highlighter-rouge">pathlib</code>, <code class="language-plaintext highlighter-rouge">typing</code>, <code class="language-plaintext highlighter-rouge">paperqa</code></li>
 </ul>
-<h2 id="installation">
-  
-  
+  <h2 id="installation">
+    
+    
      <a href="#installation">#</a>Installation
-  
-  <a href="#" class="back-to-top" aria-label="Back to top">
-  <img src="/assets/gold.ico" alt="gold icon">
-</a>
-</h2>
-      
+    
+    </h2>
+    <img src="/assets/gold.ico" alt="gold icon">
+    
 
 <ol>
   <li>Clone the repository or download the script.</li>
   <li>Install the required Python packages using pip:</li>
 </ol>
 
-<div class="language-bash highlighter-rouge"><div class="highlight"><section class="line-numbers" style="white-space: pre-line;"><code>pip3 <span class="nb">install </span>paperqa
+<div class="language-bash highlighter-rouge"><div class="highlight"><section><code>pip3 <span class="nb">install </span>paperqa
 </code></section></div></div>
 
 <p>Note: The other required packages (<code class="language-plaintext highlighter-rouge">argparse</code>, <code class="language-plaintext highlighter-rouge">glob</code>, <code class="language-plaintext highlighter-rouge">json</code>, <code class="language-plaintext highlighter-rouge">pickle</code>, <code class="language-plaintext highlighter-rouge">sys</code>, <code class="language-plaintext highlighter-rouge">pathlib</code>, <code class="language-plaintext highlighter-rouge">typing</code>) are part of the Python standard library and do not need to be installed separately.</p>
-<h2 id="usage">
-  
-  
+  <h2 id="usage">
+    
+    
      <a href="#usage">#</a>Usage
-  
-  <a href="#" class="back-to-top" aria-label="Back to top">
-  <img src="/assets/gold.ico" alt="gold icon">
-</a>
-</h2>
-      
-<h3 id="command-line-arguments">
-  
-  
+    
+    </h2>
+    <img src="/assets/gold.ico" alt="gold icon">
+    
+  <h3 id="command-line-arguments">
+    
+    
      <a href="#command-line-arguments">#</a>Command Line Arguments
-  
-  <a href="#" class="back-to-top" aria-label="Back to top">
-  <img src="/assets/gold.ico" alt="gold icon">
-</a>
-</h3>
-      
+    
+    </h3>
+    <img src="/assets/gold.ico" alt="gold icon">
+    
 
 <p>The script accepts several command-line arguments to customize its behavior. Below is a list of available arguments:</p>
 
@@ -203,16 +182,14 @@
   <li><code class="language-plaintext highlighter-rouge">--jit_texts_index</code>: Enable just-in-time text indexing</li>
   <li><code class="language-plaintext highlighter-rouge">--answer_length</code>: Specify the desired length of the answer</li>
 </ul>
-<h3 id="favorites">
-  
-  
+  <h3 id="favorites">
+    
+    
      <a href="#favorites">#</a>Favorites
-  
-  <a href="#" class="back-to-top" aria-label="Back to top">
-  <img src="/assets/gold.ico" alt="gold icon">
-</a>
-</h3>
-      
+    
+    </h3>
+    <img src="/assets/gold.ico" alt="gold icon">
+    
 
 <p><code class="language-plaintext highlighter-rouge">--question</code>
 “Question to ask (use quotes for multi-word questions)”</p>
@@ -234,42 +211,38 @@
 
 <p><code class="language-plaintext highlighter-rouge">--answer_length</code>
 “Specify the desired length of the answer (e.g., ‘about 200 words’)”</p>
-<h3 id="examples">
-  
-  
+  <h3 id="examples">
+    
+    
      <a href="#examples">#</a>Examples
-  
-  <a href="#" class="back-to-top" aria-label="Back to top">
-  <img src="/assets/gold.ico" alt="gold icon">
-</a>
-</h3>
-      
+    
+    </h3>
+    <img src="/assets/gold.ico" alt="gold icon">
+    
 
 <ol>
   <li>Ask a single question:</li>
 </ol>
 
-<div class="language-bash highlighter-rouge"><div class="highlight"><section class="line-numbers" style="white-space: pre-line;"><code>python script.py <span class="nt">--pdf_dir</span> /path/to/pdfs <span class="nt">--question</span> <span class="s2">"What is the impact of climate change on agriculture?"</span>
+<div class="language-bash highlighter-rouge"><div class="highlight"><section><code>python script.py <span class="nt">--pdf_dir</span> /path/to/pdfs <span class="nt">--question</span> <span class="s2">"What is the impact of climate change on agriculture?"</span>
 </code></section></div></div>
 
 <ol>
   <li>Ask multiple questions from a file:</li>
 </ol>
 
-<div class="language-bash highlighter-rouge"><div class="highlight"><section class="line-numbers" style="white-space: pre-line;"><code>python script.py <span class="nt">--pdf_dir</span> /path/to/pdfs <span class="nt">--questions_file</span> questions.txt
+<div class="language-bash highlighter-rouge"><div class="highlight"><section><code>python script.py <span class="nt">--pdf_dir</span> /path/to/pdfs <span class="nt">--questions_file</span> questions.txt
 </code></section></div></div>
-<h3 id="list-of-questions-template">
-  
-  
+  <h3 id="list-of-questions-template">
+    
+    
      <a href="#list-of-questions-template">#</a>List of questions template:
-  
-  <a href="#" class="back-to-top" aria-label="Back to top">
-  <img src="/assets/gold.ico" alt="gold icon">
-</a>
-</h3>
-      
+    
+    </h3>
+    <img src="/assets/gold.ico" alt="gold icon">
+    
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><section class="line-numbers" style="white-space: pre-line;"><code>questions = [
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><section><code>questions = [
     "Q1?",
     "Q2?",
     # ... add your 28 other questions here
@@ -280,126 +253,106 @@
   <li>Load existing embeddings and ask a question:</li>
 </ol>
 
-<div class="language-bash highlighter-rouge"><div class="highlight"><section class="line-numbers" style="white-space: pre-line;"><code>python script.py <span class="nt">--load_embeddings</span> embeddings.pkl <span class="nt">--question</span> <span class="s2">"What are the latest advancements in AI?"</span>
+<div class="language-bash highlighter-rouge"><div class="highlight"><section><code>python script.py <span class="nt">--load_embeddings</span> embeddings.pkl <span class="nt">--question</span> <span class="s2">"What are the latest advancements in AI?"</span>
 </code></section></div></div>
-<h2 id="detailed-explanation">
-  
-  
+  <h2 id="detailed-explanation">
+    
+    
      <a href="#detailed-explanation">#</a>Detailed Explanation
-  
-  <a href="#" class="back-to-top" aria-label="Back to top">
-  <img src="/assets/gold.ico" alt="gold icon">
-</a>
-</h2>
-      
-<h3 id="loading-custom-prompts">
-  
-  
+    
+    </h2>
+    <img src="/assets/gold.ico" alt="gold icon">
+    
+  <h3 id="loading-custom-prompts">
+    
+    
      <a href="#loading-custom-prompts">#</a>Loading Custom Prompts
-  
-  <a href="#" class="back-to-top" aria-label="Back to top">
-  <img src="/assets/gold.ico" alt="gold icon">
-</a>
-</h3>
-      
+    
+    </h3>
+    <img src="/assets/gold.ico" alt="gold icon">
+    
 
 <p>If a custom prompt file is provided using <code class="language-plaintext highlighter-rouge">--custom_prompt_file</code>, the script loads the prompts from the specified JSON file. This allows users to customize the prompts used for querying the documents.</p>
-<h3 id="creating-docs-object">
-  
-  
+  <h3 id="creating-docs-object">
+    
+    
      <a href="#creating-docs-object">#</a>Creating Docs Object
-  
-  <a href="#" class="back-to-top" aria-label="Back to top">
-  <img src="/assets/gold.ico" alt="gold icon">
-</a>
-</h3>
-      
+    
+    </h3>
+    <img src="/assets/gold.ico" alt="gold icon">
+    
 
 <p>The script creates a <code class="language-plaintext highlighter-rouge">Docs</code> object with the specified configurations, including the LLM model, embedding model, and other parameters. This object is used to manage the documents and perform queries.</p>
-<h3 id="loading-existing-embeddings">
-  
-  
+  <h3 id="loading-existing-embeddings">
+    
+    
      <a href="#loading-existing-embeddings">#</a>Loading Existing Embeddings
-  
-  <a href="#" class="back-to-top" aria-label="Back to top">
-  <img src="/assets/gold.ico" alt="gold icon">
-</a>
-</h3>
-      
+    
+    </h3>
+    <img src="/assets/gold.ico" alt="gold icon">
+    
 
 <p>If a pre-saved Docs object with embeddings is provided using <code class="language-plaintext highlighter-rouge">--load_embeddings</code>, the script loads the object from the specified file. This allows users to reuse previously generated embeddings.</p>
-<h3 id="adding-pdf-documents">
-  
-  
+  <h3 id="adding-pdf-documents">
+    
+    
      <a href="#adding-pdf-documents">#</a>Adding PDF Documents
-  
-  <a href="#" class="back-to-top" aria-label="Back to top">
-  <img src="/assets/gold.ico" alt="gold icon">
-</a>
-</h3>
-      
+    
+    </h3>
+    <img src="/assets/gold.ico" alt="gold icon">
+    
 
 <p>The script adds PDF documents from the specified directory to the <code class="language-plaintext highlighter-rouge">Docs</code> object. It ensures that only new documents are added to avoid duplication.</p>
-<h3 id="getting-questions">
-  
-  
+  <h3 id="getting-questions">
+    
+    
      <a href="#getting-questions">#</a>Getting Questions
-  
-  <a href="#" class="back-to-top" aria-label="Back to top">
-  <img src="/assets/gold.ico" alt="gold icon">
-</a>
-</h3>
-      
+    
+    </h3>
+    <img src="/assets/gold.ico" alt="gold icon">
+    
 
 <p>The script retrieves questions from the command line, a file, or standard input. It supports multiple sources for questions to provide flexibility in querying the documents.</p>
-<h3 id="answering-questions">
-  
-  
+  <h3 id="answering-questions">
+    
+    
      <a href="#answering-questions">#</a>Answering Questions
-  
-  <a href="#" class="back-to-top" aria-label="Back to top">
-  <img src="/assets/gold.ico" alt="gold icon">
-</a>
-</h3>
-      
+    
+    </h3>
+    <img src="/assets/gold.ico" alt="gold icon">
+    
 
 <p>The script processes each question using the <code class="language-plaintext highlighter-rouge">Docs</code> object and generates answers. It supports various configurations for querying, including the number of top-k results, maximum sources, and answer length.</p>
-<h3 id="saving-data">
-  
-  
+  <h3 id="saving-data">
+    
+    
      <a href="#saving-data">#</a>Saving Data
-  
-  <a href="#" class="back-to-top" aria-label="Back to top">
-  <img src="/assets/gold.ico" alt="gold icon">
-</a>
-</h3>
-      
+    
+    </h3>
+    <img src="/assets/gold.ico" alt="gold icon">
+    
 
 <p>The script saves the generated embeddings, answers, and other data to the specified files. This allows users to persist the results and reuse them later.</p>
-<h2 id="error-handling">
-  
-  
+  <h2 id="error-handling">
+    
+    
      <a href="#error-handling">#</a>Error Handling
-  
-  <a href="#" class="back-to-top" aria-label="Back to top">
-  <img src="/assets/gold.ico" alt="gold icon">
-</a>
-</h2>
-      
+    
+    </h2>
+    <img src="/assets/gold.ico" alt="gold icon">
+    
 
 <p>The script includes error handling for various scenarios, such as file not found errors and JSON decoding errors. It prints appropriate error messages and exits gracefully in case of errors.</p>
-<h1 id="script">
-  
-  
+  <h1 id="script">
+    
+    
      <a href="#script">#</a>Script
-  
-  <a href="#" class="back-to-top" aria-label="Back to top">
-  <img src="/assets/gold.ico" alt="gold icon">
-</a>
-</h1>
-      
+    
+    </h1>
+    <img src="/assets/gold.ico" alt="gold icon">
+    
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><section class="line-numbers" style="white-space: pre-line;"><code>from paperqa import Answer, Docs, PromptCollection, OpenAILLMModel, OpenAIEmbeddingModel
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><section><code>from paperqa import Answer, Docs, PromptCollection, OpenAILLMModel, OpenAIEmbeddingModel
 import argparse
 import sys
 import pickle
@@ -645,21 +598,19 @@ def main():
 if __name__ == "__main__":
     main()
 </code></section></div></div>
-<h1 id="2add">
-  
-  
+  <h1 id="2add">
+    
+    
      <a href="#2add">#</a>2add
-  
-  <a href="#" class="back-to-top" aria-label="Back to top">
-  <img src="/assets/gold.ico" alt="gold icon">
-</a>
-</h1>
-      <hr />
+    
+    </h1>
+    <img src="/assets/gold.ico" alt="gold icon">
+    <hr />
 <p>Automating a list of prompts to be queried:</p>
 <ul>
   <li>You can create a list of prompts and iterate over them, similar to the example in point 1.</li>
   <li>Here’s an example:
-    <div class="language-python highlighter-rouge"><div class="highlight"><section class="line-numbers" style="white-space: pre-line;"><code><span class="n">prompts</span> <span class="o">=</span> <span class="p">[</span>
+    <div class="language-python highlighter-rouge"><div class="highlight"><section><code><span class="n">prompts</span> <span class="o">=</span> <span class="p">[</span>
     <span class="sh">"</span><span class="s">Prompt 1</span><span class="sh">"</span><span class="p">,</span>
     <span class="sh">"</span><span class="s">Prompt 2</span><span class="sh">"</span><span class="p">,</span>
     <span class="c1"># ...
@@ -675,7 +626,7 @@ if __name__ == "__main__":
   </li>
   <li>You can use the <code class="language-plaintext highlighter-rouge">sys</code> module to read input from the command line.</li>
   <li>Here’s an example:
-    <div class="language-python highlighter-rouge"><div class="highlight"><section class="line-numbers" style="white-space: pre-line;"><code><span class="kn">import</span> <span class="n">sys</span>
+    <div class="language-python highlighter-rouge"><div class="highlight"><section><code><span class="kn">import</span> <span class="n">sys</span>
 
 <span class="n">question</span> <span class="o">=</span> <span class="n">sys</span><span class="p">.</span><span class="n">stdin</span><span class="p">.</span><span class="nf">read</span><span class="p">().</span><span class="nf">strip</span><span class="p">()</span>
 <span class="n">answer</span> <span class="o">=</span> <span class="n">loaded_docs</span><span class="p">.</span><span class="nf">query</span><span class="p">(</span><span class="n">question</span><span class="p">,</span> <span class="n">k</span><span class="o">=</span><span class="mi">50</span><span class="p">)</span>
@@ -683,13 +634,13 @@ if __name__ == "__main__":
 </code></section></div>    </div>
   </li>
   <li>You can then pipe the question from the command line:
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><section class="line-numbers" style="white-space: pre-line;"><code>echo "What is the meaning of life?" | python3 researcher.py
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><section><code>echo "What is the meaning of life?" | python3 researcher.py
 </code></section></div>    </div><hr />
     <p>Using the response of a request/query as context for subsequent prompts:</p>
   </li>
   <li>You can use the <code class="language-plaintext highlighter-rouge">answer.context</code> attribute to access the context used for generating the answer.</li>
   <li>Here’s an example:
-    <div class="language-python highlighter-rouge"><div class="highlight"><section class="line-numbers" style="white-space: pre-line;"><code><span class="n">previous_context</span> <span class="o">=</span> <span class="sh">""</span>
+    <div class="language-python highlighter-rouge"><div class="highlight"><section><code><span class="n">previous_context</span> <span class="o">=</span> <span class="sh">""</span>
 <span class="k">for</span> <span class="n">prompt</span> <span class="ow">in</span> <span class="n">prompts</span><span class="p">:</span>
     <span class="n">answer</span> <span class="o">=</span> <span class="n">loaded_docs</span><span class="p">.</span><span class="nf">query</span><span class="p">(</span><span class="n">prompt</span><span class="p">,</span> <span class="n">k</span><span class="o">=</span><span class="mi">50</span><span class="p">,</span> <span class="n">context</span><span class="o">=</span><span class="n">previous_context</span><span class="p">)</span>
     <span class="n">previous_context</span> <span class="o">=</span> <span class="n">answer</span><span class="p">.</span><span class="n">context</span>
@@ -699,7 +650,7 @@ if __name__ == "__main__":
   </li>
 </ul>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><section class="line-numbers" style="white-space: pre-line;"><code> Implement adversarial prompting. #131
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><section><code> Implement adversarial prompting. #131
 This adds a method adversarial_query. Adversarial queries first generate an answer, then asks the LLM to find problems with the answer, then finally generates the final response so that it addresses th
  1 commit
  2 files changed
@@ -921,6 +872,24 @@ search_prompt = prompts.PromptTemplate(
 
       
       
+      <div class="nav-arrow prev">
+        <a href="/bulk-gpt/" title="bulkGPT: multithreading for OpenAI's output limits">
+          <span class="sr-only">
+            Anterior:
+          </span>
+          <span aria-hidden="true">&#8672;</span>
+        </a>
+      </div>
+      
+      
+      <div class="nav-arrow next">
+        <a href="/gingko-toc-outliner/" title="Gingko JSON ToC outliner">
+          <span class="sr-only">
+            Seguinte:
+          </span>
+          <span aria-hidden="true">&#8674;</span>
+        </a>
+        
     </main>
     <hr>
     <a href="#" class="back-to-top" aria-label="Back to top">
@@ -932,16 +901,5 @@ search_prompt = prompts.PromptTemplate(
     </div>
     
   </article>
-  <footer class="post-footer">
-    <p>Published on June 16, 2024</p>
-    <nav class="post-navigation">
-      
-      <a href="/bulk-gpt/" class="previous-post">Previous: bulkGPT: multithreading for OpenAI's output limits</a>
-      
-      
-      <a href="/gingko-toc-outliner/" class="next-post">Next: Gingko JSON ToC outliner</a>
-      
-    </nav>
-  </footer>
-</body>  
+</body>
 </html>

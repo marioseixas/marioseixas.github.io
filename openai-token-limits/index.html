@@ -16,7 +16,6 @@
       <meta property="article:tag" content="AI">
     
   
-  
   <link href="/style.css" rel="stylesheet">
   <link href="/pagefind/pagefind-ui.css" rel="stylesheet">
   <script src="/pagefind/pagefind-ui.js" type="text/javascript"></script>
@@ -27,7 +26,7 @@
   <script src="/assets/js/search.js" defer></script>
   <script src="/assets/js/prism.js" defer></script>
 </head>
-<body class="post-wrapper post-content-body">
+<body class="post-content-body">
   <header class="header-container">
     <nav aria-label="Main navigation" class="header-content">
       <a class="internal-link" href="/" aria-label="Home">
@@ -47,33 +46,26 @@
       <div id="search" class="search-input-block"></div>
     </div>
   </header>
-  <article class="post content">
+  <article class="post-wrapper">
     <div class="post-heading">
       <h1 class="post-title">OpenAI Token Limits</h1>
       <div class="post-meta">
         <time datetime="2023-03-10T03:00:00+00:00" class="post-date">
-          10 Mar 2023
-        </time>
-        
-          <span class="post-updated">
-            &rightarrowtail; Updated: 
-            <time datetime="2024-07-13T13:46:16+00:00">
-              13 Jul 2024
-            </time>
+          10 Mar 2023</time><span class="post-updated"> &rightarrowtail; <time datetime="2024-07-13T13:46:16+00:00">13 Jul 2024
+          </time>
           </span>
         
         
-          <div class="post-tags">
-            Tags:
-            
-              <a href="https://ib.bsb.br/tags/#ai" class="tag">AI</a>
-            
-          </div>
+        <div class="post-info">
+          Edit: aberto.
+        </div>
         
         
-          <div class="post-info">
-            Edit: aberto.
-          </div>
+        <div class="post-tags">
+          Tags:
+          
+          <a href="https://ib.bsb.br/tags/#ai" class="tag">AI</a>
+        </div>
         
         <div class="post-actions">
           <a href="https://github.com/marioseixas/marioseixas.github.io/edit/main/_posts/2023-03-10-openai-token-limits.md" target="_blank" rel="noopener noreferrer" class="btn-primary">
@@ -85,7 +77,7 @@
         </div>
       </div>
     </div>
-    <main class="post-content">
+    <main class="content">
       
 
       <p>How to Get Around OpenAI GPT-3 Token Limits
@@ -200,7 +192,7 @@ chunks = break_up_file_to_chunks(filename)</p>
             presence_penalty=0
     )</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><section class="line-numbers" style="white-space: pre-line;"><code>prompt_response.append(response["choices"][0]["text"].strip()) Option 2: model=”gpt-3.5-turbo”
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><section><code>prompt_response.append(response["choices"][0]["text"].strip()) Option 2: model=”gpt-3.5-turbo”
 </code></section></div></div>
 
 <p>filename = “/content/drive/MyDrive/Colab Notebooks/minutes/data/Round_22_Online_Kickoff_Meeting.txt”</p>
@@ -210,7 +202,7 @@ chunks = break_up_file_to_chunks(filename)</p>
 
 <p>for i, chunk in enumerate(chunks):</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><section class="line-numbers" style="white-space: pre-line;"><code>prompt_request = "Summarize this meeting transcript: " + convert_to_prompt_text(chunks[i])
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><section><code>prompt_request = "Summarize this meeting transcript: " + convert_to_prompt_text(chunks[i])
 
 messages = [{"role": "system", "content": "This is text summarization."}]    
 messages.append({"role": "user", "content": prompt_request})
@@ -270,7 +262,7 @@ OpenAI GPT-3 is limited to 4,001 tokens per request, encompassing both the reque
     with open(filename, ‘r’) as f:
         text = f.read()</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><section class="line-numbers" style="white-space: pre-line;"><code>input_ids = torch.tensor(tokenizer.encode(text)).unsqueeze(0)
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><section><code>input_ids = torch.tensor(tokenizer.encode(text)).unsqueeze(0)
 num_tokens = input_ids.shape[1]
 return num_tokens filename = "/content/drive/MyDrive/Colab Notebooks/minutes/data/Round_22_Online_Kickoff_Meeting.txt" token_count = count_tokens(filename) print(f"Number of tokens: {token_count}")
 </code></section></div></div>
@@ -283,7 +275,7 @@ We will be breaking up the text into chunks of 2,000 tokens with an overlapping 
     with open(filename, ‘r’) as f:
         text = f.read()</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><section class="line-numbers" style="white-space: pre-line;"><code>tokens = tokenizer.encode(text)
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><section><code>tokens = tokenizer.encode(text)
 num_tokens = len(tokens)
 
 chunks = []
@@ -316,7 +308,7 @@ Option 1: model=”text-davinci-003”</p>
 
 <p>for i, chunk in enumerate(chunks):</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><section class="line-numbers" style="white-space: pre-line;"><code>prompt_request = "Summarize this meeting transcript: " + tokenizer.decode(chunks[i])
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><section><code>prompt_request = "Summarize this meeting transcript: " + tokenizer.decode(chunks[i])
 response = openai.Completion.create(
         model="text-davinci-003",
         prompt=prompt_request,
@@ -340,7 +332,7 @@ prompt_response.append(response["choices"][0]["text"].strip()) Option 2: model=�
 
 <p>for i, chunk in enumerate(chunks):</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><section class="line-numbers" style="white-space: pre-line;"><code>prompt_request = "Summarize this meeting transcript: " + tokenizer.decode(chunks[i])
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><section><code>prompt_request = "Summarize this meeting transcript: " + tokenizer.decode(chunks[i])
 
 messages = [{"role": "system", "content": "This is text summarization."}]    
 messages.append({"role": "user", "content": prompt_request})
@@ -391,7 +383,7 @@ OpenAI GPT-3 is limited to 4,001 tokens per request, encompassing both the reque
     with open(filename, ‘r’) as f:
         text = f.read()</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><section class="line-numbers" style="white-space: pre-line;"><code>input_ids = encoding.encode(text)
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><section><code>input_ids = encoding.encode(text)
 num_tokens = len(input_ids)
 return num_tokens filename = "/content/drive/MyDrive/Colab Notebooks/minutes/data/Round_22_Online_Kickoff_Meeting.txt"
 </code></section></div></div>
@@ -404,7 +396,7 @@ We will be breaking up the text into chunks of 2,000 tokens with an overlapping 
 
 <p>def break_up_file_to_chunks(filename, chunk_size=2000, overlap=100):</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><section class="line-numbers" style="white-space: pre-line;"><code>encoding = tiktoken.get_encoding("gpt2")
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><section><code>encoding = tiktoken.get_encoding("gpt2")
 with open(filename, 'r') as f:
     text = f.read()
 
@@ -441,7 +433,7 @@ chunks = break_up_file_to_chunks(filename)</p>
 <p>for i, chunk in enumerate(chunks):
     prompt_request = “Summarize this meeting transcript: “ + encoding.decode(chunks[i])</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><section class="line-numbers" style="white-space: pre-line;"><code>response = openai.Completion.create(
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><section><code>response = openai.Completion.create(
         model="text-davinci-003",
         prompt=prompt_request,
         temperature=.5,
@@ -463,7 +455,7 @@ chunks = break_up_file_to_chunks(filename)</p>
 
 <p>for i, chunk in enumerate(chunks):</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><section class="line-numbers" style="white-space: pre-line;"><code>prompt_request = "Summarize this meeting transcript: " + encoding.decode(chunks[i])
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><section><code>prompt_request = "Summarize this meeting transcript: " + encoding.decode(chunks[i])
 messages = [{"role": "system", "content": "This is text summarization."}]    
 messages.append({"role": "user", "content": prompt_request})
 
@@ -496,6 +488,24 @@ I hope you have enjoyed this tutorial. If you have any questions or comments, pl
 
       
       
+      <div class="nav-arrow prev">
+        <a href="/pypdf/" title="github.com/py-pdf">
+          <span class="sr-only">
+            Anterior:
+          </span>
+          <span aria-hidden="true">&#8672;</span>
+        </a>
+      </div>
+      
+      
+      <div class="nav-arrow next">
+        <a href="/maio-23/" title="Maio 2023">
+          <span class="sr-only">
+            Seguinte:
+          </span>
+          <span aria-hidden="true">&#8674;</span>
+        </a>
+        
     </main>
     <hr>
     <a href="#" class="back-to-top" aria-label="Back to top">
@@ -507,16 +517,5 @@ I hope you have enjoyed this tutorial. If you have any questions or comments, pl
     </div>
     
   </article>
-  <footer class="post-footer">
-    <p>Published on March 10, 2023</p>
-    <nav class="post-navigation">
-      
-      <a href="/pypdf/" class="previous-post">Previous: github.com/py-pdf</a>
-      
-      
-      <a href="/maio-23/" class="next-post">Next: Maio 2023</a>
-      
-    </nav>
-  </footer>
-</body>  
+</body>
 </html>

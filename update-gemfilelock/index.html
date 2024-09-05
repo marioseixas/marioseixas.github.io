@@ -16,7 +16,6 @@
       <meta property="article:tag" content="github>jekyll">
     
   
-  
   <link href="/style.css" rel="stylesheet">
   <link href="/pagefind/pagefind-ui.css" rel="stylesheet">
   <script src="/pagefind/pagefind-ui.js" type="text/javascript"></script>
@@ -27,7 +26,7 @@
   <script src="/assets/js/search.js" defer></script>
   <script src="/assets/js/prism.js" defer></script>
 </head>
-<body class="post-wrapper post-content-body">
+<body class="post-content-body">
   <header class="header-container">
     <nav aria-label="Main navigation" class="header-content">
       <a class="internal-link" href="/" aria-label="Home">
@@ -47,33 +46,26 @@
       <div id="search" class="search-input-block"></div>
     </div>
   </header>
-  <article class="post content">
+  <article class="post-wrapper">
     <div class="post-heading">
       <h1 class="post-title">Update Gemfilelock</h1>
       <div class="post-meta">
         <time datetime="2024-07-13T00:00:00+00:00" class="post-date">
-          13 Jul 2024
-        </time>
-        
-          <span class="post-updated">
-            &rightarrowtail; Updated: 
-            <time datetime="2024-08-23T00:43:16+00:00">
-              23 Aug 2024
-            </time>
+          13 Jul 2024</time><span class="post-updated"> &rightarrowtail; <time datetime="2024-08-23T00:43:16+00:00">23 Aug 2024
+          </time>
           </span>
         
         
-          <div class="post-tags">
-            Tags:
-            
-              <a href="https://ib.bsb.br/tags/#github-jekyll" class="tag">github>jekyll</a>
-            
-          </div>
+        <div class="post-info">
+          Edit: fechado.
+        </div>
         
         
-          <div class="post-info">
-            Edit: fechado.
-          </div>
+        <div class="post-tags">
+          Tags:
+          
+          <a href="https://ib.bsb.br/tags/#github-jekyll" class="tag">github>jekyll</a>
+        </div>
         
         <div class="post-actions">
           <a href="https://github.com/marioseixas/marioseixas.github.io/edit/main/_posts/2024-07-13-update-gemfilelock.md" target="_blank" rel="noopener noreferrer" class="btn-primary">
@@ -85,13 +77,13 @@
         </div>
       </div>
     </div>
-    <main class="post-content">
+    <main class="content">
       
 
       <p>Github Actions workflow to ensure the new gems are installed and locked in Gemfile.lock</p>
 
 <p><code class="language-plaintext highlighter-rouge">.github/workflows/update_gemfile_lock.yml</code>:</p>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><section class="line-numbers" style="white-space: pre-line;"><code>name: Update Gemfile.lock
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><section><code>name: Update Gemfile.lock
 
 on:
   push:
@@ -133,6 +125,24 @@ jobs:
 
       
       
+      <div class="nav-arrow prev">
+        <a href="/periodicos/" title="Periódicos para publicar artigos">
+          <span class="sr-only">
+            Anterior:
+          </span>
+          <span aria-hidden="true">&#8672;</span>
+        </a>
+      </div>
+      
+      
+      <div class="nav-arrow next">
+        <a href="/escolta/" title="Procedimentos de Escolta Dedicada">
+          <span class="sr-only">
+            Seguinte:
+          </span>
+          <span aria-hidden="true">&#8674;</span>
+        </a>
+        
     </main>
     <hr>
     <a href="#" class="back-to-top" aria-label="Back to top">
@@ -140,16 +150,5 @@ jobs:
     </a>
     
   </article>
-  <footer class="post-footer">
-    <p>Published on July 13, 2024</p>
-    <nav class="post-navigation">
-      
-      <a href="/periodicos/" class="previous-post">Previous: Periódicos para publicar artigos</a>
-      
-      
-      <a href="/escolta/" class="next-post">Next: Procedimentos de Escolta Dedicada</a>
-      
-    </nav>
-  </footer>
-</body>  
+</body>
 </html>

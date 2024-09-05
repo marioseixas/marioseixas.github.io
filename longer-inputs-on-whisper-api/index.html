@@ -16,7 +16,6 @@
       <meta property="article:tag" content="scripts>AI">
     
   
-  
   <link href="/style.css" rel="stylesheet">
   <link href="/pagefind/pagefind-ui.css" rel="stylesheet">
   <script src="/pagefind/pagefind-ui.js" type="text/javascript"></script>
@@ -27,7 +26,7 @@
   <script src="/assets/js/search.js" defer></script>
   <script src="/assets/js/prism.js" defer></script>
 </head>
-<body class="post-wrapper post-content-body">
+<body class="post-content-body">
   <header class="header-container">
     <nav aria-label="Main navigation" class="header-content">
       <a class="internal-link" href="/" aria-label="Home">
@@ -47,33 +46,26 @@
       <div id="search" class="search-input-block"></div>
     </div>
   </header>
-  <article class="post content">
+  <article class="post-wrapper">
     <div class="post-heading">
       <h1 class="post-title">Longer inputs on WHISPER API</h1>
       <div class="post-meta">
         <time datetime="2024-07-21T00:00:00+00:00" class="post-date">
-          21 Jul 2024
-        </time>
-        
-          <span class="post-updated">
-            &rightarrowtail; Updated: 
-            <time datetime="2024-08-23T10:10:40+00:00">
-              23 Aug 2024
-            </time>
+          21 Jul 2024</time><span class="post-updated"> &rightarrowtail; <time datetime="2024-08-23T10:10:40+00:00">23 Aug 2024
+          </time>
           </span>
         
         
-          <div class="post-tags">
-            Tags:
-            
-              <a href="https://ib.bsb.br/tags/#scripts-ai" class="tag">scripts>AI</a>
-            
-          </div>
+        <div class="post-info">
+          Edit: aberto.
+        </div>
         
         
-          <div class="post-info">
-            Edit: aberto.
-          </div>
+        <div class="post-tags">
+          Tags:
+          
+          <a href="https://ib.bsb.br/tags/#scripts-ai" class="tag">scripts>AI</a>
+        </div>
         
         <div class="post-actions">
           <a href="https://github.com/marioseixas/marioseixas.github.io/edit/main/_posts/2024-07-21-longer-inputs-on-whisper-api.md" target="_blank" rel="noopener noreferrer" class="btn-primary">
@@ -85,19 +77,17 @@
         </div>
       </div>
     </div>
-    <main class="post-content">
+    <main class="content">
       
 <ul><li><a href="#audio-file-limitations"><a href="https://console.groq.com/docs/speech-text#audio-file-limitations">Audio file limitations</a></a></li></ul>
       <h3 id="audio-file-limitations">
-  
-  
+    
+    
      <a href="#audio-file-limitations">#</a><a href="https://console.groq.com/docs/speech-text#audio-file-limitations">Audio file limitations</a>
-  
-  <a href="#" class="back-to-top" aria-label="Back to top">
-  <img src="/assets/gold.ico" alt="gold icon">
-</a>
-</h3>
-      
+    
+    </h3>
+    <img src="/assets/gold.ico" alt="gold icon">
+    
 
 <ul>
   <li>File uploads are limited to 25 MB</li>
@@ -107,7 +97,7 @@
 
 <p>Whisper will downsample audio to 16,000 Hz mono before transcribing. This preprocessing can be performed client-side to reduce file size and allow longer files to be uploaded to groq. The following ffmpeg command can be used to reduce file size:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><section class="line-numbers" style="white-space: pre-line;"><code>ffmpeg \
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><section><code>ffmpeg \
   -i &lt;your file&gt; \
   -ar 16000 \
   -ac 1 \
@@ -119,7 +109,7 @@
 
 <p>One way to handle this is to use the PyDub open source Python package to split the audio:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><section class="line-numbers" style="white-space: pre-line;"><code>from pydub import AudioSegment
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><section><code>from pydub import AudioSegment
 
 song = AudioSegment.from_mp3("good_morning.mp3")
 
@@ -135,6 +125,24 @@ first_10_minutes.export("good_morning_10.mp3", format="mp3")
 
       
       
+      <div class="nav-arrow prev">
+        <a href="/vpc-3588-motherboard/" title="VPC-3588 Motherboard">
+          <span class="sr-only">
+            Anterior:
+          </span>
+          <span aria-hidden="true">&#8672;</span>
+        </a>
+      </div>
+      
+      
+      <div class="nav-arrow next">
+        <a href="/mlo-workspaces-logic/" title="MLO Workspaces logic">
+          <span class="sr-only">
+            Seguinte:
+          </span>
+          <span aria-hidden="true">&#8674;</span>
+        </a>
+        
     </main>
     <hr>
     <a href="#" class="back-to-top" aria-label="Back to top">
@@ -142,16 +150,5 @@ first_10_minutes.export("good_morning_10.mp3", format="mp3")
     </a>
     
   </article>
-  <footer class="post-footer">
-    <p>Published on July 21, 2024</p>
-    <nav class="post-navigation">
-      
-      <a href="/vpc-3588-motherboard/" class="previous-post">Previous: VPC-3588 Motherboard</a>
-      
-      
-      <a href="/mlo-workspaces-logic/" class="next-post">Next: MLO Workspaces logic</a>
-      
-    </nav>
-  </footer>
-</body>  
+</body>
 </html>

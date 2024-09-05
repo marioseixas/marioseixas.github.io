@@ -16,7 +16,6 @@
       <meta property="article:tag" content="linux">
     
   
-  
   <link href="/style.css" rel="stylesheet">
   <link href="/pagefind/pagefind-ui.css" rel="stylesheet">
   <script src="/pagefind/pagefind-ui.js" type="text/javascript"></script>
@@ -27,7 +26,7 @@
   <script src="/assets/js/search.js" defer></script>
   <script src="/assets/js/prism.js" defer></script>
 </head>
-<body class="post-wrapper post-content-body">
+<body class="post-content-body">
   <header class="header-container">
     <nav aria-label="Main navigation" class="header-content">
       <a class="internal-link" href="/" aria-label="Home">
@@ -47,33 +46,26 @@
       <div id="search" class="search-input-block"></div>
     </div>
   </header>
-  <article class="post content">
+  <article class="post-wrapper">
     <div class="post-heading">
       <h1 class="post-title">About Thorium Flags</h1>
       <div class="post-meta">
         <time datetime="2024-03-02T03:00:00+00:00" class="post-date">
-          02 Mar 2024
-        </time>
-        
-          <span class="post-updated">
-            &rightarrowtail; Updated: 
-            <time datetime="2024-07-13T13:46:16+00:00">
-              13 Jul 2024
-            </time>
+          02 Mar 2024</time><span class="post-updated"> &rightarrowtail; <time datetime="2024-07-13T13:46:16+00:00">13 Jul 2024
+          </time>
           </span>
         
         
-          <div class="post-tags">
-            Tags:
-            
-              <a href="https://ib.bsb.br/tags/#linux" class="tag">linux</a>
-            
-          </div>
+        <div class="post-info">
+          Edit: aberto.
+        </div>
         
         
-          <div class="post-info">
-            Edit: aberto.
-          </div>
+        <div class="post-tags">
+          Tags:
+          
+          <a href="https://ib.bsb.br/tags/#linux" class="tag">linux</a>
+        </div>
         
         <div class="post-actions">
           <a href="https://github.com/marioseixas/marioseixas.github.io/edit/main/_posts/2024-03-02-thorium.md" target="_blank" rel="noopener noreferrer" class="btn-primary">
@@ -85,23 +77,21 @@
         </div>
       </div>
     </div>
-    <main class="post-content">
+    <main class="content">
       
 <ul><li><a href="#enclose-flags-within-thorium-binary">enclose flags within Thorium Binary</a></li></ul>
       <h1 id="enclose-flags-within-thorium-binary">
-  
-  
+    
+    
      <a href="#enclose-flags-within-thorium-binary">#</a>enclose flags within Thorium Binary
-  
-  <a href="#" class="back-to-top" aria-label="Back to top">
-  <img src="/assets/gold.ico" alt="gold icon">
-</a>
-</h1>
-      
+    
+    </h1>
+    <img src="/assets/gold.ico" alt="gold icon">
+    
 
 <p>file:///opt/chromium.org/thorium/thorium-browser</p>
 
-<div class="language-bash highlighter-rouge"><div class="highlight"><section class="line-numbers" style="white-space: pre-line;"><code><span class="c"># Allow users to override command-line options with a file.</span>
+<div class="language-bash highlighter-rouge"><div class="highlight"><section><code><span class="c"># Allow users to override command-line options with a file.</span>
 <span class="k">if</span> <span class="o">[[</span> <span class="nt">-f</span> <span class="nv">$XDG_CONFIG_HOME</span>/thorium-flags.conf <span class="o">]]</span><span class="p">;</span> <span class="k">then
    </span><span class="nv">CHROME_USER_FLAGS</span><span class="o">=</span><span class="s2">"</span><span class="si">$(</span><span class="nb">cat</span> <span class="nv">$XDG_CONFIG_HOME</span>/thorium-flags.conf<span class="si">)</span><span class="s2">"</span>
 <span class="k">fi</span>
@@ -128,6 +118,24 @@
 
       
       
+      <div class="nav-arrow prev">
+        <a href="/aposentadoria/" title="QRU Aposentadoria">
+          <span class="sr-only">
+            Anterior:
+          </span>
+          <span aria-hidden="true">&#8672;</span>
+        </a>
+      </div>
+      
+      
+      <div class="nav-arrow next">
+        <a href="/whisper-splitter/" title="Split `.wav` for Whisper">
+          <span class="sr-only">
+            Seguinte:
+          </span>
+          <span aria-hidden="true">&#8674;</span>
+        </a>
+        
     </main>
     <hr>
     <a href="#" class="back-to-top" aria-label="Back to top">
@@ -139,16 +147,5 @@
     </div>
     
   </article>
-  <footer class="post-footer">
-    <p>Published on March 2, 2024</p>
-    <nav class="post-navigation">
-      
-      <a href="/aposentadoria/" class="previous-post">Previous: QRU Aposentadoria</a>
-      
-      
-      <a href="/whisper-splitter/" class="next-post">Next: Split `.wav` for Whisper</a>
-      
-    </nav>
-  </footer>
-</body>  
+</body>
 </html>

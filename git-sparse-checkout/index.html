@@ -16,7 +16,6 @@
       <meta property="article:tag" content="linux">
     
   
-  
   <link href="/style.css" rel="stylesheet">
   <link href="/pagefind/pagefind-ui.css" rel="stylesheet">
   <script src="/pagefind/pagefind-ui.js" type="text/javascript"></script>
@@ -27,7 +26,7 @@
   <script src="/assets/js/search.js" defer></script>
   <script src="/assets/js/prism.js" defer></script>
 </head>
-<body class="post-wrapper post-content-body">
+<body class="post-content-body">
   <header class="header-container">
     <nav aria-label="Main navigation" class="header-content">
       <a class="internal-link" href="/" aria-label="Home">
@@ -47,33 +46,26 @@
       <div id="search" class="search-input-block"></div>
     </div>
   </header>
-  <article class="post content">
+  <article class="post-wrapper">
     <div class="post-heading">
       <h1 class="post-title">Alternative option to upload a file to GitHub without cloning the entire repository</h1>
       <div class="post-meta">
         <time datetime="2023-12-24T03:00:00+00:00" class="post-date">
-          24 Dec 2023
-        </time>
-        
-          <span class="post-updated">
-            &rightarrowtail; Updated: 
-            <time datetime="2024-07-13T13:46:16+00:00">
-              13 Jul 2024
-            </time>
+          24 Dec 2023</time><span class="post-updated"> &rightarrowtail; <time datetime="2024-07-13T13:46:16+00:00">13 Jul 2024
+          </time>
           </span>
         
         
-          <div class="post-tags">
-            Tags:
-            
-              <a href="https://ib.bsb.br/tags/#linux" class="tag">linux</a>
-            
-          </div>
+        <div class="post-info">
+          Edit: aberto.
+        </div>
         
         
-          <div class="post-info">
-            Edit: aberto.
-          </div>
+        <div class="post-tags">
+          Tags:
+          
+          <a href="https://ib.bsb.br/tags/#linux" class="tag">linux</a>
+        </div>
         
         <div class="post-actions">
           <a href="https://github.com/marioseixas/marioseixas.github.io/edit/main/_posts/2023-12-24-git-sparse-checkout.md" target="_blank" rel="noopener noreferrer" class="btn-primary">
@@ -85,14 +77,14 @@
         </div>
       </div>
     </div>
-    <main class="post-content">
+    <main class="content">
       
 
       <ol>
   <li>
     <p><strong>Initialize an empty Git repository</strong>:</p>
 
-    <div class="language-shell highlighter-rouge"><div class="highlight"><section class="line-numbers" style="white-space: pre-line;"><code>
+    <div class="language-shell highlighter-rouge"><div class="highlight"><section><code>
 git init my-repository
 <span class="nb">cd </span>my-repository
 
@@ -101,7 +93,7 @@ git init my-repository
   <li>
     <p><strong>Add a remote for the GitHub repository</strong>:</p>
 
-    <div class="language-shell highlighter-rouge"><div class="highlight"><section class="line-numbers" style="white-space: pre-line;"><code>
+    <div class="language-shell highlighter-rouge"><div class="highlight"><section><code>
 git remote add origin https://github.com/marioseixas/marioseixas.github.io.git
 
 </code></section></div>    </div>
@@ -109,7 +101,7 @@ git remote add origin https://github.com/marioseixas/marioseixas.github.io.git
   <li>
     <p><strong>Configure sparse-checkout</strong>:</p>
 
-    <div class="language-shell highlighter-rouge"><div class="highlight"><section class="line-numbers" style="white-space: pre-line;"><code>
+    <div class="language-shell highlighter-rouge"><div class="highlight"><section><code>
 git config core.sparseCheckout <span class="nb">true</span>
 
 </code></section></div>    </div>
@@ -117,7 +109,7 @@ git config core.sparseCheckout <span class="nb">true</span>
   <li>
     <p><strong>Specify the directory you want to checkout</strong> (if applicable):</p>
 
-    <div class="language-shell highlighter-rouge"><div class="highlight"><section class="line-numbers" style="white-space: pre-line;"><code>
+    <div class="language-shell highlighter-rouge"><div class="highlight"><section><code>
 <span class="nb">echo</span> <span class="s1">'_posts/*'</span> <span class="o">&gt;&gt;</span> .git/info/sparse-checkout
 
 </code></section></div>    </div>
@@ -125,7 +117,7 @@ git config core.sparseCheckout <span class="nb">true</span>
   <li>
     <p><strong>Fetch the main branch</strong> (change ‘main’ to your target branch if it’s named differently):</p>
 
-    <div class="language-shell highlighter-rouge"><div class="highlight"><section class="line-numbers" style="white-space: pre-line;"><code>
+    <div class="language-shell highlighter-rouge"><div class="highlight"><section><code>
 git fetch origin main
 
 </code></section></div>    </div>
@@ -133,7 +125,7 @@ git fetch origin main
   <li>
     <p><strong>Checkout the files</strong>:</p>
 
-    <div class="language-shell highlighter-rouge"><div class="highlight"><section class="line-numbers" style="white-space: pre-line;"><code>
+    <div class="language-shell highlighter-rouge"><div class="highlight"><section><code>
 git checkout main
 
 </code></section></div>    </div>
@@ -159,7 +151,7 @@ git checkout main
 
     <p>You need to make sure the SSH agent is running so that it can manage your keys. You seem to have already started the ssh-agent and added your key. If needed again, you can use:</p>
 
-    <div class="language-shell highlighter-rouge"><div class="highlight"><section class="line-numbers" style="white-space: pre-line;"><code>
+    <div class="language-shell highlighter-rouge"><div class="highlight"><section><code>
 <span class="nb">eval</span> <span class="s2">"</span><span class="si">$(</span>ssh-agent <span class="nt">-s</span><span class="si">)</span><span class="s2">"</span>
 ssh-add ~/.ssh/id_ed25519
 
@@ -170,7 +162,7 @@ ssh-add ~/.ssh/id_ed25519
 
     <p>Before you try to push your changes to GitHub, you should test your SSH connection. You can do this with the following command:</p>
 
-    <div class="language-shell highlighter-rouge"><div class="highlight"><section class="line-numbers" style="white-space: pre-line;"><code>
+    <div class="language-shell highlighter-rouge"><div class="highlight"><section><code>
 ssh <span class="nt">-T</span> git@github.com
 
 </code></section></div>    </div>
@@ -182,7 +174,7 @@ ssh <span class="nt">-T</span> git@github.com
 
     <p>If you haven’t already set Git to use SSH for GitHub, you can do so by changing your remote URL from HTTPS to SSH. Since you just added a deploy key for a specific repository, it’s tied to that repository only. The general command to change the remote URL is:</p>
 
-    <div class="language-shell highlighter-rouge"><div class="highlight"><section class="line-numbers" style="white-space: pre-line;"><code>
+    <div class="language-shell highlighter-rouge"><div class="highlight"><section><code>
 git remote set-url origin git@github.com:username/repository.git
 
 </code></section></div>    </div>
@@ -194,7 +186,7 @@ git remote set-url origin git@github.com:username/repository.git
 
     <p>When you push changes, Git will use your SSH key for authentication. Because you’ve added the key to the SSH agent, you should not be prompted for your passphrase again during the current session.</p>
 
-    <div class="language-shell highlighter-rouge"><div class="highlight"><section class="line-numbers" style="white-space: pre-line;"><code>
+    <div class="language-shell highlighter-rouge"><div class="highlight"><section><code>
 git push origin main
 
 </code></section></div>    </div>
@@ -205,6 +197,24 @@ git push origin main
 
       
       
+      <div class="nav-arrow prev">
+        <a href="/dpkg/" title="Installed Debian packages list">
+          <span class="sr-only">
+            Anterior:
+          </span>
+          <span aria-hidden="true">&#8672;</span>
+        </a>
+      </div>
+      
+      
+      <div class="nav-arrow next">
+        <a href="/jekyller/" title="Shell script to replace JEKYLLER edge extension">
+          <span class="sr-only">
+            Seguinte:
+          </span>
+          <span aria-hidden="true">&#8674;</span>
+        </a>
+        
     </main>
     <hr>
     <a href="#" class="back-to-top" aria-label="Back to top">
@@ -212,16 +222,5 @@ git push origin main
     </a>
     
   </article>
-  <footer class="post-footer">
-    <p>Published on December 24, 2023</p>
-    <nav class="post-navigation">
-      
-      <a href="/dpkg/" class="previous-post">Previous: Installed Debian packages list</a>
-      
-      
-      <a href="/jekyller/" class="next-post">Next: Shell script to replace JEKYLLER edge extension</a>
-      
-    </nav>
-  </footer>
-</body>  
+</body>
 </html>
