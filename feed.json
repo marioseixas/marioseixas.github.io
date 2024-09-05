@@ -1,7 +1,6 @@
 ---
 layout: default
 ---
-
 {
     "version": "https://jsonfeed.org/version/1",
     "title": {{ site.name | smartify | jsonify }},
