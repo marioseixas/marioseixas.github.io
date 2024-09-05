@@ -30,8 +30,7 @@
   </head>
   <body class="post-content-body">
     <header class="header-container">
-      <div class="header-content">
-        <nav aria-label="Main navigation">
+      <nav aria-label="Main navigation" class="header-content">
           <a class="internal-link" href="/" aria-label="Home">
             <img src="{{ '/favicon.ico' | relative_url }}" alt="Archive Icon" class="favicon">
           </a>
@@ -48,16 +47,12 @@
         <div class="search-link">
           <div id="search" class="search-input-block"></div>
         </div>
-      </div>
     </header>
-    <main class="content">
-      {{ content }}
-    </main>
-    <footer>
-      <div class="footer-content">
-        <!-- Add footer content here -->
-      </div>
-    </footer>
+    <article class="post-wrapper">
+      <main class="content">
+        {{ content }}
+      </main>
+    </article>
     <a href="#" class="back-to-top" aria-label="Back to top">
       <img src="{{ '/assets/gold.ico' | relative_url }}" alt="Back to top">
     </a>
