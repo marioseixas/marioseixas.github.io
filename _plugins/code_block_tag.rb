@@ -41,7 +41,7 @@ module Jekyll
       escaped_code_content = code_content.gsub('"', '&quot;')
       
       # Construct HTML output with data attributes 
-      "<div class="line-numbers" style="white-space: pre-line;"><section data-filename=\"#{filename}\" data-code=\"#{escaped_code_content}\" data-download-link data-download-link-label=\"#{download_label}\" class=\"language-#{@language}\"><code class=\"language-#{@language}\">#{code_content}</code></section></div>"
+      "<div class=\"line-numbers\" style=\"white-space: pre-line;\"><section data-filename=\"#{filename}\" data-code=\"#{escaped_code_content}\" data-download-link data-download-link-label=\"#{download_label}\" class=\"language-#{@language}\"><code class=\"language-#{@language}\">#{code_content}</code></section></div>"
     end
   end
 end
