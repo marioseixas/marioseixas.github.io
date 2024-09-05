@@ -6,14 +6,14 @@ erDiagram
         related_2 software_mobile
     }
     scripts {
-        child scripts_AI
-        child AI
-        child scripts_cloud
         child scripts_google-apps-script
         child mobile
+        child AI
         child scripts_mobile
         child google-apps-script
+        child scripts_cloud
         child cloud
+        child scripts_AI
         related_26 linux
         related_2 estudos
     }
@@ -36,21 +36,6 @@ erDiagram
     }
     rendimentos {
     }
-    scripts_AI {
-        parent scripts
-    }
-    scripts ||--|| scripts_AI : SUBSET_OF
-    AI {
-        parent scripts
-        child AI_prompt
-        child prompt
-        child tools_AI_prompt
-    }
-    scripts ||--|| AI : SUBSET_OF
-    scripts_cloud {
-        parent scripts
-    }
-    scripts ||--|| scripts_cloud : SUBSET_OF
     scripts_google-apps-script {
         parent scripts
     }
@@ -60,6 +45,13 @@ erDiagram
         parent software
     }
     scripts ||--|| mobile : SUBSET_OF
+    AI {
+        parent scripts
+        child tools_AI_prompt
+        child AI_prompt
+        child prompt
+    }
+    scripts ||--|| AI : SUBSET_OF
     scripts_mobile {
         parent scripts
         related_2 iphone
@@ -69,11 +61,19 @@ erDiagram
         parent scripts
     }
     scripts ||--|| google-apps-script : SUBSET_OF
+    scripts_cloud {
+        parent scripts
+    }
+    scripts ||--|| scripts_cloud : SUBSET_OF
     cloud {
         parent scripts
         parent software
     }
     scripts ||--|| cloud : SUBSET_OF
+    scripts_AI {
+        parent scripts
+    }
+    scripts ||--|| scripts_AI : SUBSET_OF
     scripts ||..|| linux : RELATED_TO
     estudos {
         related_2 trabalho
@@ -88,19 +88,19 @@ erDiagram
     chess {
     }
     tools {
-        child AI_prompt
         child tools_AI_prompt
+        child AI_prompt
     }
-    AI_prompt {
-        parent AI
-        parent tools
-    }
-    tools ||--|| AI_prompt : SUBSET_OF
     tools_AI_prompt {
         parent AI
         parent tools
     }
     tools ||--|| tools_AI_prompt : SUBSET_OF
+    AI_prompt {
+        parent AI
+        parent tools
+    }
+    tools ||--|| AI_prompt : SUBSET_OF
     iphone {
         parent tasks
         related_2 scripts_mobile
@@ -118,8 +118,8 @@ erDiagram
     scripts ||--|| mobile : SUPERSET_OF
     software {
         child software_mobile
-        child software_cloud
         child cloud
+        child software_cloud
         child mobile
     }
     software ||--|| mobile : SUPERSET_OF
@@ -127,11 +127,11 @@ erDiagram
     software_mobile ||..|| iphone : RELATED_TO
     software_mobile ||..|| linux : RELATED_TO
     software ||--|| software_mobile : SUBSET_OF
+    software ||--|| cloud : SUBSET_OF
     software_cloud {
         parent software
     }
     software ||--|| software_cloud : SUBSET_OF
-    software ||--|| cloud : SUBSET_OF
     software ||--|| mobile : SUBSET_OF
     carro {
     }
@@ -151,13 +151,13 @@ erDiagram
     AI ||--|| AI_prompt : SUPERSET_OF
     tools ||--|| AI_prompt : SUPERSET_OF
     scripts ||--|| AI : SUPERSET_OF
+    AI ||--|| tools_AI_prompt : SUBSET_OF
     AI ||--|| AI_prompt : SUBSET_OF
     prompt {
         parent AI
         parent tools_AI
     }
     AI ||--|| prompt : SUBSET_OF
-    AI ||--|| tools_AI_prompt : SUBSET_OF
     AI ||--|| prompt : SUPERSET_OF
     tools_AI {
         child prompt
@@ -167,15 +167,15 @@ erDiagram
         parent github
     }
     github {
-        child jekyll
         child github_jekyll
+        child jekyll
     }
     github ||--|| github_jekyll : SUPERSET_OF
+    github ||--|| github_jekyll : SUBSET_OF
     jekyll {
         parent github
     }
     github ||--|| jekyll : SUBSET_OF
-    github ||--|| github_jekyll : SUBSET_OF
     github ||--|| jekyll : SUPERSET_OF
     fatherhood {
     }
@@ -188,29 +188,29 @@ erDiagram
     }
     edital {
         child edital_direito_processual-penal
-        child direito_processual-penal
-        child edital_direito
         child direito
+        child edital_direito
+        child direito_processual-penal
     }
     edital_direito_processual-penal {
         parent edital
         parent direito
     }
     edital ||--|| edital_direito_processual-penal : SUBSET_OF
-    direito_processual-penal {
-        parent edital
-    }
-    edital ||--|| direito_processual-penal : SUBSET_OF
-    edital_direito {
-        parent edital
-        child processual-penal
-    }
-    edital ||--|| edital_direito : SUBSET_OF
     direito {
         parent edital
         child edital_direito_processual-penal
     }
     edital ||--|| direito : SUBSET_OF
+    edital_direito {
+        parent edital
+        child processual-penal
+    }
+    edital ||--|| edital_direito : SUBSET_OF
+    direito_processual-penal {
+        parent edital
+    }
+    edital ||--|| direito_processual-penal : SUBSET_OF
     trabalho ||..|| estudos : RELATED_TO
     edital ||--|| edital_direito : SUPERSET_OF
     processual-penal {
