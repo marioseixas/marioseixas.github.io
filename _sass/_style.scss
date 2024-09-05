@@ -772,6 +772,10 @@ code[class*="language-"] ::selection {
   z-index: 1;
 }
 
+.token a {
+	color: inherit;
+}	
+
 /* Markup specific token styles  */
 .language-markup {
   .token.tag,
