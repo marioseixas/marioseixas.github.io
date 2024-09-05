@@ -61,28 +61,21 @@
       <h1 class="post-title">{{ page.title }}</h1>
       <div class="post-meta">
         <time datetime="{{ page.date | date_to_xmlschema }}" class="post-date">
-          {{ page.date | date_to_string }}
-        </time>
-        {% if page.last_modified_at %}
-          <span class="post-updated">
-            &rightarrowtail; Updated: 
-            <time datetime="{{ page.last_modified_at | date_to_xmlschema }}">
-              {{ page.last_modified_at | date_to_string }}
-            </time>
+          {{ page.date | date_to_string }}</time>{% if page.last_modified_at %}<span class="post-updated"> &rightarrowtail; <time datetime="{{ page.last_modified_at | date_to_xmlschema }}">{{ page.last_modified_at | date_to_string }}
+          </time>
           </span>
         {% endif %}
-        {% if page.tags %}
-          <div class="post-tags">
-            Tags:
-            {% for tag in page.tags %}
-              <a href="{{ site.url }}{{ site.baseurl }}/tags/#{{ tag | slugify }}" class="tag">{{ tag }}</a>{% unless forloop.last %},{% endunless %}
-            {% endfor %}
-          </div>
-        {% endif %}
         {% if page.info %}
-          <div class="post-info">
-            Edit: {{ page.info }}
-          </div>
+        <div class="post-info">
+          Edit: {{ page.info }}
+        </div>
+        {% endif %}
+        {% if page.tags %}
+        <div class="post-tags">
+          Tags:
+          {% for tag in page.tags %}
+          <a href="{{ site.url }}{{ site.baseurl }}/tags/#{{ tag | slugify }}" class="tag">{{ tag }}</a>{% unless forloop.last %},{% endunless %}{% endfor %}
+        </div>
         {% endif %}
         <div class="post-actions">
           <a href="https://github.com/marioseixas/marioseixas.github.io/edit/main/{{ page.path }}" target="_blank" rel="noopener noreferrer" class="btn-primary">
