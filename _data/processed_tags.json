@@ -705,19 +705,25 @@
         "parents": [],
         "children": [
             "mobile",
-            "AI",
-            "scripts>AI",
-            "cloud",
-            "google-apps-script",
-            "scripts>cloud",
             "scripts>mobile",
-            "scripts>google-apps-script"
+            "scripts>AI",
+            "scripts>google-apps-script",
+            "AI",
+            "scripts>cloud",
+            "cloud",
+            "google-apps-script"
         ],
         "related": {
             "linux": 26,
             "estudos": 2
         },
         "posts": [
+            {
+                "title": "base64",
+                "url": "/base64",
+                "highlighted": true,
+                "date": "2024-09-06T00:00:00"
+            },
             {
                 "title": "Longer inputs on WHISPER API",
                 "url": "/longer-inputs-on-whisper-api",
@@ -950,8 +956,8 @@
     "tools": {
         "parents": [],
         "children": [
-            "tools>AI>prompt",
-            "AI>prompt"
+            "AI>prompt",
+            "tools>AI>prompt"
         ],
         "related": {},
         "posts": [
@@ -1066,8 +1072,8 @@
     },
     "mobile": {
         "parents": [
-            "scripts",
-            "software"
+            "software",
+            "scripts"
         ],
         "children": [],
         "related": {},
@@ -1119,10 +1125,10 @@
     "software": {
         "parents": [],
         "children": [
+            "cloud",
             "mobile",
-            "software>mobile",
             "software>cloud",
-            "cloud"
+            "software>mobile"
         ],
         "related": {},
         "posts": [
@@ -1231,8 +1237,8 @@
     },
     "cloud": {
         "parents": [
-            "scripts",
-            "software"
+            "software",
+            "scripts"
         ],
         "children": [],
         "related": {},
@@ -1288,8 +1294,8 @@
     "tasks": {
         "parents": [],
         "children": [
-            "tasks>iphone",
-            "iphone"
+            "iphone",
+            "tasks>iphone"
         ],
         "related": {},
         "posts": [
@@ -1375,8 +1381,8 @@
     },
     "AI>prompt": {
         "parents": [
-            "AI",
-            "tools"
+            "tools",
+            "AI"
         ],
         "children": [],
         "related": {},
@@ -1412,9 +1418,9 @@
             "scripts"
         ],
         "children": [
-            "tools>AI>prompt",
+            "AI>prompt",
             "prompt",
-            "AI>prompt"
+            "tools>AI>prompt"
         ],
         "related": {},
         "posts": [
@@ -1666,10 +1672,10 @@
     "edital": {
         "parents": [],
         "children": [
-            "direito>processual-penal",
-            "direito",
+            "edital>direito>processual-penal",
             "edital>direito",
-            "edital>direito>processual-penal"
+            "direito>processual-penal",
+            "direito"
         ],
         "related": {},
         "posts": [
@@ -1940,8 +1946,8 @@
     },
     "tools>AI>prompt": {
         "parents": [
-            "AI",
-            "tools"
+            "tools",
+            "AI"
         ],
         "children": [],
         "related": {},
