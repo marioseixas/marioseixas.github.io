@@ -105,13 +105,10 @@
         </a>
         {% endif %}
     </main>
-    <hr>
-    <a href="#" class="back-to-top" aria-label="Back to top">
-      <img src="{{ '/assets/gold.ico' | relative_url }}" alt="Back to top">
-    </a>
+    <hr>    
     {% if page.comment %}
     <div class="comment-box">
-      {{ page.comment }}
+      <a href="#" aria-label="Back to top"><img src="{{ '/assets/gold.ico' | relative_url }}" alt="Back to top"></a><a href="{{ page.comment }}" title="page.comment">{{ page.comment }}</a>
     </div>
     {% endif %}
   </article>
