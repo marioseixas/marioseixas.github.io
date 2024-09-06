@@ -704,14 +704,14 @@
     "scripts": {
         "parents": [],
         "children": [
-            "mobile",
-            "scripts>cloud",
-            "AI",
-            "cloud",
-            "scripts>google-apps-script",
             "scripts>mobile",
+            "AI",
+            "google-apps-script",
+            "scripts>cloud",
+            "cloud",
             "scripts>AI",
-            "google-apps-script"
+            "mobile",
+            "scripts>google-apps-script"
         ],
         "related": {
             "linux": 26,
@@ -1066,8 +1066,8 @@
     },
     "mobile": {
         "parents": [
-            "scripts",
-            "software"
+            "software",
+            "scripts"
         ],
         "children": [],
         "related": {},
@@ -1119,10 +1119,10 @@
     "software": {
         "parents": [],
         "children": [
-            "mobile",
             "software>cloud",
-            "cloud",
-            "software>mobile"
+            "mobile",
+            "software>mobile",
+            "cloud"
         ],
         "related": {},
         "posts": [
@@ -1231,8 +1231,8 @@
     },
     "cloud": {
         "parents": [
-            "scripts",
-            "software"
+            "software",
+            "scripts"
         ],
         "children": [],
         "related": {},
@@ -1375,8 +1375,8 @@
     },
     "AI>prompt": {
         "parents": [
-            "AI",
-            "tools"
+            "tools",
+            "AI"
         ],
         "children": [],
         "related": {},
@@ -1412,9 +1412,9 @@
             "scripts"
         ],
         "children": [
-            "prompt",
             "AI>prompt",
-            "tools>AI>prompt"
+            "tools>AI>prompt",
+            "prompt"
         ],
         "related": {},
         "posts": [
@@ -1666,9 +1666,9 @@
     "edital": {
         "parents": [],
         "children": [
+            "direito",
             "direito>processual-penal",
             "edital>direito",
-            "direito",
             "edital>direito>processual-penal"
         ],
         "related": {},
@@ -1940,8 +1940,8 @@
     },
     "tools>AI>prompt": {
         "parents": [
-            "AI",
-            "tools"
+            "tools",
+            "AI"
         ],
         "children": [],
         "related": {},
