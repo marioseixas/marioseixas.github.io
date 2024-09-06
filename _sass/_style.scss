@@ -259,6 +259,7 @@ html {
     display: inline-block;
     padding: 0.5em;
     transition: all 0.3s ease;
+    width: 100%;	
 }
 .search-link:hover, .search-link:focus {
     background-color: rgba(var(--accents-dodgerblue), 0.2);
