@@ -48,7 +48,7 @@
     <title>infoBAG</title>
     <link href="https://ib.bsb.br/rss.xml" rel="self"/>
     <link href="https://ib.bsb.br/"/>
-    <updated>2024-09-06T18:09:44+00:00</updated>
+    <updated>2024-09-06T18:35:53+00:00</updated>
     <id>https://ib.bsb.br</id>
     <author>
         <name></name>
@@ -52626,7 +52626,110 @@ Stats: &lt;span id=&quot;characterCount&quot; class=&quot;badge badge-light&quot
         <link href="https://ib.bsb.br/pomo/"/>
         <updated>1991-07-25T00:00:00+00:00</updated>
         <id>https://ib.bsb.br/pomo/</id>
-        <content type="html">&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;div class=&quot;container&quot;&amp;gt;
+        <content type="html">&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;style&amp;gt;
+    body {
+        font-family: Arial, sans-serif;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 2rem;
+        background-color: #f0f0f0;
+    }
+    .container {
+        text-align: center;
+        background-color: white;
+        padding: 2rem;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        margin-bottom: 2rem;
+        box-sizing: border-box;
+    }
+    #timer {
+        font-size: 4rem;
+        margin-bottom: 1rem;
+    }
+    button, select, input {
+        font-size: 1rem;
+        padding: 0.5rem 1rem;
+        margin: 0.5rem;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+    #startBtn {
+        background-color: #4CAF50;
+        color: white;
+    }
+    #startBtn:hover {
+        background-color: #45a049;
+    }
+    #resetBtn, #endBtn {
+        background-color: #f44336;
+        color: white;
+    }
+    #resetBtn:hover, #endBtn:hover {
+        background-color: #da190b;
+    }
+    select {
+        background-color: #3498db;
+        color: white;
+        -webkit-appearance: none;
+        padding: 0.5rem 1rem;
+        margin: 0.5rem;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+    select:hover {
+        background-color: #2980b9;
+    }
+    #goalInput {
+        width: calc(100% - 1.5em);
+        padding: 0.5rem;
+        margin-bottom: 1rem;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-sizing: border-box;
+    }
+    #sessionLog {
+        width: 100%;
+        max-width: 800px;
+        margin-top: 2rem;
+        overflow-x: auto;
+    }
+    #sessionLog table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+    #sessionLog th, #sessionLog td {
+        border: 1px solid #ddd;
+        padding: 8px;
+        text-align: left;
+    }
+    #sessionLog th {
+        background-color: #f2f2f2;
+    }
+    #jsonOutput {
+        width: 100%;
+        height: 200px;
+        margin-top: 2rem;
+        font-family: monospace;
+    }
+    .deleteBtn {
+        background-color: transparent;
+        border: none;
+        color: #f44336;
+        cursor: pointer;
+        font-size: 1.2rem;
+        padding: 0.2rem 0.5rem;
+    }
+    .deleteBtn:hover {
+        color: #da190b;
+    }
+&amp;lt;/style&amp;gt;
+&amp;lt;div class=&quot;container&quot;&amp;gt;
     &amp;lt;h1&amp;gt;Pomodoro Timer&amp;lt;/h1&amp;gt;
     &amp;lt;input type=&quot;text&quot; id=&quot;goalInput&quot; placeholder=&quot;Enter your goal for this session&quot; required&amp;gt;
     &amp;lt;div id=&quot;timer&quot;&amp;gt;25:00&amp;lt;/div&amp;gt;
