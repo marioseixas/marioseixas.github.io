@@ -85,8 +85,10 @@
     
      <a href="#prerequisites">#</a>Prerequisites
     
-    <img src="/assets/gold.ico" alt="gold icon"></h3>
-    
+    <a href="#" class="back-to-top" aria-label="Back to top">
+    <img src="/assets/gold.ico" alt="gold icon"></a>
+  </h3>
+      
 
 <ol>
   <li><strong>ISO File</strong>: Ensure you have downloaded the Windows ISO file you want to use.</li>
@@ -98,15 +100,19 @@
     
      <a href="#step-by-step-guide">#</a>Step-by-Step Guide
     
-    <img src="/assets/gold.ico" alt="gold icon"></h3>
-    
+    <a href="#" class="back-to-top" aria-label="Back to top">
+    <img src="/assets/gold.ico" alt="gold icon"></a>
+  </h3>
+      
   <h4 id="step-1-identify-the-usb-drive">
     
     
      <a href="#step-1-identify-the-usb-drive">#</a>Step 1: Identify the USB Drive
     
-    <img src="/assets/gold.ico" alt="gold icon"></h4>
-    
+    <a href="#" class="back-to-top" aria-label="Back to top">
+    <img src="/assets/gold.ico" alt="gold icon"></a>
+  </h4>
+      
 
 <ol>
   <li>Open a terminal.</li>
@@ -124,8 +130,10 @@
     
      <a href="#step-2-unmount-the-usb-drive">#</a>Step 2: Unmount the USB Drive
     
-    <img src="/assets/gold.ico" alt="gold icon"></h4>
-    
+    <a href="#" class="back-to-top" aria-label="Back to top">
+    <img src="/assets/gold.ico" alt="gold icon"></a>
+  </h4>
+      
 
 <p>Before writing to the USB drive, you need to unmount it. Replace <code class="language-plaintext highlighter-rouge">/dev/sdX1</code> with the actual partition of your USB drive (e.g., <code class="language-plaintext highlighter-rouge">/dev/sdb1</code>).</p>
 
@@ -141,8 +149,10 @@
     
      <a href="#step-3-write-the-iso-to-the-usb-drive">#</a>Step 3: Write the ISO to the USB Drive
     
-    <img src="/assets/gold.ico" alt="gold icon"></h4>
-    
+    <a href="#" class="back-to-top" aria-label="Back to top">
+    <img src="/assets/gold.ico" alt="gold icon"></a>
+  </h4>
+      
 
 <p>Now, you can use the <code class="language-plaintext highlighter-rouge">dd</code> command to write the ISO file to the USB drive. Replace <code class="language-plaintext highlighter-rouge">/path/to/your.iso</code> with the path to your ISO file and <code class="language-plaintext highlighter-rouge">/dev/sdX</code> with your USB drive (without the partition number).</p>
 
@@ -162,8 +172,10 @@
     
      <a href="#step-4-wait-for-the-process-to-complete">#</a>Step 4: Wait for the Process to Complete
     
-    <img src="/assets/gold.ico" alt="gold icon"></h4>
-    
+    <a href="#" class="back-to-top" aria-label="Back to top">
+    <img src="/assets/gold.ico" alt="gold icon"></a>
+  </h4>
+      
 
 <p>The <code class="language-plaintext highlighter-rouge">dd</code> command will take some time to complete, depending on the size of the ISO and the speed of your USB drive. Once it finishes, you will see a summary of how many bytes were copied.</p>
   <h4 id="step-5-sync-and-eject-the-usb-drive">
@@ -171,8 +183,10 @@
     
      <a href="#step-5-sync-and-eject-the-usb-drive">#</a>Step 5: Sync and Eject the USB Drive
     
-    <img src="/assets/gold.ico" alt="gold icon"></h4>
-    
+    <a href="#" class="back-to-top" aria-label="Back to top">
+    <img src="/assets/gold.ico" alt="gold icon"></a>
+  </h4>
+      
 
 <p>After the <code class="language-plaintext highlighter-rouge">dd</code> command completes, it’s a good practice to ensure all data is written to the USB drive before removing it. Run the following command:</p>
 
@@ -190,8 +204,10 @@
     
      <a href="#important-considerations">#</a>Important Considerations
     
-    <img src="/assets/gold.ico" alt="gold icon"></h3>
-    
+    <a href="#" class="back-to-top" aria-label="Back to top">
+    <img src="/assets/gold.ico" alt="gold icon"></a>
+  </h3>
+      
 
 <ul>
   <li><strong>Double-Check Device Names</strong>: Be very careful with the <code class="language-plaintext highlighter-rouge">of=</code> parameter. If you specify the wrong device, you could overwrite important data on your hard drive.</li>
