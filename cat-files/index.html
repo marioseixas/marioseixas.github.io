@@ -96,8 +96,13 @@
 </ol>
 
 <p>Here is a detailed list of what you need:</p>
-      <h3 id="1-paths-to-files-or-directories">> <a href="#1-paths-to-files-or-directories">#</a>1. Paths to Files or Directories<a href="#" aria-label="Back to top"><img src="/assets/gold.ico" alt="gold icon"></a>
-      </h3>
+  <h3 id="1-paths-to-files-or-directories">
+    
+    
+     <a href="#1-paths-to-files-or-directories">#</a><img src="/assets/gold.ico" alt="gold icon"><a href="#" aria-label="Back to top">1. Paths to Files or Directories</a>
+        
+    
+  </h3>
       
 
 <p>You need to provide at least one path to a file or directory. These are specified as arguments to the script.</p>
@@ -105,8 +110,13 @@
 <p>Example:</p>
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><section><code>/path/to/directory1 /path/to/file1.txt
 </code></section></div></div>
-      <h3 id="2-gitignore-files-optional">> <a href="#2-gitignore-files-optional">#</a>2. .gitignore Files (optional)<a href="#" aria-label="Back to top"><img src="/assets/gold.ico" alt="gold icon"></a>
-      </h3>
+  <h3 id="2-gitignore-files-optional">
+    
+    
+     <a href="#2-gitignore-files-optional">#</a><img src="/assets/gold.ico" alt="gold icon"><a href="#" aria-label="Back to top">2. .gitignore Files (optional)</a>
+        
+    
+  </h3>
       
 
 <p>If you want the script to respect <code class="language-plaintext highlighter-rouge">.gitignore</code> rules, you should have <code class="language-plaintext highlighter-rouge">.gitignore</code> files in the directories you provide. The script will read these files to ignore certain files and directories.</p>
@@ -114,8 +124,13 @@
 <p>Example:</p>
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><section><code>/path/to/directory1/.gitignore
 </code></section></div></div>
-      <h3 id="3-jinja2-template-file-optional">> <a href="#3-jinja2-template-file-optional">#</a>3. Jinja2 Template File (optional)<a href="#" aria-label="Back to top"><img src="/assets/gold.ico" alt="gold icon"></a>
-      </h3>
+  <h3 id="3-jinja2-template-file-optional">
+    
+    
+     <a href="#3-jinja2-template-file-optional">#</a><img src="/assets/gold.ico" alt="gold icon"><a href="#" aria-label="Back to top">3. Jinja2 Template File (optional)</a>
+        
+    
+  </h3>
       
 
 <p>If you want to format the output using a Jinja2 template, you need to provide a template file and specify its path using the <code class="language-plaintext highlighter-rouge">--template-file</code> or <code class="language-plaintext highlighter-rouge">-t</code> option.</p>
@@ -123,16 +138,26 @@
 <p>Example:</p>
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><section><code>/path/to/template.jinja2
 </code></section></div></div>
-      <h3 id="running-the-script">> <a href="#running-the-script">#</a>Running the Script<a href="#" aria-label="Back to top"><img src="/assets/gold.ico" alt="gold icon"></a>
-      </h3>
+  <h3 id="running-the-script">
+    
+    
+     <a href="#running-the-script">#</a><img src="/assets/gold.ico" alt="gold icon"><a href="#" aria-label="Back to top">Running the Script</a>
+        
+    
+  </h3>
       
 
 <p>To run the script with these inputs, you would use a command like:</p>
 
 <div class="language-sh highlighter-rouge"><div class="highlight"><section><code>python3 your_script.py /path/to/directory1 /path/to/directory2 <span class="nt">-t</span> /path/to/template.jinja2
 </code></section></div></div>
-      <h3 id="sample-gitignore">> <a href="#sample-gitignore">#</a>Sample .gitignore<a href="#" aria-label="Back to top"><img src="/assets/gold.ico" alt="gold icon"></a>
-      </h3>
+  <h3 id="sample-gitignore">
+    
+    
+     <a href="#sample-gitignore">#</a><img src="/assets/gold.ico" alt="gold icon"><a href="#" aria-label="Back to top">Sample .gitignore</a>
+        
+    
+  </h3>
       
 
 <p>Here is a sample <code class="language-plaintext highlighter-rouge">.gitignore</code> file that you might place in your directories:</p>
@@ -146,8 +171,13 @@ temp/
 # Ignore a specific file
 ignore_this_file.txt
 </code></section></div></div>
-      <h3 id="sample-jinja2-template">> <a href="#sample-jinja2-template">#</a>Sample Jinja2 Template<a href="#" aria-label="Back to top"><img src="/assets/gold.ico" alt="gold icon"></a>
-      </h3>
+  <h3 id="sample-jinja2-template">
+    
+    
+     <a href="#sample-jinja2-template">#</a><img src="/assets/gold.ico" alt="gold icon"><a href="#" aria-label="Back to top">Sample Jinja2 Template</a>
+        
+    
+  </h3>
       
 
 <p>Here is a sample Jinja2 template (<code class="language-plaintext highlighter-rouge">template.jinja2</code>) that you might use:</p>
@@ -239,8 +269,13 @@ Index:
 
 ---
 </code></section>
-      <h1 id="python-script">> <a href="#python-script">#</a>python script:<a href="#" aria-label="Back to top"><img src="/assets/gold.ico" alt="gold icon"></a>
-      </h1>
+  <h1 id="python-script">
+    
+    
+     <a href="#python-script">#</a><img src="/assets/gold.ico" alt="gold icon"><a href="#" aria-label="Back to top">python script:</a>
+        
+    
+  </h1>
       
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><section><code>import os
@@ -404,8 +439,13 @@ def cli(paths, include_hidden, ignore_gitignore, ignore_patterns, template_file)
             index,
         )
 </code></section></div></div>
-      <h1 id="bash-script">> <a href="#bash-script">#</a>bash script:<a href="#" aria-label="Back to top"><img src="/assets/gold.ico" alt="gold icon"></a>
-      </h1>
+  <h1 id="bash-script">
+    
+    
+     <a href="#bash-script">#</a><img src="/assets/gold.ico" alt="gold icon"><a href="#" aria-label="Back to top">bash script:</a>
+        
+    
+  </h1>
       
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><section><code>
