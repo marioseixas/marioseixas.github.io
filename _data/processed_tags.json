@@ -704,14 +704,14 @@
     "scripts": {
         "parents": [],
         "children": [
+            "cloud",
+            "google-apps-script",
             "AI",
             "scripts>google-apps-script",
-            "scripts>cloud",
-            "mobile",
-            "scripts>mobile",
             "scripts>AI",
-            "cloud",
-            "google-apps-script"
+            "scripts>mobile",
+            "mobile",
+            "scripts>cloud"
         ],
         "related": {
             "linux": 26,
@@ -1010,6 +1010,12 @@
                 "date": "1991-07-25T00:00:00"
             },
             {
+                "title": "1991-07-25-rm-space",
+                "url": "/rm-space",
+                "highlighted": true,
+                "date": "1991-07-25T00:00:00"
+            },
+            {
                 "title": "1991-07-25-dedup-spaces",
                 "url": "/dedup-spaces",
                 "highlighted": true,
@@ -1066,8 +1072,8 @@
     },
     "mobile": {
         "parents": [
-            "software",
-            "scripts"
+            "scripts",
+            "software"
         ],
         "children": [],
         "related": {},
@@ -1119,10 +1125,10 @@
     "software": {
         "parents": [],
         "children": [
-            "software>cloud",
+            "mobile",
             "software>mobile",
-            "cloud",
-            "mobile"
+            "software>cloud",
+            "cloud"
         ],
         "related": {},
         "posts": [
@@ -1231,8 +1237,8 @@
     },
     "cloud": {
         "parents": [
-            "software",
-            "scripts"
+            "scripts",
+            "software"
         ],
         "children": [],
         "related": {},
@@ -1375,8 +1381,8 @@
     },
     "AI>prompt": {
         "parents": [
-            "AI",
-            "tools"
+            "tools",
+            "AI"
         ],
         "children": [],
         "related": {},
@@ -1412,8 +1418,8 @@
             "scripts"
         ],
         "children": [
-            "tools>AI>prompt",
             "prompt",
+            "tools>AI>prompt",
             "AI>prompt"
         ],
         "related": {},
@@ -1470,8 +1476,8 @@
     },
     "prompt": {
         "parents": [
-            "AI",
-            "tools>AI"
+            "tools>AI",
+            "AI"
         ],
         "children": [],
         "related": {},
@@ -1526,8 +1532,8 @@
     "github": {
         "parents": [],
         "children": [
-            "jekyll",
-            "github>jekyll"
+            "github>jekyll",
+            "jekyll"
         ],
         "related": {},
         "posts": [
@@ -1667,9 +1673,9 @@
         "parents": [],
         "children": [
             "edital>direito>processual-penal",
-            "direito>processual-penal",
             "edital>direito",
-            "direito"
+            "direito",
+            "direito>processual-penal"
         ],
         "related": {},
         "posts": [
@@ -1816,8 +1822,8 @@
     },
     "edital>direito>processual-penal": {
         "parents": [
-            "edital",
-            "direito"
+            "direito",
+            "edital"
         ],
         "children": [],
         "related": {},
@@ -1940,8 +1946,8 @@
     },
     "tools>AI>prompt": {
         "parents": [
-            "AI",
-            "tools"
+            "tools",
+            "AI"
         ],
         "children": [],
         "related": {},
