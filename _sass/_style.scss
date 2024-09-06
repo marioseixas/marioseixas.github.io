@@ -78,6 +78,9 @@ html {
     justify-content: center;
     padding: 1rem;
     text-align: center;
+    width: 100%;
+}
+
 }
 .header-container .search-link {
     margin-top: 10px;
@@ -223,7 +226,7 @@ html {
     line-height: var(--line-height-base);
     margin: auto 0 auto 0;
     max-width: 100vw;
-    padding: 1em;
+    padding: 0;
     text-align: left;
 }
 .post-heading .info {
