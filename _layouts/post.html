@@ -85,9 +85,6 @@
       {% if page.layout=='post' and page.previous %}
       <div class="nav-arrow prev">
         <a href="{{ page.previous.url | relative_url }}" title="{{ page.previous.title }}">
-          <span class="sr-only">
-            {{ "Anterior:" | t: page.locale }}
-          </span>
           <span aria-hidden="true">&#8672;</span>
         </a>
       </div>
@@ -95,9 +92,6 @@
       {% if page.layout=='post' and page.next %}
       <div class="nav-arrow next">
         <a href="{{ page.next.url | relative_url }}" title="{{ page.next.title }}">
-          <span class="sr-only">
-            {{ "Seguinte:" | t: page.locale }}
-          </span>
           <span aria-hidden="true">&#8674;</span>
         </a>
         {% endif %}
