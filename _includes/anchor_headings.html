@@ -153,9 +153,9 @@
   <h{{ _hAttrToStrip }}
     {{ include.bodyPrefix }}
     {% if beforeHeading %}
-    {{ anchor }}<img src="{{ '/assets/gold.ico' | relative_url }}" alt="gold icon"><a href="#" aria-label="Back to top">{{ header }}</a>
+    {{ anchor }}<a href="#" aria-label="Back to top">{{ header }}</a>
     {% else %}
-    {{ anchor }}<img src="{{ '/assets/gold.ico' | relative_url }}" alt="gold icon"><a href="#" aria-label="Back to top">{{ header }}</a>
+    {{ anchor }}<a href="#" aria-label="Back to top">{{ header }}</a>
     {% endif %}    
     
   </h{{ headerLevel }}>
