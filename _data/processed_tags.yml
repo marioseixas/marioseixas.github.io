@@ -793,10 +793,6 @@
     url: /jejum
   tag: saúde
 - posts:
-  - date: 2024-09-06 00:00:00
-    highlighted: true
-    title: base64
-    url: /base64
   - date: *id012
     highlighted: false
     title: Longer inputs on WHISPER API

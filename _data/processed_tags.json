@@ -704,26 +704,20 @@
     "scripts": {
         "parents": [],
         "children": [
-            "scripts>mobile",
-            "scripts>cloud",
-            "cloud",
-            "scripts>AI",
             "AI",
             "scripts>google-apps-script",
-            "google-apps-script",
-            "mobile"
+            "scripts>cloud",
+            "mobile",
+            "scripts>mobile",
+            "scripts>AI",
+            "cloud",
+            "google-apps-script"
         ],
         "related": {
             "linux": 26,
             "estudos": 2
         },
         "posts": [
-            {
-                "title": "base64",
-                "url": "/base64",
-                "highlighted": true,
-                "date": "2024-09-06T00:00:00"
-            },
             {
                 "title": "Longer inputs on WHISPER API",
                 "url": "/longer-inputs-on-whisper-api",
@@ -1127,8 +1121,8 @@
         "children": [
             "software>cloud",
             "software>mobile",
-            "mobile",
-            "cloud"
+            "cloud",
+            "mobile"
         ],
         "related": {},
         "posts": [
@@ -1294,8 +1288,8 @@
     "tasks": {
         "parents": [],
         "children": [
-            "tasks>iphone",
-            "iphone"
+            "iphone",
+            "tasks>iphone"
         ],
         "related": {},
         "posts": [
@@ -1532,8 +1526,8 @@
     "github": {
         "parents": [],
         "children": [
-            "github>jekyll",
-            "jekyll"
+            "jekyll",
+            "github>jekyll"
         ],
         "related": {},
         "posts": [
@@ -1672,10 +1666,10 @@
     "edital": {
         "parents": [],
         "children": [
-            "direito",
             "edital>direito>processual-penal",
             "direito>processual-penal",
-            "edital>direito"
+            "edital>direito",
+            "direito"
         ],
         "related": {},
         "posts": [
