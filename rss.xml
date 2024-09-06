@@ -48,7 +48,7 @@
     <title>infoBAG</title>
     <link href="https://ib.bsb.br/rss.xml" rel="self"/>
     <link href="https://ib.bsb.br/"/>
-    <updated>2024-09-06T10:31:36+00:00</updated>
+    <updated>2024-09-06T10:35:53+00:00</updated>
     <id>https://ib.bsb.br</id>
     <author>
         <name></name>
@@ -53316,8 +53316,5 @@ updatecounts(); }
 
       </main>
     </article>
-    <a href="#" class="back-to-top" aria-label="Back to top">
-      <img src="/assets/gold.ico" alt="Back to top">
-    </a>
   </body>
 </html>
