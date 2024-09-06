@@ -80,14 +80,8 @@
     <main class="content">
       
 <ul><li><a href="#enabling-billing-alerts">Enabling Billing Alerts</a></li><li><a href="#creating-a-billing-alarm">Creating a Billing Alarm</a></li><li><a href="#automating-billing-alerts-with-push-notifications">Automating Billing Alerts with Push Notifications</a></li><li><a href="#integrating-two-factor-authentication-2fa">Integrating Two-Factor Authentication (2FA)</a></li></ul>
-      <h3 id="enabling-billing-alerts">
-    
-    
-     <a href="#enabling-billing-alerts">#</a>Enabling Billing Alerts
-    
-    <a href="#" class="back-to-top" aria-label="Back to top">
-    <img src="/assets/gold.ico" alt="gold icon"></a>
-  </h3>
+      <h3 id="enabling-billing-alerts">> <a href="#enabling-billing-alerts">#</a>Enabling Billing Alerts<a href="#" aria-label="Back to top"><img src="/assets/gold.ico" alt="gold icon"></a>
+      </h3>
       
 
 <p>Before creating a billing alarm, you must enable billing alerts to monitor your estimated AWS charges. This process involves enabling billing metric data collection, which cannot be disabled once activated, although you can delete any billing alarms you create. Here are the steps to enable billing alerts:</p>
@@ -102,14 +96,8 @@
 </ol>
 
 <p>After enabling billing alerts, it takes approximately 15 minutes before you can view billing data and set billing alarms.</p>
-  <h3 id="creating-a-billing-alarm">
-    
-    
-     <a href="#creating-a-billing-alarm">#</a>Creating a Billing Alarm
-    
-    <a href="#" class="back-to-top" aria-label="Back to top">
-    <img src="/assets/gold.ico" alt="gold icon"></a>
-  </h3>
+      <h3 id="creating-a-billing-alarm">> <a href="#creating-a-billing-alarm">#</a>Creating a Billing Alarm<a href="#" aria-label="Back to top"><img src="/assets/gold.ico" alt="gold icon"></a>
+      </h3>
       
 
 <p>Once billing alerts are enabled, you can create a billing alarm to receive notifications when your estimated charges exceed a specified threshold. Follow these steps to create a billing alarm using the CloudWatch console:</p>
@@ -137,14 +125,8 @@
   <li><strong>Notification Setup</strong>: Under <strong>Notification</strong>, ensure <strong>In alarm</strong> is selected. Specify an Amazon SNS topic to be notified when the alarm is in the <code class="language-plaintext highlighter-rouge">ALARM</code> state. This can include your email address for notifications.</li>
   <li><strong>Finalize Alarm</strong>: Enter a name and optional description for your alarm, review the configuration, and choose <strong>Create alarm</strong>.</li>
 </ol>
-  <h3 id="automating-billing-alerts-with-push-notifications">
-    
-    
-     <a href="#automating-billing-alerts-with-push-notifications">#</a>Automating Billing Alerts with Push Notifications
-    
-    <a href="#" class="back-to-top" aria-label="Back to top">
-    <img src="/assets/gold.ico" alt="gold icon"></a>
-  </h3>
+      <h3 id="automating-billing-alerts-with-push-notifications">> <a href="#automating-billing-alerts-with-push-notifications">#</a>Automating Billing Alerts with Push Notifications<a href="#" aria-label="Back to top"><img src="/assets/gold.ico" alt="gold icon"></a>
+      </h3>
       
 
 <p>To automate billing alerts and receive them as push notifications on your iPhone using a service like Pushsafer, follow these steps:</p>
@@ -166,14 +148,8 @@
   <li><strong>Confirm Subscription</strong>: Pushsafer will send a confirmation request to the specified endpoint. Confirm the subscription in your Pushsafer account.</li>
   <li><strong>Attach SNS Topic to CloudWatch Alarm</strong>: When setting up the CloudWatch alarm, specify the SNS topic created above for notifications.</li>
 </ol>
-  <h3 id="integrating-two-factor-authentication-2fa">
-    
-    
-     <a href="#integrating-two-factor-authentication-2fa">#</a>Integrating Two-Factor Authentication (2FA)
-    
-    <a href="#" class="back-to-top" aria-label="Back to top">
-    <img src="/assets/gold.ico" alt="gold icon"></a>
-  </h3>
+      <h3 id="integrating-two-factor-authentication-2fa">> <a href="#integrating-two-factor-authentication-2fa">#</a>Integrating Two-Factor Authentication (2FA)<a href="#" aria-label="Back to top"><img src="/assets/gold.ico" alt="gold icon"></a>
+      </h3>
       
 
 <p>To enhance security, integrate two-factor authentication (2FA) for accessing your AWS account. This ensures that only authorized users can modify billing alerts and access sensitive billing information. Here’s how to enable 2FA:</p>

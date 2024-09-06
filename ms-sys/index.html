@@ -80,14 +80,8 @@
     <main class="content">
       
 <ul><li><a href="#install-ms-sys">Install ms-sys</a></li><li><a href="#gparted-to-make-an-ntfs-partition">GParted to make an NTFS partition</a></li><li><a href="#ms-sys-to-write-a-mbr">ms-sys to write a MBR</a></li><li><a href="#copy-the-files-from-the-windows-iso-to-the-ntfs-partition">Copy the files from the Windows ISO to the NTFS partition</a></li><li><a href="#boot-from-the-usb-drive">Boot from the USB Drive</a></li></ul>
-      <h1 id="install-ms-sys">
-    
-    
-     <a href="#install-ms-sys">#</a>Install ms-sys
-    
-    <a href="#" class="back-to-top" aria-label="Back to top">
-    <img src="/assets/gold.ico" alt="gold icon"></a>
-  </h1>
+      <h1 id="install-ms-sys">> <a href="#install-ms-sys">#</a>Install ms-sys<a href="#" aria-label="Back to top"><img src="/assets/gold.ico" alt="gold icon"></a>
+      </h1>
       
 <p>You will need ms-sys to write a Master Boot Record (MBR) to the USB drive.</p>
 
@@ -120,14 +114,8 @@
 <p><code class="language-plaintext highlighter-rouge">su -</code></p>
 
 <p><code class="language-plaintext highlighter-rouge">export PATH=$PATH:/usr/local/bin</code></p>
-  <h1 id="gparted-to-make-an-ntfs-partition">
-    
-    
-     <a href="#gparted-to-make-an-ntfs-partition">#</a>GParted to make an NTFS partition
-    
-    <a href="#" class="back-to-top" aria-label="Back to top">
-    <img src="/assets/gold.ico" alt="gold icon"></a>
-  </h1>
+      <h1 id="gparted-to-make-an-ntfs-partition">> <a href="#gparted-to-make-an-ntfs-partition">#</a>GParted to make an NTFS partition<a href="#" aria-label="Back to top"><img src="/assets/gold.ico" alt="gold icon"></a>
+      </h1>
       
 
 <p>Once you have gparted installed, launch it from application launcher, click on dropdown menu in top right corner and select your external USB drive. Make sure that you have selected the correct drive and then click on the “Device” menu. Click on “Create Partition Table…” to completely format the drive.</p>
@@ -139,14 +127,8 @@
 <p>In the “File system:” dropdown menu, select “ntfs” and click on the “Add” button.</p>
 
 <p>Next, click on the green tick button on the top toolbar to apply the changes.</p>
-  <h1 id="ms-sys-to-write-a-mbr">
-    
-    
-     <a href="#ms-sys-to-write-a-mbr">#</a>ms-sys to write a MBR
-    
-    <a href="#" class="back-to-top" aria-label="Back to top">
-    <img src="/assets/gold.ico" alt="gold icon"></a>
-  </h1>
+      <h1 id="ms-sys-to-write-a-mbr">> <a href="#ms-sys-to-write-a-mbr">#</a>ms-sys to write a MBR<a href="#" aria-label="Back to top"><img src="/assets/gold.ico" alt="gold icon"></a>
+      </h1>
       
 
 <p>Run “ms-sys -n” on the partition…</p>
@@ -156,14 +138,8 @@
 <p>…and “ms-sys -7” on the whole USB device itself</p>
 
 <p><code class="language-plaintext highlighter-rouge">ms-sys -7 /dev/sdX</code></p>
-  <h1 id="copy-the-files-from-the-windows-iso-to-the-ntfs-partition">
-    
-    
-     <a href="#copy-the-files-from-the-windows-iso-to-the-ntfs-partition">#</a>Copy the files from the Windows ISO to the NTFS partition
-    
-    <a href="#" class="back-to-top" aria-label="Back to top">
-    <img src="/assets/gold.ico" alt="gold icon"></a>
-  </h1>
+      <h1 id="copy-the-files-from-the-windows-iso-to-the-ntfs-partition">> <a href="#copy-the-files-from-the-windows-iso-to-the-ntfs-partition">#</a>Copy the files from the Windows ISO to the NTFS partition<a href="#" aria-label="Back to top"><img src="/assets/gold.ico" alt="gold icon"></a>
+      </h1>
       
 
 <p>Mount the USB Drive</p>
@@ -185,14 +161,8 @@
 <p>Unmount the USB Drive</p>
 
 <p><code class="language-plaintext highlighter-rouge">sudo umount /mnt/flash</code></p>
-  <h1 id="boot-from-the-usb-drive">
-    
-    
-     <a href="#boot-from-the-usb-drive">#</a>Boot from the USB Drive
-    
-    <a href="#" class="back-to-top" aria-label="Back to top">
-    <img src="/assets/gold.ico" alt="gold icon"></a>
-  </h1>
+      <h1 id="boot-from-the-usb-drive">> <a href="#boot-from-the-usb-drive">#</a>Boot from the USB Drive<a href="#" aria-label="Back to top"><img src="/assets/gold.ico" alt="gold icon"></a>
+      </h1>
       
 
 <p>Plugin the USB drive to the computer you want to install Windows on and boot to USB-HDD or USB-ZIP.</p>
