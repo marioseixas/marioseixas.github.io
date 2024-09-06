@@ -48,7 +48,7 @@
     <title>infoBAG</title>
     <link href="https://ib.bsb.br/rss.xml" rel="self"/>
     <link href="https://ib.bsb.br/"/>
-    <updated>2024-09-06T18:07:45+00:00</updated>
+    <updated>2024-09-06T18:09:44+00:00</updated>
     <id>https://ib.bsb.br</id>
     <author>
         <name></name>
@@ -47902,6 +47902,26 @@ Pense duas vezes antes de se envolver.
     
   &amp;lt;/h3&amp;gt;
   &amp;lt;ul&amp;gt;
+    &amp;lt;a href=&quot;/pomo/&quot;&amp;gt;
+      &amp;lt;h2&amp;gt;
+        Pomo
+      &amp;lt;/h2&amp;gt;
+    &amp;lt;/a&amp;gt;
+  &amp;lt;/ul&amp;gt;
+&amp;lt;/div&amp;gt;
+
+&amp;lt;div class=&quot;search-link&quot;&amp;gt;
+  &amp;lt;h3&amp;gt;
+    &amp;lt;a class=&quot;post-heading&quot; href=&quot;#&quot; id=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&amp;gt;
+      &amp;lt;img src=&quot;/assets/gold.ico&quot; alt=&quot;gold icon&quot;&amp;gt;
+    &amp;lt;/a&amp;gt;
+    1991-07-25
+    
+    &amp;amp;rightarrowtail; 
+    06 Sep 2024
+    
+  &amp;lt;/h3&amp;gt;
+  &amp;lt;ul&amp;gt;
     &amp;lt;a href=&quot;/rm-space/&quot;&amp;gt;
       &amp;lt;h2&amp;gt;
         Rm Space
@@ -52596,6 +52616,261 @@ Stats: &lt;span id=&quot;characterCount&quot; class=&quot;badge badge-light&quot
         window.getSelection().removeAllRanges();
     }
 
+&amp;lt;/script&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+</content>
+    </entry>
+    
+    <entry>
+        <title>Pomo</title>
+        <link href="https://ib.bsb.br/pomo/"/>
+        <updated>1991-07-25T00:00:00+00:00</updated>
+        <id>https://ib.bsb.br/pomo/</id>
+        <content type="html">&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;div class=&quot;container&quot;&amp;gt;
+    &amp;lt;h1&amp;gt;Pomodoro Timer&amp;lt;/h1&amp;gt;
+    &amp;lt;input type=&quot;text&quot; id=&quot;goalInput&quot; placeholder=&quot;Enter your goal for this session&quot; required&amp;gt;
+    &amp;lt;div id=&quot;timer&quot;&amp;gt;25:00&amp;lt;/div&amp;gt;
+    &amp;lt;select id=&quot;durationSelect&quot;&amp;gt;
+        &amp;lt;option value=&quot;5&quot;&amp;gt;5 minutes&amp;lt;/option&amp;gt;
+        &amp;lt;option value=&quot;10&quot;&amp;gt;10 minutes&amp;lt;/option&amp;gt;
+        &amp;lt;option value=&quot;15&quot;&amp;gt;15 minutes&amp;lt;/option&amp;gt;
+        &amp;lt;option value=&quot;20&quot;&amp;gt;20 minutes&amp;lt;/option&amp;gt;
+        &amp;lt;option value=&quot;25&quot; selected&amp;gt;25 minutes&amp;lt;/option&amp;gt;
+        &amp;lt;option value=&quot;30&quot;&amp;gt;30 minutes&amp;lt;/option&amp;gt;
+        &amp;lt;option value=&quot;45&quot;&amp;gt;45 minutes&amp;lt;/option&amp;gt;
+        &amp;lt;option value=&quot;60&quot;&amp;gt;60 minutes&amp;lt;/option&amp;gt;
+    &amp;lt;/select&amp;gt;
+    &amp;lt;br&amp;gt;
+    &amp;lt;button id=&quot;startBtn&quot;&amp;gt;Start&amp;lt;/button&amp;gt;
+    &amp;lt;button id=&quot;resetBtn&quot;&amp;gt;Reset&amp;lt;/button&amp;gt;
+    &amp;lt;button id=&quot;endBtn&quot;&amp;gt;End Session&amp;lt;/button&amp;gt;
+&amp;lt;/div&amp;gt;
+
+&amp;lt;div id=&quot;sessionLog&quot;&amp;gt;
+    &amp;lt;h2&amp;gt;Session Log&amp;lt;/h2&amp;gt;
+    &amp;lt;table&amp;gt;
+        &amp;lt;thead&amp;gt;
+            &amp;lt;tr&amp;gt;
+                &amp;lt;th&amp;gt;Goal&amp;lt;/th&amp;gt;
+                &amp;lt;th&amp;gt;Start Time&amp;lt;/th&amp;gt;
+                &amp;lt;th&amp;gt;End Time&amp;lt;/th&amp;gt;
+                &amp;lt;th&amp;gt;Duration&amp;lt;/th&amp;gt;
+                &amp;lt;th&amp;gt;Pauses&amp;lt;/th&amp;gt;
+                &amp;lt;th&amp;gt;Action&amp;lt;/th&amp;gt;
+            &amp;lt;/tr&amp;gt;
+        &amp;lt;/thead&amp;gt;
+        &amp;lt;tbody id=&quot;sessionLogBody&quot;&amp;gt;&amp;lt;/tbody&amp;gt;
+    &amp;lt;/table&amp;gt;
+&amp;lt;/div&amp;gt;
+
+&amp;lt;textarea id=&quot;jsonOutput&quot; readonly&amp;gt;&amp;lt;/textarea&amp;gt;
+
+&amp;lt;script&amp;gt;
+    const timerDisplay = document.getElementById(&apos;timer&apos;);
+    const startBtn = document.getElementById(&apos;startBtn&apos;);
+    const resetBtn = document.getElementById(&apos;resetBtn&apos;);
+    const endBtn = document.getElementById(&apos;endBtn&apos;);
+    const durationSelect = document.getElementById(&apos;durationSelect&apos;);
+    const goalInput = document.getElementById(&apos;goalInput&apos;);
+    const sessionLogBody = document.getElementById(&apos;sessionLogBody&apos;);
+    const jsonOutput = document.getElementById(&apos;jsonOutput&apos;);
+
+    let startTime;
+    let timeLeft = 25 * 60; // Default to 25 minutes in seconds
+    let isRunning = false;
+    let duration = 25 * 60; // Default duration in seconds
+    let currentSession = null;
+    let sessions = [];
+
+    // Check if localStorage is available
+    function isLocalStorageAvailable() {
+        try {
+            localStorage.setItem(&apos;test&apos;, &apos;test&apos;);
+            localStorage.removeItem(&apos;test&apos;);
+            return true;
+        } catch (e) {
+            return false;
+        }
+    }
+
+    // Load sessions from storage
+    function loadSessions() {
+        if (isLocalStorageAvailable()) {
+            const storedSessions = localStorage.getItem(&apos;pomodoroSessions&apos;);
+            if (storedSessions) {
+                sessions = JSON.parse(storedSessions);
+            }
+        } else {
+            console.warn(&apos;localStorage is not available. Session data will not persist.&apos;);
+        }
+        updateSessionLog();
+    }
+
+    loadSessions();
+
+    function formatDate(date) {
+        return new Date(date).toLocaleString(&apos;en-US&apos;, {
+            year: &apos;numeric&apos;,
+            month: &apos;2-digit&apos;,
+            day: &apos;2-digit&apos;,
+            hour: &apos;2-digit&apos;,
+            minute: &apos;2-digit&apos;,
+            second: &apos;2-digit&apos;,
+            hour12: true
+        }).replace(&apos;,&apos;, &apos;&apos;);
+    }
+
+    function updateDisplay() {
+        const minutes = Math.floor(timeLeft / 60);
+        const seconds = timeLeft % 60;
+        timerDisplay.textContent = `${minutes.toString().padStart(2, &apos;0&apos;)}:${seconds.toString().padStart(2, &apos;0&apos;)}`;
+    }
+
+    function startTimer() {
+        if (!isRunning) {
+            if (!goalInput.value) {
+                alert(&apos;Please enter a goal for this session.&apos;);
+                return;
+            }
+            isRunning = true;
+            startBtn.textContent = &apos;Pause&apos;;
+            durationSelect.disabled = true;
+            goalInput.disabled = true;
+            if (!currentSession) {
+                currentSession = {
+                    goal: goalInput.value,
+                    startTime: new Date().toISOString(),
+                    endTime: null,
+                    duration: 0,
+                    pauses: []
+                };
+            } else {
+                currentSession.pauses[currentSession.pauses.length - 1].resumeTime = new Date().toISOString();
+            }
+            startTime = Date.now() - ((duration - timeLeft) * 1000);
+            requestAnimationFrame(updateTimer);
+        } else {
+            isRunning = false;
+            startBtn.textContent = &apos;Resume&apos;;
+            currentSession.pauses.push({
+                pauseTime: new Date().toISOString(),
+                resumeTime: null
+            });
+        }
+    }
+
+    function updateTimer() {
+        if (isRunning) {
+            const elapsedTime = Math.floor((Date.now() - startTime) / 1000);
+            timeLeft = duration - elapsedTime;
+
+            if (timeLeft &amp;lt;= 0) {
+                timeLeft = 0;
+                isRunning = false;
+                startBtn.textContent = &apos;Start&apos;;
+                durationSelect.disabled = false;
+                goalInput.disabled = false;
+                endSession();
+                alert(&apos;Pomodoro session complete!&apos;);
+            } else {
+                requestAnimationFrame(updateTimer);
+            }
+
+            updateDisplay();
+        }
+    }
+
+    function resetTimer() {
+        isRunning = false;
+        duration = parseInt(durationSelect.value) * 60;
+        timeLeft = duration;
+        updateDisplay();
+        startBtn.textContent = &apos;Start&apos;;
+        durationSelect.disabled = false;
+        goalInput.disabled = false;
+        currentSession = null;
+    }
+
+    function changeDuration() {
+        if (!isRunning) {
+            duration = parseInt(durationSelect.value) * 60;
+            timeLeft = duration;
+            updateDisplay();
+        }
+    }
+
+    function endSession() {
+        if (currentSession) {
+            currentSession.endTime = new Date().toISOString();
+            currentSession.duration = Math.round((new Date(currentSession.endTime) - new Date(currentSession.startTime)) / 1000);
+            sessions.unshift(currentSession);
+            updateSessionLog();
+            saveSessions();
+            resetTimer();
+        }
+    }
+
+    function updateSessionLog() {
+        sessionLogBody.innerHTML = &apos;&apos;;
+        sessions.forEach((session, index) =&amp;gt; {
+            const row = document.createElement(&apos;tr&apos;);
+            row.innerHTML = `
+                &amp;lt;td&amp;gt;${session.goal}&amp;lt;/td&amp;gt;
+                &amp;lt;td&amp;gt;${formatDate(session.startTime)}&amp;lt;/td&amp;gt;
+                &amp;lt;td&amp;gt;${session.endTime ? formatDate(session.endTime) : &apos;In progress&apos;}&amp;lt;/td&amp;gt;
+                &amp;lt;td&amp;gt;${formatDuration(session.duration)}&amp;lt;/td&amp;gt;
+                &amp;lt;td&amp;gt;${formatPauses(session.pauses)}&amp;lt;/td&amp;gt;
+                &amp;lt;td&amp;gt;&amp;lt;button class=&quot;deleteBtn&quot; data-index=&quot;${index}&quot;&amp;gt;❌&amp;lt;/button&amp;gt;&amp;lt;/td&amp;gt;
+            `;
+            sessionLogBody.appendChild(row);
+        });
+        jsonOutput.value = JSON.stringify(sessions, null, 2);
+
+        // Add event listeners to delete buttons
+        document.querySelectorAll(&apos;.deleteBtn&apos;).forEach(btn =&amp;gt; {
+            btn.addEventListener(&apos;click&apos;, deleteSession);
+        });
+    }
+
+    function deleteSession(event) {
+        const index = parseInt(event.target.getAttribute(&apos;data-index&apos;));
+        sessions.splice(index, 1);
+        updateSessionLog();
+        saveSessions();
+    }
+
+    function formatDuration(seconds) {
+        const minutes = Math.floor(seconds / 60);
+        const remainingSeconds = seconds % 60;
+        return `${minutes}m ${remainingSeconds}s`;
+    }
+
+    function formatPauses(pauses) {
+        return pauses.map(pause =&amp;gt; 
+            `${formatDate(pause.pauseTime)} - ${pause.resumeTime ? formatDate(pause.resumeTime) : &apos;Not resumed&apos;}`
+        ).join(&apos;&amp;lt;br&amp;gt;&apos;);
+    }
+
+    function saveSessions() {
+        if (isLocalStorageAvailable()) {
+            localStorage.setItem(&apos;pomodoroSessions&apos;, JSON.stringify(sessions));
+        }
+    }
+
+    startBtn.addEventListener(&apos;click&apos;, startTimer);
+    resetBtn.addEventListener(&apos;click&apos;, resetTimer);
+    endBtn.addEventListener(&apos;click&apos;, endSession);
+    durationSelect.addEventListener(&apos;change&apos;, changeDuration);
+
+    // Keyboard shortcut
+    document.addEventListener(&apos;keydown&apos;, (e) =&amp;gt; {
+        if (e.code === &apos;Space&apos; &amp;amp;&amp;amp; document.activeElement !== goalInput) {
+            e.preventDefault();
+            startTimer();
+        }
+    });
+
+    updateDisplay();
 &amp;lt;/script&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 </content>
