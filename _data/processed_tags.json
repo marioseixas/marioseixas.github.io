@@ -704,14 +704,14 @@
     "scripts": {
         "parents": [],
         "children": [
-            "mobile",
             "scripts>mobile",
-            "scripts>AI",
-            "scripts>google-apps-script",
-            "AI",
             "scripts>cloud",
             "cloud",
-            "google-apps-script"
+            "scripts>AI",
+            "AI",
+            "scripts>google-apps-script",
+            "google-apps-script",
+            "mobile"
         ],
         "related": {
             "linux": 26,
@@ -956,8 +956,8 @@
     "tools": {
         "parents": [],
         "children": [
-            "AI>prompt",
-            "tools>AI>prompt"
+            "tools>AI>prompt",
+            "AI>prompt"
         ],
         "related": {},
         "posts": [
@@ -1125,10 +1125,10 @@
     "software": {
         "parents": [],
         "children": [
-            "cloud",
-            "mobile",
             "software>cloud",
-            "software>mobile"
+            "software>mobile",
+            "mobile",
+            "cloud"
         ],
         "related": {},
         "posts": [
@@ -1294,8 +1294,8 @@
     "tasks": {
         "parents": [],
         "children": [
-            "iphone",
-            "tasks>iphone"
+            "tasks>iphone",
+            "iphone"
         ],
         "related": {},
         "posts": [
@@ -1381,8 +1381,8 @@
     },
     "AI>prompt": {
         "parents": [
-            "tools",
-            "AI"
+            "AI",
+            "tools"
         ],
         "children": [],
         "related": {},
@@ -1418,9 +1418,9 @@
             "scripts"
         ],
         "children": [
-            "AI>prompt",
+            "tools>AI>prompt",
             "prompt",
-            "tools>AI>prompt"
+            "AI>prompt"
         ],
         "related": {},
         "posts": [
@@ -1476,8 +1476,8 @@
     },
     "prompt": {
         "parents": [
-            "tools>AI",
-            "AI"
+            "AI",
+            "tools>AI"
         ],
         "children": [],
         "related": {},
@@ -1532,8 +1532,8 @@
     "github": {
         "parents": [],
         "children": [
-            "jekyll",
-            "github>jekyll"
+            "github>jekyll",
+            "jekyll"
         ],
         "related": {},
         "posts": [
@@ -1672,10 +1672,10 @@
     "edital": {
         "parents": [],
         "children": [
+            "direito",
             "edital>direito>processual-penal",
-            "edital>direito",
             "direito>processual-penal",
-            "direito"
+            "edital>direito"
         ],
         "related": {},
         "posts": [
@@ -1946,8 +1946,8 @@
     },
     "tools>AI>prompt": {
         "parents": [
-            "tools",
-            "AI"
+            "AI",
+            "tools"
         ],
         "children": [],
         "related": {},
