@@ -704,14 +704,14 @@
     "scripts": {
         "parents": [],
         "children": [
-            "scripts>cloud",
-            "scripts>google-apps-script",
-            "google-apps-script",
-            "scripts>mobile",
-            "mobile",
             "cloud",
+            "google-apps-script",
+            "scripts>cloud",
+            "scripts>AI",
+            "mobile",
+            "scripts>google-apps-script",
             "AI",
-            "scripts>AI"
+            "scripts>mobile"
         ],
         "related": {
             "linux": 26,
@@ -1133,8 +1133,8 @@
         "children": [
             "mobile",
             "software>mobile",
-            "software>cloud",
-            "cloud"
+            "cloud",
+            "software>cloud"
         ],
         "related": {},
         "posts": [
@@ -1300,8 +1300,8 @@
     "tasks": {
         "parents": [],
         "children": [
-            "tasks>iphone",
-            "iphone"
+            "iphone",
+            "tasks>iphone"
         ],
         "related": {},
         "posts": [
@@ -1387,8 +1387,8 @@
     },
     "AI>prompt": {
         "parents": [
-            "AI",
-            "tools"
+            "tools",
+            "AI"
         ],
         "children": [],
         "related": {},
@@ -1424,9 +1424,9 @@
             "scripts"
         ],
         "children": [
+            "tools>AI>prompt",
             "prompt",
-            "AI>prompt",
-            "tools>AI>prompt"
+            "AI>prompt"
         ],
         "related": {},
         "posts": [
@@ -1482,8 +1482,8 @@
     },
     "prompt": {
         "parents": [
-            "AI",
-            "tools>AI"
+            "tools>AI",
+            "AI"
         ],
         "children": [],
         "related": {},
@@ -1678,10 +1678,10 @@
     "edital": {
         "parents": [],
         "children": [
-            "direito",
             "edital>direito>processual-penal",
+            "edital>direito",
             "direito>processual-penal",
-            "edital>direito"
+            "direito"
         ],
         "related": {},
         "posts": [
