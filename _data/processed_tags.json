@@ -705,13 +705,13 @@
         "parents": [],
         "children": [
             "scripts>cloud",
-            "google-apps-script",
-            "scripts>mobile",
-            "AI",
-            "scripts>google-apps-script",
-            "scripts>AI",
             "cloud",
-            "mobile"
+            "scripts>AI",
+            "google-apps-script",
+            "mobile",
+            "scripts>google-apps-script",
+            "AI",
+            "scripts>mobile"
         ],
         "related": {
             "linux": 26,
@@ -957,12 +957,6 @@
         "posts": [
             {
                 "title": "reassess",
-                "url": "/reass",
-                "highlighted": false,
-                "date": "2024-08-09T00:00:00"
-            },
-            {
-                "title": "reassess",
                 "url": "/reassess",
                 "highlighted": false,
                 "date": "2024-04-13T00:00:00"
@@ -1084,8 +1078,8 @@
     },
     "mobile": {
         "parents": [
-            "software",
-            "scripts"
+            "scripts",
+            "software"
         ],
         "children": [],
         "related": {},
@@ -1137,10 +1131,10 @@
     "software": {
         "parents": [],
         "children": [
-            "software>mobile",
-            "mobile",
+            "software>cloud",
             "cloud",
-            "software>cloud"
+            "software>mobile",
+            "mobile"
         ],
         "related": {},
         "posts": [
@@ -1249,8 +1243,8 @@
     },
     "cloud": {
         "parents": [
-            "software",
-            "scripts"
+            "scripts",
+            "software"
         ],
         "children": [],
         "related": {},
@@ -1400,12 +1394,6 @@
         "related": {},
         "posts": [
             {
-                "title": "reassess",
-                "url": "/reass",
-                "highlighted": false,
-                "date": "2024-08-09T00:00:00"
-            },
-            {
                 "title": "gmail2mailgrip",
                 "url": "/gmail2mailgrip-prompt",
                 "highlighted": true,
@@ -1436,18 +1424,12 @@
             "scripts"
         ],
         "children": [
-            "prompt",
             "tools>AI>prompt",
-            "AI>prompt"
+            "AI>prompt",
+            "prompt"
         ],
         "related": {},
         "posts": [
-            {
-                "title": "reassess",
-                "url": "/reass",
-                "highlighted": false,
-                "date": "2024-08-09T00:00:00"
-            },
             {
                 "title": "gmail2mailgrip",
                 "url": "/gmail2mailgrip-prompt",
@@ -1500,18 +1482,12 @@
     },
     "prompt": {
         "parents": [
-            "tools>AI",
-            "AI"
+            "AI",
+            "tools>AI"
         ],
         "children": [],
         "related": {},
         "posts": [
-            {
-                "title": "reassess",
-                "url": "/reass",
-                "highlighted": false,
-                "date": "2024-08-09T00:00:00"
-            },
             {
                 "title": "gmail2mailgrip",
                 "url": "/gmail2mailgrip-prompt",
@@ -1562,8 +1538,8 @@
     "github": {
         "parents": [],
         "children": [
-            "github>jekyll",
-            "jekyll"
+            "jekyll",
+            "github>jekyll"
         ],
         "related": {},
         "posts": [
@@ -1702,10 +1678,10 @@
     "edital": {
         "parents": [],
         "children": [
-            "direito",
             "edital>direito",
+            "direito>processual-penal",
             "edital>direito>processual-penal",
-            "direito>processual-penal"
+            "direito"
         ],
         "related": {},
         "posts": [
@@ -1927,49 +1903,6 @@
             }
         ]
     },
-    "tools>AI>prompt": {
-        "parents": [
-            "AI",
-            "tools"
-        ],
-        "children": [],
-        "related": {},
-        "posts": [
-            {
-                "title": "reassess",
-                "url": "/reass",
-                "highlighted": true,
-                "date": "2024-08-09T00:00:00"
-            },
-            {
-                "title": "reassess",
-                "url": "/reassess",
-                "highlighted": true,
-                "date": "2024-04-13T00:00:00"
-            }
-        ]
-    },
-    "tools>AI": {
-        "parents": [],
-        "children": [
-            "prompt"
-        ],
-        "related": {},
-        "posts": [
-            {
-                "title": "reassess",
-                "url": "/reass",
-                "highlighted": false,
-                "date": "2024-08-09T00:00:00"
-            },
-            {
-                "title": "reassess",
-                "url": "/reassess",
-                "highlighted": false,
-                "date": "2024-04-13T00:00:00"
-            }
-        ]
-    },
     "music": {
         "parents": [],
         "children": [],
@@ -2014,6 +1947,37 @@
                 "url": "/aws-pushsafer-billing-alarm",
                 "highlighted": true,
                 "date": "2024-07-25T00:00:00"
+            }
+        ]
+    },
+    "tools>AI>prompt": {
+        "parents": [
+            "tools",
+            "AI"
+        ],
+        "children": [],
+        "related": {},
+        "posts": [
+            {
+                "title": "reassess",
+                "url": "/reassess",
+                "highlighted": true,
+                "date": "2024-04-13T00:00:00"
+            }
+        ]
+    },
+    "tools>AI": {
+        "parents": [],
+        "children": [
+            "prompt"
+        ],
+        "related": {},
+        "posts": [
+            {
+                "title": "reassess",
+                "url": "/reassess",
+                "highlighted": false,
+                "date": "2024-04-13T00:00:00"
             }
         ]
     },
