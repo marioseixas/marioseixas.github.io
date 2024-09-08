@@ -2,11 +2,15 @@ name: Add New Posts to Spaced Inbox
 
 on:
   push:
+    branches:
+      - main 
     paths:
-      - _posts/**/*.md
+      - '_posts/**.md'
   pull_request:
+    branches:
+      - main 
     paths:
-      - _posts/**/*.md
+      - '_posts/**.md'
 
 jobs:
   add-posts-to-inbox:
@@ -15,7 +19,9 @@ jobs:
     steps:
       # Step 1: Checkout the repository
       - name: Checkout repository
-        uses: actions/checkout@v4        
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       # Step 2: Set up Python environment
       - name: Set up Python
