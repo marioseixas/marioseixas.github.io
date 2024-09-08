@@ -704,14 +704,14 @@
     "scripts": {
         "parents": [],
         "children": [
-            "scripts>cloud",
-            "cloud",
-            "scripts>AI",
             "google-apps-script",
-            "mobile",
-            "scripts>google-apps-script",
+            "cloud",
+            "scripts>cloud",
             "AI",
-            "scripts>mobile"
+            "scripts>mobile",
+            "scripts>AI",
+            "scripts>google-apps-script",
+            "mobile"
         ],
         "related": {
             "linux": 26,
@@ -957,6 +957,12 @@
         "posts": [
             {
                 "title": "reassess",
+                "url": "/reass",
+                "highlighted": false,
+                "date": "2024-08-09T00:00:00"
+            },
+            {
+                "title": "reassess",
                 "url": "/reassess",
                 "highlighted": false,
                 "date": "2024-04-13T00:00:00"
@@ -1078,8 +1084,8 @@
     },
     "mobile": {
         "parents": [
-            "scripts",
-            "software"
+            "software",
+            "scripts"
         ],
         "children": [],
         "related": {},
@@ -1131,10 +1137,10 @@
     "software": {
         "parents": [],
         "children": [
-            "software>cloud",
-            "cloud",
             "software>mobile",
-            "mobile"
+            "cloud",
+            "mobile",
+            "software>cloud"
         ],
         "related": {},
         "posts": [
@@ -1243,8 +1249,8 @@
     },
     "cloud": {
         "parents": [
-            "scripts",
-            "software"
+            "software",
+            "scripts"
         ],
         "children": [],
         "related": {},
@@ -1300,8 +1306,8 @@
     "tasks": {
         "parents": [],
         "children": [
-            "iphone",
-            "tasks>iphone"
+            "tasks>iphone",
+            "iphone"
         ],
         "related": {},
         "posts": [
@@ -1394,6 +1400,12 @@
         "related": {},
         "posts": [
             {
+                "title": "reassess",
+                "url": "/reass",
+                "highlighted": false,
+                "date": "2024-08-09T00:00:00"
+            },
+            {
                 "title": "gmail2mailgrip",
                 "url": "/gmail2mailgrip-prompt",
                 "highlighted": true,
@@ -1424,12 +1436,18 @@
             "scripts"
         ],
         "children": [
+            "prompt",
             "tools>AI>prompt",
-            "AI>prompt",
-            "prompt"
+            "AI>prompt"
         ],
         "related": {},
         "posts": [
+            {
+                "title": "reassess",
+                "url": "/reass",
+                "highlighted": false,
+                "date": "2024-08-09T00:00:00"
+            },
             {
                 "title": "gmail2mailgrip",
                 "url": "/gmail2mailgrip-prompt",
@@ -1489,6 +1507,12 @@
         "related": {},
         "posts": [
             {
+                "title": "reassess",
+                "url": "/reass",
+                "highlighted": false,
+                "date": "2024-08-09T00:00:00"
+            },
+            {
                 "title": "gmail2mailgrip",
                 "url": "/gmail2mailgrip-prompt",
                 "highlighted": false,
@@ -1538,8 +1562,8 @@
     "github": {
         "parents": [],
         "children": [
-            "jekyll",
-            "github>jekyll"
+            "github>jekyll",
+            "jekyll"
         ],
         "related": {},
         "posts": [
@@ -1679,9 +1703,9 @@
         "parents": [],
         "children": [
             "edital>direito",
-            "direito>processual-penal",
+            "direito",
             "edital>direito>processual-penal",
-            "direito"
+            "direito>processual-penal"
         ],
         "related": {},
         "posts": [
@@ -1903,6 +1927,49 @@
             }
         ]
     },
+    "tools>AI>prompt": {
+        "parents": [
+            "AI",
+            "tools"
+        ],
+        "children": [],
+        "related": {},
+        "posts": [
+            {
+                "title": "reassess",
+                "url": "/reass",
+                "highlighted": true,
+                "date": "2024-08-09T00:00:00"
+            },
+            {
+                "title": "reassess",
+                "url": "/reassess",
+                "highlighted": true,
+                "date": "2024-04-13T00:00:00"
+            }
+        ]
+    },
+    "tools>AI": {
+        "parents": [],
+        "children": [
+            "prompt"
+        ],
+        "related": {},
+        "posts": [
+            {
+                "title": "reassess",
+                "url": "/reass",
+                "highlighted": false,
+                "date": "2024-08-09T00:00:00"
+            },
+            {
+                "title": "reassess",
+                "url": "/reassess",
+                "highlighted": false,
+                "date": "2024-04-13T00:00:00"
+            }
+        ]
+    },
     "music": {
         "parents": [],
         "children": [],
@@ -1947,37 +2014,6 @@
                 "url": "/aws-pushsafer-billing-alarm",
                 "highlighted": true,
                 "date": "2024-07-25T00:00:00"
-            }
-        ]
-    },
-    "tools>AI>prompt": {
-        "parents": [
-            "tools",
-            "AI"
-        ],
-        "children": [],
-        "related": {},
-        "posts": [
-            {
-                "title": "reassess",
-                "url": "/reassess",
-                "highlighted": true,
-                "date": "2024-04-13T00:00:00"
-            }
-        ]
-    },
-    "tools>AI": {
-        "parents": [],
-        "children": [
-            "prompt"
-        ],
-        "related": {},
-        "posts": [
-            {
-                "title": "reassess",
-                "url": "/reassess",
-                "highlighted": false,
-                "date": "2024-04-13T00:00:00"
             }
         ]
     },
