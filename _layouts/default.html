@@ -3,13 +3,9 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>
-      {% if page.id == "home" %}
-        {{ site.title }}
-      {% else %}
-        {{ page.title }} — {{ site.title }}
-      {% endif %}
-    </title>
+    <title>infoBAG</title>
+    <meta name="title" content="infoBAG" />
+    <meta name="description" content="can't steer unless already moving" />
     <link rel="canonical" href="{{ page.canonical_url | default: site.url | append: page.url }}">
     <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ site.url }}{{ site.baseurl }}/rss.xml">
     <link href="{{ '/style.css' | relative_url }}" rel="stylesheet">
