@@ -76,6 +76,9 @@ jobs:
             done < post_urls.txt
           fi
 
+      - name: Print inbox_files.txt contents
+        run: cat inbox_files.txt
+
       # Step 7: Run the spaced inbox script to import the new URLs as notes
       - name: Run spaced inbox script
         run: |
