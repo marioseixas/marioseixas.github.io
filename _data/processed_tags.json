@@ -704,14 +704,14 @@
     "scripts": {
         "parents": [],
         "children": [
-            "cloud",
             "google-apps-script",
             "scripts>cloud",
-            "scripts>AI",
-            "mobile",
             "scripts>google-apps-script",
-            "AI",
-            "scripts>mobile"
+            "scripts>mobile",
+            "scripts>AI",
+            "cloud",
+            "mobile",
+            "AI"
         ],
         "related": {
             "linux": 26,
@@ -950,8 +950,8 @@
     "tools": {
         "parents": [],
         "children": [
-            "tools>AI>prompt",
-            "AI>prompt"
+            "AI>prompt",
+            "tools>AI>prompt"
         ],
         "related": {},
         "posts": [
@@ -1131,9 +1131,9 @@
     "software": {
         "parents": [],
         "children": [
+            "cloud",
             "mobile",
             "software>mobile",
-            "cloud",
             "software>cloud"
         ],
         "related": {},
@@ -1300,8 +1300,8 @@
     "tasks": {
         "parents": [],
         "children": [
-            "iphone",
-            "tasks>iphone"
+            "tasks>iphone",
+            "iphone"
         ],
         "related": {},
         "posts": [
@@ -1424,9 +1424,9 @@
             "scripts"
         ],
         "children": [
-            "tools>AI>prompt",
+            "AI>prompt",
             "prompt",
-            "AI>prompt"
+            "tools>AI>prompt"
         ],
         "related": {},
         "posts": [
@@ -1538,8 +1538,8 @@
     "github": {
         "parents": [],
         "children": [
-            "github>jekyll",
-            "jekyll"
+            "jekyll",
+            "github>jekyll"
         ],
         "related": {},
         "posts": [
@@ -1678,10 +1678,10 @@
     "edital": {
         "parents": [],
         "children": [
-            "edital>direito>processual-penal",
-            "edital>direito",
             "direito>processual-penal",
-            "direito"
+            "edital>direito",
+            "direito",
+            "edital>direito>processual-penal"
         ],
         "related": {},
         "posts": [
@@ -1828,8 +1828,8 @@
     },
     "edital>direito>processual-penal": {
         "parents": [
-            "direito",
-            "edital"
+            "edital",
+            "direito"
         ],
         "children": [],
         "related": {},
