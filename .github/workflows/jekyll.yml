@@ -88,12 +88,6 @@ jobs:
           export base_path="${base_path}" 
           echo "base_path after export is: ${base_path}"
           bundle exec jekyll build --trace --config _config.yml --baseurl "${basepath}"
-          cp -R _site/
-
-      - name: Verify _site contents
-        run: |
-          echo "Contents of _site directory:"
-          ls -R _site
 
       - name: Generate Pagefind Index
         run: |
