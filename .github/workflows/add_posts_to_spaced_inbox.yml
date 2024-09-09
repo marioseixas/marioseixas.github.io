@@ -43,29 +43,28 @@ jobs:
             sqlite3 data.db < schema.sql
           fi
 
-      # Step 4: Extract URLs of new/modified markdown posts
-      - name: Extract post URLs
-        id: extract-urls
-        run: |
-          # Define the base URL for the GitHub Pages site
-          BASE_URL="ib.bsb.br"
-
-          # Find all markdown files in the _posts directory that were changed
-          POST_FILES=$(git diff --name-only HEAD^ HEAD -- '_posts/**.md')
-
-          # Extract URLs based on the Jekyll URL structure
-          POST_URLS=""
-          for POST in $POST_FILES; do
-            # Extract the post filename and remove the date part (YYYY-MM-DD) from the beginning
-            FILENAME=$(basename "$POST" .md)
-            SLUG=$(echo "$FILENAME" | sed 's/^[0-9]\{4\}-[0-9]\{2\}-[0-9]\{2\}-//')
-            POST_URL="$BASE_URL/$SLUG"  # Convert slug to final URL with .html extension
-            POST_URLS="$POST_URLS\n$POST_URL"
-          done
-
-          # Save the URLs to a file for the next step
-          echo -e "$POST_URLS" > post_urls.txt
-
+          # Step 4: Extract URLs of new/modified markdown posts
+          - name: Extract post URLs
+            id: extract-urls
+            run: |
+              BASE_URL="ib.bsb.br"
+              
+              # Find all markdown files in the _posts directory that were changed
+              POST_FILES=$(git diff --name-only HEAD^ HEAD -- '_posts/**.md')
+              
+              # Extract URLs based on the Jekyll URL structure
+              POST_URLS=""
+              for POST in $POST_FILES; do
+                # Extract the post filename and remove the date part (YYYY-MM-DD) from the beginning
+                FILENAME=$(basename "$POST" .md)
+                SLUG=$(echo "$FILENAME" | sed 's/^[0-9]\{4\}-[0-9]\{2\}-[0-9]\{2\}-//')
+                POST_URL="$BASE_URL/$SLUG"  # Convert slug to final URL with .html extension
+                POST_URLS="$POST_URLS\n$POST_URL"
+              done
+              
+              # Save the URLs to a file for the next step
+              echo -e "$POST_URLS" > post_urls.txt
+          
           # Step 5: Append URLs to inbox file
           - name: Append URLs to inbox file
             run: |
@@ -75,6 +74,7 @@ jobs:
                   echo -e "\n$URL\n=====" >> infoBAG.txt
                 done < post_urls.txt
               fi
+            shell: bash
 
       - name: Print inbox_files.txt contents
         run: cat infoBAG.txt
