@@ -3,8 +3,6 @@ name: Build, Deploy, and Add Posts to Spaced Inbox
 on:
   push:
     branches: ["main"]
-    paths:
-      - '_posts/**.md'
   workflow_dispatch:
 
 permissions:
@@ -71,7 +69,7 @@ jobs:
           git config --local user.email "actions@github.com"
           git config --local user.name "GitHub Actions"
           git add -f assets/data/events.json _data/processed_tags.yml _includes/tag_graph.html _data/processed_tags.json
-          git commit --allow-empty -m "Update events.json, processed_tags.yml, tag_graph.html, processed_tags.json" || echo "Nothing to commit"
+          git commit --allow-empty -m "Update events.json, processed_tags.yml, tag_graph.html, processed_tags.json, _data, and _includes" || echo "Nothing to commit"
           git push origin main || echo "Nothing to push"
 
       - name: Setup Pages
@@ -175,4 +173,4 @@ jobs:
         run: |
           git commit -m "Update spaced-inbox with new posts" || echo "No changes to commit"
           git pull --rebase
-          git push
+          git push --force-with-lease
