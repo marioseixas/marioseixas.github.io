@@ -243,7 +243,7 @@ def generate_mermaid_graph(
 
         for parent in data.get("parents", []):
             safe_parent = add_node(parent, tag_data[parent])
-            edge = f"    {safe_parent} ||--|| {safe_tag} : SUPERSET_OF"
+            edge = f"    {safe_parent} ||--|| {safe_tag} : SUBSET_OF"
             if edge not in added_edges:
                 graph.append(edge)
                 added_edges.add(edge)
@@ -257,11 +257,11 @@ def generate_mermaid_graph(
 
     return "\n".join(graph)
 
-def save_output(output_data, assets/data):
+def save_output(output_data, output_folder):
     """Saves YAML, JSON, and Mermaid graph outputs to the specified folder."""
-    yaml_file = os.path.join(assets/data, 'output_tags.yaml')
-    json_file = os.path.join(assets/data, 'output_tags.json')
-    mermaid_file = os.path.join(assets/data, 'output_tags.mmd')
+    yaml_file = os.path.join(output_folder, 'output_tags.yaml')
+    json_file = os.path.join(output_folder, 'output_tags.json')
+    mermaid_file = os.path.join(output_folder, 'output_tags.mmd')
 
     # Save YAML
     with open(yaml_file, 'w') as f:
@@ -277,3 +277,11 @@ def save_output(output_data, assets/data):
     with open(mermaid_file, 'w') as f:
         f.write(mermaid_graph)
     logging.info(f"Mermaid graph saved to {mermaid_file}")
+
+# Example usage (make sure to update the directory paths accordingly):
+posts_directory = 'posts'
+output_folder = 'assets/data'
+
+# Process the tags and generate the outputs
+tag_data, combined_tags = process_tags(posts_directory)
+save_output(tag_data, output_folder)
