@@ -1,86 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.3">Jekyll</generator><link href="https://ib.bsb.br/feed.xml" rel="self" type="application/atom+xml" /><link href="https://ib.bsb.br/" rel="alternate" type="text/html" /><updated>2024-09-09T12:04:48+00:00</updated><id>https://ib.bsb.br/feed.xml</id><title type="html">infoBAG</title><entry><title type="html">reassess</title><link href="https://ib.bsb.br/srs/" rel="alternate" type="text/html" title="reassess" /><published>2024-09-09T00:00:00+00:00</published><updated>2024-09-09T12:04:14+00:00</updated><id>https://ib.bsb.br/srs</id><content type="html" xml:base="https://ib.bsb.br/srs/"><![CDATA[<blockquote>
-  <p>source <code class="language-plaintext highlighter-rouge">https://github.com/riceissa/spaced-inbox</code></p>
-</blockquote>
-
-<h2 id="spaced-inbox-documentation">Spaced Inbox Documentation</h2>
-
-<p><strong>Core Idea:</strong> This system provides spaced repetition for your notes written in plain text files, using a simple command-line interface and your favorite text editor. It aims to surface the most relevant and “exciting” notes at optimal intervals for long-term retention, while providing flexibility and control over your review process.</p>
-
-<p><strong>1. Note Format</strong></p>
-<ul>
-  <li>Write your notes in a plain text file (e.g., <code class="language-plaintext highlighter-rouge">notes.txt</code>).</li>
-  <li><strong>New Note Delimiters:</strong> Two blank lines, or a line containing at least three equals signs (and nothing else) like <code class="language-plaintext highlighter-rouge">======</code>, signifies the start of a new note.</li>
-</ul>
-
-<p><strong>2. Defining Inbox Files</strong></p>
-<ul>
-  <li><strong><code class="language-plaintext highlighter-rouge">inbox_files.txt</code>:</strong> Create a file named <code class="language-plaintext highlighter-rouge">inbox_files.txt</code> to tell the script where your notes are located.</li>
-  <li><strong>Format:</strong> Each line should follow this structure: <code class="language-plaintext highlighter-rouge">&lt;short name&gt;&lt;tab&gt;&lt;file path&gt;</code>.
-    <ul>
-      <li><strong>Example:</strong> <code class="language-plaintext highlighter-rouge">personal_notes /path/to/my/notes.txt</code></li>
-      <li><code class="language-plaintext highlighter-rouge">&lt;short name&gt;</code>: A user-defined identifier for your inbox file, used by the script to distinguish between different inbox sources.</li>
-    </ul>
-  </li>
-</ul>
-
-<p><strong>3. Initializing and Updating the Database</strong></p>
-<ul>
-  <li><strong>Initialization:</strong> Running <code class="language-plaintext highlighter-rouge">script.py</code> for the first time creates a SQLite database (<code class="language-plaintext highlighter-rouge">data.db</code>) and imports your notes into it to manage the review schedule.</li>
-  <li><strong>Subsequent Runs:</strong>  <code class="language-plaintext highlighter-rouge">script.py</code> performs the following actions on each subsequent execution:
-    <ul>
-      <li><strong>Import new notes:</strong> Detects and adds new notes from your inbox files that haven’t been imported previously.</li>
-      <li><strong>Update note locations:</strong> If you’ve edited your inbox file and moved notes around (e.g., by adding or deleting lines), the script updates the corresponding line numbers in the database to ensure accurate navigation during review.</li>
-      <li><strong>Handle soft-deletions:</strong> If you remove a note from an inbox file, the script detects its absence and marks it as “soft-deleted” in the database. This prevents the deleted note from appearing in future reviews unless you add it back to the inbox file.</li>
-    </ul>
-  </li>
-</ul>
-
-<p><strong>4. Daily Review Process</strong></p>
-<ul>
-  <li><strong>Start a Review Session:</strong> Run <code class="language-plaintext highlighter-rouge">script.py</code> to initiate a review session. The script will analyze your notes based on due dates, note states, and overdueness to select the most appropriate note for review.</li>
-  <li><strong>Note Display:</strong> The script displays the beginning of the selected note along with its corresponding line numbers within the inbox file. This allows you to easily locate the note in your text editor.</li>
-  <li><strong>Review in Editor:</strong>
-    <ul>
-      <li>Open your preferred text editor.</li>
-      <li>Navigate to the indicated line numbers to find the full note content.</li>
-      <li>Review the note, make edits if necessary, or delete the note entirely from the inbox file if you no longer need it (this will trigger a soft-deletion on the next <code class="language-plaintext highlighter-rouge">script.py</code> run).</li>
-    </ul>
-  </li>
-  <li><strong>Record Your Response (in <code class="language-plaintext highlighter-rouge">script.py</code>’s prompt)</strong>
-    <ul>
-      <li><strong><code class="language-plaintext highlighter-rouge">[e]xciting</code>:</strong> Use this command if the note is particularly valuable, stimulating, or if you want to ensure you review it more frequently, even if it’s not the most overdue. <em>The script prioritizes “exciting” notes for selection, especially when they are overdue. The more overdue they get, the more likely they are to be chosen.</em></li>
-      <li><strong><code class="language-plaintext highlighter-rouge">[i]nteresting</code>, <code class="language-plaintext highlighter-rouge">[y]eah</code>, <code class="language-plaintext highlighter-rouge">[l]ol</code>, <code class="language-plaintext highlighter-rouge">[m]eh</code>, <code class="language-plaintext highlighter-rouge">[c]ringe</code>, <code class="language-plaintext highlighter-rouge">[t]axing</code>:</strong> These commands represent varying degrees of positive or neutral feedback. They trigger the standard spaced repetition interval increase according to the SM2 algorithm, but <em>they don’t influence the note’s priority in the selection process beyond its regular due date</em>. The note state is recorded, which could potentially be used for refined note selection logic in future versions.</li>
-      <li><strong><code class="language-plaintext highlighter-rouge">again</code>:</strong>  If you failed to recall the note’s content effectively, use this command. The review interval will be shortened (multiplied by 0.9), giving you another chance to learn it sooner. <em>The note state remains unchanged as an “again” response is considered a failure to recall, preventing a proper judgment of its emotional impact.</em></li>
-      <li><strong><code class="language-plaintext highlighter-rouge">[r]eroll</code>:</strong> If you want to skip the currently displayed note without reviewing it, use this command to request a different note.</li>
-      <li><strong><code class="language-plaintext highlighter-rouge">[q]uit</code>:</strong>  When you’re finished with your review session, use this command to exit the script.</li>
-    </ul>
-  </li>
-</ul>
-
-<p><strong>5. Spacing Algorithm</strong></p>
-<ul>
-  <li><strong>Simplified SM2:</strong> The core of the scheduling algorithm is a simplified version of the <a href="https://gist.github.com/riceissa/1ead1b9881ffbb48793565ce69d7dbdd">Anki/SM2</a> algorithm, widely recognized for its effectiveness in spaced repetition learning.</li>
-  <li><strong>Initial Interval:</strong>  The default starting interval for new notes is 50 days.</li>
-  <li><strong>Subsequent Intervals:</strong>  Future review intervals are dynamically calculated based on your review responses (using the ease factor) and the SM2 algorithm. Specifically, the <code class="language-plaintext highlighter-rouge">good_interval</code> function calculates the new interval by multiplying the current interval by the ease factor (which is always 300 in this implementation) and dividing by 100.</li>
-  <li><strong>Note Prioritization (Not just due-date based):</strong>
-    <ul>
-      <li><strong>“Exciting” notes:</strong> Notes marked as “exciting” are highly prioritized for review, especially when they become overdue.  The more overdue an exciting note is, the more likely it is to be selected for review. This is achieved through a weighted probability selection process in the <code class="language-plaintext highlighter-rouge">get_exciting_note</code> function, where the weight is proportional to the square of the number of days the note is overdue.</li>
-      <li><strong>Newly created notes:</strong> To reinforce initial learning, newly created notes that have not yet been reviewed receive a probability boost for selection during the 50-100 day period after their creation. This ensures you encounter new notes relatively soon after adding them. This is implemented in the <code class="language-plaintext highlighter-rouge">get_recent_unreviewed_note</code> function.</li>
-      <li><strong>Regular reviewed notes:</strong> For notes that have been reviewed at least once (and are not marked as “exciting”), the script uses a weighted probability based on overdueness.  The more overdue a note is, the higher the chance it will be selected for review. This helps ensure you don’t completely neglect notes even if you skip reviews for a period of time. This is implemented in the <code class="language-plaintext highlighter-rouge">get_all_other_note</code> function, similar to how “exciting” notes are prioritized.</li>
-    </ul>
-  </li>
-  <li><strong>Ease Factor:</strong> The ease factor, a measure of how easily you recall a note, starts at 300% and remains constant throughout the note’s lifecycle in this implementation.</li>
-  <li><strong>“Again” Interval Adjustment:</strong> When a note is marked as “again”, the <code class="language-plaintext highlighter-rouge">again_interval</code> function is used to calculate the new interval, which is simply the current interval multiplied by 0.9.</li>
-</ul>
-
-<p><strong>Benefits</strong></p>
-<ul>
-  <li><strong>Flexibility:</strong> Use your preferred text editor and any plain text format or markup language you like for your notes.</li>
-  <li><strong>Control:</strong> You decide when and how many notes to review each day – there are no strict daily review quotas.</li>
-  <li><strong>Intelligent Note Selection:</strong> The script’s note prioritization logic helps you focus on the most relevant and “exciting” notes, making your review sessions more efficient and engaging.</li>
-  <li><strong>Editor Integration:</strong>  Seamlessly use your text editor of choice to review and edit notes.  (The optional <code class="language-plaintext highlighter-rouge">--external-program emacs</code> flag provides even deeper integration with Emacs, allowing automatic navigation to the selected note).</li>
-  <li><strong>Non-Destructive:</strong> The script only reads from your inbox files and does not modify them in any way. Your notes remain entirely under your control.</li>
-</ul>]]></content><author><name></name></author><category term="tools&gt;github&gt;estudos" /><summary type="html"><![CDATA[source https://github.com/riceissa/spaced-inbox]]></summary></entry><entry><title type="html">links</title><link href="https://ib.bsb.br/links/" rel="alternate" type="text/html" title="links" /><published>2024-08-31T00:00:00+00:00</published><updated>2024-09-05T06:10:53+00:00</updated><id>https://ib.bsb.br/links</id><content type="html" xml:base="https://ib.bsb.br/links/"><![CDATA[<div class="line-numbers" style="white-space: pre-line;"><section data-filename="python_code-block.py" data-code="print(&quot;Hello, world!&quot;)" data-download-link="" data-download-link-label="Download Python" class="language-python"><code class="language-python">print("Hello, world!")</code></section></div>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.3">Jekyll</generator><link href="https://ib.bsb.br/feed.xml" rel="self" type="application/atom+xml" /><link href="https://ib.bsb.br/" rel="alternate" type="text/html" /><updated>2024-09-09T12:06:22+00:00</updated><id>https://ib.bsb.br/feed.xml</id><title type="html">infoBAG</title><entry><title type="html">links</title><link href="https://ib.bsb.br/links/" rel="alternate" type="text/html" title="links" /><published>2024-08-31T00:00:00+00:00</published><updated>2024-09-05T06:10:53+00:00</updated><id>https://ib.bsb.br/links</id><content type="html" xml:base="https://ib.bsb.br/links/"><![CDATA[<div class="line-numbers" style="white-space: pre-line;"><section data-filename="python_code-block.py" data-code="print(&quot;Hello, world!&quot;)" data-download-link="" data-download-link-label="Download Python" class="language-python"><code class="language-python">print("Hello, world!")</code></section></div>
 
 <p>Links:</p>
 
@@ -3376,4 +3294,102 @@ All traffic is encrypted, but for added security, consider using a VPN like Wire
 Yes, the faster your internet connection, the better the visual quality you can achieve. However, a standard mobile 4G connection should suffice for most tasks.</p>
 
 <p><strong>Did you invent this technology?</strong><br />
-No, I am sharing insights on existing technology that has matured to the point where it can deliver a smooth, responsive experience without the delays typical of older remote access solutions.</p>]]></content><author><name></name></author><category term="hardware" /><summary type="html"><![CDATA[You Don’t Need a Powerful Laptop Anymore]]></summary></entry></feed>
+No, I am sharing insights on existing technology that has matured to the point where it can deliver a smooth, responsive experience without the delays typical of older remote access solutions.</p>]]></content><author><name></name></author><category term="hardware" /><summary type="html"><![CDATA[You Don’t Need a Powerful Laptop Anymore]]></summary></entry><entry><title type="html">Benjamin Franklin’s 13 Virtues</title><link href="https://ib.bsb.br/benjamin-franklins-13-virtues/" rel="alternate" type="text/html" title="Benjamin Franklin’s 13 Virtues" /><published>2024-07-31T00:00:00+00:00</published><updated>2024-08-02T12:58:43+00:00</updated><id>https://ib.bsb.br/benjamin-franklins-13-virtues</id><content type="html" xml:base="https://ib.bsb.br/benjamin-franklins-13-virtues/"><![CDATA[<p>In 1726, during an 80-day ocean voyage from London to Philadelphia, Benjamin Franklin embarked on a transformative journey of self-improvement. He devised a systematic plan to regulate his conduct based on a chart of thirteen virtues. This blog post will delve into Franklin’s virtues, the methodology he employed, and how you can apply these principles to enhance your own life.</p>
+
+<h2 id="the-concept-of-virtue">The Concept of Virtue</h2>
+
+<p>Franklin believed that by focusing on specific virtues, he could cultivate a better character and lead a more fulfilling life. His approach was methodical: he committed to giving strict attention to one virtue each week, marking his progress on a chart. After completing all thirteen virtues, he would repeat the cycle four times a year, allowing for continuous self-reflection and growth.</p>
+
+<h2 id="franklins-13-virtues">Franklin’s 13 Virtues</h2>
+
+<p>Here are the thirteen virtues that Franklin championed, along with a detailed explanation of each:</p>
+
+<ol>
+  <li>
+    <p><strong>Temperance</strong><br />
+<em>Eat not to dullness; drink not to elevation.</em><br />
+This virtue emphasizes moderation in consumption, encouraging individuals to avoid excess in food and drink, which can lead to poor health and diminished clarity of mind.</p>
+  </li>
+  <li>
+    <p><strong>Silence</strong><br />
+<em>Speak not but what may benefit others or yourself; avoid trifling conversation.</em><br />
+Franklin valued meaningful communication and believed in the importance of speaking only when it adds value, thereby fostering deeper connections and reducing misunderstandings.</p>
+  </li>
+  <li>
+    <p><strong>Order</strong><br />
+<em>Let all your things have their places; let each part of your business have its time.</em><br />
+This virtue promotes organization and time management, ensuring that everything has its designated space and time, which can lead to increased efficiency and reduced stress.</p>
+  </li>
+  <li>
+    <p><strong>Resolution</strong><br />
+<em>Resolve to perform what you ought; perform without fail what you resolve.</em><br />
+Franklin stressed the importance of commitment and follow-through in achieving one’s goals, highlighting the need for determination and discipline in personal endeavors.</p>
+  </li>
+  <li>
+    <p><strong>Frugality</strong><br />
+<em>Make no expense but to do good to others or yourself; i.e., waste nothing.</em><br />
+This virtue encourages wise financial management and the avoidance of wasteful spending, advocating for a lifestyle that prioritizes sustainability and responsibility.</p>
+  </li>
+  <li>
+    <p><strong>Industry</strong><br />
+<em>Lose no time; be always employ’d in something useful; cut off all unnecessary actions.</em><br />
+Franklin believed in the value of hard work and productivity, urging individuals to stay engaged in meaningful activities that contribute to personal and communal well-being.</p>
+  </li>
+  <li>
+    <p><strong>Sincerity</strong><br />
+<em>Use no hurtful deceit; think incorrectly and justly, and, if you speak, speak accordingly.</em><br />
+This virtue promotes honesty and integrity in thoughts and actions, encouraging individuals to be truthful and transparent in their interactions.</p>
+  </li>
+  <li>
+    <p><strong>Justice</strong><br />
+<em>Wrong none by doing injuries, or omitting the benefits that are your duty.</em><br />
+Franklin emphasized fairness and the importance of fulfilling one’s obligations to others, advocating for a sense of moral responsibility in all actions.</p>
+  </li>
+  <li>
+    <p><strong>Moderation</strong><br />
+<em>Avoid extremes; forbear resenting injuries so much as you think they deserve.</em><br />
+This virtue encourages balance and restraint in emotions and reactions, promoting a measured approach to conflict and adversity.</p>
+  </li>
+  <li>
+    <p><strong>Cleanliness</strong><br />
+<em>Tolerate no uncleanliness in body, clothes, or habitation.</em><br />
+Franklin believed that cleanliness reflects self-respect and contributes to overall well-being, advocating for a lifestyle that values hygiene and order.</p>
+  </li>
+  <li>
+    <p><strong>Tranquility</strong><br />
+<em>Be not disturbed at trifles, or at accidents common or unavoidable.</em><br />
+This virtue promotes inner peace and the ability to remain calm in the face of life’s challenges, encouraging resilience and emotional stability.</p>
+  </li>
+  <li>
+    <p><strong>Chastity</strong><br />
+<em>Rarely use venery but for health or offspring, never to dullness, weakness, or the injury of your own or another’s peace or reputation.</em><br />
+Franklin advocated for responsible and respectful behavior in matters of intimacy, emphasizing the importance of self-control and the impact of one’s actions on others.</p>
+  </li>
+  <li>
+    <p><strong>Humility</strong><br />
+<em>Imitate Jesus and Socrates.</em><br />
+This virtue encourages individuals to practice humility and learn from the wisdom of great thinkers, fostering a mindset of continuous learning and self-improvement.</p>
+  </li>
+</ol>
+
+<h2 id="implementing-franklins-virtues">Implementing Franklin’s Virtues</h2>
+
+<p>To incorporate Franklin’s virtues into your life, consider the following steps:</p>
+
+<ol>
+  <li>
+    <p><strong>Create Your Chart</strong>: Design a chart similar to Franklin’s, listing the thirteen virtues. Allocate one week for each virtue, allowing for focused attention.</p>
+  </li>
+  <li>
+    <p><strong>Weekly Focus</strong>: Each week, concentrate on the assigned virtue. Reflect on your actions and decisions, and mark your chart each time you transgress that virtue. This self-monitoring will help you stay accountable.</p>
+  </li>
+  <li>
+    <p><strong>Self-Reflection</strong>: At the end of each week, review your progress. Consider what you did well and where you can improve. This reflection is crucial for understanding your growth and areas needing attention.</p>
+  </li>
+  <li>
+    <p><strong>Repeat the Cycle</strong>: After completing all thirteen virtues, start the cycle again. This repetition will help reinforce the virtues in your daily life and encourage ongoing development.</p>
+  </li>
+  <li>
+    <p><strong>Adjust as Needed</strong>: Feel free to modify the virtues or the time frame to better suit your personal goals and lifestyle. The key is to remain flexible and responsive to your own growth journey.</p>
+  </li>
+</ol>]]></content><author><name></name></author><category term="tasks" /><summary type="html"><![CDATA[In 1726, during an 80-day ocean voyage from London to Philadelphia, Benjamin Franklin embarked on a transformative journey of self-improvement. He devised a systematic plan to regulate his conduct based on a chart of thirteen virtues. This blog post will delve into Franklin’s virtues, the methodology he employed, and how you can apply these principles to enhance your own life.]]></summary></entry></feed>

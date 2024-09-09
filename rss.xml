@@ -46,102 +46,11 @@
     <title>infoBAG</title>
     <link href="https://ib.bsb.br/rss.xml" rel="self"/>
     <link href="https://ib.bsb.br/"/>
-    <updated>2024-09-09T12:04:48+00:00</updated>
+    <updated>2024-09-09T12:06:22+00:00</updated>
     <id>https://ib.bsb.br</id>
     <author>
         <name></name>
     </author>
-    
-    <entry>
-        <title>reassess</title>
-        <link href="https://ib.bsb.br/srs/"/>
-        <updated>2024-09-09T00:00:00+00:00</updated>
-        <id>https://ib.bsb.br/srs/</id>
-        <content type="html">&lt;blockquote&gt;
-  &lt;p&gt;source &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;https://github.com/riceissa/spaced-inbox&lt;/code&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h2 id=&quot;spaced-inbox-documentation&quot;&gt;Spaced Inbox Documentation&lt;/h2&gt;
-
-&lt;p&gt;&lt;strong&gt;Core Idea:&lt;/strong&gt; This system provides spaced repetition for your notes written in plain text files, using a simple command-line interface and your favorite text editor. It aims to surface the most relevant and “exciting” notes at optimal intervals for long-term retention, while providing flexibility and control over your review process.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;1. Note Format&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;Write your notes in a plain text file (e.g., &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;notes.txt&lt;/code&gt;).&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;New Note Delimiters:&lt;/strong&gt; Two blank lines, or a line containing at least three equals signs (and nothing else) like &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;======&lt;/code&gt;, signifies the start of a new note.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;strong&gt;2. Defining Inbox Files&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;inbox_files.txt&lt;/code&gt;:&lt;/strong&gt; Create a file named &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;inbox_files.txt&lt;/code&gt; to tell the script where your notes are located.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Format:&lt;/strong&gt; Each line should follow this structure: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;short name&amp;gt;&amp;lt;tab&amp;gt;&amp;lt;file path&amp;gt;&lt;/code&gt;.
-    &lt;ul&gt;
-      &lt;li&gt;&lt;strong&gt;Example:&lt;/strong&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;personal_notes /path/to/my/notes.txt&lt;/code&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;short name&amp;gt;&lt;/code&gt;: A user-defined identifier for your inbox file, used by the script to distinguish between different inbox sources.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;strong&gt;3. Initializing and Updating the Database&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;Initialization:&lt;/strong&gt; Running &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;script.py&lt;/code&gt; for the first time creates a SQLite database (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;data.db&lt;/code&gt;) and imports your notes into it to manage the review schedule.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Subsequent Runs:&lt;/strong&gt;  &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;script.py&lt;/code&gt; performs the following actions on each subsequent execution:
-    &lt;ul&gt;
-      &lt;li&gt;&lt;strong&gt;Import new notes:&lt;/strong&gt; Detects and adds new notes from your inbox files that haven’t been imported previously.&lt;/li&gt;
-      &lt;li&gt;&lt;strong&gt;Update note locations:&lt;/strong&gt; If you’ve edited your inbox file and moved notes around (e.g., by adding or deleting lines), the script updates the corresponding line numbers in the database to ensure accurate navigation during review.&lt;/li&gt;
-      &lt;li&gt;&lt;strong&gt;Handle soft-deletions:&lt;/strong&gt; If you remove a note from an inbox file, the script detects its absence and marks it as “soft-deleted” in the database. This prevents the deleted note from appearing in future reviews unless you add it back to the inbox file.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;strong&gt;4. Daily Review Process&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;Start a Review Session:&lt;/strong&gt; Run &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;script.py&lt;/code&gt; to initiate a review session. The script will analyze your notes based on due dates, note states, and overdueness to select the most appropriate note for review.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Note Display:&lt;/strong&gt; The script displays the beginning of the selected note along with its corresponding line numbers within the inbox file. This allows you to easily locate the note in your text editor.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Review in Editor:&lt;/strong&gt;
-    &lt;ul&gt;
-      &lt;li&gt;Open your preferred text editor.&lt;/li&gt;
-      &lt;li&gt;Navigate to the indicated line numbers to find the full note content.&lt;/li&gt;
-      &lt;li&gt;Review the note, make edits if necessary, or delete the note entirely from the inbox file if you no longer need it (this will trigger a soft-deletion on the next &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;script.py&lt;/code&gt; run).&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Record Your Response (in &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;script.py&lt;/code&gt;’s prompt)&lt;/strong&gt;
-    &lt;ul&gt;
-      &lt;li&gt;&lt;strong&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;[e]xciting&lt;/code&gt;:&lt;/strong&gt; Use this command if the note is particularly valuable, stimulating, or if you want to ensure you review it more frequently, even if it’s not the most overdue. &lt;em&gt;The script prioritizes “exciting” notes for selection, especially when they are overdue. The more overdue they get, the more likely they are to be chosen.&lt;/em&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;strong&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;[i]nteresting&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;[y]eah&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;[l]ol&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;[m]eh&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;[c]ringe&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;[t]axing&lt;/code&gt;:&lt;/strong&gt; These commands represent varying degrees of positive or neutral feedback. They trigger the standard spaced repetition interval increase according to the SM2 algorithm, but &lt;em&gt;they don’t influence the note’s priority in the selection process beyond its regular due date&lt;/em&gt;. The note state is recorded, which could potentially be used for refined note selection logic in future versions.&lt;/li&gt;
-      &lt;li&gt;&lt;strong&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;again&lt;/code&gt;:&lt;/strong&gt;  If you failed to recall the note’s content effectively, use this command. The review interval will be shortened (multiplied by 0.9), giving you another chance to learn it sooner. &lt;em&gt;The note state remains unchanged as an “again” response is considered a failure to recall, preventing a proper judgment of its emotional impact.&lt;/em&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;strong&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;[r]eroll&lt;/code&gt;:&lt;/strong&gt; If you want to skip the currently displayed note without reviewing it, use this command to request a different note.&lt;/li&gt;
-      &lt;li&gt;&lt;strong&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;[q]uit&lt;/code&gt;:&lt;/strong&gt;  When you’re finished with your review session, use this command to exit the script.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;strong&gt;5. Spacing Algorithm&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;Simplified SM2:&lt;/strong&gt; The core of the scheduling algorithm is a simplified version of the &lt;a href=&quot;https://gist.github.com/riceissa/1ead1b9881ffbb48793565ce69d7dbdd&quot;&gt;Anki/SM2&lt;/a&gt; algorithm, widely recognized for its effectiveness in spaced repetition learning.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Initial Interval:&lt;/strong&gt;  The default starting interval for new notes is 50 days.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Subsequent Intervals:&lt;/strong&gt;  Future review intervals are dynamically calculated based on your review responses (using the ease factor) and the SM2 algorithm. Specifically, the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;good_interval&lt;/code&gt; function calculates the new interval by multiplying the current interval by the ease factor (which is always 300 in this implementation) and dividing by 100.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Note Prioritization (Not just due-date based):&lt;/strong&gt;
-    &lt;ul&gt;
-      &lt;li&gt;&lt;strong&gt;“Exciting” notes:&lt;/strong&gt; Notes marked as “exciting” are highly prioritized for review, especially when they become overdue.  The more overdue an exciting note is, the more likely it is to be selected for review. This is achieved through a weighted probability selection process in the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;get_exciting_note&lt;/code&gt; function, where the weight is proportional to the square of the number of days the note is overdue.&lt;/li&gt;
-      &lt;li&gt;&lt;strong&gt;Newly created notes:&lt;/strong&gt; To reinforce initial learning, newly created notes that have not yet been reviewed receive a probability boost for selection during the 50-100 day period after their creation. This ensures you encounter new notes relatively soon after adding them. This is implemented in the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;get_recent_unreviewed_note&lt;/code&gt; function.&lt;/li&gt;
-      &lt;li&gt;&lt;strong&gt;Regular reviewed notes:&lt;/strong&gt; For notes that have been reviewed at least once (and are not marked as “exciting”), the script uses a weighted probability based on overdueness.  The more overdue a note is, the higher the chance it will be selected for review. This helps ensure you don’t completely neglect notes even if you skip reviews for a period of time. This is implemented in the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;get_all_other_note&lt;/code&gt; function, similar to how “exciting” notes are prioritized.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Ease Factor:&lt;/strong&gt; The ease factor, a measure of how easily you recall a note, starts at 300% and remains constant throughout the note’s lifecycle in this implementation.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;“Again” Interval Adjustment:&lt;/strong&gt; When a note is marked as “again”, the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;again_interval&lt;/code&gt; function is used to calculate the new interval, which is simply the current interval multiplied by 0.9.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;strong&gt;Benefits&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;Flexibility:&lt;/strong&gt; Use your preferred text editor and any plain text format or markup language you like for your notes.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Control:&lt;/strong&gt; You decide when and how many notes to review each day – there are no strict daily review quotas.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Intelligent Note Selection:&lt;/strong&gt; The script’s note prioritization logic helps you focus on the most relevant and “exciting” notes, making your review sessions more efficient and engaging.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Editor Integration:&lt;/strong&gt;  Seamlessly use your text editor of choice to review and edit notes.  (The optional &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;--external-program emacs&lt;/code&gt; flag provides even deeper integration with Emacs, allowing automatic navigation to the selected note).&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Non-Destructive:&lt;/strong&gt; The script only reads from your inbox files and does not modify them in any way. Your notes remain entirely under your control.&lt;/li&gt;
-&lt;/ul&gt;
-</content>
-    </entry>
     
     <entry>
         <title>links</title>
@@ -47366,57 +47275,9 @@ Pense duas vezes antes de se envolver.
     
     
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
 &lt;/ul&gt;
 
 &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;div class=&quot;search-link&quot; id=&quot;&quot; aria-labelledby=&quot;-heading&quot;&amp;gt;
-    &amp;lt;h2 id=&quot;-heading&quot;&amp;gt;
-        &amp;lt;a href=&quot;#&quot; class=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&amp;gt;
-            &amp;lt;img src=&quot;/assets/gold.ico&quot; alt=&quot;gold icon&quot;&amp;gt;
-        &amp;lt;/a&amp;gt;
-        
-    &amp;lt;/h2&amp;gt;
-    &amp;lt;ul&amp;gt;
-        
-    &amp;lt;/ul&amp;gt;
-&amp;lt;/div&amp;gt;
-
-&amp;lt;div class=&quot;search-link&quot; id=&quot;&quot; aria-labelledby=&quot;-heading&quot;&amp;gt;
-    &amp;lt;h2 id=&quot;-heading&quot;&amp;gt;
-        &amp;lt;a href=&quot;#&quot; class=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&amp;gt;
-            &amp;lt;img src=&quot;/assets/gold.ico&quot; alt=&quot;gold icon&quot;&amp;gt;
-        &amp;lt;/a&amp;gt;
-        
-    &amp;lt;/h2&amp;gt;
-    &amp;lt;ul&amp;gt;
-        
-    &amp;lt;/ul&amp;gt;
-&amp;lt;/div&amp;gt;
-
-&amp;lt;div class=&quot;search-link&quot; id=&quot;&quot; aria-labelledby=&quot;-heading&quot;&amp;gt;
-    &amp;lt;h2 id=&quot;-heading&quot;&amp;gt;
-        &amp;lt;a href=&quot;#&quot; class=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&amp;gt;
-            &amp;lt;img src=&quot;/assets/gold.ico&quot; alt=&quot;gold icon&quot;&amp;gt;
-        &amp;lt;/a&amp;gt;
-        
-    &amp;lt;/h2&amp;gt;
-    &amp;lt;ul&amp;gt;
-        
-    &amp;lt;/ul&amp;gt;
-&amp;lt;/div&amp;gt;
-
-&amp;lt;div class=&quot;search-link&quot; id=&quot;&quot; aria-labelledby=&quot;-heading&quot;&amp;gt;
     &amp;lt;h2 id=&quot;-heading&quot;&amp;gt;
         &amp;lt;a href=&quot;#&quot; class=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&amp;gt;
             &amp;lt;img src=&quot;/assets/gold.ico&quot; alt=&quot;gold icon&quot;&amp;gt;
@@ -48026,26 +47887,6 @@ Pense duas vezes antes de se envolver.
 
 
 
-
-&amp;lt;div class=&quot;search-link&quot;&amp;gt;
-  &amp;lt;h3&amp;gt;
-    &amp;lt;a class=&quot;post-heading&quot; href=&quot;#&quot; id=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&amp;gt;
-      &amp;lt;img src=&quot;/assets/gold.ico&quot; alt=&quot;gold icon&quot;&amp;gt;
-    &amp;lt;/a&amp;gt;
-    2024-09-09
-    
-    &amp;amp;rightarrowtail; 
-    09 Sep 2024
-    
-  &amp;lt;/h3&amp;gt;
-  &amp;lt;ul&amp;gt;
-    &amp;lt;a href=&quot;/srs/&quot;&amp;gt;
-      &amp;lt;h2&amp;gt;
-        reassess
-      &amp;lt;/h2&amp;gt;
-    &amp;lt;/a&amp;gt;
-  &amp;lt;/ul&amp;gt;
-&amp;lt;/div&amp;gt;
 
 &amp;lt;div class=&quot;search-link&quot;&amp;gt;
   &amp;lt;h3&amp;gt;
