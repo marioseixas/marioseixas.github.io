@@ -99,11 +99,6 @@ nav.header-content {
   width: 100%;
   justify-content: center;
 }
-iframe-container {
-    padding-top: 56.25%;
-    width: 100%;
-    height: auto;
-}
 .cluster {
     rect {
         fill: var(--bg-muted);
@@ -508,10 +503,9 @@ svg,
 select {
   display: block;
   overflow: auto;
-  padding-top: 56.25%;
   position: relative;
   width: 100%;
-  height: auto;
+  height: 56.25vh;
 }
 img[align="left"] {
   margin-right: 1em;
