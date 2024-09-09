@@ -314,7 +314,7 @@ def generate_mermaid_graph(
 if __name__ == "__main__":
     posts_dir = os.path.join(os.getenv("GITHUB_WORKSPACE", ""), "_posts")
     output_file = os.path.join(
-        os.getenv("GITHUB_WORKSPACE", ""), "_data/processed_tags.yml"
+        os.getenv("GITHUB_WORKSPACE", ""), "assets/data/processed_tags.yml"
     )
 
     tag_data, combined_tags = process_tags(posts_dir, output_file) 
@@ -322,17 +322,17 @@ if __name__ == "__main__":
     # Output to JSON
     json_output_handler = JsonOutputHandler()
     json_output_file = os.path.join(
-        os.getenv("GITHUB_WORKSPACE", ""), "_data/processed_tags.json"
+        os.getenv("GITHUB_WORKSPACE", ""), "assets/data/processed_tags.json"
     )
     json_output_handler.write(tag_data, json_output_file)
 
     # Output to Mermaid graph
     mermaid_graph = generate_mermaid_graph(tag_data)
     with open(
-        os.path.join(os.getenv("GITHUB_WORKSPACE", ""), "_includes/tag_graph.html"),
+        os.path.join(os.getenv("GITHUB_WORKSPACE", ""), "assets/data/tag_graph.html"),
         "w",
         encoding="utf-8",
     ) as f:
         f.write(f"<div class='mermaid'>\n{mermaid_graph}\n</div>")
 
-    logging.info("Mermaid graph has been written to _includes/tag_graph.html")
+    logging.info("Mermaid graph has been written to assets/data/tag_graph.html")
