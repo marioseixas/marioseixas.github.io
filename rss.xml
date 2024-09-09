@@ -46,7 +46,7 @@
     <title>infoBAG</title>
     <link href="https://ib.bsb.br/rss.xml" rel="self"/>
     <link href="https://ib.bsb.br/"/>
-    <updated>2024-09-09T22:15:46+00:00</updated>
+    <updated>2024-09-09T22:19:48+00:00</updated>
     <id>https://ib.bsb.br</id>
     <author>
         <name></name>
@@ -44802,14 +44802,10 @@ Pense duas vezes antes de se envolver.
         <link href="https://ib.bsb.br/tags/"/>
         <updated>1992-07-12T00:00:00+00:00</updated>
         <id>https://ib.bsb.br/tags/</id>
-        <content type="html">&lt;aside class=&quot;tag-list&quot; aria-label=&quot;List of all tags&quot;&gt;
-    &lt;ul&gt;
-        
-    &lt;/ul&gt;
-&lt;/aside&gt;
-&lt;div class=&quot;tagged-posts&quot;&gt;
+        <content type="html">&lt;ul class=&quot;tag-list&quot; aria-label=&quot;List of all tags&quot;&gt;
     
-&lt;/div&gt;
+&lt;/ul&gt;
+
 </content>
     </entry>
     
