@@ -704,13 +704,13 @@
     "scripts": {
         "parents": [],
         "children": [
-            "AI",
-            "scripts>google-apps-script",
-            "google-apps-script",
             "scripts>mobile",
-            "scripts>cloud",
-            "mobile",
+            "AI",
             "cloud",
+            "scripts>google-apps-script",
+            "mobile",
+            "google-apps-script",
+            "scripts>cloud",
             "scripts>AI"
         ],
         "related": {
@@ -950,8 +950,8 @@
     "tools": {
         "parents": [],
         "children": [
-            "tools>AI>prompt",
-            "AI>prompt"
+            "AI>prompt",
+            "tools>AI>prompt"
         ],
         "related": {},
         "posts": [
@@ -1096,8 +1096,8 @@
     },
     "mobile": {
         "parents": [
-            "scripts",
-            "software"
+            "software",
+            "scripts"
         ],
         "children": [],
         "related": {},
@@ -1149,8 +1149,8 @@
     "software": {
         "parents": [],
         "children": [
-            "software>cloud",
             "software>mobile",
+            "software>cloud",
             "cloud",
             "mobile"
         ],
@@ -1261,8 +1261,8 @@
     },
     "cloud": {
         "parents": [
-            "scripts",
-            "software"
+            "software",
+            "scripts"
         ],
         "children": [],
         "related": {},
@@ -1405,8 +1405,8 @@
     },
     "AI>prompt": {
         "parents": [
-            "AI",
-            "tools"
+            "tools",
+            "AI"
         ],
         "children": [],
         "related": {},
@@ -1461,8 +1461,8 @@
         ],
         "children": [
             "prompt",
-            "tools>AI>prompt",
-            "AI>prompt"
+            "AI>prompt",
+            "tools>AI>prompt"
         ],
         "related": {},
         "posts": [
@@ -1711,8 +1711,8 @@
     },
     "tools>AI>prompt": {
         "parents": [
-            "AI",
-            "tools"
+            "tools",
+            "AI"
         ],
         "children": [],
         "related": {},
@@ -1817,8 +1817,8 @@
     "edital": {
         "parents": [],
         "children": [
-            "edital>direito",
             "direito",
+            "edital>direito",
             "direito>processual-penal",
             "edital>direito>processual-penal"
         ],
