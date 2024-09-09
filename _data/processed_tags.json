@@ -704,14 +704,14 @@
     "scripts": {
         "parents": [],
         "children": [
+            "scripts>AI",
             "scripts>cloud",
             "cloud",
-            "scripts>mobile",
-            "AI",
             "mobile",
             "google-apps-script",
+            "scripts>mobile",
             "scripts>google-apps-script",
-            "scripts>AI"
+            "AI"
         ],
         "related": {
             "linux": 26,
@@ -957,12 +957,6 @@
         "posts": [
             {
                 "title": "reassess",
-                "url": "/r",
-                "highlighted": false,
-                "date": "2024-08-09T00:00:00"
-            },
-            {
-                "title": "reassess",
                 "url": "/reassess",
                 "highlighted": false,
                 "date": "2024-04-13T00:00:00"
@@ -1137,10 +1131,10 @@
     "software": {
         "parents": [],
         "children": [
-            "software>mobile",
-            "software>cloud",
             "cloud",
-            "mobile"
+            "mobile",
+            "software>mobile",
+            "software>cloud"
         ],
         "related": {},
         "posts": [
@@ -1306,8 +1300,8 @@
     "tasks": {
         "parents": [],
         "children": [
-            "tasks>iphone",
-            "iphone"
+            "iphone",
+            "tasks>iphone"
         ],
         "related": {},
         "posts": [
@@ -1400,12 +1394,6 @@
         "related": {},
         "posts": [
             {
-                "title": "reassess",
-                "url": "/r",
-                "highlighted": false,
-                "date": "2024-08-09T00:00:00"
-            },
-            {
                 "title": "gmail2mailgrip",
                 "url": "/gmail2mailgrip-prompt",
                 "highlighted": true,
@@ -1442,12 +1430,6 @@
         ],
         "related": {},
         "posts": [
-            {
-                "title": "reassess",
-                "url": "/r",
-                "highlighted": false,
-                "date": "2024-08-09T00:00:00"
-            },
             {
                 "title": "gmail2mailgrip",
                 "url": "/gmail2mailgrip-prompt",
@@ -1500,18 +1482,12 @@
     },
     "prompt": {
         "parents": [
-            "tools>AI",
-            "AI"
+            "AI",
+            "tools>AI"
         ],
         "children": [],
         "related": {},
         "posts": [
-            {
-                "title": "reassess",
-                "url": "/r",
-                "highlighted": false,
-                "date": "2024-08-09T00:00:00"
-            },
             {
                 "title": "gmail2mailgrip",
                 "url": "/gmail2mailgrip-prompt",
@@ -1636,49 +1612,6 @@
             }
         ]
     },
-    "tools>AI>prompt": {
-        "parents": [
-            "tools",
-            "AI"
-        ],
-        "children": [],
-        "related": {},
-        "posts": [
-            {
-                "title": "reassess",
-                "url": "/r",
-                "highlighted": true,
-                "date": "2024-08-09T00:00:00"
-            },
-            {
-                "title": "reassess",
-                "url": "/reassess",
-                "highlighted": true,
-                "date": "2024-04-13T00:00:00"
-            }
-        ]
-    },
-    "tools>AI": {
-        "parents": [],
-        "children": [
-            "prompt"
-        ],
-        "related": {},
-        "posts": [
-            {
-                "title": "reassess",
-                "url": "/r",
-                "highlighted": false,
-                "date": "2024-08-09T00:00:00"
-            },
-            {
-                "title": "reassess",
-                "url": "/reassess",
-                "highlighted": false,
-                "date": "2024-04-13T00:00:00"
-            }
-        ]
-    },
     "hardware": {
         "parents": [],
         "children": [],
@@ -1745,10 +1678,10 @@
     "edital": {
         "parents": [],
         "children": [
-            "edital>direito",
+            "edital>direito>processual-penal",
             "direito",
             "direito>processual-penal",
-            "edital>direito>processual-penal"
+            "edital>direito"
         ],
         "related": {},
         "posts": [
@@ -1895,8 +1828,8 @@
     },
     "edital>direito>processual-penal": {
         "parents": [
-            "direito",
-            "edital"
+            "edital",
+            "direito"
         ],
         "children": [],
         "related": {},
@@ -2014,6 +1947,37 @@
                 "url": "/aws-pushsafer-billing-alarm",
                 "highlighted": true,
                 "date": "2024-07-25T00:00:00"
+            }
+        ]
+    },
+    "tools>AI>prompt": {
+        "parents": [
+            "tools",
+            "AI"
+        ],
+        "children": [],
+        "related": {},
+        "posts": [
+            {
+                "title": "reassess",
+                "url": "/reassess",
+                "highlighted": true,
+                "date": "2024-04-13T00:00:00"
+            }
+        ]
+    },
+    "tools>AI": {
+        "parents": [],
+        "children": [
+            "prompt"
+        ],
+        "related": {},
+        "posts": [
+            {
+                "title": "reassess",
+                "url": "/reassess",
+                "highlighted": false,
+                "date": "2024-04-13T00:00:00"
             }
         ]
     },
