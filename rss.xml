@@ -46,7 +46,7 @@
     <title>infoBAG</title>
     <link href="https://ib.bsb.br/rss.xml" rel="self"/>
     <link href="https://ib.bsb.br/"/>
-    <updated>2024-09-09T15:19:21+00:00</updated>
+    <updated>2024-09-09T15:33:47+00:00</updated>
     <id>https://ib.bsb.br</id>
     <author>
         <name></name>
@@ -45641,7 +45641,24 @@ Pense duas vezes antes de se envolver.
         <link href="https://ib.bsb.br/events/"/>
         <updated>1992-07-12T00:00:00+00:00</updated>
         <id>https://ib.bsb.br/events/</id>
-        <content type="html">&lt;div class=&quot;wrapper&quot;&gt;&lt;h1 class=&quot;title&quot;&gt;&lt;i class=&quot;far fa-calendar&quot;&gt;&lt;/i&gt;Events&lt;/h1&gt;&lt;div id=&quot;calendar&quot; class=&quot;far fa-calendar&quot;&gt;Events&lt;/div&gt;&lt;/div&gt;
+        <content type="html">&lt;script src=&quot;/assets/js/vendor/fullcalendar/index.global.min.js&quot;&gt;&lt;/script&gt;
+
+&lt;script&gt;
+  document.addEventListener(&apos;DOMContentLoaded&apos;, function() {
+    var calendarEl = document.getElementById(&apos;calendar&apos;);
+    fetch(&apos;/assets/data/events.json&apos;)
+      .then(response =&gt; response.json())
+      .then(data =&gt; {
+        var calendar = new FullCalendar.Calendar(calendarEl, {
+          initialView: &apos;listMonth&apos;,
+          events: data
+        });
+        calendar.render();
+      });
+  });
+&lt;/script&gt;
+
+&lt;div id=&quot;calendar&quot;&gt;&lt;/div&gt;
 </content>
     </entry>
     

@@ -1781,7 +1781,7 @@
         {
             "id": "https://ib.bsb.br/events/",
             "title": "Events",
-            "content_html": "<div class=\"wrapper\"><h1 class=\"title\"><i class=\"far fa-calendar\"></i>Events</h1><div id=\"calendar\" class=\"far fa-calendar\">Events</div></div>\n",
+            "content_html": "<script src=\"/assets/js/vendor/fullcalendar/index.global.min.js\"></script>\n\n<script>\n  document.addEventListener('DOMContentLoaded', function() {\n    var calendarEl = document.getElementById('calendar');\n    fetch('/assets/data/events.json')\n      .then(response => response.json())\n      .then(data => {\n        var calendar = new FullCalendar.Calendar(calendarEl, {\n          initialView: 'listMonth',\n          events: data\n        });\n        calendar.render();\n      });\n  });\n</script>\n\n<div id=\"calendar\"></div>\n",
             "url": "https://ib.bsb.br/events/",
             "date_published": "1992-07-12 00:00:00 +0000"
         }
