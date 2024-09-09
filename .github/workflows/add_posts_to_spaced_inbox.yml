@@ -48,7 +48,7 @@ jobs:
         id: extract-urls
         run: |
           # Define the base URL for the GitHub Pages site
-          BASE_URL="https://marioseixas.github.io"
+          BASE_URL="ib.bsb.br"
 
           # Find all markdown files in the _posts directory that were changed
           POST_FILES=$(git diff --name-only HEAD^ HEAD -- '_posts/**.md')
@@ -56,10 +56,10 @@ jobs:
           # Extract URLs based on the Jekyll URL structure
           POST_URLS=""
           for POST in $POST_FILES; do
-            # Extract the post filename and convert it to the URL structure
+            # Extract the post filename and remove the date part (YYYY-MM-DD) from the beginning
             FILENAME=$(basename "$POST" .md)
-            POST_URL="$BASE_URL/${POST#_posts/}"
-            POST_URL="${POST_URL%.md}.html"  # Convert .md to .html for the final URL
+            SLUG=$(echo "$FILENAME" | sed 's/^[0-9]\{4\}-[0-9]\{2\}-[0-9]\{2\}-//')
+            POST_URL="$BASE_URL/$SLUG"  # Convert slug to final URL with .html extension
             POST_URLS="$POST_URLS\n$POST_URL"
           done
 
@@ -72,12 +72,12 @@ jobs:
           if [ -s post_urls.txt ]; then
             # Append the URLs to the inbox file with a unique inbox name like 'jekyll-posts'
             while read -r URL; do
-              echo -e "$URL" >> inbox_files.txt
+              echo -e "$URL" >> infoBAG.txt
             done < post_urls.txt
           fi
 
       - name: Print inbox_files.txt contents
-        run: cat inbox_files.txt
+        run: cat infoBAG.txt
 
       # Step 7: Run the spaced inbox script to import the new URLs as notes
       - name: Run spaced inbox script
