@@ -88,13 +88,19 @@ jobs:
         env:
           TERM: xterm
           
-      # Step 9: Commit the updated inbox and database
-      - name: Commit changes
+      # Step 9: Commit the updated inbox and database      
+      - name: Configure Git
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          git add inbox_files.txt data.db
+
+      - name: Stage Changes
+        run: git add .
+
+      - name: Commit and Push
+        run: |
           git commit -m "Update spaced-inbox with new posts" || echo "No changes to commit"
+          git pull --rebase
           git push
 
       # Step 10: Upload artifacts (optional)
