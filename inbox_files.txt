@@ -1,1 +1,1 @@
-infoBAG  /home/runner/work/marioseixas.github.io/marioseixas.github.io/infoBAG.txt
+inbox	${{ github.workspace }}/_site/infoBAG.txt
