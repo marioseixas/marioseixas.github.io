@@ -259,9 +259,9 @@ def generate_mermaid_graph(
 
 def save_output(output_data, output_folder):
     """Saves YAML, JSON, and Mermaid graph outputs to the specified folder."""
-    yaml_file = os.path.join(output_folder, 'output_tags.yaml')
-    json_file = os.path.join(output_folder, 'output_tags.json')
-    mermaid_file = os.path.join(output_folder, 'output_tags.mmd')
+    yaml_file = os.path.join(output_folder, 'processed_tags.yml')
+    json_file = os.path.join(output_folder, 'processed_tags.json')
+    mermaid_file = os.path.join(output_folder, 'tag_graph.html')
 
     # Save YAML
     with open(yaml_file, 'w') as f:
