@@ -84,7 +84,10 @@ jobs:
       - name: Run spaced inbox script
         run: |
           python script.py --no-review
-
+        shell: /usr/bin/bash -e {0}
+        env:
+          TERM: xterm
+          
       # Step 9: Commit the updated inbox and database
       - name: Commit changes
         run: |
