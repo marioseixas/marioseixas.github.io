@@ -279,7 +279,7 @@ def save_output(output_data, output_folder):
     logging.info(f"Mermaid graph saved to {mermaid_file}")
 
 # Example usage (make sure to update the directory paths accordingly):
-posts_directory = 'posts'
+posts_directory = '_posts'
 output_folder = 'assets/data'
 
 # Process the tags and generate the outputs
