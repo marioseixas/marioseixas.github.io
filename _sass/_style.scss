@@ -99,9 +99,12 @@ nav.header-content {
   justify-content: center;
 }
 iframe-container {
-  display: block;
-  max-width: 100%;
-  height: auto;
+    display: block;	
+    overflow: auto;
+    padding-top: 56.25%;
+    position: relative;
+    width: 100%;
+    height: auto;
 }
 .cluster {
     rect {
@@ -502,10 +505,12 @@ video,
 svg,
 select {
   display: block;
-  max-width: 100%;
+  overflow: auto;
+  padding-top: 56.25%;
+  position: relative;
+  width: 100%;
   height: auto;
 }
-
 img[align="left"] {
   margin-right: 1em;
 }
