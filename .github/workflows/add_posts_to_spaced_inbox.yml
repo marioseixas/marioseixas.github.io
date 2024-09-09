@@ -64,7 +64,7 @@ jobs:
           done
 
           # Save the URLs to a file for the next step
-          echo -e "$POST_URLS" > post_urls.txt
+          pwd -P > post_urls.txt
 
       # Step 5: Append URLs to inbox file
       - name: Append URLs to inbox file
