@@ -1,12 +1,10 @@
 #!/usr/bin/env python3
 
-# This script displays a histogram of your future review load.
-
 import matplotlib.pyplot as plt
 import datetime
 import sqlite3
 import sys
-
+import os  # Import the os module
 
 conn = sqlite3.connect(sys.argv[1])
 cur = conn.cursor()
@@ -41,4 +39,8 @@ plt.xlabel("days in the future")
 plt.ylabel("number of notes due for review on this day")
 plt.legend(loc="upper right")
 
-plt.savefig("review_load.png", clobber=True)
+filename = "review_load.png"
+if os.path.exists(filename):
+    os.remove(filename)  # Remove the file if it exists
+
+plt.savefig(filename) # Save the plot (without clobber or force)
