@@ -103,6 +103,7 @@ jobs:
           cname: ib.bsb.br
           allow_empty_commit: true
           enable_jekyll: false
+          keep_files: true
 
   add-posts-to-inbox:
     runs-on: ubuntu-latest
