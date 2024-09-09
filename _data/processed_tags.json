@@ -704,13 +704,13 @@
     "scripts": {
         "parents": [],
         "children": [
-            "scripts>AI",
-            "scripts>mobile",
-            "mobile",
-            "AI",
-            "cloud",
-            "scripts>cloud",
             "google-apps-script",
+            "scripts>cloud",
+            "scripts>AI",
+            "cloud",
+            "AI",
+            "mobile",
+            "scripts>mobile",
             "scripts>google-apps-script"
         ],
         "related": {
@@ -963,12 +963,6 @@
             },
             {
                 "title": "reassess",
-                "url": "/react",
-                "highlighted": false,
-                "date": "2024-08-09T00:00:00"
-            },
-            {
-                "title": "reassess",
                 "url": "/reassess",
                 "highlighted": false,
                 "date": "2024-04-13T00:00:00"
@@ -1143,10 +1137,10 @@
     "software": {
         "parents": [],
         "children": [
-            "software>mobile",
-            "mobile",
             "cloud",
-            "software>cloud"
+            "software>mobile",
+            "software>cloud",
+            "mobile"
         ],
         "related": {},
         "posts": [
@@ -1312,8 +1306,8 @@
     "tasks": {
         "parents": [],
         "children": [
-            "tasks>iphone",
-            "iphone"
+            "iphone",
+            "tasks>iphone"
         ],
         "related": {},
         "posts": [
@@ -1412,12 +1406,6 @@
                 "date": "2024-08-09T00:00:00"
             },
             {
-                "title": "reassess",
-                "url": "/react",
-                "highlighted": false,
-                "date": "2024-08-09T00:00:00"
-            },
-            {
                 "title": "gmail2mailgrip",
                 "url": "/gmail2mailgrip-prompt",
                 "highlighted": true,
@@ -1448,21 +1436,15 @@
             "scripts"
         ],
         "children": [
-            "prompt",
             "tools>AI>prompt",
-            "AI>prompt"
+            "AI>prompt",
+            "prompt"
         ],
         "related": {},
         "posts": [
             {
                 "title": "reassess",
                 "url": "/reass",
-                "highlighted": false,
-                "date": "2024-08-09T00:00:00"
-            },
-            {
-                "title": "reassess",
-                "url": "/react",
                 "highlighted": false,
                 "date": "2024-08-09T00:00:00"
             },
@@ -1518,8 +1500,8 @@
     },
     "prompt": {
         "parents": [
-            "AI",
-            "tools>AI"
+            "tools>AI",
+            "AI"
         ],
         "children": [],
         "related": {},
@@ -1527,12 +1509,6 @@
             {
                 "title": "reassess",
                 "url": "/reass",
-                "highlighted": false,
-                "date": "2024-08-09T00:00:00"
-            },
-            {
-                "title": "reassess",
-                "url": "/react",
                 "highlighted": false,
                 "date": "2024-08-09T00:00:00"
             },
@@ -1586,8 +1562,8 @@
     "github": {
         "parents": [],
         "children": [
-            "github>jekyll",
-            "jekyll"
+            "jekyll",
+            "github>jekyll"
         ],
         "related": {},
         "posts": [
@@ -1726,8 +1702,8 @@
     "edital": {
         "parents": [],
         "children": [
-            "edital>direito>processual-penal",
             "direito",
+            "edital>direito>processual-penal",
             "direito>processual-penal",
             "edital>direito"
         ],
@@ -1967,12 +1943,6 @@
             },
             {
                 "title": "reassess",
-                "url": "/react",
-                "highlighted": true,
-                "date": "2024-08-09T00:00:00"
-            },
-            {
-                "title": "reassess",
                 "url": "/reassess",
                 "highlighted": true,
                 "date": "2024-04-13T00:00:00"
@@ -1989,12 +1959,6 @@
             {
                 "title": "reassess",
                 "url": "/reass",
-                "highlighted": false,
-                "date": "2024-08-09T00:00:00"
-            },
-            {
-                "title": "reassess",
-                "url": "/react",
                 "highlighted": false,
                 "date": "2024-08-09T00:00:00"
             },
