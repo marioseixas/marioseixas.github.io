@@ -112,7 +112,7 @@ jobs:
           publish_branch: gh-pages
           cname: ib.bsb.br
           allow_empty_commit: true
-          enable_jekyll: false
+          enable_jekyll: true
 
   add-posts-to-inbox:
     runs-on: ubuntu-latest
