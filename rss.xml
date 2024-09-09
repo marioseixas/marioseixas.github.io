@@ -46,7 +46,7 @@
     <title>infoBAG</title>
     <link href="https://ib.bsb.br/rss.xml" rel="self"/>
     <link href="https://ib.bsb.br/"/>
-    <updated>2024-09-09T22:25:49+00:00</updated>
+    <updated>2024-09-09T22:31:27+00:00</updated>
     <id>https://ib.bsb.br</id>
     <author>
         <name></name>
@@ -44806,6 +44806,32 @@ Pense duas vezes antes de se envolver.
     
 &lt;/ul&gt;
 
+&lt;hr /&gt;
+&lt;p&gt;layout: default
+slug: tags
+—&lt;/p&gt;
+
+&lt;aside class=&quot;tag-list&quot; aria-label=&quot;List of all tags&quot;&gt;
+    &lt;ul&gt;
+        
+    &lt;/ul&gt;
+&lt;/aside&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    &amp;lt;div id=&quot;cusdis_thread&quot;
+      data-host=&quot;https://cusdis.com&quot;
+      data-app-id=&quot;5fce21a3-9b85-4794-b6f6-e0eaaf788ced&quot;
+      data-page-id=&quot;/tags&quot;
+      data-page-url=&quot;https://ib.bsb.br/tags/&quot;
+      data-page-title=&quot;Tags&quot;
+    &amp;gt;
+      &amp;lt;h3&amp;gt;Comments (0)&amp;lt;/h3&amp;gt;
+      
+    &amp;lt;/div&amp;gt;
+    &amp;lt;script async defer src=&quot;https://cusdis.com/js/cusdis.es.js&quot;&amp;gt;&amp;lt;/script&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;tagged-posts&quot;&gt;
+    
+&lt;/div&gt;
 </content>
     </entry>
     
@@ -44868,9 +44894,9 @@ Pense duas vezes antes de se envolver.
     
   &amp;lt;/h3&amp;gt;
   &amp;lt;ul&amp;gt;
-    &amp;lt;a href=&quot;/&quot;&amp;gt;
+    &amp;lt;a href=&quot;/tags/&quot;&amp;gt;
       &amp;lt;h2&amp;gt;
-        Index
+        Tags
       &amp;lt;/h2&amp;gt;
     &amp;lt;/a&amp;gt;
   &amp;lt;/ul&amp;gt;
@@ -44888,9 +44914,9 @@ Pense duas vezes antes de se envolver.
     
   &amp;lt;/h3&amp;gt;
   &amp;lt;ul&amp;gt;
-    &amp;lt;a href=&quot;/tags/&quot;&amp;gt;
+    &amp;lt;a href=&quot;/&quot;&amp;gt;
       &amp;lt;h2&amp;gt;
-        Tags
+        Index
       &amp;lt;/h2&amp;gt;
     &amp;lt;/a&amp;gt;
   &amp;lt;/ul&amp;gt;
