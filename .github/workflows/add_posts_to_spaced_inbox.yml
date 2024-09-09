@@ -87,6 +87,10 @@ jobs:
         shell: /usr/bin/bash -e {0}
         env:
           TERM: xterm
+
+      - name: Run review load visualizer
+        run: |
+          python review_load.py data.db
           
       # Step 9: Commit the updated inbox and database      
       - name: Configure Git
@@ -102,10 +106,3 @@ jobs:
           git commit -m "Update spaced-inbox with new posts" || echo "No changes to commit"
           git pull --rebase
           git push
-
-      # Step 10: Upload artifacts (optional)
-      - name: Upload spaced-inbox data
-        uses: actions/upload-artifact@v4
-        with:
-          name: spaced-inbox-data
-          path: data.db
