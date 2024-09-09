@@ -3,12 +3,12 @@ name: Add New Posts to Spaced Inbox
 on:
   push:
     branches:
-      - main 
+      - main
     paths:
       - '_posts/**.md'
   pull_request:
     branches:
-      - main 
+      - main
     paths:
       - '_posts/**.md'
 
@@ -43,48 +43,49 @@ jobs:
             sqlite3 data.db < schema.sql
           fi
 
-          # Step 4: Extract URLs of new/modified markdown posts
-          - name: Extract post URLs
-            id: extract-urls
-            run: |
-              BASE_URL="ib.bsb.br"
-              
-              # Find all markdown files in the _posts directory that were changed
-              POST_FILES=$(git diff --name-only HEAD^ HEAD -- '_posts/**.md')
-              
-              # Extract URLs based on the Jekyll URL structure
-              POST_URLS=""
-              for POST in $POST_FILES; do
-                # Extract the post filename and remove the date part (YYYY-MM-DD) from the beginning
-                FILENAME=$(basename "$POST" .md)
-                SLUG=$(echo "$FILENAME" | sed 's/^[0-9]\{4\}-[0-9]\{2\}-[0-9]\{2\}-//')
-                POST_URL="$BASE_URL/$SLUG"  # Convert slug to final URL with .html extension
-                POST_URLS="$POST_URLS\n$POST_URL"
-              done
-              
-              # Save the URLs to a file for the next step
-              echo -e "$POST_URLS" > post_urls.txt
+      # Step 5: Extract URLs of new/modified markdown posts
+      - name: Extract post URLs
+        id: extract-urls
+        run: |
+          BASE_URL="ib.bsb.br"
           
-          # Step 5: Append URLs to inbox file
-          - name: Append URLs to inbox file
-            run: |
-              if [ -s post_urls.txt ]; then
-                # Append the URLs to the inbox file with a blank line and '===' separator
-                while read -r URL; do
-                  echo -e "\n$URL\n=====" >> infoBAG.txt
-                done < post_urls.txt
-              fi
-            shell: bash
+          # Find all markdown files in the _posts directory that were changed
+          POST_FILES=$(git diff --name-only HEAD^ HEAD -- '_posts/**.md')
+          
+          # Extract URLs based on the Jekyll URL structure
+          POST_URLS=""
+          for POST in $POST_FILES; do
+            # Extract the post filename and remove the date part (YYYY-MM-DD) from the beginning
+            FILENAME=$(basename "$POST" .md)
+            SLUG=$(echo "$FILENAME" | sed 's/^[0-9]\{4\}-[0-9]\{2\}-[0-9]\{2\}-//')
+            POST_URL="$BASE_URL/$SLUG"  # Convert slug to final URL with .html extension
+            POST_URLS="$POST_URLS\n$POST_URL"
+          done
+          
+          # Save the URLs to a file for the next step
+          echo -e "$POST_URLS" > post_urls.txt
 
+      # Step 6: Append URLs to inbox file
+      - name: Append URLs to inbox file
+        run: |
+          if [ -s post_urls.txt ]; then
+            # Append the URLs to the inbox file with a blank line and '===' separator
+            while read -r URL; do
+              echo -e "\n$URL\n=====" >> infoBAG.txt
+            done < post_urls.txt
+          fi
+        shell: bash
+
+      # Step 7: Print inbox_files.txt contents
       - name: Print inbox_files.txt contents
         run: cat infoBAG.txt
 
-      # Step 7: Run the spaced inbox script to import the new URLs as notes
+      # Step 8: Run the spaced inbox script to import the new URLs as notes
       - name: Run spaced inbox script
         run: |
           python script.py --no-review
 
-      # Step 8: Commit the updated inbox and database
+      # Step 9: Commit the updated inbox and database
       - name: Commit changes
         run: |
           git config --local user.email "action@github.com"
@@ -93,7 +94,7 @@ jobs:
           git commit -m "Update spaced-inbox with new posts" || echo "No changes to commit"
           git push
 
-      # Step 9: Upload artifacts (optional)
+      # Step 10: Upload artifacts (optional)
       - name: Upload spaced-inbox data
         uses: actions/upload-artifact@v4
         with:
