@@ -704,14 +704,14 @@
     "scripts": {
         "parents": [],
         "children": [
-            "scripts>AI",
-            "mobile",
-            "scripts>google-apps-script",
             "google-apps-script",
-            "scripts>mobile",
-            "AI",
             "cloud",
-            "scripts>cloud"
+            "mobile",
+            "scripts>AI",
+            "AI",
+            "scripts>google-apps-script",
+            "scripts>cloud",
+            "scripts>mobile"
         ],
         "related": {
             "linux": 26,
@@ -877,13 +877,21 @@
         ]
     },
     "estudos": {
-        "parents": [],
+        "parents": [
+            "tools>github"
+        ],
         "children": [],
         "related": {
             "trabalho": 2,
             "scripts": 2
         },
         "posts": [
+            {
+                "title": "reassess",
+                "url": "/srs",
+                "highlighted": false,
+                "date": "2024-09-09T00:00:00"
+            },
             {
                 "title": "Periódicos para publicar artigos",
                 "url": "/periodicos",
@@ -950,11 +958,19 @@
     "tools": {
         "parents": [],
         "children": [
+            "tools>github>estudos",
             "tools>AI>prompt",
-            "AI>prompt"
+            "AI>prompt",
+            "github>estudos"
         ],
         "related": {},
         "posts": [
+            {
+                "title": "reassess",
+                "url": "/srs",
+                "highlighted": false,
+                "date": "2024-09-09T00:00:00"
+            },
             {
                 "title": "reassess",
                 "url": "/reassess",
@@ -1078,8 +1094,8 @@
     },
     "mobile": {
         "parents": [
-            "software",
-            "scripts"
+            "scripts",
+            "software"
         ],
         "children": [],
         "related": {},
@@ -1131,10 +1147,10 @@
     "software": {
         "parents": [],
         "children": [
-            "software>mobile",
             "cloud",
-            "software>cloud",
-            "mobile"
+            "software>mobile",
+            "mobile",
+            "software>cloud"
         ],
         "related": {},
         "posts": [
@@ -1243,8 +1259,8 @@
     },
     "cloud": {
         "parents": [
-            "software",
-            "scripts"
+            "scripts",
+            "software"
         ],
         "children": [],
         "related": {},
@@ -1424,9 +1440,9 @@
             "scripts"
         ],
         "children": [
-            "prompt",
             "tools>AI>prompt",
-            "AI>prompt"
+            "AI>prompt",
+            "prompt"
         ],
         "related": {},
         "posts": [
@@ -1538,11 +1554,18 @@
     "github": {
         "parents": [],
         "children": [
+            "tools>github>estudos",
             "github>jekyll",
             "jekyll"
         ],
         "related": {},
         "posts": [
+            {
+                "title": "reassess",
+                "url": "/srs",
+                "highlighted": false,
+                "date": "2024-09-09T00:00:00"
+            },
             {
                 "title": "PageFind with Jekyll ",
                 "url": "/pagefind-with-jekyll",
@@ -1678,10 +1701,10 @@
     "edital": {
         "parents": [],
         "children": [
-            "edital>direito",
-            "direito",
+            "edital>direito>processual-penal",
             "direito>processual-penal",
-            "edital>direito>processual-penal"
+            "direito",
+            "edital>direito"
         ],
         "related": {},
         "posts": [
@@ -1991,6 +2014,52 @@
                 "url": "/irpf",
                 "highlighted": true,
                 "date": "2022-03-19T00:00:00"
+            }
+        ]
+    },
+    "tools>github>estudos": {
+        "parents": [
+            "github",
+            "tools"
+        ],
+        "children": [],
+        "related": {},
+        "posts": [
+            {
+                "title": "reassess",
+                "url": "/srs",
+                "highlighted": true,
+                "date": "2024-09-09T00:00:00"
+            }
+        ]
+    },
+    "tools>github": {
+        "parents": [],
+        "children": [
+            "estudos"
+        ],
+        "related": {},
+        "posts": [
+            {
+                "title": "reassess",
+                "url": "/srs",
+                "highlighted": false,
+                "date": "2024-09-09T00:00:00"
+            }
+        ]
+    },
+    "github>estudos": {
+        "parents": [
+            "tools"
+        ],
+        "children": [],
+        "related": {},
+        "posts": [
+            {
+                "title": "reassess",
+                "url": "/srs",
+                "highlighted": false,
+                "date": "2024-09-09T00:00:00"
             }
         ]
     }
