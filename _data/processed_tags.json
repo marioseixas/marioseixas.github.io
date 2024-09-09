@@ -704,14 +704,14 @@
     "scripts": {
         "parents": [],
         "children": [
-            "scripts>cloud",
-            "mobile",
-            "scripts>mobile",
-            "google-apps-script",
             "cloud",
+            "scripts>AI",
             "AI",
             "scripts>google-apps-script",
-            "scripts>AI"
+            "scripts>cloud",
+            "mobile",
+            "google-apps-script",
+            "scripts>mobile"
         ],
         "related": {
             "linux": 26,
@@ -950,11 +950,17 @@
     "tools": {
         "parents": [],
         "children": [
-            "AI>prompt",
-            "tools>AI>prompt"
+            "tools>AI>prompt",
+            "AI>prompt"
         ],
         "related": {},
         "posts": [
+            {
+                "title": "reassess",
+                "url": "/re",
+                "highlighted": false,
+                "date": "2024-08-07T00:00:00"
+            },
             {
                 "title": "reassess",
                 "url": "/reassess",
@@ -1078,8 +1084,8 @@
     },
     "mobile": {
         "parents": [
-            "scripts",
-            "software"
+            "software",
+            "scripts"
         ],
         "children": [],
         "related": {},
@@ -1131,10 +1137,10 @@
     "software": {
         "parents": [],
         "children": [
-            "software>mobile",
             "cloud",
-            "mobile",
-            "software>cloud"
+            "software>mobile",
+            "software>cloud",
+            "mobile"
         ],
         "related": {},
         "posts": [
@@ -1243,8 +1249,8 @@
     },
     "cloud": {
         "parents": [
-            "scripts",
-            "software"
+            "software",
+            "scripts"
         ],
         "children": [],
         "related": {},
@@ -1387,12 +1393,18 @@
     },
     "AI>prompt": {
         "parents": [
-            "tools",
-            "AI"
+            "AI",
+            "tools"
         ],
         "children": [],
         "related": {},
         "posts": [
+            {
+                "title": "reassess",
+                "url": "/re",
+                "highlighted": false,
+                "date": "2024-08-07T00:00:00"
+            },
             {
                 "title": "gmail2mailgrip",
                 "url": "/gmail2mailgrip-prompt",
@@ -1424,12 +1436,18 @@
             "scripts"
         ],
         "children": [
+            "tools>AI>prompt",
             "AI>prompt",
-            "prompt",
-            "tools>AI>prompt"
+            "prompt"
         ],
         "related": {},
         "posts": [
+            {
+                "title": "reassess",
+                "url": "/re",
+                "highlighted": false,
+                "date": "2024-08-07T00:00:00"
+            },
             {
                 "title": "gmail2mailgrip",
                 "url": "/gmail2mailgrip-prompt",
@@ -1489,6 +1507,12 @@
         "related": {},
         "posts": [
             {
+                "title": "reassess",
+                "url": "/re",
+                "highlighted": false,
+                "date": "2024-08-07T00:00:00"
+            },
+            {
                 "title": "gmail2mailgrip",
                 "url": "/gmail2mailgrip-prompt",
                 "highlighted": false,
@@ -1538,8 +1562,8 @@
     "github": {
         "parents": [],
         "children": [
-            "github>jekyll",
-            "jekyll"
+            "jekyll",
+            "github>jekyll"
         ],
         "related": {},
         "posts": [
@@ -1678,10 +1702,10 @@
     "edital": {
         "parents": [],
         "children": [
-            "direito",
-            "edital>direito>processual-penal",
             "edital>direito",
-            "direito>processual-penal"
+            "edital>direito>processual-penal",
+            "direito>processual-penal",
+            "direito"
         ],
         "related": {},
         "posts": [
@@ -1826,10 +1850,53 @@
             }
         ]
     },
+    "tools>AI>prompt": {
+        "parents": [
+            "tools",
+            "AI"
+        ],
+        "children": [],
+        "related": {},
+        "posts": [
+            {
+                "title": "reassess",
+                "url": "/re",
+                "highlighted": true,
+                "date": "2024-08-07T00:00:00"
+            },
+            {
+                "title": "reassess",
+                "url": "/reassess",
+                "highlighted": true,
+                "date": "2024-04-13T00:00:00"
+            }
+        ]
+    },
+    "tools>AI": {
+        "parents": [],
+        "children": [
+            "prompt"
+        ],
+        "related": {},
+        "posts": [
+            {
+                "title": "reassess",
+                "url": "/re",
+                "highlighted": false,
+                "date": "2024-08-07T00:00:00"
+            },
+            {
+                "title": "reassess",
+                "url": "/reassess",
+                "highlighted": false,
+                "date": "2024-04-13T00:00:00"
+            }
+        ]
+    },
     "edital>direito>processual-penal": {
         "parents": [
-            "edital",
-            "direito"
+            "direito",
+            "edital"
         ],
         "children": [],
         "related": {},
@@ -1947,37 +2014,6 @@
                 "url": "/aws-pushsafer-billing-alarm",
                 "highlighted": true,
                 "date": "2024-07-25T00:00:00"
-            }
-        ]
-    },
-    "tools>AI>prompt": {
-        "parents": [
-            "tools",
-            "AI"
-        ],
-        "children": [],
-        "related": {},
-        "posts": [
-            {
-                "title": "reassess",
-                "url": "/reassess",
-                "highlighted": true,
-                "date": "2024-04-13T00:00:00"
-            }
-        ]
-    },
-    "tools>AI": {
-        "parents": [],
-        "children": [
-            "prompt"
-        ],
-        "related": {},
-        "posts": [
-            {
-                "title": "reassess",
-                "url": "/reassess",
-                "highlighted": false,
-                "date": "2024-04-13T00:00:00"
             }
         ]
     },
