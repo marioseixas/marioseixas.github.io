@@ -46,7 +46,7 @@
     <title>infoBAG</title>
     <link href="https://ib.bsb.br/rss.xml" rel="self"/>
     <link href="https://ib.bsb.br/"/>
-    <updated>2024-09-09T13:18:24+00:00</updated>
+    <updated>2024-09-09T13:28:11+00:00</updated>
     <id>https://ib.bsb.br</id>
     <author>
         <name></name>
@@ -61,7 +61,7 @@
   &lt;p&gt;source &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;https://github.com/riceissa/spaced-inbox&lt;/code&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;h2 id=&quot;spaced-inbox-documentation&quot;&gt;Spaced Inbox Documentation&lt;/h2&gt;
+&lt;h1 id=&quot;spaced-inbox-documentation&quot;&gt;Spaced Inbox Documentation&lt;/h1&gt;
 
 &lt;blockquote&gt;
   &lt;p&gt;This system provides spaced repetition for your notes written in plain text files, using a simple command-line interface and your favorite text editor. It aims to surface the most relevant and “exciting” notes at optimal intervals for long-term retention, while providing flexibility and control over your review process.&lt;/p&gt;
