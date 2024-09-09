@@ -44,376 +44,225 @@
     </header>
     <article class="post-wrapper">
       <main class="content">
-        <script>
-  document.addEventListener('DOMContentLoaded', function() {
-    const tagLinks = document.querySelectorAll('.tag-list a');
-    const backToTopLinks = document.querySelectorAll('.back-to-top');
-
-    function smoothScroll(target, duration = 300) {
-      const targetPosition = target.getBoundingClientRect().top + window.pageYOffset;
-      const startPosition = window.pageYOffset;
-      const distance = targetPosition - startPosition;
-      let startTime = null;
-
-      function animation(currentTime) {
-        if (startTime === null) startTime = currentTime;
-        const timeElapsed = currentTime - startTime;
-        const run = ease(timeElapsed, startPosition, distance, duration);
-        window.scrollTo(0, run);
-        if (timeElapsed < duration) requestAnimationFrame(animation);
-      }
-
-      function ease(t, b, c, d) {
-        t /= d / 2;
-        if (t < 1) return c / 2 * t * t + b;
-        t--;
-        return -c / 2 * (t * (t - 2) - 1) + b;
-      }
-
-      requestAnimationFrame(animation);
-    }
-
-    tagLinks.forEach(link => {
-      link.addEventListener('click', function(e) {
-        e.preventDefault();
-        const targetId = this.getAttribute('href');
-        const targetElement = document.querySelector(targetId);
-        if (targetElement) {
-          smoothScroll(targetElement);
-          history.pushState(null, '', targetId);
-        }
-      });
-    });
-
-    backToTopLinks.forEach(link => {
-      link.addEventListener('click', function(e) {
-        e.preventDefault();
-        smoothScroll(document.body);
-        history.pushState(null, '', '#');
-      });
-    });
-  });
-</script>
-
-<div class="tag-page">
-  <h1>Tags</h1>
-  <ul class="tag-list" aria-label="List of all tags">
+        <div class="post-wrapper">    
+    <div class="tag-page">
+      <h1>Tags</h1>
+      <ul class="tag-list" aria-label="List of all tags">
+  
     
-      <li>
-        <a href="#" aria-label="Tag  with  posts">
-           ()
-        </a>
-      </li>
     
-      <li>
-        <a href="#" aria-label="Tag  with  posts">
-           ()
-        </a>
-      </li>
     
-      <li>
-        <a href="#" aria-label="Tag  with  posts">
-           ()
-        </a>
-      </li>
+  
     
-      <li>
-        <a href="#" aria-label="Tag  with  posts">
-           ()
-        </a>
-      </li>
     
-      <li>
-        <a href="#" aria-label="Tag  with  posts">
-           ()
-        </a>
-      </li>
     
-      <li>
-        <a href="#" aria-label="Tag  with  posts">
-           ()
-        </a>
-      </li>
+  
     
-      <li>
-        <a href="#" aria-label="Tag  with  posts">
-           ()
-        </a>
-      </li>
     
-      <li>
-        <a href="#" aria-label="Tag  with  posts">
-           ()
-        </a>
-      </li>
     
-      <li>
-        <a href="#" aria-label="Tag  with  posts">
-           ()
-        </a>
-      </li>
+  
     
-      <li>
-        <a href="#" aria-label="Tag  with  posts">
-           ()
-        </a>
-      </li>
     
-      <li>
-        <a href="#" aria-label="Tag  with  posts">
-           ()
-        </a>
-      </li>
     
-      <li>
-        <a href="#" aria-label="Tag  with  posts">
-           ()
-        </a>
-      </li>
+  
     
-      <li>
-        <a href="#" aria-label="Tag  with  posts">
-           ()
-        </a>
-      </li>
     
-      <li>
-        <a href="#" aria-label="Tag  with  posts">
-           ()
-        </a>
-      </li>
     
-      <li>
-        <a href="#" aria-label="Tag  with  posts">
-           ()
-        </a>
-      </li>
+  
     
-      <li>
-        <a href="#" aria-label="Tag  with  posts">
-           ()
-        </a>
-      </li>
     
-      <li>
-        <a href="#" aria-label="Tag  with  posts">
-           ()
-        </a>
-      </li>
     
-      <li>
-        <a href="#" aria-label="Tag  with  posts">
-           ()
-        </a>
-      </li>
+  
     
-      <li>
-        <a href="#" aria-label="Tag  with  posts">
-           ()
-        </a>
-      </li>
     
-      <li>
-        <a href="#" aria-label="Tag  with  posts">
-           ()
-        </a>
-      </li>
     
-      <li>
-        <a href="#" aria-label="Tag  with  posts">
-           ()
-        </a>
-      </li>
+  
     
-      <li>
-        <a href="#" aria-label="Tag  with  posts">
-           ()
-        </a>
-      </li>
     
-      <li>
-        <a href="#" aria-label="Tag  with  posts">
-           ()
-        </a>
-      </li>
     
-      <li>
-        <a href="#" aria-label="Tag  with  posts">
-           ()
-        </a>
-      </li>
+  
     
-      <li>
-        <a href="#" aria-label="Tag  with  posts">
-           ()
-        </a>
-      </li>
     
-      <li>
-        <a href="#" aria-label="Tag  with  posts">
-           ()
-        </a>
-      </li>
     
-      <li>
-        <a href="#" aria-label="Tag  with  posts">
-           ()
-        </a>
-      </li>
+  
     
-      <li>
-        <a href="#" aria-label="Tag  with  posts">
-           ()
-        </a>
-      </li>
     
-      <li>
-        <a href="#" aria-label="Tag  with  posts">
-           ()
-        </a>
-      </li>
     
-      <li>
-        <a href="#" aria-label="Tag  with  posts">
-           ()
-        </a>
-      </li>
+  
     
-      <li>
-        <a href="#" aria-label="Tag  with  posts">
-           ()
-        </a>
-      </li>
     
-      <li>
-        <a href="#" aria-label="Tag  with  posts">
-           ()
-        </a>
-      </li>
     
-      <li>
-        <a href="#" aria-label="Tag  with  posts">
-           ()
-        </a>
-      </li>
+  
     
-      <li>
-        <a href="#" aria-label="Tag  with  posts">
-           ()
-        </a>
-      </li>
     
-      <li>
-        <a href="#" aria-label="Tag  with  posts">
-           ()
-        </a>
-      </li>
     
-      <li>
-        <a href="#" aria-label="Tag  with  posts">
-           ()
-        </a>
-      </li>
+  
     
-      <li>
-        <a href="#" aria-label="Tag  with  posts">
-           ()
-        </a>
-      </li>
     
-      <li>
-        <a href="#" aria-label="Tag  with  posts">
-           ()
-        </a>
-      </li>
     
-      <li>
-        <a href="#" aria-label="Tag  with  posts">
-           ()
-        </a>
-      </li>
+  
     
-      <li>
-        <a href="#" aria-label="Tag  with  posts">
-           ()
-        </a>
-      </li>
     
-      <li>
-        <a href="#" aria-label="Tag  with  posts">
-           ()
-        </a>
-      </li>
     
-      <li>
-        <a href="#" aria-label="Tag  with  posts">
-           ()
-        </a>
-      </li>
+  
     
-      <li>
-        <a href="#" aria-label="Tag  with  posts">
-           ()
-        </a>
-      </li>
     
-      <li>
-        <a href="#" aria-label="Tag  with  posts">
-           ()
-        </a>
-      </li>
     
-      <li>
-        <a href="#" aria-label="Tag  with  posts">
-           ()
-        </a>
-      </li>
+  
     
-      <li>
-        <a href="#" aria-label="Tag  with  posts">
-           ()
-        </a>
-      </li>
     
-      <li>
-        <a href="#" aria-label="Tag  with  posts">
-           ()
-        </a>
-      </li>
     
-      <li>
-        <a href="#" aria-label="Tag  with  posts">
-           ()
-        </a>
-      </li>
+  
     
-      <li>
-        <a href="#" aria-label="Tag  with  posts">
-           ()
-        </a>
-      </li>
     
-      <li>
-        <a href="#" aria-label="Tag  with  posts">
-           ()
-        </a>
-      </li>
     
-      <li>
-        <a href="#" aria-label="Tag  with  posts">
-           ()
-        </a>
-      </li>
+  
     
-  </ul>
-</div>
-
-<main class="tagged-posts">
+    
+    
+  
+    
+    
+    
+  
+    
+    
+    
+  
+    
+    
+    
+  
+    
+    
+    
+  
+    
+    
+    
+  
+    
+    
+    
+  
+    
+    
+    
+  
+    
+    
+    
+  
+    
+    
+    
+  
+    
+    
+    
+  
+    
+    
+    
+  
+    
+    
+    
+  
+    
+    
+    
+  
+    
+    
+    
+  
+    
+    
+    
+  
+    
+    
+    
+  
+    
+    
+    
+  
+    
+    
+    
+  
+    
+    
+    
+  
+    
+    
+    
+  
+    
+    
+    
+  
+    
+    
+    
+  
+    
+    
+    
+  
+    
+    
+    
+  
+    
+    
+    
+  
+    
+    
+    
+  
+    
+    
+    
+  
+    
+    
+    
+  
+    
+    
+    
+  
+    
+    
+    
+  
+    
+    
+    
+  
+    
+    
+    
+  
+    
+    
+    
+  
+</ul>
+    </div>
+    <main class="tagged-posts">
   
     <section class="search-link" aria-labelledby="-heading">
       <h2 id="-heading">
+        <a href="#" class="back-to-top" aria-label="Back to top">
+          <img src="/assets/gold.ico" alt="gold icon" />
+        </a>
         
-        <a href="#" class="back-to-top" aria-label="Back to top">↑</a>
       </h2>
       <ul>
         
@@ -422,8 +271,10 @@
   
     <section class="search-link" aria-labelledby="-heading">
       <h2 id="-heading">
+        <a href="#" class="back-to-top" aria-label="Back to top">
+          <img src="/assets/gold.ico" alt="gold icon" />
+        </a>
         
-        <a href="#" class="back-to-top" aria-label="Back to top">↑</a>
       </h2>
       <ul>
         
@@ -432,8 +283,10 @@
   
     <section class="search-link" aria-labelledby="-heading">
       <h2 id="-heading">
+        <a href="#" class="back-to-top" aria-label="Back to top">
+          <img src="/assets/gold.ico" alt="gold icon" />
+        </a>
         
-        <a href="#" class="back-to-top" aria-label="Back to top">↑</a>
       </h2>
       <ul>
         
@@ -442,8 +295,10 @@
   
     <section class="search-link" aria-labelledby="-heading">
       <h2 id="-heading">
+        <a href="#" class="back-to-top" aria-label="Back to top">
+          <img src="/assets/gold.ico" alt="gold icon" />
+        </a>
         
-        <a href="#" class="back-to-top" aria-label="Back to top">↑</a>
       </h2>
       <ul>
         
@@ -452,8 +307,10 @@
   
     <section class="search-link" aria-labelledby="-heading">
       <h2 id="-heading">
+        <a href="#" class="back-to-top" aria-label="Back to top">
+          <img src="/assets/gold.ico" alt="gold icon" />
+        </a>
         
-        <a href="#" class="back-to-top" aria-label="Back to top">↑</a>
       </h2>
       <ul>
         
@@ -462,8 +319,10 @@
   
     <section class="search-link" aria-labelledby="-heading">
       <h2 id="-heading">
+        <a href="#" class="back-to-top" aria-label="Back to top">
+          <img src="/assets/gold.ico" alt="gold icon" />
+        </a>
         
-        <a href="#" class="back-to-top" aria-label="Back to top">↑</a>
       </h2>
       <ul>
         
@@ -472,8 +331,10 @@
   
     <section class="search-link" aria-labelledby="-heading">
       <h2 id="-heading">
+        <a href="#" class="back-to-top" aria-label="Back to top">
+          <img src="/assets/gold.ico" alt="gold icon" />
+        </a>
         
-        <a href="#" class="back-to-top" aria-label="Back to top">↑</a>
       </h2>
       <ul>
         
@@ -482,8 +343,10 @@
   
     <section class="search-link" aria-labelledby="-heading">
       <h2 id="-heading">
+        <a href="#" class="back-to-top" aria-label="Back to top">
+          <img src="/assets/gold.ico" alt="gold icon" />
+        </a>
         
-        <a href="#" class="back-to-top" aria-label="Back to top">↑</a>
       </h2>
       <ul>
         
@@ -492,8 +355,10 @@
   
     <section class="search-link" aria-labelledby="-heading">
       <h2 id="-heading">
+        <a href="#" class="back-to-top" aria-label="Back to top">
+          <img src="/assets/gold.ico" alt="gold icon" />
+        </a>
         
-        <a href="#" class="back-to-top" aria-label="Back to top">↑</a>
       </h2>
       <ul>
         
@@ -502,8 +367,10 @@
   
     <section class="search-link" aria-labelledby="-heading">
       <h2 id="-heading">
+        <a href="#" class="back-to-top" aria-label="Back to top">
+          <img src="/assets/gold.ico" alt="gold icon" />
+        </a>
         
-        <a href="#" class="back-to-top" aria-label="Back to top">↑</a>
       </h2>
       <ul>
         
@@ -512,8 +379,10 @@
   
     <section class="search-link" aria-labelledby="-heading">
       <h2 id="-heading">
+        <a href="#" class="back-to-top" aria-label="Back to top">
+          <img src="/assets/gold.ico" alt="gold icon" />
+        </a>
         
-        <a href="#" class="back-to-top" aria-label="Back to top">↑</a>
       </h2>
       <ul>
         
@@ -522,8 +391,10 @@
   
     <section class="search-link" aria-labelledby="-heading">
       <h2 id="-heading">
+        <a href="#" class="back-to-top" aria-label="Back to top">
+          <img src="/assets/gold.ico" alt="gold icon" />
+        </a>
         
-        <a href="#" class="back-to-top" aria-label="Back to top">↑</a>
       </h2>
       <ul>
         
@@ -532,8 +403,10 @@
   
     <section class="search-link" aria-labelledby="-heading">
       <h2 id="-heading">
+        <a href="#" class="back-to-top" aria-label="Back to top">
+          <img src="/assets/gold.ico" alt="gold icon" />
+        </a>
         
-        <a href="#" class="back-to-top" aria-label="Back to top">↑</a>
       </h2>
       <ul>
         
@@ -542,8 +415,10 @@
   
     <section class="search-link" aria-labelledby="-heading">
       <h2 id="-heading">
+        <a href="#" class="back-to-top" aria-label="Back to top">
+          <img src="/assets/gold.ico" alt="gold icon" />
+        </a>
         
-        <a href="#" class="back-to-top" aria-label="Back to top">↑</a>
       </h2>
       <ul>
         
@@ -552,8 +427,10 @@
   
     <section class="search-link" aria-labelledby="-heading">
       <h2 id="-heading">
+        <a href="#" class="back-to-top" aria-label="Back to top">
+          <img src="/assets/gold.ico" alt="gold icon" />
+        </a>
         
-        <a href="#" class="back-to-top" aria-label="Back to top">↑</a>
       </h2>
       <ul>
         
@@ -562,8 +439,10 @@
   
     <section class="search-link" aria-labelledby="-heading">
       <h2 id="-heading">
+        <a href="#" class="back-to-top" aria-label="Back to top">
+          <img src="/assets/gold.ico" alt="gold icon" />
+        </a>
         
-        <a href="#" class="back-to-top" aria-label="Back to top">↑</a>
       </h2>
       <ul>
         
@@ -572,8 +451,10 @@
   
     <section class="search-link" aria-labelledby="-heading">
       <h2 id="-heading">
+        <a href="#" class="back-to-top" aria-label="Back to top">
+          <img src="/assets/gold.ico" alt="gold icon" />
+        </a>
         
-        <a href="#" class="back-to-top" aria-label="Back to top">↑</a>
       </h2>
       <ul>
         
@@ -582,8 +463,10 @@
   
     <section class="search-link" aria-labelledby="-heading">
       <h2 id="-heading">
+        <a href="#" class="back-to-top" aria-label="Back to top">
+          <img src="/assets/gold.ico" alt="gold icon" />
+        </a>
         
-        <a href="#" class="back-to-top" aria-label="Back to top">↑</a>
       </h2>
       <ul>
         
@@ -592,8 +475,10 @@
   
     <section class="search-link" aria-labelledby="-heading">
       <h2 id="-heading">
+        <a href="#" class="back-to-top" aria-label="Back to top">
+          <img src="/assets/gold.ico" alt="gold icon" />
+        </a>
         
-        <a href="#" class="back-to-top" aria-label="Back to top">↑</a>
       </h2>
       <ul>
         
@@ -602,8 +487,10 @@
   
     <section class="search-link" aria-labelledby="-heading">
       <h2 id="-heading">
+        <a href="#" class="back-to-top" aria-label="Back to top">
+          <img src="/assets/gold.ico" alt="gold icon" />
+        </a>
         
-        <a href="#" class="back-to-top" aria-label="Back to top">↑</a>
       </h2>
       <ul>
         
@@ -612,8 +499,10 @@
   
     <section class="search-link" aria-labelledby="-heading">
       <h2 id="-heading">
+        <a href="#" class="back-to-top" aria-label="Back to top">
+          <img src="/assets/gold.ico" alt="gold icon" />
+        </a>
         
-        <a href="#" class="back-to-top" aria-label="Back to top">↑</a>
       </h2>
       <ul>
         
@@ -622,8 +511,10 @@
   
     <section class="search-link" aria-labelledby="-heading">
       <h2 id="-heading">
+        <a href="#" class="back-to-top" aria-label="Back to top">
+          <img src="/assets/gold.ico" alt="gold icon" />
+        </a>
         
-        <a href="#" class="back-to-top" aria-label="Back to top">↑</a>
       </h2>
       <ul>
         
@@ -632,8 +523,10 @@
   
     <section class="search-link" aria-labelledby="-heading">
       <h2 id="-heading">
+        <a href="#" class="back-to-top" aria-label="Back to top">
+          <img src="/assets/gold.ico" alt="gold icon" />
+        </a>
         
-        <a href="#" class="back-to-top" aria-label="Back to top">↑</a>
       </h2>
       <ul>
         
@@ -642,8 +535,10 @@
   
     <section class="search-link" aria-labelledby="-heading">
       <h2 id="-heading">
+        <a href="#" class="back-to-top" aria-label="Back to top">
+          <img src="/assets/gold.ico" alt="gold icon" />
+        </a>
         
-        <a href="#" class="back-to-top" aria-label="Back to top">↑</a>
       </h2>
       <ul>
         
@@ -652,8 +547,10 @@
   
     <section class="search-link" aria-labelledby="-heading">
       <h2 id="-heading">
+        <a href="#" class="back-to-top" aria-label="Back to top">
+          <img src="/assets/gold.ico" alt="gold icon" />
+        </a>
         
-        <a href="#" class="back-to-top" aria-label="Back to top">↑</a>
       </h2>
       <ul>
         
@@ -662,8 +559,10 @@
   
     <section class="search-link" aria-labelledby="-heading">
       <h2 id="-heading">
+        <a href="#" class="back-to-top" aria-label="Back to top">
+          <img src="/assets/gold.ico" alt="gold icon" />
+        </a>
         
-        <a href="#" class="back-to-top" aria-label="Back to top">↑</a>
       </h2>
       <ul>
         
@@ -672,8 +571,10 @@
   
     <section class="search-link" aria-labelledby="-heading">
       <h2 id="-heading">
+        <a href="#" class="back-to-top" aria-label="Back to top">
+          <img src="/assets/gold.ico" alt="gold icon" />
+        </a>
         
-        <a href="#" class="back-to-top" aria-label="Back to top">↑</a>
       </h2>
       <ul>
         
@@ -682,8 +583,10 @@
   
     <section class="search-link" aria-labelledby="-heading">
       <h2 id="-heading">
+        <a href="#" class="back-to-top" aria-label="Back to top">
+          <img src="/assets/gold.ico" alt="gold icon" />
+        </a>
         
-        <a href="#" class="back-to-top" aria-label="Back to top">↑</a>
       </h2>
       <ul>
         
@@ -692,8 +595,10 @@
   
     <section class="search-link" aria-labelledby="-heading">
       <h2 id="-heading">
+        <a href="#" class="back-to-top" aria-label="Back to top">
+          <img src="/assets/gold.ico" alt="gold icon" />
+        </a>
         
-        <a href="#" class="back-to-top" aria-label="Back to top">↑</a>
       </h2>
       <ul>
         
@@ -702,8 +607,10 @@
   
     <section class="search-link" aria-labelledby="-heading">
       <h2 id="-heading">
+        <a href="#" class="back-to-top" aria-label="Back to top">
+          <img src="/assets/gold.ico" alt="gold icon" />
+        </a>
         
-        <a href="#" class="back-to-top" aria-label="Back to top">↑</a>
       </h2>
       <ul>
         
@@ -712,8 +619,10 @@
   
     <section class="search-link" aria-labelledby="-heading">
       <h2 id="-heading">
+        <a href="#" class="back-to-top" aria-label="Back to top">
+          <img src="/assets/gold.ico" alt="gold icon" />
+        </a>
         
-        <a href="#" class="back-to-top" aria-label="Back to top">↑</a>
       </h2>
       <ul>
         
@@ -722,8 +631,10 @@
   
     <section class="search-link" aria-labelledby="-heading">
       <h2 id="-heading">
+        <a href="#" class="back-to-top" aria-label="Back to top">
+          <img src="/assets/gold.ico" alt="gold icon" />
+        </a>
         
-        <a href="#" class="back-to-top" aria-label="Back to top">↑</a>
       </h2>
       <ul>
         
@@ -732,8 +643,10 @@
   
     <section class="search-link" aria-labelledby="-heading">
       <h2 id="-heading">
+        <a href="#" class="back-to-top" aria-label="Back to top">
+          <img src="/assets/gold.ico" alt="gold icon" />
+        </a>
         
-        <a href="#" class="back-to-top" aria-label="Back to top">↑</a>
       </h2>
       <ul>
         
@@ -742,8 +655,10 @@
   
     <section class="search-link" aria-labelledby="-heading">
       <h2 id="-heading">
+        <a href="#" class="back-to-top" aria-label="Back to top">
+          <img src="/assets/gold.ico" alt="gold icon" />
+        </a>
         
-        <a href="#" class="back-to-top" aria-label="Back to top">↑</a>
       </h2>
       <ul>
         
@@ -752,8 +667,10 @@
   
     <section class="search-link" aria-labelledby="-heading">
       <h2 id="-heading">
+        <a href="#" class="back-to-top" aria-label="Back to top">
+          <img src="/assets/gold.ico" alt="gold icon" />
+        </a>
         
-        <a href="#" class="back-to-top" aria-label="Back to top">↑</a>
       </h2>
       <ul>
         
@@ -762,8 +679,10 @@
   
     <section class="search-link" aria-labelledby="-heading">
       <h2 id="-heading">
+        <a href="#" class="back-to-top" aria-label="Back to top">
+          <img src="/assets/gold.ico" alt="gold icon" />
+        </a>
         
-        <a href="#" class="back-to-top" aria-label="Back to top">↑</a>
       </h2>
       <ul>
         
@@ -772,8 +691,10 @@
   
     <section class="search-link" aria-labelledby="-heading">
       <h2 id="-heading">
+        <a href="#" class="back-to-top" aria-label="Back to top">
+          <img src="/assets/gold.ico" alt="gold icon" />
+        </a>
         
-        <a href="#" class="back-to-top" aria-label="Back to top">↑</a>
       </h2>
       <ul>
         
@@ -782,8 +703,10 @@
   
     <section class="search-link" aria-labelledby="-heading">
       <h2 id="-heading">
+        <a href="#" class="back-to-top" aria-label="Back to top">
+          <img src="/assets/gold.ico" alt="gold icon" />
+        </a>
         
-        <a href="#" class="back-to-top" aria-label="Back to top">↑</a>
       </h2>
       <ul>
         
@@ -792,8 +715,10 @@
   
     <section class="search-link" aria-labelledby="-heading">
       <h2 id="-heading">
+        <a href="#" class="back-to-top" aria-label="Back to top">
+          <img src="/assets/gold.ico" alt="gold icon" />
+        </a>
         
-        <a href="#" class="back-to-top" aria-label="Back to top">↑</a>
       </h2>
       <ul>
         
@@ -802,8 +727,10 @@
   
     <section class="search-link" aria-labelledby="-heading">
       <h2 id="-heading">
+        <a href="#" class="back-to-top" aria-label="Back to top">
+          <img src="/assets/gold.ico" alt="gold icon" />
+        </a>
         
-        <a href="#" class="back-to-top" aria-label="Back to top">↑</a>
       </h2>
       <ul>
         
@@ -812,8 +739,10 @@
   
     <section class="search-link" aria-labelledby="-heading">
       <h2 id="-heading">
+        <a href="#" class="back-to-top" aria-label="Back to top">
+          <img src="/assets/gold.ico" alt="gold icon" />
+        </a>
         
-        <a href="#" class="back-to-top" aria-label="Back to top">↑</a>
       </h2>
       <ul>
         
@@ -822,8 +751,10 @@
   
     <section class="search-link" aria-labelledby="-heading">
       <h2 id="-heading">
+        <a href="#" class="back-to-top" aria-label="Back to top">
+          <img src="/assets/gold.ico" alt="gold icon" />
+        </a>
         
-        <a href="#" class="back-to-top" aria-label="Back to top">↑</a>
       </h2>
       <ul>
         
@@ -832,8 +763,10 @@
   
     <section class="search-link" aria-labelledby="-heading">
       <h2 id="-heading">
+        <a href="#" class="back-to-top" aria-label="Back to top">
+          <img src="/assets/gold.ico" alt="gold icon" />
+        </a>
         
-        <a href="#" class="back-to-top" aria-label="Back to top">↑</a>
       </h2>
       <ul>
         
@@ -842,8 +775,10 @@
   
     <section class="search-link" aria-labelledby="-heading">
       <h2 id="-heading">
+        <a href="#" class="back-to-top" aria-label="Back to top">
+          <img src="/assets/gold.ico" alt="gold icon" />
+        </a>
         
-        <a href="#" class="back-to-top" aria-label="Back to top">↑</a>
       </h2>
       <ul>
         
@@ -852,8 +787,10 @@
   
     <section class="search-link" aria-labelledby="-heading">
       <h2 id="-heading">
+        <a href="#" class="back-to-top" aria-label="Back to top">
+          <img src="/assets/gold.ico" alt="gold icon" />
+        </a>
         
-        <a href="#" class="back-to-top" aria-label="Back to top">↑</a>
       </h2>
       <ul>
         
@@ -862,8 +799,10 @@
   
     <section class="search-link" aria-labelledby="-heading">
       <h2 id="-heading">
+        <a href="#" class="back-to-top" aria-label="Back to top">
+          <img src="/assets/gold.ico" alt="gold icon" />
+        </a>
         
-        <a href="#" class="back-to-top" aria-label="Back to top">↑</a>
       </h2>
       <ul>
         
@@ -872,8 +811,10 @@
   
     <section class="search-link" aria-labelledby="-heading">
       <h2 id="-heading">
+        <a href="#" class="back-to-top" aria-label="Back to top">
+          <img src="/assets/gold.ico" alt="gold icon" />
+        </a>
         
-        <a href="#" class="back-to-top" aria-label="Back to top">↑</a>
       </h2>
       <ul>
         
@@ -882,8 +823,10 @@
   
     <section class="search-link" aria-labelledby="-heading">
       <h2 id="-heading">
+        <a href="#" class="back-to-top" aria-label="Back to top">
+          <img src="/assets/gold.ico" alt="gold icon" />
+        </a>
         
-        <a href="#" class="back-to-top" aria-label="Back to top">↑</a>
       </h2>
       <ul>
         
@@ -892,8 +835,10 @@
   
     <section class="search-link" aria-labelledby="-heading">
       <h2 id="-heading">
+        <a href="#" class="back-to-top" aria-label="Back to top">
+          <img src="/assets/gold.ico" alt="gold icon" />
+        </a>
         
-        <a href="#" class="back-to-top" aria-label="Back to top">↑</a>
       </h2>
       <ul>
         
@@ -902,8 +847,10 @@
   
     <section class="search-link" aria-labelledby="-heading">
       <h2 id="-heading">
+        <a href="#" class="back-to-top" aria-label="Back to top">
+          <img src="/assets/gold.ico" alt="gold icon" />
+        </a>
         
-        <a href="#" class="back-to-top" aria-label="Back to top">↑</a>
       </h2>
       <ul>
         
@@ -912,35 +859,18 @@
   
     <section class="search-link" aria-labelledby="-heading">
       <h2 id="-heading">
+        <a href="#" class="back-to-top" aria-label="Back to top">
+          <img src="/assets/gold.ico" alt="gold icon" />
+        </a>
         
-        <a href="#" class="back-to-top" aria-label="Back to top">↑</a>
       </h2>
       <ul>
         
       </ul>
     </section>
   
-</main>
-
-<script>
-  // Adjust scroll behavior to account for sticky headers
-  const headerHeight = document.querySelector('header').offsetHeight;
-  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
-      e.preventDefault();
-      const targetId = this.getAttribute('href').substring(1);
-      const targetElement = document.getElementById(targetId);
-      if (targetElement) {
-        window.scrollTo({
-          top: targetElement.offsetTop - headerHeight,
-          behavior: 'smooth'
-        });
-        history.pushState(null, '', `#${targetId}`);
-      }
-    });
-  });
-</script>
-
+    </main>
+  </div>
 
       </main>
     </article>
