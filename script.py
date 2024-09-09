@@ -15,12 +15,12 @@ from collections import namedtuple
 sys.stdout.reconfigure(encoding='utf-8')
 
 # This value sets the initial interval in days.
-INITIAL_INTERVAL = 50
+INITIAL_INTERVAL = 4
 
 # TODO: one thing that smooth.sh did that the new-as-of-January-2023 version
 # doesn't do is having different quotas for the different inbox text files. If
 # I do a large import of a new "stream" like browser bookmarks or something,
-# then the reviews will (after 50 days) probably get dominated by these browser
+# then the reviews will (after 4 days) probably get dominated by these browser
 # bookmarks. There should be some way to be like "limit browser bookmarks to at
 # most 1% of all reviews" or something.  For now this hasn't been a problem for
 # me, but it is something I will probably want to handle at some point.
@@ -33,7 +33,7 @@ INITIAL_INTERVAL = 50
 
 # TODO: i am realizing that i often purposely don't fix some typos on boring
 # notes because i reason that if i *do* fix them then that will reset the
-# review schedule to 50 days, which i don't want. maybe there should be some
+# review schedule to 4 days, which i don't want. maybe there should be some
 # way to make trivial changes without affecting the review schedule.
 
 DB_COLUMNS = ['sha1sum', 'note_text', 'line_number_start', 'line_number_end',
@@ -205,7 +205,7 @@ def update_notes_db(conn, inbox_name, notes_db, current_inbox):
                                           reviewed_count = ?,
                                           note_state = ?
                          where sha1sum = ?""",
-                      (line_number_start, line_number_end, 300, INITIAL_INTERVAL,
+                      (line_number_start, line_number_end, 32, INITIAL_INTERVAL,
                        datetime.date.today(), datetime.date.today(),
                        inbox_name, 0, "just created", sha1sum))
         else:
@@ -217,7 +217,7 @@ def update_notes_db(conn, inbox_name, notes_db, current_inbox):
                           % (", ".join(DB_COLUMNS),
                              ", ".join(["?"]*len(DB_COLUMNS))),
                           Note(sha1sum, note_text, line_number_start,
-                               line_number_end, ease_factor=300, interval=INITIAL_INTERVAL,
+                               line_number_end, ease_factor=32, interval=INITIAL_INTERVAL,
                                last_reviewed_on=datetime.date.today(),
                                interval_anchor=interval_anchor,
                                inbox_name=inbox_name,
@@ -256,7 +256,7 @@ def due_notes(notes_db):
     return result
 
 def get_recent_unreviewed_note(notes_db):
-    """Randomly select a note that was created in the last 50-100 days and has
+    """Randomly select a note that was created in the last 4-100 days and has
     not yet been reviewed yet."""
     candidates = []
     for note in notes_db:
@@ -432,7 +432,7 @@ def initial_fragment(string, words=20):
 
 
 def good_interval(interval, ease_factor):
-    return int(interval * ease_factor/100)
+    return int(interval * ease_factor/12)
 
 
 def again_interval(interval):
