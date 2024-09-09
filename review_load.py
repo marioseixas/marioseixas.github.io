@@ -37,8 +37,9 @@ for name in names:
             ys.append(0)
     axs.plot(xs, ys, label=name)
 
-
 plt.xlabel("days in the future")
 plt.ylabel("number of notes due for review on this day")
 plt.legend(loc="upper right")
-plt.show()
+
+# Save the plot to a PNG file, overwriting if it exists
+plt.savefig("review_load.png", force=True)
