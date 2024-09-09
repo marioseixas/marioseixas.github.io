@@ -46,7 +46,7 @@
     <title>infoBAG</title>
     <link href="https://ib.bsb.br/rss.xml" rel="self"/>
     <link href="https://ib.bsb.br/"/>
-    <updated>2024-09-09T19:01:58+00:00</updated>
+    <updated>2024-09-09T19:11:27+00:00</updated>
     <id>https://ib.bsb.br</id>
     <author>
         <name></name>
@@ -44802,833 +44802,903 @@ Pense duas vezes antes de se envolver.
         <link href="https://ib.bsb.br/tags/"/>
         <updated>1992-07-12T00:00:00+00:00</updated>
         <id>https://ib.bsb.br/tags/</id>
-        <content type="html">&lt;div class=&quot;post-wrapper&quot;&gt;    
+        <content type="html">&lt;script&gt;
+    document.addEventListener(&apos;DOMContentLoaded&apos;, function() {
+      const tagLinks = document.querySelectorAll(&apos;.tag-list a&apos;);
+      const backToTopLinks = document.querySelectorAll(&apos;.back-to-top&apos;);
+      
+      function smoothScroll(target, duration = 300) {
+        const targetPosition = target.getBoundingClientRect().top + window.pageYOffset;
+        const startPosition = window.pageYOffset;
+        const distance = targetPosition - startPosition;
+        let startTime = null;
+
+        function animation(currentTime) {
+          if (startTime === null) startTime = currentTime;
+          const timeElapsed = currentTime - startTime;
+          const run = ease(timeElapsed, startPosition, distance, duration);
+          window.scrollTo(0, run);
+          if (timeElapsed &lt; duration) requestAnimationFrame(animation);
+        }
+
+        function ease(t, b, c, d) {
+          t /= d / 2;
+          if (t &lt; 1) return c / 2 * t * t + b;
+          t--;
+          return -c / 2 * (t * (t - 2) - 1) + b;
+        }
+
+        requestAnimationFrame(animation);
+      }
+
+      tagLinks.forEach(link =&gt; {
+        link.addEventListener(&apos;click&apos;, function(e) {
+          e.preventDefault();
+          const targetId = this.getAttribute(&apos;href&apos;);
+          const targetElement = document.querySelector(targetId);
+          if (targetElement) {
+            smoothScroll(targetElement);
+            history.pushState(null, &apos;&apos;, targetId);
+          }
+        });
+      });
+
+      backToTopLinks.forEach(link =&gt; {
+        link.addEventListener(&apos;click&apos;, function(e) {
+          e.preventDefault();
+          smoothScroll(document.body);
+          history.pushState(null, &apos;&apos;, &apos;#&apos;);
+        });
+      });
+    });
+  &lt;/script&gt;
+
+&lt;div class=&quot;wrapper&quot;&gt;    
     &lt;div class=&quot;tag-page&quot;&gt;
       &lt;h1&gt;Tags&lt;/h1&gt;
       &lt;ul class=&quot;tag-list&quot; aria-label=&quot;List of all tags&quot;&gt;
-  
-    
-    
-    
-  
-    
-    
-    
-  
-    
-    
-    
-  
-    
-    
-    
-  
-    
-    
-    
-  
-    
-    
-    
-  
-    
-    
-    
-  
-    
-    
-    
-  
-    
-    
-    
-  
-    
-    
-    
-  
-    
-    
-    
-  
-    
-    
-    
-  
-    
-    
-    
-  
-    
-    
-    
-  
-    
-    
-    
-  
-    
-    
-    
-  
-    
-    
-    
-  
-    
-    
-    
-  
-    
-    
-    
-  
-    
-    
-    
-  
-    
-    
-    
-  
-    
-    
-    
-  
-    
-    
-    
-  
-    
-    
-    
-  
-    
-    
-    
-  
-    
-    
-    
-  
-    
-    
-    
-  
-    
-    
-    
-  
-    
-    
-    
-  
-    
-    
-    
-  
-    
-    
-    
-  
-    
-    
-    
-  
-    
-    
-    
-  
-    
-    
-    
-  
-    
-    
-    
-  
-    
-    
-    
-  
-    
-    
-    
-  
-    
-    
-    
-  
-    
-    
-    
-  
-    
-    
-    
-  
-    
-    
-    
-  
-    
-    
-    
-  
-    
-    
-    
-  
-    
-    
-    
-  
-    
-    
-    
-  
-    
-    
-    
-  
-    
-    
-    
-  
-    
-    
-    
-  
-    
-    
-    
-  
-    
-    
-    
-  
-    
-    
-    
-  
-&lt;/ul&gt;
+        
+          &lt;li&gt;
+            &lt;a href=&quot;#&quot; aria-label=&quot;Tag  with  posts&quot;&gt;
+               ()
+            &lt;/a&gt;
+          &lt;/li&gt;
+        
+          &lt;li&gt;
+            &lt;a href=&quot;#&quot; aria-label=&quot;Tag  with  posts&quot;&gt;
+               ()
+            &lt;/a&gt;
+          &lt;/li&gt;
+        
+          &lt;li&gt;
+            &lt;a href=&quot;#&quot; aria-label=&quot;Tag  with  posts&quot;&gt;
+               ()
+            &lt;/a&gt;
+          &lt;/li&gt;
+        
+          &lt;li&gt;
+            &lt;a href=&quot;#&quot; aria-label=&quot;Tag  with  posts&quot;&gt;
+               ()
+            &lt;/a&gt;
+          &lt;/li&gt;
+        
+          &lt;li&gt;
+            &lt;a href=&quot;#&quot; aria-label=&quot;Tag  with  posts&quot;&gt;
+               ()
+            &lt;/a&gt;
+          &lt;/li&gt;
+        
+          &lt;li&gt;
+            &lt;a href=&quot;#&quot; aria-label=&quot;Tag  with  posts&quot;&gt;
+               ()
+            &lt;/a&gt;
+          &lt;/li&gt;
+        
+          &lt;li&gt;
+            &lt;a href=&quot;#&quot; aria-label=&quot;Tag  with  posts&quot;&gt;
+               ()
+            &lt;/a&gt;
+          &lt;/li&gt;
+        
+          &lt;li&gt;
+            &lt;a href=&quot;#&quot; aria-label=&quot;Tag  with  posts&quot;&gt;
+               ()
+            &lt;/a&gt;
+          &lt;/li&gt;
+        
+          &lt;li&gt;
+            &lt;a href=&quot;#&quot; aria-label=&quot;Tag  with  posts&quot;&gt;
+               ()
+            &lt;/a&gt;
+          &lt;/li&gt;
+        
+          &lt;li&gt;
+            &lt;a href=&quot;#&quot; aria-label=&quot;Tag  with  posts&quot;&gt;
+               ()
+            &lt;/a&gt;
+          &lt;/li&gt;
+        
+          &lt;li&gt;
+            &lt;a href=&quot;#&quot; aria-label=&quot;Tag  with  posts&quot;&gt;
+               ()
+            &lt;/a&gt;
+          &lt;/li&gt;
+        
+          &lt;li&gt;
+            &lt;a href=&quot;#&quot; aria-label=&quot;Tag  with  posts&quot;&gt;
+               ()
+            &lt;/a&gt;
+          &lt;/li&gt;
+        
+          &lt;li&gt;
+            &lt;a href=&quot;#&quot; aria-label=&quot;Tag  with  posts&quot;&gt;
+               ()
+            &lt;/a&gt;
+          &lt;/li&gt;
+        
+          &lt;li&gt;
+            &lt;a href=&quot;#&quot; aria-label=&quot;Tag  with  posts&quot;&gt;
+               ()
+            &lt;/a&gt;
+          &lt;/li&gt;
+        
+          &lt;li&gt;
+            &lt;a href=&quot;#&quot; aria-label=&quot;Tag  with  posts&quot;&gt;
+               ()
+            &lt;/a&gt;
+          &lt;/li&gt;
+        
+          &lt;li&gt;
+            &lt;a href=&quot;#&quot; aria-label=&quot;Tag  with  posts&quot;&gt;
+               ()
+            &lt;/a&gt;
+          &lt;/li&gt;
+        
+          &lt;li&gt;
+            &lt;a href=&quot;#&quot; aria-label=&quot;Tag  with  posts&quot;&gt;
+               ()
+            &lt;/a&gt;
+          &lt;/li&gt;
+        
+          &lt;li&gt;
+            &lt;a href=&quot;#&quot; aria-label=&quot;Tag  with  posts&quot;&gt;
+               ()
+            &lt;/a&gt;
+          &lt;/li&gt;
+        
+          &lt;li&gt;
+            &lt;a href=&quot;#&quot; aria-label=&quot;Tag  with  posts&quot;&gt;
+               ()
+            &lt;/a&gt;
+          &lt;/li&gt;
+        
+          &lt;li&gt;
+            &lt;a href=&quot;#&quot; aria-label=&quot;Tag  with  posts&quot;&gt;
+               ()
+            &lt;/a&gt;
+          &lt;/li&gt;
+        
+          &lt;li&gt;
+            &lt;a href=&quot;#&quot; aria-label=&quot;Tag  with  posts&quot;&gt;
+               ()
+            &lt;/a&gt;
+          &lt;/li&gt;
+        
+          &lt;li&gt;
+            &lt;a href=&quot;#&quot; aria-label=&quot;Tag  with  posts&quot;&gt;
+               ()
+            &lt;/a&gt;
+          &lt;/li&gt;
+        
+          &lt;li&gt;
+            &lt;a href=&quot;#&quot; aria-label=&quot;Tag  with  posts&quot;&gt;
+               ()
+            &lt;/a&gt;
+          &lt;/li&gt;
+        
+          &lt;li&gt;
+            &lt;a href=&quot;#&quot; aria-label=&quot;Tag  with  posts&quot;&gt;
+               ()
+            &lt;/a&gt;
+          &lt;/li&gt;
+        
+          &lt;li&gt;
+            &lt;a href=&quot;#&quot; aria-label=&quot;Tag  with  posts&quot;&gt;
+               ()
+            &lt;/a&gt;
+          &lt;/li&gt;
+        
+          &lt;li&gt;
+            &lt;a href=&quot;#&quot; aria-label=&quot;Tag  with  posts&quot;&gt;
+               ()
+            &lt;/a&gt;
+          &lt;/li&gt;
+        
+          &lt;li&gt;
+            &lt;a href=&quot;#&quot; aria-label=&quot;Tag  with  posts&quot;&gt;
+               ()
+            &lt;/a&gt;
+          &lt;/li&gt;
+        
+          &lt;li&gt;
+            &lt;a href=&quot;#&quot; aria-label=&quot;Tag  with  posts&quot;&gt;
+               ()
+            &lt;/a&gt;
+          &lt;/li&gt;
+        
+          &lt;li&gt;
+            &lt;a href=&quot;#&quot; aria-label=&quot;Tag  with  posts&quot;&gt;
+               ()
+            &lt;/a&gt;
+          &lt;/li&gt;
+        
+          &lt;li&gt;
+            &lt;a href=&quot;#&quot; aria-label=&quot;Tag  with  posts&quot;&gt;
+               ()
+            &lt;/a&gt;
+          &lt;/li&gt;
+        
+          &lt;li&gt;
+            &lt;a href=&quot;#&quot; aria-label=&quot;Tag  with  posts&quot;&gt;
+               ()
+            &lt;/a&gt;
+          &lt;/li&gt;
+        
+          &lt;li&gt;
+            &lt;a href=&quot;#&quot; aria-label=&quot;Tag  with  posts&quot;&gt;
+               ()
+            &lt;/a&gt;
+          &lt;/li&gt;
+        
+          &lt;li&gt;
+            &lt;a href=&quot;#&quot; aria-label=&quot;Tag  with  posts&quot;&gt;
+               ()
+            &lt;/a&gt;
+          &lt;/li&gt;
+        
+          &lt;li&gt;
+            &lt;a href=&quot;#&quot; aria-label=&quot;Tag  with  posts&quot;&gt;
+               ()
+            &lt;/a&gt;
+          &lt;/li&gt;
+        
+          &lt;li&gt;
+            &lt;a href=&quot;#&quot; aria-label=&quot;Tag  with  posts&quot;&gt;
+               ()
+            &lt;/a&gt;
+          &lt;/li&gt;
+        
+          &lt;li&gt;
+            &lt;a href=&quot;#&quot; aria-label=&quot;Tag  with  posts&quot;&gt;
+               ()
+            &lt;/a&gt;
+          &lt;/li&gt;
+        
+          &lt;li&gt;
+            &lt;a href=&quot;#&quot; aria-label=&quot;Tag  with  posts&quot;&gt;
+               ()
+            &lt;/a&gt;
+          &lt;/li&gt;
+        
+          &lt;li&gt;
+            &lt;a href=&quot;#&quot; aria-label=&quot;Tag  with  posts&quot;&gt;
+               ()
+            &lt;/a&gt;
+          &lt;/li&gt;
+        
+          &lt;li&gt;
+            &lt;a href=&quot;#&quot; aria-label=&quot;Tag  with  posts&quot;&gt;
+               ()
+            &lt;/a&gt;
+          &lt;/li&gt;
+        
+          &lt;li&gt;
+            &lt;a href=&quot;#&quot; aria-label=&quot;Tag  with  posts&quot;&gt;
+               ()
+            &lt;/a&gt;
+          &lt;/li&gt;
+        
+          &lt;li&gt;
+            &lt;a href=&quot;#&quot; aria-label=&quot;Tag  with  posts&quot;&gt;
+               ()
+            &lt;/a&gt;
+          &lt;/li&gt;
+        
+          &lt;li&gt;
+            &lt;a href=&quot;#&quot; aria-label=&quot;Tag  with  posts&quot;&gt;
+               ()
+            &lt;/a&gt;
+          &lt;/li&gt;
+        
+          &lt;li&gt;
+            &lt;a href=&quot;#&quot; aria-label=&quot;Tag  with  posts&quot;&gt;
+               ()
+            &lt;/a&gt;
+          &lt;/li&gt;
+        
+          &lt;li&gt;
+            &lt;a href=&quot;#&quot; aria-label=&quot;Tag  with  posts&quot;&gt;
+               ()
+            &lt;/a&gt;
+          &lt;/li&gt;
+        
+          &lt;li&gt;
+            &lt;a href=&quot;#&quot; aria-label=&quot;Tag  with  posts&quot;&gt;
+               ()
+            &lt;/a&gt;
+          &lt;/li&gt;
+        
+          &lt;li&gt;
+            &lt;a href=&quot;#&quot; aria-label=&quot;Tag  with  posts&quot;&gt;
+               ()
+            &lt;/a&gt;
+          &lt;/li&gt;
+        
+          &lt;li&gt;
+            &lt;a href=&quot;#&quot; aria-label=&quot;Tag  with  posts&quot;&gt;
+               ()
+            &lt;/a&gt;
+          &lt;/li&gt;
+        
+          &lt;li&gt;
+            &lt;a href=&quot;#&quot; aria-label=&quot;Tag  with  posts&quot;&gt;
+               ()
+            &lt;/a&gt;
+          &lt;/li&gt;
+        
+          &lt;li&gt;
+            &lt;a href=&quot;#&quot; aria-label=&quot;Tag  with  posts&quot;&gt;
+               ()
+            &lt;/a&gt;
+          &lt;/li&gt;
+        
+          &lt;li&gt;
+            &lt;a href=&quot;#&quot; aria-label=&quot;Tag  with  posts&quot;&gt;
+               ()
+            &lt;/a&gt;
+          &lt;/li&gt;
+        
+          &lt;li&gt;
+            &lt;a href=&quot;#&quot; aria-label=&quot;Tag  with  posts&quot;&gt;
+               ()
+            &lt;/a&gt;
+          &lt;/li&gt;
+        
+      &lt;/ul&gt;
     &lt;/div&gt;
     &lt;main class=&quot;tagged-posts&quot;&gt;
-  
-    &lt;section class=&quot;search-link&quot; aria-labelledby=&quot;-heading&quot;&gt;
-      &lt;h2 id=&quot;-heading&quot;&gt;
-        &lt;a href=&quot;#&quot; class=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;
-          &lt;img src=&quot;/assets/gold.ico&quot; alt=&quot;gold icon&quot; /&gt;
-        &lt;/a&gt;
-        
-      &lt;/h2&gt;
-      &lt;ul&gt;
-        
-      &lt;/ul&gt;
-    &lt;/section&gt;
-  
-    &lt;section class=&quot;search-link&quot; aria-labelledby=&quot;-heading&quot;&gt;
-      &lt;h2 id=&quot;-heading&quot;&gt;
-        &lt;a href=&quot;#&quot; class=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;
-          &lt;img src=&quot;/assets/gold.ico&quot; alt=&quot;gold icon&quot; /&gt;
-        &lt;/a&gt;
-        
-      &lt;/h2&gt;
-      &lt;ul&gt;
-        
-      &lt;/ul&gt;
-    &lt;/section&gt;
-  
-    &lt;section class=&quot;search-link&quot; aria-labelledby=&quot;-heading&quot;&gt;
-      &lt;h2 id=&quot;-heading&quot;&gt;
-        &lt;a href=&quot;#&quot; class=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;
-          &lt;img src=&quot;/assets/gold.ico&quot; alt=&quot;gold icon&quot; /&gt;
-        &lt;/a&gt;
-        
-      &lt;/h2&gt;
-      &lt;ul&gt;
-        
-      &lt;/ul&gt;
-    &lt;/section&gt;
-  
-    &lt;section class=&quot;search-link&quot; aria-labelledby=&quot;-heading&quot;&gt;
-      &lt;h2 id=&quot;-heading&quot;&gt;
-        &lt;a href=&quot;#&quot; class=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;
-          &lt;img src=&quot;/assets/gold.ico&quot; alt=&quot;gold icon&quot; /&gt;
-        &lt;/a&gt;
-        
-      &lt;/h2&gt;
-      &lt;ul&gt;
-        
-      &lt;/ul&gt;
-    &lt;/section&gt;
-  
-    &lt;section class=&quot;search-link&quot; aria-labelledby=&quot;-heading&quot;&gt;
-      &lt;h2 id=&quot;-heading&quot;&gt;
-        &lt;a href=&quot;#&quot; class=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;
-          &lt;img src=&quot;/assets/gold.ico&quot; alt=&quot;gold icon&quot; /&gt;
-        &lt;/a&gt;
-        
-      &lt;/h2&gt;
-      &lt;ul&gt;
-        
-      &lt;/ul&gt;
-    &lt;/section&gt;
-  
-    &lt;section class=&quot;search-link&quot; aria-labelledby=&quot;-heading&quot;&gt;
-      &lt;h2 id=&quot;-heading&quot;&gt;
-        &lt;a href=&quot;#&quot; class=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;
-          &lt;img src=&quot;/assets/gold.ico&quot; alt=&quot;gold icon&quot; /&gt;
-        &lt;/a&gt;
-        
-      &lt;/h2&gt;
-      &lt;ul&gt;
-        
-      &lt;/ul&gt;
-    &lt;/section&gt;
-  
-    &lt;section class=&quot;search-link&quot; aria-labelledby=&quot;-heading&quot;&gt;
-      &lt;h2 id=&quot;-heading&quot;&gt;
-        &lt;a href=&quot;#&quot; class=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;
-          &lt;img src=&quot;/assets/gold.ico&quot; alt=&quot;gold icon&quot; /&gt;
-        &lt;/a&gt;
-        
-      &lt;/h2&gt;
-      &lt;ul&gt;
-        
-      &lt;/ul&gt;
-    &lt;/section&gt;
-  
-    &lt;section class=&quot;search-link&quot; aria-labelledby=&quot;-heading&quot;&gt;
-      &lt;h2 id=&quot;-heading&quot;&gt;
-        &lt;a href=&quot;#&quot; class=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;
-          &lt;img src=&quot;/assets/gold.ico&quot; alt=&quot;gold icon&quot; /&gt;
-        &lt;/a&gt;
-        
-      &lt;/h2&gt;
-      &lt;ul&gt;
-        
-      &lt;/ul&gt;
-    &lt;/section&gt;
-  
-    &lt;section class=&quot;search-link&quot; aria-labelledby=&quot;-heading&quot;&gt;
-      &lt;h2 id=&quot;-heading&quot;&gt;
-        &lt;a href=&quot;#&quot; class=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;
-          &lt;img src=&quot;/assets/gold.ico&quot; alt=&quot;gold icon&quot; /&gt;
-        &lt;/a&gt;
-        
-      &lt;/h2&gt;
-      &lt;ul&gt;
-        
-      &lt;/ul&gt;
-    &lt;/section&gt;
-  
-    &lt;section class=&quot;search-link&quot; aria-labelledby=&quot;-heading&quot;&gt;
-      &lt;h2 id=&quot;-heading&quot;&gt;
-        &lt;a href=&quot;#&quot; class=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;
-          &lt;img src=&quot;/assets/gold.ico&quot; alt=&quot;gold icon&quot; /&gt;
-        &lt;/a&gt;
-        
-      &lt;/h2&gt;
-      &lt;ul&gt;
-        
-      &lt;/ul&gt;
-    &lt;/section&gt;
-  
-    &lt;section class=&quot;search-link&quot; aria-labelledby=&quot;-heading&quot;&gt;
-      &lt;h2 id=&quot;-heading&quot;&gt;
-        &lt;a href=&quot;#&quot; class=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;
-          &lt;img src=&quot;/assets/gold.ico&quot; alt=&quot;gold icon&quot; /&gt;
-        &lt;/a&gt;
-        
-      &lt;/h2&gt;
-      &lt;ul&gt;
-        
-      &lt;/ul&gt;
-    &lt;/section&gt;
-  
-    &lt;section class=&quot;search-link&quot; aria-labelledby=&quot;-heading&quot;&gt;
-      &lt;h2 id=&quot;-heading&quot;&gt;
-        &lt;a href=&quot;#&quot; class=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;
-          &lt;img src=&quot;/assets/gold.ico&quot; alt=&quot;gold icon&quot; /&gt;
-        &lt;/a&gt;
-        
-      &lt;/h2&gt;
-      &lt;ul&gt;
-        
-      &lt;/ul&gt;
-    &lt;/section&gt;
-  
-    &lt;section class=&quot;search-link&quot; aria-labelledby=&quot;-heading&quot;&gt;
-      &lt;h2 id=&quot;-heading&quot;&gt;
-        &lt;a href=&quot;#&quot; class=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;
-          &lt;img src=&quot;/assets/gold.ico&quot; alt=&quot;gold icon&quot; /&gt;
-        &lt;/a&gt;
-        
-      &lt;/h2&gt;
-      &lt;ul&gt;
-        
-      &lt;/ul&gt;
-    &lt;/section&gt;
-  
-    &lt;section class=&quot;search-link&quot; aria-labelledby=&quot;-heading&quot;&gt;
-      &lt;h2 id=&quot;-heading&quot;&gt;
-        &lt;a href=&quot;#&quot; class=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;
-          &lt;img src=&quot;/assets/gold.ico&quot; alt=&quot;gold icon&quot; /&gt;
-        &lt;/a&gt;
-        
-      &lt;/h2&gt;
-      &lt;ul&gt;
-        
-      &lt;/ul&gt;
-    &lt;/section&gt;
-  
-    &lt;section class=&quot;search-link&quot; aria-labelledby=&quot;-heading&quot;&gt;
-      &lt;h2 id=&quot;-heading&quot;&gt;
-        &lt;a href=&quot;#&quot; class=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;
-          &lt;img src=&quot;/assets/gold.ico&quot; alt=&quot;gold icon&quot; /&gt;
-        &lt;/a&gt;
-        
-      &lt;/h2&gt;
-      &lt;ul&gt;
-        
-      &lt;/ul&gt;
-    &lt;/section&gt;
-  
-    &lt;section class=&quot;search-link&quot; aria-labelledby=&quot;-heading&quot;&gt;
-      &lt;h2 id=&quot;-heading&quot;&gt;
-        &lt;a href=&quot;#&quot; class=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;
-          &lt;img src=&quot;/assets/gold.ico&quot; alt=&quot;gold icon&quot; /&gt;
-        &lt;/a&gt;
-        
-      &lt;/h2&gt;
-      &lt;ul&gt;
-        
-      &lt;/ul&gt;
-    &lt;/section&gt;
-  
-    &lt;section class=&quot;search-link&quot; aria-labelledby=&quot;-heading&quot;&gt;
-      &lt;h2 id=&quot;-heading&quot;&gt;
-        &lt;a href=&quot;#&quot; class=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;
-          &lt;img src=&quot;/assets/gold.ico&quot; alt=&quot;gold icon&quot; /&gt;
-        &lt;/a&gt;
-        
-      &lt;/h2&gt;
-      &lt;ul&gt;
-        
-      &lt;/ul&gt;
-    &lt;/section&gt;
-  
-    &lt;section class=&quot;search-link&quot; aria-labelledby=&quot;-heading&quot;&gt;
-      &lt;h2 id=&quot;-heading&quot;&gt;
-        &lt;a href=&quot;#&quot; class=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;
-          &lt;img src=&quot;/assets/gold.ico&quot; alt=&quot;gold icon&quot; /&gt;
-        &lt;/a&gt;
-        
-      &lt;/h2&gt;
-      &lt;ul&gt;
-        
-      &lt;/ul&gt;
-    &lt;/section&gt;
-  
-    &lt;section class=&quot;search-link&quot; aria-labelledby=&quot;-heading&quot;&gt;
-      &lt;h2 id=&quot;-heading&quot;&gt;
-        &lt;a href=&quot;#&quot; class=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;
-          &lt;img src=&quot;/assets/gold.ico&quot; alt=&quot;gold icon&quot; /&gt;
-        &lt;/a&gt;
-        
-      &lt;/h2&gt;
-      &lt;ul&gt;
-        
-      &lt;/ul&gt;
-    &lt;/section&gt;
-  
-    &lt;section class=&quot;search-link&quot; aria-labelledby=&quot;-heading&quot;&gt;
-      &lt;h2 id=&quot;-heading&quot;&gt;
-        &lt;a href=&quot;#&quot; class=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;
-          &lt;img src=&quot;/assets/gold.ico&quot; alt=&quot;gold icon&quot; /&gt;
-        &lt;/a&gt;
-        
-      &lt;/h2&gt;
-      &lt;ul&gt;
-        
-      &lt;/ul&gt;
-    &lt;/section&gt;
-  
-    &lt;section class=&quot;search-link&quot; aria-labelledby=&quot;-heading&quot;&gt;
-      &lt;h2 id=&quot;-heading&quot;&gt;
-        &lt;a href=&quot;#&quot; class=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;
-          &lt;img src=&quot;/assets/gold.ico&quot; alt=&quot;gold icon&quot; /&gt;
-        &lt;/a&gt;
-        
-      &lt;/h2&gt;
-      &lt;ul&gt;
-        
-      &lt;/ul&gt;
-    &lt;/section&gt;
-  
-    &lt;section class=&quot;search-link&quot; aria-labelledby=&quot;-heading&quot;&gt;
-      &lt;h2 id=&quot;-heading&quot;&gt;
-        &lt;a href=&quot;#&quot; class=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;
-          &lt;img src=&quot;/assets/gold.ico&quot; alt=&quot;gold icon&quot; /&gt;
-        &lt;/a&gt;
-        
-      &lt;/h2&gt;
-      &lt;ul&gt;
-        
-      &lt;/ul&gt;
-    &lt;/section&gt;
-  
-    &lt;section class=&quot;search-link&quot; aria-labelledby=&quot;-heading&quot;&gt;
-      &lt;h2 id=&quot;-heading&quot;&gt;
-        &lt;a href=&quot;#&quot; class=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;
-          &lt;img src=&quot;/assets/gold.ico&quot; alt=&quot;gold icon&quot; /&gt;
-        &lt;/a&gt;
-        
-      &lt;/h2&gt;
-      &lt;ul&gt;
-        
-      &lt;/ul&gt;
-    &lt;/section&gt;
-  
-    &lt;section class=&quot;search-link&quot; aria-labelledby=&quot;-heading&quot;&gt;
-      &lt;h2 id=&quot;-heading&quot;&gt;
-        &lt;a href=&quot;#&quot; class=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;
-          &lt;img src=&quot;/assets/gold.ico&quot; alt=&quot;gold icon&quot; /&gt;
-        &lt;/a&gt;
-        
-      &lt;/h2&gt;
-      &lt;ul&gt;
-        
-      &lt;/ul&gt;
-    &lt;/section&gt;
-  
-    &lt;section class=&quot;search-link&quot; aria-labelledby=&quot;-heading&quot;&gt;
-      &lt;h2 id=&quot;-heading&quot;&gt;
-        &lt;a href=&quot;#&quot; class=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;
-          &lt;img src=&quot;/assets/gold.ico&quot; alt=&quot;gold icon&quot; /&gt;
-        &lt;/a&gt;
-        
-      &lt;/h2&gt;
-      &lt;ul&gt;
-        
-      &lt;/ul&gt;
-    &lt;/section&gt;
-  
-    &lt;section class=&quot;search-link&quot; aria-labelledby=&quot;-heading&quot;&gt;
-      &lt;h2 id=&quot;-heading&quot;&gt;
-        &lt;a href=&quot;#&quot; class=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;
-          &lt;img src=&quot;/assets/gold.ico&quot; alt=&quot;gold icon&quot; /&gt;
-        &lt;/a&gt;
-        
-      &lt;/h2&gt;
-      &lt;ul&gt;
-        
-      &lt;/ul&gt;
-    &lt;/section&gt;
-  
-    &lt;section class=&quot;search-link&quot; aria-labelledby=&quot;-heading&quot;&gt;
-      &lt;h2 id=&quot;-heading&quot;&gt;
-        &lt;a href=&quot;#&quot; class=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;
-          &lt;img src=&quot;/assets/gold.ico&quot; alt=&quot;gold icon&quot; /&gt;
-        &lt;/a&gt;
-        
-      &lt;/h2&gt;
-      &lt;ul&gt;
-        
-      &lt;/ul&gt;
-    &lt;/section&gt;
-  
-    &lt;section class=&quot;search-link&quot; aria-labelledby=&quot;-heading&quot;&gt;
-      &lt;h2 id=&quot;-heading&quot;&gt;
-        &lt;a href=&quot;#&quot; class=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;
-          &lt;img src=&quot;/assets/gold.ico&quot; alt=&quot;gold icon&quot; /&gt;
-        &lt;/a&gt;
-        
-      &lt;/h2&gt;
-      &lt;ul&gt;
-        
-      &lt;/ul&gt;
-    &lt;/section&gt;
-  
-    &lt;section class=&quot;search-link&quot; aria-labelledby=&quot;-heading&quot;&gt;
-      &lt;h2 id=&quot;-heading&quot;&gt;
-        &lt;a href=&quot;#&quot; class=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;
-          &lt;img src=&quot;/assets/gold.ico&quot; alt=&quot;gold icon&quot; /&gt;
-        &lt;/a&gt;
-        
-      &lt;/h2&gt;
-      &lt;ul&gt;
-        
-      &lt;/ul&gt;
-    &lt;/section&gt;
-  
-    &lt;section class=&quot;search-link&quot; aria-labelledby=&quot;-heading&quot;&gt;
-      &lt;h2 id=&quot;-heading&quot;&gt;
-        &lt;a href=&quot;#&quot; class=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;
-          &lt;img src=&quot;/assets/gold.ico&quot; alt=&quot;gold icon&quot; /&gt;
-        &lt;/a&gt;
-        
-      &lt;/h2&gt;
-      &lt;ul&gt;
-        
-      &lt;/ul&gt;
-    &lt;/section&gt;
-  
-    &lt;section class=&quot;search-link&quot; aria-labelledby=&quot;-heading&quot;&gt;
-      &lt;h2 id=&quot;-heading&quot;&gt;
-        &lt;a href=&quot;#&quot; class=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;
-          &lt;img src=&quot;/assets/gold.ico&quot; alt=&quot;gold icon&quot; /&gt;
-        &lt;/a&gt;
-        
-      &lt;/h2&gt;
-      &lt;ul&gt;
-        
-      &lt;/ul&gt;
-    &lt;/section&gt;
-  
-    &lt;section class=&quot;search-link&quot; aria-labelledby=&quot;-heading&quot;&gt;
-      &lt;h2 id=&quot;-heading&quot;&gt;
-        &lt;a href=&quot;#&quot; class=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;
-          &lt;img src=&quot;/assets/gold.ico&quot; alt=&quot;gold icon&quot; /&gt;
-        &lt;/a&gt;
-        
-      &lt;/h2&gt;
-      &lt;ul&gt;
-        
-      &lt;/ul&gt;
-    &lt;/section&gt;
-  
-    &lt;section class=&quot;search-link&quot; aria-labelledby=&quot;-heading&quot;&gt;
-      &lt;h2 id=&quot;-heading&quot;&gt;
-        &lt;a href=&quot;#&quot; class=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;
-          &lt;img src=&quot;/assets/gold.ico&quot; alt=&quot;gold icon&quot; /&gt;
-        &lt;/a&gt;
-        
-      &lt;/h2&gt;
-      &lt;ul&gt;
-        
-      &lt;/ul&gt;
-    &lt;/section&gt;
-  
-    &lt;section class=&quot;search-link&quot; aria-labelledby=&quot;-heading&quot;&gt;
-      &lt;h2 id=&quot;-heading&quot;&gt;
-        &lt;a href=&quot;#&quot; class=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;
-          &lt;img src=&quot;/assets/gold.ico&quot; alt=&quot;gold icon&quot; /&gt;
-        &lt;/a&gt;
-        
-      &lt;/h2&gt;
-      &lt;ul&gt;
-        
-      &lt;/ul&gt;
-    &lt;/section&gt;
-  
-    &lt;section class=&quot;search-link&quot; aria-labelledby=&quot;-heading&quot;&gt;
-      &lt;h2 id=&quot;-heading&quot;&gt;
-        &lt;a href=&quot;#&quot; class=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;
-          &lt;img src=&quot;/assets/gold.ico&quot; alt=&quot;gold icon&quot; /&gt;
-        &lt;/a&gt;
-        
-      &lt;/h2&gt;
-      &lt;ul&gt;
-        
-      &lt;/ul&gt;
-    &lt;/section&gt;
-  
-    &lt;section class=&quot;search-link&quot; aria-labelledby=&quot;-heading&quot;&gt;
-      &lt;h2 id=&quot;-heading&quot;&gt;
-        &lt;a href=&quot;#&quot; class=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;
-          &lt;img src=&quot;/assets/gold.ico&quot; alt=&quot;gold icon&quot; /&gt;
-        &lt;/a&gt;
-        
-      &lt;/h2&gt;
-      &lt;ul&gt;
-        
-      &lt;/ul&gt;
-    &lt;/section&gt;
-  
-    &lt;section class=&quot;search-link&quot; aria-labelledby=&quot;-heading&quot;&gt;
-      &lt;h2 id=&quot;-heading&quot;&gt;
-        &lt;a href=&quot;#&quot; class=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;
-          &lt;img src=&quot;/assets/gold.ico&quot; alt=&quot;gold icon&quot; /&gt;
-        &lt;/a&gt;
-        
-      &lt;/h2&gt;
-      &lt;ul&gt;
-        
-      &lt;/ul&gt;
-    &lt;/section&gt;
-  
-    &lt;section class=&quot;search-link&quot; aria-labelledby=&quot;-heading&quot;&gt;
-      &lt;h2 id=&quot;-heading&quot;&gt;
-        &lt;a href=&quot;#&quot; class=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;
-          &lt;img src=&quot;/assets/gold.ico&quot; alt=&quot;gold icon&quot; /&gt;
-        &lt;/a&gt;
-        
-      &lt;/h2&gt;
-      &lt;ul&gt;
-        
-      &lt;/ul&gt;
-    &lt;/section&gt;
-  
-    &lt;section class=&quot;search-link&quot; aria-labelledby=&quot;-heading&quot;&gt;
-      &lt;h2 id=&quot;-heading&quot;&gt;
-        &lt;a href=&quot;#&quot; class=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;
-          &lt;img src=&quot;/assets/gold.ico&quot; alt=&quot;gold icon&quot; /&gt;
-        &lt;/a&gt;
-        
-      &lt;/h2&gt;
-      &lt;ul&gt;
-        
-      &lt;/ul&gt;
-    &lt;/section&gt;
-  
-    &lt;section class=&quot;search-link&quot; aria-labelledby=&quot;-heading&quot;&gt;
-      &lt;h2 id=&quot;-heading&quot;&gt;
-        &lt;a href=&quot;#&quot; class=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;
-          &lt;img src=&quot;/assets/gold.ico&quot; alt=&quot;gold icon&quot; /&gt;
-        &lt;/a&gt;
-        
-      &lt;/h2&gt;
-      &lt;ul&gt;
-        
-      &lt;/ul&gt;
-    &lt;/section&gt;
-  
-    &lt;section class=&quot;search-link&quot; aria-labelledby=&quot;-heading&quot;&gt;
-      &lt;h2 id=&quot;-heading&quot;&gt;
-        &lt;a href=&quot;#&quot; class=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;
-          &lt;img src=&quot;/assets/gold.ico&quot; alt=&quot;gold icon&quot; /&gt;
-        &lt;/a&gt;
-        
-      &lt;/h2&gt;
-      &lt;ul&gt;
-        
-      &lt;/ul&gt;
-    &lt;/section&gt;
-  
-    &lt;section class=&quot;search-link&quot; aria-labelledby=&quot;-heading&quot;&gt;
-      &lt;h2 id=&quot;-heading&quot;&gt;
-        &lt;a href=&quot;#&quot; class=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;
-          &lt;img src=&quot;/assets/gold.ico&quot; alt=&quot;gold icon&quot; /&gt;
-        &lt;/a&gt;
-        
-      &lt;/h2&gt;
-      &lt;ul&gt;
-        
-      &lt;/ul&gt;
-    &lt;/section&gt;
-  
-    &lt;section class=&quot;search-link&quot; aria-labelledby=&quot;-heading&quot;&gt;
-      &lt;h2 id=&quot;-heading&quot;&gt;
-        &lt;a href=&quot;#&quot; class=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;
-          &lt;img src=&quot;/assets/gold.ico&quot; alt=&quot;gold icon&quot; /&gt;
-        &lt;/a&gt;
-        
-      &lt;/h2&gt;
-      &lt;ul&gt;
-        
-      &lt;/ul&gt;
-    &lt;/section&gt;
-  
-    &lt;section class=&quot;search-link&quot; aria-labelledby=&quot;-heading&quot;&gt;
-      &lt;h2 id=&quot;-heading&quot;&gt;
-        &lt;a href=&quot;#&quot; class=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;
-          &lt;img src=&quot;/assets/gold.ico&quot; alt=&quot;gold icon&quot; /&gt;
-        &lt;/a&gt;
-        
-      &lt;/h2&gt;
-      &lt;ul&gt;
-        
-      &lt;/ul&gt;
-    &lt;/section&gt;
-  
-    &lt;section class=&quot;search-link&quot; aria-labelledby=&quot;-heading&quot;&gt;
-      &lt;h2 id=&quot;-heading&quot;&gt;
-        &lt;a href=&quot;#&quot; class=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;
-          &lt;img src=&quot;/assets/gold.ico&quot; alt=&quot;gold icon&quot; /&gt;
-        &lt;/a&gt;
-        
-      &lt;/h2&gt;
-      &lt;ul&gt;
-        
-      &lt;/ul&gt;
-    &lt;/section&gt;
-  
-    &lt;section class=&quot;search-link&quot; aria-labelledby=&quot;-heading&quot;&gt;
-      &lt;h2 id=&quot;-heading&quot;&gt;
-        &lt;a href=&quot;#&quot; class=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;
-          &lt;img src=&quot;/assets/gold.ico&quot; alt=&quot;gold icon&quot; /&gt;
-        &lt;/a&gt;
-        
-      &lt;/h2&gt;
-      &lt;ul&gt;
-        
-      &lt;/ul&gt;
-    &lt;/section&gt;
-  
-    &lt;section class=&quot;search-link&quot; aria-labelledby=&quot;-heading&quot;&gt;
-      &lt;h2 id=&quot;-heading&quot;&gt;
-        &lt;a href=&quot;#&quot; class=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;
-          &lt;img src=&quot;/assets/gold.ico&quot; alt=&quot;gold icon&quot; /&gt;
-        &lt;/a&gt;
-        
-      &lt;/h2&gt;
-      &lt;ul&gt;
-        
-      &lt;/ul&gt;
-    &lt;/section&gt;
-  
-    &lt;section class=&quot;search-link&quot; aria-labelledby=&quot;-heading&quot;&gt;
-      &lt;h2 id=&quot;-heading&quot;&gt;
-        &lt;a href=&quot;#&quot; class=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;
-          &lt;img src=&quot;/assets/gold.ico&quot; alt=&quot;gold icon&quot; /&gt;
-        &lt;/a&gt;
-        
-      &lt;/h2&gt;
-      &lt;ul&gt;
-        
-      &lt;/ul&gt;
-    &lt;/section&gt;
-  
-    &lt;section class=&quot;search-link&quot; aria-labelledby=&quot;-heading&quot;&gt;
-      &lt;h2 id=&quot;-heading&quot;&gt;
-        &lt;a href=&quot;#&quot; class=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;
-          &lt;img src=&quot;/assets/gold.ico&quot; alt=&quot;gold icon&quot; /&gt;
-        &lt;/a&gt;
-        
-      &lt;/h2&gt;
-      &lt;ul&gt;
-        
-      &lt;/ul&gt;
-    &lt;/section&gt;
-  
-    &lt;section class=&quot;search-link&quot; aria-labelledby=&quot;-heading&quot;&gt;
-      &lt;h2 id=&quot;-heading&quot;&gt;
-        &lt;a href=&quot;#&quot; class=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;
-          &lt;img src=&quot;/assets/gold.ico&quot; alt=&quot;gold icon&quot; /&gt;
-        &lt;/a&gt;
-        
-      &lt;/h2&gt;
-      &lt;ul&gt;
-        
-      &lt;/ul&gt;
-    &lt;/section&gt;
-  
-    &lt;section class=&quot;search-link&quot; aria-labelledby=&quot;-heading&quot;&gt;
-      &lt;h2 id=&quot;-heading&quot;&gt;
-        &lt;a href=&quot;#&quot; class=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;
-          &lt;img src=&quot;/assets/gold.ico&quot; alt=&quot;gold icon&quot; /&gt;
-        &lt;/a&gt;
-        
-      &lt;/h2&gt;
-      &lt;ul&gt;
-        
-      &lt;/ul&gt;
-    &lt;/section&gt;
-  
+      
+        &lt;section class=&quot;search-link&quot; aria-labelledby=&quot;-heading&quot;&gt;
+          &lt;h2 id=&quot;-heading&quot;&gt;
+            
+            &lt;a href=&quot;#&quot; class=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;↑&lt;/a&gt;
+          &lt;/h2&gt;
+          &lt;ul&gt;
+            
+          &lt;/ul&gt;
+        &lt;/section&gt;
+      
+        &lt;section class=&quot;search-link&quot; aria-labelledby=&quot;-heading&quot;&gt;
+          &lt;h2 id=&quot;-heading&quot;&gt;
+            
+            &lt;a href=&quot;#&quot; class=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;↑&lt;/a&gt;
+          &lt;/h2&gt;
+          &lt;ul&gt;
+            
+          &lt;/ul&gt;
+        &lt;/section&gt;
+      
+        &lt;section class=&quot;search-link&quot; aria-labelledby=&quot;-heading&quot;&gt;
+          &lt;h2 id=&quot;-heading&quot;&gt;
+            
+            &lt;a href=&quot;#&quot; class=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;↑&lt;/a&gt;
+          &lt;/h2&gt;
+          &lt;ul&gt;
+            
+          &lt;/ul&gt;
+        &lt;/section&gt;
+      
+        &lt;section class=&quot;search-link&quot; aria-labelledby=&quot;-heading&quot;&gt;
+          &lt;h2 id=&quot;-heading&quot;&gt;
+            
+            &lt;a href=&quot;#&quot; class=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;↑&lt;/a&gt;
+          &lt;/h2&gt;
+          &lt;ul&gt;
+            
+          &lt;/ul&gt;
+        &lt;/section&gt;
+      
+        &lt;section class=&quot;search-link&quot; aria-labelledby=&quot;-heading&quot;&gt;
+          &lt;h2 id=&quot;-heading&quot;&gt;
+            
+            &lt;a href=&quot;#&quot; class=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;↑&lt;/a&gt;
+          &lt;/h2&gt;
+          &lt;ul&gt;
+            
+          &lt;/ul&gt;
+        &lt;/section&gt;
+      
+        &lt;section class=&quot;search-link&quot; aria-labelledby=&quot;-heading&quot;&gt;
+          &lt;h2 id=&quot;-heading&quot;&gt;
+            
+            &lt;a href=&quot;#&quot; class=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;↑&lt;/a&gt;
+          &lt;/h2&gt;
+          &lt;ul&gt;
+            
+          &lt;/ul&gt;
+        &lt;/section&gt;
+      
+        &lt;section class=&quot;search-link&quot; aria-labelledby=&quot;-heading&quot;&gt;
+          &lt;h2 id=&quot;-heading&quot;&gt;
+            
+            &lt;a href=&quot;#&quot; class=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;↑&lt;/a&gt;
+          &lt;/h2&gt;
+          &lt;ul&gt;
+            
+          &lt;/ul&gt;
+        &lt;/section&gt;
+      
+        &lt;section class=&quot;search-link&quot; aria-labelledby=&quot;-heading&quot;&gt;
+          &lt;h2 id=&quot;-heading&quot;&gt;
+            
+            &lt;a href=&quot;#&quot; class=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;↑&lt;/a&gt;
+          &lt;/h2&gt;
+          &lt;ul&gt;
+            
+          &lt;/ul&gt;
+        &lt;/section&gt;
+      
+        &lt;section class=&quot;search-link&quot; aria-labelledby=&quot;-heading&quot;&gt;
+          &lt;h2 id=&quot;-heading&quot;&gt;
+            
+            &lt;a href=&quot;#&quot; class=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;↑&lt;/a&gt;
+          &lt;/h2&gt;
+          &lt;ul&gt;
+            
+          &lt;/ul&gt;
+        &lt;/section&gt;
+      
+        &lt;section class=&quot;search-link&quot; aria-labelledby=&quot;-heading&quot;&gt;
+          &lt;h2 id=&quot;-heading&quot;&gt;
+            
+            &lt;a href=&quot;#&quot; class=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;↑&lt;/a&gt;
+          &lt;/h2&gt;
+          &lt;ul&gt;
+            
+          &lt;/ul&gt;
+        &lt;/section&gt;
+      
+        &lt;section class=&quot;search-link&quot; aria-labelledby=&quot;-heading&quot;&gt;
+          &lt;h2 id=&quot;-heading&quot;&gt;
+            
+            &lt;a href=&quot;#&quot; class=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;↑&lt;/a&gt;
+          &lt;/h2&gt;
+          &lt;ul&gt;
+            
+          &lt;/ul&gt;
+        &lt;/section&gt;
+      
+        &lt;section class=&quot;search-link&quot; aria-labelledby=&quot;-heading&quot;&gt;
+          &lt;h2 id=&quot;-heading&quot;&gt;
+            
+            &lt;a href=&quot;#&quot; class=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;↑&lt;/a&gt;
+          &lt;/h2&gt;
+          &lt;ul&gt;
+            
+          &lt;/ul&gt;
+        &lt;/section&gt;
+      
+        &lt;section class=&quot;search-link&quot; aria-labelledby=&quot;-heading&quot;&gt;
+          &lt;h2 id=&quot;-heading&quot;&gt;
+            
+            &lt;a href=&quot;#&quot; class=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;↑&lt;/a&gt;
+          &lt;/h2&gt;
+          &lt;ul&gt;
+            
+          &lt;/ul&gt;
+        &lt;/section&gt;
+      
+        &lt;section class=&quot;search-link&quot; aria-labelledby=&quot;-heading&quot;&gt;
+          &lt;h2 id=&quot;-heading&quot;&gt;
+            
+            &lt;a href=&quot;#&quot; class=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;↑&lt;/a&gt;
+          &lt;/h2&gt;
+          &lt;ul&gt;
+            
+          &lt;/ul&gt;
+        &lt;/section&gt;
+      
+        &lt;section class=&quot;search-link&quot; aria-labelledby=&quot;-heading&quot;&gt;
+          &lt;h2 id=&quot;-heading&quot;&gt;
+            
+            &lt;a href=&quot;#&quot; class=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;↑&lt;/a&gt;
+          &lt;/h2&gt;
+          &lt;ul&gt;
+            
+          &lt;/ul&gt;
+        &lt;/section&gt;
+      
+        &lt;section class=&quot;search-link&quot; aria-labelledby=&quot;-heading&quot;&gt;
+          &lt;h2 id=&quot;-heading&quot;&gt;
+            
+            &lt;a href=&quot;#&quot; class=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;↑&lt;/a&gt;
+          &lt;/h2&gt;
+          &lt;ul&gt;
+            
+          &lt;/ul&gt;
+        &lt;/section&gt;
+      
+        &lt;section class=&quot;search-link&quot; aria-labelledby=&quot;-heading&quot;&gt;
+          &lt;h2 id=&quot;-heading&quot;&gt;
+            
+            &lt;a href=&quot;#&quot; class=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;↑&lt;/a&gt;
+          &lt;/h2&gt;
+          &lt;ul&gt;
+            
+          &lt;/ul&gt;
+        &lt;/section&gt;
+      
+        &lt;section class=&quot;search-link&quot; aria-labelledby=&quot;-heading&quot;&gt;
+          &lt;h2 id=&quot;-heading&quot;&gt;
+            
+            &lt;a href=&quot;#&quot; class=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;↑&lt;/a&gt;
+          &lt;/h2&gt;
+          &lt;ul&gt;
+            
+          &lt;/ul&gt;
+        &lt;/section&gt;
+      
+        &lt;section class=&quot;search-link&quot; aria-labelledby=&quot;-heading&quot;&gt;
+          &lt;h2 id=&quot;-heading&quot;&gt;
+            
+            &lt;a href=&quot;#&quot; class=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;↑&lt;/a&gt;
+          &lt;/h2&gt;
+          &lt;ul&gt;
+            
+          &lt;/ul&gt;
+        &lt;/section&gt;
+      
+        &lt;section class=&quot;search-link&quot; aria-labelledby=&quot;-heading&quot;&gt;
+          &lt;h2 id=&quot;-heading&quot;&gt;
+            
+            &lt;a href=&quot;#&quot; class=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;↑&lt;/a&gt;
+          &lt;/h2&gt;
+          &lt;ul&gt;
+            
+          &lt;/ul&gt;
+        &lt;/section&gt;
+      
+        &lt;section class=&quot;search-link&quot; aria-labelledby=&quot;-heading&quot;&gt;
+          &lt;h2 id=&quot;-heading&quot;&gt;
+            
+            &lt;a href=&quot;#&quot; class=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;↑&lt;/a&gt;
+          &lt;/h2&gt;
+          &lt;ul&gt;
+            
+          &lt;/ul&gt;
+        &lt;/section&gt;
+      
+        &lt;section class=&quot;search-link&quot; aria-labelledby=&quot;-heading&quot;&gt;
+          &lt;h2 id=&quot;-heading&quot;&gt;
+            
+            &lt;a href=&quot;#&quot; class=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;↑&lt;/a&gt;
+          &lt;/h2&gt;
+          &lt;ul&gt;
+            
+          &lt;/ul&gt;
+        &lt;/section&gt;
+      
+        &lt;section class=&quot;search-link&quot; aria-labelledby=&quot;-heading&quot;&gt;
+          &lt;h2 id=&quot;-heading&quot;&gt;
+            
+            &lt;a href=&quot;#&quot; class=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;↑&lt;/a&gt;
+          &lt;/h2&gt;
+          &lt;ul&gt;
+            
+          &lt;/ul&gt;
+        &lt;/section&gt;
+      
+        &lt;section class=&quot;search-link&quot; aria-labelledby=&quot;-heading&quot;&gt;
+          &lt;h2 id=&quot;-heading&quot;&gt;
+            
+            &lt;a href=&quot;#&quot; class=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;↑&lt;/a&gt;
+          &lt;/h2&gt;
+          &lt;ul&gt;
+            
+          &lt;/ul&gt;
+        &lt;/section&gt;
+      
+        &lt;section class=&quot;search-link&quot; aria-labelledby=&quot;-heading&quot;&gt;
+          &lt;h2 id=&quot;-heading&quot;&gt;
+            
+            &lt;a href=&quot;#&quot; class=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;↑&lt;/a&gt;
+          &lt;/h2&gt;
+          &lt;ul&gt;
+            
+          &lt;/ul&gt;
+        &lt;/section&gt;
+      
+        &lt;section class=&quot;search-link&quot; aria-labelledby=&quot;-heading&quot;&gt;
+          &lt;h2 id=&quot;-heading&quot;&gt;
+            
+            &lt;a href=&quot;#&quot; class=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;↑&lt;/a&gt;
+          &lt;/h2&gt;
+          &lt;ul&gt;
+            
+          &lt;/ul&gt;
+        &lt;/section&gt;
+      
+        &lt;section class=&quot;search-link&quot; aria-labelledby=&quot;-heading&quot;&gt;
+          &lt;h2 id=&quot;-heading&quot;&gt;
+            
+            &lt;a href=&quot;#&quot; class=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;↑&lt;/a&gt;
+          &lt;/h2&gt;
+          &lt;ul&gt;
+            
+          &lt;/ul&gt;
+        &lt;/section&gt;
+      
+        &lt;section class=&quot;search-link&quot; aria-labelledby=&quot;-heading&quot;&gt;
+          &lt;h2 id=&quot;-heading&quot;&gt;
+            
+            &lt;a href=&quot;#&quot; class=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;↑&lt;/a&gt;
+          &lt;/h2&gt;
+          &lt;ul&gt;
+            
+          &lt;/ul&gt;
+        &lt;/section&gt;
+      
+        &lt;section class=&quot;search-link&quot; aria-labelledby=&quot;-heading&quot;&gt;
+          &lt;h2 id=&quot;-heading&quot;&gt;
+            
+            &lt;a href=&quot;#&quot; class=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;↑&lt;/a&gt;
+          &lt;/h2&gt;
+          &lt;ul&gt;
+            
+          &lt;/ul&gt;
+        &lt;/section&gt;
+      
+        &lt;section class=&quot;search-link&quot; aria-labelledby=&quot;-heading&quot;&gt;
+          &lt;h2 id=&quot;-heading&quot;&gt;
+            
+            &lt;a href=&quot;#&quot; class=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;↑&lt;/a&gt;
+          &lt;/h2&gt;
+          &lt;ul&gt;
+            
+          &lt;/ul&gt;
+        &lt;/section&gt;
+      
+        &lt;section class=&quot;search-link&quot; aria-labelledby=&quot;-heading&quot;&gt;
+          &lt;h2 id=&quot;-heading&quot;&gt;
+            
+            &lt;a href=&quot;#&quot; class=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;↑&lt;/a&gt;
+          &lt;/h2&gt;
+          &lt;ul&gt;
+            
+          &lt;/ul&gt;
+        &lt;/section&gt;
+      
+        &lt;section class=&quot;search-link&quot; aria-labelledby=&quot;-heading&quot;&gt;
+          &lt;h2 id=&quot;-heading&quot;&gt;
+            
+            &lt;a href=&quot;#&quot; class=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;↑&lt;/a&gt;
+          &lt;/h2&gt;
+          &lt;ul&gt;
+            
+          &lt;/ul&gt;
+        &lt;/section&gt;
+      
+        &lt;section class=&quot;search-link&quot; aria-labelledby=&quot;-heading&quot;&gt;
+          &lt;h2 id=&quot;-heading&quot;&gt;
+            
+            &lt;a href=&quot;#&quot; class=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;↑&lt;/a&gt;
+          &lt;/h2&gt;
+          &lt;ul&gt;
+            
+          &lt;/ul&gt;
+        &lt;/section&gt;
+      
+        &lt;section class=&quot;search-link&quot; aria-labelledby=&quot;-heading&quot;&gt;
+          &lt;h2 id=&quot;-heading&quot;&gt;
+            
+            &lt;a href=&quot;#&quot; class=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;↑&lt;/a&gt;
+          &lt;/h2&gt;
+          &lt;ul&gt;
+            
+          &lt;/ul&gt;
+        &lt;/section&gt;
+      
+        &lt;section class=&quot;search-link&quot; aria-labelledby=&quot;-heading&quot;&gt;
+          &lt;h2 id=&quot;-heading&quot;&gt;
+            
+            &lt;a href=&quot;#&quot; class=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;↑&lt;/a&gt;
+          &lt;/h2&gt;
+          &lt;ul&gt;
+            
+          &lt;/ul&gt;
+        &lt;/section&gt;
+      
+        &lt;section class=&quot;search-link&quot; aria-labelledby=&quot;-heading&quot;&gt;
+          &lt;h2 id=&quot;-heading&quot;&gt;
+            
+            &lt;a href=&quot;#&quot; class=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;↑&lt;/a&gt;
+          &lt;/h2&gt;
+          &lt;ul&gt;
+            
+          &lt;/ul&gt;
+        &lt;/section&gt;
+      
+        &lt;section class=&quot;search-link&quot; aria-labelledby=&quot;-heading&quot;&gt;
+          &lt;h2 id=&quot;-heading&quot;&gt;
+            
+            &lt;a href=&quot;#&quot; class=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;↑&lt;/a&gt;
+          &lt;/h2&gt;
+          &lt;ul&gt;
+            
+          &lt;/ul&gt;
+        &lt;/section&gt;
+      
+        &lt;section class=&quot;search-link&quot; aria-labelledby=&quot;-heading&quot;&gt;
+          &lt;h2 id=&quot;-heading&quot;&gt;
+            
+            &lt;a href=&quot;#&quot; class=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;↑&lt;/a&gt;
+          &lt;/h2&gt;
+          &lt;ul&gt;
+            
+          &lt;/ul&gt;
+        &lt;/section&gt;
+      
+        &lt;section class=&quot;search-link&quot; aria-labelledby=&quot;-heading&quot;&gt;
+          &lt;h2 id=&quot;-heading&quot;&gt;
+            
+            &lt;a href=&quot;#&quot; class=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;↑&lt;/a&gt;
+          &lt;/h2&gt;
+          &lt;ul&gt;
+            
+          &lt;/ul&gt;
+        &lt;/section&gt;
+      
+        &lt;section class=&quot;search-link&quot; aria-labelledby=&quot;-heading&quot;&gt;
+          &lt;h2 id=&quot;-heading&quot;&gt;
+            
+            &lt;a href=&quot;#&quot; class=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;↑&lt;/a&gt;
+          &lt;/h2&gt;
+          &lt;ul&gt;
+            
+          &lt;/ul&gt;
+        &lt;/section&gt;
+      
+        &lt;section class=&quot;search-link&quot; aria-labelledby=&quot;-heading&quot;&gt;
+          &lt;h2 id=&quot;-heading&quot;&gt;
+            
+            &lt;a href=&quot;#&quot; class=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;↑&lt;/a&gt;
+          &lt;/h2&gt;
+          &lt;ul&gt;
+            
+          &lt;/ul&gt;
+        &lt;/section&gt;
+      
+        &lt;section class=&quot;search-link&quot; aria-labelledby=&quot;-heading&quot;&gt;
+          &lt;h2 id=&quot;-heading&quot;&gt;
+            
+            &lt;a href=&quot;#&quot; class=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;↑&lt;/a&gt;
+          &lt;/h2&gt;
+          &lt;ul&gt;
+            
+          &lt;/ul&gt;
+        &lt;/section&gt;
+      
+        &lt;section class=&quot;search-link&quot; aria-labelledby=&quot;-heading&quot;&gt;
+          &lt;h2 id=&quot;-heading&quot;&gt;
+            
+            &lt;a href=&quot;#&quot; class=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;↑&lt;/a&gt;
+          &lt;/h2&gt;
+          &lt;ul&gt;
+            
+          &lt;/ul&gt;
+        &lt;/section&gt;
+      
+        &lt;section class=&quot;search-link&quot; aria-labelledby=&quot;-heading&quot;&gt;
+          &lt;h2 id=&quot;-heading&quot;&gt;
+            
+            &lt;a href=&quot;#&quot; class=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;↑&lt;/a&gt;
+          &lt;/h2&gt;
+          &lt;ul&gt;
+            
+          &lt;/ul&gt;
+        &lt;/section&gt;
+      
+        &lt;section class=&quot;search-link&quot; aria-labelledby=&quot;-heading&quot;&gt;
+          &lt;h2 id=&quot;-heading&quot;&gt;
+            
+            &lt;a href=&quot;#&quot; class=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;↑&lt;/a&gt;
+          &lt;/h2&gt;
+          &lt;ul&gt;
+            
+          &lt;/ul&gt;
+        &lt;/section&gt;
+      
+        &lt;section class=&quot;search-link&quot; aria-labelledby=&quot;-heading&quot;&gt;
+          &lt;h2 id=&quot;-heading&quot;&gt;
+            
+            &lt;a href=&quot;#&quot; class=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;↑&lt;/a&gt;
+          &lt;/h2&gt;
+          &lt;ul&gt;
+            
+          &lt;/ul&gt;
+        &lt;/section&gt;
+      
+        &lt;section class=&quot;search-link&quot; aria-labelledby=&quot;-heading&quot;&gt;
+          &lt;h2 id=&quot;-heading&quot;&gt;
+            
+            &lt;a href=&quot;#&quot; class=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;↑&lt;/a&gt;
+          &lt;/h2&gt;
+          &lt;ul&gt;
+            
+          &lt;/ul&gt;
+        &lt;/section&gt;
+      
+        &lt;section class=&quot;search-link&quot; aria-labelledby=&quot;-heading&quot;&gt;
+          &lt;h2 id=&quot;-heading&quot;&gt;
+            
+            &lt;a href=&quot;#&quot; class=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;↑&lt;/a&gt;
+          &lt;/h2&gt;
+          &lt;ul&gt;
+            
+          &lt;/ul&gt;
+        &lt;/section&gt;
+      
+        &lt;section class=&quot;search-link&quot; aria-labelledby=&quot;-heading&quot;&gt;
+          &lt;h2 id=&quot;-heading&quot;&gt;
+            
+            &lt;a href=&quot;#&quot; class=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;↑&lt;/a&gt;
+          &lt;/h2&gt;
+          &lt;ul&gt;
+            
+          &lt;/ul&gt;
+        &lt;/section&gt;
+      
+        &lt;section class=&quot;search-link&quot; aria-labelledby=&quot;-heading&quot;&gt;
+          &lt;h2 id=&quot;-heading&quot;&gt;
+            
+            &lt;a href=&quot;#&quot; class=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;↑&lt;/a&gt;
+          &lt;/h2&gt;
+          &lt;ul&gt;
+            
+          &lt;/ul&gt;
+        &lt;/section&gt;
+      
+        &lt;section class=&quot;search-link&quot; aria-labelledby=&quot;-heading&quot;&gt;
+          &lt;h2 id=&quot;-heading&quot;&gt;
+            
+            &lt;a href=&quot;#&quot; class=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;↑&lt;/a&gt;
+          &lt;/h2&gt;
+          &lt;ul&gt;
+            
+          &lt;/ul&gt;
+        &lt;/section&gt;
+      
     &lt;/main&gt;
   &lt;/div&gt;
+&lt;script&gt;
+    // Adjust scroll behavior to account for sticky headers
+    const headerHeight = document.querySelector(&apos;header&apos;).offsetHeight;
+    document.querySelectorAll(&apos;a[href^=&quot;#&quot;]&apos;).forEach(anchor =&gt; {
+      anchor.addEventListener(&apos;click&apos;, function(e) {
+        e.preventDefault();
+        const targetId = this.getAttribute(&apos;href&apos;).substring(1);
+        const targetElement = document.getElementById(targetId);
+        if (targetElement) {
+          window.scrollTo({
+            top: targetElement.offsetTop - headerHeight,
+            behavior: &apos;smooth&apos;
+          });
+          history.pushState(null, &apos;&apos;, `#${targetId}`);
+        }
+      });
+    });
+  &lt;/script&gt;
+
 </content>
     </entry>
     
