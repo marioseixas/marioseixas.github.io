@@ -704,14 +704,14 @@
     "scripts": {
         "parents": [],
         "children": [
-            "scripts>cloud",
-            "cloud",
+            "AI",
             "google-apps-script",
+            "mobile",
             "scripts>AI",
             "scripts>mobile",
-            "AI",
-            "mobile",
-            "scripts>google-apps-script"
+            "scripts>google-apps-script",
+            "cloud",
+            "scripts>cloud"
         ],
         "related": {
             "linux": 26,
@@ -958,10 +958,10 @@
     "tools": {
         "parents": [],
         "children": [
-            "tools>AI>prompt",
             "AI>prompt",
-            "tools>github>estudos",
-            "github>estudos"
+            "github>estudos",
+            "tools>AI>prompt",
+            "tools>github>estudos"
         ],
         "related": {},
         "posts": [
@@ -1094,8 +1094,8 @@
     },
     "mobile": {
         "parents": [
-            "software",
-            "scripts"
+            "scripts",
+            "software"
         ],
         "children": [],
         "related": {},
@@ -1147,10 +1147,10 @@
     "software": {
         "parents": [],
         "children": [
-            "software>cloud",
             "cloud",
+            "mobile",
             "software>mobile",
-            "mobile"
+            "software>cloud"
         ],
         "related": {},
         "posts": [
@@ -1217,12 +1217,6 @@
         "related": {},
         "posts": [
             {
-                "title": "links",
-                "url": "/links",
-                "highlighted": true,
-                "date": "2024-08-31T00:00:00"
-            },
-            {
                 "title": "libros familiares",
                 "url": "/libros-de-familia",
                 "highlighted": true,
@@ -1259,8 +1253,8 @@
     },
     "cloud": {
         "parents": [
-            "software",
-            "scripts"
+            "scripts",
+            "software"
         ],
         "children": [],
         "related": {},
@@ -1316,8 +1310,8 @@
     "tasks": {
         "parents": [],
         "children": [
-            "iphone",
-            "tasks>iphone"
+            "tasks>iphone",
+            "iphone"
         ],
         "related": {},
         "posts": [
@@ -1403,8 +1397,8 @@
     },
     "AI>prompt": {
         "parents": [
-            "tools",
-            "AI"
+            "AI",
+            "tools"
         ],
         "children": [],
         "related": {},
@@ -1554,8 +1548,8 @@
     "github": {
         "parents": [],
         "children": [
-            "github>jekyll",
             "jekyll",
+            "github>jekyll",
             "tools>github>estudos"
         ],
         "related": {},
@@ -1701,10 +1695,10 @@
     "edital": {
         "parents": [],
         "children": [
+            "edital>direito",
             "edital>direito>processual-penal",
             "direito",
-            "direito>processual-penal",
-            "edital>direito"
+            "direito>processual-penal"
         ],
         "related": {},
         "posts": [
@@ -1851,8 +1845,8 @@
     },
     "edital>direito>processual-penal": {
         "parents": [
-            "direito",
-            "edital"
+            "edital",
+            "direito"
         ],
         "children": [],
         "related": {},
@@ -1975,8 +1969,8 @@
     },
     "tools>AI>prompt": {
         "parents": [
-            "tools",
-            "AI"
+            "AI",
+            "tools"
         ],
         "children": [],
         "related": {},
@@ -2019,8 +2013,8 @@
     },
     "tools>github>estudos": {
         "parents": [
-            "github",
-            "tools"
+            "tools",
+            "github"
         ],
         "children": [],
         "related": {},

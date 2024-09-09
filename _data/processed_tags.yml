@@ -417,10 +417,6 @@
     url: /update-gemfilelock
   tag: jekyll
 - posts:
-  - date: 2024-08-31 00:00:00
-    highlighted: true
-    title: links
-    url: /links
   - date: 2022-07-14 00:00:00
     highlighted: true
     title: libros familiares
