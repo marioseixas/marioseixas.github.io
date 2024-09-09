@@ -49,9 +49,6 @@ jobs:
           restore-keys: |
             tag-data-
 
-      - name: Process markdown files for tags
-        run: python tags.py
-
       - name: Cache Jekyll _site directory
         uses: actions/cache@v4
         with:
@@ -61,6 +58,9 @@ jobs:
           restore-keys: |
             jekyll-site-
 
+      - name: Process markdown files for tags
+        run: python tags.py
+
       - name: Fetch calendar events
         run: python events.py
 
@@ -68,7 +68,7 @@ jobs:
         run: |
           git config --local user.email "actions@github.com"
           git config --local user.name "GitHub Actions"
-          git add -f assets/data/events.json assets/data/processed_tags.yml assets/data/tag_graph.html assets/data/processed_tags.json
+          git add --all
           git commit --allow-empty -m || echo "Nothing to commit"
           git push origin main || echo "Nothing to push"
 
@@ -168,7 +168,7 @@ jobs:
           git config --local user.name "GitHub Action"
 
       - name: Stage Changes
-        run: git add .
+        run: git add --all
 
       - name: Commit and Push
         run: |
