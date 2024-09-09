@@ -71,8 +71,7 @@ jobs:
           git config --local user.email "actions@github.com"
           git config --local user.name "GitHub Actions"
           git add -f assets/data/events.json _data/processed_tags.yml _includes/tag_graph.html _data/processed_tags.json
-          git add -f _data _includes
-          git commit --allow-empty -m "Update events.json, processed_tags.yml, tag_graph.html, processed_tags.json, _data, and _includes" || echo "Nothing to commit"
+          git commit --allow-empty -m "Update events.json, processed_tags.yml, tag_graph.html, processed_tags.json" || echo "Nothing to commit"
           git push origin main || echo "Nothing to push"
 
       - name: Setup Pages
@@ -89,8 +88,7 @@ jobs:
           export base_path="${base_path}" 
           echo "base_path after export is: ${base_path}"
           bundle exec jekyll build --trace --config _config.yml --baseurl "${basepath}"
-          cp -R _data _site/
-          cp -R _includes _site/
+          cp -R _site/
 
       - name: Verify _site contents
         run: |
@@ -112,7 +110,7 @@ jobs:
           publish_branch: gh-pages
           cname: ib.bsb.br
           allow_empty_commit: true
-          enable_jekyll: false
+          enable_jekyll: true
 
   add-posts-to-inbox:
     runs-on: ubuntu-latest
@@ -183,4 +181,4 @@ jobs:
         run: |
           git commit -m "Update spaced-inbox with new posts" || echo "No changes to commit"
           git pull --rebase
-          git push --force-with-lease
+          git push
