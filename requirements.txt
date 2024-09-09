@@ -1,4 +1,5 @@
 requests
 icalendar
-pyyaml
 datetime
+pyyaml
+matplotlib
