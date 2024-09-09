@@ -497,7 +497,6 @@ figcaption {
 
 img,
 canvas,
-iframe,
 video,
 svg,
 select {
@@ -505,8 +504,17 @@ select {
   overflow: auto;
   position: relative;
   width: 100%;
-  height: 56.25vh;
+  height: 100%;
 }
+
+iframe {
+  display: block;
+  overflow: auto;
+  position: relative;
+  width: 100vw;
+  height: 75vh;
+}
+
 img[align="left"] {
   margin-right: 1em;
 }
