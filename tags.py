@@ -32,7 +32,7 @@ def generate_partial_tags(tag: str) -> List[str]:
             partial_tags.append(">".join(parts[j: j + i]))
     return partial_tags
 
-def process_tags(posts_dir: str, output_file: str) -> tuple:
+def process_tags(posts_dir: str) -> tuple:
     """
     Processes tags from markdown files, handling nested tags, highlighting exact matches,
     preventing duplicates using file paths, and generating a Mermaid graph.
@@ -98,8 +98,8 @@ def process_tags(posts_dir: str, output_file: str) -> tuple:
             "related": defaultdict(int),
             "posts": [],
         }
-    )  # Updated 'related' to be a defaultdict(int)
-    combined_tags = set()  # Keep track of combined tags
+    )
+    combined_tags = set()
 
     for post in all_posts:
         for tag in post["tags"]:
@@ -141,9 +141,7 @@ def process_tags(posts_dir: str, output_file: str) -> tuple:
                     and tag_frequency[other_tag] >= THRESHOLD
                     and tag_frequency[full_tag_path] >= THRESHOLD
                     and other_tag not in tag_data[full_tag_path]["parents"]
-                    # Ensure no hierarchical relation
                     and other_tag not in tag_data[full_tag_path]["children"]
-                    # Ensure no hierarchical relation
                 ):
                     tag_data[full_tag_path]["related"][other_tag] += 1
                     tag_data[other_tag]["related"][full_tag_path] += 1
@@ -159,7 +157,7 @@ def process_tags(posts_dir: str, output_file: str) -> tuple:
             related: count
             for related, count in data["related"].items()
             if related in tag_data
-        }  # Keep only related tags that exist
+        }
 
     # Sort posts within each tag by date (most recent first)
     for tag, data in tag_data.items():
@@ -170,29 +168,11 @@ def process_tags(posts_dir: str, output_file: str) -> tuple:
     # Sort tags alphabetically before writing to YAML
     sorted_tag_data = sorted(tag_data.items())
 
-    # Write the processed tags to a YAML file
-    with open(output_file, "w", encoding="utf-8") as f:
-        yaml.dump(
-            [{"tag": tag, "posts": data["posts"]} for tag, data in sorted_tag_data],
-            f,
-            allow_unicode=True,
-        )
-
-    logging.info(f"Processed tags have been written to {output_file}")
-
     return tag_data, combined_tags
-
-import json
-from datetime import datetime
 
 class JsonOutputHandler:
     def write(self, data: dict, json_output_file: str):
-        """Writes the tag data to a JSON file.
-
-        Args:
-            data (dict): The tag data to write.
-            json_output_file (str): The path to the output file.
-        """
+        """Writes the tag data to a JSON file."""
         def convert_data(obj):
             if isinstance(obj, (set, frozenset)):
                 return list(obj)
@@ -208,19 +188,7 @@ class JsonOutputHandler:
 def generate_mermaid_graph(
     tag_data: Union[List[Dict[str, Any]], Dict[str, Any]], direction: str = "TD"
 ) -> str:
-    """
-    Generates Mermaid ER diagram code for the tag structure,
-    including parent, child, SUPERset, and SUBset relationships.
-
-    Args:
-        tag_data (Union[List[Dict[str, Any]], Dict[str, Any]]):
-            List of dictionaries or dictionary containing tag relationships.
-        direction (str): Graph direction (TD, LR, RL, BT). Defaults to "TD".
-
-    Returns:
-        str: Mermaid ER diagram code.
-    """
-
+    """Generates Mermaid ER diagram code for the tag structure."""
     graph = ["erDiagram"]
     added_nodes = set()
     added_edges = set()
@@ -252,23 +220,12 @@ def generate_mermaid_graph(
         )
 
     def add_node(tag: str, data: Dict[str, Any]) -> str:
-        """
-        Adds a node (entity) to the graph if it hasn't been added yet,
-        including its attributes.
-
-        Args:
-            tag (str): The tag name to be added.
-            data (Dict[str, Any]): The data associated with the tag.
-
-        Returns:
-            str: The sanitized tag name used in the graph.
-        """
+        """Adds a node (entity) to the graph if it hasn't been added yet."""
         safe_tag = sanitize_tag(tag)
         if safe_tag not in added_nodes:
             node_def = f"    {safe_tag} {{"
             graph.append(node_def)
 
-            # Add attributes (parents, children, related)
             for parent in data.get("parents", []):
                 graph.append(f"        parent {sanitize_tag(parent)}")
             for child in data.get("children", []):
@@ -281,13 +238,12 @@ def generate_mermaid_graph(
 
         return safe_tag
 
-    # Add nodes and edges based on relationships
     for tag, data in tag_data.items():
         safe_tag = add_node(tag, data)
 
         for parent in data.get("parents", []):
             safe_parent = add_node(parent, tag_data[parent])
-            edge = f"    {safe_parent} ||--|| {safe_tag} : SUPERSET_OF"
+            edge = f"    {safe_parent} ||--|| {safe_tag} : SUBSET_OF"
             if edge not in added_edges:
                 graph.append(edge)
                 added_edges.add(edge)
@@ -299,40 +255,33 @@ def generate_mermaid_graph(
                 graph.append(edge)
                 added_edges.add(edge)
 
-        for related in data.get("related", []):
-            safe_related = add_node(related, tag_data[related])
-            edge = f"    {safe_tag} ||..|| {safe_related} : RELATED_TO"
-            if edge not in added_edges:
-                graph.append(edge)
-                added_edges.add(edge)
-
-    # Add graph direction
-    graph.insert(1, f"    direction {direction}")
-
     return "\n".join(graph)
-    
-if __name__ == "__main__":
-    posts_dir = os.path.join(os.getenv("GITHUB_WORKSPACE", ""), "_posts")
-    output_file = os.path.join(
-        os.getenv("GITHUB_WORKSPACE", ""), "assets/data/processed_tags.yml"
-    )
 
-    tag_data, combined_tags = process_tags(posts_dir, output_file) 
+def save_output(output_data, output_folder):
+    """Saves YAML, JSON, and Mermaid graph outputs to the specified folder."""
+    yaml_file = os.path.join(output_folder, 'processed_tags.yml')
+    json_file = os.path.join(output_folder, 'processed_tags.json')
+    mermaid_file = os.path.join(output_folder, 'tag_graph.html')
 
-    # Output to JSON
-    json_output_handler = JsonOutputHandler()
-    json_output_file = os.path.join(
-        os.getenv("GITHUB_WORKSPACE", ""), "assets/data/processed_tags.json"
-    )
-    json_output_handler.write(tag_data, json_output_file)
+    # Save YAML
+    with open(yaml_file, 'w') as f:
+        yaml.dump(output_data, f, allow_unicode=True)
+    logging.info(f"YAML data saved to {yaml_file}")
 
-    # Output to Mermaid graph
-    mermaid_graph = generate_mermaid_graph(tag_data)
-    with open(
-        os.path.join(os.getenv("GITHUB_WORKSPACE", ""), "assets/data/tag_graph.html"),
-        "w",
-        encoding="utf-8",
-    ) as f:
-        f.write(f"<div class='mermaid'>\n{mermaid_graph}\n</div>")
+    # Save JSON
+    json_handler = JsonOutputHandler()
+    json_handler.write(output_data, json_file)
 
-    logging.info("Mermaid graph has been written to assets/data/tag_graph.html")
+    # Generate and save Mermaid graph
+    mermaid_graph = generate_mermaid_graph(output_data)
+    with open(mermaid_file, 'w') as f:
+        f.write(mermaid_graph)
+    logging.info(f"Mermaid graph saved to {mermaid_file}")
+
+# Example usage (make sure to update the directory paths accordingly):
+posts_directory = '_posts'
+output_folder = 'assets/data'
+
+# Process the tags and generate the outputs
+tag_data, combined_tags = process_tags(posts_directory)
+save_output(tag_data, output_folder)
