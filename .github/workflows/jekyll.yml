@@ -116,6 +116,10 @@ jobs:
         with:
           fetch-depth: 0
 
+      - name: Install Python dependencies
+        run: |
+          pip install matplotlib
+
       - name: Initialize spaced-inbox database
         run: |
           if [ ! -f data.db ]; then
