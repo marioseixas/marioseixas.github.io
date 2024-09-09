@@ -41,5 +41,4 @@ plt.xlabel("days in the future")
 plt.ylabel("number of notes due for review on this day")
 plt.legend(loc="upper right")
 
-# Save the plot to a PNG file, overwriting if it exists
-plt.savefig("review_load.png", force=True)
+plt.savefig("review_load.png", clobber=True)
