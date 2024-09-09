@@ -94,6 +94,10 @@ html {
     display: flex;
     gap: 10px;
 }
+nav.header-content {
+  width: 100%;
+  justify-content: center;
+}
 iframe-container {
   display: block;
   max-width: 100%;
