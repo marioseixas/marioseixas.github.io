@@ -44,7 +44,7 @@
     <title>infoBAG</title>
     <link href="https://ib.bsb.br/rss.xml" rel="self"/>
     <link href="https://ib.bsb.br/"/>
-    <updated>2024-09-10T20:42:24+00:00</updated>
+    <updated>2024-09-10T20:43:55+00:00</updated>
     <id>https://ib.bsb.br</id>
     <author>
         <name></name>
@@ -45777,63 +45777,63 @@ Pense duas vezes antes de se envolver.
     
     
     &lt;div class=&quot;tag-list&quot; id=&quot;ai&quot; aria-labelledby=&quot;ai-heading&quot;&gt;
-        &lt;h1 id=&quot;ai-heading&quot;&gt;
+        &lt;h1 id=&quot;ai-heading&quot; href=&quot;#&quot; class=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;
             AI
         &lt;/h1&gt;
         &lt;ul class=&quot;search-link&quot;&gt;
         
             
             &lt;li&gt;&lt;a href=&quot;/gmail2mailgrip-prompt&quot;&gt;
-                &lt;time datetime=&quot;2024-08-02T00:00:00+00:00&quot;&gt;August 02, 2024&lt;/time&gt;
+                &lt;time datetime=&quot;2024-08-02T00:00:00+00:00&quot;&gt;&lt;strong&gt;August 02, 2024&lt;/strong&gt;&lt;/time&gt;
                 
                 gmail2mailgrip
                 
             &lt;/a&gt;&lt;/li&gt;
             
             &lt;li&gt;&lt;a href=&quot;/longer-inputs-on-whisper-api&quot;&gt;
-                &lt;time datetime=&quot;2024-07-21T00:00:00+00:00&quot;&gt;July 21, 2024&lt;/time&gt;
+                &lt;time datetime=&quot;2024-07-21T00:00:00+00:00&quot;&gt;&lt;strong&gt;July 21, 2024&lt;/strong&gt;&lt;/time&gt;
                 
                 Longer inputs on WHISPER API
                 
             &lt;/a&gt;&lt;/li&gt;
             
             &lt;li&gt;&lt;a href=&quot;/reassess&quot;&gt;
-                &lt;time datetime=&quot;2024-04-13T00:00:00+00:00&quot;&gt;April 13, 2024&lt;/time&gt;
+                &lt;time datetime=&quot;2024-04-13T00:00:00+00:00&quot;&gt;&lt;strong&gt;April 13, 2024&lt;/strong&gt;&lt;/time&gt;
                 
                 reassess
                 
             &lt;/a&gt;&lt;/li&gt;
             
             &lt;li&gt;&lt;a href=&quot;/deepchat&quot;&gt;
-                &lt;time datetime=&quot;2024-03-12T00:00:00+00:00&quot;&gt;March 12, 2024&lt;/time&gt;
+                &lt;time datetime=&quot;2024-03-12T00:00:00+00:00&quot;&gt;&lt;strong&gt;March 12, 2024&lt;/strong&gt;&lt;/time&gt;
                 
                 &lt;mark&gt;Deep Chat Speech&lt;/mark&gt;
                 
             &lt;/a&gt;&lt;/li&gt;
             
             &lt;li&gt;&lt;a href=&quot;/json-ld&quot;&gt;
-                &lt;time datetime=&quot;2024-02-14T00:00:00+00:00&quot;&gt;February 14, 2024&lt;/time&gt;
+                &lt;time datetime=&quot;2024-02-14T00:00:00+00:00&quot;&gt;&lt;strong&gt;February 14, 2024&lt;/strong&gt;&lt;/time&gt;
                 
                 JSON-LD
                 
             &lt;/a&gt;&lt;/li&gt;
             
             &lt;li&gt;&lt;a href=&quot;/nlp&quot;&gt;
-                &lt;time datetime=&quot;2023-12-30T00:00:00+00:00&quot;&gt;December 30, 2023&lt;/time&gt;
+                &lt;time datetime=&quot;2023-12-30T00:00:00+00:00&quot;&gt;&lt;strong&gt;December 30, 2023&lt;/strong&gt;&lt;/time&gt;
                 
                 &lt;mark&gt;Natural Language Processing (NLP) tools&lt;/mark&gt;
                 
             &lt;/a&gt;&lt;/li&gt;
             
             &lt;li&gt;&lt;a href=&quot;/default-prompt&quot;&gt;
-                &lt;time datetime=&quot;2023-11-05T00:00:00+00:00&quot;&gt;November 05, 2023&lt;/time&gt;
+                &lt;time datetime=&quot;2023-11-05T00:00:00+00:00&quot;&gt;&lt;strong&gt;November 05, 2023&lt;/strong&gt;&lt;/time&gt;
                 
                 default
                 
             &lt;/a&gt;&lt;/li&gt;
             
             &lt;li&gt;&lt;a href=&quot;/openai-token-limits&quot;&gt;
-                &lt;time datetime=&quot;2023-03-10T00:00:00+00:00&quot;&gt;March 10, 2023&lt;/time&gt;
+                &lt;time datetime=&quot;2023-03-10T00:00:00+00:00&quot;&gt;&lt;strong&gt;March 10, 2023&lt;/strong&gt;&lt;/time&gt;
                 
                 &lt;mark&gt;OpenAI Token Limits&lt;/mark&gt;
                 
@@ -45868,35 +45868,35 @@ Pense duas vezes antes de se envolver.
     
     
     &lt;div class=&quot;tag-list&quot; id=&quot;ai-prompt&quot; aria-labelledby=&quot;ai-prompt-heading&quot;&gt;
-        &lt;h1 id=&quot;ai-prompt-heading&quot;&gt;
+        &lt;h1 id=&quot;ai-prompt-heading&quot; href=&quot;#&quot; class=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;
             AI&amp;gt;prompt
         &lt;/h1&gt;
         &lt;ul class=&quot;search-link&quot;&gt;
         
             
             &lt;li&gt;&lt;a href=&quot;/gmail2mailgrip-prompt&quot;&gt;
-                &lt;time datetime=&quot;2024-08-02T00:00:00+00:00&quot;&gt;August 02, 2024&lt;/time&gt;
+                &lt;time datetime=&quot;2024-08-02T00:00:00+00:00&quot;&gt;&lt;strong&gt;August 02, 2024&lt;/strong&gt;&lt;/time&gt;
                 
                 &lt;mark&gt;gmail2mailgrip&lt;/mark&gt;
                 
             &lt;/a&gt;&lt;/li&gt;
             
             &lt;li&gt;&lt;a href=&quot;/reassess&quot;&gt;
-                &lt;time datetime=&quot;2024-04-13T00:00:00+00:00&quot;&gt;April 13, 2024&lt;/time&gt;
+                &lt;time datetime=&quot;2024-04-13T00:00:00+00:00&quot;&gt;&lt;strong&gt;April 13, 2024&lt;/strong&gt;&lt;/time&gt;
                 
                 reassess
                 
             &lt;/a&gt;&lt;/li&gt;
             
             &lt;li&gt;&lt;a href=&quot;/json-ld&quot;&gt;
-                &lt;time datetime=&quot;2024-02-14T00:00:00+00:00&quot;&gt;February 14, 2024&lt;/time&gt;
+                &lt;time datetime=&quot;2024-02-14T00:00:00+00:00&quot;&gt;&lt;strong&gt;February 14, 2024&lt;/strong&gt;&lt;/time&gt;
                 
                 &lt;mark&gt;JSON-LD&lt;/mark&gt;
                 
             &lt;/a&gt;&lt;/li&gt;
             
             &lt;li&gt;&lt;a href=&quot;/default-prompt&quot;&gt;
-                &lt;time datetime=&quot;2023-11-05T00:00:00+00:00&quot;&gt;November 05, 2023&lt;/time&gt;
+                &lt;time datetime=&quot;2023-11-05T00:00:00+00:00&quot;&gt;&lt;strong&gt;November 05, 2023&lt;/strong&gt;&lt;/time&gt;
                 
                 &lt;mark&gt;default&lt;/mark&gt;
                 
@@ -45924,21 +45924,21 @@ Pense duas vezes antes de se envolver.
     
     
     &lt;div class=&quot;tag-list&quot; id=&quot;admoestação&quot; aria-labelledby=&quot;admoestação-heading&quot;&gt;
-        &lt;h1 id=&quot;admoestação-heading&quot;&gt;
+        &lt;h1 id=&quot;admoestação-heading&quot; href=&quot;#&quot; class=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;
             admoestação
         &lt;/h1&gt;
         &lt;ul class=&quot;search-link&quot;&gt;
         
             
             &lt;li&gt;&lt;a href=&quot;/life-tokens&quot;&gt;
-                &lt;time datetime=&quot;2024-06-22T00:00:00+00:00&quot;&gt;June 22, 2024&lt;/time&gt;
+                &lt;time datetime=&quot;2024-06-22T00:00:00+00:00&quot;&gt;&lt;strong&gt;June 22, 2024&lt;/strong&gt;&lt;/time&gt;
                 
                 &lt;mark&gt;Your Life in Tokens&lt;/mark&gt;
                 
             &lt;/a&gt;&lt;/li&gt;
             
             &lt;li&gt;&lt;a href=&quot;/tal-06-17&quot;&gt;
-                &lt;time datetime=&quot;2018-02-15T00:00:00+00:00&quot;&gt;February 15, 2018&lt;/time&gt;
+                &lt;time datetime=&quot;2018-02-15T00:00:00+00:00&quot;&gt;&lt;strong&gt;February 15, 2018&lt;/strong&gt;&lt;/time&gt;
                 
                 &lt;mark&gt;Envolvido ou comprometido?&lt;/mark&gt;
                 
@@ -45966,21 +45966,21 @@ Pense duas vezes antes de se envolver.
     
     
     &lt;div class=&quot;tag-list&quot; id=&quot;assistir&quot; aria-labelledby=&quot;assistir-heading&quot;&gt;
-        &lt;h1 id=&quot;assistir-heading&quot;&gt;
+        &lt;h1 id=&quot;assistir-heading&quot; href=&quot;#&quot; class=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;
             assistir
         &lt;/h1&gt;
         &lt;ul class=&quot;search-link&quot;&gt;
         
             
             &lt;li&gt;&lt;a href=&quot;/streaming&quot;&gt;
-                &lt;time datetime=&quot;2022-03-16T00:00:00+00:00&quot;&gt;March 16, 2022&lt;/time&gt;
+                &lt;time datetime=&quot;2022-03-16T00:00:00+00:00&quot;&gt;&lt;strong&gt;March 16, 2022&lt;/strong&gt;&lt;/time&gt;
                 
                 &lt;mark&gt;streaming&lt;/mark&gt;
                 
             &lt;/a&gt;&lt;/li&gt;
             
             &lt;li&gt;&lt;a href=&quot;/aye&quot;&gt;
-                &lt;time datetime=&quot;2022-03-16T00:00:00+00:00&quot;&gt;March 16, 2022&lt;/time&gt;
+                &lt;time datetime=&quot;2022-03-16T00:00:00+00:00&quot;&gt;&lt;strong&gt;March 16, 2022&lt;/strong&gt;&lt;/time&gt;
                 
                 &lt;mark&gt;aye aye&lt;/mark&gt;
                 
@@ -46001,224 +46001,224 @@ Pense duas vezes antes de se envolver.
     
     
     &lt;div class=&quot;tag-list&quot; id=&quot;calls&quot; aria-labelledby=&quot;calls-heading&quot;&gt;
-        &lt;h1 id=&quot;calls-heading&quot;&gt;
+        &lt;h1 id=&quot;calls-heading&quot; href=&quot;#&quot; class=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;
             calls
         &lt;/h1&gt;
         &lt;ul class=&quot;search-link&quot;&gt;
         
             
             &lt;li&gt;&lt;a href=&quot;/call-10-2022&quot;&gt;
-                &lt;time datetime=&quot;2022-10-01T00:00:00+00:00&quot;&gt;October 01, 2022&lt;/time&gt;
+                &lt;time datetime=&quot;2022-10-01T00:00:00+00:00&quot;&gt;&lt;strong&gt;October 01, 2022&lt;/strong&gt;&lt;/time&gt;
                 
                 &lt;mark&gt;Call de Outubro de 2022&lt;/mark&gt;
                 
             &lt;/a&gt;&lt;/li&gt;
             
             &lt;li&gt;&lt;a href=&quot;/call-09-2022&quot;&gt;
-                &lt;time datetime=&quot;2022-09-07T00:00:00+00:00&quot;&gt;September 07, 2022&lt;/time&gt;
+                &lt;time datetime=&quot;2022-09-07T00:00:00+00:00&quot;&gt;&lt;strong&gt;September 07, 2022&lt;/strong&gt;&lt;/time&gt;
                 
                 &lt;mark&gt;Call de Setembro de 2022&lt;/mark&gt;
                 
             &lt;/a&gt;&lt;/li&gt;
             
             &lt;li&gt;&lt;a href=&quot;/call-08-2022&quot;&gt;
-                &lt;time datetime=&quot;2022-08-09T00:00:00+00:00&quot;&gt;August 09, 2022&lt;/time&gt;
+                &lt;time datetime=&quot;2022-08-09T00:00:00+00:00&quot;&gt;&lt;strong&gt;August 09, 2022&lt;/strong&gt;&lt;/time&gt;
                 
                 &lt;mark&gt;Call de Agosto de 2022&lt;/mark&gt;
                 
             &lt;/a&gt;&lt;/li&gt;
             
             &lt;li&gt;&lt;a href=&quot;/call-07-2022&quot;&gt;
-                &lt;time datetime=&quot;2022-07-05T00:00:00+00:00&quot;&gt;July 05, 2022&lt;/time&gt;
+                &lt;time datetime=&quot;2022-07-05T00:00:00+00:00&quot;&gt;&lt;strong&gt;July 05, 2022&lt;/strong&gt;&lt;/time&gt;
                 
                 &lt;mark&gt;Call de Julho de 2022&lt;/mark&gt;
                 
             &lt;/a&gt;&lt;/li&gt;
             
             &lt;li&gt;&lt;a href=&quot;/call-06-2022&quot;&gt;
-                &lt;time datetime=&quot;2022-06-07T00:00:00+00:00&quot;&gt;June 07, 2022&lt;/time&gt;
+                &lt;time datetime=&quot;2022-06-07T00:00:00+00:00&quot;&gt;&lt;strong&gt;June 07, 2022&lt;/strong&gt;&lt;/time&gt;
                 
                 &lt;mark&gt;Call de Junho de 2022&lt;/mark&gt;
                 
             &lt;/a&gt;&lt;/li&gt;
             
             &lt;li&gt;&lt;a href=&quot;/call-05-2022&quot;&gt;
-                &lt;time datetime=&quot;2022-05-10T00:00:00+00:00&quot;&gt;May 10, 2022&lt;/time&gt;
+                &lt;time datetime=&quot;2022-05-10T00:00:00+00:00&quot;&gt;&lt;strong&gt;May 10, 2022&lt;/strong&gt;&lt;/time&gt;
                 
                 &lt;mark&gt;Call de Maio de 2022&lt;/mark&gt;
                 
             &lt;/a&gt;&lt;/li&gt;
             
             &lt;li&gt;&lt;a href=&quot;/call-04-2022&quot;&gt;
-                &lt;time datetime=&quot;2022-04-06T00:00:00+00:00&quot;&gt;April 06, 2022&lt;/time&gt;
+                &lt;time datetime=&quot;2022-04-06T00:00:00+00:00&quot;&gt;&lt;strong&gt;April 06, 2022&lt;/strong&gt;&lt;/time&gt;
                 
                 &lt;mark&gt;Call de Abril de 2022&lt;/mark&gt;
                 
             &lt;/a&gt;&lt;/li&gt;
             
             &lt;li&gt;&lt;a href=&quot;/call-03-2022&quot;&gt;
-                &lt;time datetime=&quot;2022-03-07T00:00:00+00:00&quot;&gt;March 07, 2022&lt;/time&gt;
+                &lt;time datetime=&quot;2022-03-07T00:00:00+00:00&quot;&gt;&lt;strong&gt;March 07, 2022&lt;/strong&gt;&lt;/time&gt;
                 
                 &lt;mark&gt;Call de Março de 2022&lt;/mark&gt;
                 
             &lt;/a&gt;&lt;/li&gt;
             
             &lt;li&gt;&lt;a href=&quot;/call-02-2022&quot;&gt;
-                &lt;time datetime=&quot;2022-02-02T00:00:00+00:00&quot;&gt;February 02, 2022&lt;/time&gt;
+                &lt;time datetime=&quot;2022-02-02T00:00:00+00:00&quot;&gt;&lt;strong&gt;February 02, 2022&lt;/strong&gt;&lt;/time&gt;
                 
                 &lt;mark&gt;Call de Fevereiro de 2022&lt;/mark&gt;
                 
             &lt;/a&gt;&lt;/li&gt;
             
             &lt;li&gt;&lt;a href=&quot;/call-01-2022&quot;&gt;
-                &lt;time datetime=&quot;2022-01-06T00:00:00+00:00&quot;&gt;January 06, 2022&lt;/time&gt;
+                &lt;time datetime=&quot;2022-01-06T00:00:00+00:00&quot;&gt;&lt;strong&gt;January 06, 2022&lt;/strong&gt;&lt;/time&gt;
                 
                 &lt;mark&gt;Call de Janeiro de 2022&lt;/mark&gt;
                 
             &lt;/a&gt;&lt;/li&gt;
             
             &lt;li&gt;&lt;a href=&quot;/call-12-2021&quot;&gt;
-                &lt;time datetime=&quot;2021-12-09T00:00:00+00:00&quot;&gt;December 09, 2021&lt;/time&gt;
+                &lt;time datetime=&quot;2021-12-09T00:00:00+00:00&quot;&gt;&lt;strong&gt;December 09, 2021&lt;/strong&gt;&lt;/time&gt;
                 
                 &lt;mark&gt;Call de Dezembro de 2021&lt;/mark&gt;
                 
             &lt;/a&gt;&lt;/li&gt;
             
             &lt;li&gt;&lt;a href=&quot;/call-11-2021&quot;&gt;
-                &lt;time datetime=&quot;2021-11-12T00:00:00+00:00&quot;&gt;November 12, 2021&lt;/time&gt;
+                &lt;time datetime=&quot;2021-11-12T00:00:00+00:00&quot;&gt;&lt;strong&gt;November 12, 2021&lt;/strong&gt;&lt;/time&gt;
                 
                 &lt;mark&gt;Call de Novembro de 2021&lt;/mark&gt;
                 
             &lt;/a&gt;&lt;/li&gt;
             
             &lt;li&gt;&lt;a href=&quot;/call-10-2021&quot;&gt;
-                &lt;time datetime=&quot;2021-10-07T00:00:00+00:00&quot;&gt;October 07, 2021&lt;/time&gt;
+                &lt;time datetime=&quot;2021-10-07T00:00:00+00:00&quot;&gt;&lt;strong&gt;October 07, 2021&lt;/strong&gt;&lt;/time&gt;
                 
                 &lt;mark&gt;Call de Outubro de 2021&lt;/mark&gt;
                 
             &lt;/a&gt;&lt;/li&gt;
             
             &lt;li&gt;&lt;a href=&quot;/call-09-2021&quot;&gt;
-                &lt;time datetime=&quot;2021-09-03T00:00:00+00:00&quot;&gt;September 03, 2021&lt;/time&gt;
+                &lt;time datetime=&quot;2021-09-03T00:00:00+00:00&quot;&gt;&lt;strong&gt;September 03, 2021&lt;/strong&gt;&lt;/time&gt;
                 
                 &lt;mark&gt;Call de Setembro de 2021&lt;/mark&gt;
                 
             &lt;/a&gt;&lt;/li&gt;
             
             &lt;li&gt;&lt;a href=&quot;/call-08-2021&quot;&gt;
-                &lt;time datetime=&quot;2021-08-09T00:00:00+00:00&quot;&gt;August 09, 2021&lt;/time&gt;
+                &lt;time datetime=&quot;2021-08-09T00:00:00+00:00&quot;&gt;&lt;strong&gt;August 09, 2021&lt;/strong&gt;&lt;/time&gt;
                 
                 &lt;mark&gt;Call de Agosto de 2021&lt;/mark&gt;
                 
             &lt;/a&gt;&lt;/li&gt;
             
             &lt;li&gt;&lt;a href=&quot;/call-07-2021&quot;&gt;
-                &lt;time datetime=&quot;2021-07-06T00:00:00+00:00&quot;&gt;July 06, 2021&lt;/time&gt;
+                &lt;time datetime=&quot;2021-07-06T00:00:00+00:00&quot;&gt;&lt;strong&gt;July 06, 2021&lt;/strong&gt;&lt;/time&gt;
                 
                 &lt;mark&gt;Call de Julho de 2021&lt;/mark&gt;
                 
             &lt;/a&gt;&lt;/li&gt;
             
             &lt;li&gt;&lt;a href=&quot;/call-06-2021&quot;&gt;
-                &lt;time datetime=&quot;2021-06-08T00:00:00+00:00&quot;&gt;June 08, 2021&lt;/time&gt;
+                &lt;time datetime=&quot;2021-06-08T00:00:00+00:00&quot;&gt;&lt;strong&gt;June 08, 2021&lt;/strong&gt;&lt;/time&gt;
                 
                 &lt;mark&gt;Call de Junho de 2021&lt;/mark&gt;
                 
             &lt;/a&gt;&lt;/li&gt;
             
             &lt;li&gt;&lt;a href=&quot;/call-05-2021&quot;&gt;
-                &lt;time datetime=&quot;2021-05-07T00:00:00+00:00&quot;&gt;May 07, 2021&lt;/time&gt;
+                &lt;time datetime=&quot;2021-05-07T00:00:00+00:00&quot;&gt;&lt;strong&gt;May 07, 2021&lt;/strong&gt;&lt;/time&gt;
                 
                 &lt;mark&gt;Call de Maio de 2021&lt;/mark&gt;
                 
             &lt;/a&gt;&lt;/li&gt;
             
             &lt;li&gt;&lt;a href=&quot;/call-04-2021&quot;&gt;
-                &lt;time datetime=&quot;2021-04-06T00:00:00+00:00&quot;&gt;April 06, 2021&lt;/time&gt;
+                &lt;time datetime=&quot;2021-04-06T00:00:00+00:00&quot;&gt;&lt;strong&gt;April 06, 2021&lt;/strong&gt;&lt;/time&gt;
                 
                 &lt;mark&gt;Call de Abril de 2021&lt;/mark&gt;
                 
             &lt;/a&gt;&lt;/li&gt;
             
             &lt;li&gt;&lt;a href=&quot;/call-03-2021&quot;&gt;
-                &lt;time datetime=&quot;2021-03-02T00:00:00+00:00&quot;&gt;March 02, 2021&lt;/time&gt;
+                &lt;time datetime=&quot;2021-03-02T00:00:00+00:00&quot;&gt;&lt;strong&gt;March 02, 2021&lt;/strong&gt;&lt;/time&gt;
                 
                 &lt;mark&gt;Call de Março de 2021&lt;/mark&gt;
                 
             &lt;/a&gt;&lt;/li&gt;
             
             &lt;li&gt;&lt;a href=&quot;/call-02-2021&quot;&gt;
-                &lt;time datetime=&quot;2021-02-07T00:00:00+00:00&quot;&gt;February 07, 2021&lt;/time&gt;
+                &lt;time datetime=&quot;2021-02-07T00:00:00+00:00&quot;&gt;&lt;strong&gt;February 07, 2021&lt;/strong&gt;&lt;/time&gt;
                 
                 &lt;mark&gt;Call de Fevereiro de 2021&lt;/mark&gt;
                 
             &lt;/a&gt;&lt;/li&gt;
             
             &lt;li&gt;&lt;a href=&quot;/call-01-2021&quot;&gt;
-                &lt;time datetime=&quot;2021-01-07T00:00:00+00:00&quot;&gt;January 07, 2021&lt;/time&gt;
+                &lt;time datetime=&quot;2021-01-07T00:00:00+00:00&quot;&gt;&lt;strong&gt;January 07, 2021&lt;/strong&gt;&lt;/time&gt;
                 
                 &lt;mark&gt; Call de Janeiro de 2021&lt;/mark&gt;
                 
             &lt;/a&gt;&lt;/li&gt;
             
             &lt;li&gt;&lt;a href=&quot;/call-12-2020&quot;&gt;
-                &lt;time datetime=&quot;2020-12-08T00:00:00+00:00&quot;&gt;December 08, 2020&lt;/time&gt;
+                &lt;time datetime=&quot;2020-12-08T00:00:00+00:00&quot;&gt;&lt;strong&gt;December 08, 2020&lt;/strong&gt;&lt;/time&gt;
                 
                 &lt;mark&gt;Call de Dezembro de 2020&lt;/mark&gt;
                 
             &lt;/a&gt;&lt;/li&gt;
             
             &lt;li&gt;&lt;a href=&quot;/call-11-2020&quot;&gt;
-                &lt;time datetime=&quot;2020-11-07T00:00:00+00:00&quot;&gt;November 07, 2020&lt;/time&gt;
+                &lt;time datetime=&quot;2020-11-07T00:00:00+00:00&quot;&gt;&lt;strong&gt;November 07, 2020&lt;/strong&gt;&lt;/time&gt;
                 
                 &lt;mark&gt;Call de Novembro de 2020&lt;/mark&gt;
                 
             &lt;/a&gt;&lt;/li&gt;
             
             &lt;li&gt;&lt;a href=&quot;/call-10-2020&quot;&gt;
-                &lt;time datetime=&quot;2020-10-05T00:00:00+00:00&quot;&gt;October 05, 2020&lt;/time&gt;
+                &lt;time datetime=&quot;2020-10-05T00:00:00+00:00&quot;&gt;&lt;strong&gt;October 05, 2020&lt;/strong&gt;&lt;/time&gt;
                 
                 &lt;mark&gt;Call de Outubro de 2020&lt;/mark&gt;
                 
             &lt;/a&gt;&lt;/li&gt;
             
             &lt;li&gt;&lt;a href=&quot;/call-09-2020&quot;&gt;
-                &lt;time datetime=&quot;2020-09-09T00:00:00+00:00&quot;&gt;September 09, 2020&lt;/time&gt;
+                &lt;time datetime=&quot;2020-09-09T00:00:00+00:00&quot;&gt;&lt;strong&gt;September 09, 2020&lt;/strong&gt;&lt;/time&gt;
                 
                 &lt;mark&gt;Call de Setembro de 2020&lt;/mark&gt;
                 
             &lt;/a&gt;&lt;/li&gt;
             
             &lt;li&gt;&lt;a href=&quot;/call-08-2020&quot;&gt;
-                &lt;time datetime=&quot;2020-08-21T00:00:00+00:00&quot;&gt;August 21, 2020&lt;/time&gt;
+                &lt;time datetime=&quot;2020-08-21T00:00:00+00:00&quot;&gt;&lt;strong&gt;August 21, 2020&lt;/strong&gt;&lt;/time&gt;
                 
                 &lt;mark&gt;Call de Agosto de 2020&lt;/mark&gt;
                 
             &lt;/a&gt;&lt;/li&gt;
             
             &lt;li&gt;&lt;a href=&quot;/call-07-2020&quot;&gt;
-                &lt;time datetime=&quot;2020-07-20T00:00:00+00:00&quot;&gt;July 20, 2020&lt;/time&gt;
+                &lt;time datetime=&quot;2020-07-20T00:00:00+00:00&quot;&gt;&lt;strong&gt;July 20, 2020&lt;/strong&gt;&lt;/time&gt;
                 
                 &lt;mark&gt;Call de Julho de 2020&lt;/mark&gt;
                 
             &lt;/a&gt;&lt;/li&gt;
             
             &lt;li&gt;&lt;a href=&quot;/call-06-2020&quot;&gt;
-                &lt;time datetime=&quot;2020-06-22T00:00:00+00:00&quot;&gt;June 22, 2020&lt;/time&gt;
+                &lt;time datetime=&quot;2020-06-22T00:00:00+00:00&quot;&gt;&lt;strong&gt;June 22, 2020&lt;/strong&gt;&lt;/time&gt;
                 
                 &lt;mark&gt;Call de Junho de 2020 &lt;/mark&gt;
                 
             &lt;/a&gt;&lt;/li&gt;
             
             &lt;li&gt;&lt;a href=&quot;/call-05-2020&quot;&gt;
-                &lt;time datetime=&quot;2020-05-21T00:00:00+00:00&quot;&gt;May 21, 2020&lt;/time&gt;
+                &lt;time datetime=&quot;2020-05-21T00:00:00+00:00&quot;&gt;&lt;strong&gt;May 21, 2020&lt;/strong&gt;&lt;/time&gt;
                 
                 &lt;mark&gt;Call de Maio de 2020&lt;/mark&gt;
                 
             &lt;/a&gt;&lt;/li&gt;
             
             &lt;li&gt;&lt;a href=&quot;/call-04-2020&quot;&gt;
-                &lt;time datetime=&quot;2020-04-17T00:00:00+00:00&quot;&gt;April 17, 2020&lt;/time&gt;
+                &lt;time datetime=&quot;2020-04-17T00:00:00+00:00&quot;&gt;&lt;strong&gt;April 17, 2020&lt;/strong&gt;&lt;/time&gt;
                 
                 &lt;mark&gt;Call de Abril de 2020&lt;/mark&gt;
                 
@@ -46239,35 +46239,35 @@ Pense duas vezes antes de se envolver.
     
     
     &lt;div class=&quot;tag-list&quot; id=&quot;carro&quot; aria-labelledby=&quot;carro-heading&quot;&gt;
-        &lt;h1 id=&quot;carro-heading&quot;&gt;
+        &lt;h1 id=&quot;carro-heading&quot; href=&quot;#&quot; class=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;
             carro
         &lt;/h1&gt;
         &lt;ul class=&quot;search-link&quot;&gt;
         
             
             &lt;li&gt;&lt;a href=&quot;/car-12-15&quot;&gt;
-                &lt;time datetime=&quot;2021-12-15T00:00:00+00:00&quot;&gt;December 15, 2021&lt;/time&gt;
+                &lt;time datetime=&quot;2021-12-15T00:00:00+00:00&quot;&gt;&lt;strong&gt;December 15, 2021&lt;/strong&gt;&lt;/time&gt;
                 
                 &lt;mark&gt;VW/GOL 1.0 G4 2010 - 196.351km&lt;/mark&gt;
                 
             &lt;/a&gt;&lt;/li&gt;
             
             &lt;li&gt;&lt;a href=&quot;/car-10-15&quot;&gt;
-                &lt;time datetime=&quot;2021-10-15T00:00:00+00:00&quot;&gt;October 15, 2021&lt;/time&gt;
+                &lt;time datetime=&quot;2021-10-15T00:00:00+00:00&quot;&gt;&lt;strong&gt;October 15, 2021&lt;/strong&gt;&lt;/time&gt;
                 
                 &lt;mark&gt;VW/GOL 1.0 G4 2010 - 195.300km&lt;/mark&gt;
                 
             &lt;/a&gt;&lt;/li&gt;
             
             &lt;li&gt;&lt;a href=&quot;/car-02-10&quot;&gt;
-                &lt;time datetime=&quot;2021-02-10T00:00:00+00:00&quot;&gt;February 10, 2021&lt;/time&gt;
+                &lt;time datetime=&quot;2021-02-10T00:00:00+00:00&quot;&gt;&lt;strong&gt;February 10, 2021&lt;/strong&gt;&lt;/time&gt;
                 
                 &lt;mark&gt; VW/GOL 1.0 G4 2010 - 189.111km &lt;/mark&gt;
                 
             &lt;/a&gt;&lt;/li&gt;
             
             &lt;li&gt;&lt;a href=&quot;/car-04-17&quot;&gt;
-                &lt;time datetime=&quot;2020-04-17T00:00:00+00:00&quot;&gt;April 17, 2020&lt;/time&gt;
+                &lt;time datetime=&quot;2020-04-17T00:00:00+00:00&quot;&gt;&lt;strong&gt;April 17, 2020&lt;/strong&gt;&lt;/time&gt;
                 
                 &lt;mark&gt;VW/GOL 1.0 G4 2010 - 184.000km&lt;/mark&gt;
                 
@@ -46288,21 +46288,21 @@ Pense duas vezes antes de se envolver.
     
     
     &lt;div class=&quot;tag-list&quot; id=&quot;chess&quot; aria-labelledby=&quot;chess-heading&quot;&gt;
-        &lt;h1 id=&quot;chess-heading&quot;&gt;
+        &lt;h1 id=&quot;chess-heading&quot; href=&quot;#&quot; class=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;
             chess
         &lt;/h1&gt;
         &lt;ul class=&quot;search-link&quot;&gt;
         
             
             &lt;li&gt;&lt;a href=&quot;/performance&quot;&gt;
-                &lt;time datetime=&quot;2021-03-02T00:00:00+00:00&quot;&gt;March 02, 2021&lt;/time&gt;
+                &lt;time datetime=&quot;2021-03-02T00:00:00+00:00&quot;&gt;&lt;strong&gt;March 02, 2021&lt;/strong&gt;&lt;/time&gt;
                 
                 &lt;mark&gt;Performance média&lt;/mark&gt;
                 
             &lt;/a&gt;&lt;/li&gt;
             
             &lt;li&gt;&lt;a href=&quot;/torneio-001&quot;&gt;
-                &lt;time datetime=&quot;2020-11-11T00:00:00+00:00&quot;&gt;November 11, 2020&lt;/time&gt;
+                &lt;time datetime=&quot;2020-11-11T00:00:00+00:00&quot;&gt;&lt;strong&gt;November 11, 2020&lt;/strong&gt;&lt;/time&gt;
                 
                 &lt;mark&gt;III Etapa do Circuito Goiano de Xadrez 2020&lt;/mark&gt;
                 
@@ -46323,21 +46323,21 @@ Pense duas vezes antes de se envolver.
     
     
     &lt;div class=&quot;tag-list&quot; id=&quot;cloud&quot; aria-labelledby=&quot;cloud-heading&quot;&gt;
-        &lt;h1 id=&quot;cloud-heading&quot;&gt;
+        &lt;h1 id=&quot;cloud-heading&quot; href=&quot;#&quot; class=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;
             cloud
         &lt;/h1&gt;
         &lt;ul class=&quot;search-link&quot;&gt;
         
             
             &lt;li&gt;&lt;a href=&quot;/aws-pushsafer-billing-alarm&quot;&gt;
-                &lt;time datetime=&quot;2024-07-25T00:00:00+00:00&quot;&gt;July 25, 2024&lt;/time&gt;
+                &lt;time datetime=&quot;2024-07-25T00:00:00+00:00&quot;&gt;&lt;strong&gt;July 25, 2024&lt;/strong&gt;&lt;/time&gt;
                 
                 AWS PushSafer billing alarm
                 
             &lt;/a&gt;&lt;/li&gt;
             
             &lt;li&gt;&lt;a href=&quot;/webhooks-using-serverlesscom-lift-plugin&quot;&gt;
-                &lt;time datetime=&quot;2024-07-17T00:00:00+00:00&quot;&gt;July 17, 2024&lt;/time&gt;
+                &lt;time datetime=&quot;2024-07-17T00:00:00+00:00&quot;&gt;&lt;strong&gt;July 17, 2024&lt;/strong&gt;&lt;/time&gt;
                 
                 Webhooks using `Serverless.com` Lift plugin
                 
@@ -46365,21 +46365,21 @@ Pense duas vezes antes de se envolver.
     
     
     &lt;div class=&quot;tag-list&quot; id=&quot;despesas&quot; aria-labelledby=&quot;despesas-heading&quot;&gt;
-        &lt;h1 id=&quot;despesas-heading&quot;&gt;
+        &lt;h1 id=&quot;despesas-heading&quot; href=&quot;#&quot; class=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;
             despesas
         &lt;/h1&gt;
         &lt;ul class=&quot;search-link&quot;&gt;
         
             
             &lt;li&gt;&lt;a href=&quot;/contas&quot;&gt;
-                &lt;time datetime=&quot;2023-10-03T00:00:00+00:00&quot;&gt;October 03, 2023&lt;/time&gt;
+                &lt;time datetime=&quot;2023-10-03T00:00:00+00:00&quot;&gt;&lt;strong&gt;October 03, 2023&lt;/strong&gt;&lt;/time&gt;
                 
                 &lt;mark&gt;Contas&lt;/mark&gt;
                 
             &lt;/a&gt;&lt;/li&gt;
             
             &lt;li&gt;&lt;a href=&quot;/emprestimo&quot;&gt;
-                &lt;time datetime=&quot;2021-01-07T00:00:00+00:00&quot;&gt;January 07, 2021&lt;/time&gt;
+                &lt;time datetime=&quot;2021-01-07T00:00:00+00:00&quot;&gt;&lt;strong&gt;January 07, 2021&lt;/strong&gt;&lt;/time&gt;
                 
                 &lt;mark&gt;Como calcular prestação por meio de taxa de juros e período&lt;/mark&gt;
                 
@@ -46400,21 +46400,21 @@ Pense duas vezes antes de se envolver.
     
     
     &lt;div class=&quot;tag-list&quot; id=&quot;direito&quot; aria-labelledby=&quot;direito-heading&quot;&gt;
-        &lt;h1 id=&quot;direito-heading&quot;&gt;
+        &lt;h1 id=&quot;direito-heading&quot; href=&quot;#&quot; class=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;
             direito
         &lt;/h1&gt;
         &lt;ul class=&quot;search-link&quot;&gt;
         
             
             &lt;li&gt;&lt;a href=&quot;/ordenamento&quot;&gt;
-                &lt;time datetime=&quot;2024-04-17T00:00:00+00:00&quot;&gt;April 17, 2024&lt;/time&gt;
+                &lt;time datetime=&quot;2024-04-17T00:00:00+00:00&quot;&gt;&lt;strong&gt;April 17, 2024&lt;/strong&gt;&lt;/time&gt;
                 
                 Ordenamento Jurídico Brasileiro [redução eidética]
                 
             &lt;/a&gt;&lt;/li&gt;
             
             &lt;li&gt;&lt;a href=&quot;/juri&quot;&gt;
-                &lt;time datetime=&quot;2024-03-08T00:00:00+00:00&quot;&gt;March 08, 2024&lt;/time&gt;
+                &lt;time datetime=&quot;2024-03-08T00:00:00+00:00&quot;&gt;&lt;strong&gt;March 08, 2024&lt;/strong&gt;&lt;/time&gt;
                 
                 Procedimento dos Crimes da Competência do Tribunal do Júri
                 
@@ -46445,14 +46445,14 @@ Pense duas vezes antes de se envolver.
     
     
     &lt;div class=&quot;tag-list&quot; id=&quot;direito-processual-penal&quot; aria-labelledby=&quot;direito-processual-penal-heading&quot;&gt;
-        &lt;h1 id=&quot;direito-processual-penal-heading&quot;&gt;
+        &lt;h1 id=&quot;direito-processual-penal-heading&quot; href=&quot;#&quot; class=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;
             direito&amp;gt;processual-penal
         &lt;/h1&gt;
         &lt;ul class=&quot;search-link&quot;&gt;
         
             
             &lt;li&gt;&lt;a href=&quot;/juri&quot;&gt;
-                &lt;time datetime=&quot;2024-03-08T00:00:00+00:00&quot;&gt;March 08, 2024&lt;/time&gt;
+                &lt;time datetime=&quot;2024-03-08T00:00:00+00:00&quot;&gt;&lt;strong&gt;March 08, 2024&lt;/strong&gt;&lt;/time&gt;
                 
                 Procedimento dos Crimes da Competência do Tribunal do Júri
                 
@@ -46478,42 +46478,42 @@ Pense duas vezes antes de se envolver.
     
     
     &lt;div class=&quot;tag-list&quot; id=&quot;edital&quot; aria-labelledby=&quot;edital-heading&quot;&gt;
-        &lt;h1 id=&quot;edital-heading&quot;&gt;
+        &lt;h1 id=&quot;edital-heading&quot; href=&quot;#&quot; class=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;
             edital
         &lt;/h1&gt;
         &lt;ul class=&quot;search-link&quot;&gt;
         
             
             &lt;li&gt;&lt;a href=&quot;/ordenamento&quot;&gt;
-                &lt;time datetime=&quot;2024-04-17T00:00:00+00:00&quot;&gt;April 17, 2024&lt;/time&gt;
+                &lt;time datetime=&quot;2024-04-17T00:00:00+00:00&quot;&gt;&lt;strong&gt;April 17, 2024&lt;/strong&gt;&lt;/time&gt;
                 
                 Ordenamento Jurídico Brasileiro [redução eidética]
                 
             &lt;/a&gt;&lt;/li&gt;
             
             &lt;li&gt;&lt;a href=&quot;/juri&quot;&gt;
-                &lt;time datetime=&quot;2024-03-08T00:00:00+00:00&quot;&gt;March 08, 2024&lt;/time&gt;
+                &lt;time datetime=&quot;2024-03-08T00:00:00+00:00&quot;&gt;&lt;strong&gt;March 08, 2024&lt;/strong&gt;&lt;/time&gt;
                 
                 Procedimento dos Crimes da Competência do Tribunal do Júri
                 
             &lt;/a&gt;&lt;/li&gt;
             
             &lt;li&gt;&lt;a href=&quot;/hard-core&quot;&gt;
-                &lt;time datetime=&quot;2023-12-22T00:00:00+00:00&quot;&gt;December 22, 2023&lt;/time&gt;
+                &lt;time datetime=&quot;2023-12-22T00:00:00+00:00&quot;&gt;&lt;strong&gt;December 22, 2023&lt;/strong&gt;&lt;/time&gt;
                 
                 &lt;mark&gt;Núcleo duro das provas de Delegado de Polícia&lt;/mark&gt;
                 
             &lt;/a&gt;&lt;/li&gt;
             
             &lt;li&gt;&lt;a href=&quot;/concursos-delta&quot;&gt;
-                &lt;time datetime=&quot;2023-12-22T00:00:00+00:00&quot;&gt;December 22, 2023&lt;/time&gt;
+                &lt;time datetime=&quot;2023-12-22T00:00:00+00:00&quot;&gt;&lt;strong&gt;December 22, 2023&lt;/strong&gt;&lt;/time&gt;
                 
                 &lt;mark&gt;Concursos DELTA iminentes&lt;/mark&gt;
                 
             &lt;/a&gt;&lt;/li&gt;
             
             &lt;li&gt;&lt;a href=&quot;/atividade-policial&quot;&gt;
-                &lt;time datetime=&quot;2022-06-07T00:00:00+00:00&quot;&gt;June 07, 2022&lt;/time&gt;
+                &lt;time datetime=&quot;2022-06-07T00:00:00+00:00&quot;&gt;&lt;strong&gt;June 07, 2022&lt;/strong&gt;&lt;/time&gt;
                 
                 &lt;mark&gt;Estados que exigem atividade policial para DELTA&lt;/mark&gt;
                 
@@ -46545,21 +46545,21 @@ Pense duas vezes antes de se envolver.
     
     
     &lt;div class=&quot;tag-list&quot; id=&quot;edital-direito&quot; aria-labelledby=&quot;edital-direito-heading&quot;&gt;
-        &lt;h1 id=&quot;edital-direito-heading&quot;&gt;
+        &lt;h1 id=&quot;edital-direito-heading&quot; href=&quot;#&quot; class=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;
             edital&amp;gt;direito
         &lt;/h1&gt;
         &lt;ul class=&quot;search-link&quot;&gt;
         
             
             &lt;li&gt;&lt;a href=&quot;/ordenamento&quot;&gt;
-                &lt;time datetime=&quot;2024-04-17T00:00:00+00:00&quot;&gt;April 17, 2024&lt;/time&gt;
+                &lt;time datetime=&quot;2024-04-17T00:00:00+00:00&quot;&gt;&lt;strong&gt;April 17, 2024&lt;/strong&gt;&lt;/time&gt;
                 
                 &lt;mark&gt;Ordenamento Jurídico Brasileiro [redução eidética]&lt;/mark&gt;
                 
             &lt;/a&gt;&lt;/li&gt;
             
             &lt;li&gt;&lt;a href=&quot;/juri&quot;&gt;
-                &lt;time datetime=&quot;2024-03-08T00:00:00+00:00&quot;&gt;March 08, 2024&lt;/time&gt;
+                &lt;time datetime=&quot;2024-03-08T00:00:00+00:00&quot;&gt;&lt;strong&gt;March 08, 2024&lt;/strong&gt;&lt;/time&gt;
                 
                 Procedimento dos Crimes da Competência do Tribunal do Júri
                 
@@ -46590,14 +46590,14 @@ Pense duas vezes antes de se envolver.
     
     
     &lt;div class=&quot;tag-list&quot; id=&quot;edital-direito-processual-penal&quot; aria-labelledby=&quot;edital-direito-processual-penal-heading&quot;&gt;
-        &lt;h1 id=&quot;edital-direito-processual-penal-heading&quot;&gt;
+        &lt;h1 id=&quot;edital-direito-processual-penal-heading&quot; href=&quot;#&quot; class=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;
             edital&amp;gt;direito&amp;gt;processual-penal
         &lt;/h1&gt;
         &lt;ul class=&quot;search-link&quot;&gt;
         
             
             &lt;li&gt;&lt;a href=&quot;/juri&quot;&gt;
-                &lt;time datetime=&quot;2024-03-08T00:00:00+00:00&quot;&gt;March 08, 2024&lt;/time&gt;
+                &lt;time datetime=&quot;2024-03-08T00:00:00+00:00&quot;&gt;&lt;strong&gt;March 08, 2024&lt;/strong&gt;&lt;/time&gt;
                 
                 &lt;mark&gt;Procedimento dos Crimes da Competência do Tribunal do Júri&lt;/mark&gt;
                 
@@ -46625,63 +46625,63 @@ Pense duas vezes antes de se envolver.
     
     
     &lt;div class=&quot;tag-list&quot; id=&quot;estudos&quot; aria-labelledby=&quot;estudos-heading&quot;&gt;
-        &lt;h1 id=&quot;estudos-heading&quot;&gt;
+        &lt;h1 id=&quot;estudos-heading&quot; href=&quot;#&quot; class=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;
             estudos
         &lt;/h1&gt;
         &lt;ul class=&quot;search-link&quot;&gt;
         
             
             &lt;li&gt;&lt;a href=&quot;/srs&quot;&gt;
-                &lt;time datetime=&quot;2024-09-09T00:00:00+00:00&quot;&gt;September 09, 2024&lt;/time&gt;
+                &lt;time datetime=&quot;2024-09-09T00:00:00+00:00&quot;&gt;&lt;strong&gt;September 09, 2024&lt;/strong&gt;&lt;/time&gt;
                 
                 reassess
                 
             &lt;/a&gt;&lt;/li&gt;
             
             &lt;li&gt;&lt;a href=&quot;/periodicos&quot;&gt;
-                &lt;time datetime=&quot;2024-07-05T00:00:00+00:00&quot;&gt;July 05, 2024&lt;/time&gt;
+                &lt;time datetime=&quot;2024-07-05T00:00:00+00:00&quot;&gt;&lt;strong&gt;July 05, 2024&lt;/strong&gt;&lt;/time&gt;
                 
                 &lt;mark&gt;Periódicos para publicar artigos&lt;/mark&gt;
                 
             &lt;/a&gt;&lt;/li&gt;
             
             &lt;li&gt;&lt;a href=&quot;/stf-scraper&quot;&gt;
-                &lt;time datetime=&quot;2024-05-01T00:00:00+00:00&quot;&gt;May 01, 2024&lt;/time&gt;
+                &lt;time datetime=&quot;2024-05-01T00:00:00+00:00&quot;&gt;&lt;strong&gt;May 01, 2024&lt;/strong&gt;&lt;/time&gt;
                 
                 &lt;mark&gt;STF Scraper [script]&lt;/mark&gt;
                 
             &lt;/a&gt;&lt;/li&gt;
             
             &lt;li&gt;&lt;a href=&quot;/ufj-tcc&quot;&gt;
-                &lt;time datetime=&quot;2024-03-25T00:00:00+00:00&quot;&gt;March 25, 2024&lt;/time&gt;
+                &lt;time datetime=&quot;2024-03-25T00:00:00+00:00&quot;&gt;&lt;strong&gt;March 25, 2024&lt;/strong&gt;&lt;/time&gt;
                 
                 &lt;mark&gt;Processo de Depósito Legal - UFJ&lt;/mark&gt;
                 
             &lt;/a&gt;&lt;/li&gt;
             
             &lt;li&gt;&lt;a href=&quot;/marmelstein&quot;&gt;
-                &lt;time datetime=&quot;2024-01-07T00:00:00+00:00&quot;&gt;January 07, 2024&lt;/time&gt;
+                &lt;time datetime=&quot;2024-01-07T00:00:00+00:00&quot;&gt;&lt;strong&gt;January 07, 2024&lt;/strong&gt;&lt;/time&gt;
                 
                 &lt;mark&gt;Se eu fosse um concurseiro - George Marmelstein&lt;/mark&gt;
                 
             &lt;/a&gt;&lt;/li&gt;
             
             &lt;li&gt;&lt;a href=&quot;/cespe&quot;&gt;
-                &lt;time datetime=&quot;2023-12-20T00:00:00+00:00&quot;&gt;December 20, 2023&lt;/time&gt;
+                &lt;time datetime=&quot;2023-12-20T00:00:00+00:00&quot;&gt;&lt;strong&gt;December 20, 2023&lt;/strong&gt;&lt;/time&gt;
                 
                 &lt;mark&gt;CESPE: chute tático&lt;/mark&gt;
                 
             &lt;/a&gt;&lt;/li&gt;
             
             &lt;li&gt;&lt;a href=&quot;/facul-calendar&quot;&gt;
-                &lt;time datetime=&quot;2023-03-07T00:00:00+00:00&quot;&gt;March 07, 2023&lt;/time&gt;
+                &lt;time datetime=&quot;2023-03-07T00:00:00+00:00&quot;&gt;&lt;strong&gt;March 07, 2023&lt;/strong&gt;&lt;/time&gt;
                 
                 &lt;mark&gt;Calendário Acadêmico&lt;/mark&gt;
                 
             &lt;/a&gt;&lt;/li&gt;
             
             &lt;li&gt;&lt;a href=&quot;/writing&quot;&gt;
-                &lt;time datetime=&quot;2022-11-30T00:00:00+00:00&quot;&gt;November 30, 2022&lt;/time&gt;
+                &lt;time datetime=&quot;2022-11-30T00:00:00+00:00&quot;&gt;&lt;strong&gt;November 30, 2022&lt;/strong&gt;&lt;/time&gt;
                 
                 &lt;mark&gt;WRITING TO LEARN AND WHY IT MATTERS&lt;/mark&gt;
                 
@@ -46718,21 +46718,21 @@ Pense duas vezes antes de se envolver.
     
     
     &lt;div class=&quot;tag-list&quot; id=&quot;fatherhood&quot; aria-labelledby=&quot;fatherhood-heading&quot;&gt;
-        &lt;h1 id=&quot;fatherhood-heading&quot;&gt;
+        &lt;h1 id=&quot;fatherhood-heading&quot; href=&quot;#&quot; class=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;
             fatherhood
         &lt;/h1&gt;
         &lt;ul class=&quot;search-link&quot;&gt;
         
             
             &lt;li&gt;&lt;a href=&quot;/board-games&quot;&gt;
-                &lt;time datetime=&quot;2024-07-30T00:00:00+00:00&quot;&gt;July 30, 2024&lt;/time&gt;
+                &lt;time datetime=&quot;2024-07-30T00:00:00+00:00&quot;&gt;&lt;strong&gt;July 30, 2024&lt;/strong&gt;&lt;/time&gt;
                 
                 &lt;mark&gt;Board games&lt;/mark&gt;
                 
             &lt;/a&gt;&lt;/li&gt;
             
             &lt;li&gt;&lt;a href=&quot;/vacinas&quot;&gt;
-                &lt;time datetime=&quot;2022-09-27T00:00:00+00:00&quot;&gt;September 27, 2022&lt;/time&gt;
+                &lt;time datetime=&quot;2022-09-27T00:00:00+00:00&quot;&gt;&lt;strong&gt;September 27, 2022&lt;/strong&gt;&lt;/time&gt;
                 
                 &lt;mark&gt;Vacinas&lt;/mark&gt;
                 
@@ -46753,28 +46753,28 @@ Pense duas vezes antes de se envolver.
     
     
     &lt;div class=&quot;tag-list&quot; id=&quot;github&quot; aria-labelledby=&quot;github-heading&quot;&gt;
-        &lt;h1 id=&quot;github-heading&quot;&gt;
+        &lt;h1 id=&quot;github-heading&quot; href=&quot;#&quot; class=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;
             github
         &lt;/h1&gt;
         &lt;ul class=&quot;search-link&quot;&gt;
         
             
             &lt;li&gt;&lt;a href=&quot;/srs&quot;&gt;
-                &lt;time datetime=&quot;2024-09-09T00:00:00+00:00&quot;&gt;September 09, 2024&lt;/time&gt;
+                &lt;time datetime=&quot;2024-09-09T00:00:00+00:00&quot;&gt;&lt;strong&gt;September 09, 2024&lt;/strong&gt;&lt;/time&gt;
                 
                 reassess
                 
             &lt;/a&gt;&lt;/li&gt;
             
             &lt;li&gt;&lt;a href=&quot;/pagefind-with-jekyll&quot;&gt;
-                &lt;time datetime=&quot;2024-08-15T00:00:00+00:00&quot;&gt;August 15, 2024&lt;/time&gt;
+                &lt;time datetime=&quot;2024-08-15T00:00:00+00:00&quot;&gt;&lt;strong&gt;August 15, 2024&lt;/strong&gt;&lt;/time&gt;
                 
                 PageFind with Jekyll 
                 
             &lt;/a&gt;&lt;/li&gt;
             
             &lt;li&gt;&lt;a href=&quot;/update-gemfilelock&quot;&gt;
-                &lt;time datetime=&quot;2024-07-13T00:00:00+00:00&quot;&gt;July 13, 2024&lt;/time&gt;
+                &lt;time datetime=&quot;2024-07-13T00:00:00+00:00&quot;&gt;&lt;strong&gt;July 13, 2024&lt;/strong&gt;&lt;/time&gt;
                 
                 2024-07-13-update-gemfilelock
                 
@@ -46804,14 +46804,14 @@ Pense duas vezes antes de se envolver.
     
     
     &lt;div class=&quot;tag-list&quot; id=&quot;github-estudos&quot; aria-labelledby=&quot;github-estudos-heading&quot;&gt;
-        &lt;h1 id=&quot;github-estudos-heading&quot;&gt;
+        &lt;h1 id=&quot;github-estudos-heading&quot; href=&quot;#&quot; class=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;
             github&amp;gt;estudos
         &lt;/h1&gt;
         &lt;ul class=&quot;search-link&quot;&gt;
         
             
             &lt;li&gt;&lt;a href=&quot;/srs&quot;&gt;
-                &lt;time datetime=&quot;2024-09-09T00:00:00+00:00&quot;&gt;September 09, 2024&lt;/time&gt;
+                &lt;time datetime=&quot;2024-09-09T00:00:00+00:00&quot;&gt;&lt;strong&gt;September 09, 2024&lt;/strong&gt;&lt;/time&gt;
                 
                 reassess
                 
@@ -46837,21 +46837,21 @@ Pense duas vezes antes de se envolver.
     
     
     &lt;div class=&quot;tag-list&quot; id=&quot;github-jekyll&quot; aria-labelledby=&quot;github-jekyll-heading&quot;&gt;
-        &lt;h1 id=&quot;github-jekyll-heading&quot;&gt;
+        &lt;h1 id=&quot;github-jekyll-heading&quot; href=&quot;#&quot; class=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;
             github&amp;gt;jekyll
         &lt;/h1&gt;
         &lt;ul class=&quot;search-link&quot;&gt;
         
             
             &lt;li&gt;&lt;a href=&quot;/pagefind-with-jekyll&quot;&gt;
-                &lt;time datetime=&quot;2024-08-15T00:00:00+00:00&quot;&gt;August 15, 2024&lt;/time&gt;
+                &lt;time datetime=&quot;2024-08-15T00:00:00+00:00&quot;&gt;&lt;strong&gt;August 15, 2024&lt;/strong&gt;&lt;/time&gt;
                 
                 &lt;mark&gt;PageFind with Jekyll &lt;/mark&gt;
                 
             &lt;/a&gt;&lt;/li&gt;
             
             &lt;li&gt;&lt;a href=&quot;/update-gemfilelock&quot;&gt;
-                &lt;time datetime=&quot;2024-07-13T00:00:00+00:00&quot;&gt;July 13, 2024&lt;/time&gt;
+                &lt;time datetime=&quot;2024-07-13T00:00:00+00:00&quot;&gt;&lt;strong&gt;July 13, 2024&lt;/strong&gt;&lt;/time&gt;
                 
                 &lt;mark&gt;2024-07-13-update-gemfilelock&lt;/mark&gt;
                 
@@ -46877,14 +46877,14 @@ Pense duas vezes antes de se envolver.
     
     
     &lt;div class=&quot;tag-list&quot; id=&quot;google-apps-script&quot; aria-labelledby=&quot;google-apps-script-heading&quot;&gt;
-        &lt;h1 id=&quot;google-apps-script-heading&quot;&gt;
+        &lt;h1 id=&quot;google-apps-script-heading&quot; href=&quot;#&quot; class=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;
             google-apps-script
         &lt;/h1&gt;
         &lt;ul class=&quot;search-link&quot;&gt;
         
             
             &lt;li&gt;&lt;a href=&quot;/gpt-sheets&quot;&gt;
-                &lt;time datetime=&quot;2023-12-21T00:00:00+00:00&quot;&gt;December 21, 2023&lt;/time&gt;
+                &lt;time datetime=&quot;2023-12-21T00:00:00+00:00&quot;&gt;&lt;strong&gt;December 21, 2023&lt;/strong&gt;&lt;/time&gt;
                 
                 OpenAI GPT API in Google Sheets
                 
@@ -46910,28 +46910,28 @@ Pense duas vezes antes de se envolver.
     
     
     &lt;div class=&quot;tag-list&quot; id=&quot;hardware&quot; aria-labelledby=&quot;hardware-heading&quot;&gt;
-        &lt;h1 id=&quot;hardware-heading&quot;&gt;
+        &lt;h1 id=&quot;hardware-heading&quot; href=&quot;#&quot; class=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;
             hardware
         &lt;/h1&gt;
         &lt;ul class=&quot;search-link&quot;&gt;
         
             
             &lt;li&gt;&lt;a href=&quot;/rockchip-devices&quot;&gt;
-                &lt;time datetime=&quot;2024-08-18T00:00:00+00:00&quot;&gt;August 18, 2024&lt;/time&gt;
+                &lt;time datetime=&quot;2024-08-18T00:00:00+00:00&quot;&gt;&lt;strong&gt;August 18, 2024&lt;/strong&gt;&lt;/time&gt;
                 
                 &lt;mark&gt;RockChip devices&lt;/mark&gt;
                 
             &lt;/a&gt;&lt;/li&gt;
             
             &lt;li&gt;&lt;a href=&quot;/laptop-alternative&quot;&gt;
-                &lt;time datetime=&quot;2024-08-01T00:00:00+00:00&quot;&gt;August 01, 2024&lt;/time&gt;
+                &lt;time datetime=&quot;2024-08-01T00:00:00+00:00&quot;&gt;&lt;strong&gt;August 01, 2024&lt;/strong&gt;&lt;/time&gt;
                 
                 &lt;mark&gt;Laptop alternative&lt;/mark&gt;
                 
             &lt;/a&gt;&lt;/li&gt;
             
             &lt;li&gt;&lt;a href=&quot;/vpc-3588-motherboard&quot;&gt;
-                &lt;time datetime=&quot;2024-07-20T00:00:00+00:00&quot;&gt;July 20, 2024&lt;/time&gt;
+                &lt;time datetime=&quot;2024-07-20T00:00:00+00:00&quot;&gt;&lt;strong&gt;July 20, 2024&lt;/strong&gt;&lt;/time&gt;
                 
                 &lt;mark&gt;VPC-3588 Motherboard&lt;/mark&gt;
                 
@@ -46952,28 +46952,28 @@ Pense duas vezes antes de se envolver.
     
     
     &lt;div class=&quot;tag-list&quot; id=&quot;iphone&quot; aria-labelledby=&quot;iphone-heading&quot;&gt;
-        &lt;h1 id=&quot;iphone-heading&quot;&gt;
+        &lt;h1 id=&quot;iphone-heading&quot; href=&quot;#&quot; class=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;
             iphone
         &lt;/h1&gt;
         &lt;ul class=&quot;search-link&quot;&gt;
         
             
             &lt;li&gt;&lt;a href=&quot;/mlo-url-schemes&quot;&gt;
-                &lt;time datetime=&quot;2024-08-25T00:00:00+00:00&quot;&gt;August 25, 2024&lt;/time&gt;
+                &lt;time datetime=&quot;2024-08-25T00:00:00+00:00&quot;&gt;&lt;strong&gt;August 25, 2024&lt;/strong&gt;&lt;/time&gt;
                 
                 MLO URL schemes
                 
             &lt;/a&gt;&lt;/li&gt;
             
             &lt;li&gt;&lt;a href=&quot;/ios-18-changelog&quot;&gt;
-                &lt;time datetime=&quot;2024-07-30T00:00:00+00:00&quot;&gt;July 30, 2024&lt;/time&gt;
+                &lt;time datetime=&quot;2024-07-30T00:00:00+00:00&quot;&gt;&lt;strong&gt;July 30, 2024&lt;/strong&gt;&lt;/time&gt;
                 
                 &lt;mark&gt;iOS 18 changelog&lt;/mark&gt;
                 
             &lt;/a&gt;&lt;/li&gt;
             
             &lt;li&gt;&lt;a href=&quot;/iphone-files2zip-zip2clipboard&quot;&gt;
-                &lt;time datetime=&quot;2024-07-20T00:00:00+00:00&quot;&gt;July 20, 2024&lt;/time&gt;
+                &lt;time datetime=&quot;2024-07-20T00:00:00+00:00&quot;&gt;&lt;strong&gt;July 20, 2024&lt;/strong&gt;&lt;/time&gt;
                 
                 &lt;mark&gt;iPhone: files2zip &amp;amp; zip2clipboard&lt;/mark&gt;
                 
@@ -47010,21 +47010,21 @@ Pense duas vezes antes de se envolver.
     
     
     &lt;div class=&quot;tag-list&quot; id=&quot;jekyll&quot; aria-labelledby=&quot;jekyll-heading&quot;&gt;
-        &lt;h1 id=&quot;jekyll-heading&quot;&gt;
+        &lt;h1 id=&quot;jekyll-heading&quot; href=&quot;#&quot; class=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;
             jekyll
         &lt;/h1&gt;
         &lt;ul class=&quot;search-link&quot;&gt;
         
             
             &lt;li&gt;&lt;a href=&quot;/pagefind-with-jekyll&quot;&gt;
-                &lt;time datetime=&quot;2024-08-15T00:00:00+00:00&quot;&gt;August 15, 2024&lt;/time&gt;
+                &lt;time datetime=&quot;2024-08-15T00:00:00+00:00&quot;&gt;&lt;strong&gt;August 15, 2024&lt;/strong&gt;&lt;/time&gt;
                 
                 PageFind with Jekyll 
                 
             &lt;/a&gt;&lt;/li&gt;
             
             &lt;li&gt;&lt;a href=&quot;/update-gemfilelock&quot;&gt;
-                &lt;time datetime=&quot;2024-07-13T00:00:00+00:00&quot;&gt;July 13, 2024&lt;/time&gt;
+                &lt;time datetime=&quot;2024-07-13T00:00:00+00:00&quot;&gt;&lt;strong&gt;July 13, 2024&lt;/strong&gt;&lt;/time&gt;
                 
                 2024-07-13-update-gemfilelock
                 
@@ -47050,28 +47050,28 @@ Pense duas vezes antes de se envolver.
     
     
     &lt;div class=&quot;tag-list&quot; id=&quot;ler&quot; aria-labelledby=&quot;ler-heading&quot;&gt;
-        &lt;h1 id=&quot;ler-heading&quot;&gt;
+        &lt;h1 id=&quot;ler-heading&quot; href=&quot;#&quot; class=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;
             ler
         &lt;/h1&gt;
         &lt;ul class=&quot;search-link&quot;&gt;
         
             
             &lt;li&gt;&lt;a href=&quot;/libros-de-familia&quot;&gt;
-                &lt;time datetime=&quot;2022-07-14T00:00:00+00:00&quot;&gt;July 14, 2022&lt;/time&gt;
+                &lt;time datetime=&quot;2022-07-14T00:00:00+00:00&quot;&gt;&lt;strong&gt;July 14, 2022&lt;/strong&gt;&lt;/time&gt;
                 
                 &lt;mark&gt;libros familiares&lt;/mark&gt;
                 
             &lt;/a&gt;&lt;/li&gt;
             
             &lt;li&gt;&lt;a href=&quot;/chess-books&quot;&gt;
-                &lt;time datetime=&quot;2020-12-31T00:00:00+00:00&quot;&gt;December 31, 2020&lt;/time&gt;
+                &lt;time datetime=&quot;2020-12-31T00:00:00+00:00&quot;&gt;&lt;strong&gt;December 31, 2020&lt;/strong&gt;&lt;/time&gt;
                 
                 &lt;mark&gt;chess books&lt;/mark&gt;
                 
             &lt;/a&gt;&lt;/li&gt;
             
             &lt;li&gt;&lt;a href=&quot;/livros&quot;&gt;
-                &lt;time datetime=&quot;2020-06-07T00:00:00+00:00&quot;&gt;June 07, 2020&lt;/time&gt;
+                &lt;time datetime=&quot;2020-06-07T00:00:00+00:00&quot;&gt;&lt;strong&gt;June 07, 2020&lt;/strong&gt;&lt;/time&gt;
                 
                 &lt;mark&gt;Livros&lt;/mark&gt;
                 
@@ -47092,294 +47092,294 @@ Pense duas vezes antes de se envolver.
     
     
     &lt;div class=&quot;tag-list&quot; id=&quot;linux&quot; aria-labelledby=&quot;linux-heading&quot;&gt;
-        &lt;h1 id=&quot;linux-heading&quot;&gt;
+        &lt;h1 id=&quot;linux-heading&quot; href=&quot;#&quot; class=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;
             linux
         &lt;/h1&gt;
         &lt;ul class=&quot;search-link&quot;&gt;
         
             
             &lt;li&gt;&lt;a href=&quot;/linux-mobile-os&quot;&gt;
-                &lt;time datetime=&quot;2024-08-17T00:00:00+00:00&quot;&gt;August 17, 2024&lt;/time&gt;
+                &lt;time datetime=&quot;2024-08-17T00:00:00+00:00&quot;&gt;&lt;strong&gt;August 17, 2024&lt;/strong&gt;&lt;/time&gt;
                 
                 &lt;mark&gt;Linux mobile OS&lt;/mark&gt;
                 
             &lt;/a&gt;&lt;/li&gt;
             
             &lt;li&gt;&lt;a href=&quot;/how-to-use-the-dd-command-to-create-a-bootable-usb-drive-from-an-iso-file-on-a-linux-based-system&quot;&gt;
-                &lt;time datetime=&quot;2024-08-02T00:00:00+00:00&quot;&gt;August 02, 2024&lt;/time&gt;
+                &lt;time datetime=&quot;2024-08-02T00:00:00+00:00&quot;&gt;&lt;strong&gt;August 02, 2024&lt;/strong&gt;&lt;/time&gt;
                 
                 &lt;mark&gt;How to use the `dd` command to create a bootable USB drive from an ISO file on a Linux-based system&lt;/mark&gt;
                 
             &lt;/a&gt;&lt;/li&gt;
             
             &lt;li&gt;&lt;a href=&quot;/clipaper-qa&quot;&gt;
-                &lt;time datetime=&quot;2024-06-16T00:00:00+00:00&quot;&gt;June 16, 2024&lt;/time&gt;
+                &lt;time datetime=&quot;2024-06-16T00:00:00+00:00&quot;&gt;&lt;strong&gt;June 16, 2024&lt;/strong&gt;&lt;/time&gt;
                 
                 &lt;mark&gt;cliPaperQA&lt;/mark&gt;
                 
             &lt;/a&gt;&lt;/li&gt;
             
             &lt;li&gt;&lt;a href=&quot;/bulk-gpt&quot;&gt;
-                &lt;time datetime=&quot;2024-06-13T00:00:00+00:00&quot;&gt;June 13, 2024&lt;/time&gt;
+                &lt;time datetime=&quot;2024-06-13T00:00:00+00:00&quot;&gt;&lt;strong&gt;June 13, 2024&lt;/strong&gt;&lt;/time&gt;
                 
                 &lt;mark&gt;bulkGPT: multithreading for OpenAI&apos;s output limits&lt;/mark&gt;
                 
             &lt;/a&gt;&lt;/li&gt;
             
             &lt;li&gt;&lt;a href=&quot;/pdf-utf8&quot;&gt;
-                &lt;time datetime=&quot;2024-06-02T00:00:00+00:00&quot;&gt;June 02, 2024&lt;/time&gt;
+                &lt;time datetime=&quot;2024-06-02T00:00:00+00:00&quot;&gt;&lt;strong&gt;June 02, 2024&lt;/strong&gt;&lt;/time&gt;
                 
                 &lt;mark&gt;Convert `.pdf` to `UTF-8`&lt;/mark&gt;
                 
             &lt;/a&gt;&lt;/li&gt;
             
             &lt;li&gt;&lt;a href=&quot;/llm-renamer&quot;&gt;
-                &lt;time datetime=&quot;2024-06-02T00:00:00+00:00&quot;&gt;June 02, 2024&lt;/time&gt;
+                &lt;time datetime=&quot;2024-06-02T00:00:00+00:00&quot;&gt;&lt;strong&gt;June 02, 2024&lt;/strong&gt;&lt;/time&gt;
                 
                 &lt;mark&gt;Rename files using llm.datasette.io&lt;/mark&gt;
                 
             &lt;/a&gt;&lt;/li&gt;
             
             &lt;li&gt;&lt;a href=&quot;/bibtex-check&quot;&gt;
-                &lt;time datetime=&quot;2024-06-02T00:00:00+00:00&quot;&gt;June 02, 2024&lt;/time&gt;
+                &lt;time datetime=&quot;2024-06-02T00:00:00+00:00&quot;&gt;&lt;strong&gt;June 02, 2024&lt;/strong&gt;&lt;/time&gt;
                 
                 &lt;mark&gt;Python script to check LaTeX citations&lt;/mark&gt;
                 
             &lt;/a&gt;&lt;/li&gt;
             
             &lt;li&gt;&lt;a href=&quot;/copy-dedup&quot;&gt;
-                &lt;time datetime=&quot;2024-06-01T00:00:00+00:00&quot;&gt;June 01, 2024&lt;/time&gt;
+                &lt;time datetime=&quot;2024-06-01T00:00:00+00:00&quot;&gt;&lt;strong&gt;June 01, 2024&lt;/strong&gt;&lt;/time&gt;
                 
                 &lt;mark&gt;&quot;Copy Spotter&quot; and Deduplication&lt;/mark&gt;
                 
             &lt;/a&gt;&lt;/li&gt;
             
             &lt;li&gt;&lt;a href=&quot;/files-by-type&quot;&gt;
-                &lt;time datetime=&quot;2024-05-30T00:00:00+00:00&quot;&gt;May 30, 2024&lt;/time&gt;
+                &lt;time datetime=&quot;2024-05-30T00:00:00+00:00&quot;&gt;&lt;strong&gt;May 30, 2024&lt;/strong&gt;&lt;/time&gt;
                 
                 &lt;mark&gt;Organize files by their extensions&lt;/mark&gt;
                 
             &lt;/a&gt;&lt;/li&gt;
             
             &lt;li&gt;&lt;a href=&quot;/storj-sync&quot;&gt;
-                &lt;time datetime=&quot;2024-05-06T00:00:00+00:00&quot;&gt;May 06, 2024&lt;/time&gt;
+                &lt;time datetime=&quot;2024-05-06T00:00:00+00:00&quot;&gt;&lt;strong&gt;May 06, 2024&lt;/strong&gt;&lt;/time&gt;
                 
                 &lt;mark&gt;Rclone: Syncing STORJ Cloud to Local Storage&lt;/mark&gt;
                 
             &lt;/a&gt;&lt;/li&gt;
             
             &lt;li&gt;&lt;a href=&quot;/sources&quot;&gt;
-                &lt;time datetime=&quot;2024-04-14T00:00:00+00:00&quot;&gt;April 14, 2024&lt;/time&gt;
+                &lt;time datetime=&quot;2024-04-14T00:00:00+00:00&quot;&gt;&lt;strong&gt;April 14, 2024&lt;/strong&gt;&lt;/time&gt;
                 
                 &lt;mark&gt;/sources.list&lt;/mark&gt;
                 
             &lt;/a&gt;&lt;/li&gt;
             
             &lt;li&gt;&lt;a href=&quot;/bashrc&quot;&gt;
-                &lt;time datetime=&quot;2024-04-14T00:00:00+00:00&quot;&gt;April 14, 2024&lt;/time&gt;
+                &lt;time datetime=&quot;2024-04-14T00:00:00+00:00&quot;&gt;&lt;strong&gt;April 14, 2024&lt;/strong&gt;&lt;/time&gt;
                 
                 &lt;mark&gt;/.bashrc&lt;/mark&gt;
                 
             &lt;/a&gt;&lt;/li&gt;
             
             &lt;li&gt;&lt;a href=&quot;/ratpoisonrc&quot;&gt;
-                &lt;time datetime=&quot;2024-04-14T00:00:00+00:00&quot;&gt;April 14, 2024&lt;/time&gt;
+                &lt;time datetime=&quot;2024-04-14T00:00:00+00:00&quot;&gt;&lt;strong&gt;April 14, 2024&lt;/strong&gt;&lt;/time&gt;
                 
                 &lt;mark&gt;/.ratpoisonrc&lt;/mark&gt;
                 
             &lt;/a&gt;&lt;/li&gt;
             
             &lt;li&gt;&lt;a href=&quot;/xsessionrc&quot;&gt;
-                &lt;time datetime=&quot;2024-03-10T00:00:00+00:00&quot;&gt;March 10, 2024&lt;/time&gt;
+                &lt;time datetime=&quot;2024-03-10T00:00:00+00:00&quot;&gt;&lt;strong&gt;March 10, 2024&lt;/strong&gt;&lt;/time&gt;
                 
                 &lt;mark&gt;/root/.xsessionrc&lt;/mark&gt;
                 
             &lt;/a&gt;&lt;/li&gt;
             
             &lt;li&gt;&lt;a href=&quot;/xinitrc&quot;&gt;
-                &lt;time datetime=&quot;2024-03-10T00:00:00+00:00&quot;&gt;March 10, 2024&lt;/time&gt;
+                &lt;time datetime=&quot;2024-03-10T00:00:00+00:00&quot;&gt;&lt;strong&gt;March 10, 2024&lt;/strong&gt;&lt;/time&gt;
                 
                 &lt;mark&gt;xinitrc&lt;/mark&gt;
                 
             &lt;/a&gt;&lt;/li&gt;
             
             &lt;li&gt;&lt;a href=&quot;/thorium&quot;&gt;
-                &lt;time datetime=&quot;2024-03-02T00:00:00+00:00&quot;&gt;March 02, 2024&lt;/time&gt;
+                &lt;time datetime=&quot;2024-03-02T00:00:00+00:00&quot;&gt;&lt;strong&gt;March 02, 2024&lt;/strong&gt;&lt;/time&gt;
                 
                 &lt;mark&gt;About Thorium Flags&lt;/mark&gt;
                 
             &lt;/a&gt;&lt;/li&gt;
             
             &lt;li&gt;&lt;a href=&quot;/cat-files&quot;&gt;
-                &lt;time datetime=&quot;2024-02-22T00:00:00+00:00&quot;&gt;February 22, 2024&lt;/time&gt;
+                &lt;time datetime=&quot;2024-02-22T00:00:00+00:00&quot;&gt;&lt;strong&gt;February 22, 2024&lt;/strong&gt;&lt;/time&gt;
                 
                 &lt;mark&gt;cat files contents [script]&lt;/mark&gt;
                 
             &lt;/a&gt;&lt;/li&gt;
             
             &lt;li&gt;&lt;a href=&quot;/sqlite&quot;&gt;
-                &lt;time datetime=&quot;2024-02-16T00:00:00+00:00&quot;&gt;February 16, 2024&lt;/time&gt;
+                &lt;time datetime=&quot;2024-02-16T00:00:00+00:00&quot;&gt;&lt;strong&gt;February 16, 2024&lt;/strong&gt;&lt;/time&gt;
                 
                 &lt;mark&gt;Installing a custom version of SQLite&lt;/mark&gt;
                 
             &lt;/a&gt;&lt;/li&gt;
             
             &lt;li&gt;&lt;a href=&quot;/ftpd&quot;&gt;
-                &lt;time datetime=&quot;2024-02-06T00:00:00+00:00&quot;&gt;February 06, 2024&lt;/time&gt;
+                &lt;time datetime=&quot;2024-02-06T00:00:00+00:00&quot;&gt;&lt;strong&gt;February 06, 2024&lt;/strong&gt;&lt;/time&gt;
                 
                 &lt;mark&gt;Setup FTP Server on Debian and Connect a Windows machine&lt;/mark&gt;
                 
             &lt;/a&gt;&lt;/li&gt;
             
             &lt;li&gt;&lt;a href=&quot;/gummi&quot;&gt;
-                &lt;time datetime=&quot;2024-01-31T00:00:00+00:00&quot;&gt;January 31, 2024&lt;/time&gt;
+                &lt;time datetime=&quot;2024-01-31T00:00:00+00:00&quot;&gt;&lt;strong&gt;January 31, 2024&lt;/strong&gt;&lt;/time&gt;
                 
                 &lt;mark&gt;Gummi .tex .bib&lt;/mark&gt;
                 
             &lt;/a&gt;&lt;/li&gt;
             
             &lt;li&gt;&lt;a href=&quot;/thermanual&quot;&gt;
-                &lt;time datetime=&quot;2024-01-23T00:00:00+00:00&quot;&gt;January 23, 2024&lt;/time&gt;
+                &lt;time datetime=&quot;2024-01-23T00:00:00+00:00&quot;&gt;&lt;strong&gt;January 23, 2024&lt;/strong&gt;&lt;/time&gt;
                 
                 &lt;mark&gt;DP-Q803P thermal printer manual&lt;/mark&gt;
                 
             &lt;/a&gt;&lt;/li&gt;
             
             &lt;li&gt;&lt;a href=&quot;/thermal&quot;&gt;
-                &lt;time datetime=&quot;2024-01-23T00:00:00+00:00&quot;&gt;January 23, 2024&lt;/time&gt;
+                &lt;time datetime=&quot;2024-01-23T00:00:00+00:00&quot;&gt;&lt;strong&gt;January 23, 2024&lt;/strong&gt;&lt;/time&gt;
                 
                 &lt;mark&gt;Script to print from clipboard to a thermal printer&lt;/mark&gt;
                 
             &lt;/a&gt;&lt;/li&gt;
             
             &lt;li&gt;&lt;a href=&quot;/linux-usb&quot;&gt;
-                &lt;time datetime=&quot;2024-01-22T00:00:00+00:00&quot;&gt;January 22, 2024&lt;/time&gt;
+                &lt;time datetime=&quot;2024-01-22T00:00:00+00:00&quot;&gt;&lt;strong&gt;January 22, 2024&lt;/strong&gt;&lt;/time&gt;
                 
                 &lt;mark&gt;Linux in a USB drive&lt;/mark&gt;
                 
             &lt;/a&gt;&lt;/li&gt;
             
             &lt;li&gt;&lt;a href=&quot;/wps&quot;&gt;
-                &lt;time datetime=&quot;2024-01-03T00:00:00+00:00&quot;&gt;January 03, 2024&lt;/time&gt;
+                &lt;time datetime=&quot;2024-01-03T00:00:00+00:00&quot;&gt;&lt;strong&gt;January 03, 2024&lt;/strong&gt;&lt;/time&gt;
                 
                 &lt;mark&gt;install_wps.sh&lt;/mark&gt;
                 
             &lt;/a&gt;&lt;/li&gt;
             
             &lt;li&gt;&lt;a href=&quot;/rk3588&quot;&gt;
-                &lt;time datetime=&quot;2024-01-01T00:00:00+00:00&quot;&gt;January 01, 2024&lt;/time&gt;
+                &lt;time datetime=&quot;2024-01-01T00:00:00+00:00&quot;&gt;&lt;strong&gt;January 01, 2024&lt;/strong&gt;&lt;/time&gt;
                 
                 &lt;mark&gt;SoC arm64 RK3588&lt;/mark&gt;
                 
             &lt;/a&gt;&lt;/li&gt;
             
             &lt;li&gt;&lt;a href=&quot;/neditrc&quot;&gt;
-                &lt;time datetime=&quot;2023-12-30T00:00:00+00:00&quot;&gt;December 30, 2023&lt;/time&gt;
+                &lt;time datetime=&quot;2023-12-30T00:00:00+00:00&quot;&gt;&lt;strong&gt;December 30, 2023&lt;/strong&gt;&lt;/time&gt;
                 
                 &lt;mark&gt;nedit.rc&lt;/mark&gt;
                 
             &lt;/a&gt;&lt;/li&gt;
             
             &lt;li&gt;&lt;a href=&quot;/rk3588-enhance&quot;&gt;
-                &lt;time datetime=&quot;2023-12-25T00:00:00+00:00&quot;&gt;December 25, 2023&lt;/time&gt;
+                &lt;time datetime=&quot;2023-12-25T00:00:00+00:00&quot;&gt;&lt;strong&gt;December 25, 2023&lt;/strong&gt;&lt;/time&gt;
                 
                 &lt;mark&gt;rk3588 performance optimization&lt;/mark&gt;
                 
             &lt;/a&gt;&lt;/li&gt;
             
             &lt;li&gt;&lt;a href=&quot;/jekyller&quot;&gt;
-                &lt;time datetime=&quot;2023-12-24T00:00:00+00:00&quot;&gt;December 24, 2023&lt;/time&gt;
+                &lt;time datetime=&quot;2023-12-24T00:00:00+00:00&quot;&gt;&lt;strong&gt;December 24, 2023&lt;/strong&gt;&lt;/time&gt;
                 
                 &lt;mark&gt;Shell script to replace JEKYLLER edge extension&lt;/mark&gt;
                 
             &lt;/a&gt;&lt;/li&gt;
             
             &lt;li&gt;&lt;a href=&quot;/git-sparse-checkout&quot;&gt;
-                &lt;time datetime=&quot;2023-12-24T00:00:00+00:00&quot;&gt;December 24, 2023&lt;/time&gt;
+                &lt;time datetime=&quot;2023-12-24T00:00:00+00:00&quot;&gt;&lt;strong&gt;December 24, 2023&lt;/strong&gt;&lt;/time&gt;
                 
                 &lt;mark&gt;Alternative option to upload a file to GitHub without cloning the entire repository&lt;/mark&gt;
                 
             &lt;/a&gt;&lt;/li&gt;
             
             &lt;li&gt;&lt;a href=&quot;/dpkg-script&quot;&gt;
-                &lt;time datetime=&quot;2023-12-24T00:00:00+00:00&quot;&gt;December 24, 2023&lt;/time&gt;
+                &lt;time datetime=&quot;2023-12-24T00:00:00+00:00&quot;&gt;&lt;strong&gt;December 24, 2023&lt;/strong&gt;&lt;/time&gt;
                 
                 &lt;mark&gt;Packages list script&lt;/mark&gt;
                 
             &lt;/a&gt;&lt;/li&gt;
             
             &lt;li&gt;&lt;a href=&quot;/dpkg&quot;&gt;
-                &lt;time datetime=&quot;2023-12-24T00:00:00+00:00&quot;&gt;December 24, 2023&lt;/time&gt;
+                &lt;time datetime=&quot;2023-12-24T00:00:00+00:00&quot;&gt;&lt;strong&gt;December 24, 2023&lt;/strong&gt;&lt;/time&gt;
                 
                 &lt;mark&gt;Installed Debian packages list&lt;/mark&gt;
                 
             &lt;/a&gt;&lt;/li&gt;
             
             &lt;li&gt;&lt;a href=&quot;/parameter&quot;&gt;
-                &lt;time datetime=&quot;2023-12-08T00:00:00+00:00&quot;&gt;December 08, 2023&lt;/time&gt;
+                &lt;time datetime=&quot;2023-12-08T00:00:00+00:00&quot;&gt;&lt;strong&gt;December 08, 2023&lt;/strong&gt;&lt;/time&gt;
                 
                 &lt;mark&gt;parameter.txt&lt;/mark&gt;
                 
             &lt;/a&gt;&lt;/li&gt;
             
             &lt;li&gt;&lt;a href=&quot;/sectors&quot;&gt;
-                &lt;time datetime=&quot;2023-12-07T00:00:00+00:00&quot;&gt;December 07, 2023&lt;/time&gt;
+                &lt;time datetime=&quot;2023-12-07T00:00:00+00:00&quot;&gt;&lt;strong&gt;December 07, 2023&lt;/strong&gt;&lt;/time&gt;
                 
                 &lt;mark&gt;Sectors to bytes&lt;/mark&gt;
                 
             &lt;/a&gt;&lt;/li&gt;
             
             &lt;li&gt;&lt;a href=&quot;/ratpoison&quot;&gt;
-                &lt;time datetime=&quot;2023-11-10T00:00:00+00:00&quot;&gt;November 10, 2023&lt;/time&gt;
+                &lt;time datetime=&quot;2023-11-10T00:00:00+00:00&quot;&gt;&lt;strong&gt;November 10, 2023&lt;/strong&gt;&lt;/time&gt;
                 
                 &lt;mark&gt;Installation of ratpoison in debian/ubuntu&lt;/mark&gt;
                 
             &lt;/a&gt;&lt;/li&gt;
             
             &lt;li&gt;&lt;a href=&quot;/typewriter&quot;&gt;
-                &lt;time datetime=&quot;2022-11-22T00:00:00+00:00&quot;&gt;November 22, 2022&lt;/time&gt;
+                &lt;time datetime=&quot;2022-11-22T00:00:00+00:00&quot;&gt;&lt;strong&gt;November 22, 2022&lt;/strong&gt;&lt;/time&gt;
                 
                 &lt;mark&gt;Linux typewriter setup&lt;/mark&gt;
                 
             &lt;/a&gt;&lt;/li&gt;
             
             &lt;li&gt;&lt;a href=&quot;/edge&quot;&gt;
-                &lt;time datetime=&quot;2022-01-11T00:00:00+00:00&quot;&gt;January 11, 2022&lt;/time&gt;
+                &lt;time datetime=&quot;2022-01-11T00:00:00+00:00&quot;&gt;&lt;strong&gt;January 11, 2022&lt;/strong&gt;&lt;/time&gt;
                 
                 &lt;mark&gt;microsoft-edge&lt;/mark&gt;
                 
             &lt;/a&gt;&lt;/li&gt;
             
             &lt;li&gt;&lt;a href=&quot;/xlunch&quot;&gt;
-                &lt;time datetime=&quot;2022-01-11T00:00:00+00:00&quot;&gt;January 11, 2022&lt;/time&gt;
+                &lt;time datetime=&quot;2022-01-11T00:00:00+00:00&quot;&gt;&lt;strong&gt;January 11, 2022&lt;/strong&gt;&lt;/time&gt;
                 
                 &lt;mark&gt;xlunch entries.dsv&lt;/mark&gt;
                 
             &lt;/a&gt;&lt;/li&gt;
             
             &lt;li&gt;&lt;a href=&quot;/nvidia&quot;&gt;
-                &lt;time datetime=&quot;2022-01-09T00:00:00+00:00&quot;&gt;January 09, 2022&lt;/time&gt;
+                &lt;time datetime=&quot;2022-01-09T00:00:00+00:00&quot;&gt;&lt;strong&gt;January 09, 2022&lt;/strong&gt;&lt;/time&gt;
                 
                 &lt;mark&gt;Installation of nvidia-legacy-340 in debian 11 (Bullseye)&lt;/mark&gt;
                 
             &lt;/a&gt;&lt;/li&gt;
             
             &lt;li&gt;&lt;a href=&quot;/neofetch&quot;&gt;
-                &lt;time datetime=&quot;2021-05-25T00:00:00+00:00&quot;&gt;May 25, 2021&lt;/time&gt;
+                &lt;time datetime=&quot;2021-05-25T00:00:00+00:00&quot;&gt;&lt;strong&gt;May 25, 2021&lt;/strong&gt;&lt;/time&gt;
                 
                 &lt;mark&gt;neofetch config.conf&lt;/mark&gt;
                 
             &lt;/a&gt;&lt;/li&gt;
             
             &lt;li&gt;&lt;a href=&quot;/Xsession&quot;&gt;
-                &lt;time datetime=&quot;2021-05-25T00:00:00+00:00&quot;&gt;May 25, 2021&lt;/time&gt;
+                &lt;time datetime=&quot;2021-05-25T00:00:00+00:00&quot;&gt;&lt;strong&gt;May 25, 2021&lt;/strong&gt;&lt;/time&gt;
                 
                 &lt;mark&gt;Xsession&lt;/mark&gt;
                 
             &lt;/a&gt;&lt;/li&gt;
             
             &lt;li&gt;&lt;a href=&quot;/ms-sys&quot;&gt;
-                &lt;time datetime=&quot;2020-10-22T00:00:00+00:00&quot;&gt;October 22, 2020&lt;/time&gt;
+                &lt;time datetime=&quot;2020-10-22T00:00:00+00:00&quot;&gt;&lt;strong&gt;October 22, 2020&lt;/strong&gt;&lt;/time&gt;
                 
                 &lt;mark&gt;How to make bootable Windows USB from Linux for old computers&lt;/mark&gt;
                 
@@ -47411,21 +47411,21 @@ Pense duas vezes antes de se envolver.
     
     
     &lt;div class=&quot;tag-list&quot; id=&quot;misc&quot; aria-labelledby=&quot;misc-heading&quot;&gt;
-        &lt;h1 id=&quot;misc-heading&quot;&gt;
+        &lt;h1 id=&quot;misc-heading&quot; href=&quot;#&quot; class=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;
             misc
         &lt;/h1&gt;
         &lt;ul class=&quot;search-link&quot;&gt;
         
             
             &lt;li&gt;&lt;a href=&quot;/pound-cake&quot;&gt;
-                &lt;time datetime=&quot;2024-07-25T00:00:00+00:00&quot;&gt;July 25, 2024&lt;/time&gt;
+                &lt;time datetime=&quot;2024-07-25T00:00:00+00:00&quot;&gt;&lt;strong&gt;July 25, 2024&lt;/strong&gt;&lt;/time&gt;
                 
                 &lt;mark&gt;Bolo Pão (Pound Cake)&lt;/mark&gt;
                 
             &lt;/a&gt;&lt;/li&gt;
             
             &lt;li&gt;&lt;a href=&quot;/wallpaper-1&quot;&gt;
-                &lt;time datetime=&quot;2018-04-11T00:00:00+00:00&quot;&gt;April 11, 2018&lt;/time&gt;
+                &lt;time datetime=&quot;2018-04-11T00:00:00+00:00&quot;&gt;&lt;strong&gt;April 11, 2018&lt;/strong&gt;&lt;/time&gt;
                 
                 &lt;mark&gt;wallpaper I&lt;/mark&gt;
                 
@@ -47446,28 +47446,28 @@ Pense duas vezes antes de se envolver.
     
     
     &lt;div class=&quot;tag-list&quot; id=&quot;mobile&quot; aria-labelledby=&quot;mobile-heading&quot;&gt;
-        &lt;h1 id=&quot;mobile-heading&quot;&gt;
+        &lt;h1 id=&quot;mobile-heading&quot; href=&quot;#&quot; class=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;
             mobile
         &lt;/h1&gt;
         &lt;ul class=&quot;search-link&quot;&gt;
         
             
             &lt;li&gt;&lt;a href=&quot;/linux-mobile-os&quot;&gt;
-                &lt;time datetime=&quot;2024-08-17T00:00:00+00:00&quot;&gt;August 17, 2024&lt;/time&gt;
+                &lt;time datetime=&quot;2024-08-17T00:00:00+00:00&quot;&gt;&lt;strong&gt;August 17, 2024&lt;/strong&gt;&lt;/time&gt;
                 
                 Linux mobile OS
                 
             &lt;/a&gt;&lt;/li&gt;
             
             &lt;li&gt;&lt;a href=&quot;/ios-18-changelog&quot;&gt;
-                &lt;time datetime=&quot;2024-07-30T00:00:00+00:00&quot;&gt;July 30, 2024&lt;/time&gt;
+                &lt;time datetime=&quot;2024-07-30T00:00:00+00:00&quot;&gt;&lt;strong&gt;July 30, 2024&lt;/strong&gt;&lt;/time&gt;
                 
                 iOS 18 changelog
                 
             &lt;/a&gt;&lt;/li&gt;
             
             &lt;li&gt;&lt;a href=&quot;/iphone-files2zip-zip2clipboard&quot;&gt;
-                &lt;time datetime=&quot;2024-07-20T00:00:00+00:00&quot;&gt;July 20, 2024&lt;/time&gt;
+                &lt;time datetime=&quot;2024-07-20T00:00:00+00:00&quot;&gt;&lt;strong&gt;July 20, 2024&lt;/strong&gt;&lt;/time&gt;
                 
                 iPhone: files2zip &amp;amp; zip2clipboard
                 
@@ -47495,14 +47495,14 @@ Pense duas vezes antes de se envolver.
     
     
     &lt;div class=&quot;tag-list&quot; id=&quot;music&quot; aria-labelledby=&quot;music-heading&quot;&gt;
-        &lt;h1 id=&quot;music-heading&quot;&gt;
+        &lt;h1 id=&quot;music-heading&quot; href=&quot;#&quot; class=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;
             music
         &lt;/h1&gt;
         &lt;ul class=&quot;search-link&quot;&gt;
         
             
             &lt;li&gt;&lt;a href=&quot;/lyrics-of-deleter-by-grouplove&quot;&gt;
-                &lt;time datetime=&quot;2024-07-20T00:00:00+00:00&quot;&gt;July 20, 2024&lt;/time&gt;
+                &lt;time datetime=&quot;2024-07-20T00:00:00+00:00&quot;&gt;&lt;strong&gt;July 20, 2024&lt;/strong&gt;&lt;/time&gt;
                 
                 &lt;mark&gt;Lyrics of Deleter by Grouplove&lt;/mark&gt;
                 
@@ -47523,14 +47523,14 @@ Pense duas vezes antes de se envolver.
     
     
     &lt;div class=&quot;tag-list&quot; id=&quot;processual-penal&quot; aria-labelledby=&quot;processual-penal-heading&quot;&gt;
-        &lt;h1 id=&quot;processual-penal-heading&quot;&gt;
+        &lt;h1 id=&quot;processual-penal-heading&quot; href=&quot;#&quot; class=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;
             processual-penal
         &lt;/h1&gt;
         &lt;ul class=&quot;search-link&quot;&gt;
         
             
             &lt;li&gt;&lt;a href=&quot;/juri&quot;&gt;
-                &lt;time datetime=&quot;2024-03-08T00:00:00+00:00&quot;&gt;March 08, 2024&lt;/time&gt;
+                &lt;time datetime=&quot;2024-03-08T00:00:00+00:00&quot;&gt;&lt;strong&gt;March 08, 2024&lt;/strong&gt;&lt;/time&gt;
                 
                 Procedimento dos Crimes da Competência do Tribunal do Júri
                 
@@ -47556,35 +47556,35 @@ Pense duas vezes antes de se envolver.
     
     
     &lt;div class=&quot;tag-list&quot; id=&quot;prompt&quot; aria-labelledby=&quot;prompt-heading&quot;&gt;
-        &lt;h1 id=&quot;prompt-heading&quot;&gt;
+        &lt;h1 id=&quot;prompt-heading&quot; href=&quot;#&quot; class=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;
             prompt
         &lt;/h1&gt;
         &lt;ul class=&quot;search-link&quot;&gt;
         
             
             &lt;li&gt;&lt;a href=&quot;/gmail2mailgrip-prompt&quot;&gt;
-                &lt;time datetime=&quot;2024-08-02T00:00:00+00:00&quot;&gt;August 02, 2024&lt;/time&gt;
+                &lt;time datetime=&quot;2024-08-02T00:00:00+00:00&quot;&gt;&lt;strong&gt;August 02, 2024&lt;/strong&gt;&lt;/time&gt;
                 
                 gmail2mailgrip
                 
             &lt;/a&gt;&lt;/li&gt;
             
             &lt;li&gt;&lt;a href=&quot;/reassess&quot;&gt;
-                &lt;time datetime=&quot;2024-04-13T00:00:00+00:00&quot;&gt;April 13, 2024&lt;/time&gt;
+                &lt;time datetime=&quot;2024-04-13T00:00:00+00:00&quot;&gt;&lt;strong&gt;April 13, 2024&lt;/strong&gt;&lt;/time&gt;
                 
                 reassess
                 
             &lt;/a&gt;&lt;/li&gt;
             
             &lt;li&gt;&lt;a href=&quot;/json-ld&quot;&gt;
-                &lt;time datetime=&quot;2024-02-14T00:00:00+00:00&quot;&gt;February 14, 2024&lt;/time&gt;
+                &lt;time datetime=&quot;2024-02-14T00:00:00+00:00&quot;&gt;&lt;strong&gt;February 14, 2024&lt;/strong&gt;&lt;/time&gt;
                 
                 JSON-LD
                 
             &lt;/a&gt;&lt;/li&gt;
             
             &lt;li&gt;&lt;a href=&quot;/default-prompt&quot;&gt;
-                &lt;time datetime=&quot;2023-11-05T00:00:00+00:00&quot;&gt;November 05, 2023&lt;/time&gt;
+                &lt;time datetime=&quot;2023-11-05T00:00:00+00:00&quot;&gt;&lt;strong&gt;November 05, 2023&lt;/strong&gt;&lt;/time&gt;
                 
                 default
                 
@@ -47612,14 +47612,14 @@ Pense duas vezes antes de se envolver.
     
     
     &lt;div class=&quot;tag-list&quot; id=&quot;receitas&quot; aria-labelledby=&quot;receitas-heading&quot;&gt;
-        &lt;h1 id=&quot;receitas-heading&quot;&gt;
+        &lt;h1 id=&quot;receitas-heading&quot; href=&quot;#&quot; class=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;
             receitas
         &lt;/h1&gt;
         &lt;ul class=&quot;search-link&quot;&gt;
         
             
             &lt;li&gt;&lt;a href=&quot;/irpf&quot;&gt;
-                &lt;time datetime=&quot;2022-03-19T00:00:00+00:00&quot;&gt;March 19, 2022&lt;/time&gt;
+                &lt;time datetime=&quot;2022-03-19T00:00:00+00:00&quot;&gt;&lt;strong&gt;March 19, 2022&lt;/strong&gt;&lt;/time&gt;
                 
                 &lt;mark&gt;IRPF&lt;/mark&gt;
                 
@@ -47640,238 +47640,238 @@ Pense duas vezes antes de se envolver.
     
     
     &lt;div class=&quot;tag-list&quot; id=&quot;rendimentos&quot; aria-labelledby=&quot;rendimentos-heading&quot;&gt;
-        &lt;h1 id=&quot;rendimentos-heading&quot;&gt;
+        &lt;h1 id=&quot;rendimentos-heading&quot; href=&quot;#&quot; class=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;
             rendimentos
         &lt;/h1&gt;
         &lt;ul class=&quot;search-link&quot;&gt;
         
             
             &lt;li&gt;&lt;a href=&quot;/maio-23&quot;&gt;
-                &lt;time datetime=&quot;2023-05-29T00:00:00+00:00&quot;&gt;May 29, 2023&lt;/time&gt;
+                &lt;time datetime=&quot;2023-05-29T00:00:00+00:00&quot;&gt;&lt;strong&gt;May 29, 2023&lt;/strong&gt;&lt;/time&gt;
                 
                 &lt;mark&gt;Maio 2023&lt;/mark&gt;
                 
             &lt;/a&gt;&lt;/li&gt;
             
             &lt;li&gt;&lt;a href=&quot;/novembro-22&quot;&gt;
-                &lt;time datetime=&quot;2022-12-17T00:00:00+00:00&quot;&gt;December 17, 2022&lt;/time&gt;
+                &lt;time datetime=&quot;2022-12-17T00:00:00+00:00&quot;&gt;&lt;strong&gt;December 17, 2022&lt;/strong&gt;&lt;/time&gt;
                 
                 &lt;mark&gt;Novembro 2022&lt;/mark&gt;
                 
             &lt;/a&gt;&lt;/li&gt;
             
             &lt;li&gt;&lt;a href=&quot;/setembro-22&quot;&gt;
-                &lt;time datetime=&quot;2022-10-01T00:00:00+00:00&quot;&gt;October 01, 2022&lt;/time&gt;
+                &lt;time datetime=&quot;2022-10-01T00:00:00+00:00&quot;&gt;&lt;strong&gt;October 01, 2022&lt;/strong&gt;&lt;/time&gt;
                 
                 &lt;mark&gt;Setembro 2022&lt;/mark&gt;
                 
             &lt;/a&gt;&lt;/li&gt;
             
             &lt;li&gt;&lt;a href=&quot;/agosto-22&quot;&gt;
-                &lt;time datetime=&quot;2022-09-06T00:00:00+00:00&quot;&gt;September 06, 2022&lt;/time&gt;
+                &lt;time datetime=&quot;2022-09-06T00:00:00+00:00&quot;&gt;&lt;strong&gt;September 06, 2022&lt;/strong&gt;&lt;/time&gt;
                 
                 &lt;mark&gt;Agosto 2022&lt;/mark&gt;
                 
             &lt;/a&gt;&lt;/li&gt;
             
             &lt;li&gt;&lt;a href=&quot;/julho-22&quot;&gt;
-                &lt;time datetime=&quot;2022-08-01T00:00:00+00:00&quot;&gt;August 01, 2022&lt;/time&gt;
+                &lt;time datetime=&quot;2022-08-01T00:00:00+00:00&quot;&gt;&lt;strong&gt;August 01, 2022&lt;/strong&gt;&lt;/time&gt;
                 
                 &lt;mark&gt;Julho 2022&lt;/mark&gt;
                 
             &lt;/a&gt;&lt;/li&gt;
             
             &lt;li&gt;&lt;a href=&quot;/junho-22&quot;&gt;
-                &lt;time datetime=&quot;2022-07-04T00:00:00+00:00&quot;&gt;July 04, 2022&lt;/time&gt;
+                &lt;time datetime=&quot;2022-07-04T00:00:00+00:00&quot;&gt;&lt;strong&gt;July 04, 2022&lt;/strong&gt;&lt;/time&gt;
                 
                 &lt;mark&gt;Junho 2022&lt;/mark&gt;
                 
             &lt;/a&gt;&lt;/li&gt;
             
             &lt;li&gt;&lt;a href=&quot;/maio-22&quot;&gt;
-                &lt;time datetime=&quot;2022-06-01T00:00:00+00:00&quot;&gt;June 01, 2022&lt;/time&gt;
+                &lt;time datetime=&quot;2022-06-01T00:00:00+00:00&quot;&gt;&lt;strong&gt;June 01, 2022&lt;/strong&gt;&lt;/time&gt;
                 
                 &lt;mark&gt;Maio 2022&lt;/mark&gt;
                 
             &lt;/a&gt;&lt;/li&gt;
             
             &lt;li&gt;&lt;a href=&quot;/abril-22&quot;&gt;
-                &lt;time datetime=&quot;2022-05-03T00:00:00+00:00&quot;&gt;May 03, 2022&lt;/time&gt;
+                &lt;time datetime=&quot;2022-05-03T00:00:00+00:00&quot;&gt;&lt;strong&gt;May 03, 2022&lt;/strong&gt;&lt;/time&gt;
                 
                 &lt;mark&gt;Abril 2022&lt;/mark&gt;
                 
             &lt;/a&gt;&lt;/li&gt;
             
             &lt;li&gt;&lt;a href=&quot;/marco-22&quot;&gt;
-                &lt;time datetime=&quot;2022-04-02T00:00:00+00:00&quot;&gt;April 02, 2022&lt;/time&gt;
+                &lt;time datetime=&quot;2022-04-02T00:00:00+00:00&quot;&gt;&lt;strong&gt;April 02, 2022&lt;/strong&gt;&lt;/time&gt;
                 
                 &lt;mark&gt;Março 2022&lt;/mark&gt;
                 
             &lt;/a&gt;&lt;/li&gt;
             
             &lt;li&gt;&lt;a href=&quot;/fevereiro-22&quot;&gt;
-                &lt;time datetime=&quot;2022-03-02T00:00:00+00:00&quot;&gt;March 02, 2022&lt;/time&gt;
+                &lt;time datetime=&quot;2022-03-02T00:00:00+00:00&quot;&gt;&lt;strong&gt;March 02, 2022&lt;/strong&gt;&lt;/time&gt;
                 
                 &lt;mark&gt;Fevereiro 2022&lt;/mark&gt;
                 
             &lt;/a&gt;&lt;/li&gt;
             
             &lt;li&gt;&lt;a href=&quot;/janeiro-22&quot;&gt;
-                &lt;time datetime=&quot;2022-02-01T00:00:00+00:00&quot;&gt;February 01, 2022&lt;/time&gt;
+                &lt;time datetime=&quot;2022-02-01T00:00:00+00:00&quot;&gt;&lt;strong&gt;February 01, 2022&lt;/strong&gt;&lt;/time&gt;
                 
                 &lt;mark&gt;Janeiro 2022&lt;/mark&gt;
                 
             &lt;/a&gt;&lt;/li&gt;
             
             &lt;li&gt;&lt;a href=&quot;/dezembro-21&quot;&gt;
-                &lt;time datetime=&quot;2022-01-04T00:00:00+00:00&quot;&gt;January 04, 2022&lt;/time&gt;
+                &lt;time datetime=&quot;2022-01-04T00:00:00+00:00&quot;&gt;&lt;strong&gt;January 04, 2022&lt;/strong&gt;&lt;/time&gt;
                 
                 &lt;mark&gt;Dezembro 2021&lt;/mark&gt;
                 
             &lt;/a&gt;&lt;/li&gt;
             
             &lt;li&gt;&lt;a href=&quot;/novembro-21&quot;&gt;
-                &lt;time datetime=&quot;2021-12-04T00:00:00+00:00&quot;&gt;December 04, 2021&lt;/time&gt;
+                &lt;time datetime=&quot;2021-12-04T00:00:00+00:00&quot;&gt;&lt;strong&gt;December 04, 2021&lt;/strong&gt;&lt;/time&gt;
                 
                 &lt;mark&gt;Novembro 2021&lt;/mark&gt;
                 
             &lt;/a&gt;&lt;/li&gt;
             
             &lt;li&gt;&lt;a href=&quot;/outubro-21&quot;&gt;
-                &lt;time datetime=&quot;2021-10-30T00:00:00+00:00&quot;&gt;October 30, 2021&lt;/time&gt;
+                &lt;time datetime=&quot;2021-10-30T00:00:00+00:00&quot;&gt;&lt;strong&gt;October 30, 2021&lt;/strong&gt;&lt;/time&gt;
                 
                 &lt;mark&gt;Outubro 2021&lt;/mark&gt;
                 
             &lt;/a&gt;&lt;/li&gt;
             
             &lt;li&gt;&lt;a href=&quot;/setembro-21&quot;&gt;
-                &lt;time datetime=&quot;2021-10-01T00:00:00+00:00&quot;&gt;October 01, 2021&lt;/time&gt;
+                &lt;time datetime=&quot;2021-10-01T00:00:00+00:00&quot;&gt;&lt;strong&gt;October 01, 2021&lt;/strong&gt;&lt;/time&gt;
                 
                 &lt;mark&gt;Setembro 2021&lt;/mark&gt;
                 
             &lt;/a&gt;&lt;/li&gt;
             
             &lt;li&gt;&lt;a href=&quot;/agosto-21&quot;&gt;
-                &lt;time datetime=&quot;2021-09-01T00:00:00+00:00&quot;&gt;September 01, 2021&lt;/time&gt;
+                &lt;time datetime=&quot;2021-09-01T00:00:00+00:00&quot;&gt;&lt;strong&gt;September 01, 2021&lt;/strong&gt;&lt;/time&gt;
                 
                 &lt;mark&gt;Agosto 2021&lt;/mark&gt;
                 
             &lt;/a&gt;&lt;/li&gt;
             
             &lt;li&gt;&lt;a href=&quot;/julho-21&quot;&gt;
-                &lt;time datetime=&quot;2021-08-02T00:00:00+00:00&quot;&gt;August 02, 2021&lt;/time&gt;
+                &lt;time datetime=&quot;2021-08-02T00:00:00+00:00&quot;&gt;&lt;strong&gt;August 02, 2021&lt;/strong&gt;&lt;/time&gt;
                 
                 &lt;mark&gt;Julho 2021&lt;/mark&gt;
                 
             &lt;/a&gt;&lt;/li&gt;
             
             &lt;li&gt;&lt;a href=&quot;/junho-21&quot;&gt;
-                &lt;time datetime=&quot;2021-07-01T00:00:00+00:00&quot;&gt;July 01, 2021&lt;/time&gt;
+                &lt;time datetime=&quot;2021-07-01T00:00:00+00:00&quot;&gt;&lt;strong&gt;July 01, 2021&lt;/strong&gt;&lt;/time&gt;
                 
                 &lt;mark&gt;Junho 2021&lt;/mark&gt;
                 
             &lt;/a&gt;&lt;/li&gt;
             
             &lt;li&gt;&lt;a href=&quot;/maio-21&quot;&gt;
-                &lt;time datetime=&quot;2021-05-31T00:00:00+00:00&quot;&gt;May 31, 2021&lt;/time&gt;
+                &lt;time datetime=&quot;2021-05-31T00:00:00+00:00&quot;&gt;&lt;strong&gt;May 31, 2021&lt;/strong&gt;&lt;/time&gt;
                 
                 &lt;mark&gt;Maio 2021&lt;/mark&gt;
                 
             &lt;/a&gt;&lt;/li&gt;
             
             &lt;li&gt;&lt;a href=&quot;/abril-21&quot;&gt;
-                &lt;time datetime=&quot;2021-05-01T00:00:00+00:00&quot;&gt;May 01, 2021&lt;/time&gt;
+                &lt;time datetime=&quot;2021-05-01T00:00:00+00:00&quot;&gt;&lt;strong&gt;May 01, 2021&lt;/strong&gt;&lt;/time&gt;
                 
                 &lt;mark&gt;Abril 2021&lt;/mark&gt;
                 
             &lt;/a&gt;&lt;/li&gt;
             
             &lt;li&gt;&lt;a href=&quot;/marco-21&quot;&gt;
-                &lt;time datetime=&quot;2021-04-01T00:00:00+00:00&quot;&gt;April 01, 2021&lt;/time&gt;
+                &lt;time datetime=&quot;2021-04-01T00:00:00+00:00&quot;&gt;&lt;strong&gt;April 01, 2021&lt;/strong&gt;&lt;/time&gt;
                 
                 &lt;mark&gt;Março 2021&lt;/mark&gt;
                 
             &lt;/a&gt;&lt;/li&gt;
             
             &lt;li&gt;&lt;a href=&quot;/fevereiro-21&quot;&gt;
-                &lt;time datetime=&quot;2021-03-02T00:00:00+00:00&quot;&gt;March 02, 2021&lt;/time&gt;
+                &lt;time datetime=&quot;2021-03-02T00:00:00+00:00&quot;&gt;&lt;strong&gt;March 02, 2021&lt;/strong&gt;&lt;/time&gt;
                 
                 &lt;mark&gt;Fevereiro 2021&lt;/mark&gt;
                 
             &lt;/a&gt;&lt;/li&gt;
             
             &lt;li&gt;&lt;a href=&quot;/janeiro-21&quot;&gt;
-                &lt;time datetime=&quot;2021-01-30T00:00:00+00:00&quot;&gt;January 30, 2021&lt;/time&gt;
+                &lt;time datetime=&quot;2021-01-30T00:00:00+00:00&quot;&gt;&lt;strong&gt;January 30, 2021&lt;/strong&gt;&lt;/time&gt;
                 
                 &lt;mark&gt;Janeiro 2021&lt;/mark&gt;
                 
             &lt;/a&gt;&lt;/li&gt;
             
             &lt;li&gt;&lt;a href=&quot;/dezembro-20&quot;&gt;
-                &lt;time datetime=&quot;2021-01-03T00:00:00+00:00&quot;&gt;January 03, 2021&lt;/time&gt;
+                &lt;time datetime=&quot;2021-01-03T00:00:00+00:00&quot;&gt;&lt;strong&gt;January 03, 2021&lt;/strong&gt;&lt;/time&gt;
                 
                 &lt;mark&gt;Dezembro 2020&lt;/mark&gt;
                 
             &lt;/a&gt;&lt;/li&gt;
             
             &lt;li&gt;&lt;a href=&quot;/novembro-20&quot;&gt;
-                &lt;time datetime=&quot;2020-12-01T00:00:00+00:00&quot;&gt;December 01, 2020&lt;/time&gt;
+                &lt;time datetime=&quot;2020-12-01T00:00:00+00:00&quot;&gt;&lt;strong&gt;December 01, 2020&lt;/strong&gt;&lt;/time&gt;
                 
                 &lt;mark&gt;Novembro 2020&lt;/mark&gt;
                 
             &lt;/a&gt;&lt;/li&gt;
             
             &lt;li&gt;&lt;a href=&quot;/outubro-20&quot;&gt;
-                &lt;time datetime=&quot;2020-11-03T00:00:00+00:00&quot;&gt;November 03, 2020&lt;/time&gt;
+                &lt;time datetime=&quot;2020-11-03T00:00:00+00:00&quot;&gt;&lt;strong&gt;November 03, 2020&lt;/strong&gt;&lt;/time&gt;
                 
                 &lt;mark&gt;Outubro 2020&lt;/mark&gt;
                 
             &lt;/a&gt;&lt;/li&gt;
             
             &lt;li&gt;&lt;a href=&quot;/setembro-20&quot;&gt;
-                &lt;time datetime=&quot;2020-09-30T00:00:00+00:00&quot;&gt;September 30, 2020&lt;/time&gt;
+                &lt;time datetime=&quot;2020-09-30T00:00:00+00:00&quot;&gt;&lt;strong&gt;September 30, 2020&lt;/strong&gt;&lt;/time&gt;
                 
                 &lt;mark&gt;Setembro 2020&lt;/mark&gt;
                 
             &lt;/a&gt;&lt;/li&gt;
             
             &lt;li&gt;&lt;a href=&quot;/agosto-20&quot;&gt;
-                &lt;time datetime=&quot;2020-09-01T00:00:00+00:00&quot;&gt;September 01, 2020&lt;/time&gt;
+                &lt;time datetime=&quot;2020-09-01T00:00:00+00:00&quot;&gt;&lt;strong&gt;September 01, 2020&lt;/strong&gt;&lt;/time&gt;
                 
                 &lt;mark&gt;Agosto 2020&lt;/mark&gt;
                 
             &lt;/a&gt;&lt;/li&gt;
             
             &lt;li&gt;&lt;a href=&quot;/julho-20&quot;&gt;
-                &lt;time datetime=&quot;2020-08-01T00:00:00+00:00&quot;&gt;August 01, 2020&lt;/time&gt;
+                &lt;time datetime=&quot;2020-08-01T00:00:00+00:00&quot;&gt;&lt;strong&gt;August 01, 2020&lt;/strong&gt;&lt;/time&gt;
                 
                 &lt;mark&gt;Julho 2020&lt;/mark&gt;
                 
             &lt;/a&gt;&lt;/li&gt;
             
             &lt;li&gt;&lt;a href=&quot;/junho-20&quot;&gt;
-                &lt;time datetime=&quot;2020-07-02T00:00:00+00:00&quot;&gt;July 02, 2020&lt;/time&gt;
+                &lt;time datetime=&quot;2020-07-02T00:00:00+00:00&quot;&gt;&lt;strong&gt;July 02, 2020&lt;/strong&gt;&lt;/time&gt;
                 
                 &lt;mark&gt;Junho 2020&lt;/mark&gt;
                 
             &lt;/a&gt;&lt;/li&gt;
             
             &lt;li&gt;&lt;a href=&quot;/maio-20&quot;&gt;
-                &lt;time datetime=&quot;2020-05-30T00:00:00+00:00&quot;&gt;May 30, 2020&lt;/time&gt;
+                &lt;time datetime=&quot;2020-05-30T00:00:00+00:00&quot;&gt;&lt;strong&gt;May 30, 2020&lt;/strong&gt;&lt;/time&gt;
                 
                 &lt;mark&gt;Maio 2020&lt;/mark&gt;
                 
             &lt;/a&gt;&lt;/li&gt;
             
             &lt;li&gt;&lt;a href=&quot;/abril-20&quot;&gt;
-                &lt;time datetime=&quot;2020-04-30T00:00:00+00:00&quot;&gt;April 30, 2020&lt;/time&gt;
+                &lt;time datetime=&quot;2020-04-30T00:00:00+00:00&quot;&gt;&lt;strong&gt;April 30, 2020&lt;/strong&gt;&lt;/time&gt;
                 
                 &lt;mark&gt;Abril 2020&lt;/mark&gt;
                 
             &lt;/a&gt;&lt;/li&gt;
             
             &lt;li&gt;&lt;a href=&quot;/marco-20&quot;&gt;
-                &lt;time datetime=&quot;2020-03-30T00:00:00+00:00&quot;&gt;March 30, 2020&lt;/time&gt;
+                &lt;time datetime=&quot;2020-03-30T00:00:00+00:00&quot;&gt;&lt;strong&gt;March 30, 2020&lt;/strong&gt;&lt;/time&gt;
                 
                 &lt;mark&gt;Março 2020&lt;/mark&gt;
                 
@@ -47892,21 +47892,21 @@ Pense duas vezes antes de se envolver.
     
     
     &lt;div class=&quot;tag-list&quot; id=&quot;saúde&quot; aria-labelledby=&quot;saúde-heading&quot;&gt;
-        &lt;h1 id=&quot;saúde-heading&quot;&gt;
+        &lt;h1 id=&quot;saúde-heading&quot; href=&quot;#&quot; class=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;
             saúde
         &lt;/h1&gt;
         &lt;ul class=&quot;search-link&quot;&gt;
         
             
             &lt;li&gt;&lt;a href=&quot;/arm-tendinitis&quot;&gt;
-                &lt;time datetime=&quot;2024-08-13T00:00:00+00:00&quot;&gt;August 13, 2024&lt;/time&gt;
+                &lt;time datetime=&quot;2024-08-13T00:00:00+00:00&quot;&gt;&lt;strong&gt;August 13, 2024&lt;/strong&gt;&lt;/time&gt;
                 
                 &lt;mark&gt;Arm Tendinitis&lt;/mark&gt;
                 
             &lt;/a&gt;&lt;/li&gt;
             
             &lt;li&gt;&lt;a href=&quot;/jejum&quot;&gt;
-                &lt;time datetime=&quot;2022-10-18T00:00:00+00:00&quot;&gt;October 18, 2022&lt;/time&gt;
+                &lt;time datetime=&quot;2022-10-18T00:00:00+00:00&quot;&gt;&lt;strong&gt;October 18, 2022&lt;/strong&gt;&lt;/time&gt;
                 
                 &lt;mark&gt;Effects of 10-Day Complete Fasting&lt;/mark&gt;
                 
@@ -47927,189 +47927,189 @@ Pense duas vezes antes de se envolver.
     
     
     &lt;div class=&quot;tag-list&quot; id=&quot;scripts&quot; aria-labelledby=&quot;scripts-heading&quot;&gt;
-        &lt;h1 id=&quot;scripts-heading&quot;&gt;
+        &lt;h1 id=&quot;scripts-heading&quot; href=&quot;#&quot; class=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;
             scripts
         &lt;/h1&gt;
         &lt;ul class=&quot;search-link&quot;&gt;
         
             
             &lt;li&gt;&lt;a href=&quot;/longer-inputs-on-whisper-api&quot;&gt;
-                &lt;time datetime=&quot;2024-07-21T00:00:00+00:00&quot;&gt;July 21, 2024&lt;/time&gt;
+                &lt;time datetime=&quot;2024-07-21T00:00:00+00:00&quot;&gt;&lt;strong&gt;July 21, 2024&lt;/strong&gt;&lt;/time&gt;
                 
                 Longer inputs on WHISPER API
                 
             &lt;/a&gt;&lt;/li&gt;
             
             &lt;li&gt;&lt;a href=&quot;/iphone-files2zip-zip2clipboard&quot;&gt;
-                &lt;time datetime=&quot;2024-07-20T00:00:00+00:00&quot;&gt;July 20, 2024&lt;/time&gt;
+                &lt;time datetime=&quot;2024-07-20T00:00:00+00:00&quot;&gt;&lt;strong&gt;July 20, 2024&lt;/strong&gt;&lt;/time&gt;
                 
                 iPhone: files2zip &amp;amp; zip2clipboard
                 
             &lt;/a&gt;&lt;/li&gt;
             
             &lt;li&gt;&lt;a href=&quot;/webhooks-using-serverlesscom-lift-plugin&quot;&gt;
-                &lt;time datetime=&quot;2024-07-17T00:00:00+00:00&quot;&gt;July 17, 2024&lt;/time&gt;
+                &lt;time datetime=&quot;2024-07-17T00:00:00+00:00&quot;&gt;&lt;strong&gt;July 17, 2024&lt;/strong&gt;&lt;/time&gt;
                 
                 Webhooks using `Serverless.com` Lift plugin
                 
             &lt;/a&gt;&lt;/li&gt;
             
             &lt;li&gt;&lt;a href=&quot;/gingko-toc-outliner&quot;&gt;
-                &lt;time datetime=&quot;2024-06-17T00:00:00+00:00&quot;&gt;June 17, 2024&lt;/time&gt;
+                &lt;time datetime=&quot;2024-06-17T00:00:00+00:00&quot;&gt;&lt;strong&gt;June 17, 2024&lt;/strong&gt;&lt;/time&gt;
                 
                 &lt;mark&gt;Gingko JSON ToC outliner&lt;/mark&gt;
                 
             &lt;/a&gt;&lt;/li&gt;
             
             &lt;li&gt;&lt;a href=&quot;/clipaper-qa&quot;&gt;
-                &lt;time datetime=&quot;2024-06-16T00:00:00+00:00&quot;&gt;June 16, 2024&lt;/time&gt;
+                &lt;time datetime=&quot;2024-06-16T00:00:00+00:00&quot;&gt;&lt;strong&gt;June 16, 2024&lt;/strong&gt;&lt;/time&gt;
                 
                 &lt;mark&gt;cliPaperQA&lt;/mark&gt;
                 
             &lt;/a&gt;&lt;/li&gt;
             
             &lt;li&gt;&lt;a href=&quot;/bulk-gpt&quot;&gt;
-                &lt;time datetime=&quot;2024-06-13T00:00:00+00:00&quot;&gt;June 13, 2024&lt;/time&gt;
+                &lt;time datetime=&quot;2024-06-13T00:00:00+00:00&quot;&gt;&lt;strong&gt;June 13, 2024&lt;/strong&gt;&lt;/time&gt;
                 
                 &lt;mark&gt;bulkGPT: multithreading for OpenAI&apos;s output limits&lt;/mark&gt;
                 
             &lt;/a&gt;&lt;/li&gt;
             
             &lt;li&gt;&lt;a href=&quot;/pdf-utf8&quot;&gt;
-                &lt;time datetime=&quot;2024-06-02T00:00:00+00:00&quot;&gt;June 02, 2024&lt;/time&gt;
+                &lt;time datetime=&quot;2024-06-02T00:00:00+00:00&quot;&gt;&lt;strong&gt;June 02, 2024&lt;/strong&gt;&lt;/time&gt;
                 
                 &lt;mark&gt;Convert `.pdf` to `UTF-8`&lt;/mark&gt;
                 
             &lt;/a&gt;&lt;/li&gt;
             
             &lt;li&gt;&lt;a href=&quot;/llm-renamer&quot;&gt;
-                &lt;time datetime=&quot;2024-06-02T00:00:00+00:00&quot;&gt;June 02, 2024&lt;/time&gt;
+                &lt;time datetime=&quot;2024-06-02T00:00:00+00:00&quot;&gt;&lt;strong&gt;June 02, 2024&lt;/strong&gt;&lt;/time&gt;
                 
                 &lt;mark&gt;Rename files using llm.datasette.io&lt;/mark&gt;
                 
             &lt;/a&gt;&lt;/li&gt;
             
             &lt;li&gt;&lt;a href=&quot;/bibtex-check&quot;&gt;
-                &lt;time datetime=&quot;2024-06-02T00:00:00+00:00&quot;&gt;June 02, 2024&lt;/time&gt;
+                &lt;time datetime=&quot;2024-06-02T00:00:00+00:00&quot;&gt;&lt;strong&gt;June 02, 2024&lt;/strong&gt;&lt;/time&gt;
                 
                 &lt;mark&gt;Python script to check LaTeX citations&lt;/mark&gt;
                 
             &lt;/a&gt;&lt;/li&gt;
             
             &lt;li&gt;&lt;a href=&quot;/copy-dedup&quot;&gt;
-                &lt;time datetime=&quot;2024-06-01T00:00:00+00:00&quot;&gt;June 01, 2024&lt;/time&gt;
+                &lt;time datetime=&quot;2024-06-01T00:00:00+00:00&quot;&gt;&lt;strong&gt;June 01, 2024&lt;/strong&gt;&lt;/time&gt;
                 
                 &lt;mark&gt;&quot;Copy Spotter&quot; and Deduplication&lt;/mark&gt;
                 
             &lt;/a&gt;&lt;/li&gt;
             
             &lt;li&gt;&lt;a href=&quot;/files-by-type&quot;&gt;
-                &lt;time datetime=&quot;2024-05-30T00:00:00+00:00&quot;&gt;May 30, 2024&lt;/time&gt;
+                &lt;time datetime=&quot;2024-05-30T00:00:00+00:00&quot;&gt;&lt;strong&gt;May 30, 2024&lt;/strong&gt;&lt;/time&gt;
                 
                 &lt;mark&gt;Organize files by their extensions&lt;/mark&gt;
                 
             &lt;/a&gt;&lt;/li&gt;
             
             &lt;li&gt;&lt;a href=&quot;/storj-sync&quot;&gt;
-                &lt;time datetime=&quot;2024-05-06T00:00:00+00:00&quot;&gt;May 06, 2024&lt;/time&gt;
+                &lt;time datetime=&quot;2024-05-06T00:00:00+00:00&quot;&gt;&lt;strong&gt;May 06, 2024&lt;/strong&gt;&lt;/time&gt;
                 
                 &lt;mark&gt;Rclone: Syncing STORJ Cloud to Local Storage&lt;/mark&gt;
                 
             &lt;/a&gt;&lt;/li&gt;
             
             &lt;li&gt;&lt;a href=&quot;/stf-scraper&quot;&gt;
-                &lt;time datetime=&quot;2024-05-01T00:00:00+00:00&quot;&gt;May 01, 2024&lt;/time&gt;
+                &lt;time datetime=&quot;2024-05-01T00:00:00+00:00&quot;&gt;&lt;strong&gt;May 01, 2024&lt;/strong&gt;&lt;/time&gt;
                 
                 &lt;mark&gt;STF Scraper [script]&lt;/mark&gt;
                 
             &lt;/a&gt;&lt;/li&gt;
             
             &lt;li&gt;&lt;a href=&quot;/whatsappy&quot;&gt;
-                &lt;time datetime=&quot;2024-04-28T00:00:00+00:00&quot;&gt;April 28, 2024&lt;/time&gt;
+                &lt;time datetime=&quot;2024-04-28T00:00:00+00:00&quot;&gt;&lt;strong&gt;April 28, 2024&lt;/strong&gt;&lt;/time&gt;
                 
                 &lt;mark&gt;WhatsapPY data&lt;/mark&gt;
                 
             &lt;/a&gt;&lt;/li&gt;
             
             &lt;li&gt;&lt;a href=&quot;/whisper-splitter&quot;&gt;
-                &lt;time datetime=&quot;2024-03-04T00:00:00+00:00&quot;&gt;March 04, 2024&lt;/time&gt;
+                &lt;time datetime=&quot;2024-03-04T00:00:00+00:00&quot;&gt;&lt;strong&gt;March 04, 2024&lt;/strong&gt;&lt;/time&gt;
                 
                 &lt;mark&gt;Split `.wav` for Whisper&lt;/mark&gt;
                 
             &lt;/a&gt;&lt;/li&gt;
             
             &lt;li&gt;&lt;a href=&quot;/cat-files&quot;&gt;
-                &lt;time datetime=&quot;2024-02-22T00:00:00+00:00&quot;&gt;February 22, 2024&lt;/time&gt;
+                &lt;time datetime=&quot;2024-02-22T00:00:00+00:00&quot;&gt;&lt;strong&gt;February 22, 2024&lt;/strong&gt;&lt;/time&gt;
                 
                 &lt;mark&gt;cat files contents [script]&lt;/mark&gt;
                 
             &lt;/a&gt;&lt;/li&gt;
             
             &lt;li&gt;&lt;a href=&quot;/tampermonkey-dify&quot;&gt;
-                &lt;time datetime=&quot;2024-02-18T00:00:00+00:00&quot;&gt;February 18, 2024&lt;/time&gt;
+                &lt;time datetime=&quot;2024-02-18T00:00:00+00:00&quot;&gt;&lt;strong&gt;February 18, 2024&lt;/strong&gt;&lt;/time&gt;
                 
                 &lt;mark&gt;tampermonkey dify hit-testing [script]&lt;/mark&gt;
                 
             &lt;/a&gt;&lt;/li&gt;
             
             &lt;li&gt;&lt;a href=&quot;/dasel_citation_appender&quot;&gt;
-                &lt;time datetime=&quot;2024-02-17T00:00:00+00:00&quot;&gt;February 17, 2024&lt;/time&gt;
+                &lt;time datetime=&quot;2024-02-17T00:00:00+00:00&quot;&gt;&lt;strong&gt;February 17, 2024&lt;/strong&gt;&lt;/time&gt;
                 
                 &lt;mark&gt;dasel references filtering + citation appender [script]&lt;/mark&gt;
                 
             &lt;/a&gt;&lt;/li&gt;
             
             &lt;li&gt;&lt;a href=&quot;/pyragraphs&quot;&gt;
-                &lt;time datetime=&quot;2024-02-05T00:00:00+00:00&quot;&gt;February 05, 2024&lt;/time&gt;
+                &lt;time datetime=&quot;2024-02-05T00:00:00+00:00&quot;&gt;&lt;strong&gt;February 05, 2024&lt;/strong&gt;&lt;/time&gt;
                 
                 &lt;mark&gt;PYragraphs&lt;/mark&gt;
                 
             &lt;/a&gt;&lt;/li&gt;
             
             &lt;li&gt;&lt;a href=&quot;/py-oda&quot;&gt;
-                &lt;time datetime=&quot;2024-01-28T00:00:00+00:00&quot;&gt;January 28, 2024&lt;/time&gt;
+                &lt;time datetime=&quot;2024-01-28T00:00:00+00:00&quot;&gt;&lt;strong&gt;January 28, 2024&lt;/strong&gt;&lt;/time&gt;
                 
                 &lt;mark&gt;Py Oda&lt;/mark&gt;
                 
             &lt;/a&gt;&lt;/li&gt;
             
             &lt;li&gt;&lt;a href=&quot;/thermal&quot;&gt;
-                &lt;time datetime=&quot;2024-01-23T00:00:00+00:00&quot;&gt;January 23, 2024&lt;/time&gt;
+                &lt;time datetime=&quot;2024-01-23T00:00:00+00:00&quot;&gt;&lt;strong&gt;January 23, 2024&lt;/strong&gt;&lt;/time&gt;
                 
                 &lt;mark&gt;Script to print from clipboard to a thermal printer&lt;/mark&gt;
                 
             &lt;/a&gt;&lt;/li&gt;
             
             &lt;li&gt;&lt;a href=&quot;/wps&quot;&gt;
-                &lt;time datetime=&quot;2024-01-03T00:00:00+00:00&quot;&gt;January 03, 2024&lt;/time&gt;
+                &lt;time datetime=&quot;2024-01-03T00:00:00+00:00&quot;&gt;&lt;strong&gt;January 03, 2024&lt;/strong&gt;&lt;/time&gt;
                 
                 &lt;mark&gt;install_wps.sh&lt;/mark&gt;
                 
             &lt;/a&gt;&lt;/li&gt;
             
             &lt;li&gt;&lt;a href=&quot;/jekyller&quot;&gt;
-                &lt;time datetime=&quot;2023-12-24T00:00:00+00:00&quot;&gt;December 24, 2023&lt;/time&gt;
+                &lt;time datetime=&quot;2023-12-24T00:00:00+00:00&quot;&gt;&lt;strong&gt;December 24, 2023&lt;/strong&gt;&lt;/time&gt;
                 
                 &lt;mark&gt;Shell script to replace JEKYLLER edge extension&lt;/mark&gt;
                 
             &lt;/a&gt;&lt;/li&gt;
             
             &lt;li&gt;&lt;a href=&quot;/dpkg-script&quot;&gt;
-                &lt;time datetime=&quot;2023-12-24T00:00:00+00:00&quot;&gt;December 24, 2023&lt;/time&gt;
+                &lt;time datetime=&quot;2023-12-24T00:00:00+00:00&quot;&gt;&lt;strong&gt;December 24, 2023&lt;/strong&gt;&lt;/time&gt;
                 
                 &lt;mark&gt;Packages list script&lt;/mark&gt;
                 
             &lt;/a&gt;&lt;/li&gt;
             
             &lt;li&gt;&lt;a href=&quot;/gpt-sheets&quot;&gt;
-                &lt;time datetime=&quot;2023-12-21T00:00:00+00:00&quot;&gt;December 21, 2023&lt;/time&gt;
+                &lt;time datetime=&quot;2023-12-21T00:00:00+00:00&quot;&gt;&lt;strong&gt;December 21, 2023&lt;/strong&gt;&lt;/time&gt;
                 
                 OpenAI GPT API in Google Sheets
                 
             &lt;/a&gt;&lt;/li&gt;
             
             &lt;li&gt;&lt;a href=&quot;/pypdf&quot;&gt;
-                &lt;time datetime=&quot;2023-03-07T00:00:00+00:00&quot;&gt;March 07, 2023&lt;/time&gt;
+                &lt;time datetime=&quot;2023-03-07T00:00:00+00:00&quot;&gt;&lt;strong&gt;March 07, 2023&lt;/strong&gt;&lt;/time&gt;
                 
                 &lt;mark&gt;github.com/py-pdf&lt;/mark&gt;
                 
@@ -48160,14 +48160,14 @@ Pense duas vezes antes de se envolver.
     
     
     &lt;div class=&quot;tag-list&quot; id=&quot;scripts-ai&quot; aria-labelledby=&quot;scripts-ai-heading&quot;&gt;
-        &lt;h1 id=&quot;scripts-ai-heading&quot;&gt;
+        &lt;h1 id=&quot;scripts-ai-heading&quot; href=&quot;#&quot; class=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;
             scripts&amp;gt;AI
         &lt;/h1&gt;
         &lt;ul class=&quot;search-link&quot;&gt;
         
             
             &lt;li&gt;&lt;a href=&quot;/longer-inputs-on-whisper-api&quot;&gt;
-                &lt;time datetime=&quot;2024-07-21T00:00:00+00:00&quot;&gt;July 21, 2024&lt;/time&gt;
+                &lt;time datetime=&quot;2024-07-21T00:00:00+00:00&quot;&gt;&lt;strong&gt;July 21, 2024&lt;/strong&gt;&lt;/time&gt;
                 
                 &lt;mark&gt;Longer inputs on WHISPER API&lt;/mark&gt;
                 
@@ -48193,14 +48193,14 @@ Pense duas vezes antes de se envolver.
     
     
     &lt;div class=&quot;tag-list&quot; id=&quot;scripts-cloud&quot; aria-labelledby=&quot;scripts-cloud-heading&quot;&gt;
-        &lt;h1 id=&quot;scripts-cloud-heading&quot;&gt;
+        &lt;h1 id=&quot;scripts-cloud-heading&quot; href=&quot;#&quot; class=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;
             scripts&amp;gt;cloud
         &lt;/h1&gt;
         &lt;ul class=&quot;search-link&quot;&gt;
         
             
             &lt;li&gt;&lt;a href=&quot;/webhooks-using-serverlesscom-lift-plugin&quot;&gt;
-                &lt;time datetime=&quot;2024-07-17T00:00:00+00:00&quot;&gt;July 17, 2024&lt;/time&gt;
+                &lt;time datetime=&quot;2024-07-17T00:00:00+00:00&quot;&gt;&lt;strong&gt;July 17, 2024&lt;/strong&gt;&lt;/time&gt;
                 
                 &lt;mark&gt;Webhooks using `Serverless.com` Lift plugin&lt;/mark&gt;
                 
@@ -48226,14 +48226,14 @@ Pense duas vezes antes de se envolver.
     
     
     &lt;div class=&quot;tag-list&quot; id=&quot;scripts-google-apps-script&quot; aria-labelledby=&quot;scripts-google-apps-script-heading&quot;&gt;
-        &lt;h1 id=&quot;scripts-google-apps-script-heading&quot;&gt;
+        &lt;h1 id=&quot;scripts-google-apps-script-heading&quot; href=&quot;#&quot; class=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;
             scripts&amp;gt;google-apps-script
         &lt;/h1&gt;
         &lt;ul class=&quot;search-link&quot;&gt;
         
             
             &lt;li&gt;&lt;a href=&quot;/gpt-sheets&quot;&gt;
-                &lt;time datetime=&quot;2023-12-21T00:00:00+00:00&quot;&gt;December 21, 2023&lt;/time&gt;
+                &lt;time datetime=&quot;2023-12-21T00:00:00+00:00&quot;&gt;&lt;strong&gt;December 21, 2023&lt;/strong&gt;&lt;/time&gt;
                 
                 &lt;mark&gt;OpenAI GPT API in Google Sheets&lt;/mark&gt;
                 
@@ -48259,14 +48259,14 @@ Pense duas vezes antes de se envolver.
     
     
     &lt;div class=&quot;tag-list&quot; id=&quot;scripts-mobile&quot; aria-labelledby=&quot;scripts-mobile-heading&quot;&gt;
-        &lt;h1 id=&quot;scripts-mobile-heading&quot;&gt;
+        &lt;h1 id=&quot;scripts-mobile-heading&quot; href=&quot;#&quot; class=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;
             scripts&amp;gt;mobile
         &lt;/h1&gt;
         &lt;ul class=&quot;search-link&quot;&gt;
         
             
             &lt;li&gt;&lt;a href=&quot;/iphone-files2zip-zip2clipboard&quot;&gt;
-                &lt;time datetime=&quot;2024-07-20T00:00:00+00:00&quot;&gt;July 20, 2024&lt;/time&gt;
+                &lt;time datetime=&quot;2024-07-20T00:00:00+00:00&quot;&gt;&lt;strong&gt;July 20, 2024&lt;/strong&gt;&lt;/time&gt;
                 
                 &lt;mark&gt;iPhone: files2zip &amp;amp; zip2clipboard&lt;/mark&gt;
                 
@@ -48299,35 +48299,35 @@ Pense duas vezes antes de se envolver.
     
     
     &lt;div class=&quot;tag-list&quot; id=&quot;sell&quot; aria-labelledby=&quot;sell-heading&quot;&gt;
-        &lt;h1 id=&quot;sell-heading&quot;&gt;
+        &lt;h1 id=&quot;sell-heading&quot; href=&quot;#&quot; class=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;
             sell
         &lt;/h1&gt;
         &lt;ul class=&quot;search-link&quot;&gt;
         
             
             &lt;li&gt;&lt;a href=&quot;/sell-smto3&quot;&gt;
-                &lt;time datetime=&quot;2021-11-03T00:00:00+00:00&quot;&gt;November 03, 2021&lt;/time&gt;
+                &lt;time datetime=&quot;2021-11-03T00:00:00+00:00&quot;&gt;&lt;strong&gt;November 03, 2021&lt;/strong&gt;&lt;/time&gt;
                 
                 &lt;mark&gt;VENDA SMTO3 04,74% a.m.&lt;/mark&gt;
                 
             &lt;/a&gt;&lt;/li&gt;
             
             &lt;li&gt;&lt;a href=&quot;/sell-tots3&quot;&gt;
-                &lt;time datetime=&quot;2021-09-01T00:00:00+00:00&quot;&gt;September 01, 2021&lt;/time&gt;
+                &lt;time datetime=&quot;2021-09-01T00:00:00+00:00&quot;&gt;&lt;strong&gt;September 01, 2021&lt;/strong&gt;&lt;/time&gt;
                 
                 &lt;mark&gt;VENDA TOTS3 04,20% a.m.&lt;/mark&gt;
                 
             &lt;/a&gt;&lt;/li&gt;
             
             &lt;li&gt;&lt;a href=&quot;/sell-mtsa4&quot;&gt;
-                &lt;time datetime=&quot;2021-06-11T00:00:00+00:00&quot;&gt;June 11, 2021&lt;/time&gt;
+                &lt;time datetime=&quot;2021-06-11T00:00:00+00:00&quot;&gt;&lt;strong&gt;June 11, 2021&lt;/strong&gt;&lt;/time&gt;
                 
                 &lt;mark&gt;VENDA MTSA4 08,14% a.m.&lt;/mark&gt;
                 
             &lt;/a&gt;&lt;/li&gt;
             
             &lt;li&gt;&lt;a href=&quot;/sell-card3&quot;&gt;
-                &lt;time datetime=&quot;2021-04-02T00:00:00+00:00&quot;&gt;April 02, 2021&lt;/time&gt;
+                &lt;time datetime=&quot;2021-04-02T00:00:00+00:00&quot;&gt;&lt;strong&gt;April 02, 2021&lt;/strong&gt;&lt;/time&gt;
                 
                 &lt;mark&gt;VENDA CARD3 04,02% a.m.&lt;/mark&gt;
                 
@@ -48348,35 +48348,35 @@ Pense duas vezes antes de se envolver.
     
     
     &lt;div class=&quot;tag-list&quot; id=&quot;software&quot; aria-labelledby=&quot;software-heading&quot;&gt;
-        &lt;h1 id=&quot;software-heading&quot;&gt;
+        &lt;h1 id=&quot;software-heading&quot; href=&quot;#&quot; class=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;
             software
         &lt;/h1&gt;
         &lt;ul class=&quot;search-link&quot;&gt;
         
             
             &lt;li&gt;&lt;a href=&quot;/linux-mobile-os&quot;&gt;
-                &lt;time datetime=&quot;2024-08-17T00:00:00+00:00&quot;&gt;August 17, 2024&lt;/time&gt;
+                &lt;time datetime=&quot;2024-08-17T00:00:00+00:00&quot;&gt;&lt;strong&gt;August 17, 2024&lt;/strong&gt;&lt;/time&gt;
                 
                 Linux mobile OS
                 
             &lt;/a&gt;&lt;/li&gt;
             
             &lt;li&gt;&lt;a href=&quot;/ios-18-changelog&quot;&gt;
-                &lt;time datetime=&quot;2024-07-30T00:00:00+00:00&quot;&gt;July 30, 2024&lt;/time&gt;
+                &lt;time datetime=&quot;2024-07-30T00:00:00+00:00&quot;&gt;&lt;strong&gt;July 30, 2024&lt;/strong&gt;&lt;/time&gt;
                 
                 iOS 18 changelog
                 
             &lt;/a&gt;&lt;/li&gt;
             
             &lt;li&gt;&lt;a href=&quot;/aws-pushsafer-billing-alarm&quot;&gt;
-                &lt;time datetime=&quot;2024-07-25T00:00:00+00:00&quot;&gt;July 25, 2024&lt;/time&gt;
+                &lt;time datetime=&quot;2024-07-25T00:00:00+00:00&quot;&gt;&lt;strong&gt;July 25, 2024&lt;/strong&gt;&lt;/time&gt;
                 
                 AWS PushSafer billing alarm
                 
             &lt;/a&gt;&lt;/li&gt;
             
             &lt;li&gt;&lt;a href=&quot;/dasel&quot;&gt;
-                &lt;time datetime=&quot;2024-02-17T00:00:00+00:00&quot;&gt;February 17, 2024&lt;/time&gt;
+                &lt;time datetime=&quot;2024-02-17T00:00:00+00:00&quot;&gt;&lt;strong&gt;February 17, 2024&lt;/strong&gt;&lt;/time&gt;
                 
                 &lt;mark&gt;dasel context guide&lt;/mark&gt;
                 
@@ -48408,14 +48408,14 @@ Pense duas vezes antes de se envolver.
     
     
     &lt;div class=&quot;tag-list&quot; id=&quot;software-cloud&quot; aria-labelledby=&quot;software-cloud-heading&quot;&gt;
-        &lt;h1 id=&quot;software-cloud-heading&quot;&gt;
+        &lt;h1 id=&quot;software-cloud-heading&quot; href=&quot;#&quot; class=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;
             software&amp;gt;cloud
         &lt;/h1&gt;
         &lt;ul class=&quot;search-link&quot;&gt;
         
             
             &lt;li&gt;&lt;a href=&quot;/aws-pushsafer-billing-alarm&quot;&gt;
-                &lt;time datetime=&quot;2024-07-25T00:00:00+00:00&quot;&gt;July 25, 2024&lt;/time&gt;
+                &lt;time datetime=&quot;2024-07-25T00:00:00+00:00&quot;&gt;&lt;strong&gt;July 25, 2024&lt;/strong&gt;&lt;/time&gt;
                 
                 &lt;mark&gt;AWS PushSafer billing alarm&lt;/mark&gt;
                 
@@ -48441,21 +48441,21 @@ Pense duas vezes antes de se envolver.
     
     
     &lt;div class=&quot;tag-list&quot; id=&quot;software-mobile&quot; aria-labelledby=&quot;software-mobile-heading&quot;&gt;
-        &lt;h1 id=&quot;software-mobile-heading&quot;&gt;
+        &lt;h1 id=&quot;software-mobile-heading&quot; href=&quot;#&quot; class=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;
             software&amp;gt;mobile
         &lt;/h1&gt;
         &lt;ul class=&quot;search-link&quot;&gt;
         
             
             &lt;li&gt;&lt;a href=&quot;/linux-mobile-os&quot;&gt;
-                &lt;time datetime=&quot;2024-08-17T00:00:00+00:00&quot;&gt;August 17, 2024&lt;/time&gt;
+                &lt;time datetime=&quot;2024-08-17T00:00:00+00:00&quot;&gt;&lt;strong&gt;August 17, 2024&lt;/strong&gt;&lt;/time&gt;
                 
                 &lt;mark&gt;Linux mobile OS&lt;/mark&gt;
                 
             &lt;/a&gt;&lt;/li&gt;
             
             &lt;li&gt;&lt;a href=&quot;/ios-18-changelog&quot;&gt;
-                &lt;time datetime=&quot;2024-07-30T00:00:00+00:00&quot;&gt;July 30, 2024&lt;/time&gt;
+                &lt;time datetime=&quot;2024-07-30T00:00:00+00:00&quot;&gt;&lt;strong&gt;July 30, 2024&lt;/strong&gt;&lt;/time&gt;
                 
                 &lt;mark&gt;iOS 18 changelog&lt;/mark&gt;
                 
@@ -48492,28 +48492,28 @@ Pense duas vezes antes de se envolver.
     
     
     &lt;div class=&quot;tag-list&quot; id=&quot;spirit&quot; aria-labelledby=&quot;spirit-heading&quot;&gt;
-        &lt;h1 id=&quot;spirit-heading&quot;&gt;
+        &lt;h1 id=&quot;spirit-heading&quot; href=&quot;#&quot; class=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;
             spirit
         &lt;/h1&gt;
         &lt;ul class=&quot;search-link&quot;&gt;
         
             
             &lt;li&gt;&lt;a href=&quot;/holy-9gag&quot;&gt;
-                &lt;time datetime=&quot;2022-06-15T00:00:00+00:00&quot;&gt;June 15, 2022&lt;/time&gt;
+                &lt;time datetime=&quot;2022-06-15T00:00:00+00:00&quot;&gt;&lt;strong&gt;June 15, 2022&lt;/strong&gt;&lt;/time&gt;
                 
                 &lt;mark&gt;9gag evangelism&lt;/mark&gt;
                 
             &lt;/a&gt;&lt;/li&gt;
             
             &lt;li&gt;&lt;a href=&quot;/gustavo&quot;&gt;
-                &lt;time datetime=&quot;2018-02-26T00:00:00+00:00&quot;&gt;February 26, 2018&lt;/time&gt;
+                &lt;time datetime=&quot;2018-02-26T00:00:00+00:00&quot;&gt;&lt;strong&gt;February 26, 2018&lt;/strong&gt;&lt;/time&gt;
                 
                 &lt;mark&gt;canção da internação&lt;/mark&gt;
                 
             &lt;/a&gt;&lt;/li&gt;
             
             &lt;li&gt;&lt;a href=&quot;/tal-06-17&quot;&gt;
-                &lt;time datetime=&quot;2018-02-15T00:00:00+00:00&quot;&gt;February 15, 2018&lt;/time&gt;
+                &lt;time datetime=&quot;2018-02-15T00:00:00+00:00&quot;&gt;&lt;strong&gt;February 15, 2018&lt;/strong&gt;&lt;/time&gt;
                 
                 &lt;mark&gt;Envolvido ou comprometido?&lt;/mark&gt;
                 
@@ -48541,98 +48541,98 @@ Pense duas vezes antes de se envolver.
     
     
     &lt;div class=&quot;tag-list&quot; id=&quot;tasks&quot; aria-labelledby=&quot;tasks-heading&quot;&gt;
-        &lt;h1 id=&quot;tasks-heading&quot;&gt;
+        &lt;h1 id=&quot;tasks-heading&quot; href=&quot;#&quot; class=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;
             tasks
         &lt;/h1&gt;
         &lt;ul class=&quot;search-link&quot;&gt;
         
             
             &lt;li&gt;&lt;a href=&quot;/mlo-url-schemes&quot;&gt;
-                &lt;time datetime=&quot;2024-08-25T00:00:00+00:00&quot;&gt;August 25, 2024&lt;/time&gt;
+                &lt;time datetime=&quot;2024-08-25T00:00:00+00:00&quot;&gt;&lt;strong&gt;August 25, 2024&lt;/strong&gt;&lt;/time&gt;
                 
                 MLO URL schemes
                 
             &lt;/a&gt;&lt;/li&gt;
             
             &lt;li&gt;&lt;a href=&quot;/benjamin-franklins-13-virtues&quot;&gt;
-                &lt;time datetime=&quot;2024-07-31T00:00:00+00:00&quot;&gt;July 31, 2024&lt;/time&gt;
+                &lt;time datetime=&quot;2024-07-31T00:00:00+00:00&quot;&gt;&lt;strong&gt;July 31, 2024&lt;/strong&gt;&lt;/time&gt;
                 
                 &lt;mark&gt;Benjamin Franklin&apos;s 13 Virtues&lt;/mark&gt;
                 
             &lt;/a&gt;&lt;/li&gt;
             
             &lt;li&gt;&lt;a href=&quot;/mlo-workspaces-logic&quot;&gt;
-                &lt;time datetime=&quot;2024-07-23T00:00:00+00:00&quot;&gt;July 23, 2024&lt;/time&gt;
+                &lt;time datetime=&quot;2024-07-23T00:00:00+00:00&quot;&gt;&lt;strong&gt;July 23, 2024&lt;/strong&gt;&lt;/time&gt;
                 
                 &lt;mark&gt;MLO Workspaces logic&lt;/mark&gt;
                 
             &lt;/a&gt;&lt;/li&gt;
             
             &lt;li&gt;&lt;a href=&quot;/computed-score-priority-in-mlo&quot;&gt;
-                &lt;time datetime=&quot;2024-07-20T00:00:00+00:00&quot;&gt;July 20, 2024&lt;/time&gt;
+                &lt;time datetime=&quot;2024-07-20T00:00:00+00:00&quot;&gt;&lt;strong&gt;July 20, 2024&lt;/strong&gt;&lt;/time&gt;
                 
                 &lt;mark&gt;Computed-Score Priority in MLO&lt;/mark&gt;
                 
             &lt;/a&gt;&lt;/li&gt;
             
             &lt;li&gt;&lt;a href=&quot;/tasks-mermaid&quot;&gt;
-                &lt;time datetime=&quot;2024-05-21T00:00:00+00:00&quot;&gt;May 21, 2024&lt;/time&gt;
+                &lt;time datetime=&quot;2024-05-21T00:00:00+00:00&quot;&gt;&lt;strong&gt;May 21, 2024&lt;/strong&gt;&lt;/time&gt;
                 
                 &lt;mark&gt;Task Prioritization&lt;/mark&gt;
                 
             &lt;/a&gt;&lt;/li&gt;
             
             &lt;li&gt;&lt;a href=&quot;/mlo-ru&quot;&gt;
-                &lt;time datetime=&quot;2024-05-15T00:00:00+00:00&quot;&gt;May 15, 2024&lt;/time&gt;
+                &lt;time datetime=&quot;2024-05-15T00:00:00+00:00&quot;&gt;&lt;strong&gt;May 15, 2024&lt;/strong&gt;&lt;/time&gt;
                 
                 &lt;mark&gt;Planning System Based on MyLifeOrganized (MLO)&lt;/mark&gt;
                 
             &lt;/a&gt;&lt;/li&gt;
             
             &lt;li&gt;&lt;a href=&quot;/eisenhower&quot;&gt;
-                &lt;time datetime=&quot;2024-04-12T00:00:00+00:00&quot;&gt;April 12, 2024&lt;/time&gt;
+                &lt;time datetime=&quot;2024-04-12T00:00:00+00:00&quot;&gt;&lt;strong&gt;April 12, 2024&lt;/strong&gt;&lt;/time&gt;
                 
                 &lt;mark&gt;Eisenhower Matrix&lt;/mark&gt;
                 
             &lt;/a&gt;&lt;/li&gt;
             
             &lt;li&gt;&lt;a href=&quot;/stars&quot;&gt;
-                &lt;time datetime=&quot;2024-01-03T00:00:00+00:00&quot;&gt;January 03, 2024&lt;/time&gt;
+                &lt;time datetime=&quot;2024-01-03T00:00:00+00:00&quot;&gt;&lt;strong&gt;January 03, 2024&lt;/strong&gt;&lt;/time&gt;
                 
                 &lt;mark&gt;github stars&lt;/mark&gt;
                 
             &lt;/a&gt;&lt;/li&gt;
             
             &lt;li&gt;&lt;a href=&quot;/cleaning-flow&quot;&gt;
-                &lt;time datetime=&quot;2022-11-11T00:00:00+00:00&quot;&gt;November 11, 2022&lt;/time&gt;
+                &lt;time datetime=&quot;2022-11-11T00:00:00+00:00&quot;&gt;&lt;strong&gt;November 11, 2022&lt;/strong&gt;&lt;/time&gt;
                 
                 &lt;mark&gt;Cleaning flowchart&lt;/mark&gt;
                 
             &lt;/a&gt;&lt;/li&gt;
             
             &lt;li&gt;&lt;a href=&quot;/tasks-flow&quot;&gt;
-                &lt;time datetime=&quot;2022-10-31T00:00:00+00:00&quot;&gt;October 31, 2022&lt;/time&gt;
+                &lt;time datetime=&quot;2022-10-31T00:00:00+00:00&quot;&gt;&lt;strong&gt;October 31, 2022&lt;/strong&gt;&lt;/time&gt;
                 
                 &lt;mark&gt;Tasks Flow (MyLifeOrganized - MLO)&lt;/mark&gt;
                 
             &lt;/a&gt;&lt;/li&gt;
             
             &lt;li&gt;&lt;a href=&quot;/habits&quot;&gt;
-                &lt;time datetime=&quot;2022-01-16T00:00:00+00:00&quot;&gt;January 16, 2022&lt;/time&gt;
+                &lt;time datetime=&quot;2022-01-16T00:00:00+00:00&quot;&gt;&lt;strong&gt;January 16, 2022&lt;/strong&gt;&lt;/time&gt;
                 
                 &lt;mark&gt;habits&lt;/mark&gt;
                 
             &lt;/a&gt;&lt;/li&gt;
             
             &lt;li&gt;&lt;a href=&quot;/rubik&quot;&gt;
-                &lt;time datetime=&quot;2021-06-11T00:00:00+00:00&quot;&gt;June 11, 2021&lt;/time&gt;
+                &lt;time datetime=&quot;2021-06-11T00:00:00+00:00&quot;&gt;&lt;strong&gt;June 11, 2021&lt;/strong&gt;&lt;/time&gt;
                 
                 &lt;mark&gt;Rubik&apos;s&lt;/mark&gt;
                 
             &lt;/a&gt;&lt;/li&gt;
             
             &lt;li&gt;&lt;a href=&quot;/chess-flow&quot;&gt;
-                &lt;time datetime=&quot;2021-04-16T00:00:00+00:00&quot;&gt;April 16, 2021&lt;/time&gt;
+                &lt;time datetime=&quot;2021-04-16T00:00:00+00:00&quot;&gt;&lt;strong&gt;April 16, 2021&lt;/strong&gt;&lt;/time&gt;
                 
                 &lt;mark&gt;chess analysis workflow&lt;/mark&gt;
                 
@@ -48660,14 +48660,14 @@ Pense duas vezes antes de se envolver.
     
     
     &lt;div class=&quot;tag-list&quot; id=&quot;tasks-iphone&quot; aria-labelledby=&quot;tasks-iphone-heading&quot;&gt;
-        &lt;h1 id=&quot;tasks-iphone-heading&quot;&gt;
+        &lt;h1 id=&quot;tasks-iphone-heading&quot; href=&quot;#&quot; class=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;
             tasks&amp;gt;iphone
         &lt;/h1&gt;
         &lt;ul class=&quot;search-link&quot;&gt;
         
             
             &lt;li&gt;&lt;a href=&quot;/mlo-url-schemes&quot;&gt;
-                &lt;time datetime=&quot;2024-08-25T00:00:00+00:00&quot;&gt;August 25, 2024&lt;/time&gt;
+                &lt;time datetime=&quot;2024-08-25T00:00:00+00:00&quot;&gt;&lt;strong&gt;August 25, 2024&lt;/strong&gt;&lt;/time&gt;
                 
                 &lt;mark&gt;MLO URL schemes&lt;/mark&gt;
                 
@@ -48693,98 +48693,98 @@ Pense duas vezes antes de se envolver.
     
     
     &lt;div class=&quot;tag-list&quot; id=&quot;tools&quot; aria-labelledby=&quot;tools-heading&quot;&gt;
-        &lt;h1 id=&quot;tools-heading&quot;&gt;
+        &lt;h1 id=&quot;tools-heading&quot; href=&quot;#&quot; class=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;
             tools
         &lt;/h1&gt;
         &lt;ul class=&quot;search-link&quot;&gt;
         
             
             &lt;li&gt;&lt;a href=&quot;/srs&quot;&gt;
-                &lt;time datetime=&quot;2024-09-09T00:00:00+00:00&quot;&gt;September 09, 2024&lt;/time&gt;
+                &lt;time datetime=&quot;2024-09-09T00:00:00+00:00&quot;&gt;&lt;strong&gt;September 09, 2024&lt;/strong&gt;&lt;/time&gt;
                 
                 reassess
                 
             &lt;/a&gt;&lt;/li&gt;
             
             &lt;li&gt;&lt;a href=&quot;/reassess&quot;&gt;
-                &lt;time datetime=&quot;2024-04-13T00:00:00+00:00&quot;&gt;April 13, 2024&lt;/time&gt;
+                &lt;time datetime=&quot;2024-04-13T00:00:00+00:00&quot;&gt;&lt;strong&gt;April 13, 2024&lt;/strong&gt;&lt;/time&gt;
                 
                 reassess
                 
             &lt;/a&gt;&lt;/li&gt;
             
             &lt;li&gt;&lt;a href=&quot;/dedup-spaces&quot;&gt;
-                &lt;time datetime=&quot;1991-07-25T00:00:00+00:00&quot;&gt;July 25, 1991&lt;/time&gt;
+                &lt;time datetime=&quot;1991-07-25T00:00:00+00:00&quot;&gt;&lt;strong&gt;July 25, 1991&lt;/strong&gt;&lt;/time&gt;
                 
                 &lt;mark&gt;1991-07-25-dedup-spaces&lt;/mark&gt;
                 
             &lt;/a&gt;&lt;/li&gt;
             
             &lt;li&gt;&lt;a href=&quot;/rm-space&quot;&gt;
-                &lt;time datetime=&quot;1991-07-25T00:00:00+00:00&quot;&gt;July 25, 1991&lt;/time&gt;
+                &lt;time datetime=&quot;1991-07-25T00:00:00+00:00&quot;&gt;&lt;strong&gt;July 25, 1991&lt;/strong&gt;&lt;/time&gt;
                 
                 &lt;mark&gt;1991-07-25-rm-space&lt;/mark&gt;
                 
             &lt;/a&gt;&lt;/li&gt;
             
             &lt;li&gt;&lt;a href=&quot;/regex&quot;&gt;
-                &lt;time datetime=&quot;1991-07-25T00:00:00+00:00&quot;&gt;July 25, 1991&lt;/time&gt;
+                &lt;time datetime=&quot;1991-07-25T00:00:00+00:00&quot;&gt;&lt;strong&gt;July 25, 1991&lt;/strong&gt;&lt;/time&gt;
                 
                 &lt;mark&gt;1991-07-25-regex&lt;/mark&gt;
                 
             &lt;/a&gt;&lt;/li&gt;
             
             &lt;li&gt;&lt;a href=&quot;/pomo&quot;&gt;
-                &lt;time datetime=&quot;1991-07-25T00:00:00+00:00&quot;&gt;July 25, 1991&lt;/time&gt;
+                &lt;time datetime=&quot;1991-07-25T00:00:00+00:00&quot;&gt;&lt;strong&gt;July 25, 1991&lt;/strong&gt;&lt;/time&gt;
                 
                 &lt;mark&gt;1991-07-25-pomo&lt;/mark&gt;
                 
             &lt;/a&gt;&lt;/li&gt;
             
             &lt;li&gt;&lt;a href=&quot;/rm-lines&quot;&gt;
-                &lt;time datetime=&quot;1991-07-25T00:00:00+00:00&quot;&gt;July 25, 1991&lt;/time&gt;
+                &lt;time datetime=&quot;1991-07-25T00:00:00+00:00&quot;&gt;&lt;strong&gt;July 25, 1991&lt;/strong&gt;&lt;/time&gt;
                 
                 &lt;mark&gt;1991-07-25-rm-lines&lt;/mark&gt;
                 
             &lt;/a&gt;&lt;/li&gt;
             
             &lt;li&gt;&lt;a href=&quot;/dedup&quot;&gt;
-                &lt;time datetime=&quot;1991-07-25T00:00:00+00:00&quot;&gt;July 25, 1991&lt;/time&gt;
+                &lt;time datetime=&quot;1991-07-25T00:00:00+00:00&quot;&gt;&lt;strong&gt;July 25, 1991&lt;/strong&gt;&lt;/time&gt;
                 
                 &lt;mark&gt;1991-07-25-dedup&lt;/mark&gt;
                 
             &lt;/a&gt;&lt;/li&gt;
             
             &lt;li&gt;&lt;a href=&quot;/compare&quot;&gt;
-                &lt;time datetime=&quot;1991-07-25T00:00:00+00:00&quot;&gt;July 25, 1991&lt;/time&gt;
+                &lt;time datetime=&quot;1991-07-25T00:00:00+00:00&quot;&gt;&lt;strong&gt;July 25, 1991&lt;/strong&gt;&lt;/time&gt;
                 
                 &lt;mark&gt;1991-07-25-compare&lt;/mark&gt;
                 
             &lt;/a&gt;&lt;/li&gt;
             
             &lt;li&gt;&lt;a href=&quot;/formatxt&quot;&gt;
-                &lt;time datetime=&quot;1991-07-25T00:00:00+00:00&quot;&gt;July 25, 1991&lt;/time&gt;
+                &lt;time datetime=&quot;1991-07-25T00:00:00+00:00&quot;&gt;&lt;strong&gt;July 25, 1991&lt;/strong&gt;&lt;/time&gt;
                 
                 &lt;mark&gt;1991-07-25-formatxt&lt;/mark&gt;
                 
             &lt;/a&gt;&lt;/li&gt;
             
             &lt;li&gt;&lt;a href=&quot;/somacon&quot;&gt;
-                &lt;time datetime=&quot;1991-07-25T00:00:00+00:00&quot;&gt;July 25, 1991&lt;/time&gt;
+                &lt;time datetime=&quot;1991-07-25T00:00:00+00:00&quot;&gt;&lt;strong&gt;July 25, 1991&lt;/strong&gt;&lt;/time&gt;
                 
                 &lt;mark&gt;1991-07-25-somacon&lt;/mark&gt;
                 
             &lt;/a&gt;&lt;/li&gt;
             
             &lt;li&gt;&lt;a href=&quot;/diff&quot;&gt;
-                &lt;time datetime=&quot;1991-07-25T00:00:00+00:00&quot;&gt;July 25, 1991&lt;/time&gt;
+                &lt;time datetime=&quot;1991-07-25T00:00:00+00:00&quot;&gt;&lt;strong&gt;July 25, 1991&lt;/strong&gt;&lt;/time&gt;
                 
                 &lt;mark&gt;1991-07-25-diff&lt;/mark&gt;
                 
             &lt;/a&gt;&lt;/li&gt;
             
             &lt;li&gt;&lt;a href=&quot;/sort&quot;&gt;
-                &lt;time datetime=&quot;1991-07-25T00:00:00+00:00&quot;&gt;July 25, 1991&lt;/time&gt;
+                &lt;time datetime=&quot;1991-07-25T00:00:00+00:00&quot;&gt;&lt;strong&gt;July 25, 1991&lt;/strong&gt;&lt;/time&gt;
                 
                 &lt;mark&gt;1991-07-25-sort&lt;/mark&gt;
                 
@@ -48816,14 +48816,14 @@ Pense duas vezes antes de se envolver.
     
     
     &lt;div class=&quot;tag-list&quot; id=&quot;tools-ai&quot; aria-labelledby=&quot;tools-ai-heading&quot;&gt;
-        &lt;h1 id=&quot;tools-ai-heading&quot;&gt;
+        &lt;h1 id=&quot;tools-ai-heading&quot; href=&quot;#&quot; class=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;
             tools&amp;gt;AI
         &lt;/h1&gt;
         &lt;ul class=&quot;search-link&quot;&gt;
         
             
             &lt;li&gt;&lt;a href=&quot;/reassess&quot;&gt;
-                &lt;time datetime=&quot;2024-04-13T00:00:00+00:00&quot;&gt;April 13, 2024&lt;/time&gt;
+                &lt;time datetime=&quot;2024-04-13T00:00:00+00:00&quot;&gt;&lt;strong&gt;April 13, 2024&lt;/strong&gt;&lt;/time&gt;
                 
                 reassess
                 
@@ -48849,14 +48849,14 @@ Pense duas vezes antes de se envolver.
     
     
     &lt;div class=&quot;tag-list&quot; id=&quot;tools-ai-prompt&quot; aria-labelledby=&quot;tools-ai-prompt-heading&quot;&gt;
-        &lt;h1 id=&quot;tools-ai-prompt-heading&quot;&gt;
+        &lt;h1 id=&quot;tools-ai-prompt-heading&quot; href=&quot;#&quot; class=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;
             tools&amp;gt;AI&amp;gt;prompt
         &lt;/h1&gt;
         &lt;ul class=&quot;search-link&quot;&gt;
         
             
             &lt;li&gt;&lt;a href=&quot;/reassess&quot;&gt;
-                &lt;time datetime=&quot;2024-04-13T00:00:00+00:00&quot;&gt;April 13, 2024&lt;/time&gt;
+                &lt;time datetime=&quot;2024-04-13T00:00:00+00:00&quot;&gt;&lt;strong&gt;April 13, 2024&lt;/strong&gt;&lt;/time&gt;
                 
                 &lt;mark&gt;reassess&lt;/mark&gt;
                 
@@ -48884,14 +48884,14 @@ Pense duas vezes antes de se envolver.
     
     
     &lt;div class=&quot;tag-list&quot; id=&quot;tools-github&quot; aria-labelledby=&quot;tools-github-heading&quot;&gt;
-        &lt;h1 id=&quot;tools-github-heading&quot;&gt;
+        &lt;h1 id=&quot;tools-github-heading&quot; href=&quot;#&quot; class=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;
             tools&amp;gt;github
         &lt;/h1&gt;
         &lt;ul class=&quot;search-link&quot;&gt;
         
             
             &lt;li&gt;&lt;a href=&quot;/srs&quot;&gt;
-                &lt;time datetime=&quot;2024-09-09T00:00:00+00:00&quot;&gt;September 09, 2024&lt;/time&gt;
+                &lt;time datetime=&quot;2024-09-09T00:00:00+00:00&quot;&gt;&lt;strong&gt;September 09, 2024&lt;/strong&gt;&lt;/time&gt;
                 
                 reassess
                 
@@ -48917,14 +48917,14 @@ Pense duas vezes antes de se envolver.
     
     
     &lt;div class=&quot;tag-list&quot; id=&quot;tools-github-estudos&quot; aria-labelledby=&quot;tools-github-estudos-heading&quot;&gt;
-        &lt;h1 id=&quot;tools-github-estudos-heading&quot;&gt;
+        &lt;h1 id=&quot;tools-github-estudos-heading&quot; href=&quot;#&quot; class=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;
             tools&amp;gt;github&amp;gt;estudos
         &lt;/h1&gt;
         &lt;ul class=&quot;search-link&quot;&gt;
         
             
             &lt;li&gt;&lt;a href=&quot;/srs&quot;&gt;
-                &lt;time datetime=&quot;2024-09-09T00:00:00+00:00&quot;&gt;September 09, 2024&lt;/time&gt;
+                &lt;time datetime=&quot;2024-09-09T00:00:00+00:00&quot;&gt;&lt;strong&gt;September 09, 2024&lt;/strong&gt;&lt;/time&gt;
                 
                 &lt;mark&gt;reassess&lt;/mark&gt;
                 
@@ -48952,35 +48952,35 @@ Pense duas vezes antes de se envolver.
     
     
     &lt;div class=&quot;tag-list&quot; id=&quot;trabalho&quot; aria-labelledby=&quot;trabalho-heading&quot;&gt;
-        &lt;h1 id=&quot;trabalho-heading&quot;&gt;
+        &lt;h1 id=&quot;trabalho-heading&quot; href=&quot;#&quot; class=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;
             trabalho
         &lt;/h1&gt;
         &lt;ul class=&quot;search-link&quot;&gt;
         
             
             &lt;li&gt;&lt;a href=&quot;/escolta&quot;&gt;
-                &lt;time datetime=&quot;2024-07-14T00:00:00+00:00&quot;&gt;July 14, 2024&lt;/time&gt;
+                &lt;time datetime=&quot;2024-07-14T00:00:00+00:00&quot;&gt;&lt;strong&gt;July 14, 2024&lt;/strong&gt;&lt;/time&gt;
                 
                 &lt;mark&gt;Procedimentos de Escolta Dedicada&lt;/mark&gt;
                 
             &lt;/a&gt;&lt;/li&gt;
             
             &lt;li&gt;&lt;a href=&quot;/periodicos&quot;&gt;
-                &lt;time datetime=&quot;2024-07-05T00:00:00+00:00&quot;&gt;July 05, 2024&lt;/time&gt;
+                &lt;time datetime=&quot;2024-07-05T00:00:00+00:00&quot;&gt;&lt;strong&gt;July 05, 2024&lt;/strong&gt;&lt;/time&gt;
                 
                 &lt;mark&gt;Periódicos para publicar artigos&lt;/mark&gt;
                 
             &lt;/a&gt;&lt;/li&gt;
             
             &lt;li&gt;&lt;a href=&quot;/aposentadoria&quot;&gt;
-                &lt;time datetime=&quot;2024-02-25T00:00:00+00:00&quot;&gt;February 25, 2024&lt;/time&gt;
+                &lt;time datetime=&quot;2024-02-25T00:00:00+00:00&quot;&gt;&lt;strong&gt;February 25, 2024&lt;/strong&gt;&lt;/time&gt;
                 
                 &lt;mark&gt;QRU Aposentadoria&lt;/mark&gt;
                 
             &lt;/a&gt;&lt;/li&gt;
             
             &lt;li&gt;&lt;a href=&quot;/taf-01&quot;&gt;
-                &lt;time datetime=&quot;2022-04-12T00:00:00+00:00&quot;&gt;April 12, 2022&lt;/time&gt;
+                &lt;time datetime=&quot;2022-04-12T00:00:00+00:00&quot;&gt;&lt;strong&gt;April 12, 2022&lt;/strong&gt;&lt;/time&gt;
                 
                 &lt;mark&gt;Avaliação Funcional I/XV&lt;/mark&gt;
                 
@@ -49064,14 +49064,14 @@ Pense duas vezes antes de se envolver.
         &lt;a class=&quot;post-heading&quot; href=&quot;#&quot; id=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;
           &lt;img src=&quot;/assets/gold.ico&quot; alt=&quot;gold icon&quot; /&gt;
         &lt;/a&gt;
-        1991-07-25
+        1992-07-12
          &amp;rightarrowtail; 10 Sep 2024
         
       &lt;/h3&gt;
       &lt;ul&gt;
-        &lt;a href=&quot;/formatxt/&quot;&gt;
+        &lt;a href=&quot;/tags/&quot;&gt;
           &lt;h2&gt;
-            Formatxt
+            Tags
           &lt;/h2&gt;
         &lt;/a&gt;
       &lt;/ul&gt;
@@ -49082,14 +49082,14 @@ Pense duas vezes antes de se envolver.
         &lt;a class=&quot;post-heading&quot; href=&quot;#&quot; id=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;
           &lt;img src=&quot;/assets/gold.ico&quot; alt=&quot;gold icon&quot; /&gt;
         &lt;/a&gt;
-        1992-07-12
+        1991-07-25
          &amp;rightarrowtail; 10 Sep 2024
         
       &lt;/h3&gt;
       &lt;ul&gt;
-        &lt;a href=&quot;/tags/&quot;&gt;
+        &lt;a href=&quot;/formatxt/&quot;&gt;
           &lt;h2&gt;
-            Tags
+            Formatxt
           &lt;/h2&gt;
         &lt;/a&gt;
       &lt;/ul&gt;
