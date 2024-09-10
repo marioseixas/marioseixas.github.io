@@ -49,7 +49,7 @@
     <title>infoBAG</title>
     <link href="https://ib.bsb.br/rss.xml" rel="self"/>
     <link href="https://ib.bsb.br/"/>
-    <updated>2024-09-10T14:56:01+00:00</updated>
+    <updated>2024-09-10T15:00:57+00:00</updated>
     <id>https://ib.bsb.br</id>
     <author>
         <name></name>
@@ -4018,14 +4018,6 @@ input_variables=[&quot;question&quot;],
 template=&quot;We want to answer the following question: {question} \n&quot;&lt;/code&gt;&lt;/section&gt;
 
 &lt;hr /&gt;
-
-&lt;p&gt;Testing links: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;https://github.com/marioseixas/marioseixas.github.io&lt;/code&gt;&lt;/p&gt;
-
-&lt;section data-filename=&quot;_code-block.txt&quot; data-code=&quot;https://github.com/marioseixas/marioseixas.github.io
-ib.bsb.br
-https://ib.bsb.br&quot; data-download-link=&quot;&quot; data-download-link-label=&quot;Download &quot; class=&quot;language- line-numbers&quot; style=&quot;white-space:pre-wrap;&quot;&gt;&lt;code class=&quot;language-&quot;&gt;https://github.com/marioseixas/marioseixas.github.io
-ib.bsb.br
-https://ib.bsb.br&lt;/code&gt;&lt;/section&gt;
 </content>
     </entry>
     
