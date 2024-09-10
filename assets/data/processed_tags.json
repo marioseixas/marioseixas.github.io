@@ -704,14 +704,14 @@
     "scripts": {
         "parents": [],
         "children": [
-            "google-apps-script",
-            "mobile",
             "AI",
-            "scripts>cloud",
             "scripts>AI",
-            "scripts>google-apps-script",
+            "cloud",
             "scripts>mobile",
-            "cloud"
+            "scripts>cloud",
+            "scripts>google-apps-script",
+            "mobile",
+            "google-apps-script"
         ],
         "related": {
             "linux": 26,
@@ -959,9 +959,9 @@
         "parents": [],
         "children": [
             "tools>AI>prompt",
-            "tools>github>estudos",
+            "github>estudos",
             "AI>prompt",
-            "github>estudos"
+            "tools>github>estudos"
         ],
         "related": {},
         "posts": [
@@ -1147,10 +1147,10 @@
     "software": {
         "parents": [],
         "children": [
+            "software>cloud",
             "software>mobile",
             "mobile",
-            "cloud",
-            "software>cloud"
+            "cloud"
         ],
         "related": {},
         "posts": [
@@ -1548,9 +1548,9 @@
     "github": {
         "parents": [],
         "children": [
-            "jekyll",
             "tools>github>estudos",
-            "github>jekyll"
+            "github>jekyll",
+            "jekyll"
         ],
         "related": {},
         "posts": [
@@ -1695,10 +1695,10 @@
     "edital": {
         "parents": [],
         "children": [
-            "direito>processual-penal",
+            "edital>direito>processual-penal",
             "direito",
-            "edital>direito",
-            "edital>direito>processual-penal"
+            "direito>processual-penal",
+            "edital>direito"
         ],
         "related": {},
         "posts": [
@@ -1845,8 +1845,8 @@
     },
     "edital>direito>processual-penal": {
         "parents": [
-            "edital",
-            "direito"
+            "direito",
+            "edital"
         ],
         "children": [],
         "related": {},
