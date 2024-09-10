@@ -300,9 +300,7 @@ nav.header-content {
     text-align: center;
     width: -webkit-fill-available;
     a {
-        background-color: rgba(var(--accents-dodgerblue), 0.1);
-        border: 1px dotted var(--accents-dodgerblue);
-        border-radius: var(--bd-radius);
+        background-color: rgba(var(--accents-dodgerblue), 0.1);        
         display: inherit;
         padding: 0.5em;
         transition: all 0.3s ease;
