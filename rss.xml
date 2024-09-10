@@ -35,11 +35,13 @@
           highlightParam: "highlight"
         });
 
-        // Initialize Pagefind search with autofocus enabled, targeting the existing input
-        new PagefindUI({
+        // Initialize Pagefind search, targeting the existing input
+        const searchUI = new PagefindUI({
           element: "#search-input",  // Target the existing search input
-          autofocus: true  // Add autofocus to the search input
         });
+
+        // Manually focus the search input after initialization
+        document.querySelector("#search-input").focus();
       });
     </script>
 
@@ -72,7 +74,7 @@
     <title>infoBAG</title>
     <link href="https://ib.bsb.br/rss.xml" rel="self"/>
     <link href="https://ib.bsb.br/"/>
-    <updated>2024-09-10T16:07:58+00:00</updated>
+    <updated>2024-09-10T16:17:02+00:00</updated>
     <id>https://ib.bsb.br</id>
     <author>
         <name></name>

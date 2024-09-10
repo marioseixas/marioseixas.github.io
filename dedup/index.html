@@ -35,11 +35,13 @@
           highlightParam: "highlight"
         });
 
-        // Initialize Pagefind search with autofocus enabled, targeting the existing input
-        new PagefindUI({
+        // Initialize Pagefind search, targeting the existing input
+        const searchUI = new PagefindUI({
           element: "#search-input",  // Target the existing search input
-          autofocus: true  // Add autofocus to the search input
         });
+
+        // Manually focus the search input after initialization
+        document.querySelector("#search-input").focus();
       });
     </script>
 
