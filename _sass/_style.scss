@@ -240,7 +240,8 @@ nav.header-content {
 .post-wrapper {
     overflow-wrap: break-word;
     word-wrap: break-word;
-    margin: 7vw;
+    margin-left: calc(1vw + 0.5rem);
+    margin-right: calc(1vw + 0.5rem);
 }
 .post-wrapper > * {
     margin: 0.5em;
