@@ -174,4 +174,4 @@ jobs:
         run: |
           git commit -m "Update spaced-inbox with new posts" || echo "No changes to commit"
           git pull --rebase
-          git push
+          git push --force-with-lease
