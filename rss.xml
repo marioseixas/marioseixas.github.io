@@ -46,7 +46,7 @@
     <title>infoBAG</title>
     <link href="https://ib.bsb.br/rss.xml" rel="self"/>
     <link href="https://ib.bsb.br/"/>
-    <updated>2024-09-10T14:01:13+00:00</updated>
+    <updated>2024-09-10T14:04:27+00:00</updated>
     <id>https://ib.bsb.br</id>
     <author>
         <name></name>
@@ -2964,7 +2964,7 @@ It is there if you look hard for it and you will be a different person once you 
   &lt;li&gt;Install the required Python packages using pip:&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;section data-filename=&quot;bash_code-block.sh&quot; data-code=&quot;pip3 install paperqa&quot; data-download-link=&quot;&quot; data-download-link-label=&quot;Download Bash&quot; class=&quot;language-bash&quot; style=&quot;white-space:pre-wrap;&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;pip3 install paperqa&lt;/code&gt;&lt;/section&gt;
+&lt;aside class=&quot;line-numbers&quot;&gt;&lt;section data-filename=&quot;bash_code-block.sh&quot; data-code=&quot;pip3 install paperqa&quot; data-download-link=&quot;&quot; data-download-link-label=&quot;Download Bash&quot; class=&quot;language-bash&quot; style=&quot;white-space:pre-wrap;&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;pip3 install paperqa&lt;/code&gt;&lt;/section&gt;&lt;/aside&gt;
 
 &lt;p&gt;Note: The other required packages (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;argparse&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;glob&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;json&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;pickle&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;sys&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;pathlib&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;typing&lt;/code&gt;) are part of the Python standard library and do not need to be installed separately.&lt;/p&gt;
 
@@ -3031,17 +3031,17 @@ It is there if you look hard for it and you will be a different person once you 
   &lt;li&gt;Ask a single question:&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;section data-filename=&quot;bash_code-block.sh&quot; data-code=&quot;python script.py --pdf_dir /path/to/pdfs --question &amp;quot;What is the impact of climate change on agriculture?&amp;quot;&quot; data-download-link=&quot;&quot; data-download-link-label=&quot;Download Bash&quot; class=&quot;language-bash&quot; style=&quot;white-space:pre-wrap;&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;python script.py --pdf_dir /path/to/pdfs --question &quot;What is the impact of climate change on agriculture?&quot;&lt;/code&gt;&lt;/section&gt;
+&lt;aside class=&quot;line-numbers&quot;&gt;&lt;section data-filename=&quot;bash_code-block.sh&quot; data-code=&quot;python script.py --pdf_dir /path/to/pdfs --question &amp;quot;What is the impact of climate change on agriculture?&amp;quot;&quot; data-download-link=&quot;&quot; data-download-link-label=&quot;Download Bash&quot; class=&quot;language-bash&quot; style=&quot;white-space:pre-wrap;&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;python script.py --pdf_dir /path/to/pdfs --question &quot;What is the impact of climate change on agriculture?&quot;&lt;/code&gt;&lt;/section&gt;&lt;/aside&gt;
 
 &lt;ol&gt;
   &lt;li&gt;Ask multiple questions from a file:&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;section data-filename=&quot;bash_code-block.sh&quot; data-code=&quot;python script.py --pdf_dir /path/to/pdfs --questions_file questions.txt&quot; data-download-link=&quot;&quot; data-download-link-label=&quot;Download Bash&quot; class=&quot;language-bash&quot; style=&quot;white-space:pre-wrap;&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;python script.py --pdf_dir /path/to/pdfs --questions_file questions.txt&lt;/code&gt;&lt;/section&gt;
+&lt;aside class=&quot;line-numbers&quot;&gt;&lt;section data-filename=&quot;bash_code-block.sh&quot; data-code=&quot;python script.py --pdf_dir /path/to/pdfs --questions_file questions.txt&quot; data-download-link=&quot;&quot; data-download-link-label=&quot;Download Bash&quot; class=&quot;language-bash&quot; style=&quot;white-space:pre-wrap;&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;python script.py --pdf_dir /path/to/pdfs --questions_file questions.txt&lt;/code&gt;&lt;/section&gt;&lt;/aside&gt;
 
 &lt;h3 id=&quot;list-of-questions-template&quot;&gt;List of questions template:&lt;/h3&gt;
 
-&lt;section data-filename=&quot;_code-block.txt&quot; data-code=&quot;questions = [
+&lt;aside class=&quot;line-numbers&quot;&gt;&lt;section data-filename=&quot;_code-block.txt&quot; data-code=&quot;questions = [
 &amp;quot;Q1?&amp;quot;,
 &amp;quot;Q2?&amp;quot;,
 # ... add your 28 other questions here
@@ -3049,13 +3049,13 @@ It is there if you look hard for it and you will be a different person once you 
 &quot;Q1?&quot;,
 &quot;Q2?&quot;,
 # ... add your 28 other questions here
-]&lt;/code&gt;&lt;/section&gt;
+]&lt;/code&gt;&lt;/section&gt;&lt;/aside&gt;
 
 &lt;ol&gt;
   &lt;li&gt;Load existing embeddings and ask a question:&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;section data-filename=&quot;bash_code-block.sh&quot; data-code=&quot;python script.py --load_embeddings embeddings.pkl --question &amp;quot;What are the latest advancements in AI?&amp;quot;&quot; data-download-link=&quot;&quot; data-download-link-label=&quot;Download Bash&quot; class=&quot;language-bash&quot; style=&quot;white-space:pre-wrap;&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;python script.py --load_embeddings embeddings.pkl --question &quot;What are the latest advancements in AI?&quot;&lt;/code&gt;&lt;/section&gt;
+&lt;aside class=&quot;line-numbers&quot;&gt;&lt;section data-filename=&quot;bash_code-block.sh&quot; data-code=&quot;python script.py --load_embeddings embeddings.pkl --question &amp;quot;What are the latest advancements in AI?&amp;quot;&quot; data-download-link=&quot;&quot; data-download-link-label=&quot;Download Bash&quot; class=&quot;language-bash&quot; style=&quot;white-space:pre-wrap;&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;python script.py --load_embeddings embeddings.pkl --question &quot;What are the latest advancements in AI?&quot;&lt;/code&gt;&lt;/section&gt;&lt;/aside&gt;
 
 &lt;h2 id=&quot;detailed-explanation&quot;&gt;Detailed Explanation&lt;/h2&gt;
 
@@ -3093,7 +3093,7 @@ It is there if you look hard for it and you will be a different person once you 
 
 &lt;h1 id=&quot;script&quot;&gt;Script&lt;/h1&gt;
 
-&lt;section data-filename=&quot;python_code-block.py&quot; data-code=&quot;from paperqa import Answer, Docs, PromptCollection, OpenAILLMModel, OpenAIEmbeddingModel
+&lt;aside class=&quot;line-numbers&quot;&gt;&lt;section data-filename=&quot;python_code-block.py&quot; data-code=&quot;from paperqa import Answer, Docs, PromptCollection, OpenAILLMModel, OpenAIEmbeddingModel
 import argparse
 import sys
 import pickle
@@ -3553,7 +3553,7 @@ with open(args.save_embeddings_txt, &quot;w&quot;, encoding=&quot;utf-8&quot;) a
 for doc in docs.docs.values():
 f.write(f&quot;{doc.dockey}\t{doc.embedding}\n&quot;)
 if __name__ == &quot;__main__&quot;:
-main()&lt;/code&gt;&lt;/section&gt;
+main()&lt;/code&gt;&lt;/section&gt;&lt;/aside&gt;
 
 &lt;h1 id=&quot;2add&quot;&gt;2add&lt;/h1&gt;
 
@@ -3562,7 +3562,7 @@ main()&lt;/code&gt;&lt;/section&gt;
 &lt;ul&gt;
   &lt;li&gt;You can create a list of prompts and iterate over them, similar to the example in point 1.&lt;/li&gt;
   &lt;li&gt;Here’s an example:
-    &lt;section data-filename=&quot;python_code-block.py&quot; data-code=&quot;prompts = [
+    &lt;aside class=&quot;line-numbers&quot;&gt;&lt;section data-filename=&quot;python_code-block.py&quot; data-code=&quot;prompts = [
 &amp;quot;Prompt 1&amp;quot;,
 &amp;quot;Prompt 2&amp;quot;,
 # ...
@@ -3580,28 +3580,28 @@ print(f&amp;quot;Answer: {answer.formatted_answer}\n&amp;quot;)&quot; data-downl
 for prompt in prompts:
 answer = loaded_docs.query(prompt, k=50)
 print(f&quot;Prompt: {prompt}&quot;)
-print(f&quot;Answer: {answer.formatted_answer}\n&quot;)&lt;/code&gt;&lt;/section&gt;
+print(f&quot;Answer: {answer.formatted_answer}\n&quot;)&lt;/code&gt;&lt;/section&gt;&lt;/aside&gt;
     &lt;hr /&gt;
     &lt;p&gt;Piping from command line stdout into the Python script:&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;You can use the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;sys&lt;/code&gt; module to read input from the command line.&lt;/li&gt;
   &lt;li&gt;Here’s an example:
-    &lt;section data-filename=&quot;python_code-block.py&quot; data-code=&quot;import sys
+    &lt;aside class=&quot;line-numbers&quot;&gt;&lt;section data-filename=&quot;python_code-block.py&quot; data-code=&quot;import sys
 question = sys.stdin.read().strip()
 answer = loaded_docs.query(question, k=50)
 print(answer.formatted_answer)&quot; data-download-link=&quot;&quot; data-download-link-label=&quot;Download Python&quot; class=&quot;language-python&quot; style=&quot;white-space:pre-wrap;&quot;&gt;&lt;code class=&quot;language-python&quot;&gt;import sys
 question = sys.stdin.read().strip()
 answer = loaded_docs.query(question, k=50)
-print(answer.formatted_answer)&lt;/code&gt;&lt;/section&gt;
+print(answer.formatted_answer)&lt;/code&gt;&lt;/section&gt;&lt;/aside&gt;
   &lt;/li&gt;
   &lt;li&gt;You can then pipe the question from the command line:
-    &lt;section data-filename=&quot;bash_code-block.sh&quot; data-code=&quot;echo &amp;quot;What is the meaning of life?&amp;quot; | python3 researcher.py&quot; data-download-link=&quot;&quot; data-download-link-label=&quot;Download Bash&quot; class=&quot;language-bash&quot; style=&quot;white-space:pre-wrap;&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;echo &quot;What is the meaning of life?&quot; | python3 researcher.py&lt;/code&gt;&lt;/section&gt;
+    &lt;aside class=&quot;line-numbers&quot;&gt;&lt;section data-filename=&quot;bash_code-block.sh&quot; data-code=&quot;echo &amp;quot;What is the meaning of life?&amp;quot; | python3 researcher.py&quot; data-download-link=&quot;&quot; data-download-link-label=&quot;Download Bash&quot; class=&quot;language-bash&quot; style=&quot;white-space:pre-wrap;&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;echo &quot;What is the meaning of life?&quot; | python3 researcher.py&lt;/code&gt;&lt;/section&gt;&lt;/aside&gt;
     &lt;hr /&gt;
     &lt;p&gt;Using the response of a request/query as context for subsequent prompts:&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;You can use the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;answer.context&lt;/code&gt; attribute to access the context used for generating the answer.&lt;/li&gt;
   &lt;li&gt;Here’s an example:
-    &lt;section data-filename=&quot;python_code-block.py&quot; data-code=&quot;previous_context = &amp;quot;&amp;quot;
+    &lt;aside class=&quot;line-numbers&quot;&gt;&lt;section data-filename=&quot;python_code-block.py&quot; data-code=&quot;previous_context = &amp;quot;&amp;quot;
 for prompt in prompts:
 answer = loaded_docs.query(prompt, k=50, context=previous_context)
 previous_context = answer.context
@@ -3611,12 +3611,12 @@ for prompt in prompts:
 answer = loaded_docs.query(prompt, k=50, context=previous_context)
 previous_context = answer.context
 print(f&quot;Prompt: {prompt}&quot;)
-print(f&quot;Answer: {answer.formatted_answer}\n&quot;)&lt;/code&gt;&lt;/section&gt;
+print(f&quot;Answer: {answer.formatted_answer}\n&quot;)&lt;/code&gt;&lt;/section&gt;&lt;/aside&gt;
     &lt;hr /&gt;
   &lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;section data-filename=&quot;_code-block.txt&quot; data-code=&quot;Implement adversarial prompting. #131
+&lt;aside class=&quot;line-numbers&quot;&gt;&lt;section data-filename=&quot;_code-block.txt&quot; data-code=&quot;Implement adversarial prompting. #131
 This adds a method adversarial_query. Adversarial queries first generate an answer, then asks the LLM to find problems with the answer, then finally generates the final response so that it addresses th
 1 commit
 2 files changed
@@ -4012,17 +4012,17 @@ template=&quot;For each sentence in your answer, indicate which sources most sup
 )
 search_prompt = prompts.PromptTemplate(
 input_variables=[&quot;question&quot;],
-template=&quot;We want to answer the following question: {question} \n&quot;&lt;/code&gt;&lt;/section&gt;
+template=&quot;We want to answer the following question: {question} \n&quot;&lt;/code&gt;&lt;/section&gt;&lt;/aside&gt;
 
 &lt;hr /&gt;
 
 &lt;p&gt;Testing links: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;https://github.com/marioseixas/marioseixas.github.io&lt;/code&gt;&lt;/p&gt;
 
-&lt;section data-filename=&quot;_code-block.txt&quot; data-code=&quot;https://github.com/marioseixas/marioseixas.github.io
+&lt;aside class=&quot;line-numbers&quot;&gt;&lt;section data-filename=&quot;_code-block.txt&quot; data-code=&quot;https://github.com/marioseixas/marioseixas.github.io
 ib.bsb.br
 https://ib.bsb.br&quot; data-download-link=&quot;&quot; data-download-link-label=&quot;Download &quot; class=&quot;language-&quot; style=&quot;white-space:pre-wrap;&quot;&gt;&lt;code class=&quot;language-&quot;&gt;https://github.com/marioseixas/marioseixas.github.io
 ib.bsb.br
-https://ib.bsb.br&lt;/code&gt;&lt;/section&gt;
+https://ib.bsb.br&lt;/code&gt;&lt;/section&gt;&lt;/aside&gt;
 </content>
     </entry>
     
@@ -5912,7 +5912,7 @@ ssh-add ~/.ssh/id_ed25519
         <link href="https://ib.bsb.br/reassess/"/>
         <updated>2024-04-13T00:00:00+00:00</updated>
         <id>https://ib.bsb.br/reassess/</id>
-        <content type="html">&lt;section data-filename=&quot;markdown_code-block.md&quot; data-code=&quot;Instruction: Your task is to critically analyze your previous response to the original query and identify any areas that need improvement. This includes correcting factual inaccuracies, addressing missing information, resolving logical inconsistencies, and clarifying unclear or incomplete explanations. After pinpointing these issues, revise the response to rectify the identified errors and incorporate essential details, context, or explanations necessary to comprehensively and lucidly address all facets of the original request.
+        <content type="html">&lt;aside class=&quot;line-numbers&quot;&gt;&lt;section data-filename=&quot;markdown_code-block.md&quot; data-code=&quot;Instruction: Your task is to critically analyze your previous response to the original query and identify any areas that need improvement. This includes correcting factual inaccuracies, addressing missing information, resolving logical inconsistencies, and clarifying unclear or incomplete explanations. After pinpointing these issues, revise the response to rectify the identified errors and incorporate essential details, context, or explanations necessary to comprehensively and lucidly address all facets of the original request.
 Context: The goal is to provide the user with the most accurate, comprehensive, and clear response possible. The revised response should demonstrate your extensive knowledge on the subject matter and your ability to communicate complex ideas effectively.
 Process:
 1. Meticulously review your previous answer line by line to identify any mistakes or omissions.
@@ -5928,7 +5928,7 @@ Process:
 3. Expand the explanation, clarify complex points, and fill in missing context to ensure the user gains a complete understanding.
 4. Proofread the revised response to eliminate any factual, logical, or argumentative errors.
 5. Refine word choice and phrasing to enhance clarity and impact.
-Output Format: Please provide only the final revised response that represents your best possible answer. The response should be well-structured, polished, and professional, demonstrating your ability to deliver a comprehensive, nuanced answer to the original query.&lt;/code&gt;&lt;/section&gt;
+Output Format: Please provide only the final revised response that represents your best possible answer. The response should be well-structured, polished, and professional, demonstrating your ability to deliver a comprehensive, nuanced answer to the original query.&lt;/code&gt;&lt;/section&gt;&lt;/aside&gt;
 </content>
     </entry>
     
