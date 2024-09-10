@@ -22,15 +22,14 @@ module Jekyll
       <<~SCRIPT
         const mermaidConfig = {
           startOnLoad: true,
-          theme: 'default', // You can change the theme here if needed 
-          flowchart: { useMaxWidth: false, htmlLabels: true, curve: 'cardinal' }, 
-          // Add other diagram-specific configurations as needed (e.g., sequence, gantt, etc.) 
+          theme: 'default',
+          flowchart: { useMaxWidth: false, htmlLabels: true, curve: 'cardinal' }
         };
 
         mermaid.initialize(mermaidConfig);
 
-        setTimeout(() => {
-          const svgElement = document.querySelector("div.mermaid>svg");
+        document.addEventListener('DOMContentLoaded', () => {
+          const svgElement = document.querySelector("div.mermaid>svg"); 
           if (svgElement) {
             svgPanZoom(svgElement, {
               minZoom: 0.5,
@@ -41,8 +40,27 @@ module Jekyll
               center: true,
               refreshRate: "auto",
             });
+          } else {
+            // Fallback if the SVG is not found immediately (e.g., async loading)
+            const observer = new MutationObserver(() => {
+              const svg = document.querySelector("div.mermaid>svg");
+              if (svg) {
+                svgPanZoom(svg, {
+              minZoom: 0.5,
+              maxZoom: 10,
+              fit: true,
+              contain: false,
+              controlIconsEnabled: true,
+              center: true,
+              refreshRate: "auto",
+            });
+                observer.disconnect(); // Stop observing once the SVG is found 
+              }
+            });
+    
+            observer.observe(document.querySelector("div.mermaid"), { childList: true, subtree: true });
           }
-        }, 1000); 
+        });
       SCRIPT
     end
   end
