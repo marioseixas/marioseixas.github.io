@@ -500,9 +500,10 @@ canvas,
 video,
 svg,
 select {
-  display: block;
   overflow: auto;
   position: relative;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 iframe {
