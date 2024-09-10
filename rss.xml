@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<html lang="en">
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,12 +12,26 @@
     <script src="/assets/js/prism.js" defer></script>
     <script src="/assets/js/search.js" defer></script>
     <script src="/pagefind/pagefind-ui.js" type="text/javascript"></script>
+    
+    <!-- Highlighting Script with autofocus for search -->
     <script type="module">
       import PagefindHighlight from '/pagefind/pagefind-highlight.js';
-      new PagefindHighlight({
-        highlightParam: "highlight"
+      
+      // Initialize highlighting with search autofocus
+      window.addEventListener('DOMContentLoaded', (event) => {
+        // Highlighting for search terms
+        new PagefindHighlight({
+          highlightParam: "highlight"
+        });
+
+        // Initialize Pagefind search with autofocus enabled
+        new PagefindUI({
+          element: "#search",  // Correct search element based on provided HTML
+          autofocus: true  // Add autofocus to the search input
+        });
       });
     </script>
+
     
   </head>
   <body class="post-content-body">
@@ -48,7 +61,7 @@
     <title>infoBAG</title>
     <link href="https://ib.bsb.br/rss.xml" rel="self"/>
     <link href="https://ib.bsb.br/"/>
-    <updated>2024-09-10T15:09:07+00:00</updated>
+    <updated>2024-09-10T15:44:05+00:00</updated>
     <id>https://ib.bsb.br</id>
     <author>
         <name></name>
