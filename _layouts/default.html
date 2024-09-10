@@ -11,19 +11,27 @@
     <link href="{{ '/pagefind/pagefind-ui.css' | relative_url }}" rel="stylesheet">
     <script src="{{ '/assets/js/prism.js' | relative_url }}" defer></script>
     <script src="{{ '/assets/js/search.js' | relative_url }}" defer></script>
+    <script src="{{ '/pagefind/pagefind-ui.js' | relative_url }}" type="text/javascript"></script>
+    
+    <!-- Highlighting Script with autofocus for search -->
     <script type="module">
       import PagefindHighlight from '{{ "/pagefind/pagefind-highlight.js" | relative_url }}';
+      
+      // Initialize highlighting with search autofocus
       window.addEventListener('DOMContentLoaded', (event) => {
         // Highlighting for search terms
         new PagefindHighlight({
           highlightParam: "highlight"
         });
+
+        // Initialize Pagefind search with autofocus enabled
         new PagefindUI({
           element: "#search",  // Correct search element based on provided HTML
           autofocus: true  // Add autofocus to the search input
         });
       });
     </script>
+
     {% if page.tags %}
       <meta itemprop="keywords" content="{{ page.tags | join: ',' }}">
       {% for tag in page.tags %}
