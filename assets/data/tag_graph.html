@@ -14,55 +14,55 @@ erDiagram
     rendimentos {
     }
     scripts {
-        child mobile
         child scripts_mobile
-        child scripts_AI
-        child scripts_cloud
-        child google-apps-script
+        child mobile
         child AI
-        child cloud
+        child scripts_cloud
+        child scripts_AI
         child scripts_google-apps-script
+        child google-apps-script
+        child cloud
         related_26 linux
         related_2 estudos
     }
-    mobile {
-        parent scripts
-        parent software
-    }
-    scripts ||--|| mobile : SUBSET_OF
     scripts_mobile {
         parent scripts
         related_2 iphone
     }
     scripts ||--|| scripts_mobile : SUBSET_OF
-    scripts_AI {
+    mobile {
         parent scripts
+        parent software
     }
-    scripts ||--|| scripts_AI : SUBSET_OF
+    scripts ||--|| mobile : SUBSET_OF
+    AI {
+        parent scripts
+        child AI_prompt
+        child tools_AI_prompt
+        child prompt
+    }
+    scripts ||--|| AI : SUBSET_OF
     scripts_cloud {
         parent scripts
     }
     scripts ||--|| scripts_cloud : SUBSET_OF
+    scripts_AI {
+        parent scripts
+    }
+    scripts ||--|| scripts_AI : SUBSET_OF
+    scripts_google-apps-script {
+        parent scripts
+    }
+    scripts ||--|| scripts_google-apps-script : SUBSET_OF
     google-apps-script {
         parent scripts
     }
     scripts ||--|| google-apps-script : SUBSET_OF
-    AI {
-        parent scripts
-        child AI_prompt
-        child prompt
-        child tools_AI_prompt
-    }
-    scripts ||--|| AI : SUBSET_OF
     cloud {
         parent scripts
         parent software
     }
     scripts ||--|| cloud : SUBSET_OF
-    scripts_google-apps-script {
-        parent scripts
-    }
-    scripts ||--|| scripts_google-apps-script : SUBSET_OF
     estudos {
         parent tools_github
         related_2 trabalho
@@ -77,43 +77,43 @@ erDiagram
     tools {
         child AI_prompt
         child github_estudos
-        child tools_github_estudos
         child tools_AI_prompt
+        child tools_github_estudos
     }
     AI_prompt {
-        parent AI
         parent tools
+        parent AI
     }
     tools ||--|| AI_prompt : SUBSET_OF
     github_estudos {
         parent tools
     }
     tools ||--|| github_estudos : SUBSET_OF
-    tools_github_estudos {
-        parent tools
-        parent github
-    }
-    tools ||--|| tools_github_estudos : SUBSET_OF
     tools_AI_prompt {
         parent tools
         parent AI
     }
     tools ||--|| tools_AI_prompt : SUBSET_OF
+    tools_github_estudos {
+        parent tools
+        parent github
+    }
+    tools ||--|| tools_github_estudos : SUBSET_OF
     iphone {
         parent tasks
         related_2 scripts_mobile
         related_2 software_mobile
     }
     tasks {
-        child iphone
         child tasks_iphone
+        child iphone
     }
     tasks ||--|| iphone : SUBSET_OF
     software {
-        child software_mobile
-        child mobile
         child software_cloud
+        child mobile
         child cloud
+        child software_mobile
     }
     software ||--|| mobile : SUBSET_OF
     software_mobile {
@@ -138,12 +138,12 @@ erDiagram
     }
     tasks ||--|| tasks_iphone : SUBSET_OF
     AI ||--|| AI_prompt : SUBSET_OF
+    AI ||--|| tools_AI_prompt : SUBSET_OF
     prompt {
         parent tools_AI
         parent AI
     }
     AI ||--|| prompt : SUBSET_OF
-    AI ||--|| tools_AI_prompt : SUBSET_OF
     tools_AI {
         child prompt
     }

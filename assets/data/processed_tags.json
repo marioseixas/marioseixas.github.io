@@ -704,14 +704,14 @@
     "scripts": {
         "parents": [],
         "children": [
-            "mobile",
             "scripts>mobile",
-            "scripts>AI",
-            "scripts>cloud",
-            "google-apps-script",
+            "mobile",
             "AI",
-            "cloud",
-            "scripts>google-apps-script"
+            "scripts>cloud",
+            "scripts>AI",
+            "scripts>google-apps-script",
+            "google-apps-script",
+            "cloud"
         ],
         "related": {
             "linux": 26,
@@ -960,8 +960,8 @@
         "children": [
             "AI>prompt",
             "github>estudos",
-            "tools>github>estudos",
-            "tools>AI>prompt"
+            "tools>AI>prompt",
+            "tools>github>estudos"
         ],
         "related": {},
         "posts": [
@@ -1147,10 +1147,10 @@
     "software": {
         "parents": [],
         "children": [
-            "software>mobile",
-            "mobile",
             "software>cloud",
-            "cloud"
+            "mobile",
+            "cloud",
+            "software>mobile"
         ],
         "related": {},
         "posts": [
@@ -1310,8 +1310,8 @@
     "tasks": {
         "parents": [],
         "children": [
-            "iphone",
-            "tasks>iphone"
+            "tasks>iphone",
+            "iphone"
         ],
         "related": {},
         "posts": [
@@ -1397,8 +1397,8 @@
     },
     "AI>prompt": {
         "parents": [
-            "AI",
-            "tools"
+            "tools",
+            "AI"
         ],
         "children": [],
         "related": {},
@@ -1435,8 +1435,8 @@
         ],
         "children": [
             "AI>prompt",
-            "prompt",
-            "tools>AI>prompt"
+            "tools>AI>prompt",
+            "prompt"
         ],
         "related": {},
         "posts": [
