@@ -34,15 +34,16 @@
     --fc-page-bg-color: #434300;
     /* Pagefind UI Variables */
     --pagefind-ui-scale: 1;
-    --pagefind-ui-primary: var(--accents-dodgerblue);
-    --pagefind-ui-text: #FF4500;
     --pagefind-ui-background: var(--bg-default);
-    --pagefind-ui-border: rgba(var(--text-default), 0.1);
-    --pagefind-ui-tag: rgba(var(--accents-amethyst), 0.1);
     --pagefind-ui-border-width: 2px;
     --pagefind-ui-border-radius: 0.1875rem;
     --pagefind-ui-image-border-radius: 0.1875rem;
     --pagefind-ui-image-box-ratio: 3 / 2;
+    --pagefind-ui-primary: #C6C6C6; /* Inverse of #393939 */
+    --pagefind-ui-text: #C6C6C6; /* Inverse of #393939 */
+    --pagefind-ui-border: #111111; /* Inverse of #eeeeee */
+    --pagefind-ui-tag: #111111; /* Inverse of #eeeeee */
+    --pagefind-ui-font: var(--ft);	
 }
 
 html {
@@ -469,7 +470,6 @@ body {
   text-rendering: optimizeLegibility;
   word-break: break-word;
   min-height: 100%;
-  --pagefind-ui-font: var(--ft);
 }
 
 blockquote {
