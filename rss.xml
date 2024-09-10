@@ -49,14 +49,14 @@
     <title>infoBAG</title>
     <link href="https://ib.bsb.br/rss.xml" rel="self"/>
     <link href="https://ib.bsb.br/"/>
-    <updated>2024-09-10T15:06:07+00:00</updated>
+    <updated>2024-09-10T15:07:50+00:00</updated>
     <id>https://ib.bsb.br</id>
     <author>
         <name></name>
     </author>
     
     <entry>
-        <title>reassess</title>
+        <title>SRS within GitHub Actions</title>
         <link href="https://ib.bsb.br/srs/"/>
         <updated>2024-09-09T00:00:00+00:00</updated>
         <id>https://ib.bsb.br/srs/</id>
@@ -141,7 +141,7 @@
 &lt;ul&gt;
   &lt;li&gt;&lt;strong&gt;Flexibility:&lt;/strong&gt; Use your preferred text editor and any plain text format or markup language you like for your notes.&lt;/li&gt;
   &lt;li&gt;&lt;strong&gt;Control:&lt;/strong&gt; You decide when and how many notes to review each day – there are no strict daily review quotas.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Intelligent Note Selection:&lt;/strong&gt; &lt;mark&gt; The script&apos;s note prioritization logic helps you focus on the most relevant and &quot;exciting&quot; notes, making your review sessions more efficient and engaging.&lt;/mark&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Intelligent Note Selection:&lt;/strong&gt; The script’s note prioritization logic helps you focus on the most relevant and “exciting” notes, making your review sessions more efficient and engaging.&lt;/li&gt;
   &lt;li&gt;&lt;strong&gt;Editor Integration:&lt;/strong&gt;  Seamlessly use your text editor of choice to review and edit notes.  (The optional &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;--external-program emacs&lt;/code&gt; flag provides even deeper integration with Emacs, allowing automatic navigation to the selected note).&lt;/li&gt;
   &lt;li&gt;&lt;strong&gt;Non-Destructive:&lt;/strong&gt; The script only reads from your inbox files and does not modify them in any way. Your notes remain entirely under your control.&lt;/li&gt;
 &lt;/ul&gt;
@@ -49513,6 +49513,24 @@ Pense duas vezes antes de se envolver.
         &lt;a class=&quot;post-heading&quot; href=&quot;#&quot; id=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;
           &lt;img src=&quot;/assets/gold.ico&quot; alt=&quot;gold icon&quot; /&gt;
         &lt;/a&gt;
+        2024-09-09
+         &amp;rightarrowtail; 10 Sep 2024
+        
+      &lt;/h3&gt;
+      &lt;ul&gt;
+        &lt;a href=&quot;/srs/&quot;&gt;
+          &lt;h2&gt;
+            SRS within GitHub Actions
+          &lt;/h2&gt;
+        &lt;/a&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;
+    
+    &lt;div class=&quot;search-link&quot;&gt;
+      &lt;h3&gt;
+        &lt;a class=&quot;post-heading&quot; href=&quot;#&quot; id=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;
+          &lt;img src=&quot;/assets/gold.ico&quot; alt=&quot;gold icon&quot; /&gt;
+        &lt;/a&gt;
         2024-06-16
          &amp;rightarrowtail; 10 Sep 2024
         
@@ -49611,24 +49629,6 @@ Pense duas vezes antes de se envolver.
         &lt;a href=&quot;/events/&quot;&gt;
           &lt;h2&gt;
             Events
-          &lt;/h2&gt;
-        &lt;/a&gt;
-      &lt;/ul&gt;
-    &lt;/div&gt;
-    
-    &lt;div class=&quot;search-link&quot;&gt;
-      &lt;h3&gt;
-        &lt;a class=&quot;post-heading&quot; href=&quot;#&quot; id=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;
-          &lt;img src=&quot;/assets/gold.ico&quot; alt=&quot;gold icon&quot; /&gt;
-        &lt;/a&gt;
-        2024-09-09
-         &amp;rightarrowtail; 09 Sep 2024
-        
-      &lt;/h3&gt;
-      &lt;ul&gt;
-        &lt;a href=&quot;/srs/&quot;&gt;
-          &lt;h2&gt;
-            reassess
           &lt;/h2&gt;
         &lt;/a&gt;
       &lt;/ul&gt;

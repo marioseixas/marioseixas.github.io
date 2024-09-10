@@ -367,7 +367,7 @@ estudos:
   posts:
   - date: &id007 2024-09-09 00:00:00
     highlighted: false
-    title: reassess
+    title: SRS within GitHub Actions
     url: /srs
   - date: &id033 2024-07-05 00:00:00
     highlighted: true
@@ -422,7 +422,7 @@ github:
   posts:
   - date: *id007
     highlighted: false
-    title: reassess
+    title: SRS within GitHub Actions
     url: /srs
   - date: &id008 2024-08-15 00:00:00
     highlighted: false
@@ -440,7 +440,7 @@ github>estudos:
   posts:
   - date: *id007
     highlighted: false
-    title: reassess
+    title: SRS within GitHub Actions
     url: /srs
   related: {}
 github>jekyll:
@@ -1270,7 +1270,7 @@ tools:
   posts:
   - date: *id007
     highlighted: false
-    title: reassess
+    title: SRS within GitHub Actions
     url: /srs
   - date: *id002
     highlighted: false
@@ -1349,7 +1349,7 @@ tools>github:
   posts:
   - date: *id007
     highlighted: false
-    title: reassess
+    title: SRS within GitHub Actions
     url: /srs
   related: {}
 tools>github>estudos:
@@ -1360,7 +1360,7 @@ tools>github>estudos:
   posts:
   - date: *id007
     highlighted: true
-    title: reassess
+    title: SRS within GitHub Actions
     url: /srs
   related: {}
 trabalho:
