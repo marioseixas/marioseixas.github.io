@@ -705,12 +705,12 @@
         "parents": [],
         "children": [
             "scripts>mobile",
-            "AI",
-            "scripts>google-apps-script",
             "cloud",
-            "mobile",
-            "scripts>AI",
             "scripts>cloud",
+            "scripts>AI",
+            "scripts>google-apps-script",
+            "mobile",
+            "AI",
             "google-apps-script"
         ],
         "related": {
@@ -958,9 +958,9 @@
     "tools": {
         "parents": [],
         "children": [
+            "tools>AI>prompt",
             "tools>github>estudos",
             "github>estudos",
-            "tools>AI>prompt",
             "AI>prompt"
         ],
         "related": {},
@@ -1094,8 +1094,8 @@
     },
     "mobile": {
         "parents": [
-            "software",
-            "scripts"
+            "scripts",
+            "software"
         ],
         "children": [],
         "related": {},
@@ -1253,8 +1253,8 @@
     },
     "cloud": {
         "parents": [
-            "software",
-            "scripts"
+            "scripts",
+            "software"
         ],
         "children": [],
         "related": {},
@@ -1397,8 +1397,8 @@
     },
     "AI>prompt": {
         "parents": [
-            "tools",
-            "AI"
+            "AI",
+            "tools"
         ],
         "children": [],
         "related": {},
@@ -1434,9 +1434,9 @@
             "scripts"
         ],
         "children": [
+            "AI>prompt",
             "prompt",
-            "tools>AI>prompt",
-            "AI>prompt"
+            "tools>AI>prompt"
         ],
         "related": {},
         "posts": [
@@ -1492,8 +1492,8 @@
     },
     "prompt": {
         "parents": [
-            "AI",
-            "tools>AI"
+            "tools>AI",
+            "AI"
         ],
         "children": [],
         "related": {},
@@ -1548,8 +1548,8 @@
     "github": {
         "parents": [],
         "children": [
-            "github>jekyll",
             "jekyll",
+            "github>jekyll",
             "tools>github>estudos"
         ],
         "related": {},
@@ -1695,10 +1695,10 @@
     "edital": {
         "parents": [],
         "children": [
-            "edital>direito",
-            "direito",
             "edital>direito>processual-penal",
-            "direito>processual-penal"
+            "direito>processual-penal",
+            "edital>direito",
+            "direito"
         ],
         "related": {},
         "posts": [
@@ -1845,8 +1845,8 @@
     },
     "edital>direito>processual-penal": {
         "parents": [
-            "direito",
-            "edital"
+            "edital",
+            "direito"
         ],
         "children": [],
         "related": {},

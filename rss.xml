@@ -44,7 +44,7 @@
     <title>infoBAG</title>
     <link href="https://ib.bsb.br/rss.xml" rel="self"/>
     <link href="https://ib.bsb.br/"/>
-    <updated>2024-09-10T17:59:04+00:00</updated>
+    <updated>2024-09-10T18:00:38+00:00</updated>
     <id>https://ib.bsb.br</id>
     <author>
         <name></name>
@@ -45205,84 +45205,84 @@ Pense duas vezes antes de se envolver.
         <updated>1992-07-12T00:00:00+00:00</updated>
         <id>https://ib.bsb.br/tags/</id>
         <content type="html">
-&lt;aside class=&quot;tag-list&quot; aria-label=&quot;List of all tags&quot;&gt;
-    &lt;div&gt;
+&lt;aside class=&quot;tagged-posts&quot;&gt;
+    &lt;div class=&quot;search-link&quot;&gt;
         
         
         
         
         
-        &lt;aside&gt;
+        &lt;ul class=&quot;search-link&quot;&gt;
             &lt;a href=&quot;#ai&quot; aria-label=&quot;Tag AI with 3 highlighted posts&quot;&gt;
                 AI (3)
             &lt;/a&gt;
-        &lt;/aside&gt;
+        &lt;/ul&gt;
         
         
         
         
         
         
-        &lt;aside&gt;
+        &lt;ul class=&quot;search-link&quot;&gt;
             &lt;a href=&quot;#ai-prompt&quot; aria-label=&quot;Tag AI&amp;gt;prompt with 3 highlighted posts&quot;&gt;
                 AI&amp;gt;prompt (3)
             &lt;/a&gt;
-        &lt;/aside&gt;
+        &lt;/ul&gt;
         
         
         
         
         
         
-        &lt;aside&gt;
+        &lt;ul class=&quot;search-link&quot;&gt;
             &lt;a href=&quot;#admoestação&quot; aria-label=&quot;Tag admoestação with 2 highlighted posts&quot;&gt;
                 admoestação (2)
             &lt;/a&gt;
-        &lt;/aside&gt;
+        &lt;/ul&gt;
         
         
         
         
         
         
-        &lt;aside&gt;
+        &lt;ul class=&quot;search-link&quot;&gt;
             &lt;a href=&quot;#assistir&quot; aria-label=&quot;Tag assistir with 2 highlighted posts&quot;&gt;
                 assistir (2)
             &lt;/a&gt;
-        &lt;/aside&gt;
+        &lt;/ul&gt;
         
         
         
         
         
         
-        &lt;aside&gt;
+        &lt;ul class=&quot;search-link&quot;&gt;
             &lt;a href=&quot;#calls&quot; aria-label=&quot;Tag calls with 31 highlighted posts&quot;&gt;
                 calls (31)
             &lt;/a&gt;
-        &lt;/aside&gt;
+        &lt;/ul&gt;
         
         
         
         
         
         
-        &lt;aside&gt;
+        &lt;ul class=&quot;search-link&quot;&gt;
             &lt;a href=&quot;#carro&quot; aria-label=&quot;Tag carro with 4 highlighted posts&quot;&gt;
                 carro (4)
             &lt;/a&gt;
-        &lt;/aside&gt;
+        &lt;/ul&gt;
         
         
         
         
         
         
-        &lt;aside&gt;
+        &lt;ul class=&quot;search-link&quot;&gt;
             &lt;a href=&quot;#chess&quot; aria-label=&quot;Tag chess with 2 highlighted posts&quot;&gt;
                 chess (2)
             &lt;/a&gt;
-        &lt;/aside&gt;
+        &lt;/ul&gt;
         
         
         
@@ -45294,11 +45294,11 @@ Pense duas vezes antes de se envolver.
         
         
         
-        &lt;aside&gt;
+        &lt;ul class=&quot;search-link&quot;&gt;
             &lt;a href=&quot;#despesas&quot; aria-label=&quot;Tag despesas with 2 highlighted posts&quot;&gt;
                 despesas (2)
             &lt;/a&gt;
-        &lt;/aside&gt;
+        &lt;/ul&gt;
         
         
         
@@ -45315,55 +45315,55 @@ Pense duas vezes antes de se envolver.
         
         
         
-        &lt;aside&gt;
+        &lt;ul class=&quot;search-link&quot;&gt;
             &lt;a href=&quot;#edital&quot; aria-label=&quot;Tag edital with 3 highlighted posts&quot;&gt;
                 edital (3)
             &lt;/a&gt;
-        &lt;/aside&gt;
+        &lt;/ul&gt;
         
         
         
         
         
         
-        &lt;aside&gt;
+        &lt;ul class=&quot;search-link&quot;&gt;
             &lt;a href=&quot;#edital-direito&quot; aria-label=&quot;Tag edital&amp;gt;direito with 1 highlighted posts&quot;&gt;
                 edital&amp;gt;direito (1)
             &lt;/a&gt;
-        &lt;/aside&gt;
+        &lt;/ul&gt;
         
         
         
         
         
         
-        &lt;aside&gt;
+        &lt;ul class=&quot;search-link&quot;&gt;
             &lt;a href=&quot;#edital-direito-processual-penal&quot; aria-label=&quot;Tag edital&amp;gt;direito&amp;gt;processual-penal with 1 highlighted posts&quot;&gt;
                 edital&amp;gt;direito&amp;gt;processual-penal (1)
             &lt;/a&gt;
-        &lt;/aside&gt;
+        &lt;/ul&gt;
         
         
         
         
         
         
-        &lt;aside&gt;
+        &lt;ul class=&quot;search-link&quot;&gt;
             &lt;a href=&quot;#estudos&quot; aria-label=&quot;Tag estudos with 7 highlighted posts&quot;&gt;
                 estudos (7)
             &lt;/a&gt;
-        &lt;/aside&gt;
+        &lt;/ul&gt;
         
         
         
         
         
         
-        &lt;aside&gt;
+        &lt;ul class=&quot;search-link&quot;&gt;
             &lt;a href=&quot;#fatherhood&quot; aria-label=&quot;Tag fatherhood with 2 highlighted posts&quot;&gt;
                 fatherhood (2)
             &lt;/a&gt;
-        &lt;/aside&gt;
+        &lt;/ul&gt;
         
         
         
@@ -45380,11 +45380,11 @@ Pense duas vezes antes de se envolver.
         
         
         
-        &lt;aside&gt;
+        &lt;ul class=&quot;search-link&quot;&gt;
             &lt;a href=&quot;#github-jekyll&quot; aria-label=&quot;Tag github&amp;gt;jekyll with 2 highlighted posts&quot;&gt;
                 github&amp;gt;jekyll (2)
             &lt;/a&gt;
-        &lt;/aside&gt;
+        &lt;/ul&gt;
         
         
         
@@ -45396,22 +45396,22 @@ Pense duas vezes antes de se envolver.
         
         
         
-        &lt;aside&gt;
+        &lt;ul class=&quot;search-link&quot;&gt;
             &lt;a href=&quot;#hardware&quot; aria-label=&quot;Tag hardware with 3 highlighted posts&quot;&gt;
                 hardware (3)
             &lt;/a&gt;
-        &lt;/aside&gt;
+        &lt;/ul&gt;
         
         
         
         
         
         
-        &lt;aside&gt;
+        &lt;ul class=&quot;search-link&quot;&gt;
             &lt;a href=&quot;#iphone&quot; aria-label=&quot;Tag iphone with 2 highlighted posts&quot;&gt;
                 iphone (2)
             &lt;/a&gt;
-        &lt;/aside&gt;
+        &lt;/ul&gt;
         
         
         
@@ -45423,33 +45423,33 @@ Pense duas vezes antes de se envolver.
         
         
         
-        &lt;aside&gt;
+        &lt;ul class=&quot;search-link&quot;&gt;
             &lt;a href=&quot;#ler&quot; aria-label=&quot;Tag ler with 3 highlighted posts&quot;&gt;
                 ler (3)
             &lt;/a&gt;
-        &lt;/aside&gt;
+        &lt;/ul&gt;
         
         
         
         
         
         
-        &lt;aside&gt;
+        &lt;ul class=&quot;search-link&quot;&gt;
             &lt;a href=&quot;#linux&quot; aria-label=&quot;Tag linux with 41 highlighted posts&quot;&gt;
                 linux (41)
             &lt;/a&gt;
-        &lt;/aside&gt;
+        &lt;/ul&gt;
         
         
         
         
         
         
-        &lt;aside&gt;
+        &lt;ul class=&quot;search-link&quot;&gt;
             &lt;a href=&quot;#misc&quot; aria-label=&quot;Tag misc with 2 highlighted posts&quot;&gt;
                 misc (2)
             &lt;/a&gt;
-        &lt;/aside&gt;
+        &lt;/ul&gt;
         
         
         
@@ -45461,11 +45461,11 @@ Pense duas vezes antes de se envolver.
         
         
         
-        &lt;aside&gt;
+        &lt;ul class=&quot;search-link&quot;&gt;
             &lt;a href=&quot;#music&quot; aria-label=&quot;Tag music with 1 highlighted posts&quot;&gt;
                 music (1)
             &lt;/a&gt;
-        &lt;/aside&gt;
+        &lt;/ul&gt;
         
         
         
@@ -45482,176 +45482,176 @@ Pense duas vezes antes de se envolver.
         
         
         
-        &lt;aside&gt;
+        &lt;ul class=&quot;search-link&quot;&gt;
             &lt;a href=&quot;#receitas&quot; aria-label=&quot;Tag receitas with 1 highlighted posts&quot;&gt;
                 receitas (1)
             &lt;/a&gt;
-        &lt;/aside&gt;
+        &lt;/ul&gt;
         
         
         
         
         
         
-        &lt;aside&gt;
+        &lt;ul class=&quot;search-link&quot;&gt;
             &lt;a href=&quot;#rendimentos&quot; aria-label=&quot;Tag rendimentos with 33 highlighted posts&quot;&gt;
                 rendimentos (33)
             &lt;/a&gt;
-        &lt;/aside&gt;
+        &lt;/ul&gt;
         
         
         
         
         
         
-        &lt;aside&gt;
+        &lt;ul class=&quot;search-link&quot;&gt;
             &lt;a href=&quot;#saúde&quot; aria-label=&quot;Tag saúde with 2 highlighted posts&quot;&gt;
                 saúde (2)
             &lt;/a&gt;
-        &lt;/aside&gt;
+        &lt;/ul&gt;
         
         
         
         
         
         
-        &lt;aside&gt;
+        &lt;ul class=&quot;search-link&quot;&gt;
             &lt;a href=&quot;#scripts&quot; aria-label=&quot;Tag scripts with 22 highlighted posts&quot;&gt;
                 scripts (22)
             &lt;/a&gt;
-        &lt;/aside&gt;
+        &lt;/ul&gt;
         
         
         
         
         
         
-        &lt;aside&gt;
+        &lt;ul class=&quot;search-link&quot;&gt;
             &lt;a href=&quot;#scripts-ai&quot; aria-label=&quot;Tag scripts&amp;gt;AI with 1 highlighted posts&quot;&gt;
                 scripts&amp;gt;AI (1)
             &lt;/a&gt;
-        &lt;/aside&gt;
+        &lt;/ul&gt;
         
         
         
         
         
         
-        &lt;aside&gt;
+        &lt;ul class=&quot;search-link&quot;&gt;
             &lt;a href=&quot;#scripts-cloud&quot; aria-label=&quot;Tag scripts&amp;gt;cloud with 1 highlighted posts&quot;&gt;
                 scripts&amp;gt;cloud (1)
             &lt;/a&gt;
-        &lt;/aside&gt;
+        &lt;/ul&gt;
         
         
         
         
         
         
-        &lt;aside&gt;
+        &lt;ul class=&quot;search-link&quot;&gt;
             &lt;a href=&quot;#scripts-google-apps-script&quot; aria-label=&quot;Tag scripts&amp;gt;google-apps-script with 1 highlighted posts&quot;&gt;
                 scripts&amp;gt;google-apps-script (1)
             &lt;/a&gt;
-        &lt;/aside&gt;
+        &lt;/ul&gt;
         
         
         
         
         
         
-        &lt;aside&gt;
+        &lt;ul class=&quot;search-link&quot;&gt;
             &lt;a href=&quot;#scripts-mobile&quot; aria-label=&quot;Tag scripts&amp;gt;mobile with 1 highlighted posts&quot;&gt;
                 scripts&amp;gt;mobile (1)
             &lt;/a&gt;
-        &lt;/aside&gt;
+        &lt;/ul&gt;
         
         
         
         
         
         
-        &lt;aside&gt;
+        &lt;ul class=&quot;search-link&quot;&gt;
             &lt;a href=&quot;#sell&quot; aria-label=&quot;Tag sell with 4 highlighted posts&quot;&gt;
                 sell (4)
             &lt;/a&gt;
-        &lt;/aside&gt;
+        &lt;/ul&gt;
         
         
         
         
         
         
-        &lt;aside&gt;
+        &lt;ul class=&quot;search-link&quot;&gt;
             &lt;a href=&quot;#software&quot; aria-label=&quot;Tag software with 1 highlighted posts&quot;&gt;
                 software (1)
             &lt;/a&gt;
-        &lt;/aside&gt;
+        &lt;/ul&gt;
         
         
         
         
         
         
-        &lt;aside&gt;
+        &lt;ul class=&quot;search-link&quot;&gt;
             &lt;a href=&quot;#software-cloud&quot; aria-label=&quot;Tag software&amp;gt;cloud with 1 highlighted posts&quot;&gt;
                 software&amp;gt;cloud (1)
             &lt;/a&gt;
-        &lt;/aside&gt;
+        &lt;/ul&gt;
         
         
         
         
         
         
-        &lt;aside&gt;
+        &lt;ul class=&quot;search-link&quot;&gt;
             &lt;a href=&quot;#software-mobile&quot; aria-label=&quot;Tag software&amp;gt;mobile with 2 highlighted posts&quot;&gt;
                 software&amp;gt;mobile (2)
             &lt;/a&gt;
-        &lt;/aside&gt;
+        &lt;/ul&gt;
         
         
         
         
         
         
-        &lt;aside&gt;
+        &lt;ul class=&quot;search-link&quot;&gt;
             &lt;a href=&quot;#spirit&quot; aria-label=&quot;Tag spirit with 3 highlighted posts&quot;&gt;
                 spirit (3)
             &lt;/a&gt;
-        &lt;/aside&gt;
+        &lt;/ul&gt;
         
         
         
         
         
         
-        &lt;aside&gt;
+        &lt;ul class=&quot;search-link&quot;&gt;
             &lt;a href=&quot;#tasks&quot; aria-label=&quot;Tag tasks with 12 highlighted posts&quot;&gt;
                 tasks (12)
             &lt;/a&gt;
-        &lt;/aside&gt;
+        &lt;/ul&gt;
         
         
         
         
         
         
-        &lt;aside&gt;
+        &lt;ul class=&quot;search-link&quot;&gt;
             &lt;a href=&quot;#tasks-iphone&quot; aria-label=&quot;Tag tasks&amp;gt;iphone with 1 highlighted posts&quot;&gt;
                 tasks&amp;gt;iphone (1)
             &lt;/a&gt;
-        &lt;/aside&gt;
+        &lt;/ul&gt;
         
         
         
         
         
         
-        &lt;aside&gt;
+        &lt;ul class=&quot;search-link&quot;&gt;
             &lt;a href=&quot;#tools&quot; aria-label=&quot;Tag tools with 11 highlighted posts&quot;&gt;
                 tools (11)
             &lt;/a&gt;
-        &lt;/aside&gt;
+        &lt;/ul&gt;
         
         
         
@@ -45663,11 +45663,11 @@ Pense duas vezes antes de se envolver.
         
         
         
-        &lt;aside&gt;
+        &lt;ul class=&quot;search-link&quot;&gt;
             &lt;a href=&quot;#tools-ai-prompt&quot; aria-label=&quot;Tag tools&amp;gt;AI&amp;gt;prompt with 1 highlighted posts&quot;&gt;
                 tools&amp;gt;AI&amp;gt;prompt (1)
             &lt;/a&gt;
-        &lt;/aside&gt;
+        &lt;/ul&gt;
         
         
         
@@ -45679,32 +45679,31 @@ Pense duas vezes antes de se envolver.
         
         
         
-        &lt;aside&gt;
+        &lt;ul class=&quot;search-link&quot;&gt;
             &lt;a href=&quot;#tools-github-estudos&quot; aria-label=&quot;Tag tools&amp;gt;github&amp;gt;estudos with 1 highlighted posts&quot;&gt;
                 tools&amp;gt;github&amp;gt;estudos (1)
             &lt;/a&gt;
-        &lt;/aside&gt;
+        &lt;/ul&gt;
         
         
         
         
         
         
-        &lt;aside&gt;
+        &lt;ul class=&quot;search-link&quot;&gt;
             &lt;a href=&quot;#trabalho&quot; aria-label=&quot;Tag trabalho with 4 highlighted posts&quot;&gt;
                 trabalho (4)
             &lt;/a&gt;
-        &lt;/aside&gt;
+        &lt;/ul&gt;
         
         
     &lt;/div&gt;
 &lt;/aside&gt;
-
-&lt;div class=&quot;tagged-posts&quot;&gt;
+&lt;div class=&quot;post-wrapper&quot;&gt;
     
     
     
-    &lt;aside id=&quot;ai&quot; aria-labelledby=&quot;ai-heading&quot;&gt;
+    &lt;aside class=&quot;tagged-posts&quot; id=&quot;ai&quot; aria-labelledby=&quot;ai-heading&quot;&gt;
         &lt;h2 id=&quot;ai-heading&quot;&gt;
             &lt;a href=&quot;#&quot; class=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;&lt;img src=&quot;/assets/gold.ico&quot; alt=&quot;gold icon&quot; /&gt;&lt;/a&gt;
             AI
@@ -45818,7 +45817,7 @@ Pense duas vezes antes de se envolver.
     
     
     
-    &lt;aside id=&quot;ai-prompt&quot; aria-labelledby=&quot;ai-prompt-heading&quot;&gt;
+    &lt;aside class=&quot;tagged-posts&quot; id=&quot;ai-prompt&quot; aria-labelledby=&quot;ai-prompt-heading&quot;&gt;
         &lt;h2 id=&quot;ai-prompt-heading&quot;&gt;
             &lt;a href=&quot;#&quot; class=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;&lt;img src=&quot;/assets/gold.ico&quot; alt=&quot;gold icon&quot; /&gt;&lt;/a&gt;
             AI&amp;gt;prompt
@@ -45883,7 +45882,7 @@ Pense duas vezes antes de se envolver.
     
     
     
-    &lt;aside id=&quot;admoestação&quot; aria-labelledby=&quot;admoestação-heading&quot;&gt;
+    &lt;aside class=&quot;tagged-posts&quot; id=&quot;admoestação&quot; aria-labelledby=&quot;admoestação-heading&quot;&gt;
         &lt;h2 id=&quot;admoestação-heading&quot;&gt;
             &lt;a href=&quot;#&quot; class=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;&lt;img src=&quot;/assets/gold.ico&quot; alt=&quot;gold icon&quot; /&gt;&lt;/a&gt;
             admoestação
@@ -45914,13 +45913,13 @@ Pense duas vezes antes de se envolver.
         
         
         &lt;strong&gt;Related tags:&lt;/strong&gt;
-        &lt;div&gt;
+        &lt;div class=&quot;search-link&quot;&gt;
             
-            &lt;aside&gt;
+            &lt;ul&gt;
                 &lt;a href=&quot;#spirit&quot; aria-label=&quot;Related tag spirit&quot;&gt;
                     spirit (2)
                 &lt;/a&gt;
-            &lt;/aside&gt;
+            &lt;/ul&gt;
             
         &lt;/div&gt;
         
@@ -45928,7 +45927,7 @@ Pense duas vezes antes de se envolver.
     
     
     
-    &lt;aside id=&quot;assistir&quot; aria-labelledby=&quot;assistir-heading&quot;&gt;
+    &lt;aside class=&quot;tagged-posts&quot; id=&quot;assistir&quot; aria-labelledby=&quot;assistir-heading&quot;&gt;
         &lt;h2 id=&quot;assistir-heading&quot;&gt;
             &lt;a href=&quot;#&quot; class=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;&lt;img src=&quot;/assets/gold.ico&quot; alt=&quot;gold icon&quot; /&gt;&lt;/a&gt;
             assistir
@@ -45962,7 +45961,7 @@ Pense duas vezes antes de se envolver.
     
     
     
-    &lt;aside id=&quot;calls&quot; aria-labelledby=&quot;calls-heading&quot;&gt;
+    &lt;aside class=&quot;tagged-posts&quot; id=&quot;calls&quot; aria-labelledby=&quot;calls-heading&quot;&gt;
         &lt;h2 id=&quot;calls-heading&quot;&gt;
             &lt;a href=&quot;#&quot; class=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;&lt;img src=&quot;/assets/gold.ico&quot; alt=&quot;gold icon&quot; /&gt;&lt;/a&gt;
             calls
@@ -46257,7 +46256,7 @@ Pense duas vezes antes de se envolver.
     
     
     
-    &lt;aside id=&quot;carro&quot; aria-labelledby=&quot;carro-heading&quot;&gt;
+    &lt;aside class=&quot;tagged-posts&quot; id=&quot;carro&quot; aria-labelledby=&quot;carro-heading&quot;&gt;
         &lt;h2 id=&quot;carro-heading&quot;&gt;
             &lt;a href=&quot;#&quot; class=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;&lt;img src=&quot;/assets/gold.ico&quot; alt=&quot;gold icon&quot; /&gt;&lt;/a&gt;
             carro
@@ -46309,7 +46308,7 @@ Pense duas vezes antes de se envolver.
     
     
     
-    &lt;aside id=&quot;chess&quot; aria-labelledby=&quot;chess-heading&quot;&gt;
+    &lt;aside class=&quot;tagged-posts&quot; id=&quot;chess&quot; aria-labelledby=&quot;chess-heading&quot;&gt;
         &lt;h2 id=&quot;chess-heading&quot;&gt;
             &lt;a href=&quot;#&quot; class=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;&lt;img src=&quot;/assets/gold.ico&quot; alt=&quot;gold icon&quot; /&gt;&lt;/a&gt;
             chess
@@ -46343,7 +46342,7 @@ Pense duas vezes antes de se envolver.
     
     
     
-    &lt;aside id=&quot;cloud&quot; aria-labelledby=&quot;cloud-heading&quot;&gt;
+    &lt;aside class=&quot;tagged-posts&quot; id=&quot;cloud&quot; aria-labelledby=&quot;cloud-heading&quot;&gt;
         &lt;h2 id=&quot;cloud-heading&quot;&gt;
             &lt;a href=&quot;#&quot; class=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;&lt;img src=&quot;/assets/gold.ico&quot; alt=&quot;gold icon&quot; /&gt;&lt;/a&gt;
             cloud
@@ -46390,7 +46389,7 @@ Pense duas vezes antes de se envolver.
     
     
     
-    &lt;aside id=&quot;despesas&quot; aria-labelledby=&quot;despesas-heading&quot;&gt;
+    &lt;aside class=&quot;tagged-posts&quot; id=&quot;despesas&quot; aria-labelledby=&quot;despesas-heading&quot;&gt;
         &lt;h2 id=&quot;despesas-heading&quot;&gt;
             &lt;a href=&quot;#&quot; class=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;&lt;img src=&quot;/assets/gold.ico&quot; alt=&quot;gold icon&quot; /&gt;&lt;/a&gt;
             despesas
@@ -46424,7 +46423,7 @@ Pense duas vezes antes de se envolver.
     
     
     
-    &lt;aside id=&quot;direito&quot; aria-labelledby=&quot;direito-heading&quot;&gt;
+    &lt;aside class=&quot;tagged-posts&quot; id=&quot;direito&quot; aria-labelledby=&quot;direito-heading&quot;&gt;
         &lt;h2 id=&quot;direito-heading&quot;&gt;
             &lt;a href=&quot;#&quot; class=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;&lt;img src=&quot;/assets/gold.ico&quot; alt=&quot;gold icon&quot; /&gt;&lt;/a&gt;
             direito
@@ -46476,7 +46475,7 @@ Pense duas vezes antes de se envolver.
     
     
     
-    &lt;aside id=&quot;direito-processual-penal&quot; aria-labelledby=&quot;direito-processual-penal-heading&quot;&gt;
+    &lt;aside class=&quot;tagged-posts&quot; id=&quot;direito-processual-penal&quot; aria-labelledby=&quot;direito-processual-penal-heading&quot;&gt;
         &lt;h2 id=&quot;direito-processual-penal-heading&quot;&gt;
             &lt;a href=&quot;#&quot; class=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;&lt;img src=&quot;/assets/gold.ico&quot; alt=&quot;gold icon&quot; /&gt;&lt;/a&gt;
             direito&amp;gt;processual-penal
@@ -46510,7 +46509,7 @@ Pense duas vezes antes de se envolver.
     
     
     
-    &lt;aside id=&quot;edital&quot; aria-labelledby=&quot;edital-heading&quot;&gt;
+    &lt;aside class=&quot;tagged-posts&quot; id=&quot;edital&quot; aria-labelledby=&quot;edital-heading&quot;&gt;
         &lt;h2 id=&quot;edital-heading&quot;&gt;
             &lt;a href=&quot;#&quot; class=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;&lt;img src=&quot;/assets/gold.ico&quot; alt=&quot;gold icon&quot; /&gt;&lt;/a&gt;
             edital
@@ -46592,7 +46591,7 @@ Pense duas vezes antes de se envolver.
     
     
     
-    &lt;aside id=&quot;edital-direito&quot; aria-labelledby=&quot;edital-direito-heading&quot;&gt;
+    &lt;aside class=&quot;tagged-posts&quot; id=&quot;edital-direito&quot; aria-labelledby=&quot;edital-direito-heading&quot;&gt;
         &lt;h2 id=&quot;edital-direito-heading&quot;&gt;
             &lt;a href=&quot;#&quot; class=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;&lt;img src=&quot;/assets/gold.ico&quot; alt=&quot;gold icon&quot; /&gt;&lt;/a&gt;
             edital&amp;gt;direito
@@ -46644,7 +46643,7 @@ Pense duas vezes antes de se envolver.
     
     
     
-    &lt;aside id=&quot;edital-direito-processual-penal&quot; aria-labelledby=&quot;edital-direito-processual-penal-heading&quot;&gt;
+    &lt;aside class=&quot;tagged-posts&quot; id=&quot;edital-direito-processual-penal&quot; aria-labelledby=&quot;edital-direito-processual-penal-heading&quot;&gt;
         &lt;h2 id=&quot;edital-direito-processual-penal-heading&quot;&gt;
             &lt;a href=&quot;#&quot; class=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;&lt;img src=&quot;/assets/gold.ico&quot; alt=&quot;gold icon&quot; /&gt;&lt;/a&gt;
             edital&amp;gt;direito&amp;gt;processual-penal
@@ -46682,7 +46681,7 @@ Pense duas vezes antes de se envolver.
     
     
     
-    &lt;aside id=&quot;estudos&quot; aria-labelledby=&quot;estudos-heading&quot;&gt;
+    &lt;aside class=&quot;tagged-posts&quot; id=&quot;estudos&quot; aria-labelledby=&quot;estudos-heading&quot;&gt;
         &lt;h2 id=&quot;estudos-heading&quot;&gt;
             &lt;a href=&quot;#&quot; class=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;&lt;img src=&quot;/assets/gold.ico&quot; alt=&quot;gold icon&quot; /&gt;&lt;/a&gt;
             estudos
@@ -46776,19 +46775,19 @@ Pense duas vezes antes de se envolver.
         
         
         &lt;strong&gt;Related tags:&lt;/strong&gt;
-        &lt;div&gt;
+        &lt;div class=&quot;search-link&quot;&gt;
             
-            &lt;aside&gt;
+            &lt;ul&gt;
                 &lt;a href=&quot;#trabalho&quot; aria-label=&quot;Related tag trabalho&quot;&gt;
                     trabalho (2)
                 &lt;/a&gt;
-            &lt;/aside&gt;
+            &lt;/ul&gt;
             
-            &lt;aside&gt;
+            &lt;ul&gt;
                 &lt;a href=&quot;#scripts&quot; aria-label=&quot;Related tag scripts&quot;&gt;
                     scripts (2)
                 &lt;/a&gt;
-            &lt;/aside&gt;
+            &lt;/ul&gt;
             
         &lt;/div&gt;
         
@@ -46796,7 +46795,7 @@ Pense duas vezes antes de se envolver.
     
     
     
-    &lt;aside id=&quot;fatherhood&quot; aria-labelledby=&quot;fatherhood-heading&quot;&gt;
+    &lt;aside class=&quot;tagged-posts&quot; id=&quot;fatherhood&quot; aria-labelledby=&quot;fatherhood-heading&quot;&gt;
         &lt;h2 id=&quot;fatherhood-heading&quot;&gt;
             &lt;a href=&quot;#&quot; class=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;&lt;img src=&quot;/assets/gold.ico&quot; alt=&quot;gold icon&quot; /&gt;&lt;/a&gt;
             fatherhood
@@ -46830,7 +46829,7 @@ Pense duas vezes antes de se envolver.
     
     
     
-    &lt;aside id=&quot;github&quot; aria-labelledby=&quot;github-heading&quot;&gt;
+    &lt;aside class=&quot;tagged-posts&quot; id=&quot;github&quot; aria-labelledby=&quot;github-heading&quot;&gt;
         &lt;h2 id=&quot;github-heading&quot;&gt;
             &lt;a href=&quot;#&quot; class=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;&lt;img src=&quot;/assets/gold.ico&quot; alt=&quot;gold icon&quot; /&gt;&lt;/a&gt;
             github
@@ -46890,7 +46889,7 @@ Pense duas vezes antes de se envolver.
     
     
     
-    &lt;aside id=&quot;github-estudos&quot; aria-labelledby=&quot;github-estudos-heading&quot;&gt;
+    &lt;aside class=&quot;tagged-posts&quot; id=&quot;github-estudos&quot; aria-labelledby=&quot;github-estudos-heading&quot;&gt;
         &lt;h2 id=&quot;github-estudos-heading&quot;&gt;
             &lt;a href=&quot;#&quot; class=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;&lt;img src=&quot;/assets/gold.ico&quot; alt=&quot;gold icon&quot; /&gt;&lt;/a&gt;
             github&amp;gt;estudos
@@ -46924,7 +46923,7 @@ Pense duas vezes antes de se envolver.
     
     
     
-    &lt;aside id=&quot;github-jekyll&quot; aria-labelledby=&quot;github-jekyll-heading&quot;&gt;
+    &lt;aside class=&quot;tagged-posts&quot; id=&quot;github-jekyll&quot; aria-labelledby=&quot;github-jekyll-heading&quot;&gt;
         &lt;h2 id=&quot;github-jekyll-heading&quot;&gt;
             &lt;a href=&quot;#&quot; class=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;&lt;img src=&quot;/assets/gold.ico&quot; alt=&quot;gold icon&quot; /&gt;&lt;/a&gt;
             github&amp;gt;jekyll
@@ -46967,7 +46966,7 @@ Pense duas vezes antes de se envolver.
     
     
     
-    &lt;aside id=&quot;google-apps-script&quot; aria-labelledby=&quot;google-apps-script-heading&quot;&gt;
+    &lt;aside class=&quot;tagged-posts&quot; id=&quot;google-apps-script&quot; aria-labelledby=&quot;google-apps-script-heading&quot;&gt;
         &lt;h2 id=&quot;google-apps-script-heading&quot;&gt;
             &lt;a href=&quot;#&quot; class=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;&lt;img src=&quot;/assets/gold.ico&quot; alt=&quot;gold icon&quot; /&gt;&lt;/a&gt;
             google-apps-script
@@ -47001,7 +47000,7 @@ Pense duas vezes antes de se envolver.
     
     
     
-    &lt;aside id=&quot;hardware&quot; aria-labelledby=&quot;hardware-heading&quot;&gt;
+    &lt;aside class=&quot;tagged-posts&quot; id=&quot;hardware&quot; aria-labelledby=&quot;hardware-heading&quot;&gt;
         &lt;h2 id=&quot;hardware-heading&quot;&gt;
             &lt;a href=&quot;#&quot; class=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;&lt;img src=&quot;/assets/gold.ico&quot; alt=&quot;gold icon&quot; /&gt;&lt;/a&gt;
             hardware
@@ -47044,7 +47043,7 @@ Pense duas vezes antes de se envolver.
     
     
     
-    &lt;aside id=&quot;iphone&quot; aria-labelledby=&quot;iphone-heading&quot;&gt;
+    &lt;aside class=&quot;tagged-posts&quot; id=&quot;iphone&quot; aria-labelledby=&quot;iphone-heading&quot;&gt;
         &lt;h2 id=&quot;iphone-heading&quot;&gt;
             &lt;a href=&quot;#&quot; class=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;&lt;img src=&quot;/assets/gold.ico&quot; alt=&quot;gold icon&quot; /&gt;&lt;/a&gt;
             iphone
@@ -47093,19 +47092,19 @@ Pense duas vezes antes de se envolver.
         
         
         &lt;strong&gt;Related tags:&lt;/strong&gt;
-        &lt;div&gt;
+        &lt;div class=&quot;search-link&quot;&gt;
             
-            &lt;aside&gt;
+            &lt;ul&gt;
                 &lt;a href=&quot;#scripts-mobile&quot; aria-label=&quot;Related tag scripts&amp;gt;mobile&quot;&gt;
                     scripts&amp;gt;mobile (2)
                 &lt;/a&gt;
-            &lt;/aside&gt;
+            &lt;/ul&gt;
             
-            &lt;aside&gt;
+            &lt;ul&gt;
                 &lt;a href=&quot;#software-mobile&quot; aria-label=&quot;Related tag software&amp;gt;mobile&quot;&gt;
                     software&amp;gt;mobile (2)
                 &lt;/a&gt;
-            &lt;/aside&gt;
+            &lt;/ul&gt;
             
         &lt;/div&gt;
         
@@ -47113,7 +47112,7 @@ Pense duas vezes antes de se envolver.
     
     
     
-    &lt;aside id=&quot;jekyll&quot; aria-labelledby=&quot;jekyll-heading&quot;&gt;
+    &lt;aside class=&quot;tagged-posts&quot; id=&quot;jekyll&quot; aria-labelledby=&quot;jekyll-heading&quot;&gt;
         &lt;h2 id=&quot;jekyll-heading&quot;&gt;
             &lt;a href=&quot;#&quot; class=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;&lt;img src=&quot;/assets/gold.ico&quot; alt=&quot;gold icon&quot; /&gt;&lt;/a&gt;
             jekyll
@@ -47156,7 +47155,7 @@ Pense duas vezes antes de se envolver.
     
     
     
-    &lt;aside id=&quot;ler&quot; aria-labelledby=&quot;ler-heading&quot;&gt;
+    &lt;aside class=&quot;tagged-posts&quot; id=&quot;ler&quot; aria-labelledby=&quot;ler-heading&quot;&gt;
         &lt;h2 id=&quot;ler-heading&quot;&gt;
             &lt;a href=&quot;#&quot; class=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;&lt;img src=&quot;/assets/gold.ico&quot; alt=&quot;gold icon&quot; /&gt;&lt;/a&gt;
             ler
@@ -47199,7 +47198,7 @@ Pense duas vezes antes de se envolver.
     
     
     
-    &lt;aside id=&quot;linux&quot; aria-labelledby=&quot;linux-heading&quot;&gt;
+    &lt;aside class=&quot;tagged-posts&quot; id=&quot;linux&quot; aria-labelledby=&quot;linux-heading&quot;&gt;
         &lt;h2 id=&quot;linux-heading&quot;&gt;
             &lt;a href=&quot;#&quot; class=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;&lt;img src=&quot;/assets/gold.ico&quot; alt=&quot;gold icon&quot; /&gt;&lt;/a&gt;
             linux
@@ -47581,19 +47580,19 @@ Pense duas vezes antes de se envolver.
         
         
         &lt;strong&gt;Related tags:&lt;/strong&gt;
-        &lt;div&gt;
+        &lt;div class=&quot;search-link&quot;&gt;
             
-            &lt;aside&gt;
+            &lt;ul&gt;
                 &lt;a href=&quot;#scripts&quot; aria-label=&quot;Related tag scripts&quot;&gt;
                     scripts (26)
                 &lt;/a&gt;
-            &lt;/aside&gt;
+            &lt;/ul&gt;
             
-            &lt;aside&gt;
+            &lt;ul&gt;
                 &lt;a href=&quot;#software-mobile&quot; aria-label=&quot;Related tag software&amp;gt;mobile&quot;&gt;
                     software&amp;gt;mobile (2)
                 &lt;/a&gt;
-            &lt;/aside&gt;
+            &lt;/ul&gt;
             
         &lt;/div&gt;
         
@@ -47601,7 +47600,7 @@ Pense duas vezes antes de se envolver.
     
     
     
-    &lt;aside id=&quot;misc&quot; aria-labelledby=&quot;misc-heading&quot;&gt;
+    &lt;aside class=&quot;tagged-posts&quot; id=&quot;misc&quot; aria-labelledby=&quot;misc-heading&quot;&gt;
         &lt;h2 id=&quot;misc-heading&quot;&gt;
             &lt;a href=&quot;#&quot; class=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;&lt;img src=&quot;/assets/gold.ico&quot; alt=&quot;gold icon&quot; /&gt;&lt;/a&gt;
             misc
@@ -47635,7 +47634,7 @@ Pense duas vezes antes de se envolver.
     
     
     
-    &lt;aside id=&quot;mobile&quot; aria-labelledby=&quot;mobile-heading&quot;&gt;
+    &lt;aside class=&quot;tagged-posts&quot; id=&quot;mobile&quot; aria-labelledby=&quot;mobile-heading&quot;&gt;
         &lt;h2 id=&quot;mobile-heading&quot;&gt;
             &lt;a href=&quot;#&quot; class=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;&lt;img src=&quot;/assets/gold.ico&quot; alt=&quot;gold icon&quot; /&gt;&lt;/a&gt;
             mobile
@@ -47691,7 +47690,7 @@ Pense duas vezes antes de se envolver.
     
     
     
-    &lt;aside id=&quot;music&quot; aria-labelledby=&quot;music-heading&quot;&gt;
+    &lt;aside class=&quot;tagged-posts&quot; id=&quot;music&quot; aria-labelledby=&quot;music-heading&quot;&gt;
         &lt;h2 id=&quot;music-heading&quot;&gt;
             &lt;a href=&quot;#&quot; class=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;&lt;img src=&quot;/assets/gold.ico&quot; alt=&quot;gold icon&quot; /&gt;&lt;/a&gt;
             music
@@ -47716,7 +47715,7 @@ Pense duas vezes antes de se envolver.
     
     
     
-    &lt;aside id=&quot;processual-penal&quot; aria-labelledby=&quot;processual-penal-heading&quot;&gt;
+    &lt;aside class=&quot;tagged-posts&quot; id=&quot;processual-penal&quot; aria-labelledby=&quot;processual-penal-heading&quot;&gt;
         &lt;h2 id=&quot;processual-penal-heading&quot;&gt;
             &lt;a href=&quot;#&quot; class=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;&lt;img src=&quot;/assets/gold.ico&quot; alt=&quot;gold icon&quot; /&gt;&lt;/a&gt;
             processual-penal
@@ -47750,7 +47749,7 @@ Pense duas vezes antes de se envolver.
     
     
     
-    &lt;aside id=&quot;prompt&quot; aria-labelledby=&quot;prompt-heading&quot;&gt;
+    &lt;aside class=&quot;tagged-posts&quot; id=&quot;prompt&quot; aria-labelledby=&quot;prompt-heading&quot;&gt;
         &lt;h2 id=&quot;prompt-heading&quot;&gt;
             &lt;a href=&quot;#&quot; class=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;&lt;img src=&quot;/assets/gold.ico&quot; alt=&quot;gold icon&quot; /&gt;&lt;/a&gt;
             prompt
@@ -47815,7 +47814,7 @@ Pense duas vezes antes de se envolver.
     
     
     
-    &lt;aside id=&quot;receitas&quot; aria-labelledby=&quot;receitas-heading&quot;&gt;
+    &lt;aside class=&quot;tagged-posts&quot; id=&quot;receitas&quot; aria-labelledby=&quot;receitas-heading&quot;&gt;
         &lt;h2 id=&quot;receitas-heading&quot;&gt;
             &lt;a href=&quot;#&quot; class=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;&lt;img src=&quot;/assets/gold.ico&quot; alt=&quot;gold icon&quot; /&gt;&lt;/a&gt;
             receitas
@@ -47840,7 +47839,7 @@ Pense duas vezes antes de se envolver.
     
     
     
-    &lt;aside id=&quot;rendimentos&quot; aria-labelledby=&quot;rendimentos-heading&quot;&gt;
+    &lt;aside class=&quot;tagged-posts&quot; id=&quot;rendimentos&quot; aria-labelledby=&quot;rendimentos-heading&quot;&gt;
         &lt;h2 id=&quot;rendimentos-heading&quot;&gt;
             &lt;a href=&quot;#&quot; class=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;&lt;img src=&quot;/assets/gold.ico&quot; alt=&quot;gold icon&quot; /&gt;&lt;/a&gt;
             rendimentos
@@ -48153,7 +48152,7 @@ Pense duas vezes antes de se envolver.
     
     
     
-    &lt;aside id=&quot;saúde&quot; aria-labelledby=&quot;saúde-heading&quot;&gt;
+    &lt;aside class=&quot;tagged-posts&quot; id=&quot;saúde&quot; aria-labelledby=&quot;saúde-heading&quot;&gt;
         &lt;h2 id=&quot;saúde-heading&quot;&gt;
             &lt;a href=&quot;#&quot; class=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;&lt;img src=&quot;/assets/gold.ico&quot; alt=&quot;gold icon&quot; /&gt;&lt;/a&gt;
             saúde
@@ -48187,7 +48186,7 @@ Pense duas vezes antes de se envolver.
     
     
     
-    &lt;aside id=&quot;scripts&quot; aria-labelledby=&quot;scripts-heading&quot;&gt;
+    &lt;aside class=&quot;tagged-posts&quot; id=&quot;scripts&quot; aria-labelledby=&quot;scripts-heading&quot;&gt;
         &lt;h2 id=&quot;scripts-heading&quot;&gt;
             &lt;a href=&quot;#&quot; class=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;&lt;img src=&quot;/assets/gold.ico&quot; alt=&quot;gold icon&quot; /&gt;&lt;/a&gt;
             scripts
@@ -48471,19 +48470,19 @@ Pense duas vezes antes de se envolver.
         
         
         &lt;strong&gt;Related tags:&lt;/strong&gt;
-        &lt;div&gt;
+        &lt;div class=&quot;search-link&quot;&gt;
             
-            &lt;aside&gt;
+            &lt;ul&gt;
                 &lt;a href=&quot;#linux&quot; aria-label=&quot;Related tag linux&quot;&gt;
                     linux (26)
                 &lt;/a&gt;
-            &lt;/aside&gt;
+            &lt;/ul&gt;
             
-            &lt;aside&gt;
+            &lt;ul&gt;
                 &lt;a href=&quot;#estudos&quot; aria-label=&quot;Related tag estudos&quot;&gt;
                     estudos (2)
                 &lt;/a&gt;
-            &lt;/aside&gt;
+            &lt;/ul&gt;
             
         &lt;/div&gt;
         
@@ -48491,7 +48490,7 @@ Pense duas vezes antes de se envolver.
     
     
     
-    &lt;aside id=&quot;scripts-ai&quot; aria-labelledby=&quot;scripts-ai-heading&quot;&gt;
+    &lt;aside class=&quot;tagged-posts&quot; id=&quot;scripts-ai&quot; aria-labelledby=&quot;scripts-ai-heading&quot;&gt;
         &lt;h2 id=&quot;scripts-ai-heading&quot;&gt;
             &lt;a href=&quot;#&quot; class=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;&lt;img src=&quot;/assets/gold.ico&quot; alt=&quot;gold icon&quot; /&gt;&lt;/a&gt;
             scripts&amp;gt;AI
@@ -48525,7 +48524,7 @@ Pense duas vezes antes de se envolver.
     
     
     
-    &lt;aside id=&quot;scripts-cloud&quot; aria-labelledby=&quot;scripts-cloud-heading&quot;&gt;
+    &lt;aside class=&quot;tagged-posts&quot; id=&quot;scripts-cloud&quot; aria-labelledby=&quot;scripts-cloud-heading&quot;&gt;
         &lt;h2 id=&quot;scripts-cloud-heading&quot;&gt;
             &lt;a href=&quot;#&quot; class=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;&lt;img src=&quot;/assets/gold.ico&quot; alt=&quot;gold icon&quot; /&gt;&lt;/a&gt;
             scripts&amp;gt;cloud
@@ -48559,7 +48558,7 @@ Pense duas vezes antes de se envolver.
     
     
     
-    &lt;aside id=&quot;scripts-google-apps-script&quot; aria-labelledby=&quot;scripts-google-apps-script-heading&quot;&gt;
+    &lt;aside class=&quot;tagged-posts&quot; id=&quot;scripts-google-apps-script&quot; aria-labelledby=&quot;scripts-google-apps-script-heading&quot;&gt;
         &lt;h2 id=&quot;scripts-google-apps-script-heading&quot;&gt;
             &lt;a href=&quot;#&quot; class=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;&lt;img src=&quot;/assets/gold.ico&quot; alt=&quot;gold icon&quot; /&gt;&lt;/a&gt;
             scripts&amp;gt;google-apps-script
@@ -48593,7 +48592,7 @@ Pense duas vezes antes de se envolver.
     
     
     
-    &lt;aside id=&quot;scripts-mobile&quot; aria-labelledby=&quot;scripts-mobile-heading&quot;&gt;
+    &lt;aside class=&quot;tagged-posts&quot; id=&quot;scripts-mobile&quot; aria-labelledby=&quot;scripts-mobile-heading&quot;&gt;
         &lt;h2 id=&quot;scripts-mobile-heading&quot;&gt;
             &lt;a href=&quot;#&quot; class=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;&lt;img src=&quot;/assets/gold.ico&quot; alt=&quot;gold icon&quot; /&gt;&lt;/a&gt;
             scripts&amp;gt;mobile
@@ -48624,13 +48623,13 @@ Pense duas vezes antes de se envolver.
         
         
         &lt;strong&gt;Related tags:&lt;/strong&gt;
-        &lt;div&gt;
+        &lt;div class=&quot;search-link&quot;&gt;
             
-            &lt;aside&gt;
+            &lt;ul&gt;
                 &lt;a href=&quot;#iphone&quot; aria-label=&quot;Related tag iphone&quot;&gt;
                     iphone (2)
                 &lt;/a&gt;
-            &lt;/aside&gt;
+            &lt;/ul&gt;
             
         &lt;/div&gt;
         
@@ -48638,7 +48637,7 @@ Pense duas vezes antes de se envolver.
     
     
     
-    &lt;aside id=&quot;sell&quot; aria-labelledby=&quot;sell-heading&quot;&gt;
+    &lt;aside class=&quot;tagged-posts&quot; id=&quot;sell&quot; aria-labelledby=&quot;sell-heading&quot;&gt;
         &lt;h2 id=&quot;sell-heading&quot;&gt;
             &lt;a href=&quot;#&quot; class=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;&lt;img src=&quot;/assets/gold.ico&quot; alt=&quot;gold icon&quot; /&gt;&lt;/a&gt;
             sell
@@ -48690,7 +48689,7 @@ Pense duas vezes antes de se envolver.
     
     
     
-    &lt;aside id=&quot;software&quot; aria-labelledby=&quot;software-heading&quot;&gt;
+    &lt;aside class=&quot;tagged-posts&quot; id=&quot;software&quot; aria-labelledby=&quot;software-heading&quot;&gt;
         &lt;h2 id=&quot;software-heading&quot;&gt;
             &lt;a href=&quot;#&quot; class=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;&lt;img src=&quot;/assets/gold.ico&quot; alt=&quot;gold icon&quot; /&gt;&lt;/a&gt;
             software
@@ -48763,7 +48762,7 @@ Pense duas vezes antes de se envolver.
     
     
     
-    &lt;aside id=&quot;software-cloud&quot; aria-labelledby=&quot;software-cloud-heading&quot;&gt;
+    &lt;aside class=&quot;tagged-posts&quot; id=&quot;software-cloud&quot; aria-labelledby=&quot;software-cloud-heading&quot;&gt;
         &lt;h2 id=&quot;software-cloud-heading&quot;&gt;
             &lt;a href=&quot;#&quot; class=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;&lt;img src=&quot;/assets/gold.ico&quot; alt=&quot;gold icon&quot; /&gt;&lt;/a&gt;
             software&amp;gt;cloud
@@ -48797,7 +48796,7 @@ Pense duas vezes antes de se envolver.
     
     
     
-    &lt;aside id=&quot;software-mobile&quot; aria-labelledby=&quot;software-mobile-heading&quot;&gt;
+    &lt;aside class=&quot;tagged-posts&quot; id=&quot;software-mobile&quot; aria-labelledby=&quot;software-mobile-heading&quot;&gt;
         &lt;h2 id=&quot;software-mobile-heading&quot;&gt;
             &lt;a href=&quot;#&quot; class=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;&lt;img src=&quot;/assets/gold.ico&quot; alt=&quot;gold icon&quot; /&gt;&lt;/a&gt;
             software&amp;gt;mobile
@@ -48837,19 +48836,19 @@ Pense duas vezes antes de se envolver.
         
         
         &lt;strong&gt;Related tags:&lt;/strong&gt;
-        &lt;div&gt;
+        &lt;div class=&quot;search-link&quot;&gt;
             
-            &lt;aside&gt;
+            &lt;ul&gt;
                 &lt;a href=&quot;#iphone&quot; aria-label=&quot;Related tag iphone&quot;&gt;
                     iphone (2)
                 &lt;/a&gt;
-            &lt;/aside&gt;
+            &lt;/ul&gt;
             
-            &lt;aside&gt;
+            &lt;ul&gt;
                 &lt;a href=&quot;#linux&quot; aria-label=&quot;Related tag linux&quot;&gt;
                     linux (2)
                 &lt;/a&gt;
-            &lt;/aside&gt;
+            &lt;/ul&gt;
             
         &lt;/div&gt;
         
@@ -48857,7 +48856,7 @@ Pense duas vezes antes de se envolver.
     
     
     
-    &lt;aside id=&quot;spirit&quot; aria-labelledby=&quot;spirit-heading&quot;&gt;
+    &lt;aside class=&quot;tagged-posts&quot; id=&quot;spirit&quot; aria-labelledby=&quot;spirit-heading&quot;&gt;
         &lt;h2 id=&quot;spirit-heading&quot;&gt;
             &lt;a href=&quot;#&quot; class=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;&lt;img src=&quot;/assets/gold.ico&quot; alt=&quot;gold icon&quot; /&gt;&lt;/a&gt;
             spirit
@@ -48897,13 +48896,13 @@ Pense duas vezes antes de se envolver.
         
         
         &lt;strong&gt;Related tags:&lt;/strong&gt;
-        &lt;div&gt;
+        &lt;div class=&quot;search-link&quot;&gt;
             
-            &lt;aside&gt;
+            &lt;ul&gt;
                 &lt;a href=&quot;#admoestação&quot; aria-label=&quot;Related tag admoestação&quot;&gt;
                     admoestação (2)
                 &lt;/a&gt;
-            &lt;/aside&gt;
+            &lt;/ul&gt;
             
         &lt;/div&gt;
         
@@ -48911,7 +48910,7 @@ Pense duas vezes antes de se envolver.
     
     
     
-    &lt;aside id=&quot;tasks&quot; aria-labelledby=&quot;tasks-heading&quot;&gt;
+    &lt;aside class=&quot;tagged-posts&quot; id=&quot;tasks&quot; aria-labelledby=&quot;tasks-heading&quot;&gt;
         &lt;h2 id=&quot;tasks-heading&quot;&gt;
             &lt;a href=&quot;#&quot; class=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;&lt;img src=&quot;/assets/gold.ico&quot; alt=&quot;gold icon&quot; /&gt;&lt;/a&gt;
             tasks
@@ -49057,7 +49056,7 @@ Pense duas vezes antes de se envolver.
     
     
     
-    &lt;aside id=&quot;tasks-iphone&quot; aria-labelledby=&quot;tasks-iphone-heading&quot;&gt;
+    &lt;aside class=&quot;tagged-posts&quot; id=&quot;tasks-iphone&quot; aria-labelledby=&quot;tasks-iphone-heading&quot;&gt;
         &lt;h2 id=&quot;tasks-iphone-heading&quot;&gt;
             &lt;a href=&quot;#&quot; class=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;&lt;img src=&quot;/assets/gold.ico&quot; alt=&quot;gold icon&quot; /&gt;&lt;/a&gt;
             tasks&amp;gt;iphone
@@ -49091,7 +49090,7 @@ Pense duas vezes antes de se envolver.
     
     
     
-    &lt;aside id=&quot;tools&quot; aria-labelledby=&quot;tools-heading&quot;&gt;
+    &lt;aside class=&quot;tagged-posts&quot; id=&quot;tools&quot; aria-labelledby=&quot;tools-heading&quot;&gt;
         &lt;h2 id=&quot;tools-heading&quot;&gt;
             &lt;a href=&quot;#&quot; class=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;&lt;img src=&quot;/assets/gold.ico&quot; alt=&quot;gold icon&quot; /&gt;&lt;/a&gt;
             tools
@@ -49245,7 +49244,7 @@ Pense duas vezes antes de se envolver.
     
     
     
-    &lt;aside id=&quot;tools-ai&quot; aria-labelledby=&quot;tools-ai-heading&quot;&gt;
+    &lt;aside class=&quot;tagged-posts&quot; id=&quot;tools-ai&quot; aria-labelledby=&quot;tools-ai-heading&quot;&gt;
         &lt;h2 id=&quot;tools-ai-heading&quot;&gt;
             &lt;a href=&quot;#&quot; class=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;&lt;img src=&quot;/assets/gold.ico&quot; alt=&quot;gold icon&quot; /&gt;&lt;/a&gt;
             tools&amp;gt;AI
@@ -49279,7 +49278,7 @@ Pense duas vezes antes de se envolver.
     
     
     
-    &lt;aside id=&quot;tools-ai-prompt&quot; aria-labelledby=&quot;tools-ai-prompt-heading&quot;&gt;
+    &lt;aside class=&quot;tagged-posts&quot; id=&quot;tools-ai-prompt&quot; aria-labelledby=&quot;tools-ai-prompt-heading&quot;&gt;
         &lt;h2 id=&quot;tools-ai-prompt-heading&quot;&gt;
             &lt;a href=&quot;#&quot; class=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;&lt;img src=&quot;/assets/gold.ico&quot; alt=&quot;gold icon&quot; /&gt;&lt;/a&gt;
             tools&amp;gt;AI&amp;gt;prompt
@@ -49317,7 +49316,7 @@ Pense duas vezes antes de se envolver.
     
     
     
-    &lt;aside id=&quot;tools-github&quot; aria-labelledby=&quot;tools-github-heading&quot;&gt;
+    &lt;aside class=&quot;tagged-posts&quot; id=&quot;tools-github&quot; aria-labelledby=&quot;tools-github-heading&quot;&gt;
         &lt;h2 id=&quot;tools-github-heading&quot;&gt;
             &lt;a href=&quot;#&quot; class=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;&lt;img src=&quot;/assets/gold.ico&quot; alt=&quot;gold icon&quot; /&gt;&lt;/a&gt;
             tools&amp;gt;github
@@ -49351,7 +49350,7 @@ Pense duas vezes antes de se envolver.
     
     
     
-    &lt;aside id=&quot;tools-github-estudos&quot; aria-labelledby=&quot;tools-github-estudos-heading&quot;&gt;
+    &lt;aside class=&quot;tagged-posts&quot; id=&quot;tools-github-estudos&quot; aria-labelledby=&quot;tools-github-estudos-heading&quot;&gt;
         &lt;h2 id=&quot;tools-github-estudos-heading&quot;&gt;
             &lt;a href=&quot;#&quot; class=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;&lt;img src=&quot;/assets/gold.ico&quot; alt=&quot;gold icon&quot; /&gt;&lt;/a&gt;
             tools&amp;gt;github&amp;gt;estudos
@@ -49389,7 +49388,7 @@ Pense duas vezes antes de se envolver.
     
     
     
-    &lt;aside id=&quot;trabalho&quot; aria-labelledby=&quot;trabalho-heading&quot;&gt;
+    &lt;aside class=&quot;tagged-posts&quot; id=&quot;trabalho&quot; aria-labelledby=&quot;trabalho-heading&quot;&gt;
         &lt;h2 id=&quot;trabalho-heading&quot;&gt;
             &lt;a href=&quot;#&quot; class=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;&lt;img src=&quot;/assets/gold.ico&quot; alt=&quot;gold icon&quot; /&gt;&lt;/a&gt;
             trabalho
@@ -49438,13 +49437,13 @@ Pense duas vezes antes de se envolver.
         
         
         &lt;strong&gt;Related tags:&lt;/strong&gt;
-        &lt;div&gt;
+        &lt;div class=&quot;search-link&quot;&gt;
             
-            &lt;aside&gt;
+            &lt;ul&gt;
                 &lt;a href=&quot;#estudos&quot; aria-label=&quot;Related tag estudos&quot;&gt;
                     estudos (2)
                 &lt;/a&gt;
-            &lt;/aside&gt;
+            &lt;/ul&gt;
             
         &lt;/div&gt;
         
@@ -49502,6 +49501,24 @@ Pense duas vezes antes de se envolver.
     
     
     
+    
+    &lt;div class=&quot;search-link&quot;&gt;
+      &lt;h3&gt;
+        &lt;a class=&quot;post-heading&quot; href=&quot;#&quot; id=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;
+          &lt;img src=&quot;/assets/gold.ico&quot; alt=&quot;gold icon&quot; /&gt;
+        &lt;/a&gt;
+        1992-07-12
+         &amp;rightarrowtail; 10 Sep 2024
+        
+      &lt;/h3&gt;
+      &lt;ul&gt;
+        &lt;a href=&quot;/tags/&quot;&gt;
+          &lt;h2&gt;
+            Tags
+          &lt;/h2&gt;
+        &lt;/a&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;
     
     &lt;div class=&quot;search-link&quot;&gt;
       &lt;h3&gt;
@@ -49642,24 +49659,6 @@ Pense duas vezes antes de se envolver.
         &lt;a href=&quot;/tal-06-17/&quot;&gt;
           &lt;h2&gt;
             Envolvido ou comprometido?
-          &lt;/h2&gt;
-        &lt;/a&gt;
-      &lt;/ul&gt;
-    &lt;/div&gt;
-    
-    &lt;div class=&quot;search-link&quot;&gt;
-      &lt;h3&gt;
-        &lt;a class=&quot;post-heading&quot; href=&quot;#&quot; id=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;
-          &lt;img src=&quot;/assets/gold.ico&quot; alt=&quot;gold icon&quot; /&gt;
-        &lt;/a&gt;
-        1992-07-12
-         &amp;rightarrowtail; 10 Sep 2024
-        
-      &lt;/h3&gt;
-      &lt;ul&gt;
-        &lt;a href=&quot;/tags/&quot;&gt;
-          &lt;h2&gt;
-            Tags
           &lt;/h2&gt;
         &lt;/a&gt;
       &lt;/ul&gt;
