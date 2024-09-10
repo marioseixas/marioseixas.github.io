@@ -704,14 +704,14 @@
     "scripts": {
         "parents": [],
         "children": [
-            "google-apps-script",
-            "scripts>AI",
-            "cloud",
-            "scripts>cloud",
-            "AI",
-            "mobile",
             "scripts>google-apps-script",
-            "scripts>mobile"
+            "google-apps-script",
+            "scripts>mobile",
+            "cloud",
+            "mobile",
+            "scripts>AI",
+            "scripts>cloud",
+            "AI"
         ],
         "related": {
             "linux": 26,
@@ -958,8 +958,8 @@
     "tools": {
         "parents": [],
         "children": [
-            "tools>github>estudos",
             "AI>prompt",
+            "tools>github>estudos",
             "github>estudos",
             "tools>AI>prompt"
         ],
@@ -1147,10 +1147,10 @@
     "software": {
         "parents": [],
         "children": [
+            "software>cloud",
             "software>mobile",
-            "cloud",
             "mobile",
-            "software>cloud"
+            "cloud"
         ],
         "related": {},
         "posts": [
@@ -1435,8 +1435,8 @@
         ],
         "children": [
             "prompt",
-            "tools>AI>prompt",
-            "AI>prompt"
+            "AI>prompt",
+            "tools>AI>prompt"
         ],
         "related": {},
         "posts": [
@@ -1549,8 +1549,8 @@
         "parents": [],
         "children": [
             "jekyll",
-            "tools>github>estudos",
-            "github>jekyll"
+            "github>jekyll",
+            "tools>github>estudos"
         ],
         "related": {},
         "posts": [
