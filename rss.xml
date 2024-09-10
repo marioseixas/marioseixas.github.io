@@ -13,16 +13,11 @@
     <script src="/assets/js/search.js" defer></script>
     <script type="module">
       import PagefindHighlight from '/pagefind/pagefind-highlight.js';
-      import PagefindUI from '/pagefind/pagefind-ui.js';
-      
-      // Initialize highlighting with search autofocus
       window.addEventListener('DOMContentLoaded', (event) => {
         // Highlighting for search terms
         new PagefindHighlight({
           highlightParam: "highlight"
         });
-
-        // Initialize Pagefind search with autofocus enabled
         new PagefindUI({
           element: "#search",  // Correct search element based on provided HTML
           autofocus: true  // Add autofocus to the search input
@@ -58,7 +53,7 @@
     <title>infoBAG</title>
     <link href="https://ib.bsb.br/rss.xml" rel="self"/>
     <link href="https://ib.bsb.br/"/>
-    <updated>2024-09-10T16:25:08+00:00</updated>
+    <updated>2024-09-10T16:28:10+00:00</updated>
     <id>https://ib.bsb.br</id>
     <author>
         <name></name>

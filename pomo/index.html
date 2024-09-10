@@ -13,16 +13,11 @@
     <script src="/assets/js/search.js" defer></script>
     <script type="module">
       import PagefindHighlight from '/pagefind/pagefind-highlight.js';
-      import PagefindUI from '/pagefind/pagefind-ui.js';
-      
-      // Initialize highlighting with search autofocus
       window.addEventListener('DOMContentLoaded', (event) => {
         // Highlighting for search terms
         new PagefindHighlight({
           highlightParam: "highlight"
         });
-
-        // Initialize Pagefind search with autofocus enabled
         new PagefindUI({
           element: "#search",  // Correct search element based on provided HTML
           autofocus: true  // Add autofocus to the search input
