@@ -704,14 +704,14 @@
     "scripts": {
         "parents": [],
         "children": [
-            "google-apps-script",
             "mobile",
-            "scripts>AI",
-            "AI",
             "scripts>google-apps-script",
-            "scripts>cloud",
+            "google-apps-script",
             "scripts>mobile",
-            "cloud"
+            "AI",
+            "cloud",
+            "scripts>cloud",
+            "scripts>AI"
         ],
         "related": {
             "linux": 26,
@@ -958,9 +958,9 @@
     "tools": {
         "parents": [],
         "children": [
+            "AI>prompt",
             "github>estudos",
             "tools>github>estudos",
-            "AI>prompt",
             "tools>AI>prompt"
         ],
         "related": {},
@@ -1147,10 +1147,10 @@
     "software": {
         "parents": [],
         "children": [
+            "mobile",
             "software>cloud",
-            "software>mobile",
             "cloud",
-            "mobile"
+            "software>mobile"
         ],
         "related": {},
         "posts": [
@@ -1310,8 +1310,8 @@
     "tasks": {
         "parents": [],
         "children": [
-            "tasks>iphone",
-            "iphone"
+            "iphone",
+            "tasks>iphone"
         ],
         "related": {},
         "posts": [
@@ -1434,9 +1434,9 @@
             "scripts"
         ],
         "children": [
+            "prompt",
             "AI>prompt",
-            "tools>AI>prompt",
-            "prompt"
+            "tools>AI>prompt"
         ],
         "related": {},
         "posts": [
@@ -1696,9 +1696,9 @@
         "parents": [],
         "children": [
             "edital>direito",
+            "direito",
             "direito>processual-penal",
-            "edital>direito>processual-penal",
-            "direito"
+            "edital>direito>processual-penal"
         ],
         "related": {},
         "posts": [
@@ -1969,8 +1969,8 @@
     },
     "tools>AI>prompt": {
         "parents": [
-            "tools",
-            "AI"
+            "AI",
+            "tools"
         ],
         "children": [],
         "related": {},
@@ -2013,8 +2013,8 @@
     },
     "tools>github>estudos": {
         "parents": [
-            "tools",
-            "github"
+            "github",
+            "tools"
         ],
         "children": [],
         "related": {},
