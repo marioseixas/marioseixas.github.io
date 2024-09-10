@@ -12,17 +12,77 @@
     <script src="/assets/js/prism.js" defer></script>
     <script src="/assets/js/search.js" defer></script>
     <script src="/pagefind/pagefind-ui.js" type="text/javascript"></script>
+    
     <!-- Highlighting Script with autofocus for search -->
     <script type="module">
       import PagefindHighlight from '/pagefind/pagefind-highlight.js';
+      
+      // Initialize highlighting with search autofocus
       window.addEventListener('DOMContentLoaded', (event) => {
-        new PagefindUI({
-          element: "#search",
-          autofocus: true,
+        // Highlighting for search terms
+        new PagefindHighlight({
           highlightParam: "highlight"
+        });
+
+        // Initialize Pagefind search with autofocus enabled, targeting the existing input
+        new PagefindUI({
+          element: "#search",  // Ensure this targets the existing search container
+          autofocus: true,  // Add autofocus to the search input
+          resetStyles: false,  // Prevent PagefindUI from resetting styles or creating duplicates
+          existing: true  // Use the existing search input, if supported by PagefindUI
         });
       });
     </script>
+    
+      <meta itemprop="keywords" content="">
+      
+    
+  </head>
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>infoBAG</title>
+    <meta name="title" content="infoBAG" />
+    <meta name="description" content="can't steer unless already moving" />
+    <link rel="canonical" href="https://ib.bsb.br/tags/">
+    <link rel="alternate" type="application/rss+xml" title="infoBAG" href="https://ib.bsb.br/rss.xml">
+    <link href="/style.css" rel="stylesheet">
+    <link href="/pagefind/pagefind-ui.css" rel="stylesheet">
+    <script src="/assets/js/prism.js" defer></script>
+    <script src="/assets/js/search.js" defer></script>
+    <script src="/pagefind/pagefind-ui.js" type="text/javascript"></script>
+    
+    <!-- Highlighting Script with autofocus for search -->
+    <script type="module">
+      import PagefindHighlight from '/pagefind/pagefind-highlight.js';
+      
+      // Initialize highlighting with search autofocus
+      window.addEventListener('DOMContentLoaded', (event) => {
+        // Highlighting for search terms
+        new PagefindHighlight({
+          highlightParam: "highlight"
+        });
+
+        // Initialize Pagefind search with autofocus enabled
+        new PagefindUI({
+          element: "#search",  // Correct search element based on provided HTML
+          autofocus: true  // Add autofocus to the search input
+        });
+      });
+    </script>
+
     
       <meta itemprop="keywords" content="">
       
