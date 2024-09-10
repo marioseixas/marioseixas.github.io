@@ -141,7 +141,7 @@
   <li>Install the required Python packages using pip:</li>
 </ol>
 
-<aside class="line-numbers"><section data-filename="bash_code-block.sh" data-code="pip3 install paperqa" data-download-link="" data-download-link-label="Download Bash" class="language-bash" style="white-space:pre-wrap;"><code class="language-bash">pip3 install paperqa</code></section></aside>
+<section data-filename="bash_code-block.sh" data-code="pip3 install paperqa" data-download-link="" data-download-link-label="Download Bash" class="language-bash line-numbers" style="white-space:pre-wrap;"><code class="language-bash">pip3 install paperqa</code></section>
 
 <p>Note: The other required packages (<code class="language-plaintext highlighter-rouge">argparse</code>, <code class="language-plaintext highlighter-rouge">glob</code>, <code class="language-plaintext highlighter-rouge">json</code>, <code class="language-plaintext highlighter-rouge">pickle</code>, <code class="language-plaintext highlighter-rouge">sys</code>, <code class="language-plaintext highlighter-rouge">pathlib</code>, <code class="language-plaintext highlighter-rouge">typing</code>) are part of the Python standard library and do not need to be installed separately.</p>
   <h2 id="usage">
@@ -232,13 +232,13 @@
   <li>Ask a single question:</li>
 </ol>
 
-<aside class="line-numbers"><section data-filename="bash_code-block.sh" data-code="python script.py --pdf_dir /path/to/pdfs --question &quot;What is the impact of climate change on agriculture?&quot;" data-download-link="" data-download-link-label="Download Bash" class="language-bash" style="white-space:pre-wrap;"><code class="language-bash">python script.py --pdf_dir /path/to/pdfs --question "What is the impact of climate change on agriculture?"</code></section></aside>
+<section data-filename="bash_code-block.sh" data-code="python script.py --pdf_dir /path/to/pdfs --question &quot;What is the impact of climate change on agriculture?&quot;" data-download-link="" data-download-link-label="Download Bash" class="language-bash line-numbers" style="white-space:pre-wrap;"><code class="language-bash">python script.py --pdf_dir /path/to/pdfs --question "What is the impact of climate change on agriculture?"</code></section>
 
 <ol>
   <li>Ask multiple questions from a file:</li>
 </ol>
 
-<aside class="line-numbers"><section data-filename="bash_code-block.sh" data-code="python script.py --pdf_dir /path/to/pdfs --questions_file questions.txt" data-download-link="" data-download-link-label="Download Bash" class="language-bash" style="white-space:pre-wrap;"><code class="language-bash">python script.py --pdf_dir /path/to/pdfs --questions_file questions.txt</code></section></aside>
+<section data-filename="bash_code-block.sh" data-code="python script.py --pdf_dir /path/to/pdfs --questions_file questions.txt" data-download-link="" data-download-link-label="Download Bash" class="language-bash line-numbers" style="white-space:pre-wrap;"><code class="language-bash">python script.py --pdf_dir /path/to/pdfs --questions_file questions.txt</code></section>
   <h3 id="list-of-questions-template">
     
     
@@ -248,21 +248,21 @@
   </h3>
       
 
-<aside class="line-numbers"><section data-filename="_code-block.txt" data-code="questions = [
+<section data-filename="_code-block.txt" data-code="questions = [
 &quot;Q1?&quot;,
 &quot;Q2?&quot;,
 # ... add your 28 other questions here
-]" data-download-link="" data-download-link-label="Download " class="language-" style="white-space:pre-wrap;"><code class="language-">questions = [
+]" data-download-link="" data-download-link-label="Download " class="language- line-numbers" style="white-space:pre-wrap;"><code class="language-">questions = [
 "Q1?",
 "Q2?",
 # ... add your 28 other questions here
-]</code></section></aside>
+]</code></section>
 
 <ol>
   <li>Load existing embeddings and ask a question:</li>
 </ol>
 
-<aside class="line-numbers"><section data-filename="bash_code-block.sh" data-code="python script.py --load_embeddings embeddings.pkl --question &quot;What are the latest advancements in AI?&quot;" data-download-link="" data-download-link-label="Download Bash" class="language-bash" style="white-space:pre-wrap;"><code class="language-bash">python script.py --load_embeddings embeddings.pkl --question "What are the latest advancements in AI?"</code></section></aside>
+<section data-filename="bash_code-block.sh" data-code="python script.py --load_embeddings embeddings.pkl --question &quot;What are the latest advancements in AI?&quot;" data-download-link="" data-download-link-label="Download Bash" class="language-bash line-numbers" style="white-space:pre-wrap;"><code class="language-bash">python script.py --load_embeddings embeddings.pkl --question "What are the latest advancements in AI?"</code></section>
   <h2 id="detailed-explanation">
     
     
@@ -360,7 +360,7 @@
   </h1>
       
 
-<aside class="line-numbers"><section data-filename="python_code-block.py" data-code="from paperqa import Answer, Docs, PromptCollection, OpenAILLMModel, OpenAIEmbeddingModel
+<section data-filename="python_code-block.py" data-code="from paperqa import Answer, Docs, PromptCollection, OpenAILLMModel, OpenAIEmbeddingModel
 import argparse
 import sys
 import pickle
@@ -590,7 +590,7 @@ with open(args.save_embeddings_txt, &quot;w&quot;, encoding=&quot;utf-8&quot;) a
 for doc in docs.docs.values():
 f.write(f&quot;{doc.dockey}\t{doc.embedding}\n&quot;)
 if __name__ == &quot;__main__&quot;:
-main()" data-download-link="" data-download-link-label="Download Python" class="language-python" style="white-space:pre-wrap;"><code class="language-python">from paperqa import Answer, Docs, PromptCollection, OpenAILLMModel, OpenAIEmbeddingModel
+main()" data-download-link="" data-download-link-label="Download Python" class="language-python line-numbers" style="white-space:pre-wrap;"><code class="language-python">from paperqa import Answer, Docs, PromptCollection, OpenAILLMModel, OpenAIEmbeddingModel
 import argparse
 import sys
 import pickle
@@ -820,7 +820,7 @@ with open(args.save_embeddings_txt, "w", encoding="utf-8") as f:
 for doc in docs.docs.values():
 f.write(f"{doc.dockey}\t{doc.embedding}\n")
 if __name__ == "__main__":
-main()</code></section></aside>
+main()</code></section>
   <h1 id="2add">
     
     
@@ -833,7 +833,7 @@ main()</code></section></aside>
 <ul>
   <li>You can create a list of prompts and iterate over them, similar to the example in point 1.</li>
   <li>Here’s an example:
-    <aside class="line-numbers"><section data-filename="python_code-block.py" data-code="prompts = [
+    <section data-filename="python_code-block.py" data-code="prompts = [
 &quot;Prompt 1&quot;,
 &quot;Prompt 2&quot;,
 # ...
@@ -842,7 +842,7 @@ main()</code></section></aside>
 for prompt in prompts:
 answer = loaded_docs.query(prompt, k=50)
 print(f&quot;Prompt: {prompt}&quot;)
-print(f&quot;Answer: {answer.formatted_answer}\n&quot;)" data-download-link="" data-download-link-label="Download Python" class="language-python" style="white-space:pre-wrap;"><code class="language-python">prompts = [
+print(f&quot;Answer: {answer.formatted_answer}\n&quot;)" data-download-link="" data-download-link-label="Download Python" class="language-python line-numbers" style="white-space:pre-wrap;"><code class="language-python">prompts = [
 "Prompt 1",
 "Prompt 2",
 # ...
@@ -851,40 +851,40 @@ print(f&quot;Answer: {answer.formatted_answer}\n&quot;)" data-download-link="" d
 for prompt in prompts:
 answer = loaded_docs.query(prompt, k=50)
 print(f"Prompt: {prompt}")
-print(f"Answer: {answer.formatted_answer}\n")</code></section></aside><hr />
+print(f"Answer: {answer.formatted_answer}\n")</code></section><hr />
     <p>Piping from command line stdout into the Python script:</p>
   </li>
   <li>You can use the <code class="language-plaintext highlighter-rouge">sys</code> module to read input from the command line.</li>
   <li>Here’s an example:
-    <aside class="line-numbers"><section data-filename="python_code-block.py" data-code="import sys
+    <section data-filename="python_code-block.py" data-code="import sys
 question = sys.stdin.read().strip()
 answer = loaded_docs.query(question, k=50)
-print(answer.formatted_answer)" data-download-link="" data-download-link-label="Download Python" class="language-python" style="white-space:pre-wrap;"><code class="language-python">import sys
+print(answer.formatted_answer)" data-download-link="" data-download-link-label="Download Python" class="language-python line-numbers" style="white-space:pre-wrap;"><code class="language-python">import sys
 question = sys.stdin.read().strip()
 answer = loaded_docs.query(question, k=50)
-print(answer.formatted_answer)</code></section></aside>
+print(answer.formatted_answer)</code></section>
   </li>
   <li>You can then pipe the question from the command line:
-    <aside class="line-numbers"><section data-filename="bash_code-block.sh" data-code="echo &quot;What is the meaning of life?&quot; | python3 researcher.py" data-download-link="" data-download-link-label="Download Bash" class="language-bash" style="white-space:pre-wrap;"><code class="language-bash">echo "What is the meaning of life?" | python3 researcher.py</code></section></aside><hr />
+    <section data-filename="bash_code-block.sh" data-code="echo &quot;What is the meaning of life?&quot; | python3 researcher.py" data-download-link="" data-download-link-label="Download Bash" class="language-bash line-numbers" style="white-space:pre-wrap;"><code class="language-bash">echo "What is the meaning of life?" | python3 researcher.py</code></section><hr />
     <p>Using the response of a request/query as context for subsequent prompts:</p>
   </li>
   <li>You can use the <code class="language-plaintext highlighter-rouge">answer.context</code> attribute to access the context used for generating the answer.</li>
   <li>Here’s an example:
-    <aside class="line-numbers"><section data-filename="python_code-block.py" data-code="previous_context = &quot;&quot;
+    <section data-filename="python_code-block.py" data-code="previous_context = &quot;&quot;
 for prompt in prompts:
 answer = loaded_docs.query(prompt, k=50, context=previous_context)
 previous_context = answer.context
 print(f&quot;Prompt: {prompt}&quot;)
-print(f&quot;Answer: {answer.formatted_answer}\n&quot;)" data-download-link="" data-download-link-label="Download Python" class="language-python" style="white-space:pre-wrap;"><code class="language-python">previous_context = ""
+print(f&quot;Answer: {answer.formatted_answer}\n&quot;)" data-download-link="" data-download-link-label="Download Python" class="language-python line-numbers" style="white-space:pre-wrap;"><code class="language-python">previous_context = ""
 for prompt in prompts:
 answer = loaded_docs.query(prompt, k=50, context=previous_context)
 previous_context = answer.context
 print(f"Prompt: {prompt}")
-print(f"Answer: {answer.formatted_answer}\n")</code></section></aside><hr />
+print(f"Answer: {answer.formatted_answer}\n")</code></section><hr />
   </li>
 </ul>
 
-<aside class="line-numbers"><section data-filename="_code-block.txt" data-code="Implement adversarial prompting. #131
+<section data-filename="_code-block.txt" data-code="Implement adversarial prompting. #131
 This adds a method adversarial_query. Adversarial queries first generate an answer, then asks the LLM to find problems with the answer, then finally generates the final response so that it addresses th
 1 commit
 2 files changed
@@ -1082,7 +1082,7 @@ template=&quot;For each sentence in your answer, indicate which sources most sup
 )
 search_prompt = prompts.PromptTemplate(
 input_variables=[&quot;question&quot;],
-template=&quot;We want to answer the following question: {question} \n&quot;" data-download-link="" data-download-link-label="Download " class="language-" style="white-space:pre-wrap;"><code class="language-">Implement adversarial prompting. #131
+template=&quot;We want to answer the following question: {question} \n&quot;" data-download-link="" data-download-link-label="Download " class="language- line-numbers" style="white-space:pre-wrap;"><code class="language-">Implement adversarial prompting. #131
 This adds a method adversarial_query. Adversarial queries first generate an answer, then asks the LLM to find problems with the answer, then finally generates the final response so that it addresses th
 1 commit
 2 files changed
@@ -1280,15 +1280,15 @@ template="For each sentence in your answer, indicate which sources most support 
 )
 search_prompt = prompts.PromptTemplate(
 input_variables=["question"],
-template="We want to answer the following question: {question} \n"</code></section></aside><hr />
+template="We want to answer the following question: {question} \n"</code></section><hr />
 
 <p>Testing links: <code class="language-plaintext highlighter-rouge">https://github.com/marioseixas/marioseixas.github.io</code></p>
 
-<aside class="line-numbers"><section data-filename="_code-block.txt" data-code="https://github.com/marioseixas/marioseixas.github.io
+<section data-filename="_code-block.txt" data-code="https://github.com/marioseixas/marioseixas.github.io
 ib.bsb.br
-https://ib.bsb.br" data-download-link="" data-download-link-label="Download " class="language-" style="white-space:pre-wrap;"><code class="language-">https://github.com/marioseixas/marioseixas.github.io
+https://ib.bsb.br" data-download-link="" data-download-link-label="Download " class="language- line-numbers" style="white-space:pre-wrap;"><code class="language-">https://github.com/marioseixas/marioseixas.github.io
 ib.bsb.br
-https://ib.bsb.br</code></section></aside>
+https://ib.bsb.br</code></section>
       
       
       <div class="nav-arrow prev">
