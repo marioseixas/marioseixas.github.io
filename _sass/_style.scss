@@ -399,9 +399,9 @@ div.flink a {
 }
 
 .editor-container {
-  position: fixed;
-  width: 100vw;
-  height: 90vh;
+  position: relative;
+  width: fit-content;
+  height: auto;
   display: flex;
   align-items: center;
 }
