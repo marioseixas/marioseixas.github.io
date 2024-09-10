@@ -555,6 +555,15 @@ a {
     }
   }
 
+a:-webkit-any-link {
+	color: var(--links-default);
+	cursor: pointer;
+	text-decoration: underline;
+	text-decoration-thickness: 1px;
+	text-decoration-style: dotted;
+	text-decoration-color: rgba(var(--text-default), 0.8);
+}
+
 .mermaid {
   display: block;
   border: 1px dotted var(--accents-amethyst);
