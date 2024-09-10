@@ -487,8 +487,8 @@ canvas,
 video,
 svg,
 select {
-  display: block; // Ensures elements are rendered as block-level elements for better layout control
-  width: 100%; // Allows the element to fill its container’s width, enabling full responsiveness
+  display: inline-block; // Ensures elements are rendered as block-level elements for better layout control
+  width: fit-content; // Allows the element to fill its container’s width, enabling full responsiveness
   height: auto; // Maintains aspect ratio by adjusting height based on width changes
   max-width: 100%; // Prevents elements from exceeding the width of their container
   overflow: hidden; // Controls any overflow content within the element, maintaining responsiveness
