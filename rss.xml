@@ -46,7 +46,7 @@
     <title>infoBAG</title>
     <link href="https://ib.bsb.br/rss.xml" rel="self"/>
     <link href="https://ib.bsb.br/"/>
-    <updated>2024-09-10T11:32:14+00:00</updated>
+    <updated>2024-09-10T11:33:28+00:00</updated>
     <id>https://ib.bsb.br</id>
     <author>
         <name></name>
@@ -49092,8 +49092,8 @@ Pense duas vezes antes de se envolver.
         <link href="https://ib.bsb.br/archive/"/>
         <updated>1992-07-12T00:00:00+00:00</updated>
         <id>https://ib.bsb.br/archive/</id>
-        <content type="html">&lt;p&gt;&lt;img src=&quot;/assets/archive.webp&quot; alt=&quot;archive&quot; class=&quot;favicon&quot; /&gt;&lt;/p&gt;
-&lt;div class=&quot;post-wrapper&quot;&gt;
+        <content type="html">&lt;div class=&quot;post-wrapper&quot;&gt;
+  &lt;img src=&quot;/assets/archive.webp&quot; alt=&quot;archive&quot; class=&quot;favicon&quot; /&gt;
   &lt;aside class=&quot;tagged-posts&quot;&gt;
     
     
@@ -49111,9 +49111,9 @@ Pense duas vezes antes de se envolver.
         
       &lt;/h3&gt;
       &lt;ul&gt;
-        &lt;a href=&quot;/tags/&quot;&gt;
+        &lt;a href=&quot;/archive/&quot;&gt;
           &lt;h2&gt;
-            Tags
+            Archive
           &lt;/h2&gt;
         &lt;/a&gt;
       &lt;/ul&gt;
@@ -49129,9 +49129,9 @@ Pense duas vezes antes de se envolver.
         
       &lt;/h3&gt;
       &lt;ul&gt;
-        &lt;a href=&quot;/archive/&quot;&gt;
+        &lt;a href=&quot;/tags/&quot;&gt;
           &lt;h2&gt;
-            Archive
+            Tags
           &lt;/h2&gt;
         &lt;/a&gt;
       &lt;/ul&gt;
