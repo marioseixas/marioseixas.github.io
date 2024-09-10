@@ -46,7 +46,7 @@
     <title>infoBAG</title>
     <link href="https://ib.bsb.br/rss.xml" rel="self"/>
     <link href="https://ib.bsb.br/"/>
-    <updated>2024-09-10T01:57:34+00:00</updated>
+    <updated>2024-09-10T02:00:48+00:00</updated>
     <id>https://ib.bsb.br</id>
     <author>
         <name></name>
@@ -44802,54 +44802,14 @@ Pense duas vezes antes de se envolver.
         <link href="https://ib.bsb.br/tags/"/>
         <updated>1992-07-12T00:00:00+00:00</updated>
         <id>https://ib.bsb.br/tags/</id>
-        <content type="html">&lt;p&gt;import json&lt;/p&gt;
-
-&lt;p&gt;with open(‘assets/data/processed_tags.json’, ‘r’) as f:
-    processed_tags = json.load(f)&lt;/p&gt;
-
-&lt;p&gt;sorted_tags = sorted(processed_tags.keys())&lt;/p&gt;
-
-&lt;p&gt;output = ‘&amp;lt;aside class=&quot;tag-list&quot; aria-label=&quot;List of all tags&quot;&amp;gt;\n    &amp;lt;ul&amp;gt;\n’
-for tag in sorted_tags:
-    tag_data = processed_tags[tag]
-    has_highlighted_post = False
-    for post in tag_data[‘posts’]:
-        if post[‘highlighted’]:
-            has_highlighted_post = True
-            break
-    if has_highlighted_post:
-        output += f’        &amp;lt;li&amp;gt;\n            &amp;lt;a href=”#{tag | slugify}” aria-label=”Tag {tag} with {len(tag_data[“posts”])} posts”&amp;gt;\n                {tag} ({len(tag_data[“posts”])})\n            &amp;lt;/a&amp;gt;\n        &amp;lt;/li&amp;gt;\n’
-output += ‘    &amp;lt;/ul&amp;gt;\n&amp;lt;/aside&amp;gt;\n&amp;lt;div class=&quot;tagged-posts&quot;&amp;gt;\n’
-for tag in sorted_tags:
-    tag_data = processed_tags[tag]
-    output += f’    &amp;lt;aside id=&quot;{tag | slugify}&quot; aria-labelledby=&quot;{tag | slugify}-heading&quot;&amp;gt;\n        &amp;lt;h2 id=&quot;{tag | slugify}-heading&quot;&amp;gt;\n            &lt;a href=&quot;#&quot; class=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;⇧&lt;/a&gt;\n            {tag}\n        &amp;lt;/h2&amp;gt;\n’
-    if tag_data[‘parents’]:
-        output += ‘        &lt;strong&gt;Parent tags:&lt;/strong&gt;\n            &amp;lt;ul&amp;gt;\n’
-        for parent in tag_data[‘parents’]:
-            output += f’                &amp;lt;li&amp;gt;\n                    &lt;a href=&quot;#{parent | slugify}&quot; aria-label=&quot;Parent tag {parent}&quot;&gt;{parent}&lt;/a&gt;\n                &amp;lt;/li&amp;gt;\n’
-        output += ‘            &amp;lt;/ul&amp;gt;\n’
-    if tag_data[‘children’]:
-        output += ‘      &lt;strong&gt;Child tags:&lt;/strong&gt;\n            &amp;lt;ul&amp;gt;\n’
-        for child in tag_data[‘children’]:
-            output += f’                &amp;lt;li&amp;gt;\n                    &lt;a href=&quot;#{child | slugify}&quot; aria-label=&quot;Child tag {child}&quot;&gt;{child}&lt;/a&gt;\n                &amp;lt;/li&amp;gt;\n’
-        output += ‘            &amp;lt;/ul&amp;gt;\n’
-    if tag_data[‘related’]:
-        output += ‘      &lt;strong&gt;Related tags:&lt;/strong&gt;\n            &amp;lt;ul&amp;gt;\n’
-        for related_tag, count in tag_data[‘related’].items():
-            output += f’                &amp;lt;li&amp;gt;\n                    &lt;a href=&quot;#{related_tag | slugify}&quot; aria-label=&quot;Related tag {related_tag}&quot;&gt;\n                      {related_tag}\n                      ({count})\n                    &lt;/a&gt;\n                &amp;lt;/li&amp;gt;\n’
-        output += ‘            &amp;lt;/ul&amp;gt;\n’
-    output += ‘        &amp;lt;ul&amp;gt;\n’
-    for post in tag_data[‘posts’]:
-        output += f’            &amp;lt;li&amp;gt;\n                &amp;lt;a href=”{post[“url”]}”&amp;gt;\n’
-        if post[‘highlighted’]:
-            output += f’                    &lt;mark&gt;{post[&quot;title&quot;]}&lt;/mark&gt;\n’
-        else:
-            output += f’                    {post[“title”]}\n’
-        output += f’                &amp;lt;/a&amp;gt;\n                &amp;lt;time datetime=”{post[“date”] | date_to_xmlschema}”&amp;gt;{post[“date”] | date: “%B %d, %Y”}&amp;lt;/time&amp;gt;\n            &amp;lt;/li&amp;gt;\n’
-    output += ‘        &amp;lt;/ul&amp;gt;\n    &amp;lt;/aside&amp;gt;\n’
-output += ‘&amp;lt;/div&amp;gt;’&lt;/p&gt;
-
-&lt;p&gt;print(output)&lt;/p&gt;
+        <content type="html">&lt;aside class=&quot;tag-list&quot; aria-label=&quot;List of all tags&quot;&gt;
+    &lt;ul&gt;
+        
+    &lt;/ul&gt;
+&lt;/aside&gt;
+&lt;div class=&quot;tagged-posts&quot;&gt;
+    
+&lt;/div&gt;
 </content>
     </entry>
     

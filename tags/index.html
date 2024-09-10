@@ -44,54 +44,14 @@
     </header>
     <article class="post-wrapper">
       <main class="content">
-        <p>import json</p>
-
-<p>with open(‘assets/data/processed_tags.json’, ‘r’) as f:
-    processed_tags = json.load(f)</p>
-
-<p>sorted_tags = sorted(processed_tags.keys())</p>
-
-<p>output = ‘&lt;aside class="tag-list" aria-label="List of all tags"&gt;\n    &lt;ul&gt;\n’
-for tag in sorted_tags:
-    tag_data = processed_tags[tag]
-    has_highlighted_post = False
-    for post in tag_data[‘posts’]:
-        if post[‘highlighted’]:
-            has_highlighted_post = True
-            break
-    if has_highlighted_post:
-        output += f’        &lt;li&gt;\n            &lt;a href=”#{tag | slugify}” aria-label=”Tag {tag} with {len(tag_data[“posts”])} posts”&gt;\n                {tag} ({len(tag_data[“posts”])})\n            &lt;/a&gt;\n        &lt;/li&gt;\n’
-output += ‘    &lt;/ul&gt;\n&lt;/aside&gt;\n&lt;div class="tagged-posts"&gt;\n’
-for tag in sorted_tags:
-    tag_data = processed_tags[tag]
-    output += f’    &lt;aside id="{tag | slugify}" aria-labelledby="{tag | slugify}-heading"&gt;\n        &lt;h2 id="{tag | slugify}-heading"&gt;\n            <a href="#" class="back-to-top" aria-label="Back to top">⇧</a>\n            {tag}\n        &lt;/h2&gt;\n’
-    if tag_data[‘parents’]:
-        output += ‘        <strong>Parent tags:</strong>\n            &lt;ul&gt;\n’
-        for parent in tag_data[‘parents’]:
-            output += f’                &lt;li&gt;\n                    <a href="#{parent | slugify}" aria-label="Parent tag {parent}">{parent}</a>\n                &lt;/li&gt;\n’
-        output += ‘            &lt;/ul&gt;\n’
-    if tag_data[‘children’]:
-        output += ‘      <strong>Child tags:</strong>\n            &lt;ul&gt;\n’
-        for child in tag_data[‘children’]:
-            output += f’                &lt;li&gt;\n                    <a href="#{child | slugify}" aria-label="Child tag {child}">{child}</a>\n                &lt;/li&gt;\n’
-        output += ‘            &lt;/ul&gt;\n’
-    if tag_data[‘related’]:
-        output += ‘      <strong>Related tags:</strong>\n            &lt;ul&gt;\n’
-        for related_tag, count in tag_data[‘related’].items():
-            output += f’                &lt;li&gt;\n                    <a href="#{related_tag | slugify}" aria-label="Related tag {related_tag}">\n                      {related_tag}\n                      ({count})\n                    </a>\n                &lt;/li&gt;\n’
-        output += ‘            &lt;/ul&gt;\n’
-    output += ‘        &lt;ul&gt;\n’
-    for post in tag_data[‘posts’]:
-        output += f’            &lt;li&gt;\n                &lt;a href=”{post[“url”]}”&gt;\n’
-        if post[‘highlighted’]:
-            output += f’                    <mark>{post["title"]}</mark>\n’
-        else:
-            output += f’                    {post[“title”]}\n’
-        output += f’                &lt;/a&gt;\n                &lt;time datetime=”{post[“date”] | date_to_xmlschema}”&gt;{post[“date”] | date: “%B %d, %Y”}&lt;/time&gt;\n            &lt;/li&gt;\n’
-    output += ‘        &lt;/ul&gt;\n    &lt;/aside&gt;\n’
-output += ‘&lt;/div&gt;’</p>
-
-<p>print(output)</p>
+        <aside class="tag-list" aria-label="List of all tags">
+    <ul>
+        
+    </ul>
+</aside>
+<div class="tagged-posts">
+    
+</div>
 
       </main>
     </article>
