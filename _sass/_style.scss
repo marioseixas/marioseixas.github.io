@@ -828,18 +828,14 @@ pre[class*="language-"].line-numbers {
     }
   }
 }
-
 ul {
-    margin: 0;
-    padding: 0;
+    display: inherit;
     list-style-type: none;
     text-decoration: none;
     li {
         margin: 0;
-        padding: 0;
 	}
 }
-
 /* Code toolbar styles*/
 div.code-toolbar {
   position: relative;
