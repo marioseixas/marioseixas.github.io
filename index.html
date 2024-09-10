@@ -20,8 +20,9 @@
           highlightParam: "highlight"
         });
         new PagefindUI({
-          element: "#search",  // Correct search element based on provided HTML
-          autofocus: true  // Add autofocus to the search input
+          element: "#search",  // Ensure this targets the correct container
+          autofocus: true,  // Add autofocus to the search input
+          resetStyles: false
         });
       });
     </script>
@@ -46,7 +47,7 @@
             <img src="/assets/Sudden_Death_Rune.gif" alt="Sudden Death Rune" class="favicon">
           </a>
       </nav>
-      <div id="search" class="search-input-block" data-pagefind-ui="false"></div>
+      <div id="search" class="search-input-block"></div>
     </header>
     <article class="post-wrapper">
       <main class="content">
