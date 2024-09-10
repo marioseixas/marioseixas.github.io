@@ -121,8 +121,8 @@
   <li>
     <p>Run the following command to list all connected drives:</p>
 
-    <div class="language-bash highlighter-rouge"><div class="highlight"><aside class="line-numbers"><section><code>lsblk
-</code></section></aside></div>    </div>
+    <div class="language-bash highlighter-rouge"><div class="highlight"><section><code>lsblk
+</code></section></div>    </div>
 
     <p>This command displays a list of block devices. Identify your USB drive by its size and name, which will typically be listed as <code class="language-plaintext highlighter-rouge">/dev/sdb</code>, <code class="language-plaintext highlighter-rouge">/dev/sdc</code>, etc. Ensure you correctly identify the USB drive to avoid overwriting other drives.</p>
   </li>
@@ -138,13 +138,13 @@
 
 <p>Before writing to the USB drive, you need to unmount it. Replace <code class="language-plaintext highlighter-rouge">/dev/sdX1</code> with the actual partition of your USB drive (e.g., <code class="language-plaintext highlighter-rouge">/dev/sdb1</code>).</p>
 
-<div class="language-bash highlighter-rouge"><div class="highlight"><aside class="line-numbers"><section><code><span class="nb">sudo </span>umount /dev/sdX1
-</code></section></aside></div></div>
+<div class="language-bash highlighter-rouge"><div class="highlight"><section><code><span class="nb">sudo </span>umount /dev/sdX1
+</code></section></div></div>
 
 <p>If your USB drive has multiple partitions, you may need to unmount all of them. You can unmount all partitions of the USB drive using:</p>
 
-<div class="language-bash highlighter-rouge"><div class="highlight"><aside class="line-numbers"><section><code><span class="nb">sudo </span>umount /dev/sdX<span class="k">*</span>
-</code></section></aside></div></div>
+<div class="language-bash highlighter-rouge"><div class="highlight"><section><code><span class="nb">sudo </span>umount /dev/sdX<span class="k">*</span>
+</code></section></div></div>
   <h4 id="step-3-write-the-iso-to-the-usb-drive">
     
     
@@ -156,8 +156,8 @@
 
 <p>Now, you can use the <code class="language-plaintext highlighter-rouge">dd</code> command to write the ISO file to the USB drive. Replace <code class="language-plaintext highlighter-rouge">/path/to/your.iso</code> with the path to your ISO file and <code class="language-plaintext highlighter-rouge">/dev/sdX</code> with your USB drive (without the partition number).</p>
 
-<div class="language-bash highlighter-rouge"><div class="highlight"><aside class="line-numbers"><section><code><span class="nb">sudo dd </span><span class="k">if</span><span class="o">=</span>/path/to/your.iso <span class="nv">of</span><span class="o">=</span>/dev/sdX <span class="nv">bs</span><span class="o">=</span>4M <span class="nv">status</span><span class="o">=</span>progress
-</code></section></aside></div></div>
+<div class="language-bash highlighter-rouge"><div class="highlight"><section><code><span class="nb">sudo dd </span><span class="k">if</span><span class="o">=</span>/path/to/your.iso <span class="nv">of</span><span class="o">=</span>/dev/sdX <span class="nv">bs</span><span class="o">=</span>4M <span class="nv">status</span><span class="o">=</span>progress
+</code></section></div></div>
 
 <ul>
   <li><code class="language-plaintext highlighter-rouge">if=</code>: Input file (the ISO file).</li>
@@ -188,15 +188,15 @@
 
 <p>After the <code class="language-plaintext highlighter-rouge">dd</code> command completes, it’s a good practice to ensure all data is written to the USB drive before removing it. Run the following command:</p>
 
-<div class="language-bash highlighter-rouge"><div class="highlight"><aside class="line-numbers"><section><code><span class="nb">sync</span>
-</code></section></aside></div></div>
+<div class="language-bash highlighter-rouge"><div class="highlight"><section><code><span class="nb">sync</span>
+</code></section></div></div>
 
 <p>This command flushes the file system buffers, ensuring that all data is written to the USB drive.</p>
 
 <p>Now you can safely eject the USB drive:</p>
 
-<div class="language-bash highlighter-rouge"><div class="highlight"><aside class="line-numbers"><section><code><span class="nb">sudo </span>eject /dev/sdX
-</code></section></aside></div></div>
+<div class="language-bash highlighter-rouge"><div class="highlight"><section><code><span class="nb">sudo </span>eject /dev/sdX
+</code></section></div></div>
   <h3 id="important-considerations">
     
     

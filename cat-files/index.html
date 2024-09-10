@@ -117,8 +117,8 @@
 <p>You need to provide at least one path to a file or directory. These are specified as arguments to the script.</p>
 
 <p>Example:</p>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><aside class="line-numbers"><section><code>/path/to/directory1 /path/to/file1.txt
-</code></section></aside></div></div>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><section><code>/path/to/directory1 /path/to/file1.txt
+</code></section></div></div>
   <h3 id="2-gitignore-files-optional">
     
     
@@ -131,8 +131,8 @@
 <p>If you want the script to respect <code class="language-plaintext highlighter-rouge">.gitignore</code> rules, you should have <code class="language-plaintext highlighter-rouge">.gitignore</code> files in the directories you provide. The script will read these files to ignore certain files and directories.</p>
 
 <p>Example:</p>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><aside class="line-numbers"><section><code>/path/to/directory1/.gitignore
-</code></section></aside></div></div>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><section><code>/path/to/directory1/.gitignore
+</code></section></div></div>
   <h3 id="3-jinja2-template-file-optional">
     
     
@@ -145,8 +145,8 @@
 <p>If you want to format the output using a Jinja2 template, you need to provide a template file and specify its path using the <code class="language-plaintext highlighter-rouge">--template-file</code> or <code class="language-plaintext highlighter-rouge">-t</code> option.</p>
 
 <p>Example:</p>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><aside class="line-numbers"><section><code>/path/to/template.jinja2
-</code></section></aside></div></div>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><section><code>/path/to/template.jinja2
+</code></section></div></div>
   <h3 id="running-the-script">
     
     
@@ -158,8 +158,8 @@
 
 <p>To run the script with these inputs, you would use a command like:</p>
 
-<div class="language-sh highlighter-rouge"><div class="highlight"><aside class="line-numbers"><section><code>python3 your_script.py /path/to/directory1 /path/to/directory2 <span class="nt">-t</span> /path/to/template.jinja2
-</code></section></aside></div></div>
+<div class="language-sh highlighter-rouge"><div class="highlight"><section><code>python3 your_script.py /path/to/directory1 /path/to/directory2 <span class="nt">-t</span> /path/to/template.jinja2
+</code></section></div></div>
   <h3 id="sample-gitignore">
     
     
@@ -171,7 +171,7 @@
 
 <p>Here is a sample <code class="language-plaintext highlighter-rouge">.gitignore</code> file that you might place in your directories:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><aside class="line-numbers"><section><code># Ignore all .log files
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><section><code># Ignore all .log files
 *.log
 
 # Ignore all files in the temp directory
@@ -179,7 +179,7 @@ temp/
 
 # Ignore a specific file
 ignore_this_file.txt
-</code></section></aside></div></div>
+</code></section></div></div>
   <h3 id="sample-jinja2-template">
     
     
@@ -277,7 +277,7 @@ Index:
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 ---
-</code></section></aside>
+</code></section>
   <h1 id="python-script">
     
     
@@ -287,7 +287,7 @@ Index:
   </h1>
       
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><aside class="line-numbers"><section><code>import os
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><section><code>import os
 from fnmatch import fnmatch
 import click
 from jinja2 import Environment, FileSystemLoader
@@ -447,7 +447,7 @@ def cli(paths, include_hidden, ignore_gitignore, ignore_patterns, template_file)
             template_file,
             index,
         )
-</code></section></aside></div></div>
+</code></section></div></div>
   <h1 id="bash-script">
     
     
@@ -457,7 +457,7 @@ def cli(paths, include_hidden, ignore_gitignore, ignore_patterns, template_file)
   </h1>
       
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><aside class="line-numbers"><section><code>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><section><code>
 #!/bin/bash
 
 # Function to display help information
@@ -768,7 +768,7 @@ rm -f "$temp_file_list"
 echo "Process completed. All files have been processed and concatenated into ${final_file}."
 echo "Unsupported file types have been processed using 'cat' command and concatenated into ${unsupported_file}."
 
-</code></section></aside></div></div>
+</code></section></div></div>
       
       
       <div class="nav-arrow prev">
