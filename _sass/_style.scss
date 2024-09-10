@@ -232,7 +232,7 @@ nav.header-content {
     text-decoration: none;
 }
 .post-heading a:hover {
-    text-decoration: underline;
+    text-decoration: none;
 }
 .post-title {
     color: var(--links-default);
@@ -258,30 +258,17 @@ nav.header-content {
     transform: scale(1.05);
 }
 .tagged-posts {
-    li {
-        margin-bottom: 0.5em;
-    }
+    align-items: center;
+    display: flex;
+    gap: 10px;	
     time {
         color: rgba(var(--text-default), 0.7);
     }
-    ul {
-        list-style-type: none;
-        padding-left: 0;
-    }
 }
-aside {
-        list-style-type: none;
-        padding-left: 0;
-    }
 .tag-list {
-    display: inline-flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    list-style-type: none;
-    padding: 0;
-    li {
-        margin: 0.25em;
-    }
+    align-items: center;
+    display: flex;
+    gap: 10px;	
     a {
         background-color: rgba(var(--accents-dodgerblue), 0.1);
         border: 1px dotted var(--accents-dodgerblue);
@@ -842,6 +829,17 @@ pre[class*="language-"].line-numbers {
       text-align: right;
     }
   }
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    text-decoration: none;
+    li {
+        margin: 0;
+        padding: 0;
+	}
 }
 
 /* Code toolbar styles*/
