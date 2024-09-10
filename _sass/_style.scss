@@ -248,11 +248,9 @@ nav.header-content {
     background-color: rgba(var(--accents-dodgerblue), 0.1);
     border: 1px dotted var(--accents-dodgerblue);
     border-radius: var(--bd-radius);
-    display: inline-block;
+    display: inherit;
     padding: 0.5em;
     transition: all 0.3s ease;
-    width: fit-content;
-    align-content: center;
 }
 .search-link:hover, .search-link:focus {
     background-color: rgba(var(--accents-dodgerblue), 0.2);
@@ -260,7 +258,7 @@ nav.header-content {
 }
 .tagged-posts {
     align-items: center;
-    display: flex;
+    display: inline-flex;
     gap: 10px;	
     time {
         color: rgba(var(--text-default), 0.7);
@@ -268,13 +266,13 @@ nav.header-content {
 }
 .tag-list {
     align-items: center;
-    display: flex;
+    display: inline-flex;
     gap: 10px;	
     a {
         background-color: rgba(var(--accents-dodgerblue), 0.1);
         border: 1px dotted var(--accents-dodgerblue);
         border-radius: var(--bd-radius);
-        display: inline-flex;
+        display: inherit;
         padding: 0.5em;
         transition: all 0.3s ease;
         &:hover, &:focus {
