@@ -677,13 +677,3 @@ search_prompt = prompts.PromptTemplate(
 {% endcodeblock %}
 
 ***
-
-Testing links: `https://github.com/marioseixas/marioseixas.github.io`
-
-{% codeblock %}
-https://github.com/marioseixas/marioseixas.github.io
-
-ib.bsb.br
-
-https://ib.bsb.br
-{% endcodeblock %}
