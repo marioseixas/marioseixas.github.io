@@ -16,8 +16,7 @@
     <script type="module">
       import PagefindHighlight from '/pagefind/pagefind-highlight.js';
       new PagefindHighlight({
-        highlightParam: "highlight",
-        autofocus: true
+        highlightParam: "highlight"
       });
     </script>
     
@@ -49,7 +48,7 @@
     <title>infoBAG</title>
     <link href="https://ib.bsb.br/rss.xml" rel="self"/>
     <link href="https://ib.bsb.br/"/>
-    <updated>2024-09-10T15:07:50+00:00</updated>
+    <updated>2024-09-10T15:09:07+00:00</updated>
     <id>https://ib.bsb.br</id>
     <author>
         <name></name>
