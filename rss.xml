@@ -44,7 +44,7 @@
     <title>infoBAG</title>
     <link href="https://ib.bsb.br/rss.xml" rel="self"/>
     <link href="https://ib.bsb.br/"/>
-    <updated>2024-09-10T21:21:47+00:00</updated>
+    <updated>2024-09-10T21:29:40+00:00</updated>
     <id>https://ib.bsb.br</id>
     <author>
         <name></name>
@@ -5257,15 +5257,14 @@ if __name__ == &quot;__main__&quot;:
   import mermaid from &apos;https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs&apos;;
   const mermaidConfig = {
   startOnLoad: true,
-  theme: &apos;default&apos;, // You can change the theme here if needed 
-  flowchart: { useMaxWidth: false, htmlLabels: true, curve: &apos;cardinal&apos; }, 
-  // Add other diagram-specific configurations as needed (e.g., sequence, gantt, etc.) 
+  theme: &apos;default&apos;,
+  flowchart: { useMaxWidth: false, htmlLabels: true, curve: &apos;cardinal&apos; }
 };
 
 mermaid.initialize(mermaidConfig);
 
-setTimeout(() =&gt; {
-  const svgElement = document.querySelector(&quot;div.mermaid&gt;svg&quot;);
+document.addEventListener(&apos;DOMContentLoaded&apos;, () =&gt; {
+  const svgElement = document.querySelector(&quot;div.mermaid&gt;svg&quot;); 
   if (svgElement) {
     svgPanZoom(svgElement, {
       minZoom: 0.5,
@@ -5276,8 +5275,27 @@ setTimeout(() =&gt; {
       center: true,
       refreshRate: &quot;auto&quot;,
     });
+  } else {
+    // Fallback if the SVG is not found immediately (e.g., async loading)
+    const observer = new MutationObserver(() =&gt; {
+      const svg = document.querySelector(&quot;div.mermaid&gt;svg&quot;);
+      if (svg) {
+        svgPanZoom(svg, {
+      minZoom: 0.5,
+      maxZoom: 10,
+      fit: true,
+      contain: false,
+      controlIconsEnabled: true,
+      center: true,
+      refreshRate: &quot;auto&quot;,
+    });
+        observer.disconnect(); // Stop observing once the SVG is found 
+      }
+    });
+
+    observer.observe(document.querySelector(&quot;div.mermaid&quot;), { childList: true, subtree: true });
   }
-}, 1000); 
+});
 
 &lt;/script&gt;
 
@@ -6482,15 +6500,14 @@ xrandr --output DP-1 --mode &quot;1152x864_60.00&quot;
   import mermaid from &apos;https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs&apos;;
   const mermaidConfig = {
   startOnLoad: true,
-  theme: &apos;default&apos;, // You can change the theme here if needed 
-  flowchart: { useMaxWidth: false, htmlLabels: true, curve: &apos;cardinal&apos; }, 
-  // Add other diagram-specific configurations as needed (e.g., sequence, gantt, etc.) 
+  theme: &apos;default&apos;,
+  flowchart: { useMaxWidth: false, htmlLabels: true, curve: &apos;cardinal&apos; }
 };
 
 mermaid.initialize(mermaidConfig);
 
-setTimeout(() =&gt; {
-  const svgElement = document.querySelector(&quot;div.mermaid&gt;svg&quot;);
+document.addEventListener(&apos;DOMContentLoaded&apos;, () =&gt; {
+  const svgElement = document.querySelector(&quot;div.mermaid&gt;svg&quot;); 
   if (svgElement) {
     svgPanZoom(svgElement, {
       minZoom: 0.5,
@@ -6501,8 +6518,27 @@ setTimeout(() =&gt; {
       center: true,
       refreshRate: &quot;auto&quot;,
     });
+  } else {
+    // Fallback if the SVG is not found immediately (e.g., async loading)
+    const observer = new MutationObserver(() =&gt; {
+      const svg = document.querySelector(&quot;div.mermaid&gt;svg&quot;);
+      if (svg) {
+        svgPanZoom(svg, {
+      minZoom: 0.5,
+      maxZoom: 10,
+      fit: true,
+      contain: false,
+      controlIconsEnabled: true,
+      center: true,
+      refreshRate: &quot;auto&quot;,
+    });
+        observer.disconnect(); // Stop observing once the SVG is found 
+      }
+    });
+
+    observer.observe(document.querySelector(&quot;div.mermaid&quot;), { childList: true, subtree: true });
   }
-}, 1000); 
+});
 
 &lt;/script&gt;
 
