@@ -32,7 +32,11 @@
     --heading-color-2: #FFBDBD;  // Theoretical inversion, please verify for accuracy
     --heading-color-3: #BCFFBC;  // Theoretical inversion, please verify for accuracy
     --fc-page-bg-color: #434300;
-    /* Pagefind UI Variables */
+}
+
+html {
+    box-sizing: border-box;
+    margin: auto 0 auto 0;
     --pagefind-ui-scale: 1;
     --pagefind-ui-background: var(--bg-default);
     --pagefind-ui-border-width: 2px;
@@ -43,12 +47,7 @@
     --pagefind-ui-text: #C6C6C6; /* Inverse of #393939 */
     --pagefind-ui-border: #111111; /* Inverse of #eeeeee */
     --pagefind-ui-tag: #111111; /* Inverse of #eeeeee */
-    --pagefind-ui-font: var(--ft);	
-}
-
-html {
-    box-sizing: border-box;
-    margin: auto 0 auto 0;
+    --pagefind-ui-font: var(--ft);
 }
 *, *::before, *::after {
     box-sizing: inherit;
