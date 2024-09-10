@@ -257,31 +257,32 @@ def generate_mermaid_graph(
 
     return "\n".join(graph)
 
-def save_output(output_data, output_folder):
-    """Saves YAML, JSON, and Mermaid graph outputs to the specified folder."""
-    yaml_file = os.path.join(output_folder, 'processed_tags.yml')
-    json_file = os.path.join(output_folder, 'processed_tags.json')
-    mermaid_file = os.path.join(output_folder, 'tag_graph.html')
+def save_output(output_data, output_folders: List[str]):
+    """Saves YAML, JSON, and Mermaid graph outputs to multiple directories."""
+    for output_folder in output_folders:
+        yaml_file = os.path.join(output_folder, 'processed_tags.yml')
+        json_file = os.path.join(output_folder, 'processed_tags.json')
+        mermaid_file = os.path.join(output_folder, 'tag_graph.html')
 
-    # Save YAML
-    with open(yaml_file, 'w') as f:
-        yaml.dump(output_data, f, allow_unicode=True)
-    logging.info(f"YAML data saved to {yaml_file}")
+        # Save YAML
+        with open(yaml_file, 'w') as f:
+            yaml.dump(output_data, f, allow_unicode=True)
+        logging.info(f"YAML data saved to {yaml_file}")
 
-    # Save JSON
-    json_handler = JsonOutputHandler()
-    json_handler.write(output_data, json_file)
+        # Save JSON
+        json_handler = JsonOutputHandler()
+        json_handler.write(output_data, json_file)
 
-    # Generate and save Mermaid graph
-    mermaid_graph = generate_mermaid_graph(output_data)
-    with open(mermaid_file, 'w') as f:
-        f.write(mermaid_graph)
-    logging.info(f"Mermaid graph saved to {mermaid_file}")
+        # Generate and save Mermaid graph
+        mermaid_graph = generate_mermaid_graph(output_data)
+        with open(mermaid_file, 'w') as f:
+            f.write(mermaid_graph)
+        logging.info(f"Mermaid graph saved to {mermaid_file}")
 
 # Example usage (make sure to update the directory paths accordingly):
 posts_directory = '_posts'
-output_folder = 'assets/data'
+output_folders = ['assets/data', '_data']  # Now saving in both directories
 
 # Process the tags and generate the outputs
 tag_data, combined_tags = process_tags(posts_directory)
-save_output(tag_data, output_folder)
+save_output(tag_data, output_folders)
