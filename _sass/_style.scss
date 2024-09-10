@@ -68,6 +68,13 @@ body {
   --pagefind-ui-tag: #111111; // Inverse of #eeeeee
   --pagefind-ui-font: var(--ft);
 }
+// Media query for responsive font sizing
+@media screen and (max-width: 768px) {
+  html,
+  body {
+    font-size: 14px;
+  }
+}
 
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--ft); /* Utilize CSS variable for font-family */
@@ -107,12 +114,14 @@ h3, h4, h5, h6 {
   text-transform: uppercase; /* Uppercase for stylistic choice */
 }
 
-// Media query for responsive font sizing
-@media screen and (max-width: 768px) {
-  html,
-  body {
-    font-size: 14px;
-  }
+strong {
+	color: var(--highlights-crimson);
+	font-weight: bold;
+}
+
+em {
+	color: var(--accents-turquoise);
+	font-style: italic;
 }
 
 *, *::before, *::after {
