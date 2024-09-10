@@ -68,7 +68,12 @@
         <div class="post-tags">
           Tags:
           {% for tag in page.tags %}
-          <a href="{{ site.url }}{{ site.baseurl }}/tags/#{{ tag | slugify }}" class="tag">{{ tag }}</a>{% unless forloop.last %},{% endunless %}{% endfor %}
+          <a href="{{ site.url }}{{ site.baseurl }}/tags/#{{ tag | slugify }}" class="tag">
+            {{ tag }}
+          </a>
+          {% unless forloop.last %}
+          {% endunless %}
+          {% endfor %}
         </div>
         {% endif %}
         <div class="post-actions">
@@ -101,7 +106,7 @@
     <hr>    
     {% if page.comment %}
     <div class="comment-box">
-      <a href="#" aria-label="Back to top"><img src="{{ '/assets/gold.ico' | relative_url }}" alt="Back to top"></a><a href="{{ page.comment }}" title="page.comment">{{ page.comment }}</a>
+      <a href="#" aria-label="Back to top"><img src="{{ '/assets/gold.ico' | relative_url }}" alt="Back to top"></a>&#10230;<a href="{{ page.comment }}" title="page.comment">{{ page.comment }}</a>
     </div>
     {% endif %}
   </article>
