@@ -42,7 +42,7 @@ module Jekyll
               refreshRate: "auto",
             });
           }
-        }, 200); 
+        }, 1000); 
       SCRIPT
     end
   end
