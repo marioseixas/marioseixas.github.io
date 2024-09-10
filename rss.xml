@@ -44,7 +44,7 @@
     <title>infoBAG</title>
     <link href="https://ib.bsb.br/rss.xml" rel="self"/>
     <link href="https://ib.bsb.br/"/>
-    <updated>2024-09-10T21:08:58+00:00</updated>
+    <updated>2024-09-10T21:11:33+00:00</updated>
     <id>https://ib.bsb.br</id>
     <author>
         <name></name>
@@ -5277,7 +5277,7 @@ setTimeout(() =&gt; {
       refreshRate: &quot;auto&quot;,
     });
   }
-}, 200); 
+}, 1000); 
 
 &lt;/script&gt;
 
@@ -6447,7 +6447,7 @@ setTimeout(() =&gt; {
       refreshRate: &quot;auto&quot;,
     });
   }
-}, 200); 
+}, 1000); 
 
 &lt;/script&gt;
 
@@ -6562,7 +6562,7 @@ setTimeout(() =&gt; {
       refreshRate: &quot;auto&quot;,
     });
   }
-}, 200); 
+}, 1000); 
 
 &lt;/script&gt;
 
