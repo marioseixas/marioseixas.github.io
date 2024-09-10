@@ -44,7 +44,7 @@
     <title>infoBAG</title>
     <link href="https://ib.bsb.br/rss.xml" rel="self"/>
     <link href="https://ib.bsb.br/"/>
-    <updated>2024-09-10T18:39:52+00:00</updated>
+    <updated>2024-09-10T19:32:48+00:00</updated>
     <id>https://ib.bsb.br</id>
     <author>
         <name></name>
@@ -45214,8 +45214,8 @@ Pense duas vezes antes de se envolver.
         
         
         &lt;ul class=&quot;search-link&quot;&gt;
-            &lt;a href=&quot;#ai&quot; aria-label=&quot;Tag AI with 3 highlighted posts&quot;&gt;
-                AI (3)
+            &lt;a href=&quot;#ai&quot;&gt;
+                AI (8)
             &lt;/a&gt;
         &lt;/ul&gt;
         
@@ -45225,8 +45225,8 @@ Pense duas vezes antes de se envolver.
         
         
         &lt;ul class=&quot;search-link&quot;&gt;
-            &lt;a href=&quot;#ai-prompt&quot; aria-label=&quot;Tag AI&amp;gt;prompt with 3 highlighted posts&quot;&gt;
-                AI&amp;gt;prompt (3)
+            &lt;a href=&quot;#ai-prompt&quot;&gt;
+                AI&amp;gt;prompt (4)
             &lt;/a&gt;
         &lt;/ul&gt;
         
@@ -45236,7 +45236,7 @@ Pense duas vezes antes de se envolver.
         
         
         &lt;ul class=&quot;search-link&quot;&gt;
-            &lt;a href=&quot;#admoestação&quot; aria-label=&quot;Tag admoestação with 2 highlighted posts&quot;&gt;
+            &lt;a href=&quot;#admoestação&quot;&gt;
                 admoestação (2)
             &lt;/a&gt;
         &lt;/ul&gt;
@@ -45247,7 +45247,7 @@ Pense duas vezes antes de se envolver.
         
         
         &lt;ul class=&quot;search-link&quot;&gt;
-            &lt;a href=&quot;#assistir&quot; aria-label=&quot;Tag assistir with 2 highlighted posts&quot;&gt;
+            &lt;a href=&quot;#assistir&quot;&gt;
                 assistir (2)
             &lt;/a&gt;
         &lt;/ul&gt;
@@ -45258,7 +45258,7 @@ Pense duas vezes antes de se envolver.
         
         
         &lt;ul class=&quot;search-link&quot;&gt;
-            &lt;a href=&quot;#calls&quot; aria-label=&quot;Tag calls with 31 highlighted posts&quot;&gt;
+            &lt;a href=&quot;#calls&quot;&gt;
                 calls (31)
             &lt;/a&gt;
         &lt;/ul&gt;
@@ -45269,7 +45269,7 @@ Pense duas vezes antes de se envolver.
         
         
         &lt;ul class=&quot;search-link&quot;&gt;
-            &lt;a href=&quot;#carro&quot; aria-label=&quot;Tag carro with 4 highlighted posts&quot;&gt;
+            &lt;a href=&quot;#carro&quot;&gt;
                 carro (4)
             &lt;/a&gt;
         &lt;/ul&gt;
@@ -45280,7 +45280,7 @@ Pense duas vezes antes de se envolver.
         
         
         &lt;ul class=&quot;search-link&quot;&gt;
-            &lt;a href=&quot;#chess&quot; aria-label=&quot;Tag chess with 2 highlighted posts&quot;&gt;
+            &lt;a href=&quot;#chess&quot;&gt;
                 chess (2)
             &lt;/a&gt;
         &lt;/ul&gt;
@@ -45290,13 +45290,19 @@ Pense duas vezes antes de se envolver.
         
         
         
+        &lt;ul class=&quot;search-link&quot;&gt;
+            &lt;a href=&quot;#cloud&quot;&gt;
+                cloud (2)
+            &lt;/a&gt;
+        &lt;/ul&gt;
+        
         
         
         
         
         
         &lt;ul class=&quot;search-link&quot;&gt;
-            &lt;a href=&quot;#despesas&quot; aria-label=&quot;Tag despesas with 2 highlighted posts&quot;&gt;
+            &lt;a href=&quot;#despesas&quot;&gt;
                 despesas (2)
             &lt;/a&gt;
         &lt;/ul&gt;
@@ -45306,19 +45312,9 @@ Pense duas vezes antes de se envolver.
         
         
         
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         &lt;ul class=&quot;search-link&quot;&gt;
-            &lt;a href=&quot;#edital&quot; aria-label=&quot;Tag edital with 3 highlighted posts&quot;&gt;
-                edital (3)
+            &lt;a href=&quot;#direito&quot;&gt;
+                direito (2)
             &lt;/a&gt;
         &lt;/ul&gt;
         
@@ -45328,8 +45324,8 @@ Pense duas vezes antes de se envolver.
         
         
         &lt;ul class=&quot;search-link&quot;&gt;
-            &lt;a href=&quot;#edital-direito&quot; aria-label=&quot;Tag edital&amp;gt;direito with 1 highlighted posts&quot;&gt;
-                edital&amp;gt;direito (1)
+            &lt;a href=&quot;#direito-processual-penal&quot;&gt;
+                direito&amp;gt;processual-penal (1)
             &lt;/a&gt;
         &lt;/ul&gt;
         
@@ -45339,7 +45335,29 @@ Pense duas vezes antes de se envolver.
         
         
         &lt;ul class=&quot;search-link&quot;&gt;
-            &lt;a href=&quot;#edital-direito-processual-penal&quot; aria-label=&quot;Tag edital&amp;gt;direito&amp;gt;processual-penal with 1 highlighted posts&quot;&gt;
+            &lt;a href=&quot;#edital&quot;&gt;
+                edital (5)
+            &lt;/a&gt;
+        &lt;/ul&gt;
+        
+        
+        
+        
+        
+        
+        &lt;ul class=&quot;search-link&quot;&gt;
+            &lt;a href=&quot;#edital-direito&quot;&gt;
+                edital&amp;gt;direito (2)
+            &lt;/a&gt;
+        &lt;/ul&gt;
+        
+        
+        
+        
+        
+        
+        &lt;ul class=&quot;search-link&quot;&gt;
+            &lt;a href=&quot;#edital-direito-processual-penal&quot;&gt;
                 edital&amp;gt;direito&amp;gt;processual-penal (1)
             &lt;/a&gt;
         &lt;/ul&gt;
@@ -45350,8 +45368,8 @@ Pense duas vezes antes de se envolver.
         
         
         &lt;ul class=&quot;search-link&quot;&gt;
-            &lt;a href=&quot;#estudos&quot; aria-label=&quot;Tag estudos with 7 highlighted posts&quot;&gt;
-                estudos (7)
+            &lt;a href=&quot;#estudos&quot;&gt;
+                estudos (8)
             &lt;/a&gt;
         &lt;/ul&gt;
         
@@ -45361,7 +45379,7 @@ Pense duas vezes antes de se envolver.
         
         
         &lt;ul class=&quot;search-link&quot;&gt;
-            &lt;a href=&quot;#fatherhood&quot; aria-label=&quot;Tag fatherhood with 2 highlighted posts&quot;&gt;
+            &lt;a href=&quot;#fatherhood&quot;&gt;
                 fatherhood (2)
             &lt;/a&gt;
         &lt;/ul&gt;
@@ -45371,10 +45389,11 @@ Pense duas vezes antes de se envolver.
         
         
         
-        
-        
-        
-        
+        &lt;ul class=&quot;search-link&quot;&gt;
+            &lt;a href=&quot;#github&quot;&gt;
+                github (3)
+            &lt;/a&gt;
+        &lt;/ul&gt;
         
         
         
@@ -45382,7 +45401,18 @@ Pense duas vezes antes de se envolver.
         
         
         &lt;ul class=&quot;search-link&quot;&gt;
-            &lt;a href=&quot;#github-jekyll&quot; aria-label=&quot;Tag github&amp;gt;jekyll with 2 highlighted posts&quot;&gt;
+            &lt;a href=&quot;#github-estudos&quot;&gt;
+                github&amp;gt;estudos (1)
+            &lt;/a&gt;
+        &lt;/ul&gt;
+        
+        
+        
+        
+        
+        
+        &lt;ul class=&quot;search-link&quot;&gt;
+            &lt;a href=&quot;#github-jekyll&quot;&gt;
                 github&amp;gt;jekyll (2)
             &lt;/a&gt;
         &lt;/ul&gt;
@@ -45392,13 +45422,19 @@ Pense duas vezes antes de se envolver.
         
         
         
+        &lt;ul class=&quot;search-link&quot;&gt;
+            &lt;a href=&quot;#google-apps-script&quot;&gt;
+                google-apps-script (1)
+            &lt;/a&gt;
+        &lt;/ul&gt;
+        
         
         
         
         
         
         &lt;ul class=&quot;search-link&quot;&gt;
-            &lt;a href=&quot;#hardware&quot; aria-label=&quot;Tag hardware with 3 highlighted posts&quot;&gt;
+            &lt;a href=&quot;#hardware&quot;&gt;
                 hardware (3)
             &lt;/a&gt;
         &lt;/ul&gt;
@@ -45409,8 +45445,8 @@ Pense duas vezes antes de se envolver.
         
         
         &lt;ul class=&quot;search-link&quot;&gt;
-            &lt;a href=&quot;#iphone&quot; aria-label=&quot;Tag iphone with 2 highlighted posts&quot;&gt;
-                iphone (2)
+            &lt;a href=&quot;#iphone&quot;&gt;
+                iphone (3)
             &lt;/a&gt;
         &lt;/ul&gt;
         
@@ -45419,13 +45455,19 @@ Pense duas vezes antes de se envolver.
         
         
         
+        &lt;ul class=&quot;search-link&quot;&gt;
+            &lt;a href=&quot;#jekyll&quot;&gt;
+                jekyll (2)
+            &lt;/a&gt;
+        &lt;/ul&gt;
+        
         
         
         
         
         
         &lt;ul class=&quot;search-link&quot;&gt;
-            &lt;a href=&quot;#ler&quot; aria-label=&quot;Tag ler with 3 highlighted posts&quot;&gt;
+            &lt;a href=&quot;#ler&quot;&gt;
                 ler (3)
             &lt;/a&gt;
         &lt;/ul&gt;
@@ -45436,7 +45478,7 @@ Pense duas vezes antes de se envolver.
         
         
         &lt;ul class=&quot;search-link&quot;&gt;
-            &lt;a href=&quot;#linux&quot; aria-label=&quot;Tag linux with 41 highlighted posts&quot;&gt;
+            &lt;a href=&quot;#linux&quot;&gt;
                 linux (41)
             &lt;/a&gt;
         &lt;/ul&gt;
@@ -45447,7 +45489,7 @@ Pense duas vezes antes de se envolver.
         
         
         &lt;ul class=&quot;search-link&quot;&gt;
-            &lt;a href=&quot;#misc&quot; aria-label=&quot;Tag misc with 2 highlighted posts&quot;&gt;
+            &lt;a href=&quot;#misc&quot;&gt;
                 misc (2)
             &lt;/a&gt;
         &lt;/ul&gt;
@@ -45457,13 +45499,19 @@ Pense duas vezes antes de se envolver.
         
         
         
+        &lt;ul class=&quot;search-link&quot;&gt;
+            &lt;a href=&quot;#mobile&quot;&gt;
+                mobile (3)
+            &lt;/a&gt;
+        &lt;/ul&gt;
+        
         
         
         
         
         
         &lt;ul class=&quot;search-link&quot;&gt;
-            &lt;a href=&quot;#music&quot; aria-label=&quot;Tag music with 1 highlighted posts&quot;&gt;
+            &lt;a href=&quot;#music&quot;&gt;
                 music (1)
             &lt;/a&gt;
         &lt;/ul&gt;
@@ -45473,10 +45521,11 @@ Pense duas vezes antes de se envolver.
         
         
         
-        
-        
-        
-        
+        &lt;ul class=&quot;search-link&quot;&gt;
+            &lt;a href=&quot;#processual-penal&quot;&gt;
+                processual-penal (1)
+            &lt;/a&gt;
+        &lt;/ul&gt;
         
         
         
@@ -45484,7 +45533,18 @@ Pense duas vezes antes de se envolver.
         
         
         &lt;ul class=&quot;search-link&quot;&gt;
-            &lt;a href=&quot;#receitas&quot; aria-label=&quot;Tag receitas with 1 highlighted posts&quot;&gt;
+            &lt;a href=&quot;#prompt&quot;&gt;
+                prompt (4)
+            &lt;/a&gt;
+        &lt;/ul&gt;
+        
+        
+        
+        
+        
+        
+        &lt;ul class=&quot;search-link&quot;&gt;
+            &lt;a href=&quot;#receitas&quot;&gt;
                 receitas (1)
             &lt;/a&gt;
         &lt;/ul&gt;
@@ -45495,7 +45555,7 @@ Pense duas vezes antes de se envolver.
         
         
         &lt;ul class=&quot;search-link&quot;&gt;
-            &lt;a href=&quot;#rendimentos&quot; aria-label=&quot;Tag rendimentos with 33 highlighted posts&quot;&gt;
+            &lt;a href=&quot;#rendimentos&quot;&gt;
                 rendimentos (33)
             &lt;/a&gt;
         &lt;/ul&gt;
@@ -45506,7 +45566,7 @@ Pense duas vezes antes de se envolver.
         
         
         &lt;ul class=&quot;search-link&quot;&gt;
-            &lt;a href=&quot;#saúde&quot; aria-label=&quot;Tag saúde with 2 highlighted posts&quot;&gt;
+            &lt;a href=&quot;#saúde&quot;&gt;
                 saúde (2)
             &lt;/a&gt;
         &lt;/ul&gt;
@@ -45517,8 +45577,8 @@ Pense duas vezes antes de se envolver.
         
         
         &lt;ul class=&quot;search-link&quot;&gt;
-            &lt;a href=&quot;#scripts&quot; aria-label=&quot;Tag scripts with 22 highlighted posts&quot;&gt;
-                scripts (22)
+            &lt;a href=&quot;#scripts&quot;&gt;
+                scripts (26)
             &lt;/a&gt;
         &lt;/ul&gt;
         
@@ -45528,7 +45588,7 @@ Pense duas vezes antes de se envolver.
         
         
         &lt;ul class=&quot;search-link&quot;&gt;
-            &lt;a href=&quot;#scripts-ai&quot; aria-label=&quot;Tag scripts&amp;gt;AI with 1 highlighted posts&quot;&gt;
+            &lt;a href=&quot;#scripts-ai&quot;&gt;
                 scripts&amp;gt;AI (1)
             &lt;/a&gt;
         &lt;/ul&gt;
@@ -45539,7 +45599,7 @@ Pense duas vezes antes de se envolver.
         
         
         &lt;ul class=&quot;search-link&quot;&gt;
-            &lt;a href=&quot;#scripts-cloud&quot; aria-label=&quot;Tag scripts&amp;gt;cloud with 1 highlighted posts&quot;&gt;
+            &lt;a href=&quot;#scripts-cloud&quot;&gt;
                 scripts&amp;gt;cloud (1)
             &lt;/a&gt;
         &lt;/ul&gt;
@@ -45550,7 +45610,7 @@ Pense duas vezes antes de se envolver.
         
         
         &lt;ul class=&quot;search-link&quot;&gt;
-            &lt;a href=&quot;#scripts-google-apps-script&quot; aria-label=&quot;Tag scripts&amp;gt;google-apps-script with 1 highlighted posts&quot;&gt;
+            &lt;a href=&quot;#scripts-google-apps-script&quot;&gt;
                 scripts&amp;gt;google-apps-script (1)
             &lt;/a&gt;
         &lt;/ul&gt;
@@ -45561,7 +45621,7 @@ Pense duas vezes antes de se envolver.
         
         
         &lt;ul class=&quot;search-link&quot;&gt;
-            &lt;a href=&quot;#scripts-mobile&quot; aria-label=&quot;Tag scripts&amp;gt;mobile with 1 highlighted posts&quot;&gt;
+            &lt;a href=&quot;#scripts-mobile&quot;&gt;
                 scripts&amp;gt;mobile (1)
             &lt;/a&gt;
         &lt;/ul&gt;
@@ -45572,7 +45632,7 @@ Pense duas vezes antes de se envolver.
         
         
         &lt;ul class=&quot;search-link&quot;&gt;
-            &lt;a href=&quot;#sell&quot; aria-label=&quot;Tag sell with 4 highlighted posts&quot;&gt;
+            &lt;a href=&quot;#sell&quot;&gt;
                 sell (4)
             &lt;/a&gt;
         &lt;/ul&gt;
@@ -45583,8 +45643,8 @@ Pense duas vezes antes de se envolver.
         
         
         &lt;ul class=&quot;search-link&quot;&gt;
-            &lt;a href=&quot;#software&quot; aria-label=&quot;Tag software with 1 highlighted posts&quot;&gt;
-                software (1)
+            &lt;a href=&quot;#software&quot;&gt;
+                software (4)
             &lt;/a&gt;
         &lt;/ul&gt;
         
@@ -45594,7 +45654,7 @@ Pense duas vezes antes de se envolver.
         
         
         &lt;ul class=&quot;search-link&quot;&gt;
-            &lt;a href=&quot;#software-cloud&quot; aria-label=&quot;Tag software&amp;gt;cloud with 1 highlighted posts&quot;&gt;
+            &lt;a href=&quot;#software-cloud&quot;&gt;
                 software&amp;gt;cloud (1)
             &lt;/a&gt;
         &lt;/ul&gt;
@@ -45605,7 +45665,7 @@ Pense duas vezes antes de se envolver.
         
         
         &lt;ul class=&quot;search-link&quot;&gt;
-            &lt;a href=&quot;#software-mobile&quot; aria-label=&quot;Tag software&amp;gt;mobile with 2 highlighted posts&quot;&gt;
+            &lt;a href=&quot;#software-mobile&quot;&gt;
                 software&amp;gt;mobile (2)
             &lt;/a&gt;
         &lt;/ul&gt;
@@ -45616,7 +45676,7 @@ Pense duas vezes antes de se envolver.
         
         
         &lt;ul class=&quot;search-link&quot;&gt;
-            &lt;a href=&quot;#spirit&quot; aria-label=&quot;Tag spirit with 3 highlighted posts&quot;&gt;
+            &lt;a href=&quot;#spirit&quot;&gt;
                 spirit (3)
             &lt;/a&gt;
         &lt;/ul&gt;
@@ -45627,8 +45687,8 @@ Pense duas vezes antes de se envolver.
         
         
         &lt;ul class=&quot;search-link&quot;&gt;
-            &lt;a href=&quot;#tasks&quot; aria-label=&quot;Tag tasks with 12 highlighted posts&quot;&gt;
-                tasks (12)
+            &lt;a href=&quot;#tasks&quot;&gt;
+                tasks (13)
             &lt;/a&gt;
         &lt;/ul&gt;
         
@@ -45638,7 +45698,7 @@ Pense duas vezes antes de se envolver.
         
         
         &lt;ul class=&quot;search-link&quot;&gt;
-            &lt;a href=&quot;#tasks-iphone&quot; aria-label=&quot;Tag tasks&amp;gt;iphone with 1 highlighted posts&quot;&gt;
+            &lt;a href=&quot;#tasks-iphone&quot;&gt;
                 tasks&amp;gt;iphone (1)
             &lt;/a&gt;
         &lt;/ul&gt;
@@ -45649,8 +45709,8 @@ Pense duas vezes antes de se envolver.
         
         
         &lt;ul class=&quot;search-link&quot;&gt;
-            &lt;a href=&quot;#tools&quot; aria-label=&quot;Tag tools with 11 highlighted posts&quot;&gt;
-                tools (11)
+            &lt;a href=&quot;#tools&quot;&gt;
+                tools (13)
             &lt;/a&gt;
         &lt;/ul&gt;
         
@@ -45659,13 +45719,19 @@ Pense duas vezes antes de se envolver.
         
         
         
+        &lt;ul class=&quot;search-link&quot;&gt;
+            &lt;a href=&quot;#tools-ai&quot;&gt;
+                tools&amp;gt;AI (1)
+            &lt;/a&gt;
+        &lt;/ul&gt;
+        
         
         
         
         
         
         &lt;ul class=&quot;search-link&quot;&gt;
-            &lt;a href=&quot;#tools-ai-prompt&quot; aria-label=&quot;Tag tools&amp;gt;AI&amp;gt;prompt with 1 highlighted posts&quot;&gt;
+            &lt;a href=&quot;#tools-ai-prompt&quot;&gt;
                 tools&amp;gt;AI&amp;gt;prompt (1)
             &lt;/a&gt;
         &lt;/ul&gt;
@@ -45675,13 +45741,19 @@ Pense duas vezes antes de se envolver.
         
         
         
+        &lt;ul class=&quot;search-link&quot;&gt;
+            &lt;a href=&quot;#tools-github&quot;&gt;
+                tools&amp;gt;github (1)
+            &lt;/a&gt;
+        &lt;/ul&gt;
+        
         
         
         
         
         
         &lt;ul class=&quot;search-link&quot;&gt;
-            &lt;a href=&quot;#tools-github-estudos&quot; aria-label=&quot;Tag tools&amp;gt;github&amp;gt;estudos with 1 highlighted posts&quot;&gt;
+            &lt;a href=&quot;#tools-github-estudos&quot;&gt;
                 tools&amp;gt;github&amp;gt;estudos (1)
             &lt;/a&gt;
         &lt;/ul&gt;
@@ -45692,7 +45764,7 @@ Pense duas vezes antes de se envolver.
         
         
         &lt;ul class=&quot;search-link&quot;&gt;
-            &lt;a href=&quot;#trabalho&quot; aria-label=&quot;Tag trabalho with 4 highlighted posts&quot;&gt;
+            &lt;a href=&quot;#trabalho&quot;&gt;
                 trabalho (4)
             &lt;/a&gt;
         &lt;/ul&gt;
@@ -45706,7 +45778,6 @@ Pense duas vezes antes de se envolver.
     
     &lt;div class=&quot;tag-list&quot;&gt;
         &lt;h1 id=&quot;ai-heading&quot;&gt;
-            &lt;a href=&quot;#&quot; class=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;&lt;img src=&quot;/assets/gold.ico&quot; alt=&quot;gold icon&quot; /&gt;&lt;/a&gt;
             AI
         &lt;/h1&gt;
         &lt;ul class=&quot;search-link&quot;&gt;
@@ -45771,7 +45842,7 @@ Pense duas vezes antes de se envolver.
         &lt;/ul&gt;
         &lt;ul class=&quot;search-link&quot;&gt;
         
-        &lt;h3&gt;Parent tags:&lt;/h3&gt;
+        &lt;h2&gt;Parent tags:&lt;/h2&gt;
             
             &lt;a href=&quot;#scripts&quot; aria-label=&quot;Parent tag scripts&quot;&gt;scripts&lt;/a&gt;
             
@@ -45779,7 +45850,7 @@ Pense duas vezes antes de se envolver.
         &lt;/ul&gt;
         &lt;ul class=&quot;search-link&quot;&gt;
             
-            &lt;h3&gt;Child tags:&lt;/h3&gt;
+            &lt;h2&gt;Child tags:&lt;/h2&gt;
             
             &lt;a href=&quot;#prompt&quot; aria-label=&quot;Child tag prompt&quot;&gt;prompt&lt;/a&gt;
             
@@ -45798,7 +45869,6 @@ Pense duas vezes antes de se envolver.
     
     &lt;div class=&quot;tag-list&quot;&gt;
         &lt;h1 id=&quot;ai-prompt-heading&quot;&gt;
-            &lt;a href=&quot;#&quot; class=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;&lt;img src=&quot;/assets/gold.ico&quot; alt=&quot;gold icon&quot; /&gt;&lt;/a&gt;
             AI&amp;gt;prompt
         &lt;/h1&gt;
         &lt;ul class=&quot;search-link&quot;&gt;
@@ -45835,7 +45905,7 @@ Pense duas vezes antes de se envolver.
         &lt;/ul&gt;
         &lt;ul class=&quot;search-link&quot;&gt;
         
-        &lt;h3&gt;Parent tags:&lt;/h3&gt;
+        &lt;h2&gt;Parent tags:&lt;/h2&gt;
             
             &lt;a href=&quot;#tools&quot; aria-label=&quot;Parent tag tools&quot;&gt;tools&lt;/a&gt;
             
@@ -45855,7 +45925,6 @@ Pense duas vezes antes de se envolver.
     
     &lt;div class=&quot;tag-list&quot;&gt;
         &lt;h1 id=&quot;admoestação-heading&quot;&gt;
-            &lt;a href=&quot;#&quot; class=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;&lt;img src=&quot;/assets/gold.ico&quot; alt=&quot;gold icon&quot; /&gt;&lt;/a&gt;
             admoestação
         &lt;/h1&gt;
         &lt;ul class=&quot;search-link&quot;&gt;
@@ -45884,7 +45953,7 @@ Pense duas vezes antes de se envolver.
         &lt;/ul&gt;
         &lt;ul class=&quot;search-link&quot;&gt;
         
-        &lt;h3&gt;Related tags:&lt;/h3&gt;
+        &lt;h2&gt;Related tags:&lt;/h2&gt;
             
             &lt;a href=&quot;#spirit&quot; aria-label=&quot;Related tag spirit&quot;&gt;
                 spirit (2)
@@ -45898,7 +45967,6 @@ Pense duas vezes antes de se envolver.
     
     &lt;div class=&quot;tag-list&quot;&gt;
         &lt;h1 id=&quot;assistir-heading&quot;&gt;
-            &lt;a href=&quot;#&quot; class=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;&lt;img src=&quot;/assets/gold.ico&quot; alt=&quot;gold icon&quot; /&gt;&lt;/a&gt;
             assistir
         &lt;/h1&gt;
         &lt;ul class=&quot;search-link&quot;&gt;
@@ -45934,7 +46002,6 @@ Pense duas vezes antes de se envolver.
     
     &lt;div class=&quot;tag-list&quot;&gt;
         &lt;h1 id=&quot;calls-heading&quot;&gt;
-            &lt;a href=&quot;#&quot; class=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;&lt;img src=&quot;/assets/gold.ico&quot; alt=&quot;gold icon&quot; /&gt;&lt;/a&gt;
             calls
         &lt;/h1&gt;
         &lt;ul class=&quot;search-link&quot;&gt;
@@ -46173,7 +46240,6 @@ Pense duas vezes antes de se envolver.
     
     &lt;div class=&quot;tag-list&quot;&gt;
         &lt;h1 id=&quot;carro-heading&quot;&gt;
-            &lt;a href=&quot;#&quot; class=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;&lt;img src=&quot;/assets/gold.ico&quot; alt=&quot;gold icon&quot; /&gt;&lt;/a&gt;
             carro
         &lt;/h1&gt;
         &lt;ul class=&quot;search-link&quot;&gt;
@@ -46223,7 +46289,6 @@ Pense duas vezes antes de se envolver.
     
     &lt;div class=&quot;tag-list&quot;&gt;
         &lt;h1 id=&quot;chess-heading&quot;&gt;
-            &lt;a href=&quot;#&quot; class=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;&lt;img src=&quot;/assets/gold.ico&quot; alt=&quot;gold icon&quot; /&gt;&lt;/a&gt;
             chess
         &lt;/h1&gt;
         &lt;ul class=&quot;search-link&quot;&gt;
@@ -46259,7 +46324,6 @@ Pense duas vezes antes de se envolver.
     
     &lt;div class=&quot;tag-list&quot;&gt;
         &lt;h1 id=&quot;cloud-heading&quot;&gt;
-            &lt;a href=&quot;#&quot; class=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;&lt;img src=&quot;/assets/gold.ico&quot; alt=&quot;gold icon&quot; /&gt;&lt;/a&gt;
             cloud
         &lt;/h1&gt;
         &lt;ul class=&quot;search-link&quot;&gt;
@@ -46282,7 +46346,7 @@ Pense duas vezes antes de se envolver.
         &lt;/ul&gt;
         &lt;ul class=&quot;search-link&quot;&gt;
         
-        &lt;h3&gt;Parent tags:&lt;/h3&gt;
+        &lt;h2&gt;Parent tags:&lt;/h2&gt;
             
             &lt;a href=&quot;#scripts&quot; aria-label=&quot;Parent tag scripts&quot;&gt;scripts&lt;/a&gt;
             
@@ -46302,7 +46366,6 @@ Pense duas vezes antes de se envolver.
     
     &lt;div class=&quot;tag-list&quot;&gt;
         &lt;h1 id=&quot;despesas-heading&quot;&gt;
-            &lt;a href=&quot;#&quot; class=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;&lt;img src=&quot;/assets/gold.ico&quot; alt=&quot;gold icon&quot; /&gt;&lt;/a&gt;
             despesas
         &lt;/h1&gt;
         &lt;ul class=&quot;search-link&quot;&gt;
@@ -46338,7 +46401,6 @@ Pense duas vezes antes de se envolver.
     
     &lt;div class=&quot;tag-list&quot;&gt;
         &lt;h1 id=&quot;direito-heading&quot;&gt;
-            &lt;a href=&quot;#&quot; class=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;&lt;img src=&quot;/assets/gold.ico&quot; alt=&quot;gold icon&quot; /&gt;&lt;/a&gt;
             direito
         &lt;/h1&gt;
         &lt;ul class=&quot;search-link&quot;&gt;
@@ -46361,7 +46423,7 @@ Pense duas vezes antes de se envolver.
         &lt;/ul&gt;
         &lt;ul class=&quot;search-link&quot;&gt;
         
-        &lt;h3&gt;Parent tags:&lt;/h3&gt;
+        &lt;h2&gt;Parent tags:&lt;/h2&gt;
             
             &lt;a href=&quot;#edital&quot; aria-label=&quot;Parent tag edital&quot;&gt;edital&lt;/a&gt;
             
@@ -46369,7 +46431,7 @@ Pense duas vezes antes de se envolver.
         &lt;/ul&gt;
         &lt;ul class=&quot;search-link&quot;&gt;
             
-            &lt;h3&gt;Child tags:&lt;/h3&gt;
+            &lt;h2&gt;Child tags:&lt;/h2&gt;
             
             &lt;a href=&quot;#edital-direito-processual-penal&quot; aria-label=&quot;Child tag edital&amp;gt;direito&amp;gt;processual-penal&quot;&gt;edital&amp;gt;direito&amp;gt;processual-penal&lt;/a&gt;
             
@@ -46384,7 +46446,6 @@ Pense duas vezes antes de se envolver.
     
     &lt;div class=&quot;tag-list&quot;&gt;
         &lt;h1 id=&quot;direito-processual-penal-heading&quot;&gt;
-            &lt;a href=&quot;#&quot; class=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;&lt;img src=&quot;/assets/gold.ico&quot; alt=&quot;gold icon&quot; /&gt;&lt;/a&gt;
             direito&amp;gt;processual-penal
         &lt;/h1&gt;
         &lt;ul class=&quot;search-link&quot;&gt;
@@ -46400,7 +46461,7 @@ Pense duas vezes antes de se envolver.
         &lt;/ul&gt;
         &lt;ul class=&quot;search-link&quot;&gt;
         
-        &lt;h3&gt;Parent tags:&lt;/h3&gt;
+        &lt;h2&gt;Parent tags:&lt;/h2&gt;
             
             &lt;a href=&quot;#edital&quot; aria-label=&quot;Parent tag edital&quot;&gt;edital&lt;/a&gt;
             
@@ -46418,7 +46479,6 @@ Pense duas vezes antes de se envolver.
     
     &lt;div class=&quot;tag-list&quot;&gt;
         &lt;h1 id=&quot;edital-heading&quot;&gt;
-            &lt;a href=&quot;#&quot; class=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;&lt;img src=&quot;/assets/gold.ico&quot; alt=&quot;gold icon&quot; /&gt;&lt;/a&gt;
             edital
         &lt;/h1&gt;
         &lt;ul class=&quot;search-link&quot;&gt;
@@ -46465,7 +46525,7 @@ Pense duas vezes antes de se envolver.
         &lt;/ul&gt;
         &lt;ul class=&quot;search-link&quot;&gt;
             
-            &lt;h3&gt;Child tags:&lt;/h3&gt;
+            &lt;h2&gt;Child tags:&lt;/h2&gt;
             
             &lt;a href=&quot;#direito-processual-penal&quot; aria-label=&quot;Child tag direito&amp;gt;processual-penal&quot;&gt;direito&amp;gt;processual-penal&lt;/a&gt;
             
@@ -46486,7 +46546,6 @@ Pense duas vezes antes de se envolver.
     
     &lt;div class=&quot;tag-list&quot;&gt;
         &lt;h1 id=&quot;edital-direito-heading&quot;&gt;
-            &lt;a href=&quot;#&quot; class=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;&lt;img src=&quot;/assets/gold.ico&quot; alt=&quot;gold icon&quot; /&gt;&lt;/a&gt;
             edital&amp;gt;direito
         &lt;/h1&gt;
         &lt;ul class=&quot;search-link&quot;&gt;
@@ -46509,7 +46568,7 @@ Pense duas vezes antes de se envolver.
         &lt;/ul&gt;
         &lt;ul class=&quot;search-link&quot;&gt;
         
-        &lt;h3&gt;Parent tags:&lt;/h3&gt;
+        &lt;h2&gt;Parent tags:&lt;/h2&gt;
             
             &lt;a href=&quot;#edital&quot; aria-label=&quot;Parent tag edital&quot;&gt;edital&lt;/a&gt;
             
@@ -46517,7 +46576,7 @@ Pense duas vezes antes de se envolver.
         &lt;/ul&gt;
         &lt;ul class=&quot;search-link&quot;&gt;
             
-            &lt;h3&gt;Child tags:&lt;/h3&gt;
+            &lt;h2&gt;Child tags:&lt;/h2&gt;
             
             &lt;a href=&quot;#processual-penal&quot; aria-label=&quot;Child tag processual-penal&quot;&gt;processual-penal&lt;/a&gt;
             
@@ -46532,7 +46591,6 @@ Pense duas vezes antes de se envolver.
     
     &lt;div class=&quot;tag-list&quot;&gt;
         &lt;h1 id=&quot;edital-direito-processual-penal-heading&quot;&gt;
-            &lt;a href=&quot;#&quot; class=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;&lt;img src=&quot;/assets/gold.ico&quot; alt=&quot;gold icon&quot; /&gt;&lt;/a&gt;
             edital&amp;gt;direito&amp;gt;processual-penal
         &lt;/h1&gt;
         &lt;ul class=&quot;search-link&quot;&gt;
@@ -46548,7 +46606,7 @@ Pense duas vezes antes de se envolver.
         &lt;/ul&gt;
         &lt;ul class=&quot;search-link&quot;&gt;
         
-        &lt;h3&gt;Parent tags:&lt;/h3&gt;
+        &lt;h2&gt;Parent tags:&lt;/h2&gt;
             
             &lt;a href=&quot;#edital&quot; aria-label=&quot;Parent tag edital&quot;&gt;edital&lt;/a&gt;
             
@@ -46568,7 +46626,6 @@ Pense duas vezes antes de se envolver.
     
     &lt;div class=&quot;tag-list&quot;&gt;
         &lt;h1 id=&quot;estudos-heading&quot;&gt;
-            &lt;a href=&quot;#&quot; class=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;&lt;img src=&quot;/assets/gold.ico&quot; alt=&quot;gold icon&quot; /&gt;&lt;/a&gt;
             estudos
         &lt;/h1&gt;
         &lt;ul class=&quot;search-link&quot;&gt;
@@ -46633,7 +46690,7 @@ Pense duas vezes antes de se envolver.
         &lt;/ul&gt;
         &lt;ul class=&quot;search-link&quot;&gt;
         
-        &lt;h3&gt;Parent tags:&lt;/h3&gt;
+        &lt;h2&gt;Parent tags:&lt;/h2&gt;
             
             &lt;a href=&quot;#tools-github&quot; aria-label=&quot;Parent tag tools&amp;gt;github&quot;&gt;tools&amp;gt;github&lt;/a&gt;
             
@@ -46644,7 +46701,7 @@ Pense duas vezes antes de se envolver.
         &lt;/ul&gt;
         &lt;ul class=&quot;search-link&quot;&gt;
         
-        &lt;h3&gt;Related tags:&lt;/h3&gt;
+        &lt;h2&gt;Related tags:&lt;/h2&gt;
             
             &lt;a href=&quot;#trabalho&quot; aria-label=&quot;Related tag trabalho&quot;&gt;
                 trabalho (2)
@@ -46662,7 +46719,6 @@ Pense duas vezes antes de se envolver.
     
     &lt;div class=&quot;tag-list&quot;&gt;
         &lt;h1 id=&quot;fatherhood-heading&quot;&gt;
-            &lt;a href=&quot;#&quot; class=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;&lt;img src=&quot;/assets/gold.ico&quot; alt=&quot;gold icon&quot; /&gt;&lt;/a&gt;
             fatherhood
         &lt;/h1&gt;
         &lt;ul class=&quot;search-link&quot;&gt;
@@ -46698,7 +46754,6 @@ Pense duas vezes antes de se envolver.
     
     &lt;div class=&quot;tag-list&quot;&gt;
         &lt;h1 id=&quot;github-heading&quot;&gt;
-            &lt;a href=&quot;#&quot; class=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;&lt;img src=&quot;/assets/gold.ico&quot; alt=&quot;gold icon&quot; /&gt;&lt;/a&gt;
             github
         &lt;/h1&gt;
         &lt;ul class=&quot;search-link&quot;&gt;
@@ -46731,7 +46786,7 @@ Pense duas vezes antes de se envolver.
         &lt;/ul&gt;
         &lt;ul class=&quot;search-link&quot;&gt;
             
-            &lt;h3&gt;Child tags:&lt;/h3&gt;
+            &lt;h2&gt;Child tags:&lt;/h2&gt;
             
             &lt;a href=&quot;#tools-github-estudos&quot; aria-label=&quot;Child tag tools&amp;gt;github&amp;gt;estudos&quot;&gt;tools&amp;gt;github&amp;gt;estudos&lt;/a&gt;
             
@@ -46750,7 +46805,6 @@ Pense duas vezes antes de se envolver.
     
     &lt;div class=&quot;tag-list&quot;&gt;
         &lt;h1 id=&quot;github-estudos-heading&quot;&gt;
-            &lt;a href=&quot;#&quot; class=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;&lt;img src=&quot;/assets/gold.ico&quot; alt=&quot;gold icon&quot; /&gt;&lt;/a&gt;
             github&amp;gt;estudos
         &lt;/h1&gt;
         &lt;ul class=&quot;search-link&quot;&gt;
@@ -46766,7 +46820,7 @@ Pense duas vezes antes de se envolver.
         &lt;/ul&gt;
         &lt;ul class=&quot;search-link&quot;&gt;
         
-        &lt;h3&gt;Parent tags:&lt;/h3&gt;
+        &lt;h2&gt;Parent tags:&lt;/h2&gt;
             
             &lt;a href=&quot;#tools&quot; aria-label=&quot;Parent tag tools&quot;&gt;tools&lt;/a&gt;
             
@@ -46784,7 +46838,6 @@ Pense duas vezes antes de se envolver.
     
     &lt;div class=&quot;tag-list&quot;&gt;
         &lt;h1 id=&quot;github-jekyll-heading&quot;&gt;
-            &lt;a href=&quot;#&quot; class=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;&lt;img src=&quot;/assets/gold.ico&quot; alt=&quot;gold icon&quot; /&gt;&lt;/a&gt;
             github&amp;gt;jekyll
         &lt;/h1&gt;
         &lt;ul class=&quot;search-link&quot;&gt;
@@ -46807,7 +46860,7 @@ Pense duas vezes antes de se envolver.
         &lt;/ul&gt;
         &lt;ul class=&quot;search-link&quot;&gt;
         
-        &lt;h3&gt;Parent tags:&lt;/h3&gt;
+        &lt;h2&gt;Parent tags:&lt;/h2&gt;
             
             &lt;a href=&quot;#github&quot; aria-label=&quot;Parent tag github&quot;&gt;github&lt;/a&gt;
             
@@ -46825,7 +46878,6 @@ Pense duas vezes antes de se envolver.
     
     &lt;div class=&quot;tag-list&quot;&gt;
         &lt;h1 id=&quot;google-apps-script-heading&quot;&gt;
-            &lt;a href=&quot;#&quot; class=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;&lt;img src=&quot;/assets/gold.ico&quot; alt=&quot;gold icon&quot; /&gt;&lt;/a&gt;
             google-apps-script
         &lt;/h1&gt;
         &lt;ul class=&quot;search-link&quot;&gt;
@@ -46841,7 +46893,7 @@ Pense duas vezes antes de se envolver.
         &lt;/ul&gt;
         &lt;ul class=&quot;search-link&quot;&gt;
         
-        &lt;h3&gt;Parent tags:&lt;/h3&gt;
+        &lt;h2&gt;Parent tags:&lt;/h2&gt;
             
             &lt;a href=&quot;#scripts&quot; aria-label=&quot;Parent tag scripts&quot;&gt;scripts&lt;/a&gt;
             
@@ -46859,7 +46911,6 @@ Pense duas vezes antes de se envolver.
     
     &lt;div class=&quot;tag-list&quot;&gt;
         &lt;h1 id=&quot;hardware-heading&quot;&gt;
-            &lt;a href=&quot;#&quot; class=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;&lt;img src=&quot;/assets/gold.ico&quot; alt=&quot;gold icon&quot; /&gt;&lt;/a&gt;
             hardware
         &lt;/h1&gt;
         &lt;ul class=&quot;search-link&quot;&gt;
@@ -46902,7 +46953,6 @@ Pense duas vezes antes de se envolver.
     
     &lt;div class=&quot;tag-list&quot;&gt;
         &lt;h1 id=&quot;iphone-heading&quot;&gt;
-            &lt;a href=&quot;#&quot; class=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;&lt;img src=&quot;/assets/gold.ico&quot; alt=&quot;gold icon&quot; /&gt;&lt;/a&gt;
             iphone
         &lt;/h1&gt;
         &lt;ul class=&quot;search-link&quot;&gt;
@@ -46932,7 +46982,7 @@ Pense duas vezes antes de se envolver.
         &lt;/ul&gt;
         &lt;ul class=&quot;search-link&quot;&gt;
         
-        &lt;h3&gt;Parent tags:&lt;/h3&gt;
+        &lt;h2&gt;Parent tags:&lt;/h2&gt;
             
             &lt;a href=&quot;#tasks&quot; aria-label=&quot;Parent tag tasks&quot;&gt;tasks&lt;/a&gt;
             
@@ -46943,7 +46993,7 @@ Pense duas vezes antes de se envolver.
         &lt;/ul&gt;
         &lt;ul class=&quot;search-link&quot;&gt;
         
-        &lt;h3&gt;Related tags:&lt;/h3&gt;
+        &lt;h2&gt;Related tags:&lt;/h2&gt;
             
             &lt;a href=&quot;#scripts-mobile&quot; aria-label=&quot;Related tag scripts&amp;gt;mobile&quot;&gt;
                 scripts&amp;gt;mobile (2)
@@ -46961,7 +47011,6 @@ Pense duas vezes antes de se envolver.
     
     &lt;div class=&quot;tag-list&quot;&gt;
         &lt;h1 id=&quot;jekyll-heading&quot;&gt;
-            &lt;a href=&quot;#&quot; class=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;&lt;img src=&quot;/assets/gold.ico&quot; alt=&quot;gold icon&quot; /&gt;&lt;/a&gt;
             jekyll
         &lt;/h1&gt;
         &lt;ul class=&quot;search-link&quot;&gt;
@@ -46984,7 +47033,7 @@ Pense duas vezes antes de se envolver.
         &lt;/ul&gt;
         &lt;ul class=&quot;search-link&quot;&gt;
         
-        &lt;h3&gt;Parent tags:&lt;/h3&gt;
+        &lt;h2&gt;Parent tags:&lt;/h2&gt;
             
             &lt;a href=&quot;#github&quot; aria-label=&quot;Parent tag github&quot;&gt;github&lt;/a&gt;
             
@@ -47002,7 +47051,6 @@ Pense duas vezes antes de se envolver.
     
     &lt;div class=&quot;tag-list&quot;&gt;
         &lt;h1 id=&quot;ler-heading&quot;&gt;
-            &lt;a href=&quot;#&quot; class=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;&lt;img src=&quot;/assets/gold.ico&quot; alt=&quot;gold icon&quot; /&gt;&lt;/a&gt;
             ler
         &lt;/h1&gt;
         &lt;ul class=&quot;search-link&quot;&gt;
@@ -47045,7 +47093,6 @@ Pense duas vezes antes de se envolver.
     
     &lt;div class=&quot;tag-list&quot;&gt;
         &lt;h1 id=&quot;linux-heading&quot;&gt;
-            &lt;a href=&quot;#&quot; class=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;&lt;img src=&quot;/assets/gold.ico&quot; alt=&quot;gold icon&quot; /&gt;&lt;/a&gt;
             linux
         &lt;/h1&gt;
         &lt;ul class=&quot;search-link&quot;&gt;
@@ -47347,7 +47394,7 @@ Pense duas vezes antes de se envolver.
         &lt;/ul&gt;
         &lt;ul class=&quot;search-link&quot;&gt;
         
-        &lt;h3&gt;Related tags:&lt;/h3&gt;
+        &lt;h2&gt;Related tags:&lt;/h2&gt;
             
             &lt;a href=&quot;#scripts&quot; aria-label=&quot;Related tag scripts&quot;&gt;
                 scripts (26)
@@ -47365,7 +47412,6 @@ Pense duas vezes antes de se envolver.
     
     &lt;div class=&quot;tag-list&quot;&gt;
         &lt;h1 id=&quot;misc-heading&quot;&gt;
-            &lt;a href=&quot;#&quot; class=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;&lt;img src=&quot;/assets/gold.ico&quot; alt=&quot;gold icon&quot; /&gt;&lt;/a&gt;
             misc
         &lt;/h1&gt;
         &lt;ul class=&quot;search-link&quot;&gt;
@@ -47401,7 +47447,6 @@ Pense duas vezes antes de se envolver.
     
     &lt;div class=&quot;tag-list&quot;&gt;
         &lt;h1 id=&quot;mobile-heading&quot;&gt;
-            &lt;a href=&quot;#&quot; class=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;&lt;img src=&quot;/assets/gold.ico&quot; alt=&quot;gold icon&quot; /&gt;&lt;/a&gt;
             mobile
         &lt;/h1&gt;
         &lt;ul class=&quot;search-link&quot;&gt;
@@ -47431,7 +47476,7 @@ Pense duas vezes antes de se envolver.
         &lt;/ul&gt;
         &lt;ul class=&quot;search-link&quot;&gt;
         
-        &lt;h3&gt;Parent tags:&lt;/h3&gt;
+        &lt;h2&gt;Parent tags:&lt;/h2&gt;
             
             &lt;a href=&quot;#scripts&quot; aria-label=&quot;Parent tag scripts&quot;&gt;scripts&lt;/a&gt;
             
@@ -47451,7 +47496,6 @@ Pense duas vezes antes de se envolver.
     
     &lt;div class=&quot;tag-list&quot;&gt;
         &lt;h1 id=&quot;music-heading&quot;&gt;
-            &lt;a href=&quot;#&quot; class=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;&lt;img src=&quot;/assets/gold.ico&quot; alt=&quot;gold icon&quot; /&gt;&lt;/a&gt;
             music
         &lt;/h1&gt;
         &lt;ul class=&quot;search-link&quot;&gt;
@@ -47480,7 +47524,6 @@ Pense duas vezes antes de se envolver.
     
     &lt;div class=&quot;tag-list&quot;&gt;
         &lt;h1 id=&quot;processual-penal-heading&quot;&gt;
-            &lt;a href=&quot;#&quot; class=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;&lt;img src=&quot;/assets/gold.ico&quot; alt=&quot;gold icon&quot; /&gt;&lt;/a&gt;
             processual-penal
         &lt;/h1&gt;
         &lt;ul class=&quot;search-link&quot;&gt;
@@ -47496,7 +47539,7 @@ Pense duas vezes antes de se envolver.
         &lt;/ul&gt;
         &lt;ul class=&quot;search-link&quot;&gt;
         
-        &lt;h3&gt;Parent tags:&lt;/h3&gt;
+        &lt;h2&gt;Parent tags:&lt;/h2&gt;
             
             &lt;a href=&quot;#edital-direito&quot; aria-label=&quot;Parent tag edital&amp;gt;direito&quot;&gt;edital&amp;gt;direito&lt;/a&gt;
             
@@ -47514,7 +47557,6 @@ Pense duas vezes antes de se envolver.
     
     &lt;div class=&quot;tag-list&quot;&gt;
         &lt;h1 id=&quot;prompt-heading&quot;&gt;
-            &lt;a href=&quot;#&quot; class=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;&lt;img src=&quot;/assets/gold.ico&quot; alt=&quot;gold icon&quot; /&gt;&lt;/a&gt;
             prompt
         &lt;/h1&gt;
         &lt;ul class=&quot;search-link&quot;&gt;
@@ -47551,7 +47593,7 @@ Pense duas vezes antes de se envolver.
         &lt;/ul&gt;
         &lt;ul class=&quot;search-link&quot;&gt;
         
-        &lt;h3&gt;Parent tags:&lt;/h3&gt;
+        &lt;h2&gt;Parent tags:&lt;/h2&gt;
             
             &lt;a href=&quot;#tools-ai&quot; aria-label=&quot;Parent tag tools&amp;gt;AI&quot;&gt;tools&amp;gt;AI&lt;/a&gt;
             
@@ -47571,7 +47613,6 @@ Pense duas vezes antes de se envolver.
     
     &lt;div class=&quot;tag-list&quot;&gt;
         &lt;h1 id=&quot;receitas-heading&quot;&gt;
-            &lt;a href=&quot;#&quot; class=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;&lt;img src=&quot;/assets/gold.ico&quot; alt=&quot;gold icon&quot; /&gt;&lt;/a&gt;
             receitas
         &lt;/h1&gt;
         &lt;ul class=&quot;search-link&quot;&gt;
@@ -47600,7 +47641,6 @@ Pense duas vezes antes de se envolver.
     
     &lt;div class=&quot;tag-list&quot;&gt;
         &lt;h1 id=&quot;rendimentos-heading&quot;&gt;
-            &lt;a href=&quot;#&quot; class=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;&lt;img src=&quot;/assets/gold.ico&quot; alt=&quot;gold icon&quot; /&gt;&lt;/a&gt;
             rendimentos
         &lt;/h1&gt;
         &lt;ul class=&quot;search-link&quot;&gt;
@@ -47853,7 +47893,6 @@ Pense duas vezes antes de se envolver.
     
     &lt;div class=&quot;tag-list&quot;&gt;
         &lt;h1 id=&quot;saúde-heading&quot;&gt;
-            &lt;a href=&quot;#&quot; class=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;&lt;img src=&quot;/assets/gold.ico&quot; alt=&quot;gold icon&quot; /&gt;&lt;/a&gt;
             saúde
         &lt;/h1&gt;
         &lt;ul class=&quot;search-link&quot;&gt;
@@ -47889,7 +47928,6 @@ Pense duas vezes antes de se envolver.
     
     &lt;div class=&quot;tag-list&quot;&gt;
         &lt;h1 id=&quot;scripts-heading&quot;&gt;
-            &lt;a href=&quot;#&quot; class=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;&lt;img src=&quot;/assets/gold.ico&quot; alt=&quot;gold icon&quot; /&gt;&lt;/a&gt;
             scripts
         &lt;/h1&gt;
         &lt;ul class=&quot;search-link&quot;&gt;
@@ -48083,7 +48121,7 @@ Pense duas vezes antes de se envolver.
         &lt;/ul&gt;
         &lt;ul class=&quot;search-link&quot;&gt;
             
-            &lt;h3&gt;Child tags:&lt;/h3&gt;
+            &lt;h2&gt;Child tags:&lt;/h2&gt;
             
             &lt;a href=&quot;#mobile&quot; aria-label=&quot;Child tag mobile&quot;&gt;mobile&lt;/a&gt;
             
@@ -48105,7 +48143,7 @@ Pense duas vezes antes de se envolver.
         &lt;/ul&gt;
         &lt;ul class=&quot;search-link&quot;&gt;
         
-        &lt;h3&gt;Related tags:&lt;/h3&gt;
+        &lt;h2&gt;Related tags:&lt;/h2&gt;
             
             &lt;a href=&quot;#linux&quot; aria-label=&quot;Related tag linux&quot;&gt;
                 linux (26)
@@ -48123,7 +48161,6 @@ Pense duas vezes antes de se envolver.
     
     &lt;div class=&quot;tag-list&quot;&gt;
         &lt;h1 id=&quot;scripts-ai-heading&quot;&gt;
-            &lt;a href=&quot;#&quot; class=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;&lt;img src=&quot;/assets/gold.ico&quot; alt=&quot;gold icon&quot; /&gt;&lt;/a&gt;
             scripts&amp;gt;AI
         &lt;/h1&gt;
         &lt;ul class=&quot;search-link&quot;&gt;
@@ -48139,7 +48176,7 @@ Pense duas vezes antes de se envolver.
         &lt;/ul&gt;
         &lt;ul class=&quot;search-link&quot;&gt;
         
-        &lt;h3&gt;Parent tags:&lt;/h3&gt;
+        &lt;h2&gt;Parent tags:&lt;/h2&gt;
             
             &lt;a href=&quot;#scripts&quot; aria-label=&quot;Parent tag scripts&quot;&gt;scripts&lt;/a&gt;
             
@@ -48157,7 +48194,6 @@ Pense duas vezes antes de se envolver.
     
     &lt;div class=&quot;tag-list&quot;&gt;
         &lt;h1 id=&quot;scripts-cloud-heading&quot;&gt;
-            &lt;a href=&quot;#&quot; class=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;&lt;img src=&quot;/assets/gold.ico&quot; alt=&quot;gold icon&quot; /&gt;&lt;/a&gt;
             scripts&amp;gt;cloud
         &lt;/h1&gt;
         &lt;ul class=&quot;search-link&quot;&gt;
@@ -48173,7 +48209,7 @@ Pense duas vezes antes de se envolver.
         &lt;/ul&gt;
         &lt;ul class=&quot;search-link&quot;&gt;
         
-        &lt;h3&gt;Parent tags:&lt;/h3&gt;
+        &lt;h2&gt;Parent tags:&lt;/h2&gt;
             
             &lt;a href=&quot;#scripts&quot; aria-label=&quot;Parent tag scripts&quot;&gt;scripts&lt;/a&gt;
             
@@ -48191,7 +48227,6 @@ Pense duas vezes antes de se envolver.
     
     &lt;div class=&quot;tag-list&quot;&gt;
         &lt;h1 id=&quot;scripts-google-apps-script-heading&quot;&gt;
-            &lt;a href=&quot;#&quot; class=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;&lt;img src=&quot;/assets/gold.ico&quot; alt=&quot;gold icon&quot; /&gt;&lt;/a&gt;
             scripts&amp;gt;google-apps-script
         &lt;/h1&gt;
         &lt;ul class=&quot;search-link&quot;&gt;
@@ -48207,7 +48242,7 @@ Pense duas vezes antes de se envolver.
         &lt;/ul&gt;
         &lt;ul class=&quot;search-link&quot;&gt;
         
-        &lt;h3&gt;Parent tags:&lt;/h3&gt;
+        &lt;h2&gt;Parent tags:&lt;/h2&gt;
             
             &lt;a href=&quot;#scripts&quot; aria-label=&quot;Parent tag scripts&quot;&gt;scripts&lt;/a&gt;
             
@@ -48225,7 +48260,6 @@ Pense duas vezes antes de se envolver.
     
     &lt;div class=&quot;tag-list&quot;&gt;
         &lt;h1 id=&quot;scripts-mobile-heading&quot;&gt;
-            &lt;a href=&quot;#&quot; class=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;&lt;img src=&quot;/assets/gold.ico&quot; alt=&quot;gold icon&quot; /&gt;&lt;/a&gt;
             scripts&amp;gt;mobile
         &lt;/h1&gt;
         &lt;ul class=&quot;search-link&quot;&gt;
@@ -48241,7 +48275,7 @@ Pense duas vezes antes de se envolver.
         &lt;/ul&gt;
         &lt;ul class=&quot;search-link&quot;&gt;
         
-        &lt;h3&gt;Parent tags:&lt;/h3&gt;
+        &lt;h2&gt;Parent tags:&lt;/h2&gt;
             
             &lt;a href=&quot;#scripts&quot; aria-label=&quot;Parent tag scripts&quot;&gt;scripts&lt;/a&gt;
             
@@ -48252,7 +48286,7 @@ Pense duas vezes antes de se envolver.
         &lt;/ul&gt;
         &lt;ul class=&quot;search-link&quot;&gt;
         
-        &lt;h3&gt;Related tags:&lt;/h3&gt;
+        &lt;h2&gt;Related tags:&lt;/h2&gt;
             
             &lt;a href=&quot;#iphone&quot; aria-label=&quot;Related tag iphone&quot;&gt;
                 iphone (2)
@@ -48266,7 +48300,6 @@ Pense duas vezes antes de se envolver.
     
     &lt;div class=&quot;tag-list&quot;&gt;
         &lt;h1 id=&quot;sell-heading&quot;&gt;
-            &lt;a href=&quot;#&quot; class=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;&lt;img src=&quot;/assets/gold.ico&quot; alt=&quot;gold icon&quot; /&gt;&lt;/a&gt;
             sell
         &lt;/h1&gt;
         &lt;ul class=&quot;search-link&quot;&gt;
@@ -48316,7 +48349,6 @@ Pense duas vezes antes de se envolver.
     
     &lt;div class=&quot;tag-list&quot;&gt;
         &lt;h1 id=&quot;software-heading&quot;&gt;
-            &lt;a href=&quot;#&quot; class=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;&lt;img src=&quot;/assets/gold.ico&quot; alt=&quot;gold icon&quot; /&gt;&lt;/a&gt;
             software
         &lt;/h1&gt;
         &lt;ul class=&quot;search-link&quot;&gt;
@@ -48356,7 +48388,7 @@ Pense duas vezes antes de se envolver.
         &lt;/ul&gt;
         &lt;ul class=&quot;search-link&quot;&gt;
             
-            &lt;h3&gt;Child tags:&lt;/h3&gt;
+            &lt;h2&gt;Child tags:&lt;/h2&gt;
             
             &lt;a href=&quot;#software-cloud&quot; aria-label=&quot;Child tag software&amp;gt;cloud&quot;&gt;software&amp;gt;cloud&lt;/a&gt;
             
@@ -48377,7 +48409,6 @@ Pense duas vezes antes de se envolver.
     
     &lt;div class=&quot;tag-list&quot;&gt;
         &lt;h1 id=&quot;software-cloud-heading&quot;&gt;
-            &lt;a href=&quot;#&quot; class=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;&lt;img src=&quot;/assets/gold.ico&quot; alt=&quot;gold icon&quot; /&gt;&lt;/a&gt;
             software&amp;gt;cloud
         &lt;/h1&gt;
         &lt;ul class=&quot;search-link&quot;&gt;
@@ -48393,7 +48424,7 @@ Pense duas vezes antes de se envolver.
         &lt;/ul&gt;
         &lt;ul class=&quot;search-link&quot;&gt;
         
-        &lt;h3&gt;Parent tags:&lt;/h3&gt;
+        &lt;h2&gt;Parent tags:&lt;/h2&gt;
             
             &lt;a href=&quot;#software&quot; aria-label=&quot;Parent tag software&quot;&gt;software&lt;/a&gt;
             
@@ -48411,7 +48442,6 @@ Pense duas vezes antes de se envolver.
     
     &lt;div class=&quot;tag-list&quot;&gt;
         &lt;h1 id=&quot;software-mobile-heading&quot;&gt;
-            &lt;a href=&quot;#&quot; class=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;&lt;img src=&quot;/assets/gold.ico&quot; alt=&quot;gold icon&quot; /&gt;&lt;/a&gt;
             software&amp;gt;mobile
         &lt;/h1&gt;
         &lt;ul class=&quot;search-link&quot;&gt;
@@ -48434,7 +48464,7 @@ Pense duas vezes antes de se envolver.
         &lt;/ul&gt;
         &lt;ul class=&quot;search-link&quot;&gt;
         
-        &lt;h3&gt;Parent tags:&lt;/h3&gt;
+        &lt;h2&gt;Parent tags:&lt;/h2&gt;
             
             &lt;a href=&quot;#software&quot; aria-label=&quot;Parent tag software&quot;&gt;software&lt;/a&gt;
             
@@ -48445,7 +48475,7 @@ Pense duas vezes antes de se envolver.
         &lt;/ul&gt;
         &lt;ul class=&quot;search-link&quot;&gt;
         
-        &lt;h3&gt;Related tags:&lt;/h3&gt;
+        &lt;h2&gt;Related tags:&lt;/h2&gt;
             
             &lt;a href=&quot;#iphone&quot; aria-label=&quot;Related tag iphone&quot;&gt;
                 iphone (2)
@@ -48463,7 +48493,6 @@ Pense duas vezes antes de se envolver.
     
     &lt;div class=&quot;tag-list&quot;&gt;
         &lt;h1 id=&quot;spirit-heading&quot;&gt;
-            &lt;a href=&quot;#&quot; class=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;&lt;img src=&quot;/assets/gold.ico&quot; alt=&quot;gold icon&quot; /&gt;&lt;/a&gt;
             spirit
         &lt;/h1&gt;
         &lt;ul class=&quot;search-link&quot;&gt;
@@ -48499,7 +48528,7 @@ Pense duas vezes antes de se envolver.
         &lt;/ul&gt;
         &lt;ul class=&quot;search-link&quot;&gt;
         
-        &lt;h3&gt;Related tags:&lt;/h3&gt;
+        &lt;h2&gt;Related tags:&lt;/h2&gt;
             
             &lt;a href=&quot;#admoestação&quot; aria-label=&quot;Related tag admoestação&quot;&gt;
                 admoestação (2)
@@ -48513,7 +48542,6 @@ Pense duas vezes antes de se envolver.
     
     &lt;div class=&quot;tag-list&quot;&gt;
         &lt;h1 id=&quot;tasks-heading&quot;&gt;
-            &lt;a href=&quot;#&quot; class=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;&lt;img src=&quot;/assets/gold.ico&quot; alt=&quot;gold icon&quot; /&gt;&lt;/a&gt;
             tasks
         &lt;/h1&gt;
         &lt;ul class=&quot;search-link&quot;&gt;
@@ -48616,7 +48644,7 @@ Pense duas vezes antes de se envolver.
         &lt;/ul&gt;
         &lt;ul class=&quot;search-link&quot;&gt;
             
-            &lt;h3&gt;Child tags:&lt;/h3&gt;
+            &lt;h2&gt;Child tags:&lt;/h2&gt;
             
             &lt;a href=&quot;#iphone&quot; aria-label=&quot;Child tag iphone&quot;&gt;iphone&lt;/a&gt;
             
@@ -48633,7 +48661,6 @@ Pense duas vezes antes de se envolver.
     
     &lt;div class=&quot;tag-list&quot;&gt;
         &lt;h1 id=&quot;tasks-iphone-heading&quot;&gt;
-            &lt;a href=&quot;#&quot; class=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;&lt;img src=&quot;/assets/gold.ico&quot; alt=&quot;gold icon&quot; /&gt;&lt;/a&gt;
             tasks&amp;gt;iphone
         &lt;/h1&gt;
         &lt;ul class=&quot;search-link&quot;&gt;
@@ -48649,7 +48676,7 @@ Pense duas vezes antes de se envolver.
         &lt;/ul&gt;
         &lt;ul class=&quot;search-link&quot;&gt;
         
-        &lt;h3&gt;Parent tags:&lt;/h3&gt;
+        &lt;h2&gt;Parent tags:&lt;/h2&gt;
             
             &lt;a href=&quot;#tasks&quot; aria-label=&quot;Parent tag tasks&quot;&gt;tasks&lt;/a&gt;
             
@@ -48667,7 +48694,6 @@ Pense duas vezes antes de se envolver.
     
     &lt;div class=&quot;tag-list&quot;&gt;
         &lt;h1 id=&quot;tools-heading&quot;&gt;
-            &lt;a href=&quot;#&quot; class=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;&lt;img src=&quot;/assets/gold.ico&quot; alt=&quot;gold icon&quot; /&gt;&lt;/a&gt;
             tools
         &lt;/h1&gt;
         &lt;ul class=&quot;search-link&quot;&gt;
@@ -48770,7 +48796,7 @@ Pense duas vezes antes de se envolver.
         &lt;/ul&gt;
         &lt;ul class=&quot;search-link&quot;&gt;
             
-            &lt;h3&gt;Child tags:&lt;/h3&gt;
+            &lt;h2&gt;Child tags:&lt;/h2&gt;
             
             &lt;a href=&quot;#ai-prompt&quot; aria-label=&quot;Child tag AI&amp;gt;prompt&quot;&gt;AI&amp;gt;prompt&lt;/a&gt;
             
@@ -48791,7 +48817,6 @@ Pense duas vezes antes de se envolver.
     
     &lt;div class=&quot;tag-list&quot;&gt;
         &lt;h1 id=&quot;tools-ai-heading&quot;&gt;
-            &lt;a href=&quot;#&quot; class=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;&lt;img src=&quot;/assets/gold.ico&quot; alt=&quot;gold icon&quot; /&gt;&lt;/a&gt;
             tools&amp;gt;AI
         &lt;/h1&gt;
         &lt;ul class=&quot;search-link&quot;&gt;
@@ -48810,7 +48835,7 @@ Pense duas vezes antes de se envolver.
         &lt;/ul&gt;
         &lt;ul class=&quot;search-link&quot;&gt;
             
-            &lt;h3&gt;Child tags:&lt;/h3&gt;
+            &lt;h2&gt;Child tags:&lt;/h2&gt;
             
             &lt;a href=&quot;#prompt&quot; aria-label=&quot;Child tag prompt&quot;&gt;prompt&lt;/a&gt;
             
@@ -48825,7 +48850,6 @@ Pense duas vezes antes de se envolver.
     
     &lt;div class=&quot;tag-list&quot;&gt;
         &lt;h1 id=&quot;tools-ai-prompt-heading&quot;&gt;
-            &lt;a href=&quot;#&quot; class=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;&lt;img src=&quot;/assets/gold.ico&quot; alt=&quot;gold icon&quot; /&gt;&lt;/a&gt;
             tools&amp;gt;AI&amp;gt;prompt
         &lt;/h1&gt;
         &lt;ul class=&quot;search-link&quot;&gt;
@@ -48841,7 +48865,7 @@ Pense duas vezes antes de se envolver.
         &lt;/ul&gt;
         &lt;ul class=&quot;search-link&quot;&gt;
         
-        &lt;h3&gt;Parent tags:&lt;/h3&gt;
+        &lt;h2&gt;Parent tags:&lt;/h2&gt;
             
             &lt;a href=&quot;#tools&quot; aria-label=&quot;Parent tag tools&quot;&gt;tools&lt;/a&gt;
             
@@ -48861,7 +48885,6 @@ Pense duas vezes antes de se envolver.
     
     &lt;div class=&quot;tag-list&quot;&gt;
         &lt;h1 id=&quot;tools-github-heading&quot;&gt;
-            &lt;a href=&quot;#&quot; class=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;&lt;img src=&quot;/assets/gold.ico&quot; alt=&quot;gold icon&quot; /&gt;&lt;/a&gt;
             tools&amp;gt;github
         &lt;/h1&gt;
         &lt;ul class=&quot;search-link&quot;&gt;
@@ -48880,7 +48903,7 @@ Pense duas vezes antes de se envolver.
         &lt;/ul&gt;
         &lt;ul class=&quot;search-link&quot;&gt;
             
-            &lt;h3&gt;Child tags:&lt;/h3&gt;
+            &lt;h2&gt;Child tags:&lt;/h2&gt;
             
             &lt;a href=&quot;#estudos&quot; aria-label=&quot;Child tag estudos&quot;&gt;estudos&lt;/a&gt;
             
@@ -48895,7 +48918,6 @@ Pense duas vezes antes de se envolver.
     
     &lt;div class=&quot;tag-list&quot;&gt;
         &lt;h1 id=&quot;tools-github-estudos-heading&quot;&gt;
-            &lt;a href=&quot;#&quot; class=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;&lt;img src=&quot;/assets/gold.ico&quot; alt=&quot;gold icon&quot; /&gt;&lt;/a&gt;
             tools&amp;gt;github&amp;gt;estudos
         &lt;/h1&gt;
         &lt;ul class=&quot;search-link&quot;&gt;
@@ -48911,7 +48933,7 @@ Pense duas vezes antes de se envolver.
         &lt;/ul&gt;
         &lt;ul class=&quot;search-link&quot;&gt;
         
-        &lt;h3&gt;Parent tags:&lt;/h3&gt;
+        &lt;h2&gt;Parent tags:&lt;/h2&gt;
             
             &lt;a href=&quot;#github&quot; aria-label=&quot;Parent tag github&quot;&gt;github&lt;/a&gt;
             
@@ -48931,7 +48953,6 @@ Pense duas vezes antes de se envolver.
     
     &lt;div class=&quot;tag-list&quot;&gt;
         &lt;h1 id=&quot;trabalho-heading&quot;&gt;
-            &lt;a href=&quot;#&quot; class=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;&lt;img src=&quot;/assets/gold.ico&quot; alt=&quot;gold icon&quot; /&gt;&lt;/a&gt;
             trabalho
         &lt;/h1&gt;
         &lt;ul class=&quot;search-link&quot;&gt;
@@ -48974,7 +48995,7 @@ Pense duas vezes antes de se envolver.
         &lt;/ul&gt;
         &lt;ul class=&quot;search-link&quot;&gt;
         
-        &lt;h3&gt;Related tags:&lt;/h3&gt;
+        &lt;h2&gt;Related tags:&lt;/h2&gt;
             
             &lt;a href=&quot;#estudos&quot; aria-label=&quot;Related tag estudos&quot;&gt;
                 estudos (2)
