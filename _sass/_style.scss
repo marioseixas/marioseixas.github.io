@@ -482,24 +482,28 @@ blockquote {
 figcaption {
   font: caption;
 }
-
 img,
 canvas,
 video,
 svg,
 select {
-  overflow: auto;
-  display: inherit;  
+  display: block; // Ensures elements are rendered as block-level elements for better layout control
+  width: 100%; // Allows the element to fill its container’s width, enabling full responsiveness
+  height: auto; // Maintains aspect ratio by adjusting height based on width changes
+  max-width: 100%; // Prevents elements from exceeding the width of their container
+  overflow: hidden; // Controls any overflow content within the element, maintaining responsiveness
+  object-fit: contain; // Ensures media elements (img, video) scale properly within their containers
+  position: relative;
 }
-
 iframe {
   display: block;
-  overflow: auto;
+  overflow: hidden;
   position: relative;
   width: 100%;
+  max-width: 100%;
+  object-fit: contain;
   height: 75vh;
 }
-
 img[align="left"] {
   margin-right: 1em;
 }
