@@ -67,11 +67,11 @@ html {
 }
 .comment-box {
     background-color: rgba(var(--accents-dodgerblue), 0.1);
-    border: 1px dotted var(--accents-dodgerblue);
+    border: 10px dotted var(--accents-dodgerblue);
     border-radius: 0.1875rem;
     line-height: 1.25;
-    margin: auto auto;
-    padding: 2em;
+    margin: 4px;
+    padding: 4em;
 }
 
 .header-container {
@@ -240,6 +240,7 @@ nav.header-content {
 .post-wrapper {
     overflow-wrap: break-word;
     word-wrap: break-word;
+    margin: 7vw;
 }
 .post-wrapper > * {
     margin: 0.5em;
