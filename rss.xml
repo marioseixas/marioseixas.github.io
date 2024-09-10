@@ -44,7 +44,7 @@
     <title>infoBAG</title>
     <link href="https://ib.bsb.br/rss.xml" rel="self"/>
     <link href="https://ib.bsb.br/"/>
-    <updated>2024-09-10T18:00:38+00:00</updated>
+    <updated>2024-09-10T18:03:05+00:00</updated>
     <id>https://ib.bsb.br</id>
     <author>
         <name></name>
@@ -49507,6 +49507,24 @@ Pense duas vezes antes de se envolver.
         &lt;a class=&quot;post-heading&quot; href=&quot;#&quot; id=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;
           &lt;img src=&quot;/assets/gold.ico&quot; alt=&quot;gold icon&quot; /&gt;
         &lt;/a&gt;
+        1991-07-25
+         &amp;rightarrowtail; 10 Sep 2024
+        
+      &lt;/h3&gt;
+      &lt;ul&gt;
+        &lt;a href=&quot;/formatxt/&quot;&gt;
+          &lt;h2&gt;
+            Formatxt
+          &lt;/h2&gt;
+        &lt;/a&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;
+    
+    &lt;div class=&quot;search-link&quot;&gt;
+      &lt;h3&gt;
+        &lt;a class=&quot;post-heading&quot; href=&quot;#&quot; id=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;
+          &lt;img src=&quot;/assets/gold.ico&quot; alt=&quot;gold icon&quot; /&gt;
+        &lt;/a&gt;
         1992-07-12
          &amp;rightarrowtail; 10 Sep 2024
         
@@ -49533,24 +49551,6 @@ Pense duas vezes antes de se envolver.
         &lt;a href=&quot;/archive/&quot;&gt;
           &lt;h2&gt;
             Archive
-          &lt;/h2&gt;
-        &lt;/a&gt;
-      &lt;/ul&gt;
-    &lt;/div&gt;
-    
-    &lt;div class=&quot;search-link&quot;&gt;
-      &lt;h3&gt;
-        &lt;a class=&quot;post-heading&quot; href=&quot;#&quot; id=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;
-          &lt;img src=&quot;/assets/gold.ico&quot; alt=&quot;gold icon&quot; /&gt;
-        &lt;/a&gt;
-        1991-07-25
-         &amp;rightarrowtail; 10 Sep 2024
-        
-      &lt;/h3&gt;
-      &lt;ul&gt;
-        &lt;a href=&quot;/formatxt/&quot;&gt;
-          &lt;h2&gt;
-            Formatxt
           &lt;/h2&gt;
         &lt;/a&gt;
       &lt;/ul&gt;
@@ -54082,9 +54082,7 @@ Stats: &lt;span id=&quot;characterCount&quot; class=&quot;badge badge-light&quot
         <link href="https://ib.bsb.br/formatxt/"/>
         <updated>1991-07-25T00:00:00+00:00</updated>
         <id>https://ib.bsb.br/formatxt/</id>
-        <content type="html">&lt;div class=&quot;container&quot;&gt;&lt;div class=&quot;row justify-content-center&quot;&gt;&lt;div class=&quot;col-lg-8&quot;&gt;&lt;textarea class=&quot;form-control&quot; id=&quot;thetext&quot; onkeyup=&quot;updatecounts()&quot; onchange=&quot;updatecounts()&quot; onfocus=&quot;updatecounts()&quot; placeholder=&quot;Paste your text here :)&quot;&gt;&lt;/textarea&gt;&lt;hr class=&quot;mt-4&quot; /&gt;&lt;div class=&quot;d-flex flex-wrap justify-content-between align-items-center&quot;&gt;&lt;div class=&quot;col-12 col-md-3 mb-2&quot;&gt;&lt;input class=&quot;form-control&quot; readonly=&quot;&quot; id=&quot;words&quot; placeholder=&quot;Words&quot; /&gt;&lt;/div&gt;&lt;div class=&quot;col-12 col-md-3 mb-2&quot;&gt;&lt;input class=&quot;form-control&quot; readonly=&quot;&quot; id=&quot;characters&quot; placeholder=&quot;Characters&quot; /&gt;&lt;/div&gt;&lt;div class=&quot;col-12 col-md-3 mb-2&quot;&gt;&lt;input class=&quot;form-control&quot; readonly=&quot;&quot; id=&quot;lines&quot; placeholder=&quot;Lines&quot; /&gt;&lt;/div&gt;&lt;div class=&quot;col-12 col-md-3 mb-2&quot;&gt;&lt;input class=&quot;form-control&quot; readonly=&quot;&quot; id=&quot;paragraphs&quot; placeholder=&quot;Paragraphs&quot; /&gt;&lt;/div&gt;&lt;/div&gt;&lt;hr class=&quot;mt-4&quot; /&gt;&lt;div class=&quot;text-center&quot;&gt;&lt;button class=&quot;mt-1 btn btn-primary mr-2&quot; onclick=&quot;uppercase()&quot;&gt;UPPERCASE ALL&lt;/button&gt;&lt;button class=&quot;mt-1 btn btn-primary mr-2&quot; onclick=&quot;lowercase()&quot;&gt;lowercase all&lt;/button&gt;&lt;button class=&quot;mt-1 btn btn-primary mr-2&quot; onclick=&quot;capitalizesentences()&quot;&gt;Capitalize sentences&lt;/button&gt;&lt;button class=&quot;mt-1 btn btn-primary&quot; onclick=&quot;capitalizewords()&quot;&gt;Capitalize Words&lt;/button&gt;&lt;/div&gt;&lt;hr /&gt;&lt;div class=&quot;row&quot;&gt;&lt;div class=&quot;col-md-8&quot;&gt;&lt;div class=&quot;input-group justify-content-center&quot;&gt;&lt;span class=&quot;align-self-center&quot;&gt;Change&lt;/span&gt;&lt;input type=&quot;text&quot; class=&quot;form-control ms-2&quot; id=&quot;from&quot; placeholder=&quot;From&quot; /&gt;&lt;span class=&quot;align-self-center ms-2&quot;&gt;with&lt;/span&gt;&lt;input type=&quot;text&quot; class=&quot;form-control ms-2 &quot; id=&quot;to&quot; placeholder=&quot;To&quot; /&gt;&lt;button class=&quot;btn btn-primary ms-2&quot; onclick=&quot;replacetext()&quot;&gt;Replace&lt;/button&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;col-md-4&quot;&gt;&lt;div class=&quot;form-check&quot;&gt;&lt;input class=&quot;form-check-input&quot; type=&quot;checkbox&quot; id=&quot;cs&quot; /&gt;&lt;label class=&quot;form-check-label&quot; for=&quot;cs&quot;&gt;Case sensitive&lt;/label&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;hr /&gt;&lt;div class=&quot;row&quot;&gt;&lt;div class=&quot;col-md-8&quot;&gt;&lt;div class=&quot;input-group&quot;&gt;&lt;span class=&quot;align-self-center&quot;&gt;Add&lt;/span&gt;&lt;input class=&quot;form-control ms-2&quot; id=&quot;add&quot; placeholder=&quot;Text&quot; /&gt;&lt;span class=&quot;align-self-center ms-2&quot;&gt;to the&lt;/span&gt;&lt;select class=&quot;form-control ms-2&quot; id=&quot;addpos&quot;&gt;&lt;option value=&quot;start&quot;&gt;start&lt;/option&gt;&lt;option value=&quot;end&quot;&gt;end&lt;/option&gt;&lt;/select&gt;&lt;span class=&quot;align-self-center ms-2&quot;&gt;each line.&lt;/span&gt;&lt;button class=&quot;btn btn-primary ms-2&quot; onclick=&quot;addtext()&quot;&gt;Update&lt;/button&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;hr /&gt;&lt;div class=&quot;row&quot;&gt;&lt;div class=&quot;col-md-8&quot;&gt;&lt;div class=&quot;input-group&quot;&gt;&lt;span class=&quot;align-self-center&quot;&gt;Trim&lt;/span&gt;&lt;select class=&quot;form-control d-inline ms-2&quot; id=&quot;trimpos&quot; style=&quot;width: 15%;&quot;&gt;&lt;option value=&quot;first&quot;&gt;first&lt;/option&gt;&lt;option value=&quot;last&quot;&gt;last&lt;/option&gt;&lt;/select&gt;&lt;input class=&quot;form-control ms-2&quot; id=&quot;trimnumber&quot; placeholder=&quot;Number&quot; type=&quot;number&quot; style=&quot;width: 15%;&quot; /&gt;characters of each line. &lt;button class=&quot;btn btn-primary ms-2&quot; onclick=&quot;trimtext()&quot;&gt;Update&lt;/button&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;p&gt;&lt;/p&gt;&lt;hr /&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;script&gt;
+        <content type="html">&lt;script&gt;
   function cleartext() {
     var t=document.getElementById(&quot;thetext&quot;);
     t.value=&apos;&apos;;
