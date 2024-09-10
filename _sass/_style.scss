@@ -257,17 +257,18 @@ nav.header-content {
     transform: scale(1.05);
 }
 .tagged-posts {
-    align-items: center;
-    display: inline-flex;
-    gap: 10px;	
+    display: inline-block;
+    text-align: center;
+    width: -webkit-fill-available;
     time {
         color: rgba(var(--text-default), 0.7);
     }
 }
+
 .tag-list {
-    align-items: center;
-    display: inline-flex;
-    gap: 10px;	
+    display: inline-block;
+    text-align: center;
+    width: -webkit-fill-available;
     a {
         background-color: rgba(var(--accents-dodgerblue), 0.1);
         border: 1px dotted var(--accents-dodgerblue);
