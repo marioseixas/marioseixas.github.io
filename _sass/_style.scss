@@ -7,7 +7,7 @@
     --code-text: #FFA500;
     --ft: 'BitPotionExt';
     --ft-mono: 'BitPotionExt';
-    --headings: #000000;
+    --headings: #FFFFFF;
     --highlights-crimson: #FF4500;
     --highlights-pumpkin: #FFA500;
     --line-height-base: 1.5;
@@ -67,6 +67,44 @@ body {
   --pagefind-ui-border: #111111; // Inverse of #eeeeee
   --pagefind-ui-tag: #111111; // Inverse of #eeeeee
   --pagefind-ui-font: var(--ft);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--ft); /* Utilize CSS variable for font-family */
+  font-weight: 700; /* Bold font for all headings */
+  margin: 0 0 0.5rem -0.1rem; /* Corrected syntax with semicolon, aligns left edge slightly inward */
+  line-height: 1; /* Uniform line height */
+  color: var(--headings) /* Dark grey color for text */
+  text-rendering: optimizeLegibility; /* Enhance readability */
+}
+
+h1 {
+  font-size: 2.5rem; /* Larger font size for primary headings */
+}
+
+h2 {
+  font-weight: 400; /* Normal font weight for secondary headings */
+  font-size: 1.25rem; /* Smaller than h1, but larger than default */
+  margin-bottom: 0.5rem; /* Space below h2 */
+}
+
+@media (min-width: 30rem) {
+  h1 {
+    font-size: 3rem; /* Increased font size for larger screens */
+  }
+
+  h2 {
+    font-weight: 400; /* Maintain normal font weight */
+    font-size: 1rem; /* Smaller font size for larger screens */
+    margin-bottom: 1rem; /* Increased bottom margin */
+    line-height: 1.2; /* Slightly increased line height for readability */
+  }
+}
+
+h3, h4, h5, h6 {
+  margin-top: 0.9rem; /* Uniform top margin for lower-level headings */
+  font-size: 1rem; /* Standard font size for consistency */
+  text-transform: uppercase; /* Uppercase for stylistic choice */
 }
 
 // Media query for responsive font sizing
@@ -325,33 +363,11 @@ nav.header-content {
   font-size: 1em;
   cursor: pointer;
   transition: background-color 0.3s ease, color 0.3s ease;
-
-  &:hover,
-  &:focus {
-    background-color: var(--btn-hover-bg);
-    color: var(--btn-hover-text);
-  }
-}
-
-// Unique Styles
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  line-height: 1.2;
-}
-
-h1 {
-  color: var(--heading-color-1);
-}
-h2 {
-  color: var(--heading-color-2);
-}
-h3 {
-  color: var(--heading-color-3);
+	&:hover,
+	&:focus {
+		background-color: var(--btn-hover-bg);
+		color: var(--btn-hover-text);
+	}
 }
 
 p.description {
