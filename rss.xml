@@ -44,7 +44,7 @@
     <title>infoBAG</title>
     <link href="https://ib.bsb.br/rss.xml" rel="self"/>
     <link href="https://ib.bsb.br/"/>
-    <updated>2024-09-10T21:11:33+00:00</updated>
+    <updated>2024-09-10T21:21:47+00:00</updated>
     <id>https://ib.bsb.br</id>
     <author>
         <name></name>
@@ -6392,66 +6392,6 @@ xrandr --output DP-1 --mode &quot;1152x864_60.00&quot;
         <updated>2024-03-08T00:00:00+00:00</updated>
         <id>https://ib.bsb.br/juri/</id>
         <content type="html">&lt;div class=&quot;mermaid&quot; style=&quot;white-space: pre-wrap;&quot;&gt;graph TB
-    A[Início da Sessão de Julgamento]:::judge --&amp;gt; B[Verificação de Presença]:::judge
-    B --&amp;gt; C[Sorteio dos Jurados]:::judge
-    C --&amp;gt; D[Exortação aos Jurados]:::judge
-    D --&amp;gt; E[Instrução em Plenário]:::judge
-    E --&amp;gt; F[Indagação sobre a Necessidade de Esclarecimentos]:::judge
-    F --&amp;gt; G[Formulação dos Quesitos]:::judge
-    G --&amp;gt; H[Leitura e Explicação dos Quesitos]:::judge
-    H --&amp;gt; I[Sala Especial e Votação]:::judge
-    I --&amp;gt; J[Lavratura da Sentença]:::judge
-    J --&amp;gt; K[Leitura da Sentença]:::judge
-    K --&amp;gt; L[Encerramento da Sessão]:::judge
-    
-    classDef judge fill:#f9f,stroke:#333,stroke-width:4px
-    
-    %% Descriptive Texts as Nodes
-    A1[&quot;Art. 463 do CPP: Juiz declara aberta a sessão de julgamento do Tribunal do Júri. Solicita a todos que se levantem para a entrada dos jurados.&quot;]:::note --&amp;gt; A
-    B1[&quot;Art. 463, §1º do CPP: Juiz solicita ao Oficial de Justiça que faça a conferência da presença das partes, testemunhas, jurados e demais participantes do julgamento.&quot;]:::note --&amp;gt; B
-    C1[&quot;Art. 467 do CPP: Juiz anuncia o início do sorteio dos jurados que comporão o Conselho de Sentença. Esclarece que serão sorteados 7 jurados para a constituição do Conselho, e os demais serão dispensados.&quot;]:::note --&amp;gt; C
-    D1[&quot;Art. 472 do CPP: Juiz exorta os jurados sorteados a prestarem o compromisso de bem e fielmente apreciar a causa, proferindo a decisão de acordo com a consciência e os ditames da justiça.&quot;]:::note --&amp;gt; D
-    E1[&quot;Arts. 473 a 475 do CPP: Juiz anuncia o início da instrução em plenário. As partes e as testemunhas serão ouvidas, bem como serão produzidas as provas requeridas. Após, será facultada a palavra às partes para os debates orais.&quot;]:::note --&amp;gt; E
-    F1[&quot;Art. 480 do CPP: Juiz questiona aos jurados se restou alguma dúvida sobre o caso em julgamento. Havendo necessidade, poderão ser prestados esclarecimentos.&quot;]:::note --&amp;gt; F
-    G1[&quot;Art. 482 do CPP: Juiz anuncia que, não havendo mais esclarecimentos a serem prestados, passarão à formulação dos quesitos que serão respondidos pelos jurados. Os quesitos versarão sobre matéria de fato e serão redigidos em proposições simples e distintas.&quot;]:::note --&amp;gt; G
-    H1[&quot;Art. 484 do CPP: Juiz fará a leitura e a explicação de cada um dos quesitos formulados, esclarecendo aos jurados o significado de cada resposta possível.&quot;]:::note --&amp;gt; H
-    I1[&quot;Arts. 485 e 486 do CPP: Juiz anuncia que, encerrada a leitura dos quesitos, os jurados serão conduzidos à sala especial, onde procederão à votação de forma sigilosa. Ao final, os votos serão recolhidos e contabilizados.&quot;]:::note --&amp;gt; I
-    J1[&quot;Art. 492 do CPP: Juiz anuncia que, de acordo com a decisão proferida pelo Conselho de Sentença, passa a lavrar a sentença, nos termos do artigo 492 do Código de Processo Penal.&quot;]:::note --&amp;gt; J
-    K1[&quot;Art. 493 do CPP: Juiz convoca as partes e os presentes para a leitura da sentença em plenário.&quot;]:::note --&amp;gt; K
-    L1[&quot;Juiz declara encerrada a presente sessão de julgamento do Tribunal do Júri.&quot;]:::note --&amp;gt; L
-    
-    classDef note fill:#fff,stroke:#333,stroke-width:2px,stroke-dasharray: 5 5&lt;/div&gt;
-&lt;script src=&quot;https://cdn.jsdelivr.net/npm/svg-pan-zoom@3.6.1/dist/svg-pan-zoom.min.js&quot;&gt;&lt;/script&gt;
-
-&lt;script type=&quot;module&quot;&gt;
-  import mermaid from &apos;https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs&apos;;
-  const mermaidConfig = {
-  startOnLoad: true,
-  theme: &apos;default&apos;, // You can change the theme here if needed 
-  flowchart: { useMaxWidth: false, htmlLabels: true, curve: &apos;cardinal&apos; }, 
-  // Add other diagram-specific configurations as needed (e.g., sequence, gantt, etc.) 
-};
-
-mermaid.initialize(mermaidConfig);
-
-setTimeout(() =&gt; {
-  const svgElement = document.querySelector(&quot;div.mermaid&gt;svg&quot;);
-  if (svgElement) {
-    svgPanZoom(svgElement, {
-      minZoom: 0.5,
-      maxZoom: 10,
-      fit: true,
-      contain: false,
-      controlIconsEnabled: true,
-      center: true,
-      refreshRate: &quot;auto&quot;,
-    });
-  }
-}, 1000); 
-
-&lt;/script&gt;
-
-&lt;div class=&quot;mermaid&quot; style=&quot;white-space: pre-wrap;&quot;&gt;graph TB
     A[Inquérito Policial] --&amp;gt; B(Denúncia - art. 41, CPP)
     B --&amp;gt; C{Absolvição Sumária - art. 397, CPP}
     C --&amp;gt;|Não| D[Citação do Acusado - art. 406, CPP]
@@ -49347,6 +49287,24 @@ Pense duas vezes antes de se envolver.
         &lt;a class=&quot;post-heading&quot; href=&quot;#&quot; id=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;
           &lt;img src=&quot;/assets/gold.ico&quot; alt=&quot;gold icon&quot; /&gt;
         &lt;/a&gt;
+        2024-03-08
+         &amp;rightarrowtail; 10 Sep 2024
+        
+      &lt;/h3&gt;
+      &lt;ul&gt;
+        &lt;a href=&quot;/juri/&quot;&gt;
+          &lt;h2&gt;
+            Procedimento dos Crimes da Competência do Tribunal do Júri
+          &lt;/h2&gt;
+        &lt;/a&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;
+    
+    &lt;div class=&quot;search-link&quot;&gt;
+      &lt;h3&gt;
+        &lt;a class=&quot;post-heading&quot; href=&quot;#&quot; id=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;
+          &lt;img src=&quot;/assets/gold.ico&quot; alt=&quot;gold icon&quot; /&gt;
+        &lt;/a&gt;
         1992-07-12
          &amp;rightarrowtail; 10 Sep 2024
         
@@ -49697,24 +49655,6 @@ Pense duas vezes antes de se envolver.
         &lt;a href=&quot;/board-games/&quot;&gt;
           &lt;h2&gt;
             Board games
-          &lt;/h2&gt;
-        &lt;/a&gt;
-      &lt;/ul&gt;
-    &lt;/div&gt;
-    
-    &lt;div class=&quot;search-link&quot;&gt;
-      &lt;h3&gt;
-        &lt;a class=&quot;post-heading&quot; href=&quot;#&quot; id=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;
-          &lt;img src=&quot;/assets/gold.ico&quot; alt=&quot;gold icon&quot; /&gt;
-        &lt;/a&gt;
-        2024-03-08
-         &amp;rightarrowtail; 28 Aug 2024
-        
-      &lt;/h3&gt;
-      &lt;ul&gt;
-        &lt;a href=&quot;/juri/&quot;&gt;
-          &lt;h2&gt;
-            Procedimento dos Crimes da Competência do Tribunal do Júri
           &lt;/h2&gt;
         &lt;/a&gt;
       &lt;/ul&gt;
