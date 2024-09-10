@@ -32,9 +32,9 @@ Before using the script, ensure you have the following:
 1. Clone the repository or download the script.
 2. Install the required Python packages using pip:
 
-```bash
+{% codeblock bash %}
 pip3 install paperqa
-```
+{% endcodeblock %}
 
 Note: The other required packages (`argparse`, `glob`, `json`, `pickle`, `sys`, `pathlib`, `typing`) are part of the Python standard library and do not need to be installed separately.
 
@@ -97,31 +97,31 @@ The script accepts several command-line arguments to customize its behavior. Bel
 
 1. Ask a single question:
 
-```bash
+{% codeblock bash %}
 python script.py --pdf_dir /path/to/pdfs --question "What is the impact of climate change on agriculture?"
-```
+{% endcodeblock %}
 
 2. Ask multiple questions from a file:
 
-```bash
+{% codeblock bash %}
 python script.py --pdf_dir /path/to/pdfs --questions_file questions.txt
-```
+{% endcodeblock %}
 
 ### List of questions template:
 
-```
+{% codeblock %} 
 questions = [
     "Q1?",
     "Q2?",
     # ... add your 28 other questions here
 ]
-```
+{% endcodeblock %}
 
 3. Load existing embeddings and ask a question:
 
-```bash
+{% codeblock bash %}
 python script.py --load_embeddings embeddings.pkl --question "What are the latest advancements in AI?"
-```
+{% endcodeblock %}
 
 ## Detailed Explanation
 
@@ -159,7 +159,7 @@ The script includes error handling for various scenarios, such as file not found
 
 # Script
 
-```
+{% codeblock python %}
 from paperqa import Answer, Docs, PromptCollection, OpenAILLMModel, OpenAIEmbeddingModel
 import argparse
 import sys
@@ -405,7 +405,7 @@ def main():
 
 if __name__ == "__main__":
     main()
-```
+{% endcodeblock %}
 
 # 2add
 
@@ -413,7 +413,7 @@ if __name__ == "__main__":
 Automating a list of prompts to be queried:
    - You can create a list of prompts and iterate over them, similar to the example in point 1.
    - Here's an example:
-     ```python
+     {% codeblock python %}
      prompts = [
          "Prompt 1",
          "Prompt 2",
@@ -425,37 +425,37 @@ Automating a list of prompts to be queried:
          answer = loaded_docs.query(prompt, k=50)
          print(f"Prompt: {prompt}")
          print(f"Answer: {answer.formatted_answer}\n")
-     ```
+     {% endcodeblock %}
 ***
 Piping from command line stdout into the Python script:
    - You can use the `sys` module to read input from the command line.
    - Here's an example:
-     ```python
+     {% codeblock python %}
      import sys
 
      question = sys.stdin.read().strip()
      answer = loaded_docs.query(question, k=50)
      print(answer.formatted_answer)
-     ```
+     {% endcodeblock %}
    - You can then pipe the question from the command line:
-     ```
+     {% codeblock bash %}
      echo "What is the meaning of life?" | python3 researcher.py
-     ```
+     {% endcodeblock %}
 ***
 Using the response of a request/query as context for subsequent prompts:
    - You can use the `answer.context` attribute to access the context used for generating the answer.
    - Here's an example:
-     ```python
+     {% codeblock python %}
      previous_context = ""
      for prompt in prompts:
          answer = loaded_docs.query(prompt, k=50, context=previous_context)
          previous_context = answer.context
          print(f"Prompt: {prompt}")
          print(f"Answer: {answer.formatted_answer}\n")
-     ```
+     {% endcodeblock %}
 ***
 
-~~~
+{% codeblock %}
  Implement adversarial prompting. #131
 This adds a method adversarial_query. Adversarial queries first generate an answer, then asks the LLM to find problems with the answer, then finally generates the final response so that it addresses th
  1 commit
@@ -674,5 +674,16 @@ revision_prompt = prompts.PromptTemplate(
 search_prompt = prompts.PromptTemplate(
     input_variables=["question"],
     template="We want to answer the following question: {question} \n"
-~~~
+{% endcodeblock %}
+
 ***
+
+Testing links: `https://github.com/marioseixas/marioseixas.github.io`
+
+{% codeblock %}
+https://github.com/marioseixas/marioseixas.github.io
+
+ib.bsb.br
+
+https://ib.bsb.br
+{% endcodeblock %}
