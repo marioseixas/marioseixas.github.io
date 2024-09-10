@@ -70,8 +70,8 @@ html {
     border: 10px dotted var(--accents-dodgerblue);
     border-radius: 0.1875rem;
     line-height: 1.25;
-    margin: 4px;
-    padding: 4em;
+    margin: auto;
+    padding: 1em;
 }
 
 .header-container {
@@ -240,8 +240,8 @@ nav.header-content {
 .post-wrapper {
     overflow-wrap: break-word;
     word-wrap: break-word;
-    margin-left: calc(1vw + 0.5rem);
-    margin-right: calc(1vw + 0.5rem);
+    margin-left: calc(2vw + 1rem);
+    margin-right: calc(2vw + 1rem);
 }
 .post-wrapper > * {
     margin: 0.5em;
