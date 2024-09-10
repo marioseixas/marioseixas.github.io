@@ -44,7 +44,7 @@
     <title>infoBAG</title>
     <link href="https://ib.bsb.br/rss.xml" rel="self"/>
     <link href="https://ib.bsb.br/"/>
-    <updated>2024-09-10T17:19:48+00:00</updated>
+    <updated>2024-09-10T17:26:22+00:00</updated>
     <id>https://ib.bsb.br</id>
     <author>
         <name></name>
@@ -49508,6 +49508,24 @@ Pense duas vezes antes de se envolver.
         &lt;a class=&quot;post-heading&quot; href=&quot;#&quot; id=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;
           &lt;img src=&quot;/assets/gold.ico&quot; alt=&quot;gold icon&quot; /&gt;
         &lt;/a&gt;
+        1991-07-25
+         &amp;rightarrowtail; 10 Sep 2024
+        
+      &lt;/h3&gt;
+      &lt;ul&gt;
+        &lt;a href=&quot;/pomo/&quot;&gt;
+          &lt;h2&gt;
+            Pomo
+          &lt;/h2&gt;
+        &lt;/a&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;
+    
+    &lt;div class=&quot;search-link&quot;&gt;
+      &lt;h3&gt;
+        &lt;a class=&quot;post-heading&quot; href=&quot;#&quot; id=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;
+          &lt;img src=&quot;/assets/gold.ico&quot; alt=&quot;gold icon&quot; /&gt;
+        &lt;/a&gt;
         2024-09-09
          &amp;rightarrowtail; 10 Sep 2024
         
@@ -49624,24 +49642,6 @@ Pense duas vezes antes de se envolver.
         &lt;a href=&quot;/events/&quot;&gt;
           &lt;h2&gt;
             Events
-          &lt;/h2&gt;
-        &lt;/a&gt;
-      &lt;/ul&gt;
-    &lt;/div&gt;
-    
-    &lt;div class=&quot;search-link&quot;&gt;
-      &lt;h3&gt;
-        &lt;a class=&quot;post-heading&quot; href=&quot;#&quot; id=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;
-          &lt;img src=&quot;/assets/gold.ico&quot; alt=&quot;gold icon&quot; /&gt;
-        &lt;/a&gt;
-        1991-07-25
-         &amp;rightarrowtail; 06 Sep 2024
-        
-      &lt;/h3&gt;
-      &lt;ul&gt;
-        &lt;a href=&quot;/pomo/&quot;&gt;
-          &lt;h2&gt;
-            Pomo
           &lt;/h2&gt;
         &lt;/a&gt;
       &lt;/ul&gt;
@@ -53830,149 +53830,43 @@ Stats: &lt;span id=&quot;characterCount&quot; class=&quot;badge badge-light&quot
         <link href="https://ib.bsb.br/pomo/"/>
         <updated>1991-07-25T00:00:00+00:00</updated>
         <id>https://ib.bsb.br/pomo/</id>
-        <content type="html">&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;style&amp;gt;
-    body {
-        font-family: Arial, sans-serif;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding: 2rem;
-        background-color: #f0f0f0;
-    }
-    .container {
-        text-align: center;
-        background-color: white;
-        padding: 2rem;
-        border-radius: 10px;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        margin-bottom: 2rem;
-        box-sizing: border-box;
-    }
-    #timer {
-        font-size: 4rem;
-        margin-bottom: 1rem;
-    }
-    button, select, input {
-        font-size: 1rem;
-        padding: 0.5rem 1rem;
-        margin: 0.5rem;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-        transition: background-color 0.3s;
-    }
-    #startBtn {
-        background-color: #4CAF50;
-        color: white;
-    }
-    #startBtn:hover {
-        background-color: #45a049;
-    }
-    #resetBtn, #endBtn {
-        background-color: #f44336;
-        color: white;
-    }
-    #resetBtn:hover, #endBtn:hover {
-        background-color: #da190b;
-    }
-    select {
-        background-color: #3498db;
-        color: white;
-        -webkit-appearance: none;
-        padding: 0.5rem 1rem;
-        margin: 0.5rem;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-        transition: background-color 0.3s;
-    }
-    select:hover {
-        background-color: #2980b9;
-    }
-    #goalInput {
-        width: calc(100% - 1.5em);
-        padding: 0.5rem;
-        margin-bottom: 1rem;
-        border: 1px solid #ccc;
-        border-radius: 5px;
-        box-sizing: border-box;
-    }
-    #sessionLog {
-        width: 100%;
-        max-width: 800px;
-        margin-top: 2rem;
-        overflow-x: auto;
-    }
-    #sessionLog table {
-        width: 100%;
-        border-collapse: collapse;
-    }
-    #sessionLog th, #sessionLog td {
-        border: 1px solid #ddd;
-        padding: 8px;
-        text-align: left;
-    }
-    #sessionLog th {
-        background-color: #f2f2f2;
-    }
-    #jsonOutput {
-        width: 100%;
-        height: 200px;
-        margin-top: 2rem;
-        font-family: monospace;
-    }
-    .deleteBtn {
-        background-color: transparent;
-        border: none;
-        color: #f44336;
-        cursor: pointer;
-        font-size: 1.2rem;
-        padding: 0.2rem 0.5rem;
-    }
-    .deleteBtn:hover {
-        color: #da190b;
-    }
-&amp;lt;/style&amp;gt;
-&amp;lt;div class=&quot;container&quot;&amp;gt;
-    &amp;lt;h1&amp;gt;Pomodoro Timer&amp;lt;/h1&amp;gt;
-    &amp;lt;input type=&quot;text&quot; id=&quot;goalInput&quot; placeholder=&quot;Enter your goal for this session&quot; required&amp;gt;
-    &amp;lt;div id=&quot;timer&quot;&amp;gt;25:00&amp;lt;/div&amp;gt;
-    &amp;lt;select id=&quot;durationSelect&quot;&amp;gt;
-        &amp;lt;option value=&quot;5&quot;&amp;gt;5 minutes&amp;lt;/option&amp;gt;
-        &amp;lt;option value=&quot;10&quot;&amp;gt;10 minutes&amp;lt;/option&amp;gt;
-        &amp;lt;option value=&quot;15&quot;&amp;gt;15 minutes&amp;lt;/option&amp;gt;
-        &amp;lt;option value=&quot;20&quot;&amp;gt;20 minutes&amp;lt;/option&amp;gt;
-        &amp;lt;option value=&quot;25&quot; selected&amp;gt;25 minutes&amp;lt;/option&amp;gt;
-        &amp;lt;option value=&quot;30&quot;&amp;gt;30 minutes&amp;lt;/option&amp;gt;
-        &amp;lt;option value=&quot;45&quot;&amp;gt;45 minutes&amp;lt;/option&amp;gt;
-        &amp;lt;option value=&quot;60&quot;&amp;gt;60 minutes&amp;lt;/option&amp;gt;
-    &amp;lt;/select&amp;gt;
-    &amp;lt;br&amp;gt;
-    &amp;lt;button id=&quot;startBtn&quot;&amp;gt;Start&amp;lt;/button&amp;gt;
-    &amp;lt;button id=&quot;resetBtn&quot;&amp;gt;Reset&amp;lt;/button&amp;gt;
-    &amp;lt;button id=&quot;endBtn&quot;&amp;gt;End Session&amp;lt;/button&amp;gt;
-&amp;lt;/div&amp;gt;
-
-&amp;lt;div id=&quot;sessionLog&quot;&amp;gt;
-    &amp;lt;h2&amp;gt;Session Log&amp;lt;/h2&amp;gt;
-    &amp;lt;table&amp;gt;
-        &amp;lt;thead&amp;gt;
-            &amp;lt;tr&amp;gt;
-                &amp;lt;th&amp;gt;Goal&amp;lt;/th&amp;gt;
-                &amp;lt;th&amp;gt;Start Time&amp;lt;/th&amp;gt;
-                &amp;lt;th&amp;gt;End Time&amp;lt;/th&amp;gt;
-                &amp;lt;th&amp;gt;Duration&amp;lt;/th&amp;gt;
-                &amp;lt;th&amp;gt;Pauses&amp;lt;/th&amp;gt;
-                &amp;lt;th&amp;gt;Action&amp;lt;/th&amp;gt;
-            &amp;lt;/tr&amp;gt;
-        &amp;lt;/thead&amp;gt;
-        &amp;lt;tbody id=&quot;sessionLogBody&quot;&amp;gt;&amp;lt;/tbody&amp;gt;
-    &amp;lt;/table&amp;gt;
-&amp;lt;/div&amp;gt;
-
-&amp;lt;textarea id=&quot;jsonOutput&quot; readonly&amp;gt;&amp;lt;/textarea&amp;gt;
-
-&amp;lt;script&amp;gt;
+        <content type="html">&lt;div class=&quot;container&quot;&gt;
+    &lt;h1&gt;Pomodoro Timer&lt;/h1&gt;
+    &lt;input type=&quot;text&quot; id=&quot;goalInput&quot; placeholder=&quot;Enter your goal for this session&quot; required=&quot;&quot; /&gt;
+    &lt;div id=&quot;timer&quot;&gt;25:00&lt;/div&gt;
+    &lt;select id=&quot;durationSelect&quot;&gt;
+        &lt;option value=&quot;5&quot;&gt;5 minutes&lt;/option&gt;
+        &lt;option value=&quot;10&quot;&gt;10 minutes&lt;/option&gt;
+        &lt;option value=&quot;15&quot;&gt;15 minutes&lt;/option&gt;
+        &lt;option value=&quot;20&quot;&gt;20 minutes&lt;/option&gt;
+        &lt;option value=&quot;25&quot; selected=&quot;&quot;&gt;25 minutes&lt;/option&gt;
+        &lt;option value=&quot;30&quot;&gt;30 minutes&lt;/option&gt;
+        &lt;option value=&quot;45&quot;&gt;45 minutes&lt;/option&gt;
+        &lt;option value=&quot;60&quot;&gt;60 minutes&lt;/option&gt;
+    &lt;/select&gt;
+    &lt;br /&gt;
+    &lt;button id=&quot;startBtn&quot;&gt;Start&lt;/button&gt;
+    &lt;button id=&quot;resetBtn&quot;&gt;Reset&lt;/button&gt;
+    &lt;button id=&quot;endBtn&quot;&gt;End Session&lt;/button&gt;
+&lt;/div&gt;
+&lt;div id=&quot;sessionLog&quot;&gt;
+    &lt;h2&gt;Session Log&lt;/h2&gt;
+    &lt;table&gt;
+        &lt;thead&gt;
+            &lt;tr&gt;
+                &lt;th&gt;Goal&lt;/th&gt;
+                &lt;th&gt;Start Time&lt;/th&gt;
+                &lt;th&gt;End Time&lt;/th&gt;
+                &lt;th&gt;Duration&lt;/th&gt;
+                &lt;th&gt;Pauses&lt;/th&gt;
+                &lt;th&gt;Action&lt;/th&gt;
+            &lt;/tr&gt;
+        &lt;/thead&gt;
+        &lt;tbody id=&quot;sessionLogBody&quot;&gt;&lt;/tbody&gt;
+    &lt;/table&gt;
+&lt;/div&gt;
+&lt;textarea id=&quot;jsonOutput&quot; readonly=&quot;&quot;&gt;&lt;/textarea&gt;
+&lt;script&gt;
     const timerDisplay = document.getElementById(&apos;timer&apos;);
     const startBtn = document.getElementById(&apos;startBtn&apos;);
     const resetBtn = document.getElementById(&apos;resetBtn&apos;);
@@ -54071,7 +53965,7 @@ Stats: &lt;span id=&quot;characterCount&quot; class=&quot;badge badge-light&quot
             const elapsedTime = Math.floor((Date.now() - startTime) / 1000);
             timeLeft = duration - elapsedTime;
 
-            if (timeLeft &amp;lt;= 0) {
+            if (timeLeft &lt;= 0) {
                 timeLeft = 0;
                 isRunning = false;
                 startBtn.textContent = &apos;Start&apos;;
@@ -54119,22 +54013,22 @@ Stats: &lt;span id=&quot;characterCount&quot; class=&quot;badge badge-light&quot
 
     function updateSessionLog() {
         sessionLogBody.innerHTML = &apos;&apos;;
-        sessions.forEach((session, index) =&amp;gt; {
+        sessions.forEach((session, index) =&gt; {
             const row = document.createElement(&apos;tr&apos;);
             row.innerHTML = `
-                &amp;lt;td&amp;gt;${session.goal}&amp;lt;/td&amp;gt;
-                &amp;lt;td&amp;gt;${formatDate(session.startTime)}&amp;lt;/td&amp;gt;
-                &amp;lt;td&amp;gt;${session.endTime ? formatDate(session.endTime) : &apos;In progress&apos;}&amp;lt;/td&amp;gt;
-                &amp;lt;td&amp;gt;${formatDuration(session.duration)}&amp;lt;/td&amp;gt;
-                &amp;lt;td&amp;gt;${formatPauses(session.pauses)}&amp;lt;/td&amp;gt;
-                &amp;lt;td&amp;gt;&amp;lt;button class=&quot;deleteBtn&quot; data-index=&quot;${index}&quot;&amp;gt;❌&amp;lt;/button&amp;gt;&amp;lt;/td&amp;gt;
+                &lt;td&gt;${session.goal}&lt;/td&gt;
+                &lt;td&gt;${formatDate(session.startTime)}&lt;/td&gt;
+                &lt;td&gt;${session.endTime ? formatDate(session.endTime) : &apos;In progress&apos;}&lt;/td&gt;
+                &lt;td&gt;${formatDuration(session.duration)}&lt;/td&gt;
+                &lt;td&gt;${formatPauses(session.pauses)}&lt;/td&gt;
+                &lt;td&gt;&lt;button class=&quot;deleteBtn&quot; data-index=&quot;${index}&quot;&gt;❌&lt;/button&gt;&lt;/td&gt;
             `;
             sessionLogBody.appendChild(row);
         });
         jsonOutput.value = JSON.stringify(sessions, null, 2);
 
         // Add event listeners to delete buttons
-        document.querySelectorAll(&apos;.deleteBtn&apos;).forEach(btn =&amp;gt; {
+        document.querySelectorAll(&apos;.deleteBtn&apos;).forEach(btn =&gt; {
             btn.addEventListener(&apos;click&apos;, deleteSession);
         });
     }
@@ -54153,9 +54047,9 @@ Stats: &lt;span id=&quot;characterCount&quot; class=&quot;badge badge-light&quot
     }
 
     function formatPauses(pauses) {
-        return pauses.map(pause =&amp;gt; 
+        return pauses.map(pause =&gt; 
             `${formatDate(pause.pauseTime)} - ${pause.resumeTime ? formatDate(pause.resumeTime) : &apos;Not resumed&apos;}`
-        ).join(&apos;&amp;lt;br&amp;gt;&apos;);
+        ).join(&apos;&lt;br&gt;&apos;);
     }
 
     function saveSessions() {
@@ -54170,16 +54064,16 @@ Stats: &lt;span id=&quot;characterCount&quot; class=&quot;badge badge-light&quot
     durationSelect.addEventListener(&apos;change&apos;, changeDuration);
 
     // Keyboard shortcut
-    document.addEventListener(&apos;keydown&apos;, (e) =&amp;gt; {
-        if (e.code === &apos;Space&apos; &amp;amp;&amp;amp; document.activeElement !== goalInput) {
+    document.addEventListener(&apos;keydown&apos;, (e) =&gt; {
+        if (e.code === &apos;Space&apos; &amp;&amp; document.activeElement !== goalInput) {
             e.preventDefault();
             startTimer();
         }
     });
 
     updateDisplay();
-&amp;lt;/script&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;/script&gt;
+
 </content>
     </entry>
     

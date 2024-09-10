@@ -44,149 +44,43 @@
     </header>
     <article class="post-wrapper">
       <main class="content">
-        <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;style&gt;
-    body {
-        font-family: Arial, sans-serif;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding: 2rem;
-        background-color: #f0f0f0;
-    }
-    .container {
-        text-align: center;
-        background-color: white;
-        padding: 2rem;
-        border-radius: 10px;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        margin-bottom: 2rem;
-        box-sizing: border-box;
-    }
-    #timer {
-        font-size: 4rem;
-        margin-bottom: 1rem;
-    }
-    button, select, input {
-        font-size: 1rem;
-        padding: 0.5rem 1rem;
-        margin: 0.5rem;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-        transition: background-color 0.3s;
-    }
-    #startBtn {
-        background-color: #4CAF50;
-        color: white;
-    }
-    #startBtn:hover {
-        background-color: #45a049;
-    }
-    #resetBtn, #endBtn {
-        background-color: #f44336;
-        color: white;
-    }
-    #resetBtn:hover, #endBtn:hover {
-        background-color: #da190b;
-    }
-    select {
-        background-color: #3498db;
-        color: white;
-        -webkit-appearance: none;
-        padding: 0.5rem 1rem;
-        margin: 0.5rem;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-        transition: background-color 0.3s;
-    }
-    select:hover {
-        background-color: #2980b9;
-    }
-    #goalInput {
-        width: calc(100% - 1.5em);
-        padding: 0.5rem;
-        margin-bottom: 1rem;
-        border: 1px solid #ccc;
-        border-radius: 5px;
-        box-sizing: border-box;
-    }
-    #sessionLog {
-        width: 100%;
-        max-width: 800px;
-        margin-top: 2rem;
-        overflow-x: auto;
-    }
-    #sessionLog table {
-        width: 100%;
-        border-collapse: collapse;
-    }
-    #sessionLog th, #sessionLog td {
-        border: 1px solid #ddd;
-        padding: 8px;
-        text-align: left;
-    }
-    #sessionLog th {
-        background-color: #f2f2f2;
-    }
-    #jsonOutput {
-        width: 100%;
-        height: 200px;
-        margin-top: 2rem;
-        font-family: monospace;
-    }
-    .deleteBtn {
-        background-color: transparent;
-        border: none;
-        color: #f44336;
-        cursor: pointer;
-        font-size: 1.2rem;
-        padding: 0.2rem 0.5rem;
-    }
-    .deleteBtn:hover {
-        color: #da190b;
-    }
-&lt;/style&gt;
-&lt;div class="container"&gt;
-    &lt;h1&gt;Pomodoro Timer&lt;/h1&gt;
-    &lt;input type="text" id="goalInput" placeholder="Enter your goal for this session" required&gt;
-    &lt;div id="timer"&gt;25:00&lt;/div&gt;
-    &lt;select id="durationSelect"&gt;
-        &lt;option value="5"&gt;5 minutes&lt;/option&gt;
-        &lt;option value="10"&gt;10 minutes&lt;/option&gt;
-        &lt;option value="15"&gt;15 minutes&lt;/option&gt;
-        &lt;option value="20"&gt;20 minutes&lt;/option&gt;
-        &lt;option value="25" selected&gt;25 minutes&lt;/option&gt;
-        &lt;option value="30"&gt;30 minutes&lt;/option&gt;
-        &lt;option value="45"&gt;45 minutes&lt;/option&gt;
-        &lt;option value="60"&gt;60 minutes&lt;/option&gt;
-    &lt;/select&gt;
-    &lt;br&gt;
-    &lt;button id="startBtn"&gt;Start&lt;/button&gt;
-    &lt;button id="resetBtn"&gt;Reset&lt;/button&gt;
-    &lt;button id="endBtn"&gt;End Session&lt;/button&gt;
-&lt;/div&gt;
-
-&lt;div id="sessionLog"&gt;
-    &lt;h2&gt;Session Log&lt;/h2&gt;
-    &lt;table&gt;
-        &lt;thead&gt;
-            &lt;tr&gt;
-                &lt;th&gt;Goal&lt;/th&gt;
-                &lt;th&gt;Start Time&lt;/th&gt;
-                &lt;th&gt;End Time&lt;/th&gt;
-                &lt;th&gt;Duration&lt;/th&gt;
-                &lt;th&gt;Pauses&lt;/th&gt;
-                &lt;th&gt;Action&lt;/th&gt;
-            &lt;/tr&gt;
-        &lt;/thead&gt;
-        &lt;tbody id="sessionLogBody"&gt;&lt;/tbody&gt;
-    &lt;/table&gt;
-&lt;/div&gt;
-
-&lt;textarea id="jsonOutput" readonly&gt;&lt;/textarea&gt;
-
-&lt;script&gt;
+        <div class="container">
+    <h1>Pomodoro Timer</h1>
+    <input type="text" id="goalInput" placeholder="Enter your goal for this session" required="" />
+    <div id="timer">25:00</div>
+    <select id="durationSelect">
+        <option value="5">5 minutes</option>
+        <option value="10">10 minutes</option>
+        <option value="15">15 minutes</option>
+        <option value="20">20 minutes</option>
+        <option value="25" selected="">25 minutes</option>
+        <option value="30">30 minutes</option>
+        <option value="45">45 minutes</option>
+        <option value="60">60 minutes</option>
+    </select>
+    <br />
+    <button id="startBtn">Start</button>
+    <button id="resetBtn">Reset</button>
+    <button id="endBtn">End Session</button>
+</div>
+<div id="sessionLog">
+    <h2>Session Log</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Goal</th>
+                <th>Start Time</th>
+                <th>End Time</th>
+                <th>Duration</th>
+                <th>Pauses</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody id="sessionLogBody"></tbody>
+    </table>
+</div>
+<textarea id="jsonOutput" readonly=""></textarea>
+<script>
     const timerDisplay = document.getElementById('timer');
     const startBtn = document.getElementById('startBtn');
     const resetBtn = document.getElementById('resetBtn');
@@ -285,7 +179,7 @@
             const elapsedTime = Math.floor((Date.now() - startTime) / 1000);
             timeLeft = duration - elapsedTime;
 
-            if (timeLeft &lt;= 0) {
+            if (timeLeft <= 0) {
                 timeLeft = 0;
                 isRunning = false;
                 startBtn.textContent = 'Start';
@@ -333,22 +227,22 @@
 
     function updateSessionLog() {
         sessionLogBody.innerHTML = '';
-        sessions.forEach((session, index) =&gt; {
+        sessions.forEach((session, index) => {
             const row = document.createElement('tr');
             row.innerHTML = `
-                &lt;td&gt;${session.goal}&lt;/td&gt;
-                &lt;td&gt;${formatDate(session.startTime)}&lt;/td&gt;
-                &lt;td&gt;${session.endTime ? formatDate(session.endTime) : 'In progress'}&lt;/td&gt;
-                &lt;td&gt;${formatDuration(session.duration)}&lt;/td&gt;
-                &lt;td&gt;${formatPauses(session.pauses)}&lt;/td&gt;
-                &lt;td&gt;&lt;button class="deleteBtn" data-index="${index}"&gt;❌&lt;/button&gt;&lt;/td&gt;
+                <td>${session.goal}</td>
+                <td>${formatDate(session.startTime)}</td>
+                <td>${session.endTime ? formatDate(session.endTime) : 'In progress'}</td>
+                <td>${formatDuration(session.duration)}</td>
+                <td>${formatPauses(session.pauses)}</td>
+                <td><button class="deleteBtn" data-index="${index}">❌</button></td>
             `;
             sessionLogBody.appendChild(row);
         });
         jsonOutput.value = JSON.stringify(sessions, null, 2);
 
         // Add event listeners to delete buttons
-        document.querySelectorAll('.deleteBtn').forEach(btn =&gt; {
+        document.querySelectorAll('.deleteBtn').forEach(btn => {
             btn.addEventListener('click', deleteSession);
         });
     }
@@ -367,9 +261,9 @@
     }
 
     function formatPauses(pauses) {
-        return pauses.map(pause =&gt; 
+        return pauses.map(pause => 
             `${formatDate(pause.pauseTime)} - ${pause.resumeTime ? formatDate(pause.resumeTime) : 'Not resumed'}`
-        ).join('&lt;br&gt;');
+        ).join('<br>');
     }
 
     function saveSessions() {
@@ -384,16 +278,16 @@
     durationSelect.addEventListener('change', changeDuration);
 
     // Keyboard shortcut
-    document.addEventListener('keydown', (e) =&gt; {
-        if (e.code === 'Space' &amp;&amp; document.activeElement !== goalInput) {
+    document.addEventListener('keydown', (e) => {
+        if (e.code === 'Space' && document.activeElement !== goalInput) {
             e.preventDefault();
             startTimer();
         }
     });
 
     updateDisplay();
-&lt;/script&gt;
-</code></pre></div></div>
+</script>
+
 
       </main>
     </article>
