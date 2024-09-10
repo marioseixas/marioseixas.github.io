@@ -22,10 +22,11 @@ module Jekyll
       <<~SCRIPT
         const mermaidConfig = {
           startOnLoad: true,
-          look: 'handDrawn',
-          theme: 'neo-dark',
-          er: { useMaxWidth: true }
+          theme: 'default', // You can change the theme here if needed 
+          flowchart: { useMaxWidth: false, htmlLabels: true, curve: 'cardinal' }, 
+          // Add other diagram-specific configurations as needed (e.g., sequence, gantt, etc.) 
         };
+
         mermaid.initialize(mermaidConfig);
 
         setTimeout(() => {
@@ -41,7 +42,7 @@ module Jekyll
               refreshRate: "auto",
             });
           }
-        }, 200);
+        }, 200); 
       SCRIPT
     end
   end
