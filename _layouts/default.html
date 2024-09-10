@@ -15,7 +15,10 @@
     <script src="{{ '/pagefind/pagefind-ui.js' | relative_url }}" type="text/javascript"></script>
     <script type="module">
       import PagefindHighlight from '{{ "/pagefind/pagefind-highlight.js" | relative_url }}';
-      new PagefindHighlight({ highlightParam: "highlight" });
+      new PagefindHighlight({
+        highlightParam: "highlight",
+        autofocus: true
+      });
     </script>
     {% if page.tags %}
       <meta itemprop="keywords" content="{{ page.tags | join: ',' }}">
