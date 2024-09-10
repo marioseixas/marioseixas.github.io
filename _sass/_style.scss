@@ -74,8 +74,8 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 700; /* Bold font for all headings */
   margin: 0 0 0.5rem -0.1rem; /* Corrected syntax with semicolon, aligns left edge slightly inward */
   line-height: 1; /* Uniform line height */
-  color: var(--headings) /* Dark grey color for text */
-  text-rendering: optimizeLegibility; /* Enhance readability */
+  color: var(--headings); /* Dark grey color for text */
+  text-rendering: optimizeLegibility;
 }
 
 h1 {
