@@ -39,30 +39,7 @@
     </header>
     <article class="post-wrapper">
       <main class="content">
-        <script src="https://cdn.jsdelivr.net/npm/svg-pan-zoom@3.6.1/dist/svg-pan-zoom.min.js"></script>
-
-<script type="module">
-  import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
-  mermaid.initialize({
-    startOnLoad: true,
-    look: 'handDrawn',
-    theme: 'neo-dark',
-    er: { useMaxWidth: true }
-  });
-  setTimeout(() => {
-    svgPanZoom(document.querySelector("div.mermaid>svg"), {
-      minZoom: 0.5,
-      maxZoom: 10,
-      fit: true,
-      contain: false,
-      controlIconsEnabled: true,
-      center: true,
-      refreshRate: "auto",
-    });
-  }, 200);
-</script>
-
-<div class="mermaid" style="white-space: pre-wrap;">erDiagram
+        <div class="mermaid" style="white-space: pre-wrap;">erDiagram
 
 "tbl_user(User)" {
   *int id    PK    
@@ -117,6 +94,35 @@
 
 "tbl_mtm_license_organization(tbl_mtm_license_organization)"  }|  --  ||  "tbl_license(License)":  "license_id"
 "tbl_mtm_license_organization(tbl_mtm_license_organization)"  }|  --  ||  "tbl_organization(Organization)":  "organization_id"</div>
+<script src="https://cdn.jsdelivr.net/npm/svg-pan-zoom@3.6.1/dist/svg-pan-zoom.min.js"></script>
+
+<script type="module">
+  import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+  const mermaidConfig = {
+  startOnLoad: true,
+  look: 'handDrawn',
+  theme: 'neo-dark',
+  er: { useMaxWidth: true }
+};
+mermaid.initialize(mermaidConfig);
+
+setTimeout(() => {
+  const svgElement = document.querySelector("div.mermaid>svg");
+  if (svgElement) {
+    svgPanZoom(svgElement, {
+      minZoom: 0.5,
+      maxZoom: 10,
+      fit: true,
+      contain: false,
+      controlIconsEnabled: true,
+      center: true,
+      refreshRate: "auto",
+    });
+  }
+}, 200);
+
+</script>
+
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    &lt;div id="cusdis_thread"
       data-host="https://cusdis.com"
       data-app-id="5fce21a3-9b85-4794-b6f6-e0eaaf788ced"

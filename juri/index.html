@@ -79,30 +79,7 @@
     <main class="content">
       
 
-      <script src="https://cdn.jsdelivr.net/npm/svg-pan-zoom@3.6.1/dist/svg-pan-zoom.min.js"></script>
-
-<script type="module">
-  import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
-  mermaid.initialize({
-    startOnLoad: true,
-    look: 'handDrawn',
-    theme: 'neo-dark',
-    er: { useMaxWidth: true }
-  });
-  setTimeout(() => {
-    svgPanZoom(document.querySelector("div.mermaid>svg"), {
-      minZoom: 0.5,
-      maxZoom: 10,
-      fit: true,
-      contain: false,
-      controlIconsEnabled: true,
-      center: true,
-      refreshRate: "auto",
-    });
-  }, 200);
-</script>
-
-<div class="mermaid" style="white-space: pre-wrap;">graph TB
+      <div class="mermaid" style="white-space: pre-wrap;">graph TB
     A[Início da Sessão de Julgamento]:::judge --&gt; B[Verificação de Presença]:::judge
     B --&gt; C[Sorteio dos Jurados]:::judge
     C --&gt; D[Exortação aos Jurados]:::judge
@@ -132,19 +109,22 @@
     L1["Juiz declara encerrada a presente sessão de julgamento do Tribunal do Júri."]:::note --&gt; L
     
     classDef note fill:#fff,stroke:#333,stroke-width:2px,stroke-dasharray: 5 5</div>
-
 <script src="https://cdn.jsdelivr.net/npm/svg-pan-zoom@3.6.1/dist/svg-pan-zoom.min.js"></script>
 
 <script type="module">
   import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
-  mermaid.initialize({
-    startOnLoad: true,
-    look: 'handDrawn',
-    theme: 'neo-dark',
-    er: { useMaxWidth: true }
-  });
-  setTimeout(() => {
-    svgPanZoom(document.querySelector("div.mermaid>svg"), {
+  const mermaidConfig = {
+  startOnLoad: true,
+  look: 'handDrawn',
+  theme: 'neo-dark',
+  er: { useMaxWidth: true }
+};
+mermaid.initialize(mermaidConfig);
+
+setTimeout(() => {
+  const svgElement = document.querySelector("div.mermaid>svg");
+  if (svgElement) {
+    svgPanZoom(svgElement, {
       minZoom: 0.5,
       maxZoom: 10,
       fit: true,
@@ -153,7 +133,9 @@
       center: true,
       refreshRate: "auto",
     });
-  }, 200);
+  }
+}, 200);
+
 </script>
 
 <div class="mermaid" style="white-space: pre-wrap;">graph TB
@@ -241,6 +223,34 @@
     Q["Impronúncia (art. 414, CPP)\n\n* Inexistência do crime ou indícios insuficientes de autoria.\n* Não impede novas investigações."]
     R["Absolvição Sumária (art. 415, CPP)\n\n* Mesmas hipóteses do art. 397, CPP."]
     S["Desclassificação (art. 419, CPP)\n\n* Crime diverso de competência do juiz singular."]</div>
+<script src="https://cdn.jsdelivr.net/npm/svg-pan-zoom@3.6.1/dist/svg-pan-zoom.min.js"></script>
+
+<script type="module">
+  import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+  const mermaidConfig = {
+  startOnLoad: true,
+  look: 'handDrawn',
+  theme: 'neo-dark',
+  er: { useMaxWidth: true }
+};
+mermaid.initialize(mermaidConfig);
+
+setTimeout(() => {
+  const svgElement = document.querySelector("div.mermaid>svg");
+  if (svgElement) {
+    svgPanZoom(svgElement, {
+      minZoom: 0.5,
+      maxZoom: 10,
+      fit: true,
+      contain: false,
+      controlIconsEnabled: true,
+      center: true,
+      refreshRate: "auto",
+    });
+  }
+}, 200);
+
+</script>
       
       
       <div class="nav-arrow prev">

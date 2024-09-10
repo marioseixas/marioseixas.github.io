@@ -44,7 +44,7 @@
     <title>infoBAG</title>
     <link href="https://ib.bsb.br/rss.xml" rel="self"/>
     <link href="https://ib.bsb.br/"/>
-    <updated>2024-09-10T20:43:55+00:00</updated>
+    <updated>2024-09-10T20:53:28+00:00</updated>
     <id>https://ib.bsb.br</id>
     <author>
         <name></name>
@@ -5218,30 +5218,7 @@ if __name__ == &quot;__main__&quot;:
         <link href="https://ib.bsb.br/tasks-mermaid/"/>
         <updated>2024-05-21T00:00:00+00:00</updated>
         <id>https://ib.bsb.br/tasks-mermaid/</id>
-        <content type="html">&lt;script src=&quot;https://cdn.jsdelivr.net/npm/svg-pan-zoom@3.6.1/dist/svg-pan-zoom.min.js&quot;&gt;&lt;/script&gt;
-
-&lt;script type=&quot;module&quot;&gt;
-  import mermaid from &apos;https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs&apos;;
-  mermaid.initialize({
-    startOnLoad: true,
-    look: &apos;handDrawn&apos;,
-    theme: &apos;neo-dark&apos;,
-    er: { useMaxWidth: true }
-  });
-  setTimeout(() =&gt; {
-    svgPanZoom(document.querySelector(&quot;div.mermaid&gt;svg&quot;), {
-      minZoom: 0.5,
-      maxZoom: 10,
-      fit: true,
-      contain: false,
-      controlIconsEnabled: true,
-      center: true,
-      refreshRate: &quot;auto&quot;,
-    });
-  }, 200);
-&lt;/script&gt;
-
-&lt;div class=&quot;mermaid&quot; style=&quot;white-space: pre-wrap;&quot;&gt;flowchart TD
+        <content type="html">&lt;div class=&quot;mermaid&quot; style=&quot;white-space: pre-wrap;&quot;&gt;flowchart TD
     A[Start] --&amp;gt; B{Specific\ndeadline?}
     B --&amp;gt;|Yes| C{Delay causes\nharm?}
     B --&amp;gt;|No| D{Delay causes\nharm?}
@@ -5274,6 +5251,35 @@ if __name__ == &quot;__main__&quot;:
     end
     
     N &amp;amp; O &amp;amp; P &amp;amp; Q &amp;amp; R &amp;amp; S &amp;amp; T &amp;amp; U --&amp;gt; V[End]&lt;/div&gt;
+&lt;script src=&quot;https://cdn.jsdelivr.net/npm/svg-pan-zoom@3.6.1/dist/svg-pan-zoom.min.js&quot;&gt;&lt;/script&gt;
+
+&lt;script type=&quot;module&quot;&gt;
+  import mermaid from &apos;https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs&apos;;
+  const mermaidConfig = {
+  startOnLoad: true,
+  look: &apos;handDrawn&apos;,
+  theme: &apos;neo-dark&apos;,
+  er: { useMaxWidth: true }
+};
+mermaid.initialize(mermaidConfig);
+
+setTimeout(() =&gt; {
+  const svgElement = document.querySelector(&quot;div.mermaid&gt;svg&quot;);
+  if (svgElement) {
+    svgPanZoom(svgElement, {
+      minZoom: 0.5,
+      maxZoom: 10,
+      fit: true,
+      contain: false,
+      controlIconsEnabled: true,
+      center: true,
+      refreshRate: &quot;auto&quot;,
+    });
+  }
+}, 200);
+
+&lt;/script&gt;
+
 </content>
     </entry>
     
@@ -6384,30 +6390,7 @@ xrandr --output DP-1 --mode &quot;1152x864_60.00&quot;
         <link href="https://ib.bsb.br/juri/"/>
         <updated>2024-03-08T00:00:00+00:00</updated>
         <id>https://ib.bsb.br/juri/</id>
-        <content type="html">&lt;script src=&quot;https://cdn.jsdelivr.net/npm/svg-pan-zoom@3.6.1/dist/svg-pan-zoom.min.js&quot;&gt;&lt;/script&gt;
-
-&lt;script type=&quot;module&quot;&gt;
-  import mermaid from &apos;https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs&apos;;
-  mermaid.initialize({
-    startOnLoad: true,
-    look: &apos;handDrawn&apos;,
-    theme: &apos;neo-dark&apos;,
-    er: { useMaxWidth: true }
-  });
-  setTimeout(() =&gt; {
-    svgPanZoom(document.querySelector(&quot;div.mermaid&gt;svg&quot;), {
-      minZoom: 0.5,
-      maxZoom: 10,
-      fit: true,
-      contain: false,
-      controlIconsEnabled: true,
-      center: true,
-      refreshRate: &quot;auto&quot;,
-    });
-  }, 200);
-&lt;/script&gt;
-
-&lt;div class=&quot;mermaid&quot; style=&quot;white-space: pre-wrap;&quot;&gt;graph TB
+        <content type="html">&lt;div class=&quot;mermaid&quot; style=&quot;white-space: pre-wrap;&quot;&gt;graph TB
     A[Início da Sessão de Julgamento]:::judge --&amp;gt; B[Verificação de Presença]:::judge
     B --&amp;gt; C[Sorteio dos Jurados]:::judge
     C --&amp;gt; D[Exortação aos Jurados]:::judge
@@ -6437,19 +6420,22 @@ xrandr --output DP-1 --mode &quot;1152x864_60.00&quot;
     L1[&quot;Juiz declara encerrada a presente sessão de julgamento do Tribunal do Júri.&quot;]:::note --&amp;gt; L
     
     classDef note fill:#fff,stroke:#333,stroke-width:2px,stroke-dasharray: 5 5&lt;/div&gt;
-
 &lt;script src=&quot;https://cdn.jsdelivr.net/npm/svg-pan-zoom@3.6.1/dist/svg-pan-zoom.min.js&quot;&gt;&lt;/script&gt;
 
 &lt;script type=&quot;module&quot;&gt;
   import mermaid from &apos;https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs&apos;;
-  mermaid.initialize({
-    startOnLoad: true,
-    look: &apos;handDrawn&apos;,
-    theme: &apos;neo-dark&apos;,
-    er: { useMaxWidth: true }
-  });
-  setTimeout(() =&gt; {
-    svgPanZoom(document.querySelector(&quot;div.mermaid&gt;svg&quot;), {
+  const mermaidConfig = {
+  startOnLoad: true,
+  look: &apos;handDrawn&apos;,
+  theme: &apos;neo-dark&apos;,
+  er: { useMaxWidth: true }
+};
+mermaid.initialize(mermaidConfig);
+
+setTimeout(() =&gt; {
+  const svgElement = document.querySelector(&quot;div.mermaid&gt;svg&quot;);
+  if (svgElement) {
+    svgPanZoom(svgElement, {
       minZoom: 0.5,
       maxZoom: 10,
       fit: true,
@@ -6458,7 +6444,9 @@ xrandr --output DP-1 --mode &quot;1152x864_60.00&quot;
       center: true,
       refreshRate: &quot;auto&quot;,
     });
-  }, 200);
+  }
+}, 200);
+
 &lt;/script&gt;
 
 &lt;div class=&quot;mermaid&quot; style=&quot;white-space: pre-wrap;&quot;&gt;graph TB
@@ -6546,6 +6534,35 @@ xrandr --output DP-1 --mode &quot;1152x864_60.00&quot;
     Q[&quot;Impronúncia (art. 414, CPP)\n\n* Inexistência do crime ou indícios insuficientes de autoria.\n* Não impede novas investigações.&quot;]
     R[&quot;Absolvição Sumária (art. 415, CPP)\n\n* Mesmas hipóteses do art. 397, CPP.&quot;]
     S[&quot;Desclassificação (art. 419, CPP)\n\n* Crime diverso de competência do juiz singular.&quot;]&lt;/div&gt;
+&lt;script src=&quot;https://cdn.jsdelivr.net/npm/svg-pan-zoom@3.6.1/dist/svg-pan-zoom.min.js&quot;&gt;&lt;/script&gt;
+
+&lt;script type=&quot;module&quot;&gt;
+  import mermaid from &apos;https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs&apos;;
+  const mermaidConfig = {
+  startOnLoad: true,
+  look: &apos;handDrawn&apos;,
+  theme: &apos;neo-dark&apos;,
+  er: { useMaxWidth: true }
+};
+mermaid.initialize(mermaidConfig);
+
+setTimeout(() =&gt; {
+  const svgElement = document.querySelector(&quot;div.mermaid&gt;svg&quot;);
+  if (svgElement) {
+    svgPanZoom(svgElement, {
+      minZoom: 0.5,
+      maxZoom: 10,
+      fit: true,
+      contain: false,
+      controlIconsEnabled: true,
+      center: true,
+      refreshRate: &quot;auto&quot;,
+    });
+  }
+}, 200);
+
+&lt;/script&gt;
+
 </content>
     </entry>
     

@@ -79,30 +79,7 @@
     <main class="content">
       
 
-      <script src="https://cdn.jsdelivr.net/npm/svg-pan-zoom@3.6.1/dist/svg-pan-zoom.min.js"></script>
-
-<script type="module">
-  import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
-  mermaid.initialize({
-    startOnLoad: true,
-    look: 'handDrawn',
-    theme: 'neo-dark',
-    er: { useMaxWidth: true }
-  });
-  setTimeout(() => {
-    svgPanZoom(document.querySelector("div.mermaid>svg"), {
-      minZoom: 0.5,
-      maxZoom: 10,
-      fit: true,
-      contain: false,
-      controlIconsEnabled: true,
-      center: true,
-      refreshRate: "auto",
-    });
-  }, 200);
-</script>
-
-<div class="mermaid" style="white-space: pre-wrap;">flowchart TD
+      <div class="mermaid" style="white-space: pre-wrap;">flowchart TD
     A[Start] --&gt; B{Specific\ndeadline?}
     B --&gt;|Yes| C{Delay causes\nharm?}
     B --&gt;|No| D{Delay causes\nharm?}
@@ -135,6 +112,34 @@
     end
     
     N &amp; O &amp; P &amp; Q &amp; R &amp; S &amp; T &amp; U --&gt; V[End]</div>
+<script src="https://cdn.jsdelivr.net/npm/svg-pan-zoom@3.6.1/dist/svg-pan-zoom.min.js"></script>
+
+<script type="module">
+  import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+  const mermaidConfig = {
+  startOnLoad: true,
+  look: 'handDrawn',
+  theme: 'neo-dark',
+  er: { useMaxWidth: true }
+};
+mermaid.initialize(mermaidConfig);
+
+setTimeout(() => {
+  const svgElement = document.querySelector("div.mermaid>svg");
+  if (svgElement) {
+    svgPanZoom(svgElement, {
+      minZoom: 0.5,
+      maxZoom: 10,
+      fit: true,
+      contain: false,
+      controlIconsEnabled: true,
+      center: true,
+      refreshRate: "auto",
+    });
+  }
+}, 200);
+
+</script>
       
       
       <div class="nav-arrow prev">
