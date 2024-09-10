@@ -44,7 +44,7 @@
     <title>infoBAG</title>
     <link href="https://ib.bsb.br/rss.xml" rel="self"/>
     <link href="https://ib.bsb.br/"/>
-    <updated>2024-09-10T21:04:33+00:00</updated>
+    <updated>2024-09-10T21:08:58+00:00</updated>
     <id>https://ib.bsb.br</id>
     <author>
         <name></name>
@@ -5257,10 +5257,11 @@ if __name__ == &quot;__main__&quot;:
   import mermaid from &apos;https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs&apos;;
   const mermaidConfig = {
   startOnLoad: true,
-  look: &apos;handDrawn&apos;,
-  theme: &apos;neo-dark&apos;,
-  er: { useMaxWidth: true }
+  theme: &apos;default&apos;, // You can change the theme here if needed 
+  flowchart: { useMaxWidth: false, htmlLabels: true, curve: &apos;cardinal&apos; }, 
+  // Add other diagram-specific configurations as needed (e.g., sequence, gantt, etc.) 
 };
+
 mermaid.initialize(mermaidConfig);
 
 setTimeout(() =&gt; {
@@ -5276,7 +5277,7 @@ setTimeout(() =&gt; {
       refreshRate: &quot;auto&quot;,
     });
   }
-}, 200);
+}, 200); 
 
 &lt;/script&gt;
 
@@ -6426,10 +6427,11 @@ xrandr --output DP-1 --mode &quot;1152x864_60.00&quot;
   import mermaid from &apos;https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs&apos;;
   const mermaidConfig = {
   startOnLoad: true,
-  look: &apos;handDrawn&apos;,
-  theme: &apos;neo-dark&apos;,
-  er: { useMaxWidth: true }
+  theme: &apos;default&apos;, // You can change the theme here if needed 
+  flowchart: { useMaxWidth: false, htmlLabels: true, curve: &apos;cardinal&apos; }, 
+  // Add other diagram-specific configurations as needed (e.g., sequence, gantt, etc.) 
 };
+
 mermaid.initialize(mermaidConfig);
 
 setTimeout(() =&gt; {
@@ -6445,7 +6447,7 @@ setTimeout(() =&gt; {
       refreshRate: &quot;auto&quot;,
     });
   }
-}, 200);
+}, 200); 
 
 &lt;/script&gt;
 
@@ -6540,10 +6542,11 @@ setTimeout(() =&gt; {
   import mermaid from &apos;https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs&apos;;
   const mermaidConfig = {
   startOnLoad: true,
-  look: &apos;handDrawn&apos;,
-  theme: &apos;neo-dark&apos;,
-  er: { useMaxWidth: true }
+  theme: &apos;default&apos;, // You can change the theme here if needed 
+  flowchart: { useMaxWidth: false, htmlLabels: true, curve: &apos;cardinal&apos; }, 
+  // Add other diagram-specific configurations as needed (e.g., sequence, gantt, etc.) 
 };
+
 mermaid.initialize(mermaidConfig);
 
 setTimeout(() =&gt; {
@@ -6559,7 +6562,7 @@ setTimeout(() =&gt; {
       refreshRate: &quot;auto&quot;,
     });
   }
-}, 200);
+}, 200); 
 
 &lt;/script&gt;
 

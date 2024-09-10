@@ -100,10 +100,11 @@
   import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
   const mermaidConfig = {
   startOnLoad: true,
-  look: 'handDrawn',
-  theme: 'neo-dark',
-  er: { useMaxWidth: true }
+  theme: 'default', // You can change the theme here if needed 
+  flowchart: { useMaxWidth: false, htmlLabels: true, curve: 'cardinal' }, 
+  // Add other diagram-specific configurations as needed (e.g., sequence, gantt, etc.) 
 };
+
 mermaid.initialize(mermaidConfig);
 
 setTimeout(() => {
@@ -119,7 +120,7 @@ setTimeout(() => {
       refreshRate: "auto",
     });
   }
-}, 200);
+}, 200); 
 
 </script>
 
