@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<html lang="en">
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,17 +15,7 @@
     <script src="/pagefind/pagefind-ui.js" type="text/javascript"></script>
     <script type="module">
       import PagefindHighlight from '/pagefind/pagefind-highlight.js';
-      window.addEventListener('DOMContentLoaded', (event) => {
-        // Highlighting for search terms
-        new PagefindHighlight({
-          highlightParam: "highlight"
-        });
-        new PagefindUI({
-          element: "#search",  // Ensure this targets the correct container
-          autofocus: true,  // Add autofocus to the search input
-          resetStyles: false
-        });
-      });
+      new PagefindHighlight({ highlightParam: "highlight" });
     </script>
     
       <meta itemprop="keywords" content="tools">
@@ -35,6 +26,7 @@
   </head>
   <body class="post-content-body">
     <header class="header-container">
+      <div id="search" class="search-input-block"></div>
       <nav aria-label="Main navigation" class="header-content">
           <a class="internal-link" href="/" aria-label="Home">
             <img src="/favicon.ico" alt="Archive Icon" class="favicon">
@@ -48,8 +40,7 @@
           <a href="https://ib.bsb.br/archive" aria-label="Archive">
             <img src="/assets/Sudden_Death_Rune.gif" alt="Sudden Death Rune" class="favicon">
           </a>
-      </nav>
-      <div id="search" class="search-input-block"></div>
+        </nav>
     </header>
     <article class="post-wrapper">
       <main class="content">
