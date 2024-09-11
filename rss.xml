@@ -44,11 +44,20 @@
     <title>infoBAG</title>
     <link href="https://ib.bsb.br/rss.xml" rel="self"/>
     <link href="https://ib.bsb.br/"/>
-    <updated>2024-09-11T11:38:36+00:00</updated>
+    <updated>2024-09-11T11:48:09+00:00</updated>
     <id>https://ib.bsb.br</id>
     <author>
         <name></name>
     </author>
+    
+    <entry>
+        <title>nickname</title>
+        <link href="https://ib.bsb.br/nickname/"/>
+        <updated>2024-09-11T00:00:00+00:00</updated>
+        <id>https://ib.bsb.br/nickname/</id>
+        <content type="html">&lt;p&gt;reply&lt;/p&gt;
+</content>
+    </entry>
     
     <entry>
         <title>SRS within GitHub Actions</title>
@@ -45364,6 +45373,17 @@ Pense duas vezes antes de se envolver.
         
         
         &lt;ul class=&quot;search-link&quot;&gt;
+            &lt;a href=&quot;#email&quot; aria-label=&quot;Tag email with 1 posts&quot;&gt;
+                email (1)
+            &lt;/a&gt;
+        &lt;/ul&gt;
+        
+        
+        
+        
+        
+        
+        &lt;ul class=&quot;search-link&quot;&gt;
             &lt;a href=&quot;#estudos&quot; aria-label=&quot;Tag estudos with 8 posts&quot;&gt;
                 estudos (8)
             &lt;/a&gt;
@@ -45858,9 +45878,9 @@ Pense duas vezes antes de se envolver.
             
             &lt;li&gt;&lt;a href=&quot;#ai-prompt&quot; aria-label=&quot;Child tag AI&amp;gt;prompt&quot;&gt;AI&amp;gt;prompt&lt;/a&gt;&lt;/li&gt;
             
-            &lt;li&gt;&lt;a href=&quot;#tools-ai-prompt&quot; aria-label=&quot;Child tag tools&amp;gt;AI&amp;gt;prompt&quot;&gt;tools&amp;gt;AI&amp;gt;prompt&lt;/a&gt;&lt;/li&gt;
-            
             &lt;li&gt;&lt;a href=&quot;#prompt&quot; aria-label=&quot;Child tag prompt&quot;&gt;prompt&lt;/a&gt;&lt;/li&gt;
+            
+            &lt;li&gt;&lt;a href=&quot;#tools-ai-prompt&quot; aria-label=&quot;Child tag tools&amp;gt;AI&amp;gt;prompt&quot;&gt;tools&amp;gt;AI&amp;gt;prompt&lt;/a&gt;&lt;/li&gt;
             
             
         &lt;/ul&gt;
@@ -46588,13 +46608,13 @@ Pense duas vezes antes de se envolver.
             
             &lt;h2&gt;Child tags:&lt;/h2&gt;
             
-            &lt;li&gt;&lt;a href=&quot;#edital-direito&quot; aria-label=&quot;Child tag edital&amp;gt;direito&quot;&gt;edital&amp;gt;direito&lt;/a&gt;&lt;/li&gt;
-            
             &lt;li&gt;&lt;a href=&quot;#direito&quot; aria-label=&quot;Child tag direito&quot;&gt;direito&lt;/a&gt;&lt;/li&gt;
             
-            &lt;li&gt;&lt;a href=&quot;#direito-processual-penal&quot; aria-label=&quot;Child tag direito&amp;gt;processual-penal&quot;&gt;direito&amp;gt;processual-penal&lt;/a&gt;&lt;/li&gt;
-            
             &lt;li&gt;&lt;a href=&quot;#edital-direito-processual-penal&quot; aria-label=&quot;Child tag edital&amp;gt;direito&amp;gt;processual-penal&quot;&gt;edital&amp;gt;direito&amp;gt;processual-penal&lt;/a&gt;&lt;/li&gt;
+            
+            &lt;li&gt;&lt;a href=&quot;#edital-direito&quot; aria-label=&quot;Child tag edital&amp;gt;direito&quot;&gt;edital&amp;gt;direito&lt;/a&gt;&lt;/li&gt;
+            
+            &lt;li&gt;&lt;a href=&quot;#direito-processual-penal&quot; aria-label=&quot;Child tag direito&amp;gt;processual-penal&quot;&gt;direito&amp;gt;processual-penal&lt;/a&gt;&lt;/li&gt;
             
             
         &lt;/ul&gt;
@@ -46672,11 +46692,40 @@ Pense duas vezes antes de se envolver.
         
         &lt;h2&gt;Parent tags:&lt;/h2&gt;
             
-            &lt;li&gt;&lt;a href=&quot;#edital&quot; aria-label=&quot;Parent tag edital&quot;&gt;edital&lt;/a&gt;&lt;/li&gt;
-            
             &lt;li&gt;&lt;a href=&quot;#direito&quot; aria-label=&quot;Parent tag direito&quot;&gt;direito&lt;/a&gt;&lt;/li&gt;
             
+            &lt;li&gt;&lt;a href=&quot;#edital&quot; aria-label=&quot;Parent tag edital&quot;&gt;edital&lt;/a&gt;&lt;/li&gt;
             
+            
+        &lt;/ul&gt;
+        &lt;ul class=&quot;search-link&quot;&gt;
+            
+        &lt;/ul&gt;
+        &lt;ul class=&quot;search-link&quot;&gt;
+        
+        &lt;/ul&gt;
+    &lt;/div&gt;
+    
+    
+    
+    &lt;div class=&quot;tag-list&quot; id=&quot;email&quot; aria-labelledby=&quot;email-heading&quot;&gt;
+        &lt;h1 id=&quot;email-heading&quot;&gt;
+            &lt;a href=&quot;#&quot; aria-label=&quot;Back to top&quot;&gt;email&lt;/a&gt;
+        &lt;/h1&gt;
+        &lt;ul class=&quot;search-link&quot;&gt;
+        
+            
+            &lt;li&gt;&lt;a href=&quot;/nickname&quot;&gt;
+                &lt;time datetime=&quot;2024-09-11T00:00:00+00:00&quot;&gt;&lt;strong&gt;September 11, 2024&lt;/strong&gt;&lt;/time&gt;
+                &amp;hArr;
+                
+                &lt;mark&gt;nickname&lt;/mark&gt;
+                
+            &lt;/a&gt;&lt;/li&gt;
+            
+        &lt;/ul&gt;
+        &lt;ul class=&quot;search-link&quot;&gt;
+        
         &lt;/ul&gt;
         &lt;ul class=&quot;search-link&quot;&gt;
             
@@ -46865,11 +46914,11 @@ Pense duas vezes antes de se envolver.
             
             &lt;h2&gt;Child tags:&lt;/h2&gt;
             
-            &lt;li&gt;&lt;a href=&quot;#tools-github-estudos&quot; aria-label=&quot;Child tag tools&amp;gt;github&amp;gt;estudos&quot;&gt;tools&amp;gt;github&amp;gt;estudos&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#jekyll&quot; aria-label=&quot;Child tag jekyll&quot;&gt;jekyll&lt;/a&gt;&lt;/li&gt;
             
             &lt;li&gt;&lt;a href=&quot;#github-jekyll&quot; aria-label=&quot;Child tag github&amp;gt;jekyll&quot;&gt;github&amp;gt;jekyll&lt;/a&gt;&lt;/li&gt;
             
-            &lt;li&gt;&lt;a href=&quot;#jekyll&quot; aria-label=&quot;Child tag jekyll&quot;&gt;jekyll&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#tools-github-estudos&quot; aria-label=&quot;Child tag tools&amp;gt;github&amp;gt;estudos&quot;&gt;tools&amp;gt;github&amp;gt;estudos&lt;/a&gt;&lt;/li&gt;
             
             
         &lt;/ul&gt;
@@ -47739,9 +47788,9 @@ Pense duas vezes antes de se envolver.
         
         &lt;h2&gt;Parent tags:&lt;/h2&gt;
             
-            &lt;li&gt;&lt;a href=&quot;#ai&quot; aria-label=&quot;Parent tag AI&quot;&gt;AI&lt;/a&gt;&lt;/li&gt;
-            
             &lt;li&gt;&lt;a href=&quot;#tools-ai&quot; aria-label=&quot;Parent tag tools&amp;gt;AI&quot;&gt;tools&amp;gt;AI&lt;/a&gt;&lt;/li&gt;
+            
+            &lt;li&gt;&lt;a href=&quot;#ai&quot; aria-label=&quot;Parent tag AI&quot;&gt;AI&lt;/a&gt;&lt;/li&gt;
             
             
         &lt;/ul&gt;
@@ -48329,21 +48378,21 @@ Pense duas vezes antes de se envolver.
             
             &lt;h2&gt;Child tags:&lt;/h2&gt;
             
-            &lt;li&gt;&lt;a href=&quot;#scripts-mobile&quot; aria-label=&quot;Child tag scripts&amp;gt;mobile&quot;&gt;scripts&amp;gt;mobile&lt;/a&gt;&lt;/li&gt;
-            
-            &lt;li&gt;&lt;a href=&quot;#scripts-google-apps-script&quot; aria-label=&quot;Child tag scripts&amp;gt;google-apps-script&quot;&gt;scripts&amp;gt;google-apps-script&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#scripts-cloud&quot; aria-label=&quot;Child tag scripts&amp;gt;cloud&quot;&gt;scripts&amp;gt;cloud&lt;/a&gt;&lt;/li&gt;
             
             &lt;li&gt;&lt;a href=&quot;#cloud&quot; aria-label=&quot;Child tag cloud&quot;&gt;cloud&lt;/a&gt;&lt;/li&gt;
             
-            &lt;li&gt;&lt;a href=&quot;#scripts-cloud&quot; aria-label=&quot;Child tag scripts&amp;gt;cloud&quot;&gt;scripts&amp;gt;cloud&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#ai&quot; aria-label=&quot;Child tag AI&quot;&gt;AI&lt;/a&gt;&lt;/li&gt;
+            
+            &lt;li&gt;&lt;a href=&quot;#scripts-google-apps-script&quot; aria-label=&quot;Child tag scripts&amp;gt;google-apps-script&quot;&gt;scripts&amp;gt;google-apps-script&lt;/a&gt;&lt;/li&gt;
+            
+            &lt;li&gt;&lt;a href=&quot;#mobile&quot; aria-label=&quot;Child tag mobile&quot;&gt;mobile&lt;/a&gt;&lt;/li&gt;
             
             &lt;li&gt;&lt;a href=&quot;#scripts-ai&quot; aria-label=&quot;Child tag scripts&amp;gt;AI&quot;&gt;scripts&amp;gt;AI&lt;/a&gt;&lt;/li&gt;
             
+            &lt;li&gt;&lt;a href=&quot;#scripts-mobile&quot; aria-label=&quot;Child tag scripts&amp;gt;mobile&quot;&gt;scripts&amp;gt;mobile&lt;/a&gt;&lt;/li&gt;
+            
             &lt;li&gt;&lt;a href=&quot;#google-apps-script&quot; aria-label=&quot;Child tag google-apps-script&quot;&gt;google-apps-script&lt;/a&gt;&lt;/li&gt;
-            
-            &lt;li&gt;&lt;a href=&quot;#ai&quot; aria-label=&quot;Child tag AI&quot;&gt;AI&lt;/a&gt;&lt;/li&gt;
-            
-            &lt;li&gt;&lt;a href=&quot;#mobile&quot; aria-label=&quot;Child tag mobile&quot;&gt;mobile&lt;/a&gt;&lt;/li&gt;
             
             
         &lt;/ul&gt;
@@ -48610,11 +48659,11 @@ Pense duas vezes antes de se envolver.
             
             &lt;li&gt;&lt;a href=&quot;#cloud&quot; aria-label=&quot;Child tag cloud&quot;&gt;cloud&lt;/a&gt;&lt;/li&gt;
             
-            &lt;li&gt;&lt;a href=&quot;#software-mobile&quot; aria-label=&quot;Child tag software&amp;gt;mobile&quot;&gt;software&amp;gt;mobile&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#mobile&quot; aria-label=&quot;Child tag mobile&quot;&gt;mobile&lt;/a&gt;&lt;/li&gt;
             
             &lt;li&gt;&lt;a href=&quot;#software-cloud&quot; aria-label=&quot;Child tag software&amp;gt;cloud&quot;&gt;software&amp;gt;cloud&lt;/a&gt;&lt;/li&gt;
             
-            &lt;li&gt;&lt;a href=&quot;#mobile&quot; aria-label=&quot;Child tag mobile&quot;&gt;mobile&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#software-mobile&quot; aria-label=&quot;Child tag software&amp;gt;mobile&quot;&gt;software&amp;gt;mobile&lt;/a&gt;&lt;/li&gt;
             
             
         &lt;/ul&gt;
@@ -48883,9 +48932,9 @@ Pense duas vezes antes de se envolver.
             
             &lt;h2&gt;Child tags:&lt;/h2&gt;
             
-            &lt;li&gt;&lt;a href=&quot;#iphone&quot; aria-label=&quot;Child tag iphone&quot;&gt;iphone&lt;/a&gt;&lt;/li&gt;
-            
             &lt;li&gt;&lt;a href=&quot;#tasks-iphone&quot; aria-label=&quot;Child tag tasks&amp;gt;iphone&quot;&gt;tasks&amp;gt;iphone&lt;/a&gt;&lt;/li&gt;
+            
+            &lt;li&gt;&lt;a href=&quot;#iphone&quot; aria-label=&quot;Child tag iphone&quot;&gt;iphone&lt;/a&gt;&lt;/li&gt;
             
             
         &lt;/ul&gt;
@@ -49049,13 +49098,13 @@ Pense duas vezes antes de se envolver.
             
             &lt;h2&gt;Child tags:&lt;/h2&gt;
             
-            &lt;li&gt;&lt;a href=&quot;#ai-prompt&quot; aria-label=&quot;Child tag AI&amp;gt;prompt&quot;&gt;AI&amp;gt;prompt&lt;/a&gt;&lt;/li&gt;
-            
             &lt;li&gt;&lt;a href=&quot;#tools-github-estudos&quot; aria-label=&quot;Child tag tools&amp;gt;github&amp;gt;estudos&quot;&gt;tools&amp;gt;github&amp;gt;estudos&lt;/a&gt;&lt;/li&gt;
             
-            &lt;li&gt;&lt;a href=&quot;#tools-ai-prompt&quot; aria-label=&quot;Child tag tools&amp;gt;AI&amp;gt;prompt&quot;&gt;tools&amp;gt;AI&amp;gt;prompt&lt;/a&gt;&lt;/li&gt;
-            
             &lt;li&gt;&lt;a href=&quot;#github-estudos&quot; aria-label=&quot;Child tag github&amp;gt;estudos&quot;&gt;github&amp;gt;estudos&lt;/a&gt;&lt;/li&gt;
+            
+            &lt;li&gt;&lt;a href=&quot;#ai-prompt&quot; aria-label=&quot;Child tag AI&amp;gt;prompt&quot;&gt;AI&amp;gt;prompt&lt;/a&gt;&lt;/li&gt;
+            
+            &lt;li&gt;&lt;a href=&quot;#tools-ai-prompt&quot; aria-label=&quot;Child tag tools&amp;gt;AI&amp;gt;prompt&quot;&gt;tools&amp;gt;AI&amp;gt;prompt&lt;/a&gt;&lt;/li&gt;
             
             
         &lt;/ul&gt;
@@ -49190,9 +49239,9 @@ Pense duas vezes antes de se envolver.
         
         &lt;h2&gt;Parent tags:&lt;/h2&gt;
             
-            &lt;li&gt;&lt;a href=&quot;#tools&quot; aria-label=&quot;Parent tag tools&quot;&gt;tools&lt;/a&gt;&lt;/li&gt;
-            
             &lt;li&gt;&lt;a href=&quot;#github&quot; aria-label=&quot;Parent tag github&quot;&gt;github&lt;/a&gt;&lt;/li&gt;
+            
+            &lt;li&gt;&lt;a href=&quot;#tools&quot; aria-label=&quot;Parent tag tools&quot;&gt;tools&lt;/a&gt;&lt;/li&gt;
             
             
         &lt;/ul&gt;
@@ -49317,6 +49366,24 @@ Pense duas vezes antes de se envolver.
     
     
     
+    
+    &lt;div class=&quot;search-link&quot;&gt;
+      &lt;h3&gt;
+        &lt;a class=&quot;post-heading&quot; href=&quot;#&quot; id=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;
+          &lt;img src=&quot;/assets/gold.ico&quot; alt=&quot;gold icon&quot; /&gt;
+        &lt;/a&gt;
+        2024-09-11
+         &amp;rightarrowtail; 11 Sep 2024
+        
+      &lt;/h3&gt;
+      &lt;ul&gt;
+        &lt;a href=&quot;/nickname/&quot;&gt;
+          &lt;h2&gt;
+            nickname
+          &lt;/h2&gt;
+        &lt;/a&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;
     
     &lt;div class=&quot;search-link&quot;&gt;
       &lt;h3&gt;
