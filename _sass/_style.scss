@@ -40,9 +40,7 @@ body {
     max-width: 100%;
     box-sizing: border-box;
     margin: 0;
-    border-left: 4em groove var(--heading-color-1);
-    border-right: 4em groove var(--heading-color-2);
-    padding: 1em;
+    padding: 0;
     background-color: var(--bg-default);
     color: var(--text-default);
     font-family: var(--ft);
@@ -67,10 +65,15 @@ body {
     --pagefind-ui-font: var(--ft);
 }
 
-.aside {
-    > * {
-        margin: 0.5em;
-    }
+aside {
+    box-sizing: border-box;
+    margin: 0;
+    border-left: 4em groove var(--heading-color-1);
+    border-right: 4em groove var(--heading-color-2);
+    padding: 1em;
+    width: -webkit-fill-available;
+    height: -webkit-fill-available;
+    max-width: 100%;
 }
 
 h1,
