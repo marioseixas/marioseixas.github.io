@@ -37,11 +37,12 @@
 body {
   box-sizing: border-box;
   width: 100vw;
+  max-width: 100%;	
   height: auto;
   min-height: 75vw;
   margin: 0;
-  border-left: 1em outset var(--bd-muted);
-  border-right: 1em outset var(--bd-muted);
+  border-left: 1em double var(--heading-color-1);
+  border-right: 1em double var(--heading-color-2);
   padding: 1em;
   background-color: var(--bg-default);
   color: var(--text-default);
