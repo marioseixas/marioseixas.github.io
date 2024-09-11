@@ -11,19 +11,20 @@ module Jekyll
 
     def render(context)
       site = context.registers[:site]
-      post = context.registers[:post]
-      app_id = "5fce21a3-9b85-4794-b6f6-e0eaaf788ced"
-      post_id = post['id']
-      post_url = "#{site.config['url']}#{post['url']}"
-      post_title = post['title']
+      page = context.registers[:page]
 
-      uri = URI.parse("https://cusdis.com/api/open/comments?appId=#{app_id}&pageId=#{post_id}")
+      app_id = "5fce21a3-9b85-4794-b6f6-e0eaaf788ced"
+      page_id = page['id']
+      page_url = "#{site.config['url']}#{site.config['baseurl']}#{page['url']}"
+      page_title = page['title']
+
+      uri = URI.parse("https://cusdis.com/api/open/comments?appId=#{app_id}&pageId=#{page_id}")
       response = Net::HTTP.get_response(uri)
 
       if response.is_a?(Net::HTTPSuccess)
         data = JSON.parse(response.body)
         Jekyll.logger.info "CusdisComments:", "Fetched comments data: #{data.inspect}"
-        render_comments(data, app_id, post_id, post_url, post_title)
+        render_comments(data, app_id, page_id, page_url, page_title)
       else
         Jekyll.logger.error "CusdisComments:", "Failed to load comments: #{response.message}"
         "<!-- Failed to load comments: #{response.message} -->"
@@ -35,15 +36,15 @@ module Jekyll
 
     private
 
-    def render_comments(data, app_id, post_id, post_url, post_title)
+    def render_comments(data, app_id, page_id, page_url, page_title)
       comments = extract_comments(data)
       <<-HTML
         <div id="cusdis_thread"
           data-host="https://cusdis.com"
           data-app-id="#{app_id}"
-          data-post-id="#{post_id}"
-          data-post-url="#{post_url}"
-          data-post-title="#{post_title}"
+          data-page-id="#{page_id}"
+          data-page-url="#{page_url}"
+          data-page-title="#{page_title}"
         >
           <h3>Comments (#{comments.length})</h3>
           #{render_comment_list(comments)}
@@ -77,7 +78,7 @@ module Jekyll
         <div class="comment">
           <p><strong>#{comment['by_nickname'] || 'Anonymous'}</strong></p>
           <p>#{comment['content'] || 'No content'}</p>
-          #{comment['post_title'] ? "<p>post: #{comment['post_title']}</p>" : ''}
+          #{comment['page_title'] ? "<p>Page: #{comment['page_title']}</p>" : ''}
           #{comment['project_title'] ? "<p>Project: #{comment['project_title']}</p>" : ''}
         </div>
       HTML
