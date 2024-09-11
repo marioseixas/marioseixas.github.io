@@ -44,7 +44,7 @@
     <title>infoBAG</title>
     <link href="https://ib.bsb.br/rss.xml" rel="self"/>
     <link href="https://ib.bsb.br/"/>
-    <updated>2024-09-11T14:42:55+00:00</updated>
+    <updated>2024-09-11T14:59:27+00:00</updated>
     <id>https://ib.bsb.br</id>
     <author>
         <name></name>
@@ -45858,9 +45858,9 @@ Pense duas vezes antes de se envolver.
             
             &lt;li&gt;&lt;a href=&quot;#ai-prompt&quot; aria-label=&quot;Child tag AI&amp;gt;prompt&quot;&gt;AI&amp;gt;prompt&lt;/a&gt;&lt;/li&gt;
             
-            &lt;li&gt;&lt;a href=&quot;#tools-ai-prompt&quot; aria-label=&quot;Child tag tools&amp;gt;AI&amp;gt;prompt&quot;&gt;tools&amp;gt;AI&amp;gt;prompt&lt;/a&gt;&lt;/li&gt;
-            
             &lt;li&gt;&lt;a href=&quot;#prompt&quot; aria-label=&quot;Child tag prompt&quot;&gt;prompt&lt;/a&gt;&lt;/li&gt;
+            
+            &lt;li&gt;&lt;a href=&quot;#tools-ai-prompt&quot; aria-label=&quot;Child tag tools&amp;gt;AI&amp;gt;prompt&quot;&gt;tools&amp;gt;AI&amp;gt;prompt&lt;/a&gt;&lt;/li&gt;
             
             
         &lt;/ul&gt;
@@ -46399,9 +46399,9 @@ Pense duas vezes antes de se envolver.
         
         &lt;h2&gt;Parent tags:&lt;/h2&gt;
             
-            &lt;li&gt;&lt;a href=&quot;#scripts&quot; aria-label=&quot;Parent tag scripts&quot;&gt;scripts&lt;/a&gt;&lt;/li&gt;
-            
             &lt;li&gt;&lt;a href=&quot;#software&quot; aria-label=&quot;Parent tag software&quot;&gt;software&lt;/a&gt;&lt;/li&gt;
+            
+            &lt;li&gt;&lt;a href=&quot;#scripts&quot; aria-label=&quot;Parent tag scripts&quot;&gt;scripts&lt;/a&gt;&lt;/li&gt;
             
             
         &lt;/ul&gt;
@@ -46592,9 +46592,9 @@ Pense duas vezes antes de se envolver.
             
             &lt;li&gt;&lt;a href=&quot;#direito&quot; aria-label=&quot;Child tag direito&quot;&gt;direito&lt;/a&gt;&lt;/li&gt;
             
-            &lt;li&gt;&lt;a href=&quot;#direito-processual-penal&quot; aria-label=&quot;Child tag direito&amp;gt;processual-penal&quot;&gt;direito&amp;gt;processual-penal&lt;/a&gt;&lt;/li&gt;
-            
             &lt;li&gt;&lt;a href=&quot;#edital-direito-processual-penal&quot; aria-label=&quot;Child tag edital&amp;gt;direito&amp;gt;processual-penal&quot;&gt;edital&amp;gt;direito&amp;gt;processual-penal&lt;/a&gt;&lt;/li&gt;
+            
+            &lt;li&gt;&lt;a href=&quot;#direito-processual-penal&quot; aria-label=&quot;Child tag direito&amp;gt;processual-penal&quot;&gt;direito&amp;gt;processual-penal&lt;/a&gt;&lt;/li&gt;
             
             
         &lt;/ul&gt;
@@ -46672,9 +46672,9 @@ Pense duas vezes antes de se envolver.
         
         &lt;h2&gt;Parent tags:&lt;/h2&gt;
             
-            &lt;li&gt;&lt;a href=&quot;#edital&quot; aria-label=&quot;Parent tag edital&quot;&gt;edital&lt;/a&gt;&lt;/li&gt;
-            
             &lt;li&gt;&lt;a href=&quot;#direito&quot; aria-label=&quot;Parent tag direito&quot;&gt;direito&lt;/a&gt;&lt;/li&gt;
+            
+            &lt;li&gt;&lt;a href=&quot;#edital&quot; aria-label=&quot;Parent tag edital&quot;&gt;edital&lt;/a&gt;&lt;/li&gt;
             
             
         &lt;/ul&gt;
@@ -47616,9 +47616,9 @@ Pense duas vezes antes de se envolver.
         
         &lt;h2&gt;Parent tags:&lt;/h2&gt;
             
-            &lt;li&gt;&lt;a href=&quot;#scripts&quot; aria-label=&quot;Parent tag scripts&quot;&gt;scripts&lt;/a&gt;&lt;/li&gt;
-            
             &lt;li&gt;&lt;a href=&quot;#software&quot; aria-label=&quot;Parent tag software&quot;&gt;software&lt;/a&gt;&lt;/li&gt;
+            
+            &lt;li&gt;&lt;a href=&quot;#scripts&quot; aria-label=&quot;Parent tag scripts&quot;&gt;scripts&lt;/a&gt;&lt;/li&gt;
             
             
         &lt;/ul&gt;
@@ -47739,9 +47739,9 @@ Pense duas vezes antes de se envolver.
         
         &lt;h2&gt;Parent tags:&lt;/h2&gt;
             
-            &lt;li&gt;&lt;a href=&quot;#tools-ai&quot; aria-label=&quot;Parent tag tools&amp;gt;AI&quot;&gt;tools&amp;gt;AI&lt;/a&gt;&lt;/li&gt;
-            
             &lt;li&gt;&lt;a href=&quot;#ai&quot; aria-label=&quot;Parent tag AI&quot;&gt;AI&lt;/a&gt;&lt;/li&gt;
+            
+            &lt;li&gt;&lt;a href=&quot;#tools-ai&quot; aria-label=&quot;Parent tag tools&amp;gt;AI&quot;&gt;tools&amp;gt;AI&lt;/a&gt;&lt;/li&gt;
             
             
         &lt;/ul&gt;
@@ -48329,21 +48329,21 @@ Pense duas vezes antes de se envolver.
             
             &lt;h2&gt;Child tags:&lt;/h2&gt;
             
-            &lt;li&gt;&lt;a href=&quot;#scripts-ai&quot; aria-label=&quot;Child tag scripts&amp;gt;AI&quot;&gt;scripts&amp;gt;AI&lt;/a&gt;&lt;/li&gt;
-            
-            &lt;li&gt;&lt;a href=&quot;#scripts-mobile&quot; aria-label=&quot;Child tag scripts&amp;gt;mobile&quot;&gt;scripts&amp;gt;mobile&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#cloud&quot; aria-label=&quot;Child tag cloud&quot;&gt;cloud&lt;/a&gt;&lt;/li&gt;
             
             &lt;li&gt;&lt;a href=&quot;#mobile&quot; aria-label=&quot;Child tag mobile&quot;&gt;mobile&lt;/a&gt;&lt;/li&gt;
             
-            &lt;li&gt;&lt;a href=&quot;#cloud&quot; aria-label=&quot;Child tag cloud&quot;&gt;cloud&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#google-apps-script&quot; aria-label=&quot;Child tag google-apps-script&quot;&gt;google-apps-script&lt;/a&gt;&lt;/li&gt;
             
-            &lt;li&gt;&lt;a href=&quot;#ai&quot; aria-label=&quot;Child tag AI&quot;&gt;AI&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#scripts-mobile&quot; aria-label=&quot;Child tag scripts&amp;gt;mobile&quot;&gt;scripts&amp;gt;mobile&lt;/a&gt;&lt;/li&gt;
             
             &lt;li&gt;&lt;a href=&quot;#scripts-cloud&quot; aria-label=&quot;Child tag scripts&amp;gt;cloud&quot;&gt;scripts&amp;gt;cloud&lt;/a&gt;&lt;/li&gt;
             
-            &lt;li&gt;&lt;a href=&quot;#google-apps-script&quot; aria-label=&quot;Child tag google-apps-script&quot;&gt;google-apps-script&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#scripts-ai&quot; aria-label=&quot;Child tag scripts&amp;gt;AI&quot;&gt;scripts&amp;gt;AI&lt;/a&gt;&lt;/li&gt;
             
             &lt;li&gt;&lt;a href=&quot;#scripts-google-apps-script&quot; aria-label=&quot;Child tag scripts&amp;gt;google-apps-script&quot;&gt;scripts&amp;gt;google-apps-script&lt;/a&gt;&lt;/li&gt;
+            
+            &lt;li&gt;&lt;a href=&quot;#ai&quot; aria-label=&quot;Child tag AI&quot;&gt;AI&lt;/a&gt;&lt;/li&gt;
             
             
         &lt;/ul&gt;
@@ -48608,13 +48608,13 @@ Pense duas vezes antes de se envolver.
             
             &lt;h2&gt;Child tags:&lt;/h2&gt;
             
-            &lt;li&gt;&lt;a href=&quot;#software-cloud&quot; aria-label=&quot;Child tag software&amp;gt;cloud&quot;&gt;software&amp;gt;cloud&lt;/a&gt;&lt;/li&gt;
-            
             &lt;li&gt;&lt;a href=&quot;#mobile&quot; aria-label=&quot;Child tag mobile&quot;&gt;mobile&lt;/a&gt;&lt;/li&gt;
             
-            &lt;li&gt;&lt;a href=&quot;#cloud&quot; aria-label=&quot;Child tag cloud&quot;&gt;cloud&lt;/a&gt;&lt;/li&gt;
-            
             &lt;li&gt;&lt;a href=&quot;#software-mobile&quot; aria-label=&quot;Child tag software&amp;gt;mobile&quot;&gt;software&amp;gt;mobile&lt;/a&gt;&lt;/li&gt;
+            
+            &lt;li&gt;&lt;a href=&quot;#software-cloud&quot; aria-label=&quot;Child tag software&amp;gt;cloud&quot;&gt;software&amp;gt;cloud&lt;/a&gt;&lt;/li&gt;
+            
+            &lt;li&gt;&lt;a href=&quot;#cloud&quot; aria-label=&quot;Child tag cloud&quot;&gt;cloud&lt;/a&gt;&lt;/li&gt;
             
             
         &lt;/ul&gt;
@@ -48883,9 +48883,9 @@ Pense duas vezes antes de se envolver.
             
             &lt;h2&gt;Child tags:&lt;/h2&gt;
             
-            &lt;li&gt;&lt;a href=&quot;#iphone&quot; aria-label=&quot;Child tag iphone&quot;&gt;iphone&lt;/a&gt;&lt;/li&gt;
-            
             &lt;li&gt;&lt;a href=&quot;#tasks-iphone&quot; aria-label=&quot;Child tag tasks&amp;gt;iphone&quot;&gt;tasks&amp;gt;iphone&lt;/a&gt;&lt;/li&gt;
+            
+            &lt;li&gt;&lt;a href=&quot;#iphone&quot; aria-label=&quot;Child tag iphone&quot;&gt;iphone&lt;/a&gt;&lt;/li&gt;
             
             
         &lt;/ul&gt;
@@ -49049,13 +49049,13 @@ Pense duas vezes antes de se envolver.
             
             &lt;h2&gt;Child tags:&lt;/h2&gt;
             
-            &lt;li&gt;&lt;a href=&quot;#github-estudos&quot; aria-label=&quot;Child tag github&amp;gt;estudos&quot;&gt;github&amp;gt;estudos&lt;/a&gt;&lt;/li&gt;
-            
-            &lt;li&gt;&lt;a href=&quot;#tools-github-estudos&quot; aria-label=&quot;Child tag tools&amp;gt;github&amp;gt;estudos&quot;&gt;tools&amp;gt;github&amp;gt;estudos&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#tools-ai-prompt&quot; aria-label=&quot;Child tag tools&amp;gt;AI&amp;gt;prompt&quot;&gt;tools&amp;gt;AI&amp;gt;prompt&lt;/a&gt;&lt;/li&gt;
             
             &lt;li&gt;&lt;a href=&quot;#ai-prompt&quot; aria-label=&quot;Child tag AI&amp;gt;prompt&quot;&gt;AI&amp;gt;prompt&lt;/a&gt;&lt;/li&gt;
             
-            &lt;li&gt;&lt;a href=&quot;#tools-ai-prompt&quot; aria-label=&quot;Child tag tools&amp;gt;AI&amp;gt;prompt&quot;&gt;tools&amp;gt;AI&amp;gt;prompt&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#tools-github-estudos&quot; aria-label=&quot;Child tag tools&amp;gt;github&amp;gt;estudos&quot;&gt;tools&amp;gt;github&amp;gt;estudos&lt;/a&gt;&lt;/li&gt;
+            
+            &lt;li&gt;&lt;a href=&quot;#github-estudos&quot; aria-label=&quot;Child tag github&amp;gt;estudos&quot;&gt;github&amp;gt;estudos&lt;/a&gt;&lt;/li&gt;
             
             
         &lt;/ul&gt;
@@ -49190,9 +49190,9 @@ Pense duas vezes antes de se envolver.
         
         &lt;h2&gt;Parent tags:&lt;/h2&gt;
             
-            &lt;li&gt;&lt;a href=&quot;#github&quot; aria-label=&quot;Parent tag github&quot;&gt;github&lt;/a&gt;&lt;/li&gt;
-            
             &lt;li&gt;&lt;a href=&quot;#tools&quot; aria-label=&quot;Parent tag tools&quot;&gt;tools&lt;/a&gt;&lt;/li&gt;
+            
+            &lt;li&gt;&lt;a href=&quot;#github&quot; aria-label=&quot;Parent tag github&quot;&gt;github&lt;/a&gt;&lt;/li&gt;
             
             
         &lt;/ul&gt;
@@ -53372,29 +53372,80 @@ function restoreTextBox()
         <link href="https://ib.bsb.br/rm-space/"/>
         <updated>1991-07-25T00:00:00+00:00</updated>
         <id>https://ib.bsb.br/rm-space/</id>
-        <content type="html">&lt;script src=&quot;https://phrasefix.com/dist/js/jquery.min.js&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;
-
-&lt;h2 class=&quot;text-center&quot;&gt;Remove Leading and Trailing Space Tool&lt;/h2&gt;
-&lt;script&gt;
-var _0x2c21c3=_0x2945;(function(_0x4ec64b,_0x4aebf9){var _0x4056b7=_0x2945,_0x2bcca2=_0x4ec64b();while(!![]){try{var _0x235149=-parseInt(_0x4056b7(0x142))/0x1+-parseInt(_0x4056b7(0x132))/0x2*(-parseInt(_0x4056b7(0x12e))/0x3)+-parseInt(_0x4056b7(0x13e))/0x4*(-parseInt(_0x4056b7(0x143))/0x5)+parseInt(_0x4056b7(0x13b))/0x6*(parseInt(_0x4056b7(0x12b))/0x7)+parseInt(_0x4056b7(0x147))/0x8+-parseInt(_0x4056b7(0x127))/0x9*(-parseInt(_0x4056b7(0x144))/0xa)+-parseInt(_0x4056b7(0x12c))/0xb;if(_0x235149===_0x4aebf9)break;else _0x2bcca2[&apos;push&apos;](_0x2bcca2[&apos;shift&apos;]());}catch(_0x5de0c1){_0x2bcca2[&apos;push&apos;](_0x2bcca2[&apos;shift&apos;]());}}}(_0x5609,0x653ce));function clear_all(){var _0x43dcda=_0x2945;document[_0x43dcda(0x135)][&apos;results&apos;][_0x43dcda(0x140)]=&apos;&apos;,document[_0x43dcda(0x135)][_0x43dcda(0x11b)][_0x43dcda(0x140)]=&apos;&apos;,document[_0x43dcda(0x120)](_0x43dcda(0x131))[_0x43dcda(0x13a)]=_0x43dcda(0x121),document[_0x43dcda(0x120)](_0x43dcda(0x11f))[&apos;innerHTML&apos;]=_0x43dcda(0x139),document[_0x43dcda(0x120)](_0x43dcda(0x146))[_0x43dcda(0x13a)]=_0x43dcda(0x125),document[&apos;getElementById&apos;](_0x43dcda(0x124))[_0x43dcda(0x13a)]=_0x43dcda(0x148),document[&apos;getElementById&apos;](_0x43dcda(0x126))[_0x43dcda(0x13a)]=_0x43dcda(0x11e),document[_0x43dcda(0x120)](_0x43dcda(0x129))[_0x43dcda(0x13a)]=_0x43dcda(0x119);}function download_results(){var _0xb36ad2=_0x2945;this[&apos;saveTextAsFile&apos;](document[_0xb36ad2(0x135)][_0xb36ad2(0x11c)][_0xb36ad2(0x140)],&apos;phrasefix-com.txt&apos;);}function copy_results(){var _0xd88ae5=_0x2945;return document[_0xd88ae5(0x135)][_0xd88ae5(0x11c)][&apos;select&apos;](),document[_0xd88ae5(0x12d)](_0xd88ae5(0x14a)),document[_0xd88ae5(0x120)](_0xd88ae5(0x11a))[_0xd88ae5(0x13a)]=&apos;&lt;div\x20class=\x22alert\x20alert-success\x22\x20role=\x22alert\x22\x20style=\x22display:\x20block;\x22;&gt;&lt;b&gt;Text\x20copied\x20to\x20clipboard!&lt;/b&gt;&lt;/div&gt;&apos;,document[_0xd88ae5(0x120)](_0xd88ae5(0x11a))[_0xd88ae5(0x14b)][&apos;display&apos;]=_0xd88ae5(0x141),setTimeout(function(){var _0x21ed58=_0xd88ae5;document[_0x21ed58(0x120)](_0x21ed58(0x11a))[_0x21ed58(0x14b)][_0x21ed58(0x12a)]=_0x21ed58(0x123);},0x1194),![];}function _0x2945(_0x2c3ac2,_0x3b5a3a){var _0x56097c=_0x5609();return _0x2945=function(_0x29459c,_0x410f55){_0x29459c=_0x29459c-0x118;var _0x59078c=_0x56097c[_0x29459c];return _0x59078c;},_0x2945(_0x2c3ac2,_0x3b5a3a);}function _0x5609(){var _0x30512c=[&apos;execCommand&apos;,&apos;3oBeaIu&apos;,&apos;&apos;,&apos;text/plain&apos;,&apos;characterCount&apos;,&apos;1062156EcWsfE&apos;,&apos;webkitURL&apos;,&apos;createObjectURL&apos;,&apos;script&apos;,&apos;location&apos;,&apos;split&apos;,&apos;Download\x20File&apos;,&apos;Character\x20Count\x20(without\x20spaces):\x200&apos;,&apos;innerHTML&apos;,&apos;1002UPBSwf&apos;,&apos;fix&apos;,&apos;download&apos;,&apos;52uBoRaE&apos;,&apos;URL&apos;,&apos;value&apos;,&apos;block&apos;,&apos;766506YQQUjk&apos;,&apos;217145nyJecN&apos;,&apos;50hXlltm&apos;,&apos;createElement&apos;,&apos;wordCount&apos;,&apos;5802904LwZPul&apos;,&apos;Sentence\x20Count:\x200&apos;,&apos;appendChild&apos;,&apos;copy&apos;,&apos;style&apos;,&apos;href&apos;,&apos;Line\x20Count:\x200&apos;,&apos;copied&apos;,&apos;input&apos;,&apos;results&apos;,&apos;trim&apos;,&apos;Paragraph\x20Count:\x200&apos;,&apos;characterCountns&apos;,&apos;getElementById&apos;,&apos;Character\x20Count:\x200&apos;,&apos;body&apos;,&apos;none&apos;,&apos;sentenceCount&apos;,&apos;Word\x20Count:\x200&apos;,&apos;paragraphCount&apos;,&apos;327105VseFxq&apos;,&apos;indexOf&apos;,&apos;lineCount&apos;,&apos;display&apos;,&apos;7609sVZjhq&apos;,&apos;11034056kWozjT&apos;];_0x5609=function(){return _0x30512c;};return _0x5609();}function phraseFix(){var _0x2ce1e0=_0x2945,_0x37652f=document[_0x2ce1e0(0x135)][_0x2ce1e0(0x11b)][&apos;value&apos;];_0x37652f=_0x37652f[_0x2ce1e0(0x137)](/\n/)[&apos;map&apos;](function(_0x45f4a5){var _0x12bcc7=_0x2ce1e0;return _0x45f4a5[_0x12bcc7(0x11d)]();})[&apos;join&apos;](&apos;\x0a&apos;),document[_0x2ce1e0(0x135)][_0x2ce1e0(0x11c)][_0x2ce1e0(0x140)]=_0x37652f;}function saveTextAsFile(_0x30d70a,_0x4a16bd){var _0xf62c4e=_0x2945,_0x27e552=new Blob([_0x30d70a],{&apos;type&apos;:_0xf62c4e(0x130)}),_0x4ef417=document[_0xf62c4e(0x145)](&apos;a&apos;);_0x4ef417[_0xf62c4e(0x13d)]=_0x4a16bd,_0x4ef417[_0xf62c4e(0x13a)]=_0xf62c4e(0x138),window[_0xf62c4e(0x133)]!=null?_0x4ef417[_0xf62c4e(0x118)]=window[_0xf62c4e(0x133)][_0xf62c4e(0x134)](_0x27e552):(_0x4ef417[_0xf62c4e(0x118)]=window[_0xf62c4e(0x13f)][_0xf62c4e(0x134)](_0x27e552),_0x4ef417[&apos;onclick&apos;]=destroyClickedElement,_0x4ef417[_0xf62c4e(0x14b)][_0xf62c4e(0x12a)]=_0xf62c4e(0x123),document[_0xf62c4e(0x122)][_0xf62c4e(0x149)](_0x4ef417)),_0x4ef417[&apos;click&apos;]();}if(window[_0x2c21c3(0x136)][&apos;href&apos;][_0x2c21c3(0x128)](_0x2c21c3(0x13c))!=-0x1){}else window[_0x2c21c3(0x136)][_0x2c21c3(0x118)]=_0x2c21c3(0x12f);&lt;/script&gt;
-
-&lt;form name=&quot;script&quot;&gt;
-&lt;textarea name=&quot;input&quot; id=&quot;input&quot; rows=&quot;10&quot; class=&quot;form-control border-0 form-control-lg shadow-sm&quot; placeholder=&quot;Type or paste your content here&quot; onkeyup=&quot;phraseFix();&quot;&gt;&lt;/textarea&gt;
-Stats: &lt;span id=&quot;characterCount&quot; class=&quot;badge badge-light&quot;&gt;Character Count: 0&lt;/span&gt; 
-&lt;span id=&quot;characterCountns&quot; class=&quot;badge badge-light&quot;&gt;Character Count (without spaces): 0&lt;/span&gt;
-&lt;span id=&quot;wordCount&quot; class=&quot;badge badge-light&quot;&gt;Word Count: 0&lt;/span&gt;
-&lt;span id=&quot;sentenceCount&quot; class=&quot;badge badge-light&quot;&gt;Sentence Count: 0&lt;/span&gt;
-&lt;span id=&quot;paragraphCount&quot; class=&quot;badge badge-light&quot;&gt;Paragraph Count: 0&lt;/span&gt;
-&lt;span id=&quot;lineCount&quot; class=&quot;badge badge-light&quot;&gt;Line Count: 0&lt;/span&gt;
-&lt;div class=&quot; pt-2&quot;&gt;&lt;/div&gt;
-&lt;textarea name=&quot;results&quot; id=&quot;results&quot; rows=&quot;10&quot; class=&quot;form-control border-0 form-control-lg shadow-sm&quot; placeholder=&quot;Results will be shown here.&quot;&gt;&lt;/textarea&gt;
-&lt;div class=&quot; pt-2&quot;&gt;
-&lt;input type=&quot;button&quot; style=&quot; margin-bottom:5px;&quot; class=&quot;btn btn-primary&quot; onclick=&quot;copy_results();&quot; value=&quot;Copy Results&quot; /&gt;
-&lt;input type=&quot;button&quot; style=&quot; margin-bottom:5px;&quot; class=&quot;btn btn-primary&quot; onclick=&quot;clear_all();&quot; value=&quot;Clear&quot; /&gt;
-&lt;input type=&quot;button&quot; style=&quot; margin-bottom:5px;&quot; class=&quot;btn btn-primary&quot; onclick=&quot;download_results();&quot; value=&quot;Download&quot; /&gt;
-&lt;/div&gt;
-&lt;div id=&quot;copied&quot;&gt;&lt;/div&gt;
-&lt;/form&gt;
+        <content type="html">&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;            &amp;lt;script src=&quot;https://phrasefix.com/dist/js/jquery.min.js&quot; type=&quot;text/javascript&quot;&amp;gt;&amp;lt;/script&amp;gt;
+            &amp;lt;h2 class=&quot;text-center&quot;&amp;gt;Remove Leading and Trailing Space Tool&amp;lt;/h2&amp;gt;
+            &amp;lt;script&amp;gt;
+                function clear_all() {
+                    var _0x43dcda = _0x2945;
+                    document[_0x43dcda(0x135)][&apos;results&apos;][_0x43dcda(0x140)] = &apos;&apos;,
+                    document[_0x43dcda(0x135)][_0x43dcda(0x11b)][_0x43dcda(0x140)] = &apos;&apos;,
+                    document[_0x43dcda(0x120)](_0x43dcda(0x131))[_0x43dcda(0x13a)] = _0x43dcda(0x121),
+                    document[_0x43dcda(0x120)](_0x43dcda(0x11f))[&apos;innerHTML&apos;] = _0x43dcda(0x139),
+                    document[_0x43dcda(0x120)](_0x43dcda(0x146))[_0x43dcda(0x13a)] = _0x43dcda(0x125),
+                    document[&apos;getElementById&apos;](_0x43dcda(0x124))[_0x43dcda(0x13a)] = _0x43dcda(0x148),
+                    document[&apos;getElementById&apos;](_0x43dcda(0x126))[_0x43dcda(0x13a)] = _0x43dcda(0x11e),
+                    document[_0x43dcda(0x120)](_0x43dcda(0x129))[_0x43dcda(0x13a)] = _0x43dcda(0x119);
+                }
+                function download_results() {
+                    var _0xb36ad2 = _0x2945;
+                    this[&apos;saveTextAsFile&apos;](document[_0xb36ad2(0x135)][_0xb36ad2(0x11c)][_0xb36ad2(0x140)], &apos;phrasefix-com.txt&apos;);
+                }
+                function copy_results() {
+                    var _0xd88ae5 = _0x2945;
+                    return document[_0xd88ae5(0x135)][_0xd88ae5(0x11c)][&apos;select&apos;](),
+                    document[_0xd88ae5(0x12d)](_0xd88ae5(0x14a)),
+                    document[_0xd88ae5(0x120)](_0xd88ae5(0x11a))[_0xd88ae5(0x13a)] = &apos;&amp;lt;div\x20class=\x22alert\x20alert-success\x22\x20role=\x22alert\x22\x20style=\x22display:\x20block;\x22;&amp;gt;&amp;lt;b&amp;gt;Text\x20copied\x20to\x20clipboard!&amp;lt;/b&amp;gt;&amp;lt;/div&amp;gt;&apos;,
+                    document[_0xd88ae5(0x120)](_0xd88ae5(0x11a))[_0xd88ae5(0x14b)][&apos;display&apos;] = _0xd88ae5(0x141),
+                    setTimeout(function() {
+                        var _0x21ed58 = _0xd88ae5;
+                        document[_0x21ed58(0x120)](_0x21ed58(0x11a))[_0x21ed58(0x14b)][_0x21ed58(0x12a)] = _0x21ed58(0x123);
+                    }, 0x1194),
+                    ![];
+                }
+                function phraseFix() {
+                    var _0x2ce1e0 = _0x2945
+                      , _0x37652f = document[_0x2ce1e0(0x135)][_0x2ce1e0(0x11b)][&apos;value&apos;];
+                    _0x37652f = _0x37652f[_0x2ce1e0(0x137)](/\n/)[&apos;map&apos;](function(_0x45f4a5) {
+                        var _0x12bcc7 = _0x2ce1e0;
+                        return _0x45f4a5[_0x12bcc7(0x11d)]();
+                    })[&apos;join&apos;](&apos;\x0a&apos;),
+                    document[_0x2ce1e0(0x135)][_0x2ce1e0(0x11c)][_0x2ce1e0(0x140)] = _0x37652f;
+                }
+                function saveTextAsFile(_0x30d70a, _0x4a16bd) {
+                    var _0xf62c4e = _0x2945
+                      , _0x27e552 = new Blob([_0x30d70a],{
+                        &apos;type&apos;: _0xf62c4e(0x130)
+                    })
+                      , _0x4ef417 = document[_0xf62c4e(0x145)](&apos;a&apos;);
+                    _0x4ef417[_0xf62c4e(0x13d)] = _0x4a16bd,
+                    _0x4ef417[_0xf62c4e(0x13a)] = _0xf62c4e(0x138),
+                    window[_0xf62c4e(0x133)] != null ? _0x4ef417[_0xf62c4e(0x118)] = window[_0xf62c4e(0x133)][_0xf62c4e(0x134)](_0x27e552) : (_0x4ef417[_0xf62c4e(0x118)] = window[_0xf62c4e(0x13f)][_0xf62c4e(0x134)](_0x27e552),
+                    _0x4ef417[&apos;onclick&apos;] = destroyClickedElement,
+                    _0x4ef417[_0xf62c4e(0x14b)][_0xf62c4e(0x12a)] = _0xf62c4e(0x123),
+                    document[_0xf62c4e(0x122)][_0xf62c4e(0x149)](_0x4ef417)),
+                    _0x4ef417[&apos;click&apos;]();
+                }
+                if (window[_0x2c21c3(0x136)][&apos;href&apos;][_0x2c21c3(0x128)](_0x2c21c3(0x13c)) != -0x1) {} else
+                    window[_0x2c21c3(0x136)][_0x2c21c3(0x118)] = _0x2c21c3(0x12f);
+            &amp;lt;/script&amp;gt;
+            &amp;lt;form name=&quot;script&quot;&amp;gt;
+                &amp;lt;textarea name=&quot;input&quot; id=&quot;input&quot; rows=&quot;10&quot; class=&quot;form-control border-0 form-control-lg shadow-sm&quot; placeholder=&quot;Type or paste your content here&quot; onkeyup=&quot;phraseFix();&quot;&amp;gt;&amp;lt;/textarea&amp;gt;
+                Stats: &amp;lt;span id=&quot;characterCount&quot; class=&quot;badge badge-light&quot;&amp;gt;Character Count: 0&amp;lt;/span&amp;gt;
+                &amp;lt;span id=&quot;characterCountns&quot; class=&quot;badge badge-light&quot;&amp;gt;Character Count (without spaces): 0&amp;lt;/span&amp;gt;
+                &amp;lt;span id=&quot;wordCount&quot; class=&quot;badge badge-light&quot;&amp;gt;Word Count: 0&amp;lt;/span&amp;gt;
+                &amp;lt;span id=&quot;sentenceCount&quot; class=&quot;badge badge-light&quot;&amp;gt;Sentence Count: 0&amp;lt;/span&amp;gt;
+                &amp;lt;span id=&quot;paragraphCount&quot; class=&quot;badge badge-light&quot;&amp;gt;Paragraph Count: 0&amp;lt;/span&amp;gt;
+                &amp;lt;span id=&quot;lineCount&quot; class=&quot;badge badge-light&quot;&amp;gt;Line Count: 0&amp;lt;/span&amp;gt;
+                &amp;lt;div class=&quot; pt-2&quot;&amp;gt;&amp;lt;/div&amp;gt;
+                &amp;lt;textarea name=&quot;results&quot; id=&quot;results&quot; rows=&quot;10&quot; class=&quot;form-control border-0 form-control-lg shadow-sm&quot; placeholder=&quot;Results will be shown here.&quot;&amp;gt;&amp;lt;/textarea&amp;gt;
+                &amp;lt;div class=&quot; pt-2&quot;&amp;gt;
+                    &amp;lt;input type=&quot;button&quot; style=&quot; margin-bottom:5px;&quot; class=&quot;btn btn-primary&quot; onclick=&quot;copy_results();&quot; value=&quot;Copy Results&quot;/&amp;gt;
+                    &amp;lt;input type=&quot;button&quot; style=&quot; margin-bottom:5px;&quot; class=&quot;btn btn-primary&quot; onclick=&quot;clear_all();&quot; value=&quot;Clear&quot;/&amp;gt;
+                    &amp;lt;input type=&quot;button&quot; style=&quot; margin-bottom:5px;&quot; class=&quot;btn btn-primary&quot; onclick=&quot;download_results();&quot; value=&quot;Download&quot;/&amp;gt;
+                &amp;lt;/div&amp;gt;
+                &amp;lt;div id=&quot;copied&quot;&amp;gt;&amp;lt;/div&amp;gt;
+            &amp;lt;/form&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 </content>
     </entry>
     
