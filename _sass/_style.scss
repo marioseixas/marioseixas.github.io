@@ -675,12 +675,13 @@ a {
 .mermaid {
   display: block;
   border: 1px dotted var(--accents-amethyst);
-  padding: 0.5em 1em;
+  padding: 0;
   overflow: visible;
   position: relative;
   width: 100%;
   max-width: 100%;
   aspect-ratio: 4 / 3;
+  margin: 0;
 }
 code[class*="language-"],
 section[class*="language-"] {
