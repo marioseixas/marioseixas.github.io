@@ -330,26 +330,10 @@ nav.header-content {
     border: 1px solid #000000;
     color: #000000;
   }
-
   .edgePath .path,
   .edgePath .arrowheadPath {
     stroke: #000000;
   }
-
-.favicon {
-  background-color: rgba(var(--accents-dodgerblue), 0.1);
-  border: 1px dotted var(--accents-dodgerblue);
-  border-radius: var(--bd-radius);
-  display: inherit;
-  padding: 0.5em;
-  transition: all 0.3s ease;
-
-  &:hover,
-  &:focus {
-    background-color: rgba(var(--accents-dodgerblue), 0.2);
-    transform: scale(1.05);
-  }
-}
   .node rect,
   .node circle,
   .node ellipse,
@@ -613,6 +597,21 @@ img {
     width: auto;
     max-width: 100%;
     height: auto;
+    
+  .favicon {
+      background-color: rgba(var(--accents-dodgerblue), 0.1);
+      border: 1px dotted var(--accents-dodgerblue);
+      border-radius: var(--bd-radius);
+      display: inherit;
+      padding: 0.5em;
+      transition: all 0.3s ease;
+      
+    &:hover,
+    &:focus {
+        background-color: rgba(var(--accents-dodgerblue), 0.2);
+        transform: scale(1.05);
+      }
+    }
 }
 
 img[align="left"] {
