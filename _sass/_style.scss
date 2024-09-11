@@ -591,27 +591,26 @@ select {
   position: relative;
 }
 
+favicon {
+    background-color: rgba(var(--accents-dodgerblue), 0.1);
+    border: 1px dotted var(--accents-dodgerblue);
+    border-radius: var(--bd-radius);
+    display: inherit;
+    padding: 0.5em;
+    transition: all 0.3s ease;  
+  &:hover,
+  &:focus {
+      background-color: rgba(var(--accents-dodgerblue), 0.2);
+      transform: scale(1.05);
+    }
+}
+
 img {
     display: inline-block;
     position: relative;
     width: auto;
     max-width: 100%;
     height: auto;
-    
-  .favicon {
-      background-color: rgba(var(--accents-dodgerblue), 0.1);
-      border: 1px dotted var(--accents-dodgerblue);
-      border-radius: var(--bd-radius);
-      display: inherit;
-      padding: 0.5em;
-      transition: all 0.3s ease;
-      
-    &:hover,
-    &:focus {
-        background-color: rgba(var(--accents-dodgerblue), 0.2);
-        transform: scale(1.05);
-      }
-    }
 }
 
 img[align="left"] {
