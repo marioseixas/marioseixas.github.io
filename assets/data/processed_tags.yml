@@ -1367,6 +1367,10 @@ trabalho:
   children: !!set {}
   parents: !!set {}
   posts:
+  - date: 2024-09-11 00:00:00
+    highlighted: true
+    title: Checklist BATrinca
+    url: /checklist-batrinca
   - date: 2024-07-14 00:00:00
     highlighted: true
     title: Procedimentos de Escolta Dedicada
