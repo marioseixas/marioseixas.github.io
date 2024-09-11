@@ -44,26 +44,27 @@
     </header>
     <article class="post-wrapper">
       <main class="content">
-        <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;div class="editor-container"&gt;
-    &lt;div class="editor-ui"&gt;
-        &lt;textarea id="input-data" placeholder="Paste your text here..."&gt;&lt;/textarea&gt;
-    &lt;/div&gt;
-    &lt;div&gt;
-        &lt;button class="convert-btn" id="remove-duplicate-spaces" onclick="remove_duplicate_spaces()"&gt;Remove Duplicate Spaces&lt;/button&gt;
-        &lt;button class="convert-btn" id="copy-btn" onclick="copyTextToClipboard()"&gt;Copy&lt;/button&gt;
-    &lt;/div&gt;
-    &lt;div class="editor-ui"&gt;
-        &lt;textarea id="result" placeholder="Result will show here..." readonly&gt;&lt;/textarea&gt;
-    &lt;/div&gt;
-&lt;/div&gt;
-&lt;script type="text/javascript"&gt;
+        <div class="editor-container">
+    <div class="editor-ui">
+        <textarea id="input-data" placeholder="Paste your text here..."></textarea>
+    </div>
+    <div>
+        <button class="convert-btn" id="remove-duplicate-spaces" onclick="remove_duplicate_spaces()">Remove Duplicate Spaces</button>
+        <button class="convert-btn" id="copy-btn" onclick="copyTextToClipboard()">Copy</button>
+    </div>
+    <div class="editor-ui">
+        <textarea id="result" placeholder="Result will show here..." readonly=""></textarea>
+    </div>
+</div>
+<script type="text/javascript">
     function remove_duplicate_spaces() {
         var input_data = document.getElementById("input-data");
         var result = document.getElementById("result");
         result.value = input_data.value.replace(/\s+/g,' ');
     }
-&lt;/script&gt;
-&lt;script&gt;
+</script>
+
+<script>
     function fallbackCopyTextToClipboard(text) {
         var textArea = document.createElement("textarea");
         textArea.value = text;
@@ -102,8 +103,8 @@
             console.error('Async: Could not copy text: ', err);
         });
     }
-&lt;/script&gt;
-</code></pre></div></div>
+</script>
+
 
       </main>
     </article>
