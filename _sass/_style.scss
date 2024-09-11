@@ -35,46 +35,47 @@
 }
 
 body {
-  box-sizing: border-box;
-  width: 100%;
-  max-width: 100%;	
-  height: auto;
-  margin: 0;
-  border-left: 1em double var(--heading-color-1);
-  border-right: 1em double var(--heading-color-2);
-  padding: 1em;
-  background-color: var(--bg-default);
-  color: var(--text-default);
-  font-family: var(--ft);
-  font-size: 16px;
-  line-height: var(--line-height-base);
-  hyphens: auto;
-  overflow-wrap: break-word;
-  text-rendering: optimizeLegibility;
-  word-break: break-word;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  --pagefind-ui-scale: 1;
-  --pagefind-ui-background: var(--bg-default);
-  --pagefind-ui-border-width: 2px;
-  --pagefind-ui-border-radius: 0.1875rem;
-  --pagefind-ui-image-border-radius: 0.1875rem;
-  --pagefind-ui-image-box-ratio: 3 / 2;
-  --pagefind-ui-primary: #C6C6C6;
-  --pagefind-ui-text: #C6C6C6;
-  --pagefind-ui-border: #111111;
-  --pagefind-ui-tag: #111111;
-  --pagefind-ui-font: var(--ft);
+    aspect-ratio: 4 / 3;
+    height: auto;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    margin: 0;
+    border-left: 1em double var(--heading-color-1);
+    border-right: 1em double var(--heading-color-2);
+    padding: 1em;
+    background-color: var(--bg-default);
+    color: var(--text-default);
+    font-family: var(--ft);
+    font-size: 16px;
+    line-height: var(--line-height-base);
+    hyphens: auto;
+    overflow-wrap: break-word;
+    text-rendering: optimizeLegibility;
+    word-break: break-word;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    --pagefind-ui-scale: 1;
+    --pagefind-ui-background: var(--bg-default);
+    --pagefind-ui-border-width: 2px;
+    --pagefind-ui-border-radius: 0.1875rem;
+    --pagefind-ui-image-border-radius: 0.1875rem;
+    --pagefind-ui-image-box-ratio: 3 / 2;
+    --pagefind-ui-primary: #C6C6C6;
+    --pagefind-ui-text: #C6C6C6;
+    --pagefind-ui-border: #111111;
+    --pagefind-ui-tag: #111111;
+    --pagefind-ui-font: var(--ft);
 
-  @media screen and (max-width: 768px) {
-    font-size: 14px;
-  }
+    @media screen and (max-width: 768px) {
+        font-size: 14px;
+    }
 }
 
 .aside {
-  > * {
-    margin: 0.5em;
-  }
+    > * {
+        margin: 0.5em;
+    }
 }
 
 h1,
@@ -594,14 +595,33 @@ select {
   position: relative;
 }
 
-iframe {
-  display: block;
-  overflow: hidden;
+.iframe-container {
   position: relative;
   width: 100%;
   max-width: 100%;
-  object-fit: contain;
-  height: auto;
+  overflow: hidden;
+
+  // Fallback for older browsers using padding to maintain aspect ratio
+  padding-top: 75%; // 75% padding equals height as 75% of the width
+
+  iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  // Modern approach using aspect-ratio
+  @supports (aspect-ratio: 4 / 3) {
+    padding-top: 0;  // Remove padding when aspect-ratio is supported
+    iframe {
+      position: static;  // Reset position since padding-top is no longer in effect
+      aspect-ratio: 4 / 3;  // 4:3 aspect ratio gives height as 75% of width
+      height: auto;  // Allow height to adjust automatically based on aspect-ratio
+    }
+  }
 }
 
 img[align="left"] {
