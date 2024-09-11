@@ -36,10 +36,9 @@
 
 body {
   box-sizing: border-box;
-  width: 100vw;
+  width: 100%;
   max-width: 100%;	
   height: auto;
-  min-height: 75vw;
   margin: 0;
   border-left: 1em double var(--heading-color-1);
   border-right: 1em double var(--heading-color-2);
@@ -599,10 +598,10 @@ iframe {
   display: block;
   overflow: hidden;
   position: relative;
-  width: 100vw;
+  width: 100%;
   max-width: 100%;
   object-fit: contain;
-  height: 75vw;
+  height: auto;
 }
 
 img[align="left"] {
