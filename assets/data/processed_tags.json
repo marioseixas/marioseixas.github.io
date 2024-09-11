@@ -704,14 +704,14 @@
     "scripts": {
         "parents": [],
         "children": [
-            "scripts>cloud",
             "google-apps-script",
+            "scripts>cloud",
             "scripts>AI",
-            "cloud",
-            "AI",
-            "mobile",
+            "scripts>mobile",
             "scripts>google-apps-script",
-            "scripts>mobile"
+            "mobile",
+            "cloud",
+            "AI"
         ],
         "related": {
             "linux": 26,
@@ -959,9 +959,9 @@
         "parents": [],
         "children": [
             "tools>AI>prompt",
+            "github>estudos",
             "AI>prompt",
-            "tools>github>estudos",
-            "github>estudos"
+            "tools>github>estudos"
         ],
         "related": {},
         "posts": [
@@ -1148,8 +1148,8 @@
         "parents": [],
         "children": [
             "mobile",
-            "cloud",
             "software>mobile",
+            "cloud",
             "software>cloud"
         ],
         "related": {},
@@ -1310,8 +1310,8 @@
     "tasks": {
         "parents": [],
         "children": [
-            "iphone",
-            "tasks>iphone"
+            "tasks>iphone",
+            "iphone"
         ],
         "related": {},
         "posts": [
@@ -1435,8 +1435,8 @@
         ],
         "children": [
             "prompt",
-            "AI>prompt",
-            "tools>AI>prompt"
+            "tools>AI>prompt",
+            "AI>prompt"
         ],
         "related": {},
         "posts": [
@@ -1548,9 +1548,9 @@
     "github": {
         "parents": [],
         "children": [
-            "jekyll",
             "github>jekyll",
-            "tools>github>estudos"
+            "tools>github>estudos",
+            "jekyll"
         ],
         "related": {},
         "posts": [
@@ -1695,8 +1695,8 @@
     "edital": {
         "parents": [],
         "children": [
-            "direito",
             "direito>processual-penal",
+            "direito",
             "edital>direito>processual-penal",
             "edital>direito"
         ],
