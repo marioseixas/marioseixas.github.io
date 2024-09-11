@@ -36,7 +36,6 @@
 
 body {
     aspect-ratio: 4 / 3;
-    height: auto;
     width: 100%;
     max-width: 100%;
     box-sizing: border-box;
@@ -581,18 +580,25 @@ figcaption {
   font: caption;
 }
 
-img,
 canvas,
 video,
 svg,
 select {
   display: inline-block;
   width: -webkit-fill-available;
-  height: auto;
+  height: -webkit-fill-available;
   max-width: 100%;
   overflow: hidden;
   object-fit: contain;
   position: relative;
+}
+
+img {
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
 }
 
 img[align="left"] {
