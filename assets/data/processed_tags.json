@@ -704,14 +704,14 @@
     "scripts": {
         "parents": [],
         "children": [
-            "scripts>AI",
-            "mobile",
             "google-apps-script",
             "scripts>cloud",
-            "scripts>google-apps-script",
-            "scripts>mobile",
+            "mobile",
             "cloud",
-            "AI"
+            "scripts>AI",
+            "AI",
+            "scripts>google-apps-script",
+            "scripts>mobile"
         ],
         "related": {
             "linux": 26,
@@ -958,9 +958,9 @@
     "tools": {
         "parents": [],
         "children": [
+            "AI>prompt",
             "tools>AI>prompt",
             "github>estudos",
-            "AI>prompt",
             "tools>github>estudos"
         ],
         "related": {},
@@ -1148,8 +1148,8 @@
         "parents": [],
         "children": [
             "software>mobile",
-            "mobile",
             "cloud",
+            "mobile",
             "software>cloud"
         ],
         "related": {},
@@ -1397,8 +1397,8 @@
     },
     "AI>prompt": {
         "parents": [
-            "tools",
-            "AI"
+            "AI",
+            "tools"
         ],
         "children": [],
         "related": {},
@@ -1434,9 +1434,9 @@
             "scripts"
         ],
         "children": [
-            "tools>AI>prompt",
+            "prompt",
             "AI>prompt",
-            "prompt"
+            "tools>AI>prompt"
         ],
         "related": {},
         "posts": [
@@ -1697,8 +1697,8 @@
         "children": [
             "edital>direito",
             "direito",
-            "direito>processual-penal",
-            "edital>direito>processual-penal"
+            "edital>direito>processual-penal",
+            "direito>processual-penal"
         ],
         "related": {},
         "posts": [
@@ -1845,8 +1845,8 @@
     },
     "edital>direito>processual-penal": {
         "parents": [
-            "edital",
-            "direito"
+            "direito",
+            "edital"
         ],
         "children": [],
         "related": {},
@@ -1982,8 +1982,8 @@
     },
     "tools>AI>prompt": {
         "parents": [
-            "tools",
-            "AI"
+            "AI",
+            "tools"
         ],
         "children": [],
         "related": {},
