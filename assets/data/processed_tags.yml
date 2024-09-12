@@ -1197,6 +1197,10 @@ tasks:
     tasks>iphone: null
   parents: !!set {}
   posts:
+  - date: 2024-09-12 00:00:00
+    highlighted: true
+    title: MLO setup using Ratz Computed-Score Algorithm
+    url: /mlo-ratz
   - date: *id032
     highlighted: false
     title: MLO URL schemes
