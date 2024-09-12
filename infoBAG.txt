@@ -681,3 +681,9 @@ ib.bsb.br/mlo-setup-using-ratzs-computed-score-algorithm/
 
 ib.bsb.br/mlo-ratz/
 =====
+
+
+=====
+
+ib.bsb.br/urls-list-text-scraper/
+=====
