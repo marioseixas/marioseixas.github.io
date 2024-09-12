@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.3">Jekyll</generator><link href="https://ib.bsb.br/feed.xml" rel="self" type="application/atom+xml" /><link href="https://ib.bsb.br/" rel="alternate" type="text/html" /><updated>2024-09-12T11:24:00+00:00</updated><id>https://ib.bsb.br/feed.xml</id><title type="html">infoBAG</title><entry><title type="html">MLO setup using Ratz Computed-Score Algorithm</title><link href="https://ib.bsb.br/mlo-ratz/" rel="alternate" type="text/html" title="MLO setup using Ratz Computed-Score Algorithm" /><published>2024-09-12T00:00:00+00:00</published><updated>2024-09-12T11:23:18+00:00</updated><id>https://ib.bsb.br/mlo-ratz</id><content type="html" xml:base="https://ib.bsb.br/mlo-ratz/"><![CDATA[<blockquote>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.3">Jekyll</generator><link href="https://ib.bsb.br/feed.xml" rel="self" type="application/atom+xml" /><link href="https://ib.bsb.br/" rel="alternate" type="text/html" /><updated>2024-09-12T12:37:42+00:00</updated><id>https://ib.bsb.br/feed.xml</id><title type="html">infoBAG</title><entry><title type="html">MLO setup using Ratz Computed-Score Algorithm</title><link href="https://ib.bsb.br/mlo-ratz/" rel="alternate" type="text/html" title="MLO setup using Ratz Computed-Score Algorithm" /><published>2024-09-12T00:00:00+00:00</published><updated>2024-09-12T11:23:18+00:00</updated><id>https://ib.bsb.br/mlo-ratz</id><content type="html" xml:base="https://ib.bsb.br/mlo-ratz/"><![CDATA[<blockquote>
   <p>Reference: <code class="language-plaintext highlighter-rouge">https://groups.google.com/g/mylifeorganized/c/3RjdJkYRKL8</code></p>
 </blockquote>
 
@@ -249,7 +249,117 @@
 <hr />
 
 <h3 id="conclusion"><strong>Conclusion:</strong></h3>
-<p>By following this step-by-step setup, and remembering to <strong>only set importance for tasks with siblings</strong>, you can leverage <strong>Ratz’s Computed-Score Priority system</strong> to manage tasks based on <strong>importance</strong> and <strong>urgency</strong> in a natural and controlled way. This approach avoids artificial urgency boosts and ensures that your task list reflects the true priorities of your work, without over-complicating the task hierarchy.</p>]]></content><author><name></name></author><category term="tasks" /><summary type="html"><![CDATA[Reference: https://groups.google.com/g/mylifeorganized/c/3RjdJkYRKL8]]></summary></entry><entry><title type="html">Checklist BATrinca</title><link href="https://ib.bsb.br/checklist-batrinca/" rel="alternate" type="text/html" title="Checklist BATrinca" /><published>2024-09-11T00:00:00+00:00</published><updated>2024-09-11T15:22:49+00:00</updated><id>https://ib.bsb.br/checklist-batrinca</id><content type="html" xml:base="https://ib.bsb.br/checklist-batrinca/"><![CDATA[<section data-filename="markdown_code-block.md" data-code="1. INTRODUÇÃO
+<p>By following this step-by-step setup, and remembering to <strong>only set importance for tasks with siblings</strong>, you can leverage <strong>Ratz’s Computed-Score Priority system</strong> to manage tasks based on <strong>importance</strong> and <strong>urgency</strong> in a natural and controlled way. This approach avoids artificial urgency boosts and ensures that your task list reflects the true priorities of your work, without over-complicating the task hierarchy.</p>]]></content><author><name></name></author><category term="tasks" /><summary type="html"><![CDATA[Reference: https://groups.google.com/g/mylifeorganized/c/3RjdJkYRKL8]]></summary></entry><entry><title type="html">URLs list text scraper</title><link href="https://ib.bsb.br/urls-list-text-scraper/" rel="alternate" type="text/html" title="URLs list text scraper" /><published>2024-09-12T00:00:00+00:00</published><updated>2024-09-12T12:37:03+00:00</updated><id>https://ib.bsb.br/urls-list-text-scraper</id><content type="html" xml:base="https://ib.bsb.br/urls-list-text-scraper/"><![CDATA[<p>Reference: <code class="language-plaintext highlighter-rouge">https://github.com/kitsuyui/scraper</code></p>
+
+<p>To download the text content of multiple URLs from a list on Windows 11, we’ll create a PowerShell script that’s more robust and flexible than the previously suggested batch file. This approach leverages PowerShell’s strengths and provides better error handling and output formatting.</p>
+
+<ol>
+  <li>First, ensure you have <code class="language-plaintext highlighter-rouge">scraper.exe</code> set up:
+    <ul>
+      <li>Download the latest Windows executable from https://github.com/kitsuyui/scraper/releases/latest</li>
+      <li>Rename it to <code class="language-plaintext highlighter-rouge">scraper.exe</code> and place it in a directory that’s in your system PATH</li>
+    </ul>
+  </li>
+  <li>Create a file named <code class="language-plaintext highlighter-rouge">scraper-config.json</code> with the following content:
+    <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">[</span><span class="w">
+  </span><span class="p">{</span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"xpath"</span><span class="p">,</span><span class="w"> </span><span class="nl">"label"</span><span class="p">:</span><span class="w"> </span><span class="s2">"BodyText"</span><span class="p">,</span><span class="w"> </span><span class="nl">"query"</span><span class="p">:</span><span class="w"> </span><span class="s2">"//body//text()"</span><span class="p">}</span><span class="w">
+</span><span class="p">]</span><span class="w">
+</span></code></pre></div>    </div>
+  </li>
+  <li>Create a text file named <code class="language-plaintext highlighter-rouge">urls.txt</code> with one URL per line:
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>https://example.com
+https://another-example.com
+https://third-example.com
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Create a new file named <code class="language-plaintext highlighter-rouge">Scrape-Urls.ps1</code> with the following PowerShell script:</p>
+
+    <div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Scrape-Urls.ps1</span><span class="w">
+</span><span class="kr">param</span><span class="p">(</span><span class="w">
+    </span><span class="p">[</span><span class="n">string</span><span class="p">]</span><span class="nv">$UrlFile</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"urls.txt"</span><span class="p">,</span><span class="w">
+    </span><span class="p">[</span><span class="n">string</span><span class="p">]</span><span class="nv">$ConfigFile</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"scraper-config.json"</span><span class="p">,</span><span class="w">
+    </span><span class="p">[</span><span class="n">string</span><span class="p">]</span><span class="nv">$OutputDir</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"scraped_content"</span><span class="w">
+</span><span class="p">)</span><span class="w">
+
+</span><span class="c"># Ensure the output directory exists</span><span class="w">
+</span><span class="n">New-Item</span><span class="w"> </span><span class="nt">-ItemType</span><span class="w"> </span><span class="nx">Directory</span><span class="w"> </span><span class="nt">-Force</span><span class="w"> </span><span class="nt">-Path</span><span class="w"> </span><span class="nv">$OutputDir</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">Out-Null</span><span class="w">
+
+</span><span class="c"># Read URLs from file</span><span class="w">
+</span><span class="nv">$urls</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Get-Content</span><span class="w"> </span><span class="nv">$UrlFile</span><span class="w">
+
+</span><span class="kr">foreach</span><span class="w"> </span><span class="p">(</span><span class="nv">$url</span><span class="w"> </span><span class="kr">in</span><span class="w"> </span><span class="nv">$urls</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="kr">try</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="n">Write-Host</span><span class="w"> </span><span class="s2">"Processing: </span><span class="nv">$url</span><span class="s2">"</span><span class="w">
+           
+        </span><span class="c"># Generate a safe filename</span><span class="w">
+        </span><span class="nv">$filename</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="nv">$url</span><span class="w"> </span><span class="o">-replace</span><span class="w"> </span><span class="s2">"https?://"</span><span class="p">,</span><span class="w"> </span><span class="s2">""</span><span class="w"> </span><span class="o">-replace</span><span class="w"> </span><span class="s2">"[^a-zA-Z0-9]+"</span><span class="p">,</span><span class="w"> </span><span class="s2">"_"</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s2">".txt"</span><span class="w">
+        </span><span class="nv">$outputPath</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Join-Path</span><span class="w"> </span><span class="nv">$OutputDir</span><span class="w"> </span><span class="nv">$filename</span><span class="w">
+
+        </span><span class="c"># Download and scrape content</span><span class="w">
+        </span><span class="nv">$content</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Invoke-WebRequest</span><span class="w"> </span><span class="nt">-Uri</span><span class="w"> </span><span class="nv">$url</span><span class="w"> </span><span class="nt">-UseBasicParsing</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">Select-Object</span><span class="w"> </span><span class="nt">-ExpandProperty</span><span class="w"> </span><span class="nx">Content</span><span class="w">
+        </span><span class="nv">$scrapedContent</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">$content</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">scraper</span><span class="w"> </span><span class="nt">-c</span><span class="w"> </span><span class="nv">$ConfigFile</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">ConvertFrom-Json</span><span class="w">
+
+        </span><span class="c"># Extract text from JSON and save</span><span class="w">
+        </span><span class="nv">$bodyText</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">$scrapedContent</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">Where-Object</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="bp">$_</span><span class="o">.</span><span class="nf">label</span><span class="w"> </span><span class="o">-eq</span><span class="w"> </span><span class="s2">"BodyText"</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">Select-Object</span><span class="w"> </span><span class="nt">-ExpandProperty</span><span class="w"> </span><span class="nx">results</span><span class="w">
+        </span><span class="nv">$bodyText</span><span class="w"> </span><span class="o">-join</span><span class="w"> </span><span class="s2">" "</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">Out-File</span><span class="w"> </span><span class="nt">-FilePath</span><span class="w"> </span><span class="nv">$outputPath</span><span class="w">
+
+        </span><span class="n">Write-Host</span><span class="w"> </span><span class="s2">"Saved to: </span><span class="nv">$outputPath</span><span class="s2">"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+    </span><span class="kr">catch</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="n">Write-Host</span><span class="w"> </span><span class="s2">"Error processing </span><span class="nv">$url</span><span class="s2"> : </span><span class="bp">$_</span><span class="s2">"</span><span class="w"> </span><span class="nt">-ForegroundColor</span><span class="w"> </span><span class="nx">Red</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+    </span><span class="n">Write-Host</span><span class="w">
+</span><span class="p">}</span><span class="w">
+
+</span><span class="n">Write-Host</span><span class="w"> </span><span class="s2">"All URLs processed."</span><span class="w"> </span><span class="nt">-ForegroundColor</span><span class="w"> </span><span class="nx">Green</span><span class="w">
+</span></code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Open PowerShell and navigate to the directory containing your script and files.</p>
+  </li>
+  <li>Run the script:
+    <div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">.</span><span class="n">\Scrape-Urls.ps1</span><span class="w">
+</span></code></pre></div>    </div>
+  </li>
+</ol>
+
+<p>This improved solution offers several advantages:</p>
+
+<ul>
+  <li>It uses PowerShell, which is more powerful and flexible than batch scripts on Windows.</li>
+  <li>It includes error handling to manage issues with individual URLs without stopping the entire process.</li>
+  <li>It creates a separate output directory for scraped content, keeping things organized.</li>
+  <li>It generates safe filenames based on the URLs, avoiding potential naming conflicts or invalid characters.</li>
+  <li>It extracts the actual text content from the JSON output, providing clean text files.</li>
+  <li>It’s more customizable, allowing you to specify different input files, config files, or output directories.</li>
+</ul>
+
+<p>Additional notes:</p>
+
+<ol>
+  <li>
+    <p>This script respects rate limiting by processing URLs sequentially. For a large number of URLs, consider adding a delay between requests.</p>
+  </li>
+  <li>
+    <p>Some websites may block or behave differently with automated requests. You might need to add user-agent headers or other modifications for certain sites:</p>
+
+    <div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$headers</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">@{</span><span class="w">
+    </span><span class="s2">"User-Agent"</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span><span class="nv">$content</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Invoke-WebRequest</span><span class="w"> </span><span class="nt">-Uri</span><span class="w"> </span><span class="nv">$url</span><span class="w"> </span><span class="nt">-UseBasicParsing</span><span class="w"> </span><span class="nt">-Headers</span><span class="w"> </span><span class="nv">$headers</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">Select-Object</span><span class="w"> </span><span class="nt">-ExpandProperty</span><span class="w"> </span><span class="nx">Content</span><span class="w">
+</span></code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Always ensure you have permission to scrape the websites you’re targeting and that you’re complying with their terms of service and robots.txt files.</p>
+  </li>
+  <li>
+    <p>For very large lists of URLs, consider implementing parallel processing or breaking the list into smaller batches to improve efficiency.</p>
+  </li>
+  <li>
+    <p>You may want to add more robust URL validation and error checking, depending on your specific needs and the reliability of your URL list.</p>
+  </li>
+</ol>]]></content><author><name></name></author><category term="scripts&gt;powershell, software&gt;windows" /><summary type="html"><![CDATA[Reference: https://github.com/kitsuyui/scraper]]></summary></entry><entry><title type="html">Checklist BATrinca</title><link href="https://ib.bsb.br/checklist-batrinca/" rel="alternate" type="text/html" title="Checklist BATrinca" /><published>2024-09-11T00:00:00+00:00</published><updated>2024-09-11T15:22:49+00:00</updated><id>https://ib.bsb.br/checklist-batrinca</id><content type="html" xml:base="https://ib.bsb.br/checklist-batrinca/"><![CDATA[<section data-filename="markdown_code-block.md" data-code="1. INTRODUÇÃO
 [ ] Data e hora da ocorrência
 [ ] Local (km, rodovia, sentido e município)  
 [ ] Coordenadas geográficas (latitude e longitude) do ponto central do local do acidente
@@ -1391,80 +1501,4 @@ Services: bashful-withered-violet-7m68@in.mailgrip.io
 
 Please create Gmail filters that capture emails from the specified senders and domains, categorizing them accordingly and setting up the forwarding rules as outlined. Once the filters are created, please provide a summary of each filter and its purpose. If any adjustments are needed, let me know. I would like to use this process again for categorizing new emails from other domains in the future.
 
-</code></pre></div></div>]]></content><author><name></name></author><category term="AI&gt;prompt" /><summary type="html"><![CDATA[Step-by-Step Prompt for Email Categorization and Filtering Objective: To categorize incoming emails from various domains into predefined categories and set up Gmail filters for forwarding.]]></summary></entry><entry><title type="html">How to use the `dd` command to create a bootable USB drive from an ISO file on a Linux-based system</title><link href="https://ib.bsb.br/how-to-use-the-dd-command-to-create-a-bootable-usb-drive-from-an-iso-file-on-a-linux-based-system/" rel="alternate" type="text/html" title="How to use the `dd` command to create a bootable USB drive from an ISO file on a Linux-based system" /><published>2024-08-02T00:00:00+00:00</published><updated>2024-08-02T01:15:37+00:00</updated><id>https://ib.bsb.br/how-to-use-the-dd-command-to-create-a-bootable-usb-drive-from-an-iso-file-on-a-linux-based-system</id><content type="html" xml:base="https://ib.bsb.br/how-to-use-the-dd-command-to-create-a-bootable-usb-drive-from-an-iso-file-on-a-linux-based-system/"><![CDATA[<h3 id="prerequisites">Prerequisites</h3>
-
-<ol>
-  <li><strong>ISO File</strong>: Ensure you have downloaded the Windows ISO file you want to use.</li>
-  <li><strong>USB Drive</strong>: Insert a USB drive into your computer. Confirm that it has sufficient space for the ISO file and back up any important data, as this process will erase the USB drive.</li>
-  <li><strong>Terminal Access</strong>: You need access to a terminal or command line interface.</li>
-</ol>
-
-<h3 id="step-by-step-guide">Step-by-Step Guide</h3>
-
-<h4 id="step-1-identify-the-usb-drive">Step 1: Identify the USB Drive</h4>
-
-<ol>
-  <li>Open a terminal.</li>
-  <li>
-    <p>Run the following command to list all connected drives:</p>
-
-    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>lsblk
-</code></pre></div>    </div>
-
-    <p>This command displays a list of block devices. Identify your USB drive by its size and name, which will typically be listed as <code class="language-plaintext highlighter-rouge">/dev/sdb</code>, <code class="language-plaintext highlighter-rouge">/dev/sdc</code>, etc. Ensure you correctly identify the USB drive to avoid overwriting other drives.</p>
-  </li>
-</ol>
-
-<h4 id="step-2-unmount-the-usb-drive">Step 2: Unmount the USB Drive</h4>
-
-<p>Before writing to the USB drive, you need to unmount it. Replace <code class="language-plaintext highlighter-rouge">/dev/sdX1</code> with the actual partition of your USB drive (e.g., <code class="language-plaintext highlighter-rouge">/dev/sdb1</code>).</p>
-
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>umount /dev/sdX1
-</code></pre></div></div>
-
-<p>If your USB drive has multiple partitions, you may need to unmount all of them. You can unmount all partitions of the USB drive using:</p>
-
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>umount /dev/sdX<span class="k">*</span>
-</code></pre></div></div>
-
-<h4 id="step-3-write-the-iso-to-the-usb-drive">Step 3: Write the ISO to the USB Drive</h4>
-
-<p>Now, you can use the <code class="language-plaintext highlighter-rouge">dd</code> command to write the ISO file to the USB drive. Replace <code class="language-plaintext highlighter-rouge">/path/to/your.iso</code> with the path to your ISO file and <code class="language-plaintext highlighter-rouge">/dev/sdX</code> with your USB drive (without the partition number).</p>
-
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo dd </span><span class="k">if</span><span class="o">=</span>/path/to/your.iso <span class="nv">of</span><span class="o">=</span>/dev/sdX <span class="nv">bs</span><span class="o">=</span>4M <span class="nv">status</span><span class="o">=</span>progress
-</code></pre></div></div>
-
-<ul>
-  <li><code class="language-plaintext highlighter-rouge">if=</code>: Input file (the ISO file).</li>
-  <li><code class="language-plaintext highlighter-rouge">of=</code>: Output file (the USB drive).</li>
-  <li><code class="language-plaintext highlighter-rouge">bs=4M</code>: Sets the block size to 4 megabytes, which can speed up the process.</li>
-  <li><code class="language-plaintext highlighter-rouge">status=progress</code>: Displays the progress of the operation.</li>
-</ul>
-
-<p><strong>Important Note</strong>: Ensure that you do not include a partition number (like <code class="language-plaintext highlighter-rouge">sdX1</code>) in the <code class="language-plaintext highlighter-rouge">of=</code> parameter, as writing to a partition instead of the whole drive can lead to an incomplete or non-bootable USB.</p>
-
-<h4 id="step-4-wait-for-the-process-to-complete">Step 4: Wait for the Process to Complete</h4>
-
-<p>The <code class="language-plaintext highlighter-rouge">dd</code> command will take some time to complete, depending on the size of the ISO and the speed of your USB drive. Once it finishes, you will see a summary of how many bytes were copied.</p>
-
-<h4 id="step-5-sync-and-eject-the-usb-drive">Step 5: Sync and Eject the USB Drive</h4>
-
-<p>After the <code class="language-plaintext highlighter-rouge">dd</code> command completes, it’s a good practice to ensure all data is written to the USB drive before removing it. Run the following command:</p>
-
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sync</span>
-</code></pre></div></div>
-
-<p>This command flushes the file system buffers, ensuring that all data is written to the USB drive.</p>
-
-<p>Now you can safely eject the USB drive:</p>
-
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>eject /dev/sdX
-</code></pre></div></div>
-
-<h3 id="important-considerations">Important Considerations</h3>
-
-<ul>
-  <li><strong>Double-Check Device Names</strong>: Be very careful with the <code class="language-plaintext highlighter-rouge">of=</code> parameter. If you specify the wrong device, you could overwrite important data on your hard drive.</li>
-  <li><strong>Data Loss Warning</strong>: This process will erase all data on the specified USB drive. Make sure to back up any important files before proceeding.</li>
-  <li><strong>Booting from USB</strong>: After creating the bootable USB drive, you can boot from it by changing the boot order in your BIOS/UEFI settings. You may need to press a specific key (like F2, F12, ESC, or DEL) during startup to access the boot menu.</li>
-</ul>]]></content><author><name></name></author><category term="linux" /><summary type="html"><![CDATA[Prerequisites]]></summary></entry></feed>
+</code></pre></div></div>]]></content><author><name></name></author><category term="AI&gt;prompt" /><summary type="html"><![CDATA[Step-by-Step Prompt for Email Categorization and Filtering Objective: To categorize incoming emails from various domains into predefined categories and set up Gmail filters for forwarding.]]></summary></entry></feed>

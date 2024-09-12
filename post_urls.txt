@@ -1,2 +1,2 @@
 
-ib.bsb.br/mlo-setup-using-ratzs-computed-score-algorithm/
+ib.bsb.br/mlo-ratz/
