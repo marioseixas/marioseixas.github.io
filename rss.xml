@@ -44,11 +44,267 @@
     <title>infoBAG</title>
     <link href="https://ib.bsb.br/rss.xml" rel="self"/>
     <link href="https://ib.bsb.br/"/>
-    <updated>2024-09-11T15:23:17+00:00</updated>
+    <updated>2024-09-12T11:19:32+00:00</updated>
     <id>https://ib.bsb.br</id>
     <author>
         <name></name>
     </author>
+    
+    <entry>
+        <title></title>
+        <link href="https://ib.bsb.br/2024-09-12-mlo-setup-using-ratzs-computed-score-algorithm/"/>
+        <updated>2024-09-12T11:19:32+00:00</updated>
+        <id>https://ib.bsb.br/2024-09-12-mlo-setup-using-ratzs-computed-score-algorithm/</id>
+        <content type="html">&lt;h4 id=&quot;1-structure-your-task-hierarchy&quot;&gt;&lt;strong&gt;1. Structure Your Task Hierarchy&lt;/strong&gt;&lt;/h4&gt;
+&lt;p&gt;Start by building a clear task hierarchy where each &lt;strong&gt;parent task&lt;/strong&gt; is broken down into &lt;strong&gt;subtasks&lt;/strong&gt;. This structure will help you localize the prioritization process, making it easier to manage tasks in relation to their parent task.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Create a logical outline&lt;/strong&gt; of your tasks. Each &lt;strong&gt;project&lt;/strong&gt; or &lt;strong&gt;major goal&lt;/strong&gt; should be a &lt;strong&gt;parent task&lt;/strong&gt; at the top level, with &lt;strong&gt;subtasks&lt;/strong&gt; underneath it that contribute to completing the parent task.&lt;/p&gt;
+
+    &lt;p&gt;&lt;strong&gt;Example&lt;/strong&gt;:&lt;/p&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;strong&gt;Parent Task&lt;/strong&gt;: Write a Research Paper
+        &lt;ul&gt;
+          &lt;li&gt;&lt;strong&gt;Subtask 1&lt;/strong&gt;: Conduct Research&lt;/li&gt;
+          &lt;li&gt;&lt;strong&gt;Subtask 2&lt;/strong&gt;: Write Introduction&lt;/li&gt;
+          &lt;li&gt;&lt;strong&gt;Subtask 3&lt;/strong&gt;: Write Body&lt;/li&gt;
+          &lt;li&gt;&lt;strong&gt;Subtask 4&lt;/strong&gt;: Proofread and Edit&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;h4 id=&quot;2-only-set-importance-for-tasks-with-siblings&quot;&gt;&lt;strong&gt;2. Only Set Importance for Tasks with Siblings&lt;/strong&gt;&lt;/h4&gt;
+&lt;p&gt;To keep the system efficient and avoid unnecessary complexity, &lt;strong&gt;Ratz&lt;/strong&gt; advises &lt;strong&gt;only setting importance for tasks that have siblings&lt;/strong&gt;. This means you should focus on comparing tasks that are at the &lt;strong&gt;same level&lt;/strong&gt; under the same &lt;strong&gt;parent task&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;If a task has no siblings&lt;/strong&gt;, you &lt;strong&gt;don’t need to set its importance&lt;/strong&gt; manually. It will &lt;strong&gt;automatically inherit&lt;/strong&gt; the importance of its parent task.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;If a task has siblings&lt;/strong&gt;, then you need to set the importance slider for those tasks to determine which is more important &lt;strong&gt;relative to the parent task&lt;/strong&gt;.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;example&quot;&gt;&lt;strong&gt;Example&lt;/strong&gt;:&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;Under the parent task &lt;strong&gt;“Write a Research Paper”&lt;/strong&gt;, you have four subtasks:
+    &lt;ul&gt;
+      &lt;li&gt;&lt;strong&gt;Subtask 1&lt;/strong&gt;: Conduct Research&lt;/li&gt;
+      &lt;li&gt;&lt;strong&gt;Subtask 2&lt;/strong&gt;: Write Introduction&lt;/li&gt;
+      &lt;li&gt;&lt;strong&gt;Subtask 3&lt;/strong&gt;: Write Body&lt;/li&gt;
+      &lt;li&gt;&lt;strong&gt;Subtask 4&lt;/strong&gt;: Proofread and Edit&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Since these subtasks are &lt;strong&gt;siblings&lt;/strong&gt;, you need to decide which one is more important &lt;strong&gt;relative to the parent task&lt;/strong&gt;. For example, &lt;strong&gt;Conduct Research&lt;/strong&gt; might be more important than &lt;strong&gt;Write Introduction&lt;/strong&gt;, so you would set the importance slider higher for &lt;strong&gt;Conduct Research&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;If a task does not have siblings&lt;/strong&gt;, like if &lt;strong&gt;Subtask 1&lt;/strong&gt; had no other subtasks, there’s no need to set its importance. It will simply inherit the importance of &lt;strong&gt;“Write a Research Paper”&lt;/strong&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;h4 id=&quot;3-set-the-importance-slider-for-parent-tasks&quot;&gt;&lt;strong&gt;3. Set the Importance Slider for Parent Tasks&lt;/strong&gt;&lt;/h4&gt;
+&lt;p&gt;Once you’ve structured your task hierarchy and identified which tasks have siblings, the next step is to set the &lt;strong&gt;importance&lt;/strong&gt; for your &lt;strong&gt;parent tasks&lt;/strong&gt;. The &lt;strong&gt;parent tasks&lt;/strong&gt; should be ranked based on how important they are &lt;strong&gt;relative to each other&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Ask yourself&lt;/strong&gt;: How important is this parent task compared to the other parent tasks in this outline?&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;&lt;strong&gt;Move the importance slider&lt;/strong&gt; accordingly. For highly important parent tasks, slide it towards the right. For less important parent tasks, slide it towards the left.&lt;/li&gt;
+    &lt;/ul&gt;
+
+    &lt;p&gt;&lt;strong&gt;Example&lt;/strong&gt;:&lt;/p&gt;
+    &lt;ul&gt;
+      &lt;li&gt;If &lt;strong&gt;“Write a Research Paper”&lt;/strong&gt; is more important than another parent task like &lt;strong&gt;“Clean the House”&lt;/strong&gt;, you might set the importance slider for &lt;strong&gt;“Write a Research Paper”&lt;/strong&gt; higher.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;h4 id=&quot;4-set-the-importance-slider-for-sibling-subtasks&quot;&gt;&lt;strong&gt;4. Set the Importance Slider for Sibling Subtasks&lt;/strong&gt;&lt;/h4&gt;
+&lt;p&gt;Now that you’ve set the importance for the parent tasks, focus on the &lt;strong&gt;subtasks&lt;/strong&gt; that have &lt;strong&gt;siblings&lt;/strong&gt;. Remember, &lt;strong&gt;only set the importance for sibling tasks&lt;/strong&gt;. The importance should reflect &lt;strong&gt;how crucial each sibling task is to completing the parent task&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Ask yourself&lt;/strong&gt;: How important is each sibling task for completing the parent task?&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;&lt;strong&gt;Move the importance slider&lt;/strong&gt; for each sibling task based on its importance to completing the parent task. Subtasks that are critical for completing the parent task should have a higher importance, while less critical subtasks should have lower importance.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;example-1&quot;&gt;&lt;strong&gt;Example&lt;/strong&gt;:&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;Under the parent task &lt;strong&gt;“Write a Research Paper”&lt;/strong&gt;, you have four subtasks:
+    &lt;ul&gt;
+      &lt;li&gt;&lt;strong&gt;Subtask 1&lt;/strong&gt;: Conduct Research&lt;/li&gt;
+      &lt;li&gt;&lt;strong&gt;Subtask 2&lt;/strong&gt;: Write Introduction&lt;/li&gt;
+      &lt;li&gt;&lt;strong&gt;Subtask 3&lt;/strong&gt;: Write Body&lt;/li&gt;
+      &lt;li&gt;&lt;strong&gt;Subtask 4&lt;/strong&gt;: Proofread and Edit&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Since these are &lt;strong&gt;siblings&lt;/strong&gt;, you need to decide their relative importance. &lt;strong&gt;Conduct Research&lt;/strong&gt; might be the most important because it forms the foundation for the rest of the tasks. So, you would set its importance higher than &lt;strong&gt;Write Introduction&lt;/strong&gt; or &lt;strong&gt;Proofread and Edit&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h4 id=&quot;5-use-start-and-due-dates-to-manipulate-urgency&quot;&gt;&lt;strong&gt;5. Use Start and Due Dates to Manipulate Urgency&lt;/strong&gt;&lt;/h4&gt;
+&lt;p&gt;In &lt;strong&gt;Ratz’s&lt;/strong&gt; system, &lt;strong&gt;urgency&lt;/strong&gt; is naturally calculated based on the &lt;strong&gt;start date&lt;/strong&gt; and &lt;strong&gt;due date&lt;/strong&gt; of the task. There’s no need for artificial urgency boosts like the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;weekly goal&lt;/code&gt; or &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;overdue boost&lt;/code&gt;. As the due date approaches, the urgency of the task increases automatically.&lt;/p&gt;
+
+&lt;p&gt;Here’s how to effectively use &lt;strong&gt;start dates&lt;/strong&gt; and &lt;strong&gt;due dates&lt;/strong&gt; to control urgency:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Set a realistic start date&lt;/strong&gt; for tasks that need attention over time. The urgency of the task will start to increase once the start date is reached, and will continue to increase as the due date approaches.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Set a due date&lt;/strong&gt; that reflects when the task needs to be completed. As the due date gets closer, the urgency will naturally increase, and if the task becomes overdue, urgency will continue to rise.&lt;/p&gt;
+
+    &lt;p&gt;&lt;strong&gt;Example&lt;/strong&gt;:&lt;/p&gt;
+    &lt;ul&gt;
+      &lt;li&gt;For the task &lt;strong&gt;“Conduct Research”&lt;/strong&gt;, set a &lt;strong&gt;start date&lt;/strong&gt; for when you plan to begin the research and a &lt;strong&gt;due date&lt;/strong&gt; for when the research needs to be completed. As the due date approaches, &lt;strong&gt;MLO&lt;/strong&gt; will automatically boost the urgency of this task, helping you prioritize it appropriately.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;important-tip&quot;&gt;&lt;strong&gt;Important Tip&lt;/strong&gt;:&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;Be &lt;strong&gt;realistic&lt;/strong&gt; with your start and due dates. Don’t set arbitrary dates just to manipulate urgency. Set dates that genuinely reflect when you plan to start and when the task must be completed. This ensures that urgency increases at the right time.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;h4 id=&quot;6-adjust-preferences-for-date-based-weighting&quot;&gt;&lt;strong&gt;6. Adjust Preferences for Date-Based Weighting&lt;/strong&gt;&lt;/h4&gt;
+&lt;p&gt;To fully leverage &lt;strong&gt;start and due dates&lt;/strong&gt; for urgency calculations, you’ll want to adjust the &lt;strong&gt;date-based weighting factors&lt;/strong&gt; in the MLO preferences. These settings control how much influence start and due dates have on urgency.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Go to MLO Preferences&lt;/strong&gt; and adjust the &lt;strong&gt;Start Date Weighting Factor&lt;/strong&gt; and &lt;strong&gt;Due Date Weighting Factor&lt;/strong&gt;.&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;
+        &lt;p&gt;&lt;strong&gt;Start Date Weighting&lt;/strong&gt;: Controls how much the start date influences urgency. Increase this if you want tasks to start becoming urgent once the start date is reached.&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;&lt;strong&gt;Due Date Weighting&lt;/strong&gt;: Controls how much the due date influences urgency. Increase this if you want tasks to become highly urgent as the due date approaches.&lt;/p&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+
+    &lt;p&gt;&lt;strong&gt;Example&lt;/strong&gt;:&lt;/p&gt;
+    &lt;ul&gt;
+      &lt;li&gt;If you want the urgency of tasks to significantly increase as the due date approaches, set a &lt;strong&gt;high weighting&lt;/strong&gt; for the due date. If you want tasks to become urgent earlier, increase the &lt;strong&gt;start date weighting&lt;/strong&gt;.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;best-practice&quot;&gt;&lt;strong&gt;Best Practice&lt;/strong&gt;:&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;Start with &lt;strong&gt;moderate values&lt;/strong&gt; for the weighting factors and observe how they influence your task list. You can adjust them over time to better suit your workflow.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;h4 id=&quot;7-combine-importance-and-urgency-to-calculate-priority&quot;&gt;&lt;strong&gt;7. Combine Importance and Urgency to Calculate Priority&lt;/strong&gt;&lt;/h4&gt;
+&lt;p&gt;Once you’ve set the &lt;strong&gt;importance&lt;/strong&gt; and &lt;strong&gt;urgency&lt;/strong&gt; for each task, &lt;strong&gt;MLO&lt;/strong&gt; will calculate the &lt;strong&gt;Computed-Score Priority&lt;/strong&gt; based on the product of these two values. This ensures that tasks with both high importance and high urgency rise to the top of your &lt;strong&gt;To-Do List&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Formula&lt;/strong&gt;: 
+[
+\text{Score} = (\text{Importance Score} \times \text{Urgency Score}) + \text{Date Score Contribution}
+]&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;&lt;strong&gt;Importance Score&lt;/strong&gt;: Based on the &lt;strong&gt;importance slider&lt;/strong&gt; you set.&lt;/li&gt;
+      &lt;li&gt;&lt;strong&gt;Urgency Score&lt;/strong&gt;: Based on the &lt;strong&gt;start date&lt;/strong&gt; and &lt;strong&gt;due date&lt;/strong&gt;.&lt;/li&gt;
+      &lt;li&gt;&lt;strong&gt;Date Score Contribution&lt;/strong&gt;: The influence of the start and due dates based on the weighting factors you set.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;h4 id=&quot;8-review-the-to-do-list-and-adjust-if-necessary&quot;&gt;&lt;strong&gt;8. Review the To-Do List and Adjust if Necessary&lt;/strong&gt;&lt;/h4&gt;
+&lt;p&gt;After setting the importance and urgency values, &lt;strong&gt;MLO&lt;/strong&gt; will generate a &lt;strong&gt;To-Do List&lt;/strong&gt; ordered by &lt;strong&gt;Computed-Score Priority&lt;/strong&gt;. The tasks at the top of the list will be those with the highest combined importance and urgency.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Review the list&lt;/strong&gt; to ensure that the most critical tasks are appearing at the top.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;If the order doesn’t seem right, go back to the &lt;strong&gt;Outline view&lt;/strong&gt; and adjust the &lt;strong&gt;importance sliders&lt;/strong&gt; or &lt;strong&gt;start/due dates&lt;/strong&gt;. Remember, adjustments should be made in the &lt;strong&gt;Outline view&lt;/strong&gt; where you can see the entire task hierarchy — not in the &lt;strong&gt;To-Do List&lt;/strong&gt; itself.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;h4 id=&quot;9-avoid-over-tweaking&quot;&gt;&lt;strong&gt;9. Avoid Over-Tweaking&lt;/strong&gt;&lt;/h4&gt;
+&lt;p&gt;One of &lt;strong&gt;Ratz’s&lt;/strong&gt; key recommendations is to &lt;strong&gt;avoid over-tweaking&lt;/strong&gt;. Don’t constantly adjust the importance and urgency values based on what you see in the &lt;strong&gt;To-Do List&lt;/strong&gt;. If you find that tasks are not appearing in the right order, the issue is likely in the &lt;strong&gt;Outline&lt;/strong&gt; (the structure of your task hierarchy) or the &lt;strong&gt;data input&lt;/strong&gt; (importance sliders and dates).&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Ratz’s Tip&lt;/strong&gt;: If you find that the priorities seem off, use the &lt;strong&gt;reset all tasks to normal urgency and importance&lt;/strong&gt; button and start over. This can help clear any confusion caused by previous incorrect adjustments.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;final-example-of-a-proper-setup&quot;&gt;&lt;strong&gt;Final Example of a Proper Setup:&lt;/strong&gt;&lt;/h3&gt;
+
+&lt;p&gt;Let’s take a project called &lt;strong&gt;“Plan a Conference”&lt;/strong&gt;. Here’s how you would apply &lt;strong&gt;Ratz’s Computed-Score Priority system&lt;/strong&gt; step-by-step:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;&lt;strong&gt;Parent Task&lt;/strong&gt;: Plan a Conference
+    &lt;ul&gt;
+      &lt;li&gt;&lt;strong&gt;Importance Slider&lt;/strong&gt;: Set based on how important this task is compared to other parent tasks (e.g., “Write a Research Paper”).&lt;/li&gt;
+      &lt;li&gt;&lt;strong&gt;Due Date&lt;/strong&gt;: The date by which the conference must be planned.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Subtasks&lt;/strong&gt;:
+    &lt;ul&gt;
+      &lt;li&gt;&lt;strong&gt;Subtask 1&lt;/strong&gt;: Book Venue
+        &lt;ul&gt;
+          &lt;li&gt;&lt;strong&gt;Importance Slider&lt;/strong&gt;: High importance because it’s crucial to planning the conference.&lt;/li&gt;
+          &lt;li&gt;&lt;strong&gt;Start Date&lt;/strong&gt;: Set for when you need to start looking for venues.&lt;/li&gt;
+          &lt;li&gt;&lt;strong&gt;Due Date&lt;/strong&gt;: Set for when the venue needs to be booked.&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;&lt;strong&gt;Subtask 2&lt;/strong&gt;: Send Invitations
+        &lt;ul&gt;
+          &lt;li&gt;&lt;strong&gt;Importance Slider&lt;/strong&gt;: Medium importance because it’s important but not as critical as booking the venue.&lt;/li&gt;
+          &lt;li&gt;&lt;strong&gt;Start Date&lt;/strong&gt;: Set for when you need to start sending invitations.&lt;/li&gt;
+          &lt;li&gt;&lt;strong&gt;Due Date&lt;/strong&gt;: Set for when invitations must be sent.&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Adjust Preferences&lt;/strong&gt;:
+    &lt;ul&gt;
+      &lt;li&gt;Set &lt;strong&gt;moderate weighting factors&lt;/strong&gt; for start and due dates to control urgency.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Let MLO Calculate the Priority&lt;/strong&gt;:
+    &lt;ul&gt;
+      &lt;li&gt;MLO will combine the importance and urgency values to generate a &lt;strong&gt;To-Do List&lt;/strong&gt; with the most critical tasks at the top.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;conclusion&quot;&gt;&lt;strong&gt;Conclusion:&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;By following this step-by-step setup, and remembering to &lt;strong&gt;only set importance for tasks with siblings&lt;/strong&gt;, you can leverage &lt;strong&gt;Ratz’s Computed-Score Priority system&lt;/strong&gt; to manage tasks based on &lt;strong&gt;importance&lt;/strong&gt; and &lt;strong&gt;urgency&lt;/strong&gt; in a natural and controlled way. This approach avoids artificial urgency boosts and ensures that your task list reflects the true priorities of your work, without over-complicating the task hierarchy.&lt;/p&gt;
+</content>
+    </entry>
     
     <entry>
         <title>Checklist BATrinca</title>
@@ -46201,11 +46457,11 @@ Pense duas vezes antes de se envolver.
             
             &lt;h2&gt;Child tags:&lt;/h2&gt;
             
+            &lt;li&gt;&lt;a href=&quot;#tools-ai-prompt&quot; aria-label=&quot;Child tag tools&amp;gt;AI&amp;gt;prompt&quot;&gt;tools&amp;gt;AI&amp;gt;prompt&lt;/a&gt;&lt;/li&gt;
+            
             &lt;li&gt;&lt;a href=&quot;#ai-prompt&quot; aria-label=&quot;Child tag AI&amp;gt;prompt&quot;&gt;AI&amp;gt;prompt&lt;/a&gt;&lt;/li&gt;
             
             &lt;li&gt;&lt;a href=&quot;#prompt&quot; aria-label=&quot;Child tag prompt&quot;&gt;prompt&lt;/a&gt;&lt;/li&gt;
-            
-            &lt;li&gt;&lt;a href=&quot;#tools-ai-prompt&quot; aria-label=&quot;Child tag tools&amp;gt;AI&amp;gt;prompt&quot;&gt;tools&amp;gt;AI&amp;gt;prompt&lt;/a&gt;&lt;/li&gt;
             
             
         &lt;/ul&gt;
@@ -46260,9 +46516,9 @@ Pense duas vezes antes de se envolver.
         
         &lt;h2&gt;Parent tags:&lt;/h2&gt;
             
-            &lt;li&gt;&lt;a href=&quot;#ai&quot; aria-label=&quot;Parent tag AI&quot;&gt;AI&lt;/a&gt;&lt;/li&gt;
-            
             &lt;li&gt;&lt;a href=&quot;#tools&quot; aria-label=&quot;Parent tag tools&quot;&gt;tools&lt;/a&gt;&lt;/li&gt;
+            
+            &lt;li&gt;&lt;a href=&quot;#ai&quot; aria-label=&quot;Parent tag AI&quot;&gt;AI&lt;/a&gt;&lt;/li&gt;
             
             
         &lt;/ul&gt;
@@ -46933,11 +47189,11 @@ Pense duas vezes antes de se envolver.
             
             &lt;h2&gt;Child tags:&lt;/h2&gt;
             
+            &lt;li&gt;&lt;a href=&quot;#direito&quot; aria-label=&quot;Child tag direito&quot;&gt;direito&lt;/a&gt;&lt;/li&gt;
+            
             &lt;li&gt;&lt;a href=&quot;#edital-direito&quot; aria-label=&quot;Child tag edital&amp;gt;direito&quot;&gt;edital&amp;gt;direito&lt;/a&gt;&lt;/li&gt;
             
             &lt;li&gt;&lt;a href=&quot;#edital-direito-processual-penal&quot; aria-label=&quot;Child tag edital&amp;gt;direito&amp;gt;processual-penal&quot;&gt;edital&amp;gt;direito&amp;gt;processual-penal&lt;/a&gt;&lt;/li&gt;
-            
-            &lt;li&gt;&lt;a href=&quot;#direito&quot; aria-label=&quot;Child tag direito&quot;&gt;direito&lt;/a&gt;&lt;/li&gt;
             
             &lt;li&gt;&lt;a href=&quot;#direito-processual-penal&quot; aria-label=&quot;Child tag direito&amp;gt;processual-penal&quot;&gt;direito&amp;gt;processual-penal&lt;/a&gt;&lt;/li&gt;
             
@@ -47017,9 +47273,9 @@ Pense duas vezes antes de se envolver.
         
         &lt;h2&gt;Parent tags:&lt;/h2&gt;
             
-            &lt;li&gt;&lt;a href=&quot;#edital&quot; aria-label=&quot;Parent tag edital&quot;&gt;edital&lt;/a&gt;&lt;/li&gt;
-            
             &lt;li&gt;&lt;a href=&quot;#direito&quot; aria-label=&quot;Parent tag direito&quot;&gt;direito&lt;/a&gt;&lt;/li&gt;
+            
+            &lt;li&gt;&lt;a href=&quot;#edital&quot; aria-label=&quot;Parent tag edital&quot;&gt;edital&lt;/a&gt;&lt;/li&gt;
             
             
         &lt;/ul&gt;
@@ -47212,9 +47468,9 @@ Pense duas vezes antes de se envolver.
             
             &lt;li&gt;&lt;a href=&quot;#github-jekyll&quot; aria-label=&quot;Child tag github&amp;gt;jekyll&quot;&gt;github&amp;gt;jekyll&lt;/a&gt;&lt;/li&gt;
             
-            &lt;li&gt;&lt;a href=&quot;#jekyll&quot; aria-label=&quot;Child tag jekyll&quot;&gt;jekyll&lt;/a&gt;&lt;/li&gt;
-            
             &lt;li&gt;&lt;a href=&quot;#tools-github-estudos&quot; aria-label=&quot;Child tag tools&amp;gt;github&amp;gt;estudos&quot;&gt;tools&amp;gt;github&amp;gt;estudos&lt;/a&gt;&lt;/li&gt;
+            
+            &lt;li&gt;&lt;a href=&quot;#jekyll&quot; aria-label=&quot;Child tag jekyll&quot;&gt;jekyll&lt;/a&gt;&lt;/li&gt;
             
             
         &lt;/ul&gt;
@@ -48084,9 +48340,9 @@ Pense duas vezes antes de se envolver.
         
         &lt;h2&gt;Parent tags:&lt;/h2&gt;
             
-            &lt;li&gt;&lt;a href=&quot;#tools-ai&quot; aria-label=&quot;Parent tag tools&amp;gt;AI&quot;&gt;tools&amp;gt;AI&lt;/a&gt;&lt;/li&gt;
-            
             &lt;li&gt;&lt;a href=&quot;#ai&quot; aria-label=&quot;Parent tag AI&quot;&gt;AI&lt;/a&gt;&lt;/li&gt;
+            
+            &lt;li&gt;&lt;a href=&quot;#tools-ai&quot; aria-label=&quot;Parent tag tools&amp;gt;AI&quot;&gt;tools&amp;gt;AI&lt;/a&gt;&lt;/li&gt;
             
             
         &lt;/ul&gt;
@@ -48674,21 +48930,21 @@ Pense duas vezes antes de se envolver.
             
             &lt;h2&gt;Child tags:&lt;/h2&gt;
             
-            &lt;li&gt;&lt;a href=&quot;#google-apps-script&quot; aria-label=&quot;Child tag google-apps-script&quot;&gt;google-apps-script&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#mobile&quot; aria-label=&quot;Child tag mobile&quot;&gt;mobile&lt;/a&gt;&lt;/li&gt;
             
             &lt;li&gt;&lt;a href=&quot;#scripts-google-apps-script&quot; aria-label=&quot;Child tag scripts&amp;gt;google-apps-script&quot;&gt;scripts&amp;gt;google-apps-script&lt;/a&gt;&lt;/li&gt;
             
-            &lt;li&gt;&lt;a href=&quot;#scripts-cloud&quot; aria-label=&quot;Child tag scripts&amp;gt;cloud&quot;&gt;scripts&amp;gt;cloud&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#cloud&quot; aria-label=&quot;Child tag cloud&quot;&gt;cloud&lt;/a&gt;&lt;/li&gt;
             
             &lt;li&gt;&lt;a href=&quot;#scripts-mobile&quot; aria-label=&quot;Child tag scripts&amp;gt;mobile&quot;&gt;scripts&amp;gt;mobile&lt;/a&gt;&lt;/li&gt;
             
-            &lt;li&gt;&lt;a href=&quot;#scripts-ai&quot; aria-label=&quot;Child tag scripts&amp;gt;AI&quot;&gt;scripts&amp;gt;AI&lt;/a&gt;&lt;/li&gt;
-            
-            &lt;li&gt;&lt;a href=&quot;#cloud&quot; aria-label=&quot;Child tag cloud&quot;&gt;cloud&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#scripts-cloud&quot; aria-label=&quot;Child tag scripts&amp;gt;cloud&quot;&gt;scripts&amp;gt;cloud&lt;/a&gt;&lt;/li&gt;
             
             &lt;li&gt;&lt;a href=&quot;#ai&quot; aria-label=&quot;Child tag AI&quot;&gt;AI&lt;/a&gt;&lt;/li&gt;
             
-            &lt;li&gt;&lt;a href=&quot;#mobile&quot; aria-label=&quot;Child tag mobile&quot;&gt;mobile&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#google-apps-script&quot; aria-label=&quot;Child tag google-apps-script&quot;&gt;google-apps-script&lt;/a&gt;&lt;/li&gt;
+            
+            &lt;li&gt;&lt;a href=&quot;#scripts-ai&quot; aria-label=&quot;Child tag scripts&amp;gt;AI&quot;&gt;scripts&amp;gt;AI&lt;/a&gt;&lt;/li&gt;
             
             
         &lt;/ul&gt;
@@ -48953,13 +49209,13 @@ Pense duas vezes antes de se envolver.
             
             &lt;h2&gt;Child tags:&lt;/h2&gt;
             
-            &lt;li&gt;&lt;a href=&quot;#cloud&quot; aria-label=&quot;Child tag cloud&quot;&gt;cloud&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#software-mobile&quot; aria-label=&quot;Child tag software&amp;gt;mobile&quot;&gt;software&amp;gt;mobile&lt;/a&gt;&lt;/li&gt;
             
             &lt;li&gt;&lt;a href=&quot;#mobile&quot; aria-label=&quot;Child tag mobile&quot;&gt;mobile&lt;/a&gt;&lt;/li&gt;
             
-            &lt;li&gt;&lt;a href=&quot;#software-mobile&quot; aria-label=&quot;Child tag software&amp;gt;mobile&quot;&gt;software&amp;gt;mobile&lt;/a&gt;&lt;/li&gt;
-            
             &lt;li&gt;&lt;a href=&quot;#software-cloud&quot; aria-label=&quot;Child tag software&amp;gt;cloud&quot;&gt;software&amp;gt;cloud&lt;/a&gt;&lt;/li&gt;
+            
+            &lt;li&gt;&lt;a href=&quot;#cloud&quot; aria-label=&quot;Child tag cloud&quot;&gt;cloud&lt;/a&gt;&lt;/li&gt;
             
             
         &lt;/ul&gt;
@@ -49394,13 +49650,13 @@ Pense duas vezes antes de se envolver.
             
             &lt;h2&gt;Child tags:&lt;/h2&gt;
             
-            &lt;li&gt;&lt;a href=&quot;#ai-prompt&quot; aria-label=&quot;Child tag AI&amp;gt;prompt&quot;&gt;AI&amp;gt;prompt&lt;/a&gt;&lt;/li&gt;
-            
-            &lt;li&gt;&lt;a href=&quot;#github-estudos&quot; aria-label=&quot;Child tag github&amp;gt;estudos&quot;&gt;github&amp;gt;estudos&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#tools-ai-prompt&quot; aria-label=&quot;Child tag tools&amp;gt;AI&amp;gt;prompt&quot;&gt;tools&amp;gt;AI&amp;gt;prompt&lt;/a&gt;&lt;/li&gt;
             
             &lt;li&gt;&lt;a href=&quot;#tools-github-estudos&quot; aria-label=&quot;Child tag tools&amp;gt;github&amp;gt;estudos&quot;&gt;tools&amp;gt;github&amp;gt;estudos&lt;/a&gt;&lt;/li&gt;
             
-            &lt;li&gt;&lt;a href=&quot;#tools-ai-prompt&quot; aria-label=&quot;Child tag tools&amp;gt;AI&amp;gt;prompt&quot;&gt;tools&amp;gt;AI&amp;gt;prompt&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#ai-prompt&quot; aria-label=&quot;Child tag AI&amp;gt;prompt&quot;&gt;AI&amp;gt;prompt&lt;/a&gt;&lt;/li&gt;
+            
+            &lt;li&gt;&lt;a href=&quot;#github-estudos&quot; aria-label=&quot;Child tag github&amp;gt;estudos&quot;&gt;github&amp;gt;estudos&lt;/a&gt;&lt;/li&gt;
             
             
         &lt;/ul&gt;
@@ -49670,6 +49926,24 @@ Pense duas vezes antes de se envolver.
     
     
     
+    
+    &lt;div class=&quot;search-link&quot;&gt;
+      &lt;h3&gt;
+        &lt;a class=&quot;post-heading&quot; href=&quot;#&quot; id=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;
+          &lt;img src=&quot;/assets/gold.ico&quot; alt=&quot;gold icon&quot; /&gt;
+        &lt;/a&gt;
+        2024-09-12
+         &amp;rightarrowtail; 12 Sep 2024
+        
+      &lt;/h3&gt;
+      &lt;ul&gt;
+        &lt;a href=&quot;/2024-09-12-mlo-setup-using-ratzs-computed-score-algorithm/&quot;&gt;
+          &lt;h2&gt;
+            
+          &lt;/h2&gt;
+        &lt;/a&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;
     
     &lt;div class=&quot;search-link&quot;&gt;
       &lt;h3&gt;
