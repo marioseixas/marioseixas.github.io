@@ -10,7 +10,7 @@ AI:
     highlighted: false
     title: gmail2mailgrip
     url: /gmail2mailgrip-prompt
-  - date: &id013 2024-07-21 00:00:00
+  - date: &id014 2024-07-21 00:00:00
     highlighted: false
     title: Longer inputs on WHISPER API
     url: /longer-inputs-on-whisper-api
@@ -70,7 +70,7 @@ admoestação:
     highlighted: true
     title: Your Life in Tokens
     url: /life-tokens
-  - date: &id031 2018-02-15 00:00:00
+  - date: &id032 2018-02-15 00:00:00
     highlighted: true
     title: Envolvido ou comprometido?
     url: /tal-06-17
@@ -258,11 +258,11 @@ cloud:
     scripts: null
     software: null
   posts:
-  - date: &id030 2024-07-25 00:00:00
+  - date: &id031 2024-07-25 00:00:00
     highlighted: false
     title: AWS PushSafer billing alarm
     url: /aws-pushsafer-billing-alarm
-  - date: &id014 2024-07-17 00:00:00
+  - date: &id015 2024-07-17 00:00:00
     highlighted: false
     title: Webhooks using `Serverless.com` Lift plugin
     url: /webhooks-using-serverlesscom-lift-plugin
@@ -369,11 +369,11 @@ estudos:
     highlighted: false
     title: SRS within GitHub Actions
     url: /srs
-  - date: &id033 2024-07-05 00:00:00
+  - date: &id034 2024-07-05 00:00:00
     highlighted: true
     title: Periódicos para publicar artigos
     url: /periodicos
-  - date: &id023 2024-05-01 00:00:00
+  - date: &id024 2024-05-01 00:00:00
     highlighted: true
     title: STF Scraper [script]
     url: /stf-scraper
@@ -462,7 +462,7 @@ google-apps-script:
   parents: !!set
     scripts: null
   posts:
-  - date: &id029 2023-12-21 00:00:00
+  - date: &id030 2023-12-21 00:00:00
     highlighted: false
     title: OpenAI GPT API in Google Sheets
     url: /gpt-sheets
@@ -489,7 +489,7 @@ iphone:
   parents: !!set
     tasks: null
   posts:
-  - date: &id032 2024-08-25 00:00:00
+  - date: &id033 2024-08-25 00:00:00
     highlighted: false
     title: MLO URL schemes
     url: /mlo-url-schemes
@@ -548,35 +548,35 @@ linux:
     title: How to use the `dd` command to create a bootable USB drive from an ISO
       file on a Linux-based system
     url: /how-to-use-the-dd-command-to-create-a-bootable-usb-drive-from-an-iso-file-on-a-linux-based-system
-  - date: &id015 2024-06-16 00:00:00
+  - date: &id016 2024-06-16 00:00:00
     highlighted: true
     title: cliPaperQA
     url: /clipaper-qa
-  - date: &id016 2024-06-13 00:00:00
+  - date: &id017 2024-06-13 00:00:00
     highlighted: true
     title: 'bulkGPT: multithreading for OpenAI''s output limits'
     url: /bulk-gpt
-  - date: &id017 2024-06-02 00:00:00
+  - date: &id018 2024-06-02 00:00:00
     highlighted: true
     title: Python script to check LaTeX citations
     url: /bibtex-check
-  - date: &id018 2024-06-02 00:00:00
+  - date: &id019 2024-06-02 00:00:00
     highlighted: true
     title: Rename files using llm.datasette.io
     url: /llm-renamer
-  - date: &id019 2024-06-02 00:00:00
+  - date: &id020 2024-06-02 00:00:00
     highlighted: true
     title: Convert `.pdf` to `UTF-8`
     url: /pdf-utf8
-  - date: &id020 2024-06-01 00:00:00
+  - date: &id021 2024-06-01 00:00:00
     highlighted: true
     title: '"Copy Spotter" and Deduplication'
     url: /copy-dedup
-  - date: &id021 2024-05-30 00:00:00
+  - date: &id022 2024-05-30 00:00:00
     highlighted: true
     title: Organize files by their extensions
     url: /files-by-type
-  - date: &id022 2024-05-06 00:00:00
+  - date: &id023 2024-05-06 00:00:00
     highlighted: true
     title: 'Rclone: Syncing STORJ Cloud to Local Storage'
     url: /storj-sync
@@ -604,7 +604,7 @@ linux:
     highlighted: true
     title: About Thorium Flags
     url: /thorium
-  - date: &id024 2024-02-22 00:00:00
+  - date: &id025 2024-02-22 00:00:00
     highlighted: true
     title: cat files contents [script]
     url: /cat-files
@@ -620,7 +620,7 @@ linux:
     highlighted: true
     title: Gummi .tex .bib
     url: /gummi
-  - date: &id025 2024-01-23 00:00:00
+  - date: &id026 2024-01-23 00:00:00
     highlighted: true
     title: Script to print from clipboard to a thermal printer
     url: /thermal
@@ -632,7 +632,7 @@ linux:
     highlighted: true
     title: Linux in a USB drive
     url: /linux-usb
-  - date: &id026 2024-01-03 00:00:00
+  - date: &id027 2024-01-03 00:00:00
     highlighted: true
     title: install_wps.sh
     url: /wps
@@ -652,7 +652,7 @@ linux:
     highlighted: true
     title: Installed Debian packages list
     url: /dpkg
-  - date: &id027 2023-12-24 00:00:00
+  - date: &id028 2023-12-24 00:00:00
     highlighted: true
     title: Packages list script
     url: /dpkg-script
@@ -661,7 +661,7 @@ linux:
     title: Alternative option to upload a file to GitHub without cloning the entire
       repository
     url: /git-sparse-checkout
-  - date: &id028 2023-12-24 00:00:00
+  - date: &id029 2023-12-24 00:00:00
     highlighted: true
     title: Shell script to replace JEKYLLER edge extension
     url: /jekyller
@@ -748,6 +748,26 @@ music:
     highlighted: true
     title: Lyrics of Deleter by Grouplove
     url: /lyrics-of-deleter-by-grouplove
+  related: {}
+powershell, software:
+  children: !!set
+    scripts>powershell, software>windows: null
+  parents: !!set {}
+  posts:
+  - date: &id013 2024-09-12 00:00:00
+    highlighted: false
+    title: URLs list text scraper
+    url: /urls-list-text-scraper
+  related: {}
+powershell, software>windows:
+  children: !!set {}
+  parents: !!set
+    scripts: null
+  posts:
+  - date: *id013
+    highlighted: false
+    title: URLs list text scraper
+    url: /urls-list-text-scraper
   related: {}
 processual-penal:
   children: !!set {}
@@ -947,13 +967,19 @@ scripts:
     cloud: null
     google-apps-script: null
     mobile: null
+    powershell, software>windows: null
     scripts>AI: null
     scripts>cloud: null
     scripts>google-apps-script: null
     scripts>mobile: null
+    scripts>powershell, software>windows: null
   parents: !!set {}
   posts:
   - date: *id013
+    highlighted: false
+    title: URLs list text scraper
+    url: /urls-list-text-scraper
+  - date: *id014
     highlighted: false
     title: Longer inputs on WHISPER API
     url: /longer-inputs-on-whisper-api
@@ -961,7 +987,7 @@ scripts:
     highlighted: false
     title: 'iPhone: files2zip & zip2clipboard'
     url: /iphone-files2zip-zip2clipboard
-  - date: *id014
+  - date: *id015
     highlighted: false
     title: Webhooks using `Serverless.com` Lift plugin
     url: /webhooks-using-serverlesscom-lift-plugin
@@ -969,39 +995,39 @@ scripts:
     highlighted: true
     title: Gingko JSON ToC outliner
     url: /gingko-toc-outliner
-  - date: *id015
+  - date: *id016
     highlighted: true
     title: cliPaperQA
     url: /clipaper-qa
-  - date: *id016
+  - date: *id017
     highlighted: true
     title: 'bulkGPT: multithreading for OpenAI''s output limits'
     url: /bulk-gpt
-  - date: *id017
+  - date: *id018
     highlighted: true
     title: Python script to check LaTeX citations
     url: /bibtex-check
-  - date: *id018
+  - date: *id019
     highlighted: true
     title: Rename files using llm.datasette.io
     url: /llm-renamer
-  - date: *id019
+  - date: *id020
     highlighted: true
     title: Convert `.pdf` to `UTF-8`
     url: /pdf-utf8
-  - date: *id020
+  - date: *id021
     highlighted: true
     title: '"Copy Spotter" and Deduplication'
     url: /copy-dedup
-  - date: *id021
+  - date: *id022
     highlighted: true
     title: Organize files by their extensions
     url: /files-by-type
-  - date: *id022
+  - date: *id023
     highlighted: true
     title: 'Rclone: Syncing STORJ Cloud to Local Storage'
     url: /storj-sync
-  - date: *id023
+  - date: *id024
     highlighted: true
     title: STF Scraper [script]
     url: /stf-scraper
@@ -1013,7 +1039,7 @@ scripts:
     highlighted: true
     title: Split `.wav` for Whisper
     url: /whisper-splitter
-  - date: *id024
+  - date: *id025
     highlighted: true
     title: cat files contents [script]
     url: /cat-files
@@ -1033,23 +1059,23 @@ scripts:
     highlighted: true
     title: Py Oda
     url: /py-oda
-  - date: *id025
+  - date: *id026
     highlighted: true
     title: Script to print from clipboard to a thermal printer
     url: /thermal
-  - date: *id026
+  - date: *id027
     highlighted: true
     title: install_wps.sh
     url: /wps
-  - date: *id027
+  - date: *id028
     highlighted: true
     title: Packages list script
     url: /dpkg-script
-  - date: *id028
+  - date: *id029
     highlighted: true
     title: Shell script to replace JEKYLLER edge extension
     url: /jekyller
-  - date: *id029
+  - date: *id030
     highlighted: false
     title: OpenAI GPT API in Google Sheets
     url: /gpt-sheets
@@ -1065,7 +1091,7 @@ scripts>AI:
   parents: !!set
     scripts: null
   posts:
-  - date: *id013
+  - date: *id014
     highlighted: true
     title: Longer inputs on WHISPER API
     url: /longer-inputs-on-whisper-api
@@ -1075,7 +1101,7 @@ scripts>cloud:
   parents: !!set
     scripts: null
   posts:
-  - date: *id014
+  - date: *id015
     highlighted: true
     title: Webhooks using `Serverless.com` Lift plugin
     url: /webhooks-using-serverlesscom-lift-plugin
@@ -1085,7 +1111,7 @@ scripts>google-apps-script:
   parents: !!set
     scripts: null
   posts:
-  - date: *id029
+  - date: *id030
     highlighted: true
     title: OpenAI GPT API in Google Sheets
     url: /gpt-sheets
@@ -1101,6 +1127,27 @@ scripts>mobile:
     url: /iphone-files2zip-zip2clipboard
   related:
     iphone: 2
+scripts>powershell, software:
+  children: !!set
+    windows: null
+  parents: !!set {}
+  posts:
+  - date: *id013
+    highlighted: false
+    title: URLs list text scraper
+    url: /urls-list-text-scraper
+  related: {}
+scripts>powershell, software>windows:
+  children: !!set {}
+  parents: !!set
+    powershell, software: null
+    scripts: null
+  posts:
+  - date: *id013
+    highlighted: true
+    title: URLs list text scraper
+    url: /urls-list-text-scraper
+  related: {}
 sell:
   children: !!set {}
   parents: !!set {}
@@ -1138,7 +1185,7 @@ software:
     highlighted: false
     title: iOS 18 changelog
     url: /ios-18-changelog
-  - date: *id030
+  - date: *id031
     highlighted: false
     title: AWS PushSafer billing alarm
     url: /aws-pushsafer-billing-alarm
@@ -1152,7 +1199,7 @@ software>cloud:
   parents: !!set
     software: null
   posts:
-  - date: *id030
+  - date: *id031
     highlighted: true
     title: AWS PushSafer billing alarm
     url: /aws-pushsafer-billing-alarm
@@ -1185,7 +1232,7 @@ spirit:
     highlighted: true
     title: canção da internação
     url: /gustavo
-  - date: *id031
+  - date: *id032
     highlighted: true
     title: Envolvido ou comprometido?
     url: /tal-06-17
@@ -1201,7 +1248,7 @@ tasks:
     highlighted: true
     title: MLO setup using Ratz Computed-Score Algorithm
     url: /mlo-ratz
-  - date: *id032
+  - date: *id033
     highlighted: false
     title: MLO URL schemes
     url: /mlo-url-schemes
@@ -1259,7 +1306,7 @@ tasks>iphone:
   parents: !!set
     tasks: null
   posts:
-  - date: *id032
+  - date: *id033
     highlighted: true
     title: MLO URL schemes
     url: /mlo-url-schemes
@@ -1379,7 +1426,7 @@ trabalho:
     highlighted: true
     title: Procedimentos de Escolta Dedicada
     url: /escolta
-  - date: *id033
+  - date: *id034
     highlighted: true
     title: Periódicos para publicar artigos
     url: /periodicos
@@ -1393,3 +1440,13 @@ trabalho:
     url: /taf-01
   related:
     estudos: 2
+windows:
+  children: !!set {}
+  parents: !!set
+    scripts>powershell, software: null
+  posts:
+  - date: *id013
+    highlighted: false
+    title: URLs list text scraper
+    url: /urls-list-text-scraper
+  related: {}
