@@ -44,7 +44,7 @@
     <title>infoBAG</title>
     <link href="https://ib.bsb.br/rss.xml" rel="self"/>
     <link href="https://ib.bsb.br/"/>
-    <updated>2024-09-18T13:38:49+00:00</updated>
+    <updated>2024-09-18T21:52:53+00:00</updated>
     <id>https://ib.bsb.br</id>
     <author>
         <name></name>
@@ -46637,9 +46637,9 @@ Pense duas vezes antes de se envolver.
             
             &lt;li&gt;&lt;a href=&quot;#ai-prompt&quot; aria-label=&quot;Child tag AI&amp;gt;prompt&quot;&gt;AI&amp;gt;prompt&lt;/a&gt;&lt;/li&gt;
             
-            &lt;li&gt;&lt;a href=&quot;#tools-ai-prompt&quot; aria-label=&quot;Child tag tools&amp;gt;AI&amp;gt;prompt&quot;&gt;tools&amp;gt;AI&amp;gt;prompt&lt;/a&gt;&lt;/li&gt;
-            
             &lt;li&gt;&lt;a href=&quot;#prompt&quot; aria-label=&quot;Child tag prompt&quot;&gt;prompt&lt;/a&gt;&lt;/li&gt;
+            
+            &lt;li&gt;&lt;a href=&quot;#tools-ai-prompt&quot; aria-label=&quot;Child tag tools&amp;gt;AI&amp;gt;prompt&quot;&gt;tools&amp;gt;AI&amp;gt;prompt&lt;/a&gt;&lt;/li&gt;
             
             
         &lt;/ul&gt;
@@ -46694,9 +46694,9 @@ Pense duas vezes antes de se envolver.
         
         &lt;h2&gt;Parent tags:&lt;/h2&gt;
             
-            &lt;li&gt;&lt;a href=&quot;#tools&quot; aria-label=&quot;Parent tag tools&quot;&gt;tools&lt;/a&gt;&lt;/li&gt;
-            
             &lt;li&gt;&lt;a href=&quot;#ai&quot; aria-label=&quot;Parent tag AI&quot;&gt;AI&lt;/a&gt;&lt;/li&gt;
+            
+            &lt;li&gt;&lt;a href=&quot;#tools&quot; aria-label=&quot;Parent tag tools&quot;&gt;tools&lt;/a&gt;&lt;/li&gt;
             
             
         &lt;/ul&gt;
@@ -46761,19 +46761,19 @@ Pense duas vezes antes de se envolver.
         &lt;ul class=&quot;search-link&quot;&gt;
         
             
-            &lt;li&gt;&lt;a href=&quot;/streaming&quot;&gt;
-                &lt;time datetime=&quot;2022-03-16T00:00:00+00:00&quot;&gt;&lt;strong&gt;March 16, 2022&lt;/strong&gt;&lt;/time&gt;
-                &amp;hArr;
-                
-                &lt;mark&gt;streaming&lt;/mark&gt;
-                
-            &lt;/a&gt;&lt;/li&gt;
-            
             &lt;li&gt;&lt;a href=&quot;/aye&quot;&gt;
                 &lt;time datetime=&quot;2022-03-16T00:00:00+00:00&quot;&gt;&lt;strong&gt;March 16, 2022&lt;/strong&gt;&lt;/time&gt;
                 &amp;hArr;
                 
                 &lt;mark&gt;aye aye&lt;/mark&gt;
+                
+            &lt;/a&gt;&lt;/li&gt;
+            
+            &lt;li&gt;&lt;a href=&quot;/streaming&quot;&gt;
+                &lt;time datetime=&quot;2022-03-16T00:00:00+00:00&quot;&gt;&lt;strong&gt;March 16, 2022&lt;/strong&gt;&lt;/time&gt;
+                &amp;hArr;
+                
+                &lt;mark&gt;streaming&lt;/mark&gt;
                 
             &lt;/a&gt;&lt;/li&gt;
             
@@ -47367,13 +47367,13 @@ Pense duas vezes antes de se envolver.
             
             &lt;h2&gt;Child tags:&lt;/h2&gt;
             
-            &lt;li&gt;&lt;a href=&quot;#edital-direito&quot; aria-label=&quot;Child tag edital&amp;gt;direito&quot;&gt;edital&amp;gt;direito&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#direito&quot; aria-label=&quot;Child tag direito&quot;&gt;direito&lt;/a&gt;&lt;/li&gt;
             
             &lt;li&gt;&lt;a href=&quot;#edital-direito-processual-penal&quot; aria-label=&quot;Child tag edital&amp;gt;direito&amp;gt;processual-penal&quot;&gt;edital&amp;gt;direito&amp;gt;processual-penal&lt;/a&gt;&lt;/li&gt;
             
-            &lt;li&gt;&lt;a href=&quot;#direito-processual-penal&quot; aria-label=&quot;Child tag direito&amp;gt;processual-penal&quot;&gt;direito&amp;gt;processual-penal&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#edital-direito&quot; aria-label=&quot;Child tag edital&amp;gt;direito&quot;&gt;edital&amp;gt;direito&lt;/a&gt;&lt;/li&gt;
             
-            &lt;li&gt;&lt;a href=&quot;#direito&quot; aria-label=&quot;Child tag direito&quot;&gt;direito&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#direito-processual-penal&quot; aria-label=&quot;Child tag direito&amp;gt;processual-penal&quot;&gt;direito&amp;gt;processual-penal&lt;/a&gt;&lt;/li&gt;
             
             
         &lt;/ul&gt;
@@ -47644,11 +47644,11 @@ Pense duas vezes antes de se envolver.
             
             &lt;h2&gt;Child tags:&lt;/h2&gt;
             
-            &lt;li&gt;&lt;a href=&quot;#jekyll&quot; aria-label=&quot;Child tag jekyll&quot;&gt;jekyll&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#github-jekyll&quot; aria-label=&quot;Child tag github&amp;gt;jekyll&quot;&gt;github&amp;gt;jekyll&lt;/a&gt;&lt;/li&gt;
             
             &lt;li&gt;&lt;a href=&quot;#tools-github-estudos&quot; aria-label=&quot;Child tag tools&amp;gt;github&amp;gt;estudos&quot;&gt;tools&amp;gt;github&amp;gt;estudos&lt;/a&gt;&lt;/li&gt;
             
-            &lt;li&gt;&lt;a href=&quot;#github-jekyll&quot; aria-label=&quot;Child tag github&amp;gt;jekyll&quot;&gt;github&amp;gt;jekyll&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#jekyll&quot; aria-label=&quot;Child tag jekyll&quot;&gt;jekyll&lt;/a&gt;&lt;/li&gt;
             
             
         &lt;/ul&gt;
@@ -48001,11 +48001,11 @@ Pense duas vezes antes de se envolver.
                 
             &lt;/a&gt;&lt;/li&gt;
             
-            &lt;li&gt;&lt;a href=&quot;/pdf-utf8&quot;&gt;
+            &lt;li&gt;&lt;a href=&quot;/bibtex-check&quot;&gt;
                 &lt;time datetime=&quot;2024-06-02T00:00:00+00:00&quot;&gt;&lt;strong&gt;June 02, 2024&lt;/strong&gt;&lt;/time&gt;
                 &amp;hArr;
                 
-                &lt;mark&gt;Convert `.pdf` to `UTF-8`&lt;/mark&gt;
+                &lt;mark&gt;Python script to check LaTeX citations&lt;/mark&gt;
                 
             &lt;/a&gt;&lt;/li&gt;
             
@@ -48017,11 +48017,11 @@ Pense duas vezes antes de se envolver.
                 
             &lt;/a&gt;&lt;/li&gt;
             
-            &lt;li&gt;&lt;a href=&quot;/bibtex-check&quot;&gt;
+            &lt;li&gt;&lt;a href=&quot;/pdf-utf8&quot;&gt;
                 &lt;time datetime=&quot;2024-06-02T00:00:00+00:00&quot;&gt;&lt;strong&gt;June 02, 2024&lt;/strong&gt;&lt;/time&gt;
                 &amp;hArr;
                 
-                &lt;mark&gt;Python script to check LaTeX citations&lt;/mark&gt;
+                &lt;mark&gt;Convert `.pdf` to `UTF-8`&lt;/mark&gt;
                 
             &lt;/a&gt;&lt;/li&gt;
             
@@ -48073,19 +48073,19 @@ Pense duas vezes antes de se envolver.
                 
             &lt;/a&gt;&lt;/li&gt;
             
-            &lt;li&gt;&lt;a href=&quot;/xsessionrc&quot;&gt;
-                &lt;time datetime=&quot;2024-03-10T00:00:00+00:00&quot;&gt;&lt;strong&gt;March 10, 2024&lt;/strong&gt;&lt;/time&gt;
-                &amp;hArr;
-                
-                &lt;mark&gt;/root/.xsessionrc&lt;/mark&gt;
-                
-            &lt;/a&gt;&lt;/li&gt;
-            
             &lt;li&gt;&lt;a href=&quot;/xinitrc&quot;&gt;
                 &lt;time datetime=&quot;2024-03-10T00:00:00+00:00&quot;&gt;&lt;strong&gt;March 10, 2024&lt;/strong&gt;&lt;/time&gt;
                 &amp;hArr;
                 
                 &lt;mark&gt;xinitrc&lt;/mark&gt;
+                
+            &lt;/a&gt;&lt;/li&gt;
+            
+            &lt;li&gt;&lt;a href=&quot;/xsessionrc&quot;&gt;
+                &lt;time datetime=&quot;2024-03-10T00:00:00+00:00&quot;&gt;&lt;strong&gt;March 10, 2024&lt;/strong&gt;&lt;/time&gt;
+                &amp;hArr;
+                
+                &lt;mark&gt;/root/.xsessionrc&lt;/mark&gt;
                 
             &lt;/a&gt;&lt;/li&gt;
             
@@ -48129,19 +48129,19 @@ Pense duas vezes antes de se envolver.
                 
             &lt;/a&gt;&lt;/li&gt;
             
-            &lt;li&gt;&lt;a href=&quot;/thermanual&quot;&gt;
-                &lt;time datetime=&quot;2024-01-23T00:00:00+00:00&quot;&gt;&lt;strong&gt;January 23, 2024&lt;/strong&gt;&lt;/time&gt;
-                &amp;hArr;
-                
-                &lt;mark&gt;DP-Q803P thermal printer manual&lt;/mark&gt;
-                
-            &lt;/a&gt;&lt;/li&gt;
-            
             &lt;li&gt;&lt;a href=&quot;/thermal&quot;&gt;
                 &lt;time datetime=&quot;2024-01-23T00:00:00+00:00&quot;&gt;&lt;strong&gt;January 23, 2024&lt;/strong&gt;&lt;/time&gt;
                 &amp;hArr;
                 
                 &lt;mark&gt;Script to print from clipboard to a thermal printer&lt;/mark&gt;
+                
+            &lt;/a&gt;&lt;/li&gt;
+            
+            &lt;li&gt;&lt;a href=&quot;/thermanual&quot;&gt;
+                &lt;time datetime=&quot;2024-01-23T00:00:00+00:00&quot;&gt;&lt;strong&gt;January 23, 2024&lt;/strong&gt;&lt;/time&gt;
+                &amp;hArr;
+                
+                &lt;mark&gt;DP-Q803P thermal printer manual&lt;/mark&gt;
                 
             &lt;/a&gt;&lt;/li&gt;
             
@@ -48185,11 +48185,11 @@ Pense duas vezes antes de se envolver.
                 
             &lt;/a&gt;&lt;/li&gt;
             
-            &lt;li&gt;&lt;a href=&quot;/jekyller&quot;&gt;
+            &lt;li&gt;&lt;a href=&quot;/dpkg&quot;&gt;
                 &lt;time datetime=&quot;2023-12-24T00:00:00+00:00&quot;&gt;&lt;strong&gt;December 24, 2023&lt;/strong&gt;&lt;/time&gt;
                 &amp;hArr;
                 
-                &lt;mark&gt;Shell script to replace JEKYLLER edge extension&lt;/mark&gt;
+                &lt;mark&gt;Installed Debian packages list&lt;/mark&gt;
                 
             &lt;/a&gt;&lt;/li&gt;
             
@@ -48201,19 +48201,19 @@ Pense duas vezes antes de se envolver.
                 
             &lt;/a&gt;&lt;/li&gt;
             
+            &lt;li&gt;&lt;a href=&quot;/jekyller&quot;&gt;
+                &lt;time datetime=&quot;2023-12-24T00:00:00+00:00&quot;&gt;&lt;strong&gt;December 24, 2023&lt;/strong&gt;&lt;/time&gt;
+                &amp;hArr;
+                
+                &lt;mark&gt;Shell script to replace JEKYLLER edge extension&lt;/mark&gt;
+                
+            &lt;/a&gt;&lt;/li&gt;
+            
             &lt;li&gt;&lt;a href=&quot;/dpkg-script&quot;&gt;
                 &lt;time datetime=&quot;2023-12-24T00:00:00+00:00&quot;&gt;&lt;strong&gt;December 24, 2023&lt;/strong&gt;&lt;/time&gt;
                 &amp;hArr;
                 
                 &lt;mark&gt;Packages list script&lt;/mark&gt;
-                
-            &lt;/a&gt;&lt;/li&gt;
-            
-            &lt;li&gt;&lt;a href=&quot;/dpkg&quot;&gt;
-                &lt;time datetime=&quot;2023-12-24T00:00:00+00:00&quot;&gt;&lt;strong&gt;December 24, 2023&lt;/strong&gt;&lt;/time&gt;
-                &amp;hArr;
-                
-                &lt;mark&gt;Installed Debian packages list&lt;/mark&gt;
                 
             &lt;/a&gt;&lt;/li&gt;
             
@@ -48249,19 +48249,19 @@ Pense duas vezes antes de se envolver.
                 
             &lt;/a&gt;&lt;/li&gt;
             
-            &lt;li&gt;&lt;a href=&quot;/edge&quot;&gt;
-                &lt;time datetime=&quot;2022-01-11T00:00:00+00:00&quot;&gt;&lt;strong&gt;January 11, 2022&lt;/strong&gt;&lt;/time&gt;
-                &amp;hArr;
-                
-                &lt;mark&gt;microsoft-edge&lt;/mark&gt;
-                
-            &lt;/a&gt;&lt;/li&gt;
-            
             &lt;li&gt;&lt;a href=&quot;/xlunch&quot;&gt;
                 &lt;time datetime=&quot;2022-01-11T00:00:00+00:00&quot;&gt;&lt;strong&gt;January 11, 2022&lt;/strong&gt;&lt;/time&gt;
                 &amp;hArr;
                 
                 &lt;mark&gt;xlunch entries.dsv&lt;/mark&gt;
+                
+            &lt;/a&gt;&lt;/li&gt;
+            
+            &lt;li&gt;&lt;a href=&quot;/edge&quot;&gt;
+                &lt;time datetime=&quot;2022-01-11T00:00:00+00:00&quot;&gt;&lt;strong&gt;January 11, 2022&lt;/strong&gt;&lt;/time&gt;
+                &amp;hArr;
+                
+                &lt;mark&gt;microsoft-edge&lt;/mark&gt;
                 
             &lt;/a&gt;&lt;/li&gt;
             
@@ -49016,11 +49016,11 @@ Pense duas vezes antes de se envolver.
                 
             &lt;/a&gt;&lt;/li&gt;
             
-            &lt;li&gt;&lt;a href=&quot;/pdf-utf8&quot;&gt;
+            &lt;li&gt;&lt;a href=&quot;/bibtex-check&quot;&gt;
                 &lt;time datetime=&quot;2024-06-02T00:00:00+00:00&quot;&gt;&lt;strong&gt;June 02, 2024&lt;/strong&gt;&lt;/time&gt;
                 &amp;hArr;
                 
-                &lt;mark&gt;Convert `.pdf` to `UTF-8`&lt;/mark&gt;
+                &lt;mark&gt;Python script to check LaTeX citations&lt;/mark&gt;
                 
             &lt;/a&gt;&lt;/li&gt;
             
@@ -49032,11 +49032,11 @@ Pense duas vezes antes de se envolver.
                 
             &lt;/a&gt;&lt;/li&gt;
             
-            &lt;li&gt;&lt;a href=&quot;/bibtex-check&quot;&gt;
+            &lt;li&gt;&lt;a href=&quot;/pdf-utf8&quot;&gt;
                 &lt;time datetime=&quot;2024-06-02T00:00:00+00:00&quot;&gt;&lt;strong&gt;June 02, 2024&lt;/strong&gt;&lt;/time&gt;
                 &amp;hArr;
                 
-                &lt;mark&gt;Python script to check LaTeX citations&lt;/mark&gt;
+                &lt;mark&gt;Convert `.pdf` to `UTF-8`&lt;/mark&gt;
                 
             &lt;/a&gt;&lt;/li&gt;
             
@@ -49184,25 +49184,25 @@ Pense duas vezes antes de se envolver.
             
             &lt;h2&gt;Child tags:&lt;/h2&gt;
             
-            &lt;li&gt;&lt;a href=&quot;#scripts-ai&quot; aria-label=&quot;Child tag scripts&amp;gt;AI&quot;&gt;scripts&amp;gt;AI&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#mobile&quot; aria-label=&quot;Child tag mobile&quot;&gt;mobile&lt;/a&gt;&lt;/li&gt;
             
-            &lt;li&gt;&lt;a href=&quot;#scripts-google-apps-script&quot; aria-label=&quot;Child tag scripts&amp;gt;google-apps-script&quot;&gt;scripts&amp;gt;google-apps-script&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#scripts-powershell-software-windows&quot; aria-label=&quot;Child tag scripts&amp;gt;powershell, software&amp;gt;windows&quot;&gt;scripts&amp;gt;powershell, software&amp;gt;windows&lt;/a&gt;&lt;/li&gt;
             
             &lt;li&gt;&lt;a href=&quot;#scripts-cloud&quot; aria-label=&quot;Child tag scripts&amp;gt;cloud&quot;&gt;scripts&amp;gt;cloud&lt;/a&gt;&lt;/li&gt;
             
-            &lt;li&gt;&lt;a href=&quot;#mobile&quot; aria-label=&quot;Child tag mobile&quot;&gt;mobile&lt;/a&gt;&lt;/li&gt;
-            
             &lt;li&gt;&lt;a href=&quot;#google-apps-script&quot; aria-label=&quot;Child tag google-apps-script&quot;&gt;google-apps-script&lt;/a&gt;&lt;/li&gt;
             
+            &lt;li&gt;&lt;a href=&quot;#scripts-ai&quot; aria-label=&quot;Child tag scripts&amp;gt;AI&quot;&gt;scripts&amp;gt;AI&lt;/a&gt;&lt;/li&gt;
+            
             &lt;li&gt;&lt;a href=&quot;#scripts-mobile&quot; aria-label=&quot;Child tag scripts&amp;gt;mobile&quot;&gt;scripts&amp;gt;mobile&lt;/a&gt;&lt;/li&gt;
+            
+            &lt;li&gt;&lt;a href=&quot;#scripts-google-apps-script&quot; aria-label=&quot;Child tag scripts&amp;gt;google-apps-script&quot;&gt;scripts&amp;gt;google-apps-script&lt;/a&gt;&lt;/li&gt;
             
             &lt;li&gt;&lt;a href=&quot;#cloud&quot; aria-label=&quot;Child tag cloud&quot;&gt;cloud&lt;/a&gt;&lt;/li&gt;
             
             &lt;li&gt;&lt;a href=&quot;#powershell-software-windows&quot; aria-label=&quot;Child tag powershell, software&amp;gt;windows&quot;&gt;powershell, software&amp;gt;windows&lt;/a&gt;&lt;/li&gt;
             
             &lt;li&gt;&lt;a href=&quot;#ai&quot; aria-label=&quot;Child tag AI&quot;&gt;AI&lt;/a&gt;&lt;/li&gt;
-            
-            &lt;li&gt;&lt;a href=&quot;#scripts-powershell-software-windows&quot; aria-label=&quot;Child tag scripts&amp;gt;powershell, software&amp;gt;windows&quot;&gt;scripts&amp;gt;powershell, software&amp;gt;windows&lt;/a&gt;&lt;/li&gt;
             
             
         &lt;/ul&gt;
@@ -49537,13 +49537,13 @@ Pense duas vezes antes de se envolver.
             
             &lt;h2&gt;Child tags:&lt;/h2&gt;
             
-            &lt;li&gt;&lt;a href=&quot;#software-cloud&quot; aria-label=&quot;Child tag software&amp;gt;cloud&quot;&gt;software&amp;gt;cloud&lt;/a&gt;&lt;/li&gt;
-            
-            &lt;li&gt;&lt;a href=&quot;#mobile&quot; aria-label=&quot;Child tag mobile&quot;&gt;mobile&lt;/a&gt;&lt;/li&gt;
-            
             &lt;li&gt;&lt;a href=&quot;#cloud&quot; aria-label=&quot;Child tag cloud&quot;&gt;cloud&lt;/a&gt;&lt;/li&gt;
             
             &lt;li&gt;&lt;a href=&quot;#software-mobile&quot; aria-label=&quot;Child tag software&amp;gt;mobile&quot;&gt;software&amp;gt;mobile&lt;/a&gt;&lt;/li&gt;
+            
+            &lt;li&gt;&lt;a href=&quot;#software-cloud&quot; aria-label=&quot;Child tag software&amp;gt;cloud&quot;&gt;software&amp;gt;cloud&lt;/a&gt;&lt;/li&gt;
+            
+            &lt;li&gt;&lt;a href=&quot;#mobile&quot; aria-label=&quot;Child tag mobile&quot;&gt;mobile&lt;/a&gt;&lt;/li&gt;
             
             
         &lt;/ul&gt;
@@ -49820,9 +49820,9 @@ Pense duas vezes antes de se envolver.
             
             &lt;h2&gt;Child tags:&lt;/h2&gt;
             
-            &lt;li&gt;&lt;a href=&quot;#iphone&quot; aria-label=&quot;Child tag iphone&quot;&gt;iphone&lt;/a&gt;&lt;/li&gt;
-            
             &lt;li&gt;&lt;a href=&quot;#tasks-iphone&quot; aria-label=&quot;Child tag tasks&amp;gt;iphone&quot;&gt;tasks&amp;gt;iphone&lt;/a&gt;&lt;/li&gt;
+            
+            &lt;li&gt;&lt;a href=&quot;#iphone&quot; aria-label=&quot;Child tag iphone&quot;&gt;iphone&lt;/a&gt;&lt;/li&gt;
             
             
         &lt;/ul&gt;
@@ -49890,19 +49890,27 @@ Pense duas vezes antes de se envolver.
                 
             &lt;/a&gt;&lt;/li&gt;
             
+            &lt;li&gt;&lt;a href=&quot;/formatxt&quot;&gt;
+                &lt;time datetime=&quot;1991-07-25T00:00:00+00:00&quot;&gt;&lt;strong&gt;July 25, 1991&lt;/strong&gt;&lt;/time&gt;
+                &amp;hArr;
+                
+                &lt;mark&gt;1991-07-25-formatxt&lt;/mark&gt;
+                
+            &lt;/a&gt;&lt;/li&gt;
+            
+            &lt;li&gt;&lt;a href=&quot;/diff&quot;&gt;
+                &lt;time datetime=&quot;1991-07-25T00:00:00+00:00&quot;&gt;&lt;strong&gt;July 25, 1991&lt;/strong&gt;&lt;/time&gt;
+                &amp;hArr;
+                
+                &lt;mark&gt;1991-07-25-diff&lt;/mark&gt;
+                
+            &lt;/a&gt;&lt;/li&gt;
+            
             &lt;li&gt;&lt;a href=&quot;/dedup-spaces&quot;&gt;
                 &lt;time datetime=&quot;1991-07-25T00:00:00+00:00&quot;&gt;&lt;strong&gt;July 25, 1991&lt;/strong&gt;&lt;/time&gt;
                 &amp;hArr;
                 
                 &lt;mark&gt;1991-07-25-dedup-spaces&lt;/mark&gt;
-                
-            &lt;/a&gt;&lt;/li&gt;
-            
-            &lt;li&gt;&lt;a href=&quot;/rm-space&quot;&gt;
-                &lt;time datetime=&quot;1991-07-25T00:00:00+00:00&quot;&gt;&lt;strong&gt;July 25, 1991&lt;/strong&gt;&lt;/time&gt;
-                &amp;hArr;
-                
-                &lt;mark&gt;1991-07-25-rm-space&lt;/mark&gt;
                 
             &lt;/a&gt;&lt;/li&gt;
             
@@ -49922,14 +49930,6 @@ Pense duas vezes antes de se envolver.
                 
             &lt;/a&gt;&lt;/li&gt;
             
-            &lt;li&gt;&lt;a href=&quot;/rm-lines&quot;&gt;
-                &lt;time datetime=&quot;1991-07-25T00:00:00+00:00&quot;&gt;&lt;strong&gt;July 25, 1991&lt;/strong&gt;&lt;/time&gt;
-                &amp;hArr;
-                
-                &lt;mark&gt;1991-07-25-rm-lines&lt;/mark&gt;
-                
-            &lt;/a&gt;&lt;/li&gt;
-            
             &lt;li&gt;&lt;a href=&quot;/dedup&quot;&gt;
                 &lt;time datetime=&quot;1991-07-25T00:00:00+00:00&quot;&gt;&lt;strong&gt;July 25, 1991&lt;/strong&gt;&lt;/time&gt;
                 &amp;hArr;
@@ -49938,35 +49938,11 @@ Pense duas vezes antes de se envolver.
                 
             &lt;/a&gt;&lt;/li&gt;
             
-            &lt;li&gt;&lt;a href=&quot;/compare&quot;&gt;
+            &lt;li&gt;&lt;a href=&quot;/rm-lines&quot;&gt;
                 &lt;time datetime=&quot;1991-07-25T00:00:00+00:00&quot;&gt;&lt;strong&gt;July 25, 1991&lt;/strong&gt;&lt;/time&gt;
                 &amp;hArr;
                 
-                &lt;mark&gt;1991-07-25-compare&lt;/mark&gt;
-                
-            &lt;/a&gt;&lt;/li&gt;
-            
-            &lt;li&gt;&lt;a href=&quot;/formatxt&quot;&gt;
-                &lt;time datetime=&quot;1991-07-25T00:00:00+00:00&quot;&gt;&lt;strong&gt;July 25, 1991&lt;/strong&gt;&lt;/time&gt;
-                &amp;hArr;
-                
-                &lt;mark&gt;1991-07-25-formatxt&lt;/mark&gt;
-                
-            &lt;/a&gt;&lt;/li&gt;
-            
-            &lt;li&gt;&lt;a href=&quot;/somacon&quot;&gt;
-                &lt;time datetime=&quot;1991-07-25T00:00:00+00:00&quot;&gt;&lt;strong&gt;July 25, 1991&lt;/strong&gt;&lt;/time&gt;
-                &amp;hArr;
-                
-                &lt;mark&gt;1991-07-25-somacon&lt;/mark&gt;
-                
-            &lt;/a&gt;&lt;/li&gt;
-            
-            &lt;li&gt;&lt;a href=&quot;/diff&quot;&gt;
-                &lt;time datetime=&quot;1991-07-25T00:00:00+00:00&quot;&gt;&lt;strong&gt;July 25, 1991&lt;/strong&gt;&lt;/time&gt;
-                &amp;hArr;
-                
-                &lt;mark&gt;1991-07-25-diff&lt;/mark&gt;
+                &lt;mark&gt;1991-07-25-rm-lines&lt;/mark&gt;
                 
             &lt;/a&gt;&lt;/li&gt;
             
@@ -49978,6 +49954,30 @@ Pense duas vezes antes de se envolver.
                 
             &lt;/a&gt;&lt;/li&gt;
             
+            &lt;li&gt;&lt;a href=&quot;/somacon&quot;&gt;
+                &lt;time datetime=&quot;1991-07-25T00:00:00+00:00&quot;&gt;&lt;strong&gt;July 25, 1991&lt;/strong&gt;&lt;/time&gt;
+                &amp;hArr;
+                
+                &lt;mark&gt;1991-07-25-somacon&lt;/mark&gt;
+                
+            &lt;/a&gt;&lt;/li&gt;
+            
+            &lt;li&gt;&lt;a href=&quot;/rm-space&quot;&gt;
+                &lt;time datetime=&quot;1991-07-25T00:00:00+00:00&quot;&gt;&lt;strong&gt;July 25, 1991&lt;/strong&gt;&lt;/time&gt;
+                &amp;hArr;
+                
+                &lt;mark&gt;1991-07-25-rm-space&lt;/mark&gt;
+                
+            &lt;/a&gt;&lt;/li&gt;
+            
+            &lt;li&gt;&lt;a href=&quot;/compare&quot;&gt;
+                &lt;time datetime=&quot;1991-07-25T00:00:00+00:00&quot;&gt;&lt;strong&gt;July 25, 1991&lt;/strong&gt;&lt;/time&gt;
+                &amp;hArr;
+                
+                &lt;mark&gt;1991-07-25-compare&lt;/mark&gt;
+                
+            &lt;/a&gt;&lt;/li&gt;
+            
         &lt;/ul&gt;
         &lt;ul class=&quot;search-link&quot;&gt;
         
@@ -49986,13 +49986,13 @@ Pense duas vezes antes de se envolver.
             
             &lt;h2&gt;Child tags:&lt;/h2&gt;
             
-            &lt;li&gt;&lt;a href=&quot;#tools-ai-prompt&quot; aria-label=&quot;Child tag tools&amp;gt;AI&amp;gt;prompt&quot;&gt;tools&amp;gt;AI&amp;gt;prompt&lt;/a&gt;&lt;/li&gt;
-            
-            &lt;li&gt;&lt;a href=&quot;#tools-github-estudos&quot; aria-label=&quot;Child tag tools&amp;gt;github&amp;gt;estudos&quot;&gt;tools&amp;gt;github&amp;gt;estudos&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#ai-prompt&quot; aria-label=&quot;Child tag AI&amp;gt;prompt&quot;&gt;AI&amp;gt;prompt&lt;/a&gt;&lt;/li&gt;
             
             &lt;li&gt;&lt;a href=&quot;#github-estudos&quot; aria-label=&quot;Child tag github&amp;gt;estudos&quot;&gt;github&amp;gt;estudos&lt;/a&gt;&lt;/li&gt;
             
-            &lt;li&gt;&lt;a href=&quot;#ai-prompt&quot; aria-label=&quot;Child tag AI&amp;gt;prompt&quot;&gt;AI&amp;gt;prompt&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#tools-github-estudos&quot; aria-label=&quot;Child tag tools&amp;gt;github&amp;gt;estudos&quot;&gt;tools&amp;gt;github&amp;gt;estudos&lt;/a&gt;&lt;/li&gt;
+            
+            &lt;li&gt;&lt;a href=&quot;#tools-ai-prompt&quot; aria-label=&quot;Child tag tools&amp;gt;AI&amp;gt;prompt&quot;&gt;tools&amp;gt;AI&amp;gt;prompt&lt;/a&gt;&lt;/li&gt;
             
             
         &lt;/ul&gt;
@@ -50057,9 +50057,9 @@ Pense duas vezes antes de se envolver.
         
         &lt;h2&gt;Parent tags:&lt;/h2&gt;
             
-            &lt;li&gt;&lt;a href=&quot;#tools&quot; aria-label=&quot;Parent tag tools&quot;&gt;tools&lt;/a&gt;&lt;/li&gt;
-            
             &lt;li&gt;&lt;a href=&quot;#ai&quot; aria-label=&quot;Parent tag AI&quot;&gt;AI&lt;/a&gt;&lt;/li&gt;
+            
+            &lt;li&gt;&lt;a href=&quot;#tools&quot; aria-label=&quot;Parent tag tools&quot;&gt;tools&lt;/a&gt;&lt;/li&gt;
             
             
         &lt;/ul&gt;
@@ -50127,9 +50127,9 @@ Pense duas vezes antes de se envolver.
         
         &lt;h2&gt;Parent tags:&lt;/h2&gt;
             
-            &lt;li&gt;&lt;a href=&quot;#github&quot; aria-label=&quot;Parent tag github&quot;&gt;github&lt;/a&gt;&lt;/li&gt;
-            
             &lt;li&gt;&lt;a href=&quot;#tools&quot; aria-label=&quot;Parent tag tools&quot;&gt;tools&lt;/a&gt;&lt;/li&gt;
+            
+            &lt;li&gt;&lt;a href=&quot;#github&quot; aria-label=&quot;Parent tag github&quot;&gt;github&lt;/a&gt;&lt;/li&gt;
             
             
         &lt;/ul&gt;
