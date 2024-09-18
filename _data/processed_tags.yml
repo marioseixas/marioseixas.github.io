@@ -82,12 +82,12 @@ assistir:
   posts:
   - date: 2022-03-16 00:00:00
     highlighted: true
-    title: aye aye
-    url: /aye
-  - date: 2022-03-16 00:00:00
-    highlighted: true
     title: streaming
     url: /streaming
+  - date: 2022-03-16 00:00:00
+    highlighted: true
+    title: aye aye
+    url: /aye
   related: {}
 calls:
   children: !!set {}
@@ -558,16 +558,16 @@ linux:
     url: /bulk-gpt
   - date: &id018 2024-06-02 00:00:00
     highlighted: true
-    title: Python script to check LaTeX citations
-    url: /bibtex-check
+    title: Convert `.pdf` to `UTF-8`
+    url: /pdf-utf8
   - date: &id019 2024-06-02 00:00:00
     highlighted: true
     title: Rename files using llm.datasette.io
     url: /llm-renamer
   - date: &id020 2024-06-02 00:00:00
     highlighted: true
-    title: Convert `.pdf` to `UTF-8`
-    url: /pdf-utf8
+    title: Python script to check LaTeX citations
+    url: /bibtex-check
   - date: &id021 2024-06-01 00:00:00
     highlighted: true
     title: '"Copy Spotter" and Deduplication'
@@ -594,12 +594,12 @@ linux:
     url: /sources
   - date: 2024-03-10 00:00:00
     highlighted: true
-    title: xinitrc
-    url: /xinitrc
-  - date: 2024-03-10 00:00:00
-    highlighted: true
     title: /root/.xsessionrc
     url: /xsessionrc
+  - date: 2024-03-10 00:00:00
+    highlighted: true
+    title: xinitrc
+    url: /xinitrc
   - date: 2024-03-02 00:00:00
     highlighted: true
     title: About Thorium Flags
@@ -620,14 +620,14 @@ linux:
     highlighted: true
     title: Gummi .tex .bib
     url: /gummi
-  - date: &id026 2024-01-23 00:00:00
-    highlighted: true
-    title: Script to print from clipboard to a thermal printer
-    url: /thermal
   - date: 2024-01-23 00:00:00
     highlighted: true
     title: DP-Q803P thermal printer manual
     url: /thermanual
+  - date: &id026 2024-01-23 00:00:00
+    highlighted: true
+    title: Script to print from clipboard to a thermal printer
+    url: /thermal
   - date: 2024-01-22 00:00:00
     highlighted: true
     title: Linux in a USB drive
@@ -648,23 +648,23 @@ linux:
     highlighted: true
     title: rk3588 performance optimization
     url: /rk3588-enhance
-  - date: 2023-12-24 00:00:00
-    highlighted: true
-    title: Installed Debian packages list
-    url: /dpkg
   - date: &id028 2023-12-24 00:00:00
     highlighted: true
     title: Packages list script
     url: /dpkg-script
+  - date: &id029 2023-12-24 00:00:00
+    highlighted: true
+    title: Shell script to replace JEKYLLER edge extension
+    url: /jekyller
   - date: 2023-12-24 00:00:00
     highlighted: true
     title: Alternative option to upload a file to GitHub without cloning the entire
       repository
     url: /git-sparse-checkout
-  - date: &id029 2023-12-24 00:00:00
+  - date: 2023-12-24 00:00:00
     highlighted: true
-    title: Shell script to replace JEKYLLER edge extension
-    url: /jekyller
+    title: Installed Debian packages list
+    url: /dpkg
   - date: 2023-12-08 00:00:00
     highlighted: true
     title: parameter.txt
@@ -683,12 +683,12 @@ linux:
     url: /typewriter
   - date: 2022-01-11 00:00:00
     highlighted: true
-    title: xlunch entries.dsv
-    url: /xlunch
-  - date: 2022-01-11 00:00:00
-    highlighted: true
     title: microsoft-edge
     url: /edge
+  - date: 2022-01-11 00:00:00
+    highlighted: true
+    title: xlunch entries.dsv
+    url: /xlunch
   - date: 2022-01-09 00:00:00
     highlighted: true
     title: Installation of nvidia-legacy-340 in debian 11 (Bullseye)
@@ -1005,16 +1005,16 @@ scripts:
     url: /bulk-gpt
   - date: *id018
     highlighted: true
-    title: Python script to check LaTeX citations
-    url: /bibtex-check
+    title: Convert `.pdf` to `UTF-8`
+    url: /pdf-utf8
   - date: *id019
     highlighted: true
     title: Rename files using llm.datasette.io
     url: /llm-renamer
   - date: *id020
     highlighted: true
-    title: Convert `.pdf` to `UTF-8`
-    url: /pdf-utf8
+    title: Python script to check LaTeX citations
+    url: /bibtex-check
   - date: *id021
     highlighted: true
     title: '"Copy Spotter" and Deduplication'
@@ -1329,32 +1329,28 @@ tools:
     url: /reassess
   - date: 1991-07-25 00:00:00
     highlighted: true
-    title: 1991-07-25-sort
-    url: /sort
+    title: 1991-07-25-compare
+    url: /compare
   - date: 1991-07-25 00:00:00
     highlighted: true
-    title: 1991-07-25-diff
-    url: /diff
+    title: 1991-07-25-rm-space
+    url: /rm-space
   - date: 1991-07-25 00:00:00
     highlighted: true
     title: 1991-07-25-somacon
     url: /somacon
   - date: 1991-07-25 00:00:00
     highlighted: true
-    title: 1991-07-25-formatxt
-    url: /formatxt
-  - date: 1991-07-25 00:00:00
-    highlighted: true
-    title: 1991-07-25-compare
-    url: /compare
-  - date: 1991-07-25 00:00:00
-    highlighted: true
-    title: 1991-07-25-dedup
-    url: /dedup
+    title: 1991-07-25-sort
+    url: /sort
   - date: 1991-07-25 00:00:00
     highlighted: true
     title: 1991-07-25-rm-lines
     url: /rm-lines
+  - date: 1991-07-25 00:00:00
+    highlighted: true
+    title: 1991-07-25-dedup
+    url: /dedup
   - date: 1991-07-25 00:00:00
     highlighted: true
     title: 1991-07-25-pomo
@@ -1365,12 +1361,16 @@ tools:
     url: /regex
   - date: 1991-07-25 00:00:00
     highlighted: true
-    title: 1991-07-25-rm-space
-    url: /rm-space
-  - date: 1991-07-25 00:00:00
-    highlighted: true
     title: 1991-07-25-dedup-spaces
     url: /dedup-spaces
+  - date: 1991-07-25 00:00:00
+    highlighted: true
+    title: 1991-07-25-diff
+    url: /diff
+  - date: 1991-07-25 00:00:00
+    highlighted: true
+    title: 1991-07-25-formatxt
+    url: /formatxt
   related: {}
 tools>AI:
   children: !!set
