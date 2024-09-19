@@ -47,66 +47,66 @@
     calls {
     }
     scripts {
-        child scripts_cloud
-        child scripts_powershell,_software_windows
-        child cloud
-        child scripts_AI
-        child scripts_google-apps-script
         child powershell,_software_windows
-        child google-apps-script
-        child scripts_mobile
         child mobile
+        child google-apps-script
+        child scripts_cloud
+        child scripts_mobile
+        child scripts_powershell,_software_windows
+        child scripts_AI
+        child cloud
         child AI
+        child scripts_google-apps-script
         related_26 linux
         related_2 estudos
     }
-    scripts_cloud {
-        parent scripts
-    }
-    scripts ||--|| scripts_cloud : SUBSET_OF
-    scripts_powershell,_software_windows {
-        parent scripts
-        parent powershell,_software
-    }
-    scripts ||--|| scripts_powershell,_software_windows : SUBSET_OF
-    cloud {
-        parent software
-        parent scripts
-    }
-    scripts ||--|| cloud : SUBSET_OF
-    scripts_AI {
-        parent scripts
-    }
-    scripts ||--|| scripts_AI : SUBSET_OF
-    scripts_google-apps-script {
-        parent scripts
-    }
-    scripts ||--|| scripts_google-apps-script : SUBSET_OF
     powershell,_software_windows {
         parent scripts
     }
     scripts ||--|| powershell,_software_windows : SUBSET_OF
+    mobile {
+        parent software
+        parent scripts
+    }
+    scripts ||--|| mobile : SUBSET_OF
     google-apps-script {
         parent scripts
     }
     scripts ||--|| google-apps-script : SUBSET_OF
+    scripts_cloud {
+        parent scripts
+    }
+    scripts ||--|| scripts_cloud : SUBSET_OF
     scripts_mobile {
         parent scripts
         related_2 iphone
     }
     scripts ||--|| scripts_mobile : SUBSET_OF
-    mobile {
+    scripts_powershell,_software_windows {
         parent scripts
-        parent software
+        parent powershell,_software
     }
-    scripts ||--|| mobile : SUBSET_OF
+    scripts ||--|| scripts_powershell,_software_windows : SUBSET_OF
+    scripts_AI {
+        parent scripts
+    }
+    scripts ||--|| scripts_AI : SUBSET_OF
+    cloud {
+        parent software
+        parent scripts
+    }
+    scripts ||--|| cloud : SUBSET_OF
     AI {
         parent scripts
-        child prompt
-        child AI_prompt
         child tools_AI_prompt
+        child AI_prompt
+        child prompt
     }
     scripts ||--|| AI : SUBSET_OF
+    scripts_google-apps-script {
+        parent scripts
+    }
+    scripts ||--|| scripts_google-apps-script : SUBSET_OF
     linux {
         related_26 scripts
         related_2 software_mobile
@@ -115,11 +115,21 @@
         related_2 estudos
     }
     tools {
+        child tools_AI_prompt
+        child AI_prompt
         child tools_github_estudos
         child github_estudos
-        child AI_prompt
-        child tools_AI_prompt
     }
+    tools_AI_prompt {
+        parent tools
+        parent AI
+    }
+    tools ||--|| tools_AI_prompt : SUBSET_OF
+    AI_prompt {
+        parent tools
+        parent AI
+    }
+    tools ||--|| AI_prompt : SUBSET_OF
     tools_github_estudos {
         parent github
         parent tools
@@ -129,22 +139,12 @@
         parent tools
     }
     tools ||--|| github_estudos : SUBSET_OF
-    AI_prompt {
-        parent AI
-        parent tools
-    }
-    tools ||--|| AI_prompt : SUBSET_OF
-    tools_AI_prompt {
-        parent AI
-        parent tools
-    }
-    tools ||--|| tools_AI_prompt : SUBSET_OF
     tasks_iphone {
         parent tasks
     }
     tasks {
-        child tasks_iphone
         child iphone
+        child tasks_iphone
     }
     tasks ||--|| tasks_iphone : SUBSET_OF
     iphone {
@@ -157,36 +157,36 @@
         parent software
     }
     software {
-        child software_cloud
         child cloud
-        child software_mobile
         child mobile
+        child software_mobile
+        child software_cloud
     }
     software ||--|| software_cloud : SUBSET_OF
     software ||--|| cloud : SUBSET_OF
+    software ||--|| mobile : SUBSET_OF
     software_mobile {
         parent software
         related_2 iphone
         related_2 linux
     }
     software ||--|| software_mobile : SUBSET_OF
-    software ||--|| mobile : SUBSET_OF
     ler {
     }
     github_jekyll {
         parent github
     }
     github {
-        child tools_github_estudos
         child jekyll
         child github_jekyll
+        child tools_github_estudos
     }
     github ||--|| github_jekyll : SUBSET_OF
-    github ||--|| tools_github_estudos : SUBSET_OF
     jekyll {
         parent github
     }
     github ||--|| jekyll : SUBSET_OF
+    github ||--|| tools_github_estudos : SUBSET_OF
     rendimentos {
     }
     hardware {
@@ -195,13 +195,13 @@
     }
     receitas {
     }
+    AI ||--|| tools_AI_prompt : SUBSET_OF
+    AI ||--|| AI_prompt : SUBSET_OF
     prompt {
-        parent tools_AI
         parent AI
+        parent tools_AI
     }
     AI ||--|| prompt : SUBSET_OF
-    AI ||--|| AI_prompt : SUBSET_OF
-    AI ||--|| tools_AI_prompt : SUBSET_OF
     tools_AI {
         child prompt
     }
@@ -230,10 +230,10 @@
         parent direito
     }
     edital {
+        child edital_direito
         child edital_direito_processual-penal
         child direito_processual-penal
         child direito
-        child edital_direito
     }
     edital ||--|| edital_direito_processual-penal : SUBSET_OF
     direito {
@@ -241,16 +241,16 @@
         child edital_direito_processual-penal
     }
     direito ||--|| edital_direito_processual-penal : SUBSET_OF
-    direito_processual-penal {
-        parent edital
-    }
-    edital ||--|| direito_processual-penal : SUBSET_OF
-    edital ||--|| direito : SUBSET_OF
     edital_direito {
         parent edital
         child processual-penal
     }
     edital ||--|| edital_direito : SUBSET_OF
+    direito_processual-penal {
+        parent edital
+    }
+    edital ||--|| direito_processual-penal : SUBSET_OF
+    edital ||--|| direito : SUBSET_OF
     processual-penal {
         parent edital_direito
     }
