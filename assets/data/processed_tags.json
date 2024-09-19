@@ -195,16 +195,16 @@
     "scripts": {
         "parents": [],
         "children": [
-            "scripts>AI",
-            "cloud",
             "AI",
-            "google-apps-script",
-            "mobile",
-            "powershell, software>windows",
+            "cloud",
+            "scripts>google-apps-script",
             "scripts>cloud",
-            "scripts>powershell, software>windows",
+            "google-apps-script",
             "scripts>mobile",
-            "scripts>google-apps-script"
+            "mobile",
+            "scripts>AI",
+            "powershell, software>windows",
+            "scripts>powershell, software>windows"
         ],
         "related": {
             "linux": 26,
@@ -673,10 +673,10 @@
     "tools": {
         "parents": [],
         "children": [
-            "tools>github>estudos",
-            "tools>AI>prompt",
             "AI>prompt",
-            "github>estudos"
+            "github>estudos",
+            "tools>github>estudos",
+            "tools>AI>prompt"
         ],
         "related": {},
         "posts": [
@@ -917,8 +917,8 @@
     "software": {
         "parents": [],
         "children": [
-            "software>cloud",
             "cloud",
+            "software>cloud",
             "mobile",
             "software>mobile"
         ],
@@ -952,8 +952,8 @@
     },
     "cloud": {
         "parents": [
-            "software",
-            "scripts"
+            "scripts",
+            "software"
         ],
         "children": [],
         "related": {},
@@ -1022,8 +1022,8 @@
         "parents": [],
         "children": [
             "github>jekyll",
-            "jekyll",
-            "tools>github>estudos"
+            "tools>github>estudos",
+            "jekyll"
         ],
         "related": {},
         "posts": [
@@ -1351,8 +1351,8 @@
     },
     "mobile": {
         "parents": [
-            "software",
-            "scripts"
+            "scripts",
+            "software"
         ],
         "children": [],
         "related": {},
@@ -1410,9 +1410,9 @@
             "scripts"
         ],
         "children": [
-            "tools>AI>prompt",
             "AI>prompt",
-            "prompt"
+            "prompt",
+            "tools>AI>prompt"
         ],
         "related": {},
         "posts": [
@@ -1682,8 +1682,8 @@
     },
     "edital>direito>processual-penal": {
         "parents": [
-            "direito",
-            "edital"
+            "edital",
+            "direito"
         ],
         "children": [],
         "related": {},
@@ -1699,10 +1699,10 @@
     "edital": {
         "parents": [],
         "children": [
-            "edital>direito>processual-penal",
+            "edital>direito",
             "direito>processual-penal",
             "direito",
-            "edital>direito"
+            "edital>direito>processual-penal"
         ],
         "related": {},
         "posts": [
@@ -2029,8 +2029,8 @@
     },
     "scripts>powershell, software>windows": {
         "parents": [
-            "scripts",
-            "powershell, software"
+            "powershell, software",
+            "scripts"
         ],
         "children": [],
         "related": {},
