@@ -3,8 +3,8 @@ name: Build, Deploy, and Add Posts to Spaced Inbox
 on:
   push:
     branches: ["main"]
-  workflow_dispatch:
-
+  repository_dispatch:
+    types: [trigger-jekyll]
 permissions:
   contents: write
   pages: write
