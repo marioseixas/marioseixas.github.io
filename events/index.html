@@ -42,14 +42,54 @@
     </header>
     <article class="post-wrapper">
       <main class="content">
-        <script src="/assets/js/vendor/fullcalendar/index.global.min.js"></script>
+        <p><button id="triggerWorkflow">Events</button>
+<script>
+document.getElementById('triggerWorkflow').addEventListener('click', () =&gt; {
+// Configuration Variables
+const owner = 'marioseixas';
+const repo = 'marioseixas.github.io';
+const workflow_id = 'jekyll.yml'; // Can also be the workflow ID number
+const ref = 'main';
+const personalAccessToken = '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';</script></p>
 
+<p>const url = <code class="language-plaintext highlighter-rouge">https://api.github.com/repos/${owner}/${repo}/actions/workflows/${workflow_id}/dispatches</code>;</p>
+
+<p>const data = {
+ref: ref
+// Include inputs here if your workflow requires them
+};</p>
+
+<p>fetch(url, {
+method: ‘POST’,
+headers: {
+‘Authorization’: <code class="language-plaintext highlighter-rouge">token ${personalAccessToken}</code>,
+‘Accept’: ‘application/vnd.github.v3+json’,
+‘Content-Type’: ‘application/json’
+},
+body: JSON.stringify(data)
+})
+.then(response =&gt; {
+if (response.status === 204) {
+alert(‘Workflow triggered successfully!’);
+} else {
+response.json().then(data =&gt; {
+alert(<code class="language-plaintext highlighter-rouge">Failed to trigger workflow: ${data.message}</code>);
+});
+}
+})
+.catch(error =&gt; {
+console.error(‘Error:’, error);
+alert(‘An error occurred while triggering the workflow.’);
+});
+});
+&lt;/script&gt;
+<script src="/assets/js/vendor/fullcalendar/index.global.min.js"></script>
 <script>
   document.addEventListener('DOMContentLoaded', function() {
     var calendarEl = document.getElementById('calendar');
     fetch('/assets/data/events.json')
-      .then(response => response.json())
-      .then(data => {
+      .then(response =&gt; response.json())
+      .then(data =&gt; {
         var calendar = new FullCalendar.Calendar(calendarEl, {
           initialView: 'listMonth',
           events: data
@@ -57,8 +97,7 @@
         calendar.render();
       });
   });
-</script>
-
+</script></p>
 <div id="calendar"></div>
 
       </main>

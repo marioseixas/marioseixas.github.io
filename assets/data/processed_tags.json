@@ -195,16 +195,16 @@
     "scripts": {
         "parents": [],
         "children": [
-            "cloud",
-            "mobile",
-            "scripts>powershell, software>windows",
-            "scripts>mobile",
             "scripts>cloud",
-            "AI",
             "scripts>google-apps-script",
+            "cloud",
+            "scripts>mobile",
+            "scripts>powershell, software>windows",
             "powershell, software>windows",
-            "scripts>AI",
-            "google-apps-script"
+            "AI",
+            "google-apps-script",
+            "mobile",
+            "scripts>AI"
         ],
         "related": {
             "linux": 26,
@@ -674,8 +674,8 @@
         "parents": [],
         "children": [
             "AI>prompt",
-            "github>estudos",
             "tools>AI>prompt",
+            "github>estudos",
             "tools>github>estudos"
         ],
         "related": {},
@@ -919,8 +919,8 @@
         "children": [
             "cloud",
             "mobile",
-            "software>mobile",
-            "software>cloud"
+            "software>cloud",
+            "software>mobile"
         ],
         "related": {},
         "posts": [
@@ -1022,8 +1022,8 @@
         "parents": [],
         "children": [
             "jekyll",
-            "github>jekyll",
-            "tools>github>estudos"
+            "tools>github>estudos",
+            "github>jekyll"
         ],
         "related": {},
         "posts": [
@@ -1410,9 +1410,9 @@
             "scripts"
         ],
         "children": [
-            "AI>prompt",
+            "prompt",
             "tools>AI>prompt",
-            "prompt"
+            "AI>prompt"
         ],
         "related": {},
         "posts": [
@@ -1682,8 +1682,8 @@
     },
     "edital>direito>processual-penal": {
         "parents": [
-            "direito",
-            "edital"
+            "edital",
+            "direito"
         ],
         "children": [],
         "related": {},
@@ -1699,10 +1699,10 @@
     "edital": {
         "parents": [],
         "children": [
-            "edital>direito>processual-penal",
+            "edital>direito",
             "direito",
-            "direito>processual-penal",
-            "edital>direito"
+            "edital>direito>processual-penal",
+            "direito>processual-penal"
         ],
         "related": {},
         "posts": [
@@ -1872,8 +1872,8 @@
     },
     "tools>github>estudos": {
         "parents": [
-            "github",
-            "tools"
+            "tools",
+            "github"
         ],
         "children": [],
         "related": {},
@@ -2029,8 +2029,8 @@
     },
     "scripts>powershell, software>windows": {
         "parents": [
-            "powershell, software",
-            "scripts"
+            "scripts",
+            "powershell, software"
         ],
         "children": [],
         "related": {},
