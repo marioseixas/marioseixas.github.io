@@ -952,6 +952,10 @@ saúde:
   children: !!set {}
   parents: !!set {}
   posts:
+  - date: 2024-09-19 00:00:00
+    highlighted: true
+    title: Daily coffee for the heart
+    url: /daily-coffee-for-the-heart
   - date: 2024-08-13 00:00:00
     highlighted: true
     title: Arm Tendinitis

@@ -195,16 +195,16 @@
     "scripts": {
         "parents": [],
         "children": [
-            "scripts>mobile",
-            "scripts>powershell, software>windows",
-            "scripts>cloud",
-            "scripts>google-apps-script",
-            "scripts>AI",
-            "google-apps-script",
             "cloud",
-            "AI",
             "mobile",
-            "powershell, software>windows"
+            "scripts>powershell, software>windows",
+            "scripts>mobile",
+            "scripts>cloud",
+            "AI",
+            "scripts>google-apps-script",
+            "powershell, software>windows",
+            "scripts>AI",
+            "google-apps-script"
         ],
         "related": {
             "linux": 26,
@@ -675,8 +675,8 @@
         "children": [
             "AI>prompt",
             "github>estudos",
-            "tools>github>estudos",
-            "tools>AI>prompt"
+            "tools>AI>prompt",
+            "tools>github>estudos"
         ],
         "related": {},
         "posts": [
@@ -917,9 +917,9 @@
     "software": {
         "parents": [],
         "children": [
-            "software>mobile",
-            "mobile",
             "cloud",
+            "mobile",
+            "software>mobile",
             "software>cloud"
         ],
         "related": {},
@@ -1021,9 +1021,9 @@
     "github": {
         "parents": [],
         "children": [
-            "tools>github>estudos",
+            "jekyll",
             "github>jekyll",
-            "jekyll"
+            "tools>github>estudos"
         ],
         "related": {},
         "posts": [
@@ -1410,9 +1410,9 @@
             "scripts"
         ],
         "children": [
+            "AI>prompt",
             "tools>AI>prompt",
-            "prompt",
-            "AI>prompt"
+            "prompt"
         ],
         "related": {},
         "posts": [
@@ -1468,8 +1468,8 @@
     },
     "AI>prompt": {
         "parents": [
-            "tools",
-            "AI"
+            "AI",
+            "tools"
         ],
         "children": [],
         "related": {},
@@ -1502,8 +1502,8 @@
     },
     "prompt": {
         "parents": [
-            "tools>AI",
-            "AI"
+            "AI",
+            "tools>AI"
         ],
         "children": [],
         "related": {},
@@ -1699,9 +1699,9 @@
     "edital": {
         "parents": [],
         "children": [
-            "direito>processual-penal",
-            "direito",
             "edital>direito>processual-penal",
+            "direito",
+            "direito>processual-penal",
             "edital>direito"
         ],
         "related": {},
@@ -1819,6 +1819,12 @@
         "children": [],
         "related": {},
         "posts": [
+            {
+                "title": "Daily coffee for the heart",
+                "url": "/daily-coffee-for-the-heart",
+                "highlighted": true,
+                "date": "2024-09-19T00:00:00"
+            },
             {
                 "title": "Arm Tendinitis",
                 "url": "/arm-tendinitis",
@@ -1992,8 +1998,8 @@
     },
     "tools>AI>prompt": {
         "parents": [
-            "tools",
-            "AI"
+            "AI",
+            "tools"
         ],
         "children": [],
         "related": {},
@@ -2023,8 +2029,8 @@
     },
     "scripts>powershell, software>windows": {
         "parents": [
-            "scripts",
-            "powershell, software"
+            "powershell, software",
+            "scripts"
         ],
         "children": [],
         "related": {},
