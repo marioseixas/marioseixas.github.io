@@ -42,62 +42,71 @@
     </header>
     <article class="post-wrapper">
       <main class="content">
-        <p><button id="triggerWorkflow">Events</button>
+        <p><button id="triggerWorkflow">Events</button></p>
+
 <script>
-document.getElementById('triggerWorkflow').addEventListener('click', () =&gt; {
-// Configuration Variables
-const owner = 'marioseixas';
-const repo = 'marioseixas.github.io';
-const workflow_id = 'jekyll.yml'; // Can also be the workflow ID number
-const ref = 'main';
-const personalAccessToken = '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';</script></p>
-
-<p>const url = <code class="language-plaintext highlighter-rouge">https://api.github.com/repos/${owner}/${repo}/actions/workflows/${workflow_id}/dispatches</code>;</p>
-
-<p>const data = {
-ref: ref
-// Include inputs here if your workflow requires them
-};</p>
-
-<p>fetch(url, {
-method: ‘POST’,
-headers: {
-‘Authorization’: <code class="language-plaintext highlighter-rouge">token ${personalAccessToken}</code>,
-‘Accept’: ‘application/vnd.github.v3+json’,
-‘Content-Type’: ‘application/json’
-},
-body: JSON.stringify(data)
-})
-.then(response =&gt; {
-if (response.status === 204) {
-alert(‘Workflow triggered successfully!’);
-} else {
-response.json().then(data =&gt; {
-alert(<code class="language-plaintext highlighter-rouge">Failed to trigger workflow: ${data.message}</code>);
+document.getElementById('triggerWorkflow').addEventListener('click', () => {
+  // Configuration Variables
+  const owner = 'marioseixas';
+  const repo = 'marioseixas.github.io';
+  const workflow_id = 'jekyll.yml'; // Can also be the workflow ID number
+  const ref = 'main';
+  // It's highly recommended to handle the token securely on the server side
+  const personalAccessToken = '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';
+  
+  const url = `https://api.github.com/repos/${owner}/${repo}/actions/workflows/${workflow_id}/dispatches`;
+  
+  const data = {
+    ref: ref
+    // Include inputs here if your workflow requires them
+  };
+  
+  fetch(url, {
+    method: 'POST',
+    headers: {
+      'Authorization': `token ${personalAccessToken}`,
+      'Accept': 'application/vnd.github.v3+json',
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(data)
+  })
+  .then(response => {
+    if (response.status === 204) {
+      alert('Workflow triggered successfully!');
+    } else {
+      response.json().then(data => {
+        alert(`Failed to trigger workflow: ${data.message}`);
+      });
+    }
+  })
+  .catch(error => {
+    console.error('Error:', error);
+    alert('An error occurred while triggering the workflow.');
+  });
 });
-}
-})
-.catch(error =&gt; {
-console.error(‘Error:’, error);
-alert(‘An error occurred while triggering the workflow.’);
-});
-});
-&lt;/script&gt;
+</script>
+
+<!-- Load FullCalendar Library -->
 <script src="/assets/js/vendor/fullcalendar/index.global.min.js"></script>
+
 <script>
   document.addEventListener('DOMContentLoaded', function() {
     var calendarEl = document.getElementById('calendar');
     fetch('/assets/data/events.json')
-      .then(response =&gt; response.json())
-      .then(data =&gt; {
+      .then(response => response.json())
+      .then(data => {
         var calendar = new FullCalendar.Calendar(calendarEl, {
           initialView: 'listMonth',
           events: data
         });
         calendar.render();
+      })
+      .catch(error => {
+        console.error('Error loading events:', error);
       });
   });
-</script></p>
+</script>
+
 <div id="calendar"></div>
 
       </main>
