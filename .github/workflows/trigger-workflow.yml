@@ -1,0 +1,21 @@
+name: Trigger Workflow
+
+on:
+  workflow_dispatch:
+    inputs:
+      run_workflow:
+        description: 'Trigger the Jekyll Workflow'
+        required: true
+        default: 'yes'
+
+jobs:
+  trigger_jekyll:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger Jekyll Workflow
+        uses: peter-evans/workflow-dispatch@v1
+        with:
+          token: ${{ secrets.GH_PAT }}
+          repository: ${{ github.repository }}
+          workflow: jekyll.yml
+          ref: main
