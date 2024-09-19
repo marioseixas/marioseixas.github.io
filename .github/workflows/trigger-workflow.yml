@@ -1,21 +1,16 @@
-name: Trigger Workflow
+name: Dispatch Workflow
 
 on:
   workflow_dispatch:
-    inputs:
-      run_workflow:
-        description: 'Trigger the Jekyll Workflow'
-        required: true
-        default: 'yes'
 
 jobs:
-  trigger_jekyll:
+  dispatch_event:
     runs-on: ubuntu-latest
     steps:
-      - name: Trigger Jekyll Workflow
-        uses: peter-evans/workflow-dispatch@v1
+      - name: Repository Dispatch
+        uses: peter-evans/repository-dispatch@v3
         with:
           token: ${{ secrets.GH_PAT }}
-          repository: ${{ github.repository }}
-          workflow: jekyll.yml
-          ref: main
+          repository: marioseixas/marioseixas.github.io
+          event-type: trigger-jekyll
+          client-payload: '{"ref": "main"}'
